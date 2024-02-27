@@ -32,6 +32,7 @@ html,body,h1,h2,ol,ul{
     margin: 0;
     padding: 0;
 }
+
 /* 공사중표시 */
 body *{
     outline: 2px solid red;
