@@ -31,6 +31,6 @@ font-style: normal;
 /* 중앙 속박스 */
 .inbox{
     /* 최대 가로크기 */
-    min-width: 1200px;
+    max-width: 1680px;
     margin: 0 auto;
 }

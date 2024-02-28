@@ -7,3 +7,55 @@
 
 /* 그리드 시스템 */
 @import url(./grid_12_float.css);
+
+/* 공사중 표시 */
+body *{
+    outline: 2px dashed #ccc;
+}
+
+/* 1. 상단영역 */
+.top-area{
+    height: 90px;
+    
+}
+
+/* 2. 배너영역 */
+.ban-area{
+    height: 990px;
+    
+}
+
+/* 3. 기업 소개 */
+.compinfo-area{
+    height: 1562px;
+    
+}
+
+/* 4. 브랜드 소개 */
+.brandinfo-area{
+    height: 1749px;
+    
+}
+
+/* 5. 상품 */
+.prodinfo-area{
+    height: 1780px;
+    
+}
+
+/* 6. 사내 뉴스 */
+.news-area{
+    height: 1045px;
+    
+}
+
+/* 7. 회사 스토리 */
+.story-area{
+    height: 1124px;
+}
+
+/* 8. 푸터 */
+.footer-area{
+    height: 410px;
+    
+}
