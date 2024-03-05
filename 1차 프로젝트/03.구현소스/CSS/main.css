@@ -19,6 +19,12 @@ body *{
     
 }
 
+/* 로고 */
+.logo{
+    padding: 20px;
+}
+
+
 /* 2. 배너영역 */
 .ban-area{
     height: 990px;
