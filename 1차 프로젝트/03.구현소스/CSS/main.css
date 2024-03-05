@@ -17,7 +17,9 @@ body *{
 .top-area{
     height: 90px;
 }
-
+.gdn a{
+    display: block;
+}
 .gnb ul>li{
     position: relative;
     float: left;
