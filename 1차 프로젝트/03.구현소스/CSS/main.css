@@ -16,8 +16,21 @@ body *{
 /* 1. 상단영역 */
 .top-area{
     height: 90px;
-    
 }
+
+.gnb ul>li{
+    position: relative;
+    float: left;
+    line-height: 28;
+    padding: 0 40px;
+}
+.submenu{
+    position: absolute;
+    left: 50%;
+
+}
+
+
 
 /* 로고 */
 .logo{
