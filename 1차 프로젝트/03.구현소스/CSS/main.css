@@ -16,27 +16,52 @@ body *{
 /* 1. 상단영역 */
 .top-area{
     height: 90px;
+    background-color: #062C5E;
 }
-.gdn a{
+
+/* gnb 메뉴 */
+.gnb {
+    margin-left: 63px;
+}
+.gnb a{
     display: block;
 }
-.gnb ul>li{
+.gnb .category > li{
     position: relative;
     float: left;
-    line-height: 28;
     padding: 0 40px;
+    line-height: 28px;
 }
-.submenu{
-    position: absolute;
-    left: 50%;
 
+/* 카테고리 */
+.category{
+position: absolute;
+left: 50%;
+text-align: center;
+line-height: 38px;
+}
+
+.category > h3{
+    position: absolute;
+    float: left;
+}
+
+/* 메뉴 아이템 */
+.menuitem{
+    line-height: 38px;
 }
 
 
 
 /* 로고 */
+
 .logo{
     padding: 20px;
+
+}
+/* 로고 사이즈 설정 */
+.logo img{
+    height: 2vh;
 }
 
 
