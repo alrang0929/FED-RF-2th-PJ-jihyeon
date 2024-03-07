@@ -41,6 +41,8 @@ line-height: 20px;
 /* 카테고리 */
 .category{
 display: flex;
+text-align: center;
+line-height: 30px;
 
 }
 
@@ -55,19 +57,28 @@ display: flex;
     
 }
 
-
-/* 서브메뉴박스 */
-.submenu-box{}
-  
 /* 메뉴 아이템 */
 .menuitem{
-   
+   flex: 1;
 }
+
 .sub-inner>h2 a{
-
+    padding: 20px;
+    font-size: 0.8vw;
+    color: #fff;
 }
+/* 서브메뉴박스 */
+.submenu-box{
+    display: flex;
+    position: absolute;
+}
+  
 
-.submenu a{}
+.submenu{
+    display: flex;
+    width:  20%;
+    text-align: start;
+}
     
 
 
@@ -83,7 +94,7 @@ display: flex;
 
 /* 로고 사이즈 설정 */
 .logo img{
-    height: 2vw;
+    height: 1vw;
     
 
 }
