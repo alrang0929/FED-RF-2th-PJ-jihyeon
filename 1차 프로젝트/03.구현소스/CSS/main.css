@@ -74,12 +74,17 @@ display: flex;
 /* 로고 */
 
 .logo{
+    position: relative;
+    /* top: 50%; */
+    transform: translateY(50%);
    
+
 }
 
 /* 로고 사이즈 설정 */
 .logo img{
-
+    height: 2vw;
+    
 
 }
 
