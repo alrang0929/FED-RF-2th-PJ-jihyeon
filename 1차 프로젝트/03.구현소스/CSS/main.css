@@ -9,134 +9,58 @@
 @import url(./grid_12_float.css);
 
 /* 공사중 표시 */
-body *{
+body * {
     outline: 2px dashed #ccc;
 }
 
 /* 1. 상단영역 */
-.top-area{
+.top-area {
     position: relative;
     width: 100%;
-    height: 50px;
-    background-color: #062C5E;
+    height: 70px;
+    background-color: #062c5e;
 }
-
-/* gnb 메뉴 */
-.gnb {
-    margin-left: 63px;
-}
-
-.gdn a{
-    display: inline-block;
-}
-
-.gnb .category > li{
-position: relative;
-float: left;
-padding: 0 20px;
-line-height: 20px;
-}
-
 
 /* 카테고리 */
-.category{
-display: flex;
-text-align: center;
-line-height: 30px;
-
+.category {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: red;
+    padding: 0 20px;
+}
+.category > li {
+    flex: 1;
+    flex-direction: column;
+    padding: 0 20px;
+    line-height: 20px;
+}
+.sub-inner h2{
+    height: 70px;
 }
 
-
-.category h2{
-    text-align: center;
+.menuitem {
+    position: relative;
+    display: flex;
 }
 
-/* 링크 아이콘 */
-.licon{
-    
-    
-}
-
-/* 메뉴 아이템 */
-.menuitem{
-   flex: 1;
-}
-
-.sub-inner>h2 a{
-    padding: 20px;
-    font-size: 0.8vw;
-    color: #fff;
-}
-/* 서브메뉴박스 */
 .submenu-box{
     display: flex;
-    position: absolute;
+    width: 100%;
+    flex-direction: row-reverse;
 }
-  
-
-.submenu{
-    display: flex;
-    width:  20%;
-    text-align: start;
-}
-    
 
 
 /* 로고 */
 
-.logo{
+.logo {
+    display: block;
     position: relative;
-    /* top: 50%; */
-    transform: translateY(50%);
-   
-
+    height: 100%;
+    transform: translateY(none);
+    top: calc(100% - 3vh / 2);
 }
 
-/* 로고 사이즈 설정 */
-.logo img{
-    height: 1vw;
-    
-
-}
-
-
-/* 2. 배너영역 */
-.ban-area{
-    height: 990px;
-    
-}
-
-/* 3. 기업 소개 */
-.compinfo-area{
-    height: 1562px;
-    
-}
-
-/* 4. 브랜드 소개 */
-.brandinfo-area{
-    height: 1749px;
-    
-}
-
-/* 5. 상품 */
-.prodinfo-area{
-    height: 1780px;
-    
-}
-
-/* 6. 사내 뉴스 */
-.news-area{
-    height: 1045px;
-    
-}
-
-/* 7. 회사 스토리 */
-.story-area{
-    height: 1124px;
-}
-
-/* 8. 푸터 */
-.footer-area{
-    height: 410px;
-    
+.logo img {
+    height: 2.5vh;
 }
