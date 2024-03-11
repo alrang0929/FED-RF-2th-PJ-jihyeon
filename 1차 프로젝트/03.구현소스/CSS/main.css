@@ -6,7 +6,7 @@
 @import url(./reset.css);
 
 /* 그리드 시스템 */
-@import url(./grid_12_float.css);
+@import url(./grid_12_flex.css);
 
 /* 공사중 표시 */
 body * {
@@ -21,46 +21,62 @@ body * {
     background-color: #062c5e;
 }
 
-/* 카테고리 */
-.category {
-    position: relative;
+/* GNB메뉴 */
+
+.gnb ul{
     display: flex;
-    width: 100%;
-    background-color: red;
-    padding: 0 20px;
-}
-.category > li {
-    flex: 1;
-    flex-direction: column;
-    padding: 0 20px;
-    line-height: 20px;
-}
-.sub-inner h2{
-    height: 70px;
+    justify-content: flex-end;
+    /* 메뉴 줄바꿈 방지 */
+    white-space: nowrap;
 }
 
-.menuitem {
+.gnb ul > li{
     position: relative;
-    display: flex;
+    padding: 0 32px;
+    line-height: 78px;
+    font-weight: 500;
 }
 
-.submenu-box{
-    display: flex;
-    width: 100%;
-    flex-direction: row-reverse;
+/* h2 스타일 */
+h2 a{
+    color: #fff;
+    font-weight: 400;
 }
 
 
-/* 로고 */
+.submenu{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
-.logo {
-    display: block;
-    position: relative;
-    height: 100%;
-    transform: translateY(none);
-    top: calc(100% - 3vh / 2);
+    width: 200px;
+    
+    background-color: #fff;
+    text-align: center;
+    line-height: 38px;
+    font-weight: normal;
+
+    max-height: 0;
+    overflow: hidden;
 }
 
-.logo img {
-    height: 2.5vh;
+.submenu a{
+    color: #062C5E;
+    font-size: 14pt;
 }
+
+.gnb ul > li:hover .submenu{
+    max-height: 400px;
+}
+
+.submenu ol{
+    padding: 10px;
+}
+
+.submenu li{
+    opacity: 0;
+    transition: all .4s;
+}
+
+
+

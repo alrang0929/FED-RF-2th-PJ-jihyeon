@@ -35,12 +35,10 @@ ol::after,
 .clb::after {
     content: "";
     display: block;
-    clear: both;
 }
 
 /* a요소 리셋 */
 a{
-    color: #222;
     text-decoration: none;
 }
 
