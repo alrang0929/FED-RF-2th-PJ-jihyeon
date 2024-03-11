@@ -30,7 +30,7 @@ body * {
 
 .gnb ul{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     /* 메뉴 줄바꿈 방지 */
     white-space: nowrap;
 }
