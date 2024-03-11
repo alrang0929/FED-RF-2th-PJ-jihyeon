@@ -21,6 +21,11 @@ body * {
     background-color: #062c5e;
 }
 
+/* logo */
+.logo{
+    padding: 13px 0;
+}
+
 /* GNB메뉴 */
 
 .gnb ul{
@@ -33,7 +38,23 @@ body * {
 .gnb ul > li{
     position: relative;
     padding: 0 32px;
-    line-height: 78px;
+    line-height: 51px;
+    font-weight: 500;
+}
+
+/* link icon메뉴 */
+
+.link-box ul{
+    display: flex;
+    justify-content: flex-end;
+    /* 메뉴 줄바꿈 방지 */
+    white-space: nowrap;
+}
+
+.link-box ul > li{
+    position: relative;
+    padding: 0 10px;
+    line-height: 51px;
     font-weight: 500;
 }
 
@@ -43,15 +64,16 @@ h2 a{
     font-weight: 400;
 }
 
-
 .submenu{
     position: absolute;
     left: 50%;
+    /* x축 중앙이동 */
     transform: translateX(-50%);
 
     width: 200px;
     
     background-color: #fff;
+
     text-align: center;
     line-height: 38px;
     font-weight: normal;
