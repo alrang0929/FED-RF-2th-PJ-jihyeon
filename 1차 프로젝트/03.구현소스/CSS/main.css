@@ -19,19 +19,60 @@ body{
 
 /* 메인 슬라이드 영역 */
 #ban-area{
+    width: 100vw;
     height: 100vh;
 }
 
 /* 슬라이드 이미지 */
 .slider01{
-    
-    color: #fff;
-    font-size: 3rem;
+
     height: 100vh;
-    text-align: right;
+    
     display: block;
     background: url(../images/mainvs01.jpg) no-repeat center/cover;
 }
+
+.stext-box{
+    position: absolute;
+    margin: 20px 40px;
+    width: 30vw;
+    bottom: 0;
+    right: 0;
+
+    color: #fff;
+    font-size: 3.7rem;
+    line-height: 5rem;
+    font-weight: bold;
+    text-align: right;
+}
+.mbtn{
+
+    display: flex;
+    position: absolute;
+    border: transparent;
+    background-color: transparent;
+    color: #fff;
+    width: 2vw;
+
+    bottom: 0;
+    right: 0;
+
+    justify-content: space-between;
+    right: 40px;
+    width: 200px;
+    flex-direction: row;
+    font-size: 1.5rem;
+    padding: 10px 10px;
+}
+
+.mbtn a{
+    display: block;
+    height: 24px;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
 
 /* 기업 소개 */
 #compinfo-area{

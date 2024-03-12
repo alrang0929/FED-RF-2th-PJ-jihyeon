@@ -1,6 +1,8 @@
 @charset "utf-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 @import url("https://use.typekit.net/jyj1can.css");
+
+
 
 /*font
 
@@ -24,8 +26,8 @@ font-style: normal;
 
 */
 
-.html {
-    font-family: "Pretendard Variable",Pretendard, apple-system, system-ui, Roboto, sans-serif;
+html {
+    font-family:'Pretendard Variable',sans-serif;
     /* 폰트 */
     font-size: 10px;
     /* rem 단위 계산 편의를 위하여 */
@@ -41,7 +43,7 @@ font-style: normal;
 /* 중앙속박스 */
 .inbox{
     /* 최대 가로크기 */
-    max-width: 1360px;
+    /* max-width: 1360px; */
     /* 블록박스 중앙정렬 -> 마.영.오 */
     margin: 0 auto;
 }
