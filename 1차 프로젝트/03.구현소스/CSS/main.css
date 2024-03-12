@@ -17,6 +17,7 @@ body{
     /* background: url(../images/mainvs01.jpg); */
 }
 
+
 /* 메인 슬라이드 영역 */
 #ban-area{
     width: 100vw;
@@ -38,6 +39,8 @@ body{
     width: 30vw;
     bottom: 0;
     right: 0;
+
+    margin-bottom: 13vh;
 
     color: #fff;
     font-size: 3.7rem;

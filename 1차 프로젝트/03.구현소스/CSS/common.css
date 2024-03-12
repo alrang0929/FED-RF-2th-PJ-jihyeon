@@ -5,7 +5,16 @@
 
 
 /* 1. 상단영역 */
+.indicator {
+    position: fixed;
+    width: 100vw;
+    height: 10px;
+    top: 0;
+    background: #ffffff;
+    
+}
 .top-area {
+    margin-top: 10px;
     height: 70px;
     background-color: #062c5e;
 }
