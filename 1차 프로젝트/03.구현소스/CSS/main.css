@@ -13,11 +13,24 @@ body * {
     outline: 2px dashed #ccc;
 }
 
+body{
+    /* background: url(../images/mainvs01.jpg); */
+}
 
 /* 메인 슬라이드 영역 */
 #ban-area{
-    height:906px;
+    height: 100vh;
+}
 
+/* 슬라이드 이미지 */
+.slider01{
+    
+    color: #fff;
+    font-size: 3rem;
+    height: 100vh;
+    text-align: right;
+    display: block;
+    background: url(../images/mainvs01.jpg) no-repeat center/cover;
 }
 
 /* 기업 소개 */
