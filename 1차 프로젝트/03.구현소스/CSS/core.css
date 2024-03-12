@@ -23,14 +23,18 @@ Miller Display Bold
 font-family: "miller-display", serif;
 font-weight: 700;
 font-style: normal;
+unicode-range: U+0041-005A
+
 
 */
+
 
 html {
     font-family:'Pretendard Variable',sans-serif;
     /* 폰트 */
     font-size: 10px;
     /* rem 단위 계산 편의를 위하여 */
+    text-align: center;
 }
 
 /* 임시 표시 타이틀 */
@@ -47,3 +51,45 @@ html {
     /* 블록박스 중앙정렬 -> 마.영.오 */
     margin: 0 auto;
 }
+
+
+/* 영문타이틀 전용폰트 */
+
+.engtitfont{
+    font-family: "miller-display", serif;
+    font-size: 6rem;
+    text-align: center;
+    color: #062C5E;
+    padding: 40px 0;
+
+}
+
+.txt{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+
+/* 메인컬러버튼 */
+.mcolor-mbtn{
+
+    display: flex;
+    /* position: absolute; */
+    border: transparent;
+    background-color: transparent;
+    color: #062C5E;
+
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1.5rem;
+    padding: 10px 10px;
+}
+
+.mcolor-mbtn a{
+    display: block;
+    height: 24px;
+    text-decoration: none;
+    color: #062C5E;
+}
+

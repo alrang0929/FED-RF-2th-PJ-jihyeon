@@ -10,107 +10,163 @@
 
 /* 공사중 표시 */
 body * {
-    outline: 2px dashed #ccc;
+  outline: 2px dashed #ccc;
 }
 
-body{
-    /* background: url(../images/mainvs01.jpg); */
+body {
+  /* background: url(../images/mainvs01.jpg); */
 }
-
 
 /* 메인 슬라이드 영역 */
-#ban-area{
-    width: 100vw;
-    height: 100vh;
+#ban-area {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* 슬라이드 이미지 */
-.slider01{
-
-    height: 100vh;
-    
-    display: block;
-    background: url(../images/mainvs01.jpg) no-repeat center/cover;
+.slider01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: block;
+  background: url(../images/mainvs01.jpg) no-repeat center/cover;
+}
+.slider02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: block;
+  background: url(../images/mainvs02.jpg) no-repeat center/cover;
+}
+.slider03 {
+  height: 100vh;
+  display: block;
+  background: url(../images/mainvs03.jpg) no-repeat center/cover;
 }
 
-.stext-box{
-    position: absolute;
-    margin: 20px 40px;
-    width: 30vw;
-    bottom: 0;
-    right: 0;
+/* 메인 슬라이드 버튼+텍스트 박스 */
+.mstext-box {
+  position: absolute;
+  margin: 20px 40px;
+  width: 30vw;
+  bottom: 0;
+  right: 0;
 
-    margin-bottom: 13vh;
-
-    color: #fff;
-    font-size: 3.7rem;
-    line-height: 5rem;
-    font-weight: bold;
-    text-align: right;
-}
-.mbtn{
-
-    display: flex;
-    position: absolute;
-    border: transparent;
-    background-color: transparent;
-    color: #fff;
-    width: 2vw;
-
-    bottom: 0;
-    right: 0;
-
-    justify-content: space-between;
-    right: 40px;
-    width: 200px;
-    flex-direction: row;
-    font-size: 1.5rem;
-    padding: 10px 10px;
+  margin-bottom: 13vh;
 }
 
-.mbtn a{
-    display: block;
-    height: 24px;
-    text-decoration: none;
-    color: #fff;
-    
+/* 메인 슬라이드 내 텍스트 박스 */
+.stext-box {
+  position: absolute;
+  margin: 20px 40px;
+  width: 30vw;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 13vh;
+  font-size: 5rem;
+  color: #fff;
+  line-height: 6.2rem;
+  letter-spacing: 0rem;
 }
 
+.mbtn {
+  display: flex;
+  position: absolute;
+  border: transparent;
+  background-color: transparent;
+  color: #fff;
+
+  bottom: 0;
+
+  justify-content: space-between;
+  right: 40px;
+  width: 200px;
+  flex-direction: row;
+  font-size: 1.5rem;
+  padding: 10px 10px;
+}
+
+.mbtn a {
+  display: block;
+  height: 24px;
+  text-decoration: none;
+  color: #fff;
+}
 
 /* 기업 소개 */
-#compinfo-area{
-    height:1728px;
+#compinfo-area {
+  position: relative;
+  width: 100vw;
+  height: 1728px;
+}
 
+.cominfo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  background: #fff;
+}
+
+/* 기업 소개 내 타이틀 */
+.cominfo .tit {
+  width: 100vw;
+  margin: 30vh 0;
+}
+
+/* 기업 소개 내 이미지 */
+
+.coninfo img {
+  margin-bottom: 74px;
+}
+
+/* 텍스트 하단 마진 */
+.txt{
+    display: flex;
+    justify-content: center;
+    
+}
+.txt p {
+
+  width: 40vw;
+  margin-bottom: 40px;
+}
+
+
+/* 하단 자동 롤링 이미지 */
+#compinfo-area .rslider-info {
+  position: absolute;
+  display: flex;
+}
+#compinfo-area .rslider-info img {
+  width: 14vw;
+  margin: 60px 40px;
 }
 
 /* 브랜드 소개 */
-#brandinfo-area{
-    height: 1310px;
-
+#brandinfo-area {
+  height: 1310px;
 }
 
 /* 상품 */
-#prodinfo-area{
-    height: 1680px;
-
+#prodinfo-area {
+  height: 1680px;
 }
 
 /* 사내 뉴스 */
-#news-area{
-    height: 906px;
-
+#news-area {
+  height: 906px;
 }
 
 /* 회사 스토리 */
-#story-area{
-    height: 906px;
-
+#story-area {
+  height: 906px;
 }
 
 /* 푸터 */
-#footer-area{
-    height: 300px;
-
+#footer-area {
+  height: 300px;
 }
-
-
