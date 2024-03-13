@@ -26,6 +26,7 @@
 
 .gnb{
     position: relative;
+    z-index: 999;
 }
 /* GNB메뉴 */
 .gnb ul{
@@ -33,6 +34,10 @@
     justify-content: center;
     /* 메뉴 줄바꿈 방지 */
     white-space: nowrap;
+}
+.gnb ul>li{
+    position: relative;
+    /* 서브메뉴 부모자격 */
 }
 
 /* GNB링크 */
@@ -83,6 +88,7 @@ h2 a{
 
     max-height: 0;
     overflow: hidden;
+    transition: .4s;
 }
 
 .submenu a{
@@ -99,7 +105,7 @@ h2 a{
 }
 
 .submenu li{
-    opacity: 0;
+    /* opacity: 0; */
     transition: all .4s;
 }
 
