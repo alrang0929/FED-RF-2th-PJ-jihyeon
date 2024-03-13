@@ -55,8 +55,9 @@ html {
 
 /* 영문타이틀 전용폰트 */
 
-.engtitfont{
+.engtitfont h2{
     font-family: "miller-display", serif;
+    font-weight: Normal;
     font-size: 6rem;
     text-align: center;
     color: #062C5E;

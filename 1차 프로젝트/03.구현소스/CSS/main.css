@@ -123,18 +123,39 @@ body {
   margin-bottom: 74px;
 }
 
-/* 텍스트 하단 마진 */
+/* 기업소개 텍스트+버튼 */
+
 .txt{
+   position: relative;
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+  }
+  /* 하단 텍스트 */
+  .txt p {
+position: relative;
+display: block;
+width: 40vw;
+margin-bottom: 40px;
+left: calc(100% - 40vw/2);
+transform: translate(-50vw, 0vw);
 }
-.txt p {
 
-  width: 40vw;
-  margin-bottom: 40px;
+/* 기업소개 더보기 버튼 */
+
+.coninfo .mcolor-mbtn{
+  position: absolute;
+  border: transparent;
+  background-color: transparent;
+  /* color: #fff; */
+  bottom: 0;
+  justify-content: space-between;
+  right: 40px;
+  width: 200px;
+  /* flex-direction: row; */
+  font-size: 1.5rem;
+  padding: 10px 10px;
+  left: 42%;
 }
-
 
 /* 하단 자동 롤링 이미지 */
 #compinfo-area .rslider-info {
