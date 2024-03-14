@@ -184,22 +184,26 @@ body * {
 /* 브랜드 소개 */
 #brandinfo-area {
   height: 1310px;
+  
+}
+
+.brand-area{
+  position: relative;
 }
 
 /* bi 버튼 리스트 */
-.sbili-box{
-  position: relative;
-  
-  /* 로고위치 확인용 BGC */
-  background-color: #000;
-}
+/* .sbili-box{} */
 
+
+/* bi 리스트 */
 .sbili{
-  /* BI 리스트 박스 패딩 */
-  padding: 5rem 5rem;
+  background-color: #ff000073;
   /* ib 가로배열을 위한  */
   display: flex;
   /* 부모는? sbili-box */
+  /* BI 리스트 박스 패딩 */
+  padding: 5rem 5rem;
+
   justify-content: space-between;
   /* 박스 양끝에 맞춰 균등배치 */
 }
@@ -211,23 +215,8 @@ body * {
 
 /* bi 로고 선택에 따라 변경되는 슬라이드 페이지 */
 .bislider01 {
-  top: 0;
-  left: 0;
-  height: 100vh;
-  display: block;
-  background: url(../images/brand_iope.png) no-repeat center/cover;
-}
-.bislider02 {
-  background: url(../images/brand_hanyul.png) no-repeat center/cover;
-}
-.bislider03 {
-  background: url(../images/brand_laneige.png) no-repeat center/cover;
-}
-.bislider04 {
-  background: url(../images/brand_mamonde.png) no-repeat center/cover;
-}
-.bislider05 {
-  background: url(../images/brand_sulwhasoo.png) no-repeat center/cover;
+  height: 136vh;
+  background: url(../images/brand_iope.png) no-repeat center / cover;
 }
 
 /* 상품 */
