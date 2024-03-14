@@ -194,6 +194,33 @@ transform: translate(-50vw, 0vw);
   height: 1310px;
 }
 
+.bbland{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bbiope{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: block;
+  background: url(../images/brand_iope.png) no-repeat center/cover;
+}
+.bbhanyul{
+  background: url(../images/brand_hanyul.png) no-repeat center/cover;
+}
+.bblaneige{
+  background: url(../images/brand_laneige.png) no-repeat center/cover;
+}
+.bbmamonde{
+  background: url(../images/brand_mamonde.png) no-repeat center/cover;
+}
+.bbsulwhasoo{
+  background: url(../images/brand_sulwhasoo.png) no-repeat center/cover;
+}
+
 /* 상품 */
 #prodinfo-area {
   height: 1680px;
