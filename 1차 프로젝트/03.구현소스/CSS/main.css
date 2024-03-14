@@ -13,11 +13,8 @@ body * {
   outline: 2px dashed #ccc;
 }
 
-body {
-  /* background: url(../images/mainvs01.jpg); */
-}
 
-/* 메인 슬라이드 영역 */
+/********************************** 메인 슬라이드 영역 **********************************/
 #ban-area {
   position: relative;
   width: 100vw;
@@ -97,26 +94,28 @@ body {
   text-decoration: none;
   color: #fff;
 }
+/************************************** 섹션01 **************************************/
 
 /* 기업 소개 */
 #compinfo-area {
   position: relative;
-  width: 100vw;
+  margin: 0 auto;
   height: 1728px;
 }
 
 .cominfo {
-  display: flex;
-  justify-content: center;
+  /*   display: flex;
+  justify-content: center; */
   width: 100%;
-  position: absolute;
+  /*   position: absolute; */
   background: #fff;
 }
 
 /* 기업 소개 내 타이틀 */
-.cominfo .tit {
-  width: 100vw;
-  margin: 30vh 0;
+.csubtit {
+  margin: 0 auto;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
 }
 
 /* 기업 소개 내 이미지 */
@@ -127,42 +126,31 @@ body {
 
 /* 기업소개 텍스트+버튼 */
 
-.txt{
-   position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  /* 하단 텍스트 */
-  .txt p {
-position: relative;
-display: block;
-width: 40vw;
-margin-bottom: 40px;
-left: calc(100% - 40vw/2);
-transform: translate(-50vw, 0vw);
+
+/* 하단 텍스트 */
+.txt p {
+  display: block;
+  width: 20vw;
+  margin: 0 auto;
 }
 
 /* 기업소개 더보기 버튼 */
 
-.coninfo .mcolor-mbtn{
-  /* position: absolute; */
+.coninfo .mcolor-mbtn {
+  width: 400px;
+  max-width: 200px;
+
   border: transparent;
   background-color: transparent;
-  /* color: #fff; */
-  bottom: 0;
-  justify-content: space-between;
-  right: 40px;
-  max-width: 200px;
-  /* flex-direction: row; */
   font-size: 1.5rem;
   padding: 10px 10px;
-  left: 42%;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 
-.rslider-info-wrap{
+.rslider-info-wrap {
   width: 1920px;
   overflow: hidden;
+  margin-top: 10rem;
 }
 
 /* 하단 자동 롤링 이미지 */
@@ -174,7 +162,9 @@ transform: translate(-50vw, 0vw);
   animation: slider-ani 10s linear infinite;
 }
 @keyframes slider-ani {
-  to{left:-100%}
+  to {
+    left: -100%;
+  }
 }
 #compinfo-area .rslider-info div {
   display: flex;
@@ -189,35 +179,54 @@ transform: translate(-50vw, 0vw);
   margin: 20px 0;
 }
 
+/********************************* 섹션02 *********************************/
+
 /* 브랜드 소개 */
 #brandinfo-area {
   height: 1310px;
 }
 
-.bbland{
+/* bi 버튼 리스트 */
+.sbili-box{
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  
+  /* 로고위치 확인용 BGC */
+  background-color: #000;
 }
 
-.bbiope{
-  position: absolute;
+.sbili{
+  /* BI 리스트 박스 패딩 */
+  padding: 5rem 5rem;
+  /* ib 가로배열을 위한  */
+  display: flex;
+  /* 부모는? sbili-box */
+  justify-content: space-between;
+  /* 박스 양끝에 맞춰 균등배치 */
+}
+
+.sbili img{
+  /* bi img 높이값 조정 */
+  height: 2.4rem;
+}
+
+/* bi 로고 선택에 따라 변경되는 슬라이드 페이지 */
+.bislider01 {
   top: 0;
   left: 0;
   height: 100vh;
   display: block;
   background: url(../images/brand_iope.png) no-repeat center/cover;
 }
-.bbhanyul{
+.bislider02 {
   background: url(../images/brand_hanyul.png) no-repeat center/cover;
 }
-.bblaneige{
+.bislider03 {
   background: url(../images/brand_laneige.png) no-repeat center/cover;
 }
-.bbmamonde{
+.bislider04 {
   background: url(../images/brand_mamonde.png) no-repeat center/cover;
 }
-.bbsulwhasoo{
+.bislider05 {
   background: url(../images/brand_sulwhasoo.png) no-repeat center/cover;
 }
 
