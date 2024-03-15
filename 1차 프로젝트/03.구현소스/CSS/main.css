@@ -16,7 +16,7 @@ body * {
 /********************************** 메인 슬라이드 영역 **********************************/
 #ban-area {
   /* position: relative; */
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
 }
 
@@ -146,7 +146,7 @@ body * {
 }
 
 .rslider-info-wrap {
-  width: 1920px;
+  /* width: 1920px; */
   overflow: hidden;
   margin-top: 10rem;
 }
@@ -216,9 +216,9 @@ body * {
   position: relative;
   display: flex;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
 
-  overflow: hidden;
+  /* overflow: hidden; */
 
   left: 0;
 }
@@ -250,7 +250,7 @@ body * {
   background: url(../images/brand_mamonde.png);
 }
 .bislider05 {
-  background: url(../images/brand_sulwhasoo.png);
+  background: url(../images/brand_sulwhasoo.jpg);
 }
 
 /**************************************** 섹션03 ****************************************/

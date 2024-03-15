@@ -309,5 +309,16 @@
         </div>
       </footer>
     </div>
+    <script>
+      let aa = document.querySelectorAll('.sbili a');
+      let bb = document.querySelector('.bslider ul');
+      aa.forEach((ele,idx)=>{
+        ele.onclick=(e)=>{
+          e.preventDefault();
+          bb.style.left = (-100*idx)+"%";
+          bb.style.transition = '.6s';
+        }
+      })
+    </script>
   </body>
 </html>
