@@ -13,7 +13,6 @@ body * {
   outline: 2px dashed #ccc;
 }
 
-
 /********************************** 메인 슬라이드 영역 **********************************/
 #ban-area {
   /* position: relative; */
@@ -126,7 +125,6 @@ body * {
 
 /* 기업소개 텍스트+버튼 */
 
-
 /* 하단 텍스트 */
 .txt p {
   display: block;
@@ -184,29 +182,26 @@ body * {
 /* 브랜드 소개 */
 #brandinfo-area {
   height: 1310px;
-  
-  
 }
-
 
 /* bi 리스트 */
-.sbili-box{
+.sbili-box {
   position: relative;
 }
-.sbili{
- position: absolute;
+.sbili {
+  position: absolute;
   /* ib 가로배열을 위한  */
   display: flex;
   /* 부모는? sbili-box */
   margin: 3% 27%;
 }
 
-.sbili a{
+.sbili a {
   padding: 40px;
   justify-content: space-between;
 }
 
-.sbili img{
+.sbili img {
   /* bi img 높이값 조정 */
   height: 2.4rem;
 }
@@ -215,44 +210,44 @@ body * {
 
 /* BG공통설정 */
 
-.bslider-box{
-  
+.bslider-box {
 }
-.bslider li{
-  height: 176vh;
+.bslider ul {
+  height: 100vh;
+  width: 100vw;
   position: relative;
   display: flex;
+}
+
+.bslider li {
+  display: flex;
+  /* 부모: .bslider ul */
+  position: relative;
+  flex: 1;
+  flex-shrink: 0;
+
+  /* BG공통설정 */
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.bislider01{
-  height: 176vh;
-  display: block;
+.bislider01 {
   background: url(../images/brand_iope.png);
 }
-.bislider02{
-  height: 176vh;
-  display: block;
+.bislider02 {
   background: url(../images/brand_hanyul.png);
 }
-.bislider03{
-  height: 176vh;
-  display: block;
+.bislider03 {
   background: url(../images/brand_laneige.png);
 }
-.bislider04{
-  height: 176vh;
-  display: block;
+.bislider04 {
   background: url(../images/brand_mamonde.png);
 }
-.bislider05{
-  height: 176vh;
-  display: block;
+.bislider05 {
   background: url(../images/brand_sulwhasoo.png);
 }
-
 
 /**************************************** 섹션03 ****************************************/
 
