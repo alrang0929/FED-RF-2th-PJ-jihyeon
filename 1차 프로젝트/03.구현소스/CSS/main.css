@@ -46,7 +46,7 @@ body * {
 /* 메인 슬라이드 버튼+텍스트 박스 */
 .mstext-box {
   position: absolute;
-  margin: 20px 40px;
+  margin: -2% 3%;
   padding: 20px 40px;
   /* width: 30vw; */
   bottom: 0;
@@ -199,6 +199,15 @@ body * {
 .sbili a {
   padding: 40px;
   justify-content: space-between;
+
+  /* 호버 사전값 */
+  opacity: 0.5;
+  transition: .4s;
+}
+
+/* 호버 애니메이션 */
+.sbili a:hover{
+opacity: 1;
 }
 
 .sbili img {
@@ -235,6 +244,27 @@ body * {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* 위치 */
+.bslider article{
+  position: relative;
+  width: 100%;
+  top: 25%;
+  text-align: center;
+}
+
+/* 브랜드 설명 텍스트 설정 */
+.bslider article p{
+  display: inline-block;
+  width: 30%;
+  margin: 6.3% auto;
+  color: #FFF;
+}
+
+/* 이미지 사이즈 변경 */
+.bslider article img{
+width: 16%;
 }
 
 .bislider01 {
