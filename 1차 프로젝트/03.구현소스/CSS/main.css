@@ -188,7 +188,7 @@ body * {
 .sbili-box {
   position: relative;
 }
-.sbili {
+.sbili{
   position: absolute;
   /* ib 가로배열을 위한  */
   display: flex;
@@ -210,13 +210,17 @@ body * {
 
 /* BG공통설정 */
 
-.bslider-box {
-}
 .bslider ul {
-  height: 100vh;
-  width: 100vw;
+  z-index: -1;
+
   position: relative;
   display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+
+  left: 0;
 }
 
 .bslider li {
@@ -227,7 +231,7 @@ body * {
   flex-shrink: 0;
 
   /* BG공통설정 */
-  height: 100%;
+  flex-basis: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
