@@ -30,6 +30,8 @@
 
 */
 .cont-box{
+    width: 1600px;
     display: flex;
     height: 100%;
+    margin: 0 auto;
 }
