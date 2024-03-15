@@ -46,13 +46,13 @@ body * {
 /* 메인 슬라이드 버튼+텍스트 박스 */
 .mstext-box {
   position: absolute;
-  margin: -2% 3%;
-  padding: 20px 40px;
+  margin: 31% 4%;
+  padding: 1% 1%;
   /* width: 30vw; */
-  bottom: 0;
+  /* bottom: 0; */
   right: 0;
 
-  margin-bottom: 13vh;
+  text-align: left;
 }
 
 /* 메인 슬라이드 내 텍스트 박스 */
@@ -61,11 +61,11 @@ body * {
   /* width: 30vw; */
   /* bottom: 0;
   right: 0; */
-  margin-bottom: 13vh;
+  margin-bottom: 8%;
   font-size: 5rem;
   color: #fff;
   line-height: 6.2rem;
-  letter-spacing: 0rem;
+  letter-spacing: -0.02rem;
   white-space: nowrap;
 }
 
@@ -260,6 +260,20 @@ opacity: 1;
   width: 30%;
   margin: 6.3% auto;
   color: #FFF;
+}
+
+/* 브랜드 버튼 공통설정 */
+.bslider button.mcolor-mbtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: -3% 0;
+  color: #fff;
+  
+}
+
+.bslider button.mcolor-mbtn a{
+  color: #fff;
 }
 
 /* 이미지 사이즈 변경 */
