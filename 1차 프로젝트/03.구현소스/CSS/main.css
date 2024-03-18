@@ -10,7 +10,7 @@
 
 /* 공사중 표시 */
 body * {
-  outline: 2px dashed #ccc;
+  /* outline: 2px dashed #ccc; */
 }
 
 /********************************** 메인 슬라이드 영역 **********************************/
@@ -18,6 +18,11 @@ body * {
   /* position: relative; */
   /* width: 100vw; */
   height: 100vh;
+ 
+}
+
+.bslider-box{
+  overflow: hidden;
 }
 
 /* 슬라이드 이미지 */
@@ -181,14 +186,14 @@ body * {
 
 /* 브랜드 소개 */
 #brandinfo-area {
-  height: 1310px;
+  height: 148vh;
 }
 
 /* bi 리스트 */
 .sbili-box {
   position: relative;
 }
-.sbili{
+.sbili {
   position: absolute;
   /* ib 가로배열을 위한  */
   display: flex;
@@ -202,12 +207,12 @@ body * {
 
   /* 호버 사전값 */
   opacity: 0.5;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 /* 호버 애니메이션 */
-.sbili a:hover{
-opacity: 1;
+.sbili a:hover {
+  opacity: 1;
 }
 
 .sbili img {
@@ -217,15 +222,14 @@ opacity: 1;
 
 /* 로고 호버시 밑줄 애니메이션 */
 
-  /* 가상요소 밑줄을 위한 부모자격 */
-  .sbili ul>li>a{
-    position: relative;
+/* 가상요소 밑줄을 위한 부모자격 */
+.sbili ul > li > a {
+  position: relative;
 }
 
-
 /* sbili상위 메뉴 오버시 밑줄 애니 */
-.sbili ul>li>a::after{
-  content: '';
+.sbili ul > li > a::after {
+  content: "";
   position: absolute;
   /* 앱솔루트는 자동블록됨! */
   top: 53px;
@@ -234,21 +238,19 @@ opacity: 1;
   height: 2px;
   background-color: #fff;
   /* 오버시 트렌지션 */
-  transition:  .3s;
+  transition: 0.3s;
 }
 
 /* 오버시 밑줄박스애니 */
-.sbili ul>li:hover>a::after{
+.sbili ul > li:hover > a::after {
   left: 0;
   width: 100%;
   /* 아웃시 트렌지션 */
   /* 오버시 트렌지션>left는 트렌지션 적용말것! */
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
-
 /* bi 로고 선택에 따라 변경되는 슬라이드 페이지 */
-
 
 /* BG공통설정 */
 
@@ -273,7 +275,7 @@ opacity: 1;
   flex-shrink: 0;
 
   /* BG공통설정 */
-  
+
   flex-basis: 100%;
   background-size: cover;
   background-position: center;
@@ -282,7 +284,7 @@ opacity: 1;
 }
 
 /* 위치 */
-.bslider article{
+.bslider article {
   position: relative;
   width: 100%;
   top: 25%;
@@ -290,11 +292,11 @@ opacity: 1;
 }
 
 /* 브랜드 설명 텍스트 설정 */
-.bslider article p{
+.bslider article p {
   display: inline-block;
   width: 30%;
   margin: 6.3% auto;
-  color: #FFF;
+  color: #fff;
 }
 
 /* 브랜드 버튼 공통설정 */
@@ -304,16 +306,15 @@ opacity: 1;
   transform: translateX(-50%);
   margin: -3% 0;
   color: #fff;
-  
 }
 
-.bslider button.mcolor-mbtn a{
+.bslider button.mcolor-mbtn a {
   color: #fff;
 }
 
 /* 이미지 사이즈 변경 */
-.bslider article img{
-width: 16%;
+.bslider article img {
+  width: 16%;
 }
 
 .bislider01 {
@@ -339,7 +340,92 @@ width: 16%;
   height: 1680px;
 }
 
+/* 타이틀+ 상품리스트 위에 1칸*/
+.titpd-wrap {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* 타이틀 박스 */
+.tit-box {
+  padding-left: 7%;
+  width: 43%;
+}
 /* 타이틀 */
+.tit-box h2 {
+  text-align-last: left;
+}
+
+
+
+/* 상품 리스트 / 아래 5칸 */
+.product-wrap {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  vertical-align: baseline;
+}
+
+/* 상품 메인 리스트 설정 */
+
+.product-main {
+  position: relative;
+  width: 50%;
+}
+.product-main img{
+  width: 70%;
+}
+
+/* 상품 서브리스트 설정 */
+.product-sub {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  width: 50%;
+}
+
+.product-sub img{
+  width: 100%;
+  padding: 1.9% 0;
+}
+
+
+.product-sub ul {
+  width: 50%;
+}
+
+.product-sub li {
+  width: 45%;
+  border-left: 2px solid #ededed;
+}
+
+.pd-tit{
+  padding-top: 2%;
+}
+
+/* 이미지하단 텍스트 */
+
+.mpricebx {
+  padding: 0 15%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.pricebx {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+.desc{
+  text-align: left;
+  
+}
 
 
 /* 사내 뉴스 */

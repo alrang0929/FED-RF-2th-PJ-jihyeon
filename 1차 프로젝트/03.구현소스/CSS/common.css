@@ -3,6 +3,10 @@
 /* 아모래퍼시픽 PJ : 공통 모듈 CSS - common.css */
 /* 공유기능 요소 셋팅 */
 
+body{
+    margin-top: 50px
+}
+
 
 /* 1. 상단영역 */
 .indicator {
@@ -14,7 +18,10 @@
     
 }
 .top-area {
-    /* margin-top: 10px; */
+    z-index: 999;
+    top: 0;
+    position: fixed;
+    width: 100%;
 
 }
 
