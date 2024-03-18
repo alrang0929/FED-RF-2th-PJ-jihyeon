@@ -215,7 +215,40 @@ opacity: 1;
   height: 2.4rem;
 }
 
+/* 로고 호버시 밑줄 애니메이션 */
+
+  /* 가상요소 밑줄을 위한 부모자격 */
+  .sbili ul>li>a{
+    position: relative;
+}
+
+
+/* sbili상위 메뉴 오버시 밑줄 애니 */
+.sbili ul>li>a::after{
+  content: '';
+  position: absolute;
+  /* 앱솔루트는 자동블록됨! */
+  top: 53px;
+  left: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  /* 오버시 트렌지션 */
+  transition:  .3s;
+}
+
+/* 오버시 밑줄박스애니 */
+.sbili ul>li:hover>a::after{
+  left: 0;
+  width: 100%;
+  /* 아웃시 트렌지션 */
+  /* 오버시 트렌지션>left는 트렌지션 적용말것! */
+  transition: width .3s;
+}
+
+
 /* bi 로고 선택에 따라 변경되는 슬라이드 페이지 */
+
 
 /* BG공통설정 */
 
@@ -240,10 +273,12 @@ opacity: 1;
   flex-shrink: 0;
 
   /* BG공통설정 */
+  
   flex-basis: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #000;
 }
 
 /* 위치 */

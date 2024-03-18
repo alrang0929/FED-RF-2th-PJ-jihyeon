@@ -65,10 +65,11 @@ html {
 }
 
 .txt{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 2.8rem;
+    font-weight: 300;
     text-align: center;
-    letter-spacing: -0.03rem;
+    letter-spacing: -0.04rem;
 }
 
 
