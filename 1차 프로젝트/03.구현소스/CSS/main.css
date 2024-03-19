@@ -338,6 +338,8 @@ body * {
 /* 상품 */
 #prodinfo-area {
   height: 1680px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* 타이틀+ 상품리스트 위에 1칸*/
@@ -350,8 +352,8 @@ body * {
 
 /* 타이틀 박스 */
 .tit-box {
-  padding-left: 7%;
-  width: 43%;
+  /* padding-left: 7%; */
+  width: 50%;
 }
 /* 타이틀 */
 .tit-box h2 {
@@ -373,7 +375,12 @@ body * {
 
 .product-main {
   position: relative;
+  height: 872px;
   width: 50%;
+  border: 2px solid #ededed;
+  
+  /* border-left: none; */
+  box-sizing: border-box;
 }
 .product-main img{
   width: 70%;
@@ -420,7 +427,11 @@ body * {
   display: flex;
   justify-content: space-between;
   font-size: 1.4rem;
-  padding: 0 10px;
+  padding: 20px 20px;
+}
+
+.price{
+  margin-top: auto;
 }
 .desc{
   text-align: left;
@@ -431,6 +442,56 @@ body * {
 /* 사내 뉴스 */
 #news-area {
   height: 906px;
+  margin: 12vw auto;
+}
+
+.ntit-box .mcolor-mbtn{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nlist{
+  display: flex;
+  margin: 18vh auto;
+
+
+}
+
+/* 썸네일 박스 설정 */
+.tmbx{
+  position: relative;
+  width: 270px;
+}
+
+/* 썸네일 영역 이미지 채우기 */
+.tmbx img{
+width: 100%;
+}
+
+
+
+
+/* 리스트 설정 */
+.nlist ul{
+  /* align-items: flex-start; */
+  display: flex;
+  justify-content: center;
+  
+}
+
+.thumbbx{
+  /* 넘치는 리스트 히든 */
+  width: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.nlist ul li{
+  margin: 20px;
+}
+
+.nlist article{
+  margin: 20px 0;
 }
 
 /* 회사 스토리 */

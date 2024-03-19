@@ -7,6 +7,10 @@ body{
     margin-top: 50px
 }
 
+body *{
+    /* 공사중 표시 */
+    outline: 2px dotted red;
+}
 
 /* 1. 상단영역 */
 .indicator {
@@ -40,6 +44,7 @@ body{
 .gnb{
     /* position: relative; */
     top: 10px;
+    margin-top: 7px;
     z-index: 999;
     
 }
