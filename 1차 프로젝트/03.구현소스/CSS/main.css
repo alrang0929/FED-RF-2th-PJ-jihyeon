@@ -452,7 +452,7 @@ body * {
   transform: translate(-50%, -50%);
 }
 
-.n-box{
+.nlist-wrap{
   width: 70%;
   margin: 0 auto;
 }
@@ -480,8 +480,12 @@ width: 100%;
 .nlist ul{
   /* align-items: flex-start; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   
+}
+
+.nlist span{
+  padding: 0 20px;
 }
 
 .thumbbx{
@@ -490,6 +494,7 @@ width: 100%;
   margin: 0 auto;
 }
 .nlist ul li{
+  
   margin: 20px;
 }
 
