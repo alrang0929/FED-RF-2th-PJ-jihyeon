@@ -25,12 +25,18 @@ body * {
   overflow: hidden;
 }
 
-/* 슬라이드 이미지 */
-.slider01 {
-  position: absolute;
+.mslider{
+  position: relative;
   top: 0;
   left: 0;
   height: 100vh;
+  width: 100%;
+}
+
+/* 슬라이드 이미지 */
+.slider01 {
+  position: absolute;
+  height: 100%;
   display: block;
   background: url(../images/mainvs01.jpg) no-repeat center/cover;
 }
@@ -38,24 +44,25 @@ body * {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   display: block;
   background: url(../images/mainvs02.jpg) no-repeat center/cover;
 }
 .slider03 {
-  height: 100vh;
+  height: 100%;
   display: block;
   background: url(../images/mainvs03.jpg) no-repeat center/cover;
 }
 
 /* 메인 슬라이드 버튼+텍스트 박스 */
 .mstext-box {
+  overflow: hidden;
   position: absolute;
-  margin: 31% 4%;
+
   padding: 1% 1%;
-  /* width: 30vw; */
-  /* bottom: 0; */
-  right: 0;
+  width: 30%;
+  bottom: 5%;
+  right: 3%;
 
   text-align: left;
 }
@@ -218,36 +225,6 @@ body * {
 .sbili img {
   /* bi img 높이값 조정 */
   height: 2.4rem;
-}
-
-/* 로고 호버시 밑줄 애니메이션 */
-
-/* 가상요소 밑줄을 위한 부모자격 */
-.sbili ul > li > a {
-  position: relative;
-}
-
-/* sbili상위 메뉴 오버시 밑줄 애니 */
-.sbili ul > li > a::after {
-  content: "";
-  position: absolute;
-  /* 앱솔루트는 자동블록됨! */
-  top: 53px;
-  left: 100%;
-  width: 0;
-  height: 2px;
-  background-color: #fff;
-  /* 오버시 트렌지션 */
-  transition: 0.3s;
-}
-
-/* 오버시 밑줄박스애니 */
-.sbili ul > li:hover > a::after {
-  left: 0;
-  width: 100%;
-  /* 아웃시 트렌지션 */
-  /* 오버시 트렌지션>left는 트렌지션 적용말것! */
-  transition: width 0.3s;
 }
 
 /* bi 로고 선택에 따라 변경되는 슬라이드 페이지 */
@@ -447,9 +424,15 @@ body * {
 
 
 .ntit-box .mcolor-mbtn{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.ntit-box .tit-engtitfont{
+  margin-bottom: 3%;
+}
+
+.ntit-box{
+  margin: 12% auto;
 }
 
 .nlist-wrap{
@@ -459,9 +442,28 @@ body * {
 
 .nlist{
   display: flex;
-  margin: 18vh auto;
+  margin: -24vh auto;
   justify-content: space-between;
   align-items: center;
+}
+
+/* 리스트 내 버튼 스타일 */
+.nlist button{
+  background: transparent;
+  border: transparent;
+  color: #c8c8c8;
+
+  transition: .05s;
+}
+
+.nlist button:hover{
+  color: #062C5E;
+}
+
+.nlist a, h4{
+  color: #171719;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
 }
 
 
@@ -496,6 +498,8 @@ width: 100%;
 .nlist ul li{
   
   margin: 20px;
+  margin-left: 0;
+
 }
 
 .nlist article{
@@ -507,7 +511,4 @@ width: 100%;
   height: 906px;
 }
 
-/* 푸터 */
-#footer-area {
-  height: 300px;
-}
+
