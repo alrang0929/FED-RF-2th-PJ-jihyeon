@@ -94,7 +94,11 @@ body *{
     justify-content: flex-start;
     /* 메뉴 줄바꿈 방지 */
     white-space: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 }
+
 
 .link-box ul > li{
     position: relative;

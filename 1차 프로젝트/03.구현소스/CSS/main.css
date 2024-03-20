@@ -78,8 +78,9 @@ body * {
   color: #fff;
   line-height: 6.2rem;
   letter-spacing: -0.02rem;
-  white-space: nowrap;
+  /* white-space: wrap; */
 }
+
 
 .mbtn {
   display: flex;
@@ -352,7 +353,7 @@ body * {
 
 .product-main {
   position: relative;
-  height: 872px;
+  height: fit-content;
   width: 50%;
   border: 2px solid #ededed;
   
@@ -360,24 +361,31 @@ body * {
   box-sizing: border-box;
 }
 .product-main img{
-  width: 70%;
+  width: max-content;
 }
+
+.product-main .img-wrap{
+  padding: 2.2% 0;
+}
+
 
 /* 상품 서브리스트 설정 */
 .product-sub {
-  align-items: flex-start;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+  }
 
-  width: 50%;
-}
 
 .product-sub img{
   width: 100%;
-  padding: 1.9% 0;
 }
 
+.product-sub .img-wrap{
+  padding: 14% 0;
+}
 
 .product-sub ul {
   width: 50%;
@@ -395,7 +403,7 @@ body * {
 /* 이미지하단 텍스트 */
 
 .mpricebx {
-  padding: 0 15%;
+  padding: 10px 51px;
   display: flex;
   justify-content: space-between;
   font-size: 1.4rem;
@@ -404,7 +412,7 @@ body * {
   display: flex;
   justify-content: space-between;
   font-size: 1.4rem;
-  padding: 20px 20px;
+  padding: 10px 10px;
 }
 
 .price{
@@ -425,6 +433,8 @@ body * {
 
 .ntit-box .mcolor-mbtn{
   margin: 0 auto;
+  margin-block: auto;
+  margin-bottom: 15%;
 }
 
 .ntit-box .tit-engtitfont{
@@ -449,6 +459,7 @@ body * {
 
 /* 리스트 내 버튼 스타일 */
 .nlist button{
+  padding: 0 20px;
   background: transparent;
   border: transparent;
   color: #c8c8c8;
