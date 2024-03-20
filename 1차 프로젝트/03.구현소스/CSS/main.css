@@ -445,19 +445,25 @@ body * {
   margin: 12vw auto;
 }
 
+
 .ntit-box .mcolor-mbtn{
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.n-box{
+  width: 70%;
+  margin: 0 auto;
+}
+
 .nlist{
   display: flex;
   margin: 18vh auto;
   justify-content: space-between;
-
-
+  align-items: center;
 }
+
 
 /* 썸네일 박스 설정 */
 .tmbx{
@@ -469,9 +475,6 @@ body * {
 .tmbx img{
 width: 100%;
 }
-
-
-
 
 /* 리스트 설정 */
 .nlist ul{
