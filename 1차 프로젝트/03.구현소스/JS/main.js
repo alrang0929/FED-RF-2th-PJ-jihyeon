@@ -28,6 +28,7 @@ const nextBtn = document.querySelector('#nextBtn')
 /* 카운터 값(=클릭 시 이동하는 이미지 수?) 설정*/
 let counter = 1;
 
+
 /* 리스트 이미지로 가로값 지정 */
 const size = nimg[0].clientWidth;
 //애니메이션 초기값 설정인감..
@@ -53,7 +54,9 @@ nextBtn.addEventListener('click', ()=>{
 
 
 prevBtn.addEventListener('click',()=>{
+  
   if(counter <= 0) return;
+  console.log(counter);
 
   //리스트박스 애니메이션
   nlist.style.transition = "transform .4s ease-in-out";
@@ -69,6 +72,7 @@ if(nimg[counter].id === 'lastclone'){
   nlist.style.transition = "none"; //트렌지션 효과 제거
   counter = nimg.length -2; //counter 초기화
   nlist.style.transform = 'translateX(' + (-size * counter) + 'px)';//실제 이미지로 이동
+  
 }////////실제 이미지 마지막 이동
 
 else if(nimg[counter].id === 'firstclone'){

@@ -517,9 +517,64 @@ width: 100%;
   margin: 20px 0;
 }
 
-/* 회사 스토리 */
+/************************************ 회사 스토리 ************************************/
 #story-area {
   height: 906px;
+  overflow: hidden;
 }
 
 
+/* 메인박스 */
+.story-area{
+  position: relative;
+}
+
+/* 타이틀 */
+.storysd-titbox{
+  text-align-last: left;
+}
+
+.storysd-wrap{
+  /* 가로로 흘러가게! */
+  display: flex;
+  /* 부모: .story-area */
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 50%;
+  flex-direction: row;
+}
+
+/* 서브 슬라이드 공통값 */
+.sub-slid ul{
+  /* 가로로 흘러가게! */
+  display: flex;
+  /* 부모: .story-area */
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 50%;
+  flex-direction: row;
+
+}
+
+
+.storysd-box01{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 50%;
+  flex-direction: row;
+
+}
+
+.storysd-box02{
+  /* 햇갈려서 잠시 꺼놓음ㅁ.. */
+  display: none;
+}
+.storysd-box03{
+  /* 햇갈려서 잠시 꺼놓음ㅁ.. */
+  display: none;
+}
+.storysd-box04{
+  /* 햇갈려서 잠시 꺼놓음ㅁ.. */
+  display: none;
+}
