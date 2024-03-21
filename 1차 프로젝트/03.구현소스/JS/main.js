@@ -40,7 +40,7 @@ nlist.style.transform = 'translateX(' + (-size * counter) + 'px)';
 nextBtn.addEventListener('click', ()=>{
 
   //카운터 보다 크거나 같으면 이미지 갯수 -1 만큼 머..???
-  if(counter >= nimg.length -1) return;
+  if(counter >= 5) return;
 
   //리스트박스 애니메이션
   nlist.style.transition = "transform .4s ease-in-out";
@@ -54,9 +54,8 @@ nextBtn.addEventListener('click', ()=>{
 
 
 prevBtn.addEventListener('click',()=>{
-  
-  if(counter <= 0) return;
   console.log(counter);
+  if(counter <= 0) return;
 
   //리스트박스 애니메이션
   nlist.style.transition = "transform .4s ease-in-out";
@@ -67,7 +66,7 @@ prevBtn.addEventListener('click',()=>{
 
 nlist.addEventListener('transitionend',() => {
 
-console.log(nimg[counter]);
+console.log(nimg[counter],counter);
 if(nimg[counter].id === 'lastclone'){
   nlist.style.transition = "none"; //트렌지션 효과 제거
   counter = nimg.length -2; //counter 초기화
@@ -77,7 +76,7 @@ if(nimg[counter].id === 'lastclone'){
 
 else if(nimg[counter].id === 'firstclone'){
   nlist.style.transition = 'none';
-  counter = nimg.length -counter;// 카운터 값 초기화
+  counter = nimg.length -counter;// 카운터 값 초기화  
   nlist.style.transform = 'translateX(' + (-size * counter) + 'px)';
 }///////실제 이미지 첫번째 이동
 
