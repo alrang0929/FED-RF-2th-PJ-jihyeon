@@ -542,6 +542,8 @@ width: 100%;
   flex-wrap: nowrap;
   width: 50%;
   flex-direction: row;
+
+  margin: 0 11%;
 }
 
 /* 서브 슬라이드 공통값 */
@@ -556,6 +558,19 @@ width: 100%;
 
 }
 
+/****************************** 슬라이드박스 공통설정 ******************************/
+/* 이미지 공통 마진 */
+.sub-slid img{
+  margin: 0 5%;
+}
+
+/* 텍스트 박스 설정 */
+.desc {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .storysd-box01{
   display: flex;
@@ -564,7 +579,11 @@ width: 100%;
   width: 50%;
   flex-direction: row;
 
+  margin: 0 11%;
 }
+
+
+
 
 .storysd-box02{
   /* 햇갈려서 잠시 꺼놓음ㅁ.. */
