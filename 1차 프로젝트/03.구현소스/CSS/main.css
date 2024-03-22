@@ -550,38 +550,122 @@ width: 100%;
 
 /* 서브 슬라이드 공통값 */
 .sub-slid ul{
-  /* 가로로 흘러가게! */
-  display: flex;
-  /* 부모: .story-area */
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  width: 50%;
-  flex-direction: row;
+ /* 가로로 흘러가게! */
+ display: flex;
+ /* 부모: .story-area */
+ justify-content: flex-start;
+ flex-wrap: nowrap;
+ width: 50%;
+ flex-direction: row;
 }
 
 /****************************** 슬라이드박스 공통설정 ******************************/
-/* 이미지 공통 마진 */
+
+.main-slid{
+position: relative;
+}
+/*********************** 슬라이드 공통 설정 ***********************/
+
 .sub-slid img{
   margin: 0 5%;
 }
 
 /* 텍스트 박스 설정 */
-.main-slid .desc {
-  width: 40%;
-  margin: 2%;
+
+
+
+/* 메인 이미지 호버시 정보 보임 */
+.main-slid .desc-box{
+  
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+  background: #00000060;
+  /* 뷰모: mimgbx */
+
   position: absolute;
   top: 0;
+  left: 0;
+
+  transition: .2s ease-in-out;
+
 }
+.main-slid:hover .desc-box{
+
+  opacity: 1;
+  
+  width: 100%;
+  height: 100%;
+  background: #00000060;
+  /* 뷰모: mimgbx */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: .2s ease-in-out;
+
+}
+
+.main-slid .desc{
+  opacity: 0;
+  width: 40%;
+  padding: 2%;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  line-height: 2rem;
+  transition: .2s ease-in-out;
+}
+.main-slid:hover .desc{
+  opacity: 1;
+  width: 40%;
+  padding: 2%;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  line-height: 2rem;
+  transition: .2s ease-in-out;
+}
+
+.main-slid .desc h4{
+  opacity: 0;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #FFF;
+  transition: .2s ease-in-out;
+}
+.main-slid:hover .desc h4{
+  opacity: 1;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FFF;
+  transition: .2s ease-in-out;
+}
+
+
+
+
+
 
 /* 이미지박스 주석 */
 .main-slid article{
+  position: absolute;
+  /* 부모: main-slid */
+  bottom: 0;
+  right: 0;
   color: #fff;
   background: #00000080;
   width: fit-content;
   padding: 4px 10px;
 }
 
+
+
 .storysd-box01{
+
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
