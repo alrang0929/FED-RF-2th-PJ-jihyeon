@@ -316,7 +316,7 @@ body * {
 /* 상품 */
 #prodinfo-area {
   height: 1680px;
-  width: 90%;
+ /*  width: 90%; */
   margin: 0 auto;
 }
 
@@ -526,7 +526,7 @@ width: 100%;
 
 /* 메인박스 */
 .story-area{
-  position: relative;
+ /*  position: relative; */
 }
 
 /* 타이틀 */
@@ -536,6 +536,8 @@ width: 100%;
 
 .storysd-wrap{
   /* 가로로 흘러가게! */
+  position: relative;
+
   display: flex;
   /* 부모: .story-area */
   justify-content: flex-start;
@@ -555,7 +557,6 @@ width: 100%;
   flex-wrap: nowrap;
   width: 50%;
   flex-direction: row;
-
 }
 
 /****************************** 슬라이드박스 공통설정 ******************************/
@@ -565,11 +566,19 @@ width: 100%;
 }
 
 /* 텍스트 박스 설정 */
-.desc {
+.main-slid .desc {
   width: 40%;
+  margin: 2%;
   position: absolute;
   top: 0;
-  left: 0;
+}
+
+/* 이미지박스 주석 */
+.main-slid article{
+  color: #fff;
+  background: #00000080;
+  width: fit-content;
+  padding: 4px 10px;
 }
 
 .storysd-box01{
