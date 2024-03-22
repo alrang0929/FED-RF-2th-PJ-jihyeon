@@ -361,7 +361,7 @@ body * {
   box-sizing: border-box;
 }
 .product-main img{
-  width: max-content;
+  width: 100%;
 }
 
 .product-main .img-wrap{
