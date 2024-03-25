@@ -54,7 +54,18 @@ function loadFn() {
     x.onclick = goslide;
   }
 
+  //광클 금지변수
+  let prot = false;
+
   function goslide() {
+    //광클금지 설정
+    if (prot) return;
+    prot = true;
+    setTimeout(() => {
+      prot=false;
+    }, 600);
+
+    //1. 오른쪽 버튼은 .ab2 인가?
     let isRbtn = this.classList.contains("ab2");
     //contains: 특정 클래스 여부 판단, true / false
     //함수 호출 확인
@@ -74,6 +85,21 @@ function loadFn() {
         slide.style.transition = "none";
       }, 600); //////////timout///////
     } /////////if
+
+    //2-2 왼쪾 버튼일 경우
+    else {
+      //하위 li 수정
+      let list = slide.querySelectorAll("li");
+      slide.insertBefore(list[list.length - 1], list[0]);
+
+      slide.style.left = "-100%";
+      slide.style.transition = "none";
+
+      setTimeout(() => {
+        slide.style.left = "0";
+        slide.style.transition = ".6s ease-in-out";
+      }, 0);
+    }
   } ///////////goslide///////////
 
   /*  if (isRbtn) {

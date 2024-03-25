@@ -15,17 +15,63 @@ body * {
 
 /********************************** 메인 슬라이드 영역 **********************************/
 #ban-area {
-  /* position: relative; */
+  position: relative;
   /* width: 100vw; */
-  height: 100vh;
- 
+  height: 100%;
 }
 
-.bslider-box{
+.ban-area{
+  /* position: relative; */
+}
+
+/* 슬라이드 인디케이터 */
+.slide-indi{
+  z-index: 1;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /* transform: translateX(-50%); */
+
+  width: 100%;
+  height: 100%;
+}
+
+/* 인디케이터 디자인 설정 */
+/* 영역 */
+.slide-indibx{
+  display: flex;
+  height: 110px;
+  width: 13%;
+  gap: 40px;
+}
+
+/* 바 */
+
+.front-bar{
+  width: 1.5px;
+  height: 25%;
+  color: #fff;
+}
+.back-bar{
+  width: 1.5px;
+  height: 100%;
+  color: #ffffff50;
+}
+
+/* 텍스트 */
+.slide-indibx li{
+  color: #fff;
+  font-size: 1.0rem;
+  line-height: 4;
+}
+
+
+.bslider-box {
   overflow: hidden;
 }
 
-.mslider{
+.mslider {
   position: relative;
   top: 0;
   left: 0;
@@ -58,12 +104,10 @@ body * {
 .mstext-box {
   overflow: hidden;
   position: absolute;
-
-  padding: 1% 1%;
-  width: 30%;
+  padding: 0% 6%;
+  width: 36%;
   bottom: 5%;
   right: 3%;
-
   text-align: left;
 }
 
@@ -74,13 +118,12 @@ body * {
   /* bottom: 0;
   right: 0; */
   margin-bottom: 8%;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #fff;
   line-height: 6.2rem;
   letter-spacing: -0.02rem;
   /* white-space: wrap; */
 }
-
 
 .mbtn {
   display: flex;
@@ -194,7 +237,13 @@ body * {
 
 /* 브랜드 소개 */
 #brandinfo-area {
-  height: 148vh;
+  height: 100%;
+}
+
+.bslider-box{
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 /* bi 리스트 */
@@ -202,11 +251,16 @@ body * {
   position: relative;
 }
 .sbili {
-  position: absolute;
+  /* position: absolute; */
   /* ib 가로배열을 위한  */
   display: flex;
+  top: 0;
   /* 부모는? sbili-box */
-  margin: 3% 27%;
+  /* margin: 3% auto; */
+ /*  margin-top: 20px; */
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .sbili a {
@@ -234,25 +288,29 @@ body * {
 
 .bslider ul {
   z-index: -1;
-
   position: relative;
   display: flex;
-  height: 100vh;
+  height: 720px;
   /* width: 100vw; */
 
   /* overflow: hidden; */
-
+  margin: 0 auto;
+  
   left: 0;
 }
 
 .bslider li {
+
   display: flex;
   /* 부모: .bslider ul */
   position: relative;
   flex: 1;
   flex-shrink: 0;
+  height: 100%;
+  width: 100%;
 
   /* BG공통설정 */
+
 
   flex-basis: 100%;
   background-size: cover;
@@ -261,8 +319,12 @@ body * {
   background-color: #000;
 }
 
+/* 호버시 배경 효과 */
+
+
 /* 위치 */
 .bslider article {
+
   position: relative;
   width: 100%;
   top: 25%;
@@ -272,8 +334,8 @@ body * {
 /* 브랜드 설명 텍스트 설정 */
 .bslider article p {
   display: inline-block;
-  width: 30%;
-  margin: 6.3% auto;
+  width: 50%;
+  margin: 5.3% auto;
   color: #fff;
 }
 
@@ -293,9 +355,12 @@ body * {
 /* 이미지 사이즈 변경 */
 .bslider article img {
   width: 16%;
+  
 }
 
 .bislider01 {
+  
+
   background: url(../images/brand_iope.png);
 }
 .bislider02 {
@@ -315,9 +380,9 @@ body * {
 
 /* 상품 */
 #prodinfo-area {
-  height: 1680px;
- /*  width: 90%; */
-  margin: 0 auto;
+  height: 100%;
+  /*  width: 90%; */
+  margin: 10% auto;
 }
 
 /* 타이틀+ 상품리스트 위에 1칸*/
@@ -338,8 +403,6 @@ body * {
   text-align-last: left;
 }
 
-
-
 /* 상품 리스트 / 아래 5칸 */
 .product-wrap {
   align-items: flex-start;
@@ -356,34 +419,32 @@ body * {
   height: fit-content;
   width: 50%;
   border: 2px solid #ededed;
-  
+
   /* border-left: none; */
   box-sizing: border-box;
 }
-.product-main img{
+.product-main img {
   width: 100%;
 }
 
-.product-main .img-wrap{
+.product-main .img-wrap {
   padding: 2.2% 0;
 }
 
-
 /* 상품 서브리스트 설정 */
 .product-sub {
-    align-items: flex-start;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 50%;
-  }
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+}
 
-
-.product-sub img{
+.product-sub img {
   width: 100%;
 }
 
-.product-sub .img-wrap{
+.product-sub .img-wrap {
   padding: 14% 0;
 }
 
@@ -396,7 +457,7 @@ body * {
   border-left: 2px solid #ededed;
 }
 
-.pd-tit{
+.pd-tit {
   padding-top: 2%;
 }
 
@@ -415,14 +476,12 @@ body * {
   padding: 10px 10px;
 }
 
-.price{
+.price {
   margin-top: auto;
 }
-.desc{
+.desc {
   text-align: left;
-  
 }
-
 
 /* 사내 뉴스 */
 #news-area {
@@ -430,27 +489,26 @@ body * {
   margin: 12vw auto;
 }
 
-
-.ntit-box .mcolor-mbtn{
+.ntit-box .mcolor-mbtn {
   margin: 0 auto;
   margin-block: auto;
-  margin-bottom: 15%;
+  margin-bottom: 23%;
 }
 
-.ntit-box .tit-engtitfont{
+.ntit-box .tit-engtitfont {
   margin-bottom: 3%;
 }
 
-.ntit-box{
+.ntit-box {
   margin: 12% auto;
 }
 
-.nlist-wrap{
+.nlist-wrap {
   width: 70%;
   margin: 0 auto;
 }
 
-.nlist{
+.nlist {
   display: flex;
   margin: -24vh auto;
   justify-content: space-between;
@@ -458,62 +516,64 @@ body * {
 }
 
 /* 리스트 내 버튼 스타일 */
-.nlist button{
+.nlist button {
   padding: 0 20px;
   background: transparent;
   border: transparent;
   color: #c8c8c8;
 
-  transition: .05s;
+  transition: 0.05s;
 }
 
-.nlist button:hover{
-  color: #062C5E;
+.nlist button:hover {
+  color: #062c5e;
 }
 
-.nlist a, h4{
+.nlist a {
   color: #171719;
   font-size: 1.6rem;
   line-height: 2.3rem;
 }
 
+.nlist > h4{
+  color: #171719;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}
 
 /* 썸네일 박스 설정 */
-.tmbx{
+.tmbx {
   position: relative;
   width: 270px;
 }
 
 /* 썸네일 영역 이미지 채우기 */
-.tmbx img{
-width: 100%;
+.tmbx img {
+  width: 100%;
 }
 
 /* 리스트 설정 */
-.nlist ul{
+.nlist ul {
   /* align-items: flex-start; */
   display: flex;
   justify-content: flex-start;
-  
 }
 
-.nlist span{
+.nlist span {
   padding: 0 20px;
 }
 
-.thumbbx{
+.thumbbx {
   /* 넘치는 리스트 히든 */
   overflow: hidden;
   margin: 0 auto;
 }
-.nlist ul li{
-  
+.nlist ul li {
   margin: 20px;
   margin-left: 0;
-
 }
 
-.nlist article{
+.nlist article {
   margin: 20px 0;
 }
 
@@ -523,18 +583,19 @@ width: 100%;
   overflow: hidden;
 }
 
-
 /* 메인박스 */
-.story-area{
- /*  position: relative; */
+.story-area {
+  /*  position: relative; */
 }
 
 /* 타이틀 */
-.storysd-titbox{
+.storysd-titbox {
   text-align-last: left;
 }
 
-.storysd-wrap{
+.storysd-wrap {
+  /* 리스트 확인용 */
+  /* left: -90%; */
   /* 가로로 흘러가게! */
   position: relative;
 
@@ -549,34 +610,34 @@ width: 100%;
 }
 
 /* 서브 슬라이드 공통값 */
-.sub-slid ul{
- /* 가로로 흘러가게! */
- display: flex;
- /* 부모: .story-area */
- justify-content: flex-start;
- flex-wrap: nowrap;
- width: 50%;
- flex-direction: row;
+.sub-slid ul {
+  /* 부모: .story-area */
+  display: flex;
+
+  margin-left: 9%;
+  gap: 19px;
+
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 280%;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: center;
 }
 
 /****************************** 슬라이드박스 공통설정 ******************************/
 
-.main-slid{
-position: relative;
+.main-slid {
+  position: relative;
+  height: 100%;
 }
 /*********************** 슬라이드 공통 설정 ***********************/
 
-.sub-slid img{
-  margin: 0 5%;
-}
 
 /* 텍스트 박스 설정 */
 
-
-
 /* 메인 이미지 호버시 정보 보임 */
-.main-slid .desc-box{
-  
+.main-slid .desc-box {
   opacity: 0;
 
   width: 100%;
@@ -588,13 +649,11 @@ position: relative;
   top: 0;
   left: 0;
 
-  transition: .2s ease-in-out;
-
+  transition: 0.2s ease-in-out;
 }
-.main-slid:hover .desc-box{
-
+.main-slid:hover .desc-box {
   opacity: 1;
-  
+
   width: 100%;
   height: 100%;
   background: #00000060;
@@ -604,11 +663,10 @@ position: relative;
   top: 0;
   left: 0;
 
-  transition: .2s ease-in-out;
-
+  transition: 0.2s ease-in-out;
 }
 
-.main-slid .desc{
+.main-slid .desc {
   opacity: 0;
   width: 40%;
   padding: 2%;
@@ -616,9 +674,9 @@ position: relative;
   top: 0;
   color: #fff;
   line-height: 2rem;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.main-slid:hover .desc{
+.main-slid:hover .desc {
   opacity: 1;
   width: 40%;
   padding: 2%;
@@ -626,31 +684,26 @@ position: relative;
   top: 0;
   color: #fff;
   line-height: 2rem;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.main-slid .desc h4{
+.main-slid .desc h4 {
   opacity: 0;
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #FFF;
-  transition: .2s ease-in-out;
+  color: #fff;
+  transition: 0.2s ease-in-out;
 }
-.main-slid:hover .desc h4{
+.main-slid:hover .desc h4 {
   opacity: 1;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #FFF;
-  transition: .2s ease-in-out;
+  color: #fff;
+  transition: 0.2s ease-in-out;
 }
 
-
-
-
-
-
 /* 이미지박스 주석 */
-.main-slid article{
+.main-slid article {
   position: absolute;
   /* 부모: main-slid */
   bottom: 0;
@@ -661,32 +714,40 @@ position: relative;
   padding: 4px 10px;
 }
 
-
-
-.storysd-box01{
-
+.storysd-box01 {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  width: 50%;
   flex-direction: row;
 
   margin: 0 11%;
 }
 
+.storysd-box02 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
 
-
-
-.storysd-box02{
-  /* 햇갈려서 잠시 꺼놓음ㅁ.. */
-  display: none;
+  margin: 0 11%;
 }
-.storysd-box03{
-  /* 햇갈려서 잠시 꺼놓음ㅁ.. */
-  display: none;
+.storysd-box03 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  margin: 0 11%;
 }
-.storysd-box04{
-  /* 햇갈려서 잠시 꺼놓음ㅁ.. */
-  display: none;
+.storysd-box04 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  margin: 0 11%;
 }

@@ -4,6 +4,7 @@
 /* 공유기능 요소 셋팅 */
 
 body{
+    position: relative;
     margin-top: 50px
 }
 
@@ -12,17 +13,40 @@ body *{
     outline: 2px dotted red;
 }
 
-/* 0. top버튼 */
-.tbtn-area{
-    position: absolute;
+
+.logo img{
+    height: 20px;
 }
 
+/* 0. top버튼 영역*/
+.tbtn-area{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 22.8vw;
+    width: 6vw;
+    z-index: 999;
+}
+
+/* top 버튼 설정 */
 .btn-top{
+    top: 92%;
     position: sticky;
     background: #062C5E;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 70px;
     color: #fff;
+    right: 0vw;
+    bottom: -17vh;
+    z-index: 999;
+}
+
+.btn-top a{
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    color: #fff;
+
 }
 
 /* 1. 상단영역 */
@@ -105,6 +129,15 @@ body *{
     padding: 0 10px;
     line-height: 51px;
     font-weight: 500;
+
+    opacity: .5;
+    transition: .3s;
+}
+
+
+/* 호버효과 */
+.link-box ul > li:hover{
+    opacity: 1;
 }
 
 /* h2 스타일 */
