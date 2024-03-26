@@ -50,6 +50,8 @@ body *{
 }
 
 /* 1. 상단영역 */
+
+/* 인디케이터 설정 */
 .indicator {
     position: fixed;
     width: 100%;
