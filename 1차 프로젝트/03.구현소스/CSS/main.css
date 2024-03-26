@@ -7,7 +7,9 @@
 
 /* 그리드 시스템 */
 @import url(./grid_12_flex.css);
-
+html{
+  scroll-behavior: smooth;
+}
 /* 공사중 표시 */
 body * {
   /* outline: 2px dashed #ccc; */
@@ -24,40 +26,64 @@ body * {
 /* 슬라이드 인디케이터 */
 .slide-indi{
   z-index: 1;
-  position: fixed;
+  position: absolute;
   /* width: 40%; */
-
-  left: 5%;
-  top: 50%;
-  transform: translateY(30%);
+  height: 100%;
+  left: 5vw;
+  /* top: 0; */
+  /* transform: translateY(30%); */
 }
 
 /* 인디케이터 디자인 설정 */
 /* 영역 */
 .slide-indibx{
-  gap: 20px;
+  /* gap: 20px; */
+  position: sticky;
+  top: 0;
   display: flex;
-  justify-content: flex-start;
-  /* width: 100%; */
+  justify-content: center;
+  height: 33.333%;
   flex-wrap: nowrap;
-  flex-direction: row;
+  flex-direction: column;
 }
+
 
 .slide-indibx a{
   color: #fff;
 }
 
+/* 린디바 */
+.lndi-bar{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  left: -25%;
+}
 /* 바 */
 .front-bar{
+  position: absolute;
+  top: 0%;
 width: 2px;
-height: 20%;
+height: 20px;
 opacity: 1;
 background: #ffffff;
+  transition: .2s;
+}
+
+.lndi-bar.on1 .front-bar{
+  top: 0%;
+}
+.lndi-bar.on2 .front-bar{
+  top: 40%;
+}
+.lndi-bar.on3 .front-bar{
+  top: 80%;
 }
 
 
 .back-bar{
   width: 2px;
+  height: 80px;
   opacity: 0.5;
   background: #ffffff;
 }
@@ -78,27 +104,27 @@ background: #ffffff;
   position: relative;
   top: 0;
   left: 0;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
 }
 
 /* 슬라이드 이미지 */
 .slider01 {
-  position: absolute;
-  height: 100%;
+  /* position: absolute; */
+  height: 100vh;
   display: block;
   background: url(../images/mainvs01.jpg) no-repeat center/cover;
 }
 .slider02 {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   display: block;
   background: url(../images/mainvs02.jpg) no-repeat center/cover;
 }
 .slider03 {
-  height: 100%;
+  height: 100vh;
   display: block;
   background: url(../images/mainvs03.jpg) no-repeat center/cover;
 }
@@ -559,12 +585,18 @@ background: #ffffff;
 .tmbx img {
   width: 100%;
 }
-
+/* 슬라이드 랩핑박스 */
+.wrap-slide{
+  position: relative;
+  left: 0;
+  display: flex;
+}
 /* 리스트 설정 */
 .nlist ul {
   /* align-items: flex-start; */
   display: flex;
   justify-content: flex-start;
+  gap: 0 40px;
 }
 
 .nlist span {
@@ -576,10 +608,10 @@ background: #ffffff;
   overflow: hidden;
   margin: 0 auto;
 }
-.nlist ul li {
+/* .nlist ul li {
   margin: 20px;
   margin-left: 0;
-}
+} */
 
 .nlist article {
   margin: 20px 0;
@@ -634,7 +666,13 @@ background: #ffffff;
 }
 
 /****************************** 슬라이드박스 공통설정 ******************************/
-
+.mimgbx{
+  width: 100%;
+  height: 100%;
+}
+.mimgbx img{
+  height: 100%;
+}
 .main-slid {
   position: relative;
   height: 100%;

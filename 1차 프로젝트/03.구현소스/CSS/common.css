@@ -39,6 +39,7 @@ body *{
     right: 0vw;
     bottom: -17vh;
     z-index: 999;
+    float: right;
 }
 
 .btn-top a{

@@ -7,6 +7,19 @@ const qsa = (x) => document.querySelectorAll(x);
 // ele - 요소, evt - 이벤트, fn - 함수
 const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
 
+// 블릿요소
+const indibar = qs('.lndi-bar');
+// 인디케이터 메뉴
+const indi = qsa('.slide-indibx ol li');
+
+indi.forEach((ele,idx)=>{
+  ele.onclick = ()=>{
+    indibar.setAttribute('class','lndi-bar on'+(idx+1))
+  }; /// click ///
+}); /// forEach ////
+
+
+
 // HTML태그 로딩후 loadFn함수 호출! ///
 addEvt(window, "DOMContentLoaded", loadFn);
 
@@ -44,7 +57,7 @@ function loadFn() {
   // document.querySelectorAll('abtn')
   // console.log(document.querySelectorAll('.abtn'));
   //변경대상: .thumbbx ul
-  const slide = qs(".thumbbx ul");
+  const slide = qs(".wrap-slide");
 
   //슬라이드 전역변수
   let snum = 0;
@@ -77,7 +90,7 @@ function loadFn() {
 
       setTimeout(() => {
         //2-1 맨앞 li 맨 뒤로 이동
-        slide.appendChild(slide.querySelectorAll("li")[0]);
+        slide.appendChild(slide.querySelectorAll("ul")[0]);
         //슬라이드 left값이 -100%이므로
         //2-2 left값을 0으로 변경
         slide.style.left = "0";
@@ -89,7 +102,7 @@ function loadFn() {
     //2-2 왼쪾 버튼일 경우
     else {
       //하위 li 수정
-      let list = slide.querySelectorAll("li");
+      let list = slide.querySelectorAll("ul");
       slide.insertBefore(list[list.length - 1], list[0]);
 
       slide.style.left = "-100%";
