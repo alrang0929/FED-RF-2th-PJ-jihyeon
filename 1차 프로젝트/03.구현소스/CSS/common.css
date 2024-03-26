@@ -58,9 +58,7 @@ body *{
     height: 10px;
     top: 0;
     background: #ffffff;
-
     z-index: 999;
-    
 }
 .top-area {
     z-index: 999;

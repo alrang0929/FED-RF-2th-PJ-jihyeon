@@ -46,17 +46,23 @@ body * {
   gap: 40px;
 }
 
-/* 바 */
+.slide-indibx a{
+  color: #fff;
+}
 
+/* 바 */
+.lndi-bar{
+  width: 4px;
+}
 .front-bar{
   width: 1.5px;
   height: 25%;
   color: #fff;
 }
 .back-bar{
-  width: 1.5px;
+  width: 100%;
   height: 100%;
-  color: #ffffff50;
+  color: #ff0000;
 }
 
 /* 텍스트 */

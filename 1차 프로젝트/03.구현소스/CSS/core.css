@@ -52,6 +52,13 @@ html {
 }
 
 
+/* a요소 초기화 */
+a{
+    text-decoration: none;
+    padding: 0;
+}
+
+
 /* 영문타이틀 전용폰트 */
 
 .engtitfont h2{
