@@ -23,13 +23,9 @@ body * {
 
 /* 슬라이드 인디케이터 */
 .slide-indi{
-
-  display: flex;
-  justify-content: right;
-
   z-index: 1;
   position: fixed;
-  width: 20%;
+  /* width: 40%; */
 
   left: 5%;
   top: 50%;
@@ -39,8 +35,11 @@ body * {
 /* 인디케이터 디자인 설정 */
 /* 영역 */
 .slide-indibx{
-  /* display: flex; */
-  gap: 40px;
+  display: flex;
+  justify-content: flex-start;
+  /* width: 100%; */
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .slide-indibx a{
@@ -49,9 +48,12 @@ body * {
 
 /* 바 */
 .lndi-bar{
-  width: 100%;
+  width: 40px;
   height: 100%;
-  background-color: #fff;
+  
+}
+.back-bar{
+  background: #fff;
 }
 
 /* 텍스트 */
