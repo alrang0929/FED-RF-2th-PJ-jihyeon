@@ -631,26 +631,23 @@ background: #ffffff;
 /* 타이틀 */
 .storysd-titbox {
   text-align-last: left;
+  margin-left: 10%;
 }
 
 .storysd-wrap {
   /* 리스트 확인용 */
   /* left: -90%; */
   /* 가로로 흘러가게! */
-  position: relative;
-
+  /* position: relative; */
   display: flex;
   /* 부모: .story-area */
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  width: 50%;
+  gap: 0 10%;
   flex-direction: row;
-
-  margin: 0 11%;
+  justify-content: flex-start;
 }
 
 /* 서브 슬라이드 공통값 */
-.sub-slid ul {
+.sub-slid {
   /* 부모: .story-area */
   display: flex;
 
@@ -663,6 +660,14 @@ background: #ffffff;
   flex-direction: row;
   align-items: stretch;
   align-content: center;
+}
+
+.sub-slid ul{
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0 40px
 }
 
 /****************************** 슬라이드박스 공통설정 ******************************/
@@ -699,17 +704,6 @@ background: #ffffff;
 }
 .main-slid:hover .desc-box {
   opacity: 1;
-
-  width: 100%;
-  height: 100%;
-  background: #00000060;
-  /* 뷰모: mimgbx */
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  transition: 0.2s ease-in-out;
 }
 
 .main-slid .desc {
@@ -724,13 +718,6 @@ background: #ffffff;
 }
 .main-slid:hover .desc {
   opacity: 1;
-  width: 40%;
-  padding: 2%;
-  position: absolute;
-  top: 0;
-  color: #fff;
-  line-height: 2rem;
-  transition: 0.2s ease-in-out;
 }
 
 .main-slid .desc h4 {
@@ -742,10 +729,6 @@ background: #ffffff;
 }
 .main-slid:hover .desc h4 {
   opacity: 1;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-  transition: 0.2s ease-in-out;
 }
 
 /* 이미지박스 주석 */
