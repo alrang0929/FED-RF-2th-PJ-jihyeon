@@ -35,6 +35,7 @@ body * {
 /* 인디케이터 디자인 설정 */
 /* 영역 */
 .slide-indibx{
+  gap: 20px;
   display: flex;
   justify-content: flex-start;
   /* width: 100%; */
@@ -47,20 +48,25 @@ body * {
 }
 
 /* 바 */
-.lndi-bar{
-  width: 40px;
-  height: 100%;
-  
+.front-bar{
+width: 2px;
+height: 20%;
+opacity: 1;
+background: #ffffff;
 }
+
+
 .back-bar{
-  background: #fff;
+  width: 2px;
+  opacity: 0.5;
+  background: #ffffff;
 }
 
 /* 텍스트 */
 .slide-indibx li{
   color: #fff;
   font-size: 1.0rem;
-  line-height: 4;
+  margin-bottom: 20px;
 }
 
 

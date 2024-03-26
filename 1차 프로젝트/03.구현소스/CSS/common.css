@@ -10,7 +10,7 @@ body{
 
 body *{
     /* 공사중 표시 */
-    outline: 2px dotted red;
+    /* outline: 2px dotted red; */
 }
 
 
