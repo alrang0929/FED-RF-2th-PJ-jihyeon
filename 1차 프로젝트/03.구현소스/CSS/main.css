@@ -246,21 +246,26 @@ body * {
   width: 100%;
 }
 
+.bilist-box{
+  position: relative;
+}
+
 /* bi 리스트 */
 .sbili-box {
   position: relative;
 }
 .sbili {
-  /* position: absolute; */
+  position: absolute;
   /* ib 가로배열을 위한  */
   display: flex;
-  top: 0;
+  top: 5%;
   /* 부모는? sbili-box */
-  /* margin: 3% auto; */
- /*  margin-top: 20px; */
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
+
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .sbili a {
