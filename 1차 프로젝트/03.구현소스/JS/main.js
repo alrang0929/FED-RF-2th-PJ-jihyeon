@@ -10,7 +10,7 @@ const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
 // 블릿요소
 const indibar = qs('.lndi-bar');
 // 인디케이터 메뉴
-const indi = qsa('.slide-indibx ol li');
+const indi = qsa('.sbili ol li');
 
 indi.forEach((ele,idx)=>{
   ele.onclick = ()=>{

@@ -96,9 +96,6 @@ background: #ffffff;
 }
 
 
-.bslider-box {
-  overflow: hidden;
-}
 
 .mslider {
   position: relative;
@@ -131,15 +128,16 @@ background: #ffffff;
 
 /* 메인 슬라이드 버튼+텍스트 박스 */
 .mstext-box {
-  overflow: hidden;
-  position: absolute;
-  padding: 0% 6%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  /* position: absolute; */
+  /* padding: 0% 6%; */
   width: 36%;
-  bottom: 5%;
-  right: 3%;
+  /* bottom: 5%; */
+  right: -57%;
   text-align: left;
 }
-
 /* 메인 슬라이드 내 텍스트 박스 */
 .stext-box {
   /* position: absolute; */
@@ -153,17 +151,15 @@ background: #ffffff;
   letter-spacing: -0.02rem;
   /* white-space: wrap; */
 }
-
+/* 슬라이드 내 버튼 설정 */
 .mbtn {
   display: flex;
-  margin-left: auto;
+  margin: 0 auto;
   /* position: absolute; */
   border: transparent;
   background-color: transparent;
   color: #fff;
-
   bottom: 0;
-
   justify-content: space-between;
   /* right: 40px; */
   width: 200px;
@@ -270,9 +266,9 @@ background: #ffffff;
 }
 
 .bslider-box{
-  position: relative;
+/*   position: relative;
   display: block;
-  width: 100%;
+  width: 100%; */
 }
 
 .bilist-box{
@@ -281,7 +277,7 @@ background: #ffffff;
 
 /* bi 리스트 */
 .sbili-box {
-  position: relative;
+  /* position: relative; */
 }
 .sbili {
   position: absolute;
