@@ -73,7 +73,13 @@ body *{
     position: relative;
     top: 10px;
     display: flex;
-    background-color: #062c5e;
+    background-color: #062c5e00;
+
+    transition: .4s;
+}
+/* 영역 호버시 BG 투명도 up */
+.top-box:hover{
+    background-color: #062c5e95;
 }
 
 /* logo */
@@ -151,7 +157,8 @@ h2 a{
     left: 50%;
     /* transform: translateX(-50%); */
     width: 200px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    
     text-align: center;
     line-height: 38px;
     font-weight: normal;
@@ -161,8 +168,16 @@ h2 a{
 }
 
 .submenu a{
-    color: #062C5E;
-    font-size: 14pt;
+    font-weight: 200;
+    color: #fff;
+    font-size: 1.6rem;
+    opacity: 0.4;
+
+    transition: .4s;
+}
+
+.submenu a:hover{
+    opacity: 1;
 }
 
 .gnb ul > li:hover .submenu{

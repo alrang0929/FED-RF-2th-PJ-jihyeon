@@ -19,7 +19,7 @@ body * {
 #ban-area {
   position: relative;
   /* width: 100vw; */
-  height: 100%;
+  height: 300vh;
 }
 
 
@@ -95,23 +95,33 @@ background: #ffffff;
   margin-bottom: 20px;
 }
 
-
-
 .mslider {
   position: relative;
   top: 0;
   left: 0;
-  /* height: 100vh; */
-  width: 100%;
+  height: 100vh;
 }
 
-/* 슬라이드 이미지 */
+/* 슬라이드 01*/
+
+/* iframe 부모값 설정 */
 .slider01 {
-  /* position: absolute; */
-  height: 100vh;
-  display: block;
-  background: url(../images/mainvs01.jpg) no-repeat center/cover;
+position: relative;
+margin-bottom: -4%;
+height: 120vh;
+margin-top: -2%;
 }
+
+.slider01 .stext-box{
+  padding-bottom: 33%;
+}
+
+/* iframe 설정 */
+#ifr{
+  z-index: -1;
+}
+
+/* 슬라이드 02 */
 .slider02 {
   /* position: absolute; */
   top: 0;
@@ -135,8 +145,8 @@ background: #ffffff;
   /* padding: 0% 6%; */
   width: 36%;
   /* bottom: 5%; */
-  right: -57%;
-  text-align: left;
+  right: -50%;
+  text-align: center;
 }
 /* 메인 슬라이드 내 텍스트 박스 */
 .stext-box {
@@ -151,6 +161,23 @@ background: #ffffff;
   letter-spacing: -0.02rem;
   /* white-space: wrap; */
 }
+
+/* 영문 타이틀 컬러 변경 */
+.stext-box > .engtitfont{
+  margin-left: -158%;
+}
+.stext-box > .engtitfont h2{
+  margin-left: 2%;
+  color: #fff;
+}
+.stext-box .txt{
+  padding-left: 104%;
+  color: #fff;
+  width: 30%;
+  margin-top: -17%;
+  text-align-last: left;
+}
+
 /* 슬라이드 내 버튼 설정 */
 .mbtn {
   display: flex;
@@ -178,9 +205,10 @@ background: #ffffff;
 
 /* 기업 소개 */
 #compinfo-area {
-  position: relative;
-  margin: 0 auto;
-  height: 1728px;
+    position: relative;
+    padding: 10% 0;
+    margin: 0px auto;
+    height: 1433px;
 }
 
 .cominfo {
@@ -262,14 +290,26 @@ background: #ffffff;
 
 /* 브랜드 소개 */
 #brandinfo-area {
+  position: relative;
   height: 100%;
 }
 
-.bslider-box{
-/*   position: relative;
-  display: block;
-  width: 100%; */
+
+.btit-wrap
+{
+    top: -50%;
+    position: absolute;
+    /* top: -460px; */
+    height: 60%;
+    width: 100%;
 }
+
+.btitbx{
+  top: 0;
+  position: sticky;
+  background-color: #fff;}
+
+
 
 .bilist-box{
   position: relative;
@@ -277,7 +317,7 @@ background: #ffffff;
 
 /* bi 리스트 */
 .sbili-box {
-  /* position: relative; */
+  position: relative;
 }
 .sbili {
   position: absolute;
@@ -320,7 +360,7 @@ background: #ffffff;
   z-index: -1;
   position: relative;
   display: flex;
-  height: 720px;
+  height: 850px;
   /* width: 100vw; */
 
   /* overflow: hidden; */
