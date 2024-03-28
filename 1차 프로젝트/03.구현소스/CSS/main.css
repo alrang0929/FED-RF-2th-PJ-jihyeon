@@ -321,7 +321,7 @@ margin-top: -2%;
 .sbili {
   position: absolute;
   display: flex;
-  top: 40%;
+  top: 34%;
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
@@ -360,7 +360,7 @@ margin-top: -2%;
   display: flex;
   height: 890px;
   /* width: 100vw; */
-  /* overflow: hidden; */
+  overflow: hidden;
   margin: 0 auto;
   left: 0;
 }
