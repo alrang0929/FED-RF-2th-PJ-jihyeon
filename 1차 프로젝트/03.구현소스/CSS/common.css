@@ -195,10 +195,17 @@ h2 a{
 
 
 /* 푸터 */
-/* 푸터 */
 #footer-area {
     height: 300px;
-    background: #062C5E;
+    background: #fff;
   }
 
+  #footer-area a{
+    padding-left: 10px;
+  }
+
+  /* 푸터 sns링크 아이콘 */
+  .footer li img{
+    width: 2%;
+}
 
