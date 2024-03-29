@@ -205,7 +205,11 @@ h2 a{
   }
 
   /* 푸터 sns링크 아이콘 */
-  .footer li img{
+  .footer-list-sns{
+    width: 100%;
+  }
+
+  .list-sns li img{
     width: 2%;
 }
 
