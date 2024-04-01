@@ -108,9 +108,9 @@ background: #ffffff;
 .slider01 {
 position: relative;
 margin-bottom: -4%;
-height: 120vh;
+height: 100vh;
 margin-top: -2%;
-overflow: hidden;
+/* overflow: hidden; */
 }
 
 .slider01 .stext-box{
@@ -120,10 +120,12 @@ overflow: hidden;
 /* iframe 설정 */
 #ifr {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+      top: -9.6%;
+  /* width: 100%; */
+  /* height: 100%; */
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
   z-index: -1;
 }
 /* #ifr {
@@ -687,7 +689,7 @@ overflow: hidden;
 /************************************ 회사 스토리 ************************************/
 #story-area {
   height: 906px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* 메인박스 */
@@ -811,7 +813,7 @@ overflow: hidden;
 }
 
 .storysd-box01 {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
@@ -821,7 +823,7 @@ overflow: hidden;
 }
 
 .storysd-box02 {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
@@ -830,7 +832,7 @@ overflow: hidden;
   margin: 0 11%;
 }
 .storysd-box03 {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
@@ -839,7 +841,7 @@ overflow: hidden;
   margin: 0 11%;
 }
 .storysd-box04 {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
