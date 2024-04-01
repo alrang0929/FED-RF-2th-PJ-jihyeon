@@ -144,13 +144,13 @@ margin-top: -2%;
 /* 텍스트박스 설정 */
 .slider02 .stext-box {
   position: relative;
-  width: 70%;
-  left: 30%;
+  /* width: 70%;
+  left: 30%; */
   text-align: center;
 }
 /*텍스트 박스 내 타이틀 설정 */
 .slider02 h2{
-  font-size: 15rem;
+  /* font-size: 15rem; */
   color: #fff;
 }
 
