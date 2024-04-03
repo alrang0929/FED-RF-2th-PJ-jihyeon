@@ -155,6 +155,7 @@ console.log('스와이프 슬라이드');
 
 
 
+
   /*  if (isRbtn) {
     // (1)먼저 왼쪽으로 이동하기
     slide.style.left = "-100%";

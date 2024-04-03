@@ -96,7 +96,7 @@ body * {
   position: relative;
   top: 0;
   left: 0;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* 슬라이드 01*/
@@ -118,7 +118,7 @@ body * {
 #ifr {
   position: absolute;
   top: 0;
-  /* width: 100%; */
+  width: 100%;
   /* height: 100vh; */
   left: 50%;
   transform: translateX(-50%);
@@ -672,8 +672,8 @@ body * {
 
 /************************************ 회사 스토리 ************************************/
 #story-area {
-  height: 906px;
-  /* overflow: hidden; */
+  /* height: 906px; */
+  overflow: hidden;
 }
 
 /* 메인박스 */
@@ -688,15 +688,16 @@ body * {
 }
 
 .storysd-wrap {
+  
   /* 리스트 확인용 */
   /* left: -90%; */
   /* 가로로 흘러가게! */
-  /* position: relative; */
   display: flex;
   /* 부모: .story-area */
   gap: 0 10%;
   flex-direction: row;
   justify-content: flex-start;
+  
 }
 
 /* 서브 슬라이드 공통값 */
