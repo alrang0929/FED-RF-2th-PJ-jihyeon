@@ -1,16 +1,17 @@
 미디어쿼리 고려할것
 
-[GNB 고정]
+[GNB top0 고정]
 
 [타이틀/ 스크롤 액션 사용]
 
-#01
+#01 title col12
+
 BG: 풀스크린
 tit : scale 1.5
 txt : 1.8rem
 pos = window center
 
-=
+///스크롤 후
 
 #01-1
 scroll = h50%
@@ -21,15 +22,104 @@ ______________________________________________________________
 
 section 01 / intro
 
+#intro-area
+    ___________________________
+img
+    [part-box col-6]
+    img-box
+    img
+    ___________________________
+txt
+    [part-box col-6]
+    desc____________
+    - tit h2
+    - line
+    - txt
+    w50p
+    margin
+    ________________
+    ____________________________
+
+/////////////////////////////////////////////////////    
 section 02 / Camellia graphic
 
+    ___________________________
 
-section 03 / emblem
+    [part-box col-3]
+txt
+    desc____________
+    - tit h3
+    - line
+    - txt
+    w50p
+    margin 40
+    ________________
+img
+    [part-box col-7]
+    img-box
+    img01 w50p
+    img02 w50p
+
+    margin 40
+    _________________
+    ____________________________
+
+section 03 / Ci
 
 
-section 04 / Ci+아모레하트
+    ___________________________
+txt
+    [part-box col-7]
+    img-box
+    img01 w50p
+    img02 w50p
+
+    margin 40
+    _________________
+img
+    [part-box col-3]
+    desc____________
+    - tit h3
+    - line
+    - txt
+    w50p
+    margin 40
+    ________________
+    ____________________________
 
 
+
+section 04 / bland concept
+
+[scroll down line]
+
+
+(고정)main desc____________
+
+-title h3
+-text
+_____________________
+여백있고..
+_____________________
+
+[slide-wrap]
+    slide-box
+        desc
+            tit h4
+            text:op0
+        img-box
+            desc
+                tit h4: scale(1.5)
+                text:op1 < tit 밀고 올라감)
+        img:fitter / 호버시 어둡게
+
+        x3
+
+_______________________________________________
+
+
+
+BG_ top 0 되면 이미지 스크롤 끝날 때 까지 고정 (스티키?)
 
 ______________________________________________________________
 [footer(고정)]

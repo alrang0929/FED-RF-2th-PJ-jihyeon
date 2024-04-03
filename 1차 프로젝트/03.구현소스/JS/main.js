@@ -119,7 +119,7 @@ function loadFn() {
 //story 슬라이드 
 
 const swiper = qs('.storysd-wrap');
-// console.log('스와이프 슬라이드');
+console.log('스와이프 슬라이드');
 
 
 
