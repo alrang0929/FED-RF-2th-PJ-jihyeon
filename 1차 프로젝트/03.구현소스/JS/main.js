@@ -1,16 +1,29 @@
-//index JS영역
+//DOM함수 호출JS - my_function.js
 
-const qs = (x) => document.querySelector(x);
-const qsa = (x) => document.querySelectorAll(x);
+const myFn = {
+  // 요소선택함수 ////////
+  qs: (x) => document.querySelector(x),
+  qsEl: (el, x) => el.querySelector(x),
+  qsa: (x) => document.querySelectorAll(x),
+  qsaEl: (el, x) => el.querySelectorAll(x),
 
-// addEvent 함수
-// ele - 요소, evt - 이벤트, fn - 함수
-const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
+  // 이벤트셋팅함수
+  addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
+
+  // 바운딩위치값함수
+  getBCR: (ele) => ele.getBoundingClientRect().top,
+
+  // 옵셋탑값 반환함수
+  getOT: (ele) => ele.offsetTop,
+}
+
+
+
 
 // 블릿요소
-const indibar = qs('.lndi-bar');
+const indibar = myFn.qs('.lndi-bar');
 // 인디케이터 메뉴
-const indi = qsa('.slide-indibx ol li');
+const indi = myFn.qsa('.slide-indibx ol li');
 
 indi.forEach((ele,idx)=>{
   ele.onclick = ()=>{
@@ -21,7 +34,7 @@ indi.forEach((ele,idx)=>{
 
 
 // HTML태그 로딩후 loadFn함수 호출! ///
-addEvt(window, "DOMContentLoaded", loadFn);
+myFn.addEvt(window, "DOMContentLoaded", loadFn);
 
 let aa = document.querySelectorAll(".sbili a");
 let bb = document.querySelector(".bslider ul");
@@ -57,7 +70,7 @@ function loadFn() {
   // document.querySelectorAll('abtn')
   // console.log(document.querySelectorAll('.abtn'));
   //변경대상: .thumbbx ul
-  const slide = qs(".wrap-slide");
+  const slide = myFn.qs(".wrap-slide");
 
   //슬라이드 전역변수
   let snum = 0;
@@ -116,18 +129,14 @@ function loadFn() {
   } ///////////goslide///////////
 
 // ____________________________________________________
-//story 슬라이드 
-
-const swiper = qs('.storysd-wrap');
-console.log('스와이프 슬라이드');
 
 
-//그리드 리스트 호출
-const pdGrid = myFn.qs(.pd-grid);
+
+
 
 //제품 정보 정보객체
   //1. 데이터 세팅
-  const pdId ={
+const arrl ={
 
     설화수진설크림:
     {  브랜드:"설화수",
@@ -137,7 +146,7 @@ const pdGrid = myFn.qs(.pd-grid);
       에멀전:
      {   브랜드:"라네즈",
         제품명:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
-        가격:"29,400",}
+        가격:"29,400",},
       
       인텐시브크림:
        { 브랜드:"라네즈",
@@ -157,19 +166,36 @@ const pdGrid = myFn.qs(.pd-grid);
       달빛유자:
         {브랜드:"한율",
         제품명:"달빛유자 수면팩 70ML",
-        가격:"30,600",},
+        가격:"30,600",},}
 
-  }
 
+//1.출력대상: desc 랑 price
+
+//로드구역
+window.addEventListener('load',()=>{
+console.log('로딩완료');
 
 /* 
-조건:
-1. 각 제품 데이터 정리 (브랜드 / 제품명 / 가격) < ${arrl[n]} < 할당
+[조건]
+
+대상: .pdgrid
+1 .pdgrid 박스에 순회
+2. 브랜드명, 제품멱, 가격 > pdgrid박스 내 구조화된 태그 생성
+3. 반복적인 데이터 보여줌 
+
+    (1) 각 제품 데이터 정리 (브랜드 / 제품명 / 가격) < ${arrl[n]} < 할당
       arrl << 이걸로 제품 구분? ex) const product01 
-2. 각 제품의 데이터를 forof제어문에 할당
-시벌...
+    (2) 각 제품의 데이터를 forof제어문에 할당
+
 */
-//1.출력대상: desc 랑 price
+
+//1. 대상
+//데이터 뿌리는 곳
+const desWrap = myFn.qs('.pdgrid');
+console.log('가격데이터 준완');
+
+})
+
 
 
 
