@@ -192,3 +192,52 @@ CAMELLIA GRAPHIC
 아모레퍼시픽 심볼
 EMBLEM
 동백의 역사와 녹차에 대한 개척정신, 어머니의 사랑과 미래를 향한 창조성, 내외면의 조화로움을 중시하는 이미지를 큰 태평양의 모습에 응집시켜 다양한 결실로 더욱 풍요로워지는 아모레퍼시픽의 세상을 표현했습니다.
+
+
+
+  <ul class="product-main">
+                {/* <!-- 제품 --> */}
+                <li>
+                  <a href="#"></a>
+                  <div class="img-wrap">
+                    <img src="./images/pd_img0${i}.png" alt="설화수 진설크림" />
+                  </div>
+                  <article class="mpricebx">
+                    <div class="desc">
+                      <span class="bi-text">설화수</span>
+                      <h4 class="pd-tit">진설크림 THE ULTIMATE S CREAM</h4>
+                    </div>
+                    <div class="price">
+                      <span class="costnum">520,000</span>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+
+
+
+
+              워터뱅크 블루 히알루로닉 에멀
+젼 중‧건성용
+라네즈
+29,400 원
+
+
+워터뱅크 블루 히알루로닉 인텐
+시브 크림 50ML
+라네즈
+33,600 원
+
+크리미틴트 컬러밤 쉬폰 2.5G
+마몽드
+9,800 원
+
+
+달빛유자 수면팩 70ML
+한율
+30,600 원
+
+
+레티놀 엑스퍼트 0.3% 링클 코렉터 20ML
+아이오페
+112,500 원

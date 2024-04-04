@@ -1,0 +1,98 @@
+
+/* 타이틀+ 상품리스트 위에 1칸*/
+.titpd-wrap {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* 타이틀 박스 */
+.tit-box {
+  /* padding-left: 7%; */
+  width: 50%;
+}
+/* 타이틀 */
+.tit-box h2 {
+  text-align-last: left;
+}
+
+/* 상품 리스트 / 아래 5칸 */
+.product-wrap {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  vertical-align: baseline;
+}
+
+/* 상품 메인 리스트 설정 */
+
+.product-main {
+  position: relative;
+  height: fit-content;
+  width: 50%;
+  border: 2px solid #ededed;
+
+  /* border-left: none; */
+  box-sizing: border-box;
+}
+.product-main img {
+  width: 100%;
+}
+
+.product-main .img-wrap {
+  padding: 2.2% 0;
+}
+
+/* 상품 서브리스트 설정 */
+.product-sub {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.product-sub img {
+  width: 100%;
+}
+
+.product-sub .img-wrap {
+  padding: 14% 0;
+}
+
+.product-sub ul {
+  width: 50%;
+}
+
+.product-sub li {
+  width: 45%;
+  border-left: 2px solid #ededed;
+}
+
+.pd-tit {
+  padding-top: 2%;
+}
+
+/* 이미지하단 텍스트 */
+
+.mpricebx {
+  padding: 10px 51px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.pricebx {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 10px 10px;
+}
+
+.price {
+  margin-top: auto;
+}
+.desc {
+  text-align: left;
+}
