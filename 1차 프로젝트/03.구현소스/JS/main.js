@@ -130,102 +130,107 @@ function loadFn() {
 
 // ____________________________________________________
 
-
-
-
-
 //제품 정보 정보객체
   //1. 데이터 세팅
-const arrl ={
+const pdData ={
+          설화수진설크림:
+          { img: "./images/pd_img01.png",
+          bland:"설화수",
+          name:"진설크림 THE ULTIMATE S CREAM",
+          price:"520,000",},
 
-    설화수진설크림:
-    {bland:"설화수",
-      name:"진설크림 THE ULTIMATE S CREAM",
-      price:"520,000",},
-      
-      에멀전:
-     { bland:"라네즈",
-        name:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
-        price:"29,400",},
-      
-      인텐시브크림:
-       { bland:"라네즈",
-        name:"워터뱅크 블루 히알루로닉 인텐시브 크림",
-        price:"33,600",},
-      
-      링클코렉터:
-        {bland:"아이오페",
-        name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
-        price:"112,500",},
-  
-      컬러밤:
-        {bland:"마몽드",
-        name:"크리미틴트 컬러밤 쉬폰 2.5G",
-        price:"9,800",},
-      
-      달빛유자:
-        {bland:"한율",
-        name:"달빛유자 수면팩 70ML",
-        price:"30,600",},}
+          컬러밤:
+          {img: "./images/pd_img04.png",
+          bland:"마몽드",
+          name:"크리미틴트 컬러밤 쉬폰 2.5G",
+          price:"9,800",},
+
+          달빛유자:
+          {img: "./images/pd_img03.png",
+          bland:"한율",
+          name:"달빛유자 수면팩 70ML",
+          price:"30,600",},
+
+          링클코렉터:
+          {img: "./images/pd_img02.png",
+          bland:"아이오페",
+          name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
+          price:"112,500",},
 
 
-//1.출력대상: desc 랑 price
 
+          인텐시브크림:
+          { img: "./images/pd_img05.png",
+          bland:"라네즈",
+          name:"워터뱅크 블루 히알루로닉 인텐시브 크림",
+          price:"33,600",},
+          에멀전:
 
+          { img: "./images/pd_img06.png",
+          bland:"라네즈",
+          name:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
+          price:"29,400",},
+        }
 
 //로드구역
 window.addEventListener('load',()=>{
-console.log('로딩완료');
+  // console.log('로딩완료');
 
-/* 
-[조건]
+  const pdWrap = myFn.qs('.grid-wrap');
+  // console.log('그리드 영역');
+  
+  makeList();
+  
+  function makeList(){
+    // console.log('리스트 생성');
+  
+    let hcode =""; //스트링 리터널
+  
+    for(let x in pdData){
+      console.log('for in 객체값:',pdData[x]);
+      console.log('for in 객체값:',pdData[x].price);
+    
+      let data = pdData[x];
+      console.log("넌 뭐냐",this);
+      // let addClass = i===1?'first':i===4?'second':''
+  
+      hcode+=`
+      <section class="cbx">
+                <!-- 제품박스 -->
+                <div class="pdinfo">
+                  <!-- 1. 이미지 -->
+                  <div class="photo">
+                    <img src=${data.img} alt="${data.name}">
+                  </div>
+                  <!-- 제품 정보박스 -->
+                  <div class="desc">
+                    <div class="tit-box">
+                         <!-- 브랜드 -->
+                    <h5 class="bland">${data.bland}</h5>
+                    <!-- 상품명 -->
+                    <h4 class="name">${data.name}</h4>
+                    </div>
+                    <!-- 가격박스 -->
+                    <div class="price">
+                     <!-- 가격 -->
+                     <div class="cstnum">${data.price}</div>
+                     <!-- 단위 -->
+                     <span>원</span>
+                    </div>
+                  </div>
+              </section>
+      `;//hcode
+    };//forin////////////
+  
+  //데이터확인
+  // console.log(hcode);
+  
+  //화면출력하기
+  pdWrap.innerHTML = hcode;
 
-대상: .pdgrid
-1 .pdgrid 박스에 순회
-2. 브랜드명, 제품멱, 가격 > pdgrid박스 내 구조화된 태그 생성
-3. 반복적인 데이터 보여줌 
+  };//makeList함수//////////////////
+});
 
-    (1) 각 제품 데이터 정리 (브랜드 / 제품명 / 가격) < ${arrl[n]} < 할당
-      arrl << 이걸로 제품 구분? ex) const product01 
-    (2) 각 제품의 데이터를 forof제어문에 할당
-
-*/
-
-//1. 대상
-//데이터 뿌리는 곳
-console.log('가격데이터 준완');
-
-
-
-
-
-//리스트 포멧 셋팅
-
-
-})/////////////////////로드구역////////
-const pdWrap = myFn.qs('.pdgrid');
-for(let i= 1 ; i <= 6 ; i++){
-  pdWrap.innerHTML +=`
-  <ul>
-    <li>
-    <a href="#"></a>
-    <div class="img-wrap">
-      <img src="./images/pd_img0${i}.png" alt="${arrl[0+i]}" />
-    </div>
-    <article class="mpricebx">
-      <div class="desc">
-        <span class="bi-text">설화수</span>
-        <h4 class="pd-tit">진설크림 THE ULTIMATE S CREAM</h4>
-      </div>
-      <div class="price">
-        <span class="costnum">520,000</span>
-      </div>
-    </article>
-  </li>
-  </ul>
-
-  `;
-}
 
 
 

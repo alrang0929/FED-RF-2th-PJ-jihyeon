@@ -106,6 +106,7 @@ body * {
   position: relative;
   margin-bottom: -4%;
   height: 120vh;
+  /* width: 100%; */
   margin-top: -2%;
   /* overflow: hidden; */
 }
@@ -118,8 +119,8 @@ body * {
 #ifr {
   position: absolute;
   top: 0;
-  /* width: 100%; */
-  /* height: 100vh; */
+  width: 100%;
+  height: 120vh;
   left: 50%;
   transform: translateX(-50%);
   object-fit: cover;
@@ -466,45 +467,87 @@ body * {
 /**************************************** 섹션03 ****************************************/
 
 #prodinfo-area {
+  position: relative;
   height: 100vh;
 }
 
 /* 타이틀 박스 설정 */
-#prodinfo-area .tit-box{
+#prodinfo-area .title-box{
   text-align-last: left;
-  padding-left: 10%;
+  /* padding-left: 10%; */
 }
 
 /* 박스 공통설정 */
 .cbx{
   border: 1px solid #cecece;
-  padding: 40px;
+  padding: 1vw;
   box-sizing: border-box;
 }
 /* 텍스트설정 */
 /* 이미지 박스 설정*/
-.pdinfo img{
+.photo img{
   width: 100%;
+  
   object-fit: cover;
   object-position: center;
 }
+/* 텍스트박스 */
+.pdinfo .desc{
+  width: 100%;
+  display: flex;
+  font-size: 2rem;
+  color: #171719;
+  text-align-last: left;
+  /* gap: 14vw; */
+  /* flex-direction: row; */
+  justify-content: space-around;
+}
 
+.pdinfo .tit-box{
+  /* display: flex; */
+  width: 80%;
+  height: 100%;
+  /* gap: 4vw 0; */
+}
 
+.tit-box .bland{
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #797979;
+  margin-bottom: .5vw;
+}
+.pdinfo .price{
+  display: flex;
+  width: 20%;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
 
+.price span{
+  margin-left: .5vw;
+}
 
-
+/* 그리드 설정 */
+.grid-wrap{
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 2fr);
+}
 
 /**************************************** 섹션04 ****************************************/
 
 /* 사내 뉴스 */
 #news-area {
-  height: 906px;
-  margin: 12vw auto;
+  position: relative;
+  height: 100vh;
+  margin: 30vw auto;
 }
 
 .ntit-box .mcolor-mbtn {
   margin: 0 auto;
-  margin-block: auto;
+  /* margin-block: auto; */
   margin-bottom: 23%;
 }
 
@@ -513,7 +556,7 @@ body * {
 }
 
 .ntit-box {
-  margin: 12% auto;
+  /* margin: 12% auto; */
 }
 
 .nlist-wrap {
@@ -523,7 +566,7 @@ body * {
 
 .nlist {
   display: flex;
-  margin: -24vh auto;
+  /* margin: -24vh auto; */
   justify-content: space-between;
   align-items: center;
 }
