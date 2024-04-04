@@ -171,6 +171,8 @@ const arrl ={
 
 //1.출력대상: desc 랑 price
 
+
+
 //로드구역
 window.addEventListener('load',()=>{
 console.log('로딩완료');
