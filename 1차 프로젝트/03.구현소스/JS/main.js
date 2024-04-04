@@ -139,34 +139,34 @@ function loadFn() {
 const arrl ={
 
     설화수진설크림:
-    {  브랜드:"설화수",
-      제품명:"진설크림 THE ULTIMATE S CREAM",
-      가격:"520,000",},
+    {bland:"설화수",
+      name:"진설크림 THE ULTIMATE S CREAM",
+      price:"520,000",},
       
       에멀전:
-     {   브랜드:"라네즈",
-        제품명:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
-        가격:"29,400",},
+     { bland:"라네즈",
+        name:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
+        price:"29,400",},
       
       인텐시브크림:
-       { 브랜드:"라네즈",
-        제품명:"워터뱅크 블루 히알루로닉 인텐시브 크림",
-        가격:"33,600",},
+       { bland:"라네즈",
+        name:"워터뱅크 블루 히알루로닉 인텐시브 크림",
+        price:"33,600",},
       
       링클코렉터:
-        {브랜드:"아이오페",
-        제품명:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
-        가격:"112,500",},
+        {bland:"아이오페",
+        name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
+        price:"112,500",},
   
       컬러밤:
-        {브랜드:"마몽드",
-        제품명:"크리미틴트 컬러밤 쉬폰 2.5G",
-        가격:"9,800",},
+        {bland:"마몽드",
+        name:"크리미틴트 컬러밤 쉬폰 2.5G",
+        price:"9,800",},
       
       달빛유자:
-        {브랜드:"한율",
-        제품명:"달빛유자 수면팩 70ML",
-        가격:"30,600",},}
+        {bland:"한율",
+        name:"달빛유자 수면팩 70ML",
+        price:"30,600",},}
 
 
 //1.출력대상: desc 랑 price
@@ -193,10 +193,39 @@ console.log('로딩완료');
 
 //1. 대상
 //데이터 뿌리는 곳
-const desWrap = myFn.qs('.pdgrid');
 console.log('가격데이터 준완');
 
-})
+
+
+
+
+//리스트 포멧 셋팅
+
+
+})/////////////////////로드구역////////
+const pdWrap = myFn.qs('.pdgrid');
+for(let i= 1 ; i <= 6 ; i++){
+  pdWrap.innerHTML +=`
+  <ul>
+    <li>
+    <a href="#"></a>
+    <div class="img-wrap">
+      <img src="./images/pd_img0${i}.png" alt="${arrl[0+i]}" />
+    </div>
+    <article class="mpricebx">
+      <div class="desc">
+        <span class="bi-text">설화수</span>
+        <h4 class="pd-tit">진설크림 THE ULTIMATE S CREAM</h4>
+      </div>
+      <div class="price">
+        <span class="costnum">520,000</span>
+      </div>
+    </article>
+  </li>
+  </ul>
+
+  `;
+}
 
 
 
