@@ -12,7 +12,7 @@ html {
 }
 /* 공사중 표시 */
 body * {
-  /* outline: 2px dashed #ccc; */
+  outline: 2px dashed red;
 }
 
 /********************************** 메인 슬라이드 영역 **********************************/
@@ -193,7 +193,7 @@ body * {
 
 /* 영문 타이틀 컬러 변경 */
 .stext-box > .engtitfont {
-  margin-left: -158%;
+  /* margin-left: -158%; */
 }
 .stext-box > .engtitfont h2 {
   margin-left: 2%;
@@ -432,9 +432,9 @@ body * {
 /* 브랜드 버튼 공통설정 */
 .bslider button.mcolor-mbtn {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: -3% 0;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* margin: -3% 0; */
   color: #fff;
 }
 
@@ -465,13 +465,36 @@ body * {
 
 /**************************************** 섹션03 ****************************************/
 
-/* 상품 */
 #prodinfo-area {
-  height: 100%;
-  /*  width: 90%; */
-  margin: 10% auto;
+  height: 100vh;
 }
 
+/* 타이틀 박스 설정 */
+#prodinfo-area .tit-box{
+  text-align-last: left;
+  padding-left: 10%;
+}
+
+/* 박스 공통설정 */
+.cbx{
+  border: 1px solid #cecece;
+  padding: 40px;
+  box-sizing: border-box;
+}
+/* 텍스트설정 */
+/* 이미지 박스 설정*/
+.pdinfo img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+
+
+
+/**************************************** 섹션04 ****************************************/
 
 /* 사내 뉴스 */
 #news-area {

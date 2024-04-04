@@ -105,11 +105,11 @@ _____________________
 [slide-wrap]
     slide-box
         desc
-            tit h4
+            tit h3
             text:op0
         img-box
             desc
-                tit h4: scale(1.5)
+                tit h3: scale(1.5)
                 text:op1 < tit 밀고 올라감)
         img:fitter / 호버시 어둡게
 

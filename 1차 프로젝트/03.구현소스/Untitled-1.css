@@ -1,6 +1,6 @@
 
 /* 타이틀+ 상품리스트 위에 1칸*/
-.titpd-wrap {
+#prodinfo-area .tit-wrap {
   align-items: flex-start;
   display: flex;
   justify-content: flex-start;
