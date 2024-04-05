@@ -182,21 +182,22 @@ window.addEventListener('load',()=>{
   makeList();
   
   function makeList(){
-    // console.log('리스트 생성');
+    console.log('리스트 생성');
     
     let hcode =""; //스트링 리터널
     
-    pdWrap.forEach((e,idx) => {
-      console.log('for in 객체값:',e,idx);
-      console.log('for in 객체값:',pdData[x].price);
+    //[forin]>[for Each 로 전환할 때: >>Object.values(pdData)<<.forEach((v,idx) => {
+    Object.values(pdData).forEach((v,idx) => {
+      console.log('객체값:',v,idx);
+      // console.log('for in 객체값:',pdData[x].price);
       
       // let addClass = x===1?'first':x===4?'second':'';
       
-      let data = pdData[x];
+      let data = v;
       console.log("넌 뭐냐",this);
   
       hcode+=`
-      <section class="cbx ">
+      <section class="cbx ${idx===0?' first':idx===3?' second':''}">
                 <!-- 제품박스 -->
                 <div class="pdinfo">
                   <!-- 1. 이미지 -->

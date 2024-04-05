@@ -197,7 +197,7 @@ body * {
   /* margin-left: -158%; */
 }
 .stext-box > .engtitfont h2 {
-  margin-left: 2%;
+  margin-left: -142%;
   color: #fff;
 }
 .stext-box .txt {
@@ -321,7 +321,7 @@ body * {
 /* 브랜드 소개 */
 #brandinfo-area {
   position: relative;
-  height: 105vh;
+  height: 120vh;
 }
 
 .btit-wrap {
@@ -350,7 +350,7 @@ body * {
 .sbili {
   position: absolute;
   display: flex;
-  top: 34%;
+  top: 29%;
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
@@ -468,12 +468,18 @@ body * {
 
 #prodinfo-area {
   position: relative;
-  height: 100vh;
+  height: 230vh;
+  /* width: 70%;  */
 }
-
+.pd-wrap{
+  margin: 20vw auto;
+  width: 80vw;
+}
 /* 타이틀 박스 설정 */
 #prodinfo-area .title-box{
   text-align-last: left;
+  top: 0;
+  margin-bottom: 40px;
   /* padding-left: 10%; */
 }
 
@@ -495,30 +501,30 @@ body * {
 .pdinfo .desc{
   width: 100%;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #171719;
   text-align-last: left;
   /* gap: 14vw; */
   /* flex-direction: row; */
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .pdinfo .tit-box{
   /* display: flex; */
-  width: 80%;
+  width: 60%;
   height: 100%;
   /* gap: 4vw 0; */
 }
 
 .tit-box .bland{
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 300;
   color: #797979;
   margin-bottom: .5vw;
 }
 .pdinfo .price{
   display: flex;
-  width: 20%;
+  width: 30%;
   justify-content: flex-end;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -533,8 +539,20 @@ body * {
 .grid-wrap{
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 2fr);
+  /* grid-auto-rows: 10%; */
+  grid-template-columns: 3fr 3fr;
 }
+
+.first{
+  grid-area: 1/1/3/3;
+ 
+
+}
+.second{
+  grid-area: -1/-1/-3/3;
+  
+}
+
 
 /**************************************** 섹션04 ****************************************/
 
@@ -542,13 +560,13 @@ body * {
 #news-area {
   position: relative;
   height: 100vh;
-  margin: 30vw auto;
+  /* margin: 9vw auto; */
 }
 
 .ntit-box .mcolor-mbtn {
   margin: 0 auto;
   /* margin-block: auto; */
-  margin-bottom: 23%;
+  /* margin-bottom: 23%; */
 }
 
 .ntit-box .tit-engtitfont {
@@ -556,7 +574,7 @@ body * {
 }
 
 .ntit-box {
-  /* margin: 12% auto; */
+  margin-bottom: 5%;
 }
 
 .nlist-wrap {
@@ -641,8 +659,8 @@ body * {
 
 /************************************ 회사 스토리 ************************************/
 #story-area {
-  /* height: 906px; */
-  overflow: hidden;
+  overflow: hidden;    
+  margin-bottom: 18vh;
 }
 
 /* 메인박스 */
@@ -729,6 +747,7 @@ body * {
 }
 
 .main-slid .desc {
+  text-align-last: left;
   opacity: 0;
   width: 40%;
   padding: 2%;
