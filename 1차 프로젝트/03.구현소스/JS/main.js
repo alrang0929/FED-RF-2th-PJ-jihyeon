@@ -183,19 +183,20 @@ window.addEventListener('load',()=>{
   
   function makeList(){
     // console.log('리스트 생성');
-  
+    
     let hcode =""; //스트링 리터널
-  
+    
     for(let x in pdData){
       console.log('for in 객체값:',pdData[x]);
       console.log('for in 객체값:',pdData[x].price);
-    
+      
+      // let addClass = x===1?'first':x===4?'second':'';
+      
       let data = pdData[x];
       console.log("넌 뭐냐",this);
-      // let addClass = i===1?'first':i===4?'second':''
   
       hcode+=`
-      <section class="cbx">
+      <section class="cbx ">
                 <!-- 제품박스 -->
                 <div class="pdinfo">
                   <!-- 1. 이미지 -->
