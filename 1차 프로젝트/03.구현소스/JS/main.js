@@ -186,7 +186,7 @@ window.addEventListener('load',()=>{
     
     let hcode =""; //스트링 리터널
     
-    pdData.forEach((e,idx)=>{
+    pdWrap.forEach((e,idx) => {
       console.log('for in 객체값:',e,idx);
       console.log('for in 객체값:',pdData[x].price);
       
@@ -235,36 +235,7 @@ window.addEventListener('load',()=>{
   };//makeList함수//////////////////
 });
 
-////////////////////스토리 슬라이드
 
-const slideList = myFn.qs('.swiper');
-const item = myFn.qsa('.sbx-item');
-
-item.forEach("item",()=>{
-  item.addEvt('dragstart',()=>{
-    setTimeout(() => {
-      item.classList.add("dragging")
-    }, 0);///settimeout////////
-  })
-
-  item.addEvt("dragend",()=> item.classList.remove("dragging"));
-
-})///////forEach
-
-const sdreset = (e) =>{
-e.preventDefault();
-const draggingItem = myFn.qsa('.dragging');
-let sidlings = [...sortableList.querySelectorAll(".item:not(dragging)")];
-
-let nextSlidling = sidlings.find(sidling =>{
-  return e.clientY<=sidling.offsetTop + sidling.offsetHeight/2;
-})
-slideList.insertBefore(draggingItem, nextSlidling);
-
-slideList.addEvt('dragover',sdreset)
-slideList.addEvt('dragenter',e => e.preventDefault());
-
-};/////sdreset 슬라이드 위치값 리셋
 
 
 
