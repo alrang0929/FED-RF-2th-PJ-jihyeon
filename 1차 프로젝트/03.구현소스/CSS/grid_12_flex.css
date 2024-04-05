@@ -30,8 +30,9 @@
 
 */
 .cont-box{
-    width: 1600px;
-    display: flex;
+    width: 1200px;
+    /* display: flex; */
+    margin: 0 auto;
 /*     height: 100%;
-    margin: 0 auto; */
+ */
 }

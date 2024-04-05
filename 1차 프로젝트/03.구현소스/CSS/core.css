@@ -71,6 +71,15 @@ a{
     padding: 40px 0;
 
 }
+.engtitfont{
+    font-family: "miller-display", serif;
+    font-weight: Normal;
+    font-size: 6rem;
+    text-align: center;
+    color: #062C5E;
+    padding: 40px 0;
+
+}
 
 /* 기본 텍스트 사이즈 */
 .txt{
@@ -116,9 +125,6 @@ a{
     color: #171719;
 }
  */
-.contbox{
-    width: 1500px;
-}
 
 /* 스크롤 디자인 클래스 */
 /* -webkit- 밴더사명(크롬,사파리)접두어 */

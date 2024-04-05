@@ -12,7 +12,7 @@ html {
 }
 /* 공사중 표시 */
 body * {
-  outline: 2px dashed red;
+  /* outline: 2px dashed red; */
 }
 
 /********************************** 메인 슬라이드 영역 **********************************/
@@ -468,7 +468,7 @@ body * {
 
 #prodinfo-area {
   position: relative;
-  height: 230vh;
+  height: 228vh;
   /* width: 70%;  */
 }
 .pd-wrap{
@@ -559,8 +559,9 @@ body * {
 /* 사내 뉴스 */
 #news-area {
   position: relative;
-  height: 100vh;
-  /* margin: 9vw auto; */
+  /* top: 50%; */
+  height: 90vh;
+  margin: 0 auto;
 }
 
 .ntit-box .mcolor-mbtn {

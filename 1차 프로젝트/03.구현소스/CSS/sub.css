@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* 리셋, 코어, 커먼, 공통 외부 css 합치기 */
+@import url(./common.css);
+@import url(./core.css);
+@import url(./reset.css);
+
+/* 그리드 시스템 */
+@import url(./grid_12_flex.css);
+html {
+  scroll-behavior: smooth;
+}
+/* 공사중 표시 */
+body * {
+  outline: 2px dashed red;
+}
+
+/* 라인 공통설정 */
+
+
+/********************* 01 상단 영역 *********************/
+#tit-area{
+    height: 50vh;
+    background: url(../images/sub01/BG_tit.jpg) no-repeat center/cover;
+}
+
+#tit-area .line {
+    display: block;
+    height: 50px;
+    border-left: 1px solid #171719;
+    margin-left: 50%;
+    margin-bottom: 4%;
+}  
+#tit-area .titbx{
+    padding-top: 7%;
+}
+#tit-area .tit{
+    color: #fff;
+}
+#tit-area .desc {
+    margin: 0 auto;
+    width: 40%;
+    color: #fff;
+}
+
+/********************* 02 컨텐츠 영역 *********************/
+#cont-area{
+
+}
+
+
+/************* 001 인트로영역 *************/
+.intro-area{
+    height: 70vh;
+    /* 부모자격 */
+    position: relative;
+    /* overflow: hidden; */
+    text-align-last: left;
+}
+
+
+.intro-area h3{
+    font-size: 4rem;
+}
+
+.intro-area .line {
+    display: block;
+    height: 100px;
+    border-left: 1px solid #171719;
+    margin-left: 0;
+    margin: 10% 0;
+    } 
+
+.intro-area .cbx{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.intro-area .cbx{
+    margin-top: 8%;
+}
+.intro-area .cbx img{
+    width: 100%;
+}
+
+
+/************* 002 그래픽 인포 영역 *************/
+.graphic-info-area{
+    height: 70vh;
+}
+
+
+/************* 003 ci 영역 *************/
+
+.ci-area{
+    height: 70vh;
+}
+
+/************* 004 슬라이드 영역 *************/
+.slide-area{
+    height: 210vh;
+    background: url(../images/sub01/BG_pg04.jpg) no-repeat center/cover;
+}
