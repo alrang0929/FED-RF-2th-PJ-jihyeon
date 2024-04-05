@@ -186,8 +186,8 @@ window.addEventListener('load',()=>{
     
     let hcode =""; //스트링 리터널
     
-    for(let x in pdData){
-      console.log('for in 객체값:',pdData[x]);
+    pdData.forEach((e,idx)=>{
+      console.log('for in 객체값:',e,idx);
       console.log('for in 객체값:',pdData[x].price);
       
       // let addClass = x===1?'first':x===4?'second':'';
@@ -221,7 +221,10 @@ window.addEventListener('load',()=>{
                   </div>
               </section>
       `;//hcode
-    };//forin////////////
+    });////////forEach
+    
+  
+
   
   //데이터확인
   // console.log(hcode);
