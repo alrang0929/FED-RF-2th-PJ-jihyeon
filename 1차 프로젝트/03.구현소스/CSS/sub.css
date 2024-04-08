@@ -162,8 +162,64 @@ body * {
 
 
 /************* 004 슬라이드 영역 *************/
+
 .slide-area{
-    /* height: 210vh; */
+    height: 210vh;
     margin-top: 20rem;
     background: url(../images/sub01/BG_pg04.jpg) no-repeat center/cover;
 }
+
+.slide-area  .line {
+    display: block;
+    top: 0;
+    height: 200px;
+    border-left: 1px solid #fff;
+    margin-left: 50%;
+}  
+
+.slide-area .tit-box h3{
+color: #fff;
+}
+    
+.slide-area .tit-box .desc{
+    margin: 0 auto;
+    width: 40%;
+    color: #fff;
+}
+
+.slide-wrap .slide{
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10vw;
+
+    
+}
+.brbx{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    transition: backdrop-filter .2s;
+}
+.slide-wrap:hover .brbx{
+    backdrop-filter: blur(20px);
+}
+
+.slide .descbx{
+    z-index: 1;
+}
+.slide .descbx .txt{
+    
+    width: 50%;
+    color: #fff;
+    margin: 0 auto;
+}
+.slide .descbx h4{
+    color: #fff;
+    font-size: 3rem;
+}
+
+
