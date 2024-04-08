@@ -12,7 +12,7 @@ html {
 }
 /* 공사중 표시 */
 body * {
-  outline: 2px dashed red;
+  /* outline: 2px dashed red; */
 }
 
 /* 라인 공통설정 */
@@ -27,17 +27,17 @@ body * {
 #tit-area .line {
     display: block;
     height: 50px;
-    border-left: 1px solid #171719;
+    border-left: 1px solid #fff;
     margin-left: 50%;
-    margin-bottom: 4%;
 }  
 #tit-area .titbx{
-    padding-top: 7%;
+    padding-top: 3rem;
 }
 #tit-area .tit{
     color: #fff;
 }
 #tit-area .desc {
+    padding-top: 3rem;
     margin: 0 auto;
     width: 40%;
     color: #fff;
@@ -61,6 +61,8 @@ body * {
 
 .intro-area h3{
     font-size: 4rem;
+    text-align: justify;
+    line-height: 1.3;
 }
 
 .intro-area .line {
@@ -90,9 +92,34 @@ body * {
 
 /************* 002 그래픽 인포 영역 *************/
 .graphic-info-area{
-    /* height: 70vh; */
+    width: 100vw;
+    /* margin: 0 auto; */
+    background-color: #F5FAFF;
+    padding-bottom: 10rem;
+    /* padding-left: 10rem; */
+}
+    /* height: 70vh; */}
+.graphic-info-area .line {
+    display: block;
+    height: 100px;
+    border-left: 1px solid #171719;
+    margin-left: 0;
+    margin: 10% 0;
+    } 
+
+.graphic-info-area .descbx{
+    width: 50%;
+    text-align-last: left;
+}
+.graphic-info-area .imgbx>img{
+    width: 100%;
 }
 .graphic-info-area .imgbx{
+    /* width: 20%; */
+    /* width: 100%; */
+    gap: 20px;
+    padding-left: 20px;
+    flex-basis: calc(100% / 3);
     flex-wrap: nowrap;
     flex-direction: row;
 }
@@ -103,9 +130,40 @@ body * {
 .ci-area{
     /* height: 70vh; */
 }
+.ci-area .imgbx{
+    margin-top: auto;}
+
+.ci-area .descbx{
+    width: 50%;
+    text-align-last: left;
+}
+
+.ci-area .imgbx>img{
+    width: 100%;
+    border: 2px solid #cecece40;
+}
+.ci-area .imgbx{
+    /* width: 20%; */
+    /* width: 100%; */
+    gap: 20px;
+    padding-left: 20px;
+    flex-basis: calc(100% / 3);
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.ci-area .line {
+    display: block;
+    height: 100px;
+    border-left: 1px solid #171719;
+    margin-left: 0;
+    margin: 10% 0;
+    } 
+
 
 /************* 004 슬라이드 영역 *************/
 .slide-area{
     /* height: 210vh; */
+    margin-top: 20rem;
     background: url(../images/sub01/BG_pg04.jpg) no-repeat center/cover;
 }
