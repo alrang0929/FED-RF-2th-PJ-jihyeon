@@ -1,5 +1,6 @@
-//DOM함수 호출JS - my_function.js
+import * as amoreData from"..data/slide_data.js";
 
+//DOM함수 호출JS - my_function.js
 const myFn = {
   // 요소선택함수 ////////
   qs: (x) => document.querySelector(x),
@@ -235,6 +236,10 @@ window.addEventListener('load',()=>{
 
   };//makeList함수//////////////////
 });
+
+
+
+
 
 
 
