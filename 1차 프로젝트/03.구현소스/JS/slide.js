@@ -5,7 +5,7 @@ import myFn from "./my_function.js";
 
 ///캐러셀 슬라이더/////
 
-function CSslider(){
+function indicater(){
 // 블릿요소
 const indibar = myFn.qs('.lndi-bar');
 // 인디케이터 메뉴
@@ -17,8 +17,6 @@ indi.forEach((ele,idx)=>{
   }; /// click ///
 }); /// forEach ////
 
-// HTML태그 로딩후 loadFn함수 호출! ///
-myFn.addEvt(window, "DOMContentLoaded", loadFn);
 
 let aa = document.querySelectorAll(".sbili a");
 let bb = document.querySelector(".bslider ul");
@@ -29,6 +27,9 @@ aa.forEach((ele, idx) => {
     bb.style.transition = ".6s";
   };
 });/////////forEach////////////////////////////
-}/////////CSslider
+}/////////indicater
 
-export {CSslider};
+
+
+////////호출영역///////////////////////////////
+export {indicater};
