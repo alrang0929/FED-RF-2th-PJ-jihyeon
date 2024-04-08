@@ -51,7 +51,7 @@ body * {
 
 /************* 001 인트로영역 *************/
 .intro-area{
-    height: 70vh;
+    /* height: 70vh; */
     /* 부모자격 */
     position: relative;
     /* overflow: hidden; */
@@ -90,18 +90,22 @@ body * {
 
 /************* 002 그래픽 인포 영역 *************/
 .graphic-info-area{
-    height: 70vh;
+    /* height: 70vh; */
+}
+.graphic-info-area .imgbx{
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
 
 /************* 003 ci 영역 *************/
 
 .ci-area{
-    height: 70vh;
+    /* height: 70vh; */
 }
 
 /************* 004 슬라이드 영역 *************/
 .slide-area{
-    height: 210vh;
+    /* height: 210vh; */
     background: url(../images/sub01/BG_pg04.jpg) no-repeat center/cover;
 }

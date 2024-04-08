@@ -144,3 +144,9 @@ a{
     background-color: #ebebeb;
     border-radius: 5px;
 }
+
+/* 블렉스박스 설정 */
+.fx-box{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
