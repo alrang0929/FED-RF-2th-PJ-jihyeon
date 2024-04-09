@@ -1,43 +1,37 @@
 //////////////메인페이지
 
 ///////제품 리스트
-const pdData ={
-    설화수진설크림:
-    { img: "./images/pd_img01.png",
-    bland:"설화수",
+const pdData =[
+    { img: "01",
+    brand:"설화수",
     name:"진설크림 THE ULTIMATE S CREAM",
     price:"520,000",},
 
-    컬러밤:
-    {img: "./images/pd_img04.png",
-    bland:"마몽드",
+    {img: "04",
+    brand:"마몽드",
     name:"크리미틴트 컬러밤 쉬폰 2.5G",
     price:"9,800",},
 
-    달빛유자:
-    {img: "./images/pd_img03.png",
-    bland:"한율",
+    {img: "03",
+    brand:"한율",
     name:"달빛유자 수면팩 70ML",
     price:"30,600",},
 
-    링클코렉터:
-    {img: "./images/pd_img02.png",
-    bland:"아이오페",
+    {img: "02",
+    brand:"아이오페",
     name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
     price:"112,500",},
 
-    인텐시브크림:
-    { img: "./images/pd_img05.png",
-    bland:"라네즈",
+    { img: "05",
+    brand:"라네즈",
     name:"워터뱅크 블루 히알루로닉 인텐시브 크림",
     price:"33,600",},
-    에멀전:
 
-    { img: "./images/pd_img06.png",
-    bland:"라네즈",
+    { img: "06",
+    brand:"라네즈",
     name:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
     price:"29,400",},
-  }
+]
 const blList = [
 {
   idx: 1,

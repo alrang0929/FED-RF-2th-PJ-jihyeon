@@ -13,16 +13,14 @@ import * as amrData from "../data/AMR_data.js";
 slideFn.indicater();
 
 ////////브랜드 리스트 슬라이드
-(()=>{
+(() => {
+  const blData = amrData.blList;
+  const blBx = myFn.qs(".bland-mibx");
+  console.log("대상:", blData, blBx);
 
-const blData = amrData.blList;
-const blBx = myFn.qs('.bland-mibx');
-console.log('대상:',blData,blBx);
+  let hcode = `<ul class="fx-box">`;
 
-let hcode = `<ul class="fx-box">`;
-
-blData.forEach((i)=>{
-
+  blData.forEach((i) => {
     hcode += `
     <li style="background: url(./images/brand_bg_${i.title}.jpg) no-repeat center/cover;">
     <figure>
@@ -33,35 +31,55 @@ blData.forEach((i)=>{
     </figcaption>
   </li>
     `;
-})////forEach
-hcode +=`</ul>`
-blBx.innerHTML = hcode;
-
-})();//브랜드 리스트 슬라이드 끝/////////////
+  }); ////forEach
+  hcode += `</ul>`;
+  blBx.innerHTML = hcode;
+})(); //브랜드 리스트 슬라이드 끝/////////////
 
 ////////브랜드 로고 리스트
-(()=>{
+(() => {
+  const blData = amrData.blList;
+  const blLgbx = myFn.qs(".bland-lgbx");
+  console.log("대상:", blData, blLgbx);
 
-const blData = amrData.blList;
-const blLgbx = myFn.qs('.bland-lgbx');
-console.log('대상:',blData,blLgbx);
+  let hcode = `<ul class="fx-box">`;
 
-let hcode = `<ul class="fx-box">`;
-
-blData.forEach((i)=>{
-
+  blData.forEach((i) => {
     hcode += `
     <li><a href="#"><img src="./images/bi_${i.title}.png"
     alt="${i.title} logo"></a></li>
     `;
-})////forEach
-hcode +=`</ul>`
+  }); ////forEach
+  hcode += `</ul>`;
 
-blLgbx.innerHTML = hcode;
-
-})();//브랜드 로고 리스트끝/////////////
+  blLgbx.innerHTML = hcode;
+})(); //브랜드 로고 리스트끝/////////////
 
 //제품소개 리스트
-function pdList(){
+(()=>{
+  
+const pdData = amrData.pdData;
+const pdBox = myFn.qs(".prod-list");
+console.log("pd data:", pdData, "\n 박스",pdBox);
 
-}
+let hcode = `<ul>`;
+// "테스트"
+pdData.forEach(v => {
+  hcode += `
+  <li>
+  <figure><img src="./images/pd_img${v.img}.png" alt="${v.name}"></figure>
+  <figcaption>
+    <h3 class="brand">${v.brand}</h3>
+    <div class="pdbx fx-box">
+      <h4 class="name">${v.name}</h4>
+        <div class="price">${v.price}<span>원</span></div>
+    </div>
+  </figcaption>
+  </li>
+  `;
+}); ////forEach/////////
+hcode += `</ul>`;
+
+pdBox.innerHTML = hcode;
+
+})();//제품소개 리스트 끝

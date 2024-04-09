@@ -327,14 +327,11 @@ body * {
 /**************************************** 섹션03 ****************************************/
 
 #prodinfo-area {
-  position: relative;
-  height: 228vh;
+  /* position: relative; */
+  /* height: 228vh; */
   /* width: 70%;  */
 }
-.pd-wrap{
-  margin: 20vw auto;
-  width: 80vw;
-}
+
 /* 타이틀 박스 설정 */
 #prodinfo-area .title-box{
   text-align-last: left;
@@ -343,75 +340,43 @@ body * {
   /* padding-left: 10%; */
 }
 
-/* 박스 공통설정 */
-.cbx{
-  border: 1px solid #cecece;
-  padding: 1vw;
-  box-sizing: border-box;
+.prod-list ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-/* 텍스트설정 */
-/* 이미지 박스 설정*/
-.photo img{
-  width: 100%;
-  
-  object-fit: cover;
-  object-position: center;
+
+.pdbx h4{
+  font-size: 1.3rem;
 }
-/* 텍스트박스 */
-.pdinfo .desc{
-  width: 100%;
-  display: flex;
-  font-size: 1.5rem;
-  color: #171719;
+
+.prod-list figcaption h3{
   text-align-last: left;
-  /* gap: 14vw; */
-  /* flex-direction: row; */
+}
+.prod-list figcaption .pdbx{
+  overflow: hidden;
+  font-size: 1.3rem;
+  padding-top: 1rem;
   justify-content: space-between;
 }
-
-.pdinfo .tit-box{
-  /* display: flex; */
-  width: 60%;
-  height: 100%;
-  /* gap: 4vw 0; */
+.prod-list li {
+  padding: 2rem;
+  border-left: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
+}
+.prod-list li img{
+  width: 100%;
 }
 
-.tit-box .bland{
-  font-size: 1.4rem;
-  font-weight: 300;
-  color: #797979;
-  margin-bottom: .5vw;
-}
-.pdinfo .price{
-  display: flex;
-  width: 30%;
-  justify-content: flex-end;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-end;
-}
+.prod-list li:nth-child(4) {
 
-.price span{
-  margin-left: .5vw;
+  border-left: 1px solid transparent;
 }
-
-/* 그리드 설정 */
-.grid-wrap{
-  display: grid;
-  margin: 0 auto;
-  /* grid-auto-rows: 10%; */
-  grid-template-columns: 3fr 3fr;
-}
-
-.first{
+.prod-list li:nth-child(1) {
+  border-left: 1px solid transparent;
   grid-area: 1/1/3/3;
- 
+}
 
-}
-.second{
-  grid-area: -1/-1/-3/3;
-  
-}
+
 
 
 /**************************************** 섹션04 ****************************************/
