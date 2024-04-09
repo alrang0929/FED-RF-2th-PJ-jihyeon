@@ -60,3 +60,8 @@ hcode +=`</ul>`
 blLgbx.innerHTML = hcode;
 
 })();//브랜드 로고 리스트끝/////////////
+
+//제품소개 리스트
+function pdList(){
+
+}
