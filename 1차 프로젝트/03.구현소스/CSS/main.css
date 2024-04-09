@@ -304,11 +304,11 @@ body * {
 }
 .bland-mibx figcaption{
   margin: 0 auto;
-  margin-top: 2vw;
-  /* padding-bottom: 5vw; */
+  margin-top: 5vw;
+  padding-bottom: 5vw;
   width: 20vw;
   font-weight: 200;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 2;
   color: #fff;
 }
