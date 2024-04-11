@@ -92,13 +92,13 @@ body * {
 
 /************* 002 그래픽 인포 영역 *************/
 .graphic-info-area{
-    width: 100vw;
+    /* width: 100%; */
     /* margin: 0 auto; */
     background-color: #F5FAFF;
     padding-bottom: 10rem;
     /* padding-left: 10rem; */
 }
-    /* height: 70vh; */}
+    /* height: 70vh; */
 .graphic-info-area .line {
     display: block;
     height: 100px;
@@ -111,7 +111,7 @@ body * {
     width: 50%;
     text-align-last: left;
 }
-.graphic-info-area .imgbx>img{
+.graphic-info-area .imgbx img{
     width: 100%;
 }
 .graphic-info-area .imgbx{
