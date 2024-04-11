@@ -213,7 +213,7 @@ color: #fff;
 
 .slide:hover .descbx{
     backdrop-filter: blur(20px);
-    /* backdrop-filter: (4px 4px 4px #00000040); */
+    /* backdrop-filter: drop-shadow(4px 4px 10px blue); */
     border-radius: 2rem;
     
 }
