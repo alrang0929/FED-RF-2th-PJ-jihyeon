@@ -7,10 +7,12 @@ import { startSS, setScrollPos } from "./smoothScroll23.js";
 //////////////////////////////////////////////////////////////////////////
 //데이터셋팅 불러오기
 import * as amrData from "../data/AMR_data.js";
-import * as cmData from "../data/common_data.js";
+import * as cmList from "./common.js";
 
 ///////////아모레퍼시픽 메인 JS- main.js///////////////////////////////////////
 slideFn.indicater();
+
+cmList.makeGnb();
 
 ////////브랜드 리스트 슬라이드
 (() => {
@@ -18,22 +20,21 @@ slideFn.indicater();
   const blBx = myFn.qs(".bland-mibx");
   console.log("대상:", blData, blBx);
 
-  let hcode = `<ul class="fx-box">`;
+  blBx.innerHTML = `
+  <ul class="bslider fx-box">
+  ${amrData.blList.map(i=>`
+  <li style="background: url(./images/brand_bg_${i.title}.jpg) no-repeat center/cover;">
+      <figure>
+        <img src="./images/brand_thm_${i.title}.jpg" alt="${i.title}">
+      </figure>
+      <figcaption txt>
+        ${i.text}
+      </figcaption>
+    </li>
+  `).join('')}
+  </ul>
+  `
 
-  blData.forEach((i) => {
-    hcode += `
-    <li style="background: url(./images/brand_bg_${i.title}.jpg) no-repeat center/cover;">
-    <figure>
-      <img src="./images/brand_thm_${i.title}.jpg" alt="${i.title}">
-    </figure>
-    <figcaption txt>
-      ${i.text}
-    </figcaption>
-  </li>
-    `;
-  }); ////forEach
-  hcode += `</ul>`;
-  blBx.innerHTML = hcode;
 })(); //브랜드 리스트 슬라이드 끝/////////////
 
 ////////브랜드 로고 리스트
@@ -42,18 +43,19 @@ slideFn.indicater();
   const blLgbx = myFn.qs(".bland-lgbx");
   console.log("대상:", blData, blLgbx);
 
-  let hcode = `<ul class="fx-box">`;
-
-  blData.forEach((i) => {
-    hcode += `
+  blLgbx.innerHTML = `
+  <ul class="sbili fx-box">
+    ${blData.map(i =>`
     <li><a href="#"><img src="./images/bi_${i.title}.png"
     alt="${i.title} logo"></a></li>
-    `;
-  }); ////forEach
-  hcode += `</ul>`;
+    `).join('')}
+  </ul>
+  `
 
-  blLgbx.innerHTML = hcode;
-})(); //브랜드 로고 리스트끝/////////////
+}
+
+)(); //브랜드 로고 리스트끝/////////////
+slideFn.brandSilder();
 
 //제품소개 리스트
 (()=>{
@@ -62,11 +64,11 @@ const pdData = amrData.pdData;
 const pdBox = myFn.qs(".prod-list");
 console.log("pd data:", pdData, "\n 박스",pdBox);
 
-let hcode = `<ul>`;
-// "테스트"
-pdData.forEach(v => {
-  hcode += `
-  <li>
+pdBox.innerHTML =`
+<ul>
+
+${pdData.map(v =>`
+<li>
   <figure><img src="./images/pd_img${v.img}.png" alt="${v.name}"></figure>
   <figcaption>
     <h3 class="brand">${v.brand}</h3>
@@ -76,10 +78,8 @@ pdData.forEach(v => {
     </div>
   </figcaption>
   </li>
-  `;
-}); ////forEach/////////
-hcode += `</ul>`;
-
-pdBox.innerHTML = hcode;
-
+`).join('')}
+</ul>
+`
 })();//제품소개 리스트 끝
+

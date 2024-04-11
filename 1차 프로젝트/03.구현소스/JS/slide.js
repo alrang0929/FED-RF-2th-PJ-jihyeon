@@ -16,9 +16,11 @@ indi.forEach((ele,idx)=>{
     indibar.setAttribute('class','lndi-bar on'+(idx+1))
   }; /// click ///
 }); /// forEach ////
+}/////////indicater
 
-
-let aa = document.querySelectorAll(".sbili a");
+function brandSilder(){
+  let aa = document.querySelectorAll(".sbili li");
+  console.log('누구',this);
 let bb = document.querySelector(".bslider ul");
 aa.forEach((ele, idx) => {
   ele.onclick = (e) => {
@@ -27,9 +29,7 @@ aa.forEach((ele, idx) => {
     bb.style.transition = ".6s";
   };
 });/////////forEach////////////////////////////
-}/////////indicater
-
-
+}
 
 ////////호출영역///////////////////////////////
-export {indicater};
+export {indicater,brandSilder};

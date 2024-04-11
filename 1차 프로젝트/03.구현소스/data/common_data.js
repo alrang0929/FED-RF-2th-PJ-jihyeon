@@ -1,4 +1,5 @@
-const gnbData = {
+const gnbData =
+{
 "Amorepacific":"없음",
 "Research & Innovatio":"없음",
 "Visual Identity":"없음",

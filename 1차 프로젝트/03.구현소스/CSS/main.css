@@ -284,6 +284,9 @@ body * {
 }
 
 /********************************* 섹션02 *********************************/
+.bland-wrap{
+  overflow: hidden;
+}
 .bland-lgbx{
   display: flex;
 }
@@ -347,6 +350,7 @@ body * {
 
 .pdbx h4{
   font-size: 1.3rem;
+  text-align-last: left;
 }
 
 .prod-list figcaption h3{
@@ -485,7 +489,7 @@ body * {
 
 /************************************ 회사 스토리 ************************************/
 #story-area {
-  overflow: hidden;    
+  /* overflow: hidden;     */
   margin-bottom: 18vh;
 }
 
