@@ -7,9 +7,9 @@ import { startSS, setScrollPos } from "./smoothScroll23.js";
 //////////////////////////////////////////////////////////////////////////
 //데이터셋팅 불러오기
 import * as amrData from "../data/AMR_data.js";
+import * as cmData from "../data/common_data.js";
 
 ///////////아모레퍼시픽 메인 JS- main.js///////////////////////////////////////
-
 slideFn.indicater();
 
 ////////브랜드 리스트 슬라이드
