@@ -284,13 +284,13 @@ body * {
 }
 
 /********************************* 섹션02 *********************************/
-.bland-wrap{
+.brand-wrap{
   overflow: hidden;
 }
-.bland-lgbx{
+.brand-lgbx{
   display: flex;
 }
-.bland-lgbx ul{
+.brand-lgbx ul{
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
@@ -302,10 +302,10 @@ body * {
   /* margin-top: 4vh; */
 }
 
-.bland-mibx img{
+.brand-mibx img{
   margin-top: 10vw;
 }
-.bland-mibx figcaption{
+.brand-mibx figcaption{
   margin: 0 auto;
   margin-top: 5vw;
   padding-bottom: 5vw;
@@ -315,7 +315,7 @@ body * {
   line-height: 2;
   color: #fff;
 }
-.bland-mibx ul li{
+.brand-mibx ul li{
   flex-shrink: 0;
   width: 100vw;
   /* height: 70vh; */
@@ -491,11 +491,7 @@ body * {
 #story-area {
   /* overflow: hidden;     */
   margin-bottom: 18vh;
-}
-
-/* 메인박스 */
-.story-area {
-  /*  position: relative; */
+  position: relative;
 }
 
 /* 타이틀 */
@@ -504,10 +500,16 @@ body * {
   margin-left: 10%;
 }
 
+.brand-slider-wrap{
+  position: absolute;
+}
+
+/* 슬라이드 시 움직이는 박스  */
 .storysd-wrap {
-  
-  /* 리스트 확인용 */
-  /* left: -90%; */
+
+  top: 0;
+  left: 0;
+  /* height: 80vh; */
   /* 가로로 흘러가게! */
   display: flex;
   /* 부모: .story-area */

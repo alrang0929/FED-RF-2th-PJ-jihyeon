@@ -17,7 +17,7 @@ cmList.makeGnb();
 ////////브랜드 리스트 슬라이드
 (() => {
   const blData = amrData.blList;
-  const blBx = myFn.qs(".bland-mibx");
+  const blBx = myFn.qs(".brand-mibx");
   console.log("대상:", blData, blBx);
 
   blBx.innerHTML = `
@@ -40,7 +40,7 @@ cmList.makeGnb();
 ////////브랜드 로고 리스트
 (() => {
   const blData = amrData.blList;
-  const blLgbx = myFn.qs(".bland-lgbx");
+  const blLgbx = myFn.qs(".brand-lgbx");
   console.log("대상:", blData, blLgbx);
 
   blLgbx.innerHTML = `
@@ -51,10 +51,7 @@ cmList.makeGnb();
     `).join('')}
   </ul>
   `
-
-}
-
-)(); //브랜드 로고 리스트끝/////////////
+})(); //브랜드 로고 리스트끝/////////////
 slideFn.brandSilder();
 
 //제품소개 리스트
@@ -83,3 +80,15 @@ ${pdData.map(v =>`
 `
 })();//제품소개 리스트 끝
 
+
+//드래그 슬라이드 테스트
+(()=>{
+let slider = myFn.qs('.brand-wrap');
+let sliderIn = myFn.qs('.bslider');
+let pressed = false;
+let startx;
+let x;
+
+
+
+})();
