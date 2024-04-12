@@ -80,15 +80,59 @@ ${pdData.map(v =>`
 `
 })();//제품소개 리스트 끝
 
+storyList();
 
-//드래그 슬라이드 테스트
-(()=>{
-let slider = myFn.qs('.brand-wrap');
-let sliderIn = myFn.qs('.bslider');
-let pressed = false;
-let startx;
-let x;
+//스토리 슬라이드 데이터 셋팅
+function storyList(){
+  //불러올 데이터
+  const stData = amrData.storyData;
+  //대상: #story-area .slider
+  const stSlider = myFn.qs('.stSlider');
+
+stSlider.innerHTML = `
+<!-- 서브타이틀 영역 -->
+<div class="storysd-titbox">
+    <div class="tit engtitfont">
+      <h2>
+        Story Of<br />
+        Amorefacific
+      </h2>
+    </div>
+    <button class="mcolor-mbtn">
+      <a href="#">more view </a>
+      <span class="material-symbols-outlined"> chevron_right </span>
+    </button>
+  </div>
+${stData.map(i=>`
+
+          <ul class="item fx-box2">
+            <!-- 슬라이드 item -->
+            <li class="fx-box2" style="background:url(./images/ssd_${i.img}.jpg) no-repeat center/cover;">
+                <div class="desc-wrap">
+                    <div class="desc">
+                      <h4>${i.title}</h4>
+                      <p class="txt">
+                        ${i.txt}
+                      </p>
+                    </div>
+             </li>
+             
+              <ol class="fx-box2">
+              <img src="./images/ssd_${i.subimg[0]}.jpg" alt="${i.title}">
+              <img src="./images/ssd_${i.subimg[1]}.jpg" alt="${i.title}">
+              <img src="./images/ssd_${i.subimg[2]}.jpg" alt="${i.title}">
+              </ol>
+             
+        </ul>`).join('')}`}/////storyList
 
 
 
-})();
+//드래그 슬라이드 작동
+function dragSlider(){
+  let slider = myFn.qs('.stSlider-wrap');
+  let sliderIn = myFn.qs('.stSlider');
+  let pressed = false;
+  let startx;
+  let x;
+
+}

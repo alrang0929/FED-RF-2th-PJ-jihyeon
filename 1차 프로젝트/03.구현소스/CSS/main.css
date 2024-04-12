@@ -489,167 +489,51 @@ body * {
 
 /************************************ 회사 스토리 ************************************/
 #story-area {
-  /* overflow: hidden;     */
-  margin-bottom: 18vh;
+
+  /* overflow: hidden; */
+}
+
+.storysd-titbox h2{
+  text-align-last: left;
+
+}
+
+.stSlider-wrap{
   position: relative;
 }
 
-/* 타이틀 */
-.storysd-titbox {
-  text-align-last: left;
-  margin-left: 10%;
-}
-
-.brand-slider-wrap{
+.stSlider{
   position: absolute;
-}
-
-/* 슬라이드 시 움직이는 박스  */
-.storysd-wrap {
-
-  top: 0;
-  left: 0;
-  /* height: 80vh; */
-  /* 가로로 흘러가게! */
-  display: flex;
-  /* 부모: .story-area */
-  gap: 0 10%;
-  flex-direction: row;
-  justify-content: flex-start;
   
 }
 
-/* 서브 슬라이드 공통값 */
-.sub-slid {
-  /* 부모: .story-area */
-  display: flex;
-
-  margin-left: 9%;
-  gap: 19px;
-
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 280%;
-  flex-direction: row;
-  align-items: stretch;
-  align-content: center;
+/* 메인 슬라이드 */
+.stSlider ul li:first-child{
+  width: 740px;
 }
-
-.sub-slid ul {
-  justify-content: flex-start;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0 40px;
+/* 메인 슬라이드 내 텍스트 박스 */
+.stSlider .desc-wrap{
+  width: 50%;
+  padding: 40px;
+  color: #fff;
 }
-
-/****************************** 슬라이드박스 공통설정 ******************************/
-.mimgbx {
-  width: 100%;
-  height: 100%;
+.stSlider .desc-wrap .txt{
+  padding-top: 20px;
+  font-size: 1.8rem;
+  color: #fff;
 }
-.mimgbx img {
-  height: 100%;
-}
-.main-slid {
-  position: relative;
-  height: 100%;
-}
-/*********************** 슬라이드 공통 설정 ***********************/
-
-/* 텍스트 박스 설정 */
-
-/* 메인 이미지 호버시 정보 보임 */
-.main-slid .desc-box {
-  opacity: 0;
-
-  width: 100%;
-  height: 100%;
-  background: #00000060;
-  /* 뷰모: mimgbx */
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  transition: 0.2s ease-in-out;
-}
-.main-slid:hover .desc-box {
-  opacity: 1;
-}
-
-.main-slid .desc {
+.stSlider .desc-wrap{
+  font-size: 3.5rem;
   text-align-last: left;
-  opacity: 0;
-  width: 40%;
-  padding: 2%;
-  position: absolute;
-  top: 0;
-  color: #fff;
-  line-height: 2rem;
-  transition: 0.2s ease-in-out;
-}
-.main-slid:hover .desc {
-  opacity: 1;
 }
 
-.main-slid .desc h4 {
-  opacity: 0;
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #fff;
-  transition: 0.2s ease-in-out;
-}
-.main-slid:hover .desc h4 {
-  opacity: 1;
+
+.stSlider li{
+  margin-left: 20rem;
 }
 
-/* 이미지박스 주석 */
-.main-slid article {
-  position: absolute;
-  /* 부모: main-slid */
-  bottom: 0;
-  right: 0;
-  color: #fff;
-  background: #00000080;
-  width: fit-content;
-  padding: 4px 10px;
+.stSlider ol img{
+  width: 50%;
+  margin: 2rem;
 }
 
-.storysd-box01 {
-  /* width: 100%; */
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
-
-  margin: 0 11%;
-}
-
-.storysd-box02 {
-  /* width: 100%; */
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
-
-  margin: 0 11%;
-}
-.storysd-box03 {
-  /* width: 100%; */
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
-
-  margin: 0 11%;
-}
-.storysd-box04 {
-  /* width: 100%; */
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
-
-  margin: 0 11%;
-}
