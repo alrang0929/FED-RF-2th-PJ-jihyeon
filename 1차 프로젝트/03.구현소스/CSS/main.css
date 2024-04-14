@@ -284,8 +284,14 @@ body * {
 }
 
 /********************************* 섹션02 *********************************/
+#brandinfo-area{
+}
+
 .brand-wrap{
+  position: relative;
+  /* position: absolute; */
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 
@@ -301,11 +307,21 @@ body * {
   position: absolute;
   padding: 2vw 0;
   flex-basis: calc(100%/5);
-  background-color: red;
+  /* background-color: red; */
   margin: 0 auto;
   gap: 5vw;
   /* margin-top: 4vh; */
 }
+
+.brand-lgbx li{
+  opacity: 0.4;
+  transition: .2s;
+}
+.brand-lgbx li:hover{
+  opacity: 1;
+}
+
+
 
 /* 메인 슬라이드 이동을 위한 설정 */
 .brand-mibx{
@@ -435,10 +451,13 @@ body * {
   /* margin: -24vh auto; */
   justify-content: space-between;
   align-items: center;
+  /* margin: 0 auto; */
+  overflow: hidden;
+  
 }
 
 /* 리스트 내 버튼 스타일 */
-.nlist button {
+.abtn {
   padding: 0 20px;
   background: transparent;
   border: transparent;
@@ -447,7 +466,7 @@ body * {
   transition: 0.05s;
 }
 
-.nlist button:hover {
+.abtn:hover {
   color: #062c5e;
 }
 
@@ -507,7 +526,6 @@ body * {
 
 /************************************ 회사 스토리 ************************************/
 #story-area {
-<<<<<<< HEAD
   overflow: hidden;    
   margin-bottom: 18vh;
 }
@@ -515,11 +533,6 @@ body * {
 /* 메인박스 */
 .story-area {
   /*  position: relative; */
-=======
-  /* overflow: hidden;     */
-  margin-bottom: 18vh;
-  position: relative;
->>>>>>> parent of f62234d (asd)
 }
 
 /* 타이틀 */
@@ -528,23 +541,10 @@ body * {
   margin-left: 10%;
 }
 
-<<<<<<< HEAD
 .storysd-wrap {
   
   /* 리스트 확인용 */
   /* left: -90%; */
-=======
-.brand-slider-wrap{
-  position: absolute;
-}
-
-/* 슬라이드 시 움직이는 박스  */
-.storysd-wrap {
-
-  top: 0;
-  left: 0;
-  /* height: 80vh; */
->>>>>>> parent of f62234d (asd)
   /* 가로로 흘러가게! */
   display: flex;
   /* 부모: .story-area */

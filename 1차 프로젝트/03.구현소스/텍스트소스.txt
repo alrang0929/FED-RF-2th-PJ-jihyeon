@@ -462,3 +462,220 @@ Visual Identity
     CI
     아리따 글꼴
 
+
+
+
+            <!-- 가로 리스트 4개 보이게-->
+            <div class="nlist">
+              <!-- 앞이동 화살표 -->
+              <div class="abtn ab1">
+                <button id="prevBtn" class="material-symbols-outlined">
+                  arrow_back_ios
+                </button>
+              </div>
+              <div class="thumbbx">
+                <div class="wrap-slide">
+                  <ul>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img src="./images/NEWS/${v.img}.png" alt="${v.title}">
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽그룹 이상목 대표, 바이바이 플라스틱
+                              챌린지 동참
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021901.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>라네즈, '바운시 앤 펌 슬리핑 마스크' 출시</h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              마몽드, '플로라 글로우 로즈 리퀴드 마스크' 출시
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022201.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              헤라, 아티스트 15인과 '언디파인드(UNDEFINED)' 전시
+                              진행
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022001.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021901.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021901.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021501.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 뒤 이동 화살표 -->
+
+              <button id="nextBtn" class="material-symbols-outlined abtn ab2">
+                arrow_forward_ios
+              </button>
+            </div>
+          

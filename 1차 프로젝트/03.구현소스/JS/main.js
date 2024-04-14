@@ -7,12 +7,12 @@ import { startSS, setScrollPos } from "./smoothScroll23.js";
 //////////////////////////////////////////////////////////////////////////
 //데이터셋팅 불러오기
 import * as amrData from "../data/AMR_data.js";
-import * as cmList from "./common.js";
+import * as cmFn from "./common.js";
 
 ///////////아모레퍼시픽 메인 JS- main.js///////////////////////////////////////
 slideFn.indicater();
 
-cmList.makeGnb();
+cmFn.makeGnb();
 
 ////////브랜드 리스트 슬라이드
 (() => {
@@ -50,24 +50,12 @@ cmList.makeGnb();
     alt="${i.title} logo"></a></li>
     `).join('')}
   </ul>
-  `}
+  `})(); //브랜드 로고 리스트끝/////////////
 
-)(); //브랜드 로고 리스트끝/////////////
-
-//슬라이드 생성
-brandSilder();
-function brandSilder(){
-  let aa = document.querySelectorAll(".sbili a");
-  console.log('누구',this);
-let bb = document.querySelector(".bslider li");
-aa.forEach((ele, idx) => {
-  ele.onclick = (e) => {
-    e.preventDefault();
-    bb.style.left = -100 * idx + "%";
-    bb.style.transition = ".6s";
-  };
-});/////////forEach////////////////////////////
-}
+  // 드래그 슬라이드 함수 호출
+slideFn.dragSlider();
+//로고 클릭시 페이지 이동 슬라이드 호출
+slideFn.brandSilder();
 
 
 
@@ -97,18 +85,33 @@ ${pdData.map(v =>`
 `
 })();//제품소개 리스트 끝
 
-<<<<<<< HEAD
-=======
 
-//드래그 슬라이드 테스트
+/////뉴스 리스트 생성
 (()=>{
-let slider = myFn.qs('.brand-wrap');
-let sliderIn = myFn.qs('.bslider');
-let pressed = false;
-let startx;
-let x;
+const newsData = amrData.newsData;
+const newsBox = myFn.qs(".nlist");
 
+newsBox.innerHTML = `
 
-
+    <div class="news-innerbox">
+      <ul>
+        ${newsData.map(v=>`
+        <li>
+          <div class="tmbx">
+            <a href="#">
+              <img src="./images/NEWS/${v.img}.png" alt="${v.title}">
+              <article class="txt">
+                <h4>
+                ${v.title}
+                </h4>
+              </article>
+            </a>
+          </div>
+        </li>`).join('')};
+      </ul>
+    </div>
+`;
 })();
->>>>>>> parent of f62234d (asd)
+
+
+
