@@ -7,6 +7,10 @@ import * as scrollFn from "./smoothScroll23.js";
 //////////////////////////////////////////////////////////////////////////
 //데이터셋팅 불러오기
 import * as amrData from "../data/AMR_data.js";
+import * as cmFn from "./common.js";
+
+cmFn.makeGnb();
+cmFn.makeFooter();
 
 ///////////아모레퍼시픽 서브 JS- sub.js///////////////////////////////////////
 

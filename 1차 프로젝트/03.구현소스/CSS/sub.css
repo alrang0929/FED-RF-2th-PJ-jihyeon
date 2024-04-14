@@ -20,7 +20,8 @@ body * {
 
 /********************* 01 상단 영역 *********************/
 #tit-area{
-    height: 50vh;
+    padding-top: 11rem;
+    padding-bottom:4rem;
     background: url(../images/sub01/BG_tit.jpg) no-repeat center/cover;
 }
 
@@ -93,8 +94,7 @@ body * {
 /************* 002 그래픽 인포 영역 *************/
 .graphic-info-area{
     /* width: 100%; */
-    /* margin: 0 auto; */
-    background-color: #F5FAFF;
+    /* background-color: #F5FAFF; */
     padding-bottom: 10rem;
     margin: 0 auto;
     /* padding-left: 10rem; */
@@ -132,7 +132,7 @@ body * {
 /************* 003 ci 영역 *************/
 
 .ci-area{
-    /* height: 70vh; */
+    padding-top: auto;
 }
 .ci-area .imgbx{
     margin-top: auto;}
@@ -168,6 +168,7 @@ body * {
 /************* 004 슬라이드 영역 *************/
 
 .slide-area{
+    padding: 10vw;
     /* height: 210vh; */
     margin-top: 2vw;
     background: url(../images/sub01/BG_pg04.jpg) no-repeat center/cover;
@@ -175,11 +176,15 @@ body * {
 
 .cont-wrap{
     width: 60%;
-    margin: 3vw auto;
+    margin: 0 auto;
     background: #fff;
+    padding: 5vw ;
+    
 }
 
 
+.slide-area  .tit-box {
+}
 .slide-area  .line {
     display: block;
     top: 0;
@@ -189,20 +194,20 @@ body * {
 }  
 
 .slide-area .tit-box h3{
-/* color: #fff; */
+line-height: 1;
 }
     
 .slide-area .tit-box .desc{
-    margin: 4vw auto;
-    width: 40%;
+    margin: 1.5vw auto;
+    width: 50%;
     /* color: #fff; */
 }
 
 .slide-wrap .slide{
     position: relative;
-    width: 60%;
     margin: 0 auto;
-    /* padding: 10vw; */
+
+    padding: 10vw;
 
     
 }

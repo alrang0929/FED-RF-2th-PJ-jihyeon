@@ -84,7 +84,8 @@ body *{
 
 /* logo */
 .logo{
-    padding: 13px 0;
+    line-height: 7;
+    /* padding: 13rem 0; */
 }
 
 .gnb{
@@ -109,10 +110,10 @@ body *{
 /* GNB링크 */
 .gnb ul a {
     display: block;
-    padding: 0 15px;
+    padding: 0 1.5vw;
     font-size: 1.3rem;
     font-weight: 400;
-    line-height: 4rem;
+    line-height: 5;
   }
   
 

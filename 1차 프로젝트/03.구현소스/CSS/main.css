@@ -175,6 +175,7 @@ body * {
   position: relative;
   margin: 0 auto;
   width: 20vw;
+  
 }
 /*텍스트 박스 내 타이틀 설정 */
 .slider02 h2 {
@@ -184,11 +185,32 @@ body * {
 }
 
 .slider03 {
-  height: 100vh;
   display: block;
+  position: relative;
+  height: 100vh;
   
-  background: url(../images/mainvs03.jpg) no-repeat center/cover;
 }
+
+.sdbx03 .mstext-box{
+  height: 1vh;
+}
+.sdbx03{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/mainvs03.jpg) no-repeat;
+  background-clip: border-box;
+  background-position:center;
+  background-size: 20%;
+  box-sizing: border-box;
+}
+
+.sdbx03 .on{
+  background-size: 100%;
+}
+
 .slider03 .engtitfont{
   top: 14vw;
   right: 34vw;
@@ -364,9 +386,16 @@ body * {
 /**************************************** 섹션03 ****************************************/
 
 #prodinfo-area {
+  margin: 0 auto;
   /* position: relative; */
   /* height: 228vh; */
-  /* width: 70%;  */
+  width: 70%; 
+}
+
+
+
+.btitbx{
+  position: sticky;
 }
 
 /* 타이틀 박스 설정 */

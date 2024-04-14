@@ -8,11 +8,37 @@ import { startSS, setScrollPos } from "./smoothScroll23.js";
 //데이터셋팅 불러오기
 import * as amrData from "../data/AMR_data.js";
 import * as cmFn from "./common.js";
+import * as scrollFn from "./scroll.js";
 
 ///////////아모레퍼시픽 메인 JS- main.js///////////////////////////////////////
-slideFn.indicater();
 
 cmFn.makeGnb();
+cmFn.makeFooter();
+
+//slide
+slideFn.indicater();
+
+//effect
+// scrollFn.zimgScroll();
+
+
+function zimgScroll(){
+  const obj = myFn.qs('.sdbx03')
+  console.log('슬라이드 확인,obj');
+
+myFn.addEvt(obj,'scroll',addOn);
+
+  const CRITARIA = window.innerHeight / 3*2;
+  function addOn(){//obj=대상요소
+    let bcrVal = myFn.getBCR(obj);
+    if (bcrVal< CRITARIA) obj.classList.add('on');
+    else obj.classList.remove('on');
+  
+  }///////addOn함수////////////////};
+}
+zimgScroll();
+
+
 
 ////////브랜드 리스트 슬라이드
 (() => {
@@ -94,7 +120,7 @@ const newsBox = myFn.qs(".nlist");
 newsBox.innerHTML = `
 
     <div class="news-innerbox">
-      <ul>
+      <ul class = "news-inner">
         ${newsData.map(v=>`
         <li>
           <div class="tmbx">
@@ -112,6 +138,9 @@ newsBox.innerHTML = `
     </div>
 `;
 })();
+slideFn.CarouselSlider();
+
+
 
 
 
