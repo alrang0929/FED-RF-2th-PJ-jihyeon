@@ -97,3 +97,18 @@ ${pdData.map(v =>`
 `
 })();//제품소개 리스트 끝
 
+<<<<<<< HEAD
+=======
+
+//드래그 슬라이드 테스트
+(()=>{
+let slider = myFn.qs('.brand-wrap');
+let sliderIn = myFn.qs('.bslider');
+let pressed = false;
+let startx;
+let x;
+
+
+
+})();
+>>>>>>> parent of f62234d (asd)

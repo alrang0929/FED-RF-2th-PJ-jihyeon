@@ -507,6 +507,7 @@ body * {
 
 /************************************ 회사 스토리 ************************************/
 #story-area {
+<<<<<<< HEAD
   overflow: hidden;    
   margin-bottom: 18vh;
 }
@@ -514,6 +515,11 @@ body * {
 /* 메인박스 */
 .story-area {
   /*  position: relative; */
+=======
+  /* overflow: hidden;     */
+  margin-bottom: 18vh;
+  position: relative;
+>>>>>>> parent of f62234d (asd)
 }
 
 /* 타이틀 */
@@ -522,10 +528,23 @@ body * {
   margin-left: 10%;
 }
 
+<<<<<<< HEAD
 .storysd-wrap {
   
   /* 리스트 확인용 */
   /* left: -90%; */
+=======
+.brand-slider-wrap{
+  position: absolute;
+}
+
+/* 슬라이드 시 움직이는 박스  */
+.storysd-wrap {
+
+  top: 0;
+  left: 0;
+  /* height: 80vh; */
+>>>>>>> parent of f62234d (asd)
   /* 가로로 흘러가게! */
   display: flex;
   /* 부모: .story-area */
