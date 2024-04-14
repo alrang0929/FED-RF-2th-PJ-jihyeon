@@ -17,7 +17,7 @@ cmList.makeGnb();
 ////////브랜드 리스트 슬라이드
 (() => {
   const blData = amrData.blList;
-  const blBx = myFn.qs(".bland-mibx");
+  const blBx = myFn.qs(".brand-mibx");
   console.log("대상:", blData, blBx);
 
   blBx.innerHTML = `
@@ -40,7 +40,7 @@ cmList.makeGnb();
 ////////브랜드 로고 리스트
 (() => {
   const blData = amrData.blList;
-  const blLgbx = myFn.qs(".bland-lgbx");
+  const blLgbx = myFn.qs(".brand-lgbx");
   console.log("대상:", blData, blLgbx);
 
   blLgbx.innerHTML = `
@@ -50,12 +50,26 @@ cmList.makeGnb();
     alt="${i.title} logo"></a></li>
     `).join('')}
   </ul>
-  `
-
-}
+  `}
 
 )(); //브랜드 로고 리스트끝/////////////
-slideFn.brandSilder();
+
+//슬라이드 생성
+brandSilder();
+function brandSilder(){
+  let aa = document.querySelectorAll(".sbili a");
+  console.log('누구',this);
+let bb = document.querySelector(".bslider li");
+aa.forEach((ele, idx) => {
+  ele.onclick = (e) => {
+    e.preventDefault();
+    bb.style.left = -100 * idx + "%";
+    bb.style.transition = ".6s";
+  };
+});/////////forEach////////////////////////////
+}
+
+
 
 //제품소개 리스트
 (()=>{

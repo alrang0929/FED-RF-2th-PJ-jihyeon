@@ -12,7 +12,7 @@ html {
 }
 /* 공사중 표시 */
 body * {
-  /* outline: 2px dashed red; */
+  outline: 2px dashed red;
 }
 
 /********************************** 메인 슬라이드 영역 **********************************/
@@ -284,13 +284,18 @@ body * {
 }
 
 /********************************* 섹션02 *********************************/
-.bland-wrap{
+.brand-wrap{
   overflow: hidden;
 }
-.bland-lgbx{
+
+
+
+/* 로고 관련 설정 */
+.brand-lgbx{
   display: flex;
 }
-.bland-lgbx ul{
+.brand-lgbx ul{
+  z-index: 1;
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
@@ -302,10 +307,23 @@ body * {
   /* margin-top: 4vh; */
 }
 
-.bland-mibx img{
+/* 메인 슬라이드 이동을 위한 설정 */
+.brand-mibx{
+  position: relative;
+  height: 100vh;
+  /* height: 100%; */
+}
+.bslider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  }
+
+/* 메인 슬라이드 내용 */
+.brand-mibx img{
   margin-top: 10vw;
 }
-.bland-mibx figcaption{
+.brand-mibx figcaption{
   margin: 0 auto;
   margin-top: 5vw;
   padding-bottom: 5vw;
@@ -315,7 +333,7 @@ body * {
   line-height: 2;
   color: #fff;
 }
-.bland-mibx ul li{
+.brand-mibx ul li{
   flex-shrink: 0;
   width: 100vw;
   /* height: 70vh; */
@@ -489,7 +507,7 @@ body * {
 
 /************************************ 회사 스토리 ************************************/
 #story-area {
-  /* overflow: hidden;     */
+  overflow: hidden;    
   margin-bottom: 18vh;
 }
 

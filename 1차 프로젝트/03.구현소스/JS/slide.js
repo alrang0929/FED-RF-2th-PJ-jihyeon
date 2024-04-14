@@ -32,4 +32,4 @@ aa.forEach((ele, idx) => {
 }
 
 ////////호출영역///////////////////////////////
-export {indicater,brandSilder};
+export {indicater};
