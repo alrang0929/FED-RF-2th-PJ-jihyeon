@@ -172,6 +172,7 @@ body * {
     /* height: 210vh; */
     margin-top: 2vw;
     background: url(../images/sub01/BG_pg04.jpg) no-repeat center/cover;
+    
 }
 
 .cont-wrap{
@@ -208,10 +209,7 @@ line-height: 1;
 .slide-wrap .slide{
     position: relative;
     margin: 0 auto;
-
     padding: 10vw;
-
-    
 }
 .brbx{
     position: absolute;
@@ -219,7 +217,7 @@ line-height: 1;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
-    height: 40%;
+    height: 70%;
 }
 
 .slide .descbx{
@@ -236,7 +234,6 @@ line-height: 1;
     
 }
 .slide .descbx .txt{
-    
     width: 50%;
     color: #fff;
     margin: 0 auto;
@@ -245,5 +242,34 @@ line-height: 1;
     color: #fff;
     font-size: 3rem;
 }
+
+/* 슬라이드 스티키 */
+.slide{
+    height: 30vw;
+}
+.slide-wrap{
+    height: 218vw;
+}
+
+.slide:nth-child(1){
+    position: sticky;
+    top: 6vw;
+    text-align: center;
+    margin-top: 300px;
+}
+.slide:nth-child(2){
+    position: sticky;
+    top: 6vw;
+    text-align: center;
+    margin-top: 300px;
+}
+.slide:nth-child(3){
+    position: sticky;
+    top: 6vw;
+    text-align: center;
+    margin-top: 300px;
+}
+
+
 
 
