@@ -4,6 +4,7 @@
 @import url(./common.css);
 @import url(./core.css);
 @import url(./reset.css);
+@import url(./scroll.css);
 
 /* 그리드 시스템 */
 @import url(./grid_12_flex.css);
@@ -191,9 +192,7 @@ body * {
   
 }
 
-.sdbx03 .mstext-box{
-  height: 1vh;
-}
+
 .sdbx03{
   position: absolute;
   top: 0;
@@ -212,13 +211,25 @@ body * {
   background-size: 100%;
 }
 
+.slider03 .mstext-box{
+  left: 0;
+  animation: slider-ani 10s linear infinite;
+}
 .slider03 .engtitfont{
-  top: 14vw;
-  right: 34vw;
+  top: -6vw;
+  /* right: 34vw; */
   position: relative;
   font-size: 40rem;
  color: #fff;
+ height: 1vh;
+
 } 
+
+
+@keyframes slider-ani {
+  to {
+    left: -200%;
+  }}
 
 
 /************************************** 섹션01 **************************************/
@@ -386,11 +397,14 @@ body * {
 
 /* 브랜드 추가 */
 .brand-add .txt{
-  margin-top: 4vw;
+  margin-top: 27vw;
+}
+.brand-add .bgimg img{
+  margin-top: -10px;
 }
 .brand-add{
+  position: relative;
   padding: 4vw;
-
 }
 
 
@@ -402,7 +416,7 @@ body * {
   margin: 0 auto;
   /* position: relative; */
   /* height: 228vh; */
-  width: 70%; 
+  width: 85%; 
 }
 
 .btitbx{

@@ -20,6 +20,7 @@ slideFn.indicater();
 
 //effect
 myFn.addEvt(window,'scroll',scrollFn.zimgScroll);
+myFn.addEvt(window,'scroll',scrollFn.zimgScroll2);
 
 
 // function zimgScroll(){
