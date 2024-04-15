@@ -19,24 +19,24 @@ cmFn.makeFooter();
 slideFn.indicater();
 
 //effect
-// scrollFn.zimgScroll();
+myFn.addEvt(window,'scroll',scrollFn.zimgScroll);
 
 
-function zimgScroll(){
-  const obj = myFn.qs('.sdbx03')
-  console.log('슬라이드 확인,obj');
+// function zimgScroll(){
+//   const obj = myFn.qs('.sdbx03')
+//   console.log('슬라이드 확인,obj');
 
-myFn.addEvt(obj,'scroll',addOn);
+// myFn.addEvt(obj,'scroll',addOn);
 
-  const CRITARIA = window.innerHeight / 3*2;
-  function addOn(){//obj=대상요소
-    let bcrVal = myFn.getBCR(obj);
-    if (bcrVal< CRITARIA) obj.classList.add('on');
-    else obj.classList.remove('on');
+//   const CRITARIA = window.innerHeight / 3*2;
+//   function addOn(){//obj=대상요소
+//     let bcrVal = myFn.getBCR(obj);
+//     if (bcrVal< CRITARIA) obj.classList.add('on');
+//     else obj.classList.remove('on');
   
-  }///////addOn함수////////////////};
-}
-zimgScroll();
+//   }///////addOn함수////////////////};
+// }
+// zimgScroll();
 
 
 

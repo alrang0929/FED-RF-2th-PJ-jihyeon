@@ -87,8 +87,8 @@ function dragSlider() {
 
 function brandSilder() {
     let logoBtn = document.querySelectorAll(".sbili li");
-    console.log("누구", this);
-    let inner = document.querySelector(".bslider ul");
+    let inner = document.querySelector(".bslider");
+    console.log("누구", inner);
     logoBtn.forEach((ele, idx) => {
         ele.onclick = (e) => {
             e.preventDefault();
@@ -104,6 +104,7 @@ function CarouselSlider(){
     const abtn = myFn.qsa(".abtn");
     // 변경대상 : #slide
     const slide = myFn.qs(".news-inner");
+    // console.log(slide);
     
     //버튼 이벤트 설정
     for (let x of abtn){
@@ -113,13 +114,9 @@ function CarouselSlider(){
     
     //////광클금지변수
     let prot = false; 
-    function goSlide(evt, sts = ture){
-      console.log('넌 모냐',goSlide)
-      console.log("전달변수:",evt,sts);
+    function goSlide(){
+    //   console.log('넌 모냐',goSlide)
     
-      if(sts){
-        clearAuto();
-      }
       if(prot) return;
       prot = true;
       setTimeout(() => {
@@ -127,10 +124,10 @@ function CarouselSlider(){
       }, 600);
     
     
-      let isRbtn = sts ? this.classList.contains("ab2") : ture;
+      let isRbtn = this.classList.contains("ab2");
     
       if(isRbtn){
-        slide.style.left = "-100%";
+        slide.style.left = "-310px";
         slide.style.transition = ".6s ease-in-out";
     
         setTimeout(() => {
@@ -144,8 +141,8 @@ function CarouselSlider(){
     }////if
     else{
       let list = slide.querySelectorAll("li");
-      slide.inserBefore(list[list.length -1], list[0]);
-      slide.style.left = "-100%";
+      slide.insertBefore(list[list.length -1], list[0]);
+      slide.style.left = "-310px";
       slide.style.transition = "none";
     
       setTimeout(() => {

@@ -7,6 +7,9 @@ body{
     position: relative;
     margin-top: 50px
 }
+body{
+    overflow-x: hidden;
+}
 
 body *{
     /* 공사중 표시 */

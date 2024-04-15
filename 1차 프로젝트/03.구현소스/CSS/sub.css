@@ -184,6 +184,8 @@ body * {
 
 
 .slide-area  .tit-box {
+    position: sticky;
+    top: 100px;
 }
 .slide-area  .line {
     display: block;

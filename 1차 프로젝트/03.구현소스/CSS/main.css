@@ -205,9 +205,10 @@ body * {
   background-position:center;
   background-size: 20%;
   box-sizing: border-box;
+  transition: 1s ease-in-out;
 }
 
-.sdbx03 .on{
+.sdbx03.on{
   background-size: 100%;
 }
 
@@ -497,6 +498,7 @@ body * {
 
 .abtn:hover {
   color: #062c5e;
+  cursor: pointer;
 }
 
 .nlist a {
@@ -529,6 +531,8 @@ body * {
 }
 /* 리스트 설정 */
 .nlist ul {
+  position: relative;
+  left: 0;
   /* align-items: flex-start; */
   display: flex;
   justify-content: flex-start;
