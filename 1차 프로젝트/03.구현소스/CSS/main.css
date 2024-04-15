@@ -12,7 +12,7 @@ html {
 }
 /* 공사중 표시 */
 body * {
-  outline: 2px dashed red;
+  /* outline: 2px dashed red; */
 }
 
 /********************************** 메인 슬라이드 영역 **********************************/
@@ -328,15 +328,20 @@ body * {
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
-  padding: 2vw 0;
+  padding: 4vw 0;
   flex-basis: calc(100%/5);
   /* background-color: red; */
   margin: 0 auto;
   gap: 5vw;
   /* margin-top: 4vh; */
+  /* margin: 0 4vh; */
 }
 
+.brand-lgbx li img{
+  height: 2.3vh;
+}
 .brand-lgbx li{
+  /* padding: 4vh 4vh; */
   opacity: 0.4;
   transition: .2s;
 }
@@ -360,7 +365,7 @@ body * {
 
 /* 메인 슬라이드 내용 */
 .brand-mibx img{
-  margin-top: 10vw;
+  margin-top: 24vh;
 }
 .brand-mibx figcaption{
   margin: 0 auto;
@@ -379,7 +384,14 @@ body * {
 }
 
 
+/* 브랜드 추가 */
+.brand-add .txt{
+  margin-top: 3vw;
+}
+.brand-add{
+  padding: 3vw;
 
+}
 
 
 
@@ -393,11 +405,20 @@ body * {
   width: 70%; 
 }
 
-
+.btitbx{
+  height: 400px;
+}
 
 .btitbx{
   position: sticky;
+  bottom: -4vw;
+  top: 0vw;
+  height: 182px;
+  background: #fff;
+  z-index: 1;
+
 }
+
 
 /* 타이틀 박스 설정 */
 #prodinfo-area .title-box{
@@ -453,7 +474,8 @@ body * {
 #news-area {
   position: relative;
   /* top: 50%; */
-  height: 90vh;
+  /* height: 90vh; */
+  
   margin: 0 auto;
 }
 
@@ -468,6 +490,7 @@ body * {
 }
 
 .ntit-box {
+  margin-top: 10vh;
   margin-bottom: 5%;
 }
 
