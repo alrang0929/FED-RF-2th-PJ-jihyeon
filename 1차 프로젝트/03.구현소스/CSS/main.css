@@ -386,10 +386,10 @@ body * {
 
 /* 브랜드 추가 */
 .brand-add .txt{
-  margin-top: 3vw;
+  margin-top: 4vw;
 }
 .brand-add{
-  padding: 3vw;
+  padding: 4vw;
 
 }
 
@@ -411,9 +411,9 @@ body * {
 
 .btitbx{
   position: sticky;
-  bottom: -4vw;
+  bottom: -1vw;
   top: 0vw;
-  height: 182px;
+  height: 12vw;
   background: #fff;
   z-index: 1;
 
