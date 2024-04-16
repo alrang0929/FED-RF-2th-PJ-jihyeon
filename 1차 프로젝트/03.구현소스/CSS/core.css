@@ -35,6 +35,7 @@ html {
     font-size: 10px;
     /* rem 단위 계산 편의를 위하여 */
     text-align: center;
+    /* margin: 0 auto; */
 }
 
 /* 임시 표시 타이틀 */

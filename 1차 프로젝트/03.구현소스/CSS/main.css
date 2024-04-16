@@ -189,6 +189,7 @@ body * {
   display: block;
   position: relative;
   height: 100vh;
+  overflow: hidden;
   
 }
 
@@ -447,6 +448,9 @@ body * {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.pdbx span{
+  color: #000000;
+}
 .pdbx h4{
   font-size: 1.3rem;
   text-align-last: left;

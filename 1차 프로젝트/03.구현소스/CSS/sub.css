@@ -25,12 +25,39 @@ body * {
     background: url(../images/sub01/BG_tit.jpg) no-repeat center/cover;
 }
 
+
+#tit-area .linebx {
+    /* padding: 0; */
+    overflow: hidden;
+    height: 80px;
+    padding-top: 3vw;
+    margin-bottom: -3vw;
+}
 #tit-area .line {
     display: block;
-    height: 50px;
+    height: 80px;
+    margin-top: 0;
     border-left: 1px solid #fff;
     margin-left: 50%;
+    transition: .2s;
+    opacity: 0;
+    
+
+    animation: line-ani 1s ease-in-out infinite ;
 }  
+
+@keyframes line-ani{
+
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 50px;
+    }
+}
+
+
 #tit-area .titbx{
     padding-top: 3rem;
 }

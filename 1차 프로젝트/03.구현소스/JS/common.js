@@ -8,7 +8,19 @@ import * as cmData from "../data/common_data.js";
 
 function makeGnb(){
 //대상 GNB
-mFn.qs(".gnb").innerHTML = `
+mFn.qs(".top-area").innerHTML = `
+<div class="top-box">
+
+<div class="col-2">
+          <!-- 로고박스 -->
+          <h1 class="logo">
+            <a href="#">
+              <img src="./images/ci_w.png" alt="아모레퍼시픽 로고" />
+            </a>
+          </h1>
+        </div>
+<div class="col-8">
+<nav class="gnb">
 <ul>
 ${
     Object.keys(cmData.gnbData).map((v) =>`
@@ -24,8 +36,13 @@ ${
                   </ol>
                 </div>`}
     </li>
+    
     `).join('')}
-</ul>`
+</ul>
+</nav>
+</div>
+</div>
+`
 }//////////////////makeGnb함수//////////////////////
 
 function makeFooter(){
