@@ -30,6 +30,7 @@ function dragSlider() {
         //마우스 드래그시 x좌표 체크
         let x;
 
+        
         /*
     [이벤트 등록]
     
