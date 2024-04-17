@@ -46,13 +46,11 @@ function dragSlider() {
 
         //마우스 커서 설정
         slider.addEventListener("mouseenter", () => {
-            slider.style.cursor = "grab";
-        });
-        slider.addEventListener("mouseenter", () => {
-            slider.style.cusor = "grab";
+            slider.style.cursor = "grabbing";
         });
         slider.addEventListener("mouseup", () => {
             pressed = false;
+            slider.style.cursor = "grab";
         });
 
         //[중요] drag 처리함수
