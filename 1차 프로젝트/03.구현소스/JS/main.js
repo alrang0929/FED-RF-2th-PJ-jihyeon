@@ -15,6 +15,7 @@ import * as scrollFn from "./scroll.js";
 cmFn.makeGnb();
 cmFn.makeFooter();
 
+
 //slide
 slideFn.indicater();
 
@@ -140,8 +141,6 @@ newsBox.innerHTML = `
 `;
 })();
 slideFn.CarouselSlider();
-
-
 
 
 

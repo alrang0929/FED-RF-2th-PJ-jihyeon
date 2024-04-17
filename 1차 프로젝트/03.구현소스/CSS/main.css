@@ -20,7 +20,7 @@ body * {
 #ban-area {
   position: relative;
   /* width: 100vw; */
-  height: 300vh;
+  /* height: 300vh; */
 }
 
 /* 슬라이드 인디케이터 */

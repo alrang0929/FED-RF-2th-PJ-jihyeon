@@ -212,6 +212,27 @@ const newsData = [
 
 ]
 
+const mslideData =[
+  {
+    idx: 1,
+    title: "New Beauty",
+    txt: `아모레퍼시픽은 고객 한 사람 한 사람이 뉴 뷰티로 영감받아 자신만의 아름다움을 발션하고, 건강하고 만족스러운 삶을 실현할 수 있도록 합니다`,
+    source: `<video id="ifr" src="./images/main_mv01.mp4" autoplay muted playsinline ></video>`,
+  },
+  {
+    idx: 2,
+    title: "Sustainability",
+    txt: `아모레퍼시픽은 자연과 사람, 사회가 조화롭게 공존하는 아름다운 세상을 만들어갑니다. 모든 구성원이 함께 더 나은 미래를 꿈꿉니다`,
+    source: "none",
+  },
+  {
+    idx: 3,
+    title: `amorepacificamorepacific`,
+    txt: "none",
+    source: "none",
+  },
+]
+
   
 /* 내보내기 */
-export {sdData,blList,pdData,storyData,newsData};
+export {sdData,blList,pdData,storyData,newsData,mslideData};
