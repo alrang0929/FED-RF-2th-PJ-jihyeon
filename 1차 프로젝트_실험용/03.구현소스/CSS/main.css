@@ -1,0 +1,764 @@
+@charset "utf-8";
+
+/* 리셋, 코어, 커먼, 공통 외부 css 합치기 */
+@import url(./common.css);
+@import url(./core.css);
+@import url(./reset.css);
+@import url(./scroll.css);
+
+/* 그리드 시스템 */
+@import url(./grid_12_flex.css);
+html {
+  scroll-behavior: smooth;
+}
+/* 공사중 표시 */
+body * {
+  /* outline: 2px dashed red; */
+}
+
+/********************************** 메인 슬라이드 영역 **********************************/
+#ban-area {
+  position: relative;
+  /* width: 100vw; */
+  /* height: 300vh; */
+}
+
+/* 슬라이드 인디케이터 */
+.slide-indi {
+  z-index: 1;
+  position: absolute;
+  /* width: 40%; */
+  height: 100%;
+  left: 5vw;
+  /* top: 0; */
+  /* transform: translateY(30%); */
+}
+
+/* 인디케이터 디자인 설정 */
+/* 영역 */
+.slide-indibx {
+  /* gap: 20px; */
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  height: 33.333%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.slide-indibx a {
+  color: #fff;
+}
+
+/* 린디바 */
+.lndi-bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  left: -25%;
+}
+/* 바 */
+.front-bar {
+  position: absolute;
+  top: 0%;
+  width: 2px;
+  height: 20px;
+  opacity: 1;
+  background: #ffffff;
+  transition: 0.2s;
+}
+
+.lndi-bar.on1 .front-bar {
+  top: 0%;
+}
+.lndi-bar.on2 .front-bar {
+  top: 40%;
+}
+.lndi-bar.on3 .front-bar {
+  top: 80%;
+}
+
+.back-bar {
+  width: 2px;
+  height: 80px;
+  opacity: 0.5;
+  background: #ffffff;
+}
+
+/* 텍스트 */
+.slide-indibx li {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* 슬라이드 공통설정 */
+/* 메인 슬라이드 버튼+텍스트 박스 */
+.mstext-box {
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  width: 36%;
+  left: 50%;
+  text-align: center;
+}
+/* 메인 슬라이드 내 텍스트 박스 */
+.stext-box {
+  width: 30vw;
+  margin-bottom: 8%;
+  color: #fff;
+  letter-spacing: -0.02rem;
+}
+
+.mslider {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* height: 100vh; */
+}
+
+/* 슬라이드 01*/
+
+/* iframe 부모값 설정 */
+.slider01 {
+  position: relative;
+  margin-bottom: -4%;
+  height: 120vh;
+  /* width: 100%; */
+  margin-top: -2%;
+  /* overflow: hidden; */
+}
+
+.slider01 .stext-box {
+  padding-bottom: 33%;
+}
+
+/* 영문 타이틀 컬러 변경 */
+.slider01 .engtitfont h2 {
+  margin-left: -142%;
+  color: #fff;
+}
+.slider01 .stext-box .txt {
+  padding-left: 104%;
+  color: #fff;
+  width: 30%;
+  margin-top: -17%;
+  text-align-last: left;
+}
+
+
+
+/* iframe 설정 */
+#ifr {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120vh;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* 슬라이드 02 */
+.slider02 {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: block;
+  background: url(../images/mainvs02.jpg) no-repeat center/cover;
+}
+
+/* 텍스트박스 설정 */
+.slider02 .stext-box {
+  position: relative;
+  margin: 0 auto;
+  width: 20vw;
+  
+}
+/*텍스트 박스 내 타이틀 설정 */
+.slider02 h2 {
+  /* font-size: 15rem; */
+  color: #fff;
+  margin: 0 auto;
+}
+
+.slider03 {
+  display: block;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+
+.sdbx03{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../images/mainvs03.jpg) no-repeat;
+  background-clip: border-box;
+  background-position:center;
+  background-size: 20%;
+  box-sizing: border-box;
+  transition: 1s ease-in-out;
+}
+
+.sdbx03.on{
+  background-size: 100%;
+}
+
+.slider03 .mstext-box{
+  left: 0;
+  animation: slider-ani 10s linear infinite;
+}
+.slider03 .engtitfont{
+  top: -6vw;
+  /* right: 34vw; */
+  position: relative;
+  font-size: 40rem;
+ color: #fff;
+ height: 1vh;
+
+} 
+
+
+@keyframes slider-ani {
+  to {
+    left: -200%;
+  }}
+
+
+/************************************** 섹션01 **************************************/
+
+/* 기업 소개 */
+#compinfo-area {
+  position: relative;
+  padding: 10% 0;
+  margin: 0px auto;
+  height: 1433px;
+}
+
+.cominfo {
+  /*   display: flex;
+  justify-content: center; */
+  width: 100%;
+  /*   position: absolute; */
+  background: #fff;
+}
+
+/* 기업 소개 내 타이틀 */
+.csubtit {
+  margin: 0 auto;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+}
+
+/* 기업 소개 내 이미지 */
+
+.coninfo img {
+  margin-bottom: 87px;
+}
+
+/* 기업소개 텍스트+버튼 */
+
+/* 하단 텍스트 */
+.txt p {
+  display: block;
+  width: 30vw;
+  margin: 0 auto;
+}
+
+/* 기업소개 더보기 버튼 */
+
+.coninfo .mcolor-mbtn {
+  width: 400px;
+  max-width: 200px;
+
+  border: transparent;
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 10px 10px;
+  margin: 4rem auto;
+}
+
+.rslider-info-wrap {
+  /* width: 1920px; */
+  overflow: hidden;
+  margin-top: 10rem;
+}
+
+/* 하단 자동 롤링 이미지 */
+#compinfo-area .rslider-info {
+  position: relative;
+  left: 0;
+  display: flex;
+  width: 200%;
+  animation: slider-ani 10s linear infinite;
+}
+@keyframes slider-ani {
+  to {
+    left: -100%;
+  }
+}
+#compinfo-area .rslider-info div {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6vw;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+#compinfo-area .rslider-info img {
+  width: 14vw;
+  margin: 20px 0;
+}
+
+/********************************* 섹션02 *********************************/
+#brandinfo-area{
+}
+
+.brand-wrap{
+  position: relative;
+  /* position: absolute; */
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+
+
+/* 로고 관련 설정 */
+.brand-lgbx{
+  display: flex;
+}
+.brand-lgbx ul{
+  z-index: 1;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  padding: 4vw 0;
+  flex-basis: calc(100%/5);
+  /* background-color: red; */
+  margin: 0 auto;
+  gap: 5vw;
+  /* margin-top: 4vh; */
+  /* margin: 0 4vh; */
+}
+
+.brand-lgbx li img{
+  height: 2.3vh;
+}
+.brand-lgbx li{
+  /* padding: 4vh 4vh; */
+  opacity: 0.4;
+  transition: .2s;
+}
+.brand-lgbx li:hover{
+  opacity: 1;
+}
+
+
+
+/* 메인 슬라이드 이동을 위한 설정 */
+.brand-mibx{
+  position: relative;
+  height: 100vh;
+  /* height: 100%; */
+}
+.bslider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  }
+
+/* 메인 슬라이드 내용 */
+.brand-mibx img{
+  margin-top: 24vh;
+}
+.brand-mibx figcaption{
+  margin: 0 auto;
+  margin-top: 5vw;
+  padding-bottom: 5vw;
+  width: 40vw;
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 2;
+  color: #fff;
+}
+.brand-mibx ul li{
+  flex-shrink: 0;
+  width: 100vw;
+  /* height: 70vh; */
+}
+
+
+/* 브랜드 추가 */
+.brand-add .txt{
+  margin-top: 27vw;
+}
+.brand-add .bgimg img{
+  margin-top: -10px;
+}
+.brand-add{
+  position: relative;
+  padding: 4vw;
+}
+
+
+
+
+/**************************************** 섹션03 ****************************************/
+
+#prodinfo-area {
+  margin: 0 auto;
+  /* position: relative; */
+  /* height: 228vh; */
+  width: 85%; 
+}
+
+.btitbx{
+  height: 400px;
+}
+
+.btitbx{
+  position: sticky;
+  bottom: -1vw;
+  top: 0vw;
+  height: 12vw;
+  background: #fff;
+  z-index: 1;
+
+}
+
+
+/* 타이틀 박스 설정 */
+#prodinfo-area .title-box{
+  text-align-last: left;
+  top: 0;
+  margin-bottom: 40px;
+  /* padding-left: 10%; */
+}
+
+.prod-list ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pdbx span{
+  color: #000000;
+}
+.pdbx h4{
+  font-size: 1.3rem;
+  text-align-last: left;
+}
+
+.prod-list figcaption h3{
+  text-align-last: left;
+}
+.prod-list figcaption .pdbx{
+  overflow: hidden;
+  font-size: 1.3rem;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+.prod-list li {
+  padding: 2rem;
+  border-left: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
+}
+.prod-list li img{
+  width: 100%;
+}
+
+.prod-list li:nth-child(4) {
+
+  border-left: 1px solid transparent;
+}
+.prod-list li:nth-child(1) {
+  border-left: 1px solid transparent;
+  grid-area: 1/1/3/3;
+}
+
+
+
+
+/**************************************** 섹션04 ****************************************/
+
+/* 사내 뉴스 */
+#news-area {
+  position: relative;
+  /* top: 50%; */
+  /* height: 90vh; */
+  
+  margin: 0 auto;
+}
+
+.ntit-box .mcolor-mbtn {
+  margin: 0 auto;
+  /* margin-block: auto; */
+  /* margin-bottom: 23%; */
+}
+
+.ntit-box .tit-engtitfont {
+  margin-bottom: 3%;
+}
+
+.ntit-box {
+  margin-top: 10vh;
+  margin-bottom: 5%;
+}
+
+.nlist-wrap {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nlist {
+  display: flex;
+  /* margin: -24vh auto; */
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 0 auto; */
+  overflow: hidden;
+  
+}
+
+/* 리스트 내 버튼 스타일 */
+.abtn {
+  padding: 0 20px;
+  background: transparent;
+  border: transparent;
+  color: #c8c8c8;
+
+  transition: 0.05s;
+}
+
+.abtn:hover {
+  color: #062c5e;
+  cursor: pointer;
+}
+
+.nlist a {
+  color: #171719;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}
+
+.nlist > h4 {
+  color: #171719;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}
+
+/* 썸네일 박스 설정 */
+.tmbx {
+  position: relative;
+  width: 270px;
+}
+
+/* 썸네일 영역 이미지 채우기 */
+.tmbx img {
+  width: 100%;
+}
+/* 슬라이드 랩핑박스 */
+.wrap-slide {
+  position: relative;
+  left: 0;
+  display: flex;
+}
+/* 리스트 설정 */
+.nlist ul {
+  position: relative;
+  left: 0;
+  /* align-items: flex-start; */
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 40px;
+}
+
+.nlist span {
+  padding: 0 20px;
+}
+
+.thumbbx {
+  /* 넘치는 리스트 히든 */
+  overflow: hidden;
+  margin: 0 auto;
+}
+/* .nlist ul li {
+  margin: 20px;
+  margin-left: 0;
+} */
+
+.nlist article {
+  margin: 20px 0;
+}
+
+/************************************ 회사 스토리 ************************************/
+#story-area {
+  overflow: hidden;    
+  margin-bottom: 18vh;
+}
+
+/* 메인박스 */
+.story-area {
+  /*  position: relative; */
+}
+
+/* 타이틀 */
+.storysd-titbox {
+  text-align-last: left;
+  margin-left: 10%;
+}
+
+.storysd-wrap {
+  
+  /* 리스트 확인용 */
+  /* left: -90%; */
+  /* 가로로 흘러가게! */
+  display: flex;
+  /* 부모: .story-area */
+  gap: 0 10%;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+}
+
+/* 서브 슬라이드 공통값 */
+.sub-slid {
+  /* 부모: .story-area */
+  display: flex;
+
+  margin-left: 9%;
+  gap: 19px;
+
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 280%;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: center;
+}
+
+.sub-slid ul {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0 40px;
+}
+
+/****************************** 슬라이드박스 공통설정 ******************************/
+.mimgbx {
+  width: 100%;
+  height: 100%;
+}
+.mimgbx img {
+  height: 100%;
+}
+.main-slid {
+  position: relative;
+  height: 100%;
+}
+/*********************** 슬라이드 공통 설정 ***********************/
+
+/* 텍스트 박스 설정 */
+
+/* 메인 이미지 호버시 정보 보임 */
+.main-slid .desc-box {
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+  background: #00000060;
+  /* 뷰모: mimgbx */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: 0.2s ease-in-out;
+}
+.main-slid:hover .desc-box {
+  opacity: 1;
+}
+
+.main-slid .desc {
+  text-align-last: left;
+  opacity: 0;
+  width: 40%;
+  padding: 2%;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  line-height: 2rem;
+  transition: 0.2s ease-in-out;
+}
+.main-slid:hover .desc {
+  opacity: 1;
+}
+
+.main-slid .desc h4 {
+  opacity: 0;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.main-slid:hover .desc h4 {
+  opacity: 1;
+}
+
+/* 이미지박스 주석 */
+.main-slid article {
+  position: absolute;
+  /* 부모: main-slid */
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  background: #00000080;
+  width: fit-content;
+  padding: 4px 10px;
+}
+
+.storysd-box01 {
+  /* width: 100%; */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  margin: 0 11%;
+}
+
+.storysd-box02 {
+  /* width: 100%; */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  margin: 0 11%;
+}
+.storysd-box03 {
+  /* width: 100%; */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  margin: 0 11%;
+}
+.storysd-box04 {
+  /* width: 100%; */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  margin: 0 11%;
+}

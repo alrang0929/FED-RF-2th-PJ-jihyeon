@@ -1,0 +1,681 @@
+[GNB]
+<로고>
+- 언어변경
+    KR / EN / CN
+- SNS 이동
+    페이스북 / 인스타 / 링크드인 / 유튜브 / 아모레 스토어
+- 서치
+
+<메뉴>
+- about us
+- brands
+- our culture
+- commitments
+- investors
+- news
+
+______________________________________________________________
+
+[메인 슬라이드]
+
+공통:
+- 상단 서브 타이틀: WE MAKE A MORE BEAUTIFUL WORLD
+
+- 하단 button: 자세히 보기 >
+- 좌우 이동 화살표
+
+#01
+New Beauty
+
+아모레퍼시픽은 고객 한 사람 한 사람이 뉴 뷰티로 영감받아 자신만의 아름다움을 발션하고, 건강하고 만족스러운 삶을 실현할 수 있도록 합니다.
+
+#02
+Sustainability
+아모레퍼시픽은 자연과 사람, 사회가 조화롭게 공존하는
+아름다운 세상을 만들어갑니다.
+모든 구성원이 함께 더 나은 미래를 꿈꿉니다.
+
+#03
+
+Innovation
+아모레퍼시픽은 끊임없는 도전과 변함없는 열정으로
+기술 혁신을 지속해나갑니다.
+첨단 기술력을 바탕으로 초개인화 뷰티 솔루션을 제공합니다.
+
+(하단 로딩바+슬라이드 네비게이션)
+
+______________________________________________________________
+
+[뉴스]
+
+Latest Amorepacific News
+[button: 자세히 보기]
+
+#01
+아모레퍼시픽그룹, 한국순환자원유통지원센터와 업무협약 체결
+
+지속가능경영 2024-02-15
+
+국내 뷰티업계 최초 자사 및 타사 화장품 유리병 직접 회수 및 재활용 활성화나서
+수거한 고품질 유리 원료를 화장품 용기 원료로 다시 사용해 투명한 순환체계 마련
+
+#02
+톤워크, ‘비건 200+ 파운데이션’ 출시
+브랜드 2024-02-15
+
+딥 쉐이드 컬러 확장해 205가지 색상, 총 820가지 제품 옵션 제공
+신제품 출시 기념, 2주간 더현대 서울에서 팝업 스토어 운영
+
+#03
+
+미쟝센, 프로페셔널 라인 리뉴얼 출시
+
+브랜드 2024-02-08
+손상,볼륨,두피 고민별 전문 맞춤 솔루션
+무실리콘 처방 변경한 샴푸 선보여
+
+______________________________________________________________
+
+[상세 페이지]
+
+<title>
+About Us
+
+아모레퍼시픽은 변하는 시대에 맞춰 가치관을 새롭게 정립해왔습니다.
+그리고 이를 성장을 위한 나침반으로 삼았습니다. 아모레퍼시픽은 이 세상 모든 이들이 아름답다고 믿습니다.
+모두가 자신만의 아름다움을 발견하고 실현하는 삶이 모여 더 나은 세상을 만들 수 있다고 여깁니다.
+
+<section 01>
+Amorepacific
+
+아모레퍼시픽만이 창조하는 아름다움으로 새로운 역사를 써 내려갑니다. 사람과 세상을 더 아름답게 하는 소명을 이루고자 미의 여정을 이어갑니다.
+
+button: 자세히 보기>
+
+
+<section 02>
+Research & Innovation
+
+최초, 최고의 제품을 전 세계에 전하기 위한 혁신적인 연구개발과 좋은 원료, 첨단기술을 토대로 세계가 주목하는 아름다움을 만들어 냅니다.
+
+button: 자세히 보기>
+
+<section 03>
+Visual Identity
+
+기업 및 브랜드의 철학과 가치를 담아 소통하고 있습니다. 특히, 아리따 글꼴은 아름다운 문화를 사회와 공유하는 문화나눔의 일환으로써 누구에게나 무료로 배포되는 아리따운 서체입니다.
+
+button: 자세히 보기>
+
+______________________________________________________________
+
+story of Amorepacific
+
+건축
+
+아모레퍼시픽은 공간을 통해 기업의 비전과 함께 사회를 향한 약속까지 담아냅니다. 아모레퍼시픽의 건축은 세상에 아름다움을 전하기 위해 노력하는 마음을 담은 공간이며, 이러한 가치가 직원들은 물론 함께하는 시민들에게도 전달되길 바랐습니다. 건축물은 아모레퍼시픽이 만들지만, 그 공간들은 모두의 것이며 함께하는 모든 사람들이 그 가치를 공유하게 될 것입니다.
+
+>
+ 아모레퍼시픽의 건축은 세상에 아름다움을 전하기 위해 노력하는 마음을 담은 공간이며, 이러한 가치가 직원들은 물론 모든 사람들에게 그 가치를 공유하게 될 것입니다.
+
+
+지속가능경영
+
+아모레퍼시픽은 세상과의 깊은 공감을 바탕으로 더 나은 내일을 위해 2030 지속가능경영 약속 'A MORE Beautiful Promise'를 새롭게 고객과 약속했습니다. 명확한 목적의식에 기반한 브랜드 활동으로 고객의 지속가능한 삶을 증진하고 다양한 이해관계자와 포용적으로 성장하는 사회를 만들며, 기후 위기 대응에 능동적으로 참여하고 자원 순환성 제고를 위해 노력하겠습니다.
+
+>
+고객과의 새로운 지속가능경영 약속 'A MORE Beautiful Promise'를 위해,
+다양한 이해관계자와 포용적으로 성장하는 사회를 만들며, 기후 위기 대응에 능동적으로 참여하고 자원 순환성 제고를 위해 노력하겠습니다.
+
+
+
+고객안심품질
+
+아모레퍼시픽은 제품의 기능적 품질을 넘어서 고객의 관점에서 고객을 만족시킬 수 있는 품질을 가장 중요하게 생각합니다. 고객에게 안심감을 제공하는 것은 물론이고 환경 및 사회적으로 가치있는 소비를 가능하게 하는 최고의 제품을 만들기 위해 다각도의 노력을 기울이고 있습니다.
+>
+
+제품의 기능적 품질을 넘어서 고객의 관점에서 고객을 만족시킬 수 있는 품질을 위해 고객에게 안심감을 제공하는 것은 물론이고 환경 및 사회적으로 가치있는 소비를 가능하게 하겠습니다.
+
+										
+혁신기술
+
+
+아모레퍼시픽은 첨단 과학을 바탕으로 한 최고의 신뢰를 고객에게 제공합니다.  비롯한 창조와 도전은 70년이 넘도록 이어지고 있습니다. 아모레퍼시픽은 앞으로도 전 세계 고객에게 최초·최고의 제품을 전하기 위한 기술 혁신을 지속해나갈 것입니다.
+>
+
+‘과학과 기술에서 우위를 확보해야 세계 선두기업으로 도약할 수 있다’라는 70년을 이어온 창업자의 신념에서 앞으로도 전 세계 고객에게 최초·최고의 제품을 전하기 위한 기술 혁신을 지속해나갈 것입니다.  										
+
+
+										
+
+
+
+
+______________________________________________________________
+
+<footer>
+
+윤리경
+인재채용
+고객서비스
+글로벌 네트워크
+메거진
+사이트맵
+관련사이트
+법적 고지
+개인정보 처리방침
+영상정보처리기기 운영방침
+
+
+
+
+
+[비쥬얼 아이덴티티]
+
+CI
+CI 소개
+아모레퍼시픽의 핵심 가치와 역사를 시각적으로 표현하고 있는 디자인 자산입니다.
+
+아모레퍼시픽 워드마크
+WORD MARK
+부드럽고 세련된 이미지의 ‘Amore’와 강하고 이지적인 이미지의 ‘Pacific’이 만나 이루어진 워드마크입니다. 외적인 아름다움과 내면의 아름다움, 전통과 미래, 감성과 이성, 자연과 과학 등 두 가지의 상반된 의미가 만나 아름다움을 만드는 컨셉, ‘Harmony of contrast’ 를 표현하고 있습니다. Amorepacific 이미지에 사용된 두 가지 블루, 달 그림자와 같은 부드럽고 온화한 느낌의 ‘아모레 블루’와 깊은 바다와 사막의 밤을 연상시키는 이성적이고 강렬한 느낌의 ‘퍼시픽 블루’가 부드럽게 조화를 이루고 있습니다.
+
+다운로드 
+아모레퍼시픽 심볼
+AMORE HEART
+‘Asian Beauty Creator’의 의미를 나타내는 아모레 하트는 역사와 전통을 담고 있으며, 하트 모양에 엄지 손가락을 세우고 있는 모습으로 보여 ‘아름다움과 사랑의 으뜸’을 뜻하기도 합니다.
+
+아모레퍼시픽 심볼
+CAMELLIA GRAPHIC
+아모레퍼시픽의 역사를 상징하는 ‘동백’ 그래픽은 꽃의 중심에서부터 물결을 그리며 흘러나오는 하트 모양의 섬세한 곡선이 동백 꽃잎을 형상화하고 있습니다. 아름다운 미의 파동을 통해 세상을 변화시키는 아모레퍼시픽의 열정을 표현했습니다.
+
+아모레퍼시픽 심볼
+EMBLEM
+동백의 역사와 녹차에 대한 개척정신, 어머니의 사랑과 미래를 향한 창조성, 내외면의 조화로움을 중시하는 이미지를 큰 태평양의 모습에 응집시켜 다양한 결실로 더욱 풍요로워지는 아모레퍼시픽의 세상을 표현했습니다.
+
+
+
+  <ul class="product-main">
+                {/* <!-- 제품 --> */}
+                <li>
+                  <a href="#"></a>
+                  <div class="img-wrap">
+                    <img src="./images/pd_img0${i}.png" alt="설화수 진설크림" />
+                  </div>
+                  <article class="mpricebx">
+                    <div class="desc">
+                      <span class="bi-text">설화수</span>
+                      <h4 class="pd-tit">진설크림 THE ULTIMATE S CREAM</h4>
+                    </div>
+                    <div class="price">
+                      <span class="costnum">520,000</span>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+
+
+
+
+              워터뱅크 블루 히알루로닉 에멀
+젼 중‧건성용
+라네즈
+29,400 원
+
+
+워터뱅크 블루 히알루로닉 인텐
+시브 크림 50ML
+라네즈
+33,600 원
+
+크리미틴트 컬러밤 쉬폰 2.5G
+마몽드
+9,800 원
+
+
+달빛유자 수면팩 70ML
+한율
+30,600 원
+
+
+레티놀 엑스퍼트 0.3% 링클 코렉터 20ML
+아이오페
+112,500 원
+
+
+
+
+
+
+
+
+          <!-- 슬라이드 01 -->
+          <div class="slide" id="sd1">
+            <!-- 텍스트 박스 -->
+            <article class="descbx">
+              <!-- 타이틀 -->
+              <h4 class="tit engtitfont">New Beauty</h4>
+              <!-- 텍스트 -->
+              <div class="desc txt">
+                아모레퍼시픽은 고객 한 사람 한 사람이 뉴 뷰티로 영감받아 자신만의 아름다움을 발션하고, 건강하고 만족스러운 삶을 실현할 수 있도록 합니다.
+              </div>
+            </article>
+          </div>
+          
+          <!-- 슬라이드 02 -->
+          <div class="slide" id="sd2">
+            <!-- 텍스트 박스 -->
+            <article class="descbx">
+              <!-- 타이틀 -->
+              <h4 class="tit engtitfont">Sustainability</h4>
+              <!-- 텍스트 -->
+              <div class="desc txt">아모레퍼시픽은 자연과 사람, 사회가 조화롭게 공존하는
+                아름다운 세상을 만들어갑니다.
+                모든 구성원이 함께 더 나은 미래를 꿈꿉니다.</div>
+            </article>
+            <img src="./images/sub01/sd01.jpg" alt="">
+          </div>
+          <!-- 슬라이드 03 -->
+          <div class="slide" id="sd3">
+            <!-- 텍스트 박스 -->
+            <article class="descbx">
+              <!-- 타이틀 -->
+              <h4 class="tit engtitfont">Innovation</h4>
+              <!-- 텍스트 -->
+              <div class="desc txt">아모레퍼시픽은 끊임없는 도전과 변함없는 열정으로
+                기술 혁신을 지속해나갑니다.
+                첨단 기술력을 바탕으로 초개인화 뷰티 솔루션을 제공합니다.</div>
+            </article>
+          </div>
+
+
+
+
+          //로고 슬라이드
+
+          //로고영역
+
+          <ul class="sbili">
+                  <li>
+                    <a href="#"
+                      ><img src="./images/bi_iope.png" alt="아이오페BI"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./images/bi_hanyul.png" alt="한율BI"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./images/bi_laneige.png" alt="라네즈BI"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./images/bi_mamonde.png" alt="마몽드BI"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="./images/bi_sulwhasoo.png" alt="설화수BI"
+                    /></a>
+                  </li>
+                </ul>
+
+                 <ul>
+                    <li class="bislider01">
+                      <article>
+                        <!-- 로고 이미지 박스 -->
+                        <div class="logobx">
+                          <img
+                            src="./images/imbx_01.jpg"
+                            alt="아이오페 비쥬얼 이미지"
+                          />
+                        </div>
+                        <!-- 브랜드 설명 텍스트 -->
+                        <p class="txt">
+                          아이오페는 피부부터 소재, 기술까지 모든 과정에 걸쳐
+                          심도 있는 연구를 합니다. 깊이 있는 피부 연구를 통해
+                          고객의 피부를 정확하게 진단하고, 차별화된 기술력을
+                          통해 고효능의 성분을 안전하고 효과적으로 피부에
+                          전달합니다.
+                        </p>
+                        
+                      </article>
+                    </li>
+
+                    <li class="bislider02">
+                      <article>
+                        <!-- 로고 이미지 박스 -->
+                        <div class="logobx">
+                          <img
+                            src="./images/imbx_02.jpg"
+                            alt="한율 비쥬얼 이미지"
+                          />
+                        </div>
+                        <!-- 브랜드 설명 텍스트 -->
+                        <p class="txt">
+                          아이오페는 피부부터 소재, 기술까지 모든 과정에 걸쳐
+                          심도 있는 연구를 합니다. 깊이 있는 피부 연구를 통해
+                          고객의 피부를 정확하게 진단하고, 차별화된 기술력을
+                          통해 고효능의 성분을 안전하고 효과적으로 피부에
+                          전달합니다.
+                        </p>
+                        
+                      </article>
+                    </li>
+
+                    <li class="bislider03">
+                      <article>
+                        <!-- 로고 이미지 박스 -->
+                        <div class="logobx">
+                          <img
+                            src="./images/imbx_03.jpg"
+                            alt="라네즈 비쥬얼 이미지"
+                          />
+                        </div>
+                        <!-- 브랜드 설명 텍스트 -->
+                        <p class="txt">
+                          아이오페는 피부부터 소재, 기술까지 모든 과정에 걸쳐
+                          심도 있는 연구를 합니다. 깊이 있는 피부 연구를 통해
+                          고객의 피부를 정확하게 진단하고, 차별화된 기술력을
+                          통해 고효능의 성분을 안전하고 효과적으로 피부에
+                          전달합니다.
+                        </p>
+                        
+                      </article>
+                    </li>
+
+                    <li class="bislider04">
+                      <article>
+                        <!-- 로고 이미지 박스 -->
+                        <div class="logobx">
+                          <img
+                            src="./images/imbx_04.jpg"
+                            alt="마몽드 비쥬얼 이미지"
+                          />
+                        </div>
+                        <!-- 브랜드 설명 텍스트 -->
+                        <p class="txt">
+                          아이오페는 피부부터 소재, 기술까지 모든 과정에 걸쳐
+                          심도 있는 연구를 합니다. 깊이 있는 피부 연구를 통해
+                          고객의 피부를 정확하게 진단하고, 차별화된 기술력을
+                          통해 고효능의 성분을 안전하고 효과적으로 피부에
+                          전달합니다.
+                        </p>
+                        <button class="mcolor-mbtn">
+                          <a href="#">more view </a>
+                          <span class="material-symbols-outlined">
+                            chevron_right
+                          </span>
+                        </button>
+                      </article>
+                    </li>
+                    <li class="bislider05">
+                      <article>
+                        <!-- 로고 이미지 박스 -->
+                        <div class="logobx">
+                          <img
+                            src="./images/imbx_05.jpg"
+                            alt="설화수 비쥬얼 이미지"
+                          />
+                        </div>
+                        <!-- 브랜드 설명 텍스트 -->
+                        <p class="txt">
+                          아이오페는 피부부터 소재, 기술까지 모든 과정에 걸쳐
+                          심도 있는 연구를 합니다. 깊이 있는 피부 연구를 통해
+                          고객의 피부를 정확하게 진단하고, 차별화된 기술력을
+                          통해 고효능의 성분을 안전하고 효과적으로 피부에
+                          전달합니다.
+                        </p>
+                        <button class="mcolor-mbtn">
+                          <a href="#">more view </a>
+                          <span class="material-symbols-outlined">
+                            chevron_right
+                          </span>
+                        </button>
+                      </article>
+                    </li>
+                  </ul>
+
+
+Amorepacific
+Research & Innovatio
+Visual Identity
+BRANDS
+    화장품
+    향수
+    메디컬뷰티
+    뷰티 디바이스
+    이너뷰티
+    헤어케어
+    바디케어
+    덴탈케어티
+    티컬처
+
+OUR CULTURE
+    Our Story
+    Our History
+    Our Values
+Visual Identity
+    CI
+    아리따 글꼴
+
+
+
+
+            <!-- 가로 리스트 4개 보이게-->
+            <div class="nlist">
+              <!-- 앞이동 화살표 -->
+              <div class="abtn ab1">
+                <button id="prevBtn" class="material-symbols-outlined">
+                  arrow_back_ios
+                </button>
+              </div>
+              <div class="thumbbx">
+                <div class="wrap-slide">
+                  <ul>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img src="./images/NEWS/${v.img}.png" alt="${v.title}">
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽그룹 이상목 대표, 바이바이 플라스틱
+                              챌린지 동참
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021901.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>라네즈, '바운시 앤 펌 슬리핑 마스크' 출시</h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              마몽드, '플로라 글로우 로즈 리퀴드 마스크' 출시
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022201.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              헤라, 아티스트 15인과 '언디파인드(UNDEFINED)' 전시
+                              진행
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022001.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021901.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021901.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_021501.png"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="tmbx">
+                        <a href="#">
+                          <img
+                            src="./images/news_022101.png"
+                            id="lastClone"
+                            alt="뉴스 썸네일"
+                          />
+                          <article class="txt">
+                            <h4>
+                              아모레퍼시픽, 사내 자율 봉사단 ‘앞나눔즈’ 출범해
+                              1기 운영 성료
+                            </h4>
+                          </article>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 뒤 이동 화살표 -->
+
+              <button id="nextBtn" class="material-symbols-outlined abtn ab2">
+                arrow_forward_ios
+              </button>
+            </div>
+          

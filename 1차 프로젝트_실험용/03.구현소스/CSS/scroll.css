@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.scroll-act {
+    position: absolute;
+    /* margin: 0 auto; */
+    transform: translateX(-50%);
+    /* top: 80vh; */
+    left: 50%;
+    width: 20vw;
+    height: 20vw;
+    border: transparent;
+    background-color: lightblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .sa1 { 
+    opacity: 0;
+    height: 0.01px;
+    background-image: url(../images/brand_thm_add.jpg);
+    transition: .4s ease-in-out;
+  }
+  
+
+  /* 스크롤 등장 클래스 .on */
+.sa1.on{
+    height: 20vw;
+    /* transform: translateY(0); */
+    opacity: 1;
+  }

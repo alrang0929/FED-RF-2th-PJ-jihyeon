@@ -1,0 +1,193 @@
+@charset "utf-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url("https://use.typekit.net/jyj1can.css");
+
+
+
+/*font
+
+1. 본문, 한글, 숫자: 프리텐다드
+
+font-family: "Pretendard Variable",Pretendard, apple-system, system-ui, Roboto, sans-serif;
+
+2. 영문 타이틀: miller-display
+
+font-family: "miller-display", serif;
+font-weight: 400;
+font-style: normal;
+Miller Display Italic
+font-family: "miller-display", serif;
+font-weight: 400;
+font-style: italic;
+Miller Display Bold
+font-family: "miller-display", serif;
+font-weight: 700;
+font-style: normal;
+unicode-range: U+0041-005A
+
+
+*/
+
+
+html {
+    font-family:'Pretendard Variable',sans-serif;
+    /* 폰트 */
+    font-size: 10px;
+    /* rem 단위 계산 편의를 위하여 */
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+/* 임시 표시 타이틀 */
+.temp-tit{
+    position: absolute;
+    font-size: 2vw;
+    color: #ededed;
+}
+
+/* 중앙속박스 */
+.inbox{
+
+    /* 블록박스 중앙정렬 -> 마.영.오 */
+    margin: 0 auto;
+}
+
+
+/* a요소 초기화 */
+a{
+    text-decoration: none;
+    padding: 0;
+    color: #171719;
+}
+
+
+/* 영문타이틀 전용폰트 */
+
+.engtitfont h2{
+    font-family: "miller-display", serif;
+    font-weight: Normal;
+    font-size: 6rem;
+    text-align: center;
+    color: #062C5E;
+    padding: 40px 0;
+
+}
+.engtitfont{
+    font-family: "miller-display", serif;
+    font-weight: Normal;
+    font-size: 6rem;
+    text-align: center;
+    color: #062C5E;
+    padding: 40px 0;
+
+}
+
+/* 기본 텍스트 사이즈 */
+.txt{
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: -0.04rem;
+    color: #171719;
+}
+
+
+
+
+.mcolor-mbtn:hover a, span{
+color: #fff;
+transition: .2s .2s ease-in-out;
+}
+
+.mcolor-mbtn a{
+    display: block;
+    height: 24px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #062C5E;
+}
+
+/* 버튼 호버시 */
+.mcolor-mbtn {
+    position: relative;
+    display: flex;
+    /* position: absolute; */
+    border: transparent;
+    background-color: transparent;
+    color: #062C5E;
+
+    width: 20rem;
+    height: 4rem;
+    justify-content: space-between;
+    
+    flex-direction: row;
+    font-size: 1.2rem;
+    padding: 10px 10px;
+
+
+    transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1); }
+    /* ease-in-out-quartic; */
+
+    .mcolor-mbtn::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: #062C5E;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .mcolor-mbtn:hover {
+      color: #062C5E;
+      background: transparent;
+
+    }
+    .mcolor-mbtn:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+  
+
+/* p{
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+    color: #171719;
+}
+ */
+
+/* 스크롤 디자인 클래스 */
+/* -webkit- 밴더사명(크롬,사파리)접두어 */
+/* 클래스명: scbar */
+.scbar::-webkit-scrollbar{
+    /* 전체 스크롤바 크기 변경 */
+    width: 7px;
+}
+
+.scbar::-webkit-scrollbar-thumb{
+    /* 스크롤바 */
+    background-color: #797979;
+    border-radius: 5px;
+}
+
+.scbar::-webkit-scrollbar-track{
+    background-color: #ebebeb;
+    border-radius: 5px;
+}
+
+/* 블렉스박스 설정 */
+.fx-box{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.main-area *> div+div{
+    padding-top: 6rem;
+}

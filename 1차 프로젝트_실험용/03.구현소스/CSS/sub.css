@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+/* 리셋, 코어, 커먼, 공통 외부 css 합치기 */
+@import url(./common.css);
+@import url(./core.css);
+@import url(./reset.css);
+
+/* 그리드 시스템 */
+@import url(./grid_12_flex.css);
+html {
+  scroll-behavior: smooth;
+}
+/* 공사중 표시 */
+body * {
+  /* outline: 2px dashed red; */
+}
+
+/* 라인 공통설정 */
+
+
+/********************* 01 상단 영역 *********************/
+#tit-area{
+    padding-top: 11rem;
+    padding-bottom:4rem;
+    background: url(../images/sub01/BG_tit.jpg) no-repeat center/cover;
+}
+
+
+#tit-area .linebx {
+    /* padding: 0; */
+    overflow: hidden;
+    height: 80px;
+    padding-top: 3vw;
+    margin-bottom: -3vw;
+}
+#tit-area .line {
+    display: block;
+    height: 80px;
+    margin-top: 0;
+    border-left: 1px solid #fff;
+    margin-left: 50%;
+    transition: .2s;
+    opacity: 0;
+    
+
+    animation: line-ani 1s ease-in-out infinite ;
+}  
+
+@keyframes line-ani{
+
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 50px;
+    }
+}
+
+
+#tit-area .titbx{
+    padding-top: 3rem;
+}
+#tit-area .tit{
+    color: #fff;
+}
+#tit-area .desc {
+    padding-top: 3rem;
+    margin: 0 auto;
+    width: 40%;
+    color: #fff;
+}
+
+/********************* 02 컨텐츠 영역 *********************/
+#cont-area{
+
+}
+
+
+/************* 001 인트로영역 *************/
+.intro-area{
+    /* height: 70vh; */
+    /* 부모자격 */
+    position: relative;
+    /* overflow: hidden; */
+    text-align-last: left;
+}
+
+
+.intro-area h3{
+    font-size: 4rem;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.intro-area .line {
+    display: block;
+    height: 100px;
+    border-left: 1px solid #171719;
+    margin-left: 0;
+    margin: 10% 0;
+    } 
+
+.intro-area .cbx{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.intro-area .cbx{
+    margin-top: 8%;
+}
+.intro-area .cbx img{
+    width: 100%;
+}
+
+
+/************* 002 그래픽 인포 영역 *************/
+.graphic-info-area{
+    /* width: 100%; */
+    /* background-color: #F5FAFF; */
+    padding-bottom: 10rem;
+    margin: 0 auto;
+    /* padding-left: 10rem; */
+}
+/* height: 70vh; */
+.graphic-info-area .line {
+    display: block;
+    height: 100px;
+    border-left: 1px solid #171719;
+    margin-left: 0;
+    margin: 10% 0;
+} 
+
+.graphic-info-area .descbx{
+    /* margin: 0 auto; */
+    width: 50%;
+    text-align-last: left;
+    margin-right: 4rem;
+}
+.graphic-info-area .imgbx img{
+    /* width: 100%; */
+}
+.graphic-info-area .imgbx{
+    /* margin: 0 auto; */
+    /* width: 20%; */
+    /* width: 50%; */
+    gap: 20px;
+    padding-left: 20px;
+    /* flex-basis: calc(100% / 2); */
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+/************* 003 ci 영역 *************/
+
+.ci-area{
+    padding-top: auto;
+}
+.ci-area .imgbx{
+    margin-top: auto;}
+
+.ci-area .descbx{
+    width: 50%;
+    text-align-last: left;
+}
+
+.ci-area .imgbx img{
+    width: 100%;
+    border: 2px solid #cecece40;
+}
+.ci-area .imgbx{
+    /* width: 20%; */
+    /* width: 100%; */
+    gap: 20px;
+    padding-left: 20px;
+    flex-basis: calc(100% / 3);
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.ci-area .line {
+    display: block;
+    height: 100px;
+    border-left: 1px solid #171719;
+    margin-left: 0;
+    margin: 10% 0;
+    } 
+
+
+/************* 004 슬라이드 영역 *************/
+
+.slide-area{
+    padding: 10vw;
+    /* height: 210vh; */
+    margin-top: 2vw;
+    background: url(../images/sub01/BG_pg04.jpg) no-repeat center/cover;
+    
+}
+
+.cont-wrap{
+    width: 60%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 5vw ;
+    
+}
+
+
+.slide-area  .tit-box {
+    position: sticky;
+    top: 100px;
+}
+.slide-area  .line {
+    display: block;
+    top: 0;
+    height: 100px;
+    border-left: 1px solid #171719;
+    margin-left: 50%;
+}  
+
+.slide-area .tit-box h3{
+line-height: 1;
+}
+    
+.slide-area .tit-box .desc{
+    margin: 1.5vw auto;
+    width: 50%;
+    /* color: #fff; */
+}
+
+.slide-wrap .slide{
+    position: relative;
+    margin: 0 auto;
+    padding: 10vw;
+}
+.brbx{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 70%;
+}
+
+.slide .descbx{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: backdrop-filter .2s;
+}
+
+.slide:hover .descbx{
+    backdrop-filter: blur(20px);
+    /* backdrop-filter: drop-shadow(4px 4px 10px blue); */
+    border-radius: 2rem;
+    
+}
+.slide .descbx .txt{
+    width: 50%;
+    color: #fff;
+    margin: 0 auto;
+}
+.slide .descbx h4{
+    color: #fff;
+    font-size: 3rem;
+}
+
+/* 슬라이드 스티키 */
+.slide{
+    height: 30vw;
+}
+.slide-wrap{
+    height: 218vw;
+}
+
+.slide:nth-child(1){
+    position: sticky;
+    top: 6vw;
+    text-align: center;
+    margin-top: 300px;
+}
+.slide:nth-child(2){
+    position: sticky;
+    top: 6vw;
+    text-align: center;
+    margin-top: 300px;
+}
+.slide:nth-child(3){
+    position: sticky;
+    top: 6vw;
+    text-align: center;
+    margin-top: 300px;
+}
+
+
+
+
