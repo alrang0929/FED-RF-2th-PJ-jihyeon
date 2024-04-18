@@ -87,6 +87,7 @@ function dragSlider() {
 function brandSilder() {
     let logoBtn = document.querySelectorAll(".sbili li");
     let inner = document.querySelector(".bslider");
+    
     console.log("누구", inner);
     logoBtn.forEach((ele, idx) => {
         ele.onclick = (e) => {

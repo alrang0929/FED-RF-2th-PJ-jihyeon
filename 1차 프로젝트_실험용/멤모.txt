@@ -1,6 +1,15 @@
 함수 고도화 해야댐..................
 대상자에게 공통 클래스 먹여줘야댐...
 
+
+- 각 에리어 id로 정리해야될듯..
+   ex) #brand-area .sect01 .dgslider
+
 [dragSlider]
 brand-wrap => dgwrap
-bslider => dginner
+bslider => inner
+
+[brandSlider => slickSlider]
+logoBtn => btn // 선택된 sbili li => btnItem
+inner = inner  // bslider => sdItem
+
