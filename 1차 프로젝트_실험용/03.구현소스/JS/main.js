@@ -82,7 +82,7 @@ myFn.addEvt(window,'scroll',scrollFn.zimgScroll2);
   `})(); //브랜드 로고 리스트끝/////////////
 
   // 드래그 슬라이드 함수 호출
-slideFn.dragSlider();
+slideFn.setdragSlider();
 //로고 클릭시 페이지 이동 슬라이드 호출
 slideFn.brandSilder();
 

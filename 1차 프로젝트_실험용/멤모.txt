@@ -10,6 +10,11 @@ brand-wrap => dgwrap
 bslider => inner
 
 [brandSlider => slickSlider]
-logoBtn => btn // 선택된 sbili li => btnItem
+logoBtn => btn // 선택된 sbili li => btn
 inner = inner  // bslider => sdItem
+
+[CarouselSlider]
+abtn => btn
+Lbtn, Rbtn => ab1. ab2
+slide => inner
 

@@ -18,6 +18,11 @@ function indicater() {
     }); /// forEach ////
 } /////////indicater
 
+
+//드래그 슬라이드 셋팅
+function setdragSlider(clsName){
+console.log(clsName)
+}
 //드래그 슬라이드
 function dragSlider() {
     {
@@ -155,4 +160,4 @@ function CarouselSlider(){
     }///////캐러셀슬라이더//////////////////////
 
 ////////호출영역///////////////////////////////
-export { indicater,dragSlider,brandSilder,CarouselSlider };
+export { indicater,setdragSlider,brandSilder,CarouselSlider };
