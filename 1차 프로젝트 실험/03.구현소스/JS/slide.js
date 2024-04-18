@@ -18,11 +18,6 @@ function indicater() {
     }); /// forEach ////
 } /////////indicater
 
-
-//드래그 슬라이드 셋팅
-function setdragSlider(clsName){
-console.log(clsName)
-}
 //드래그 슬라이드
 function dragSlider() {
     {
@@ -92,7 +87,6 @@ function dragSlider() {
 function brandSilder() {
     let logoBtn = document.querySelectorAll(".sbili li");
     let inner = document.querySelector(".bslider");
-    
     console.log("누구", inner);
     logoBtn.forEach((ele, idx) => {
         ele.onclick = (e) => {
@@ -160,4 +154,4 @@ function CarouselSlider(){
     }///////캐러셀슬라이더//////////////////////
 
 ////////호출영역///////////////////////////////
-export { indicater,setdragSlider,brandSilder,CarouselSlider };
+export { indicater,dragSlider,brandSilder,CarouselSlider };

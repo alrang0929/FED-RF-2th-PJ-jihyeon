@@ -1,15 +1,14 @@
 //DOM함수 호출
 import myFn from "./my_function.js";
-
-//데이터 배열 불러오기
+//슬라이드 함수 호출
+import * as slideFn from "./slide.js";
+// 부드러운 스크롤 불러오기
+import { startSS, setScrollPos } from "./smoothScroll23.js";
+//////////////////////////////////////////////////////////////////////////
+//데이터셋팅 불러오기
 import * as amrData from "../data/AMR_data.js";
 import * as cmFn from "./common.js";
 import * as scrollFn from "./scroll.js";
-
-//기능함수 호출
-import * as slideFn from "./main_slide.js";
-import { startSS, setScrollPos } from "./smoothScroll23.js";
-//////////////////////////////////////////////////////////////////////////
 
 ///////////아모레퍼시픽 메인 JS- main.js///////////////////////////////////////
 
@@ -82,7 +81,7 @@ myFn.addEvt(window,'scroll',scrollFn.zimgScroll2);
   `})(); //브랜드 로고 리스트끝/////////////
 
   // 드래그 슬라이드 함수 호출
-slideFn.setdragSlider();
+slideFn.dragSlider();
 //로고 클릭시 페이지 이동 슬라이드 호출
 slideFn.brandSilder();
 
