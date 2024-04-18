@@ -1,0 +1,6 @@
+함수 고도화 해야댐..................
+대상자에게 공통 클래스 먹여줘야댐...
+
+[dragSlider]
+brand-wrap => dgwrap
+bslider => dginner
