@@ -22,7 +22,7 @@ body * {
 #tit-area{
     padding-top: 11rem;
     padding-bottom:4rem;
-    background: url(../images/sub01/BG_tit.jpg) no-repeat center/cover;
+    /* background: url(../images/sub01/BG_tit.jpg) no-repeat center/cover; */
 }
 
 
