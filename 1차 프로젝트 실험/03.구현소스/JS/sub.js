@@ -53,23 +53,25 @@ cmFn.makeFooter();
     hcode+=``;
     sdBox.innerHTML = hcode;
     })();//////슬라이드 데이터////////////////
-
+    
     /////////서브페이지 타이틀 생성//////
     (()=>{
+      let title = document.title;
+      console.log('타이틀 텍스트',typeof(title));
       const titArea = myFn.qs("#title-area")
       console.log('타이틀배너');
       let hcode = 
       
       `
       <div class="" id="tit-area" 
-      style="background: url(./images/sub01/BG_tit${titData.subpgData.idx}.jpg) no-repeat center/cover;">
+      style="background: url(./images/sub01/BG_tit${titData.title[idx]}.jpg) no-repeat center/cover;">
       <!-- 타이틀 텍스트 박스 -->
       <div class="titbx">
       <h2 class="tit engtitfont">
-      ${titData.subpgData.title}
+      ${titData.title.title}
      </h2>
      <div class="desc txt">
-     ${titData.subpgData.text}
+     ${titData.title.text}
      </div>
      </div>
      <div class="linebx"><span class="line"></span></div>
