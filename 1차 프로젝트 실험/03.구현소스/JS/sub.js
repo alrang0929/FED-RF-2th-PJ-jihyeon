@@ -59,23 +59,23 @@ cmFn.makeFooter();
       const titArea = myFn.qs("#title-area")
       console.log('타이틀배너');
       titArea.innerHTML = 
-
-      titData.subpgData.map( i =>`
+      
+      `
       <div class="" id="tit-area" 
-      style="background: url(./images/sub01/BG_tit${i.idx}.jpg) no-repeat center/cover;">
+      style="background: url(./images/sub01/BG_tit${titData.subpgData[idx]}.jpg) no-repeat center/cover;">
       <!-- 타이틀 텍스트 박스 -->
       <div class="titbx">
       <h2 class="tit engtitfont">
-      ${i.title}
+      ${titData.subpgData.title}
      </h2>
      <div class="desc txt">
-     ${i.text}
+     ${titData.subpgData.text}
      </div>
      </div>
      <div class="linebx"><span class="line"></span></div>
      </div>
     
-     `).join('');
+     `;
      
     })()//타이틀 영역 생성 끝
 
