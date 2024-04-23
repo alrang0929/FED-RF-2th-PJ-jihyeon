@@ -58,11 +58,11 @@ cmFn.makeFooter();
     (()=>{
       const titArea = myFn.qs("#title-area")
       console.log('타이틀배너');
-      titArea.innerHTML = 
+      let hcode = 
       
       `
       <div class="" id="tit-area" 
-      style="background: url(./images/sub01/BG_tit${titData.subpgData[idx]}.jpg) no-repeat center/cover;">
+      style="background: url(./images/sub01/BG_tit${titData.subpgData.idx}.jpg) no-repeat center/cover;">
       <!-- 타이틀 텍스트 박스 -->
       <div class="titbx">
       <h2 class="tit engtitfont">
@@ -76,6 +76,8 @@ cmFn.makeFooter();
      </div>
     
      `;
+
+     titArea.innerHTML = hcode;
      
     })()//타이틀 영역 생성 끝
 
