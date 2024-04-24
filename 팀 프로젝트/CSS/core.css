@@ -13,3 +13,13 @@ html {
     font-size: 10px;
     text-align: center;
 }
+
+/* 플렉스 박스 설정 */
+.fx-box{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.main-area *> div+div{
+    padding-top: 6rem;
+}
