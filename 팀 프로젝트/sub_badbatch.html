@@ -10,42 +10,38 @@
     <!-- link 모음 -->
     <link rel="stylesheet" href="./CSS/sub_badbatch.css" />
   </head>
-  <body>
-    <!-- 상단영역 -->
-    <div class="" id="top-area"></div>
-    <!-- 상단 타이틀 -->
-    <div class="top-banner">
-      <div class="cont-box">
-        <h2>
-          <img src="./sub_badbatch/img/title_logo.png" alt="BAD BATCH logo" />
-        </h2>
-        <div class="desc">
-          The Bad Batch is back for one last fight. The final season is now
-          streaming. only on Disney&#43;
-        </div>
-        <div class="btn-box fx-box">
-          <button class="btn-main ab1">
-            <a href="#">stream on disney&#43;</a>
-          </button>
-          <button class="btn-sub ab2"><a href="#">S3 trailer ▶</a></button>
-        </div>
+<body>
+  <!-- 상단영역 -->
+  <div class="" id="top-area"></div>
+  <!-- 상단 타이틀 영역-->
+  <div class="top-banner">
+    <div class="col-4">
+      <h2>
+        <img src="./sub_badbatch/img/title_logo.png" alt="BAD BATCH logo" />
+      </h2>
+      <div class="desc">
+        The Bad Batch is back for one last fight. The final season is now
+        streaming. only on Disney&#43;
       </div>
-      <video
-        class="ifr"
-        src="./sub_badbatch_img/title_BG.mp4"
-        autoplay
-        muted
-        playsinline
-      ></video>
+      <div class="btn-box fx-box">
+        <button class="btn-main ab1 col-2">
+          <a href="#">stream on disney&#43;</a>
+        </button>
+        <button class="btn-sub ab2 col-2"><a href="#">S3 trailer ▶</a></button>
+      </div>
     </div>
+    <video id="ifr" src="./sub_badbatch/img/title_BG.mp4" autoplay muted playsinline ></video>
+  </div>
+  <div id="cont-area cont-box">
+    <!-- 서브 컨텐츠 영역 -->
     <div class="" id="info-area">
-      <div class="cont-box">
+      <div class="fx-box">
         <div class="imgbox col-6">
           <img src="./sub_badbatch/img/poster_1.jpeg" alt="포스터 이미지" />
         </div>
         <div class="desc-box col-6">
           <span class="bullet"></span>
-          <h2 class="subtit">
+          <h2 class="title-sub">
             Star Wars:<br />
             The Bad Batch
           </h2>
@@ -67,41 +63,88 @@
             <span class="link-txt">Era: Reign of the Empire</span>
         </a></button>
         </div>
-       
       </div>
     </div>
     <div id="episode-area">
         <div class="tit-box fx-box">
-            <h3 class="subtit">Episode Guides | New Each Thursday @ 9AM PT</h3>
+            <h3 class="title-sub">Episode Guides | New Each Thursday @ 9AM PT</h3>
             <a href="" class="linktxt">show more </a>
         </div>
+        <span class="under-line"></span>
         <div class="Kategorie">
-          <ul class="fx-bar">
+          <ul class="fx-box">
             <li class="on"><a href="#">season 3 (13)</a></li>
             <span class="bar-line"></span>
             <li><a href="#">season 3 (13)</a></li>
             <span class="bar-line"></span>
             <li><a href="#">season 3 (13)</a></li>
           </ul>
-          <span class="under-line"></span>
         </div>
-      <div class="slider">
+      <!-- 에피소드 슬라이드 -->
+      <div class="slider-wrap">
         <ul>
           <li>
             <figure><img src="./sub_badbatch/img/thumb_1.jpg" alt="Episode Guides | New Each 
               Thursday @ 9AM PT" /></figure>
             <figcaption>
-              <div class="title-sub"></div>
-              <div class="title-sub">
-                Episode Guides | New Each 
-Thursday @ 9AM P
-              </div>
+              <div class="title-topic">Season3, Episode1</div>
+              <h4 class="title-sub">
+                Episode Guides | New Each Thursday @ 9AM P
+              </h4>
             </figcaption>
           </li>
         </ul>
       </div>
     </div>
-    <!-- 하단영역 -->
-    <div class="" id="footer"></div>
-  </body>
+    <div class="" id="sns-area">
+      <!-- SNS 컨텐츠 영역 -->
+      <div class="tit-box fx-box">
+        <h3 class="title-sub">#TheBadBatch</h3>
+    </div>
+      <div class="slider-wrap">
+        <ul>
+          <li>
+            <figure><a href="#">
+              <img src="./sub_badbatch/img/thumb_1.jpg" alt="Episode Guides | New Each
+                Thursday @ 9AM PT" />
+            </a></figure>
+            <figcaption>
+              <div class="title-topic">Season3, Episode1</div>
+              <h4 class="title-sub">
+                Episode Guides | New Each Thursday @ 9AM P
+              </h4>
+            </figcaption>
+          </li>
+        </ul>
+    </div>
+  <div id="pos-area">
+    <div class="tit-box fx-box">
+      <h3 class="title-sub">Poster Gallery The Bad Batch Season3</h3>
+  </div>
+    <div class="pos-wrap">
+      <ul class="fx-box">
+        <li><img src="./sub_badbatch/img/poster_2.jpeg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bt-banner-area">
+    <div class="desc-wrap">
+      <div class="title-sub"></div>
+      <span class="under-line"></span>
+      <div class="Kategorie">
+        <ul class="fx-box">
+          <li class="on"><a href="#">season 3 (13)</a></li>
+          <span class="bar-line"></span>
+          <li><a href="#">season 3 (13)</a></li>
+          <span class="bar-line"></span>
+          <li><a href="#">season 3 (13)</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- 하단영역 -->
+<div class="" id="footer"></div>
+</body>
 </html>
