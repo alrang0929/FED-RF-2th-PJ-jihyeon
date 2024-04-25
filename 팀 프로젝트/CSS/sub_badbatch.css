@@ -9,6 +9,12 @@
 body{
   background-color: #000;
   color: #fff;
+
+  /* 베이스 폰트 */
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 200;
+
 }
 
 /* iframe 설정 */
@@ -16,9 +22,75 @@ body{
   position: absolute;
   top: 0;
   width: 100%;
-  height: 120vh;
+  /* height: 120vh; */
   left: 50%;
   transform: translateX(-50%);
   object-fit: cover;
   z-index: -1;
 }
+
+.btn-box{
+    justify-content: center;
+}
+
+.title-sub{
+  font-size: 3rem;
+}
+
+
+/* 링크설정 */
+a{
+  font-weight: 400;
+  color: #FFE400;
+  text-decoration: none;
+}
+
+/* 버튼 설정 */
+
+/* 버튼초기화 */
+button{
+  margin-left:2rem;
+  background-color: transparent;
+  border: transparent;
+}
+.btn-main a{
+  color: #000;
+}
+
+.btn-main {
+  height: 7vh;
+  background-color: #FFE400;
+  border-radius: 4.5vw;
+  padding: 1vw;
+  transition: .4s;
+}
+
+.btn-sub::after{
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color: #FFE400;
+  left: 0;
+}
+
+.btn-sub {
+  height: 7vh;
+  border: 1px solid #FFE400;
+  border-radius: 4.5vw;
+  box-sizing: border-box;
+  padding: 1vw;
+}
+
+/* 버튼 on class */
+.btn-main.on {
+  background-color: #FFF075;
+  color: #000;
+  transition: .4s;
+
+}
+
+.btn-sub.on::after{
+  content: '';
+  width: 100%;
+}
+

@@ -12,6 +12,7 @@ html {
     font-family:'Pretendard Variable',sans-serif;
     font-size: 10px;
     text-align: center;
+    color: #fff;
 }
 
 /* 플렉스 박스 설정 */
@@ -23,3 +24,5 @@ html {
 .main-area *> div+div{
     padding-top: 6rem;
 }
+
+

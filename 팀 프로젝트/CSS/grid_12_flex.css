@@ -30,9 +30,7 @@
 
 */
 .cont-box{
-    width: 90vw;
-    /* display: flex; */
+    width: 1600px;
     margin: 0 auto;
-/*     height: 100%;
- */
+    text-align-last: left;
 }
