@@ -14,6 +14,9 @@ html {
     text-align: center;
     color: #fff;
 }
+*html>div{
+    margin-top: 200px;
+}
 
 /* 플렉스 박스 설정 */
 .fx-box{
@@ -22,7 +25,7 @@ html {
 }
 
 .main-area *> div+div{
-    padding-top: 6rem;
+    padding-top: 12rem;
 }
 
 

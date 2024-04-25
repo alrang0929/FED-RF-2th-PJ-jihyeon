@@ -12,9 +12,27 @@ body{
 
   /* 베이스 폰트 */
   font-size: 1.6rem;
-  line-height: 1.5;
   font-weight: 200;
 
+}
+
+
+/************* 상단배너 설정 *************/
+
+.top-banner {
+  padding: 5%;
+}
+.top-banner img{
+  width: 35%;
+}
+.top-banner .desc{
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.btn-box{
+  margin: 3rem;
+  justify-content: center;
 }
 
 /* iframe 설정 */
@@ -29,27 +47,99 @@ body{
   z-index: -1;
 }
 
-.btn-box{
-    justify-content: center;
+/* 스크롤 다운 */
+.top-banner .linebx {
+  /* padding: 0; */
+  overflow: hidden;
+  height: 80px;
+  padding-top: 3vw;
+  margin-bottom: -3vw;
+}
+
+.top-banner .line {
+  display: block;
+  height: 50px;
+  margin-top: 0;
+  border-left: 1px solid #c8c8c8;
+  margin-left: 50%;
+  transition: .2s;
+  opacity: 1;
+
+  animation: line-ani 2.5s ease-out infinite;
+}  
+
+@keyframes line-ani{
+
+  10%{
+      opacity: 1;
+  }
+  80%{
+      opacity: 0;
+      margin-top: 100px;
+  }
+  100%{
+    opacity: 0;
+    margin-top: 100px;
+  }
+}
+
+
+/*************  1. info area *************/
+#info-area .imgbox img{
+  width:70rem;
+}
+/*************  박스 공통 설정 *************/
+img{
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+/*************  텍스트 공통 설정 *************/
+
+/* 텍스트 설정 */
+
+.title-topic{
+  /* color: #FFE400; */
+  font-size: 1.8rem;
 }
 
 .title-sub{
-  font-size: 3rem;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+.title{
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 
-
+.desc{
+  text-align: justify;
+  line-height: 1.5;
+}
 /* 링크설정 */
 a{
+  font-size: 1.6rem;
   font-weight: 400;
   color: #FFE400;
   text-decoration: none;
 }
 
-/* 버튼 설정 */
+/*************  공통 꾸밈요소 *************/
+.under-line{
+  margin: 2rem 0;
+  display: block;
+  height: 1px;
+  background-color: #797979;
+}
+/*************  버튼 공통 설정 *************/
 
 /* 버튼초기화 */
 button{
-  margin-left:2rem;
+  cursor: pointer;
+  margin: 0 2rem;
   background-color: transparent;
   border: transparent;
 }
