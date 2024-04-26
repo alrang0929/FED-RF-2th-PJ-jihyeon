@@ -5,8 +5,7 @@
 @import url(./grid_12_flex.css);
 @import url(./reset.css);
 
-
-body{
+body {
   /* overflow: hidden; */
   background-color: #000;
   color: #fff;
@@ -14,25 +13,23 @@ body{
   /* 베이스 폰트 */
   font-size: 1.6rem;
   font-weight: 200;
-
 }
-
 
 /************* 상단배너 설정 *************/
 
 .top-banner {
   padding-top: 6%;
 }
-.top-banner img{
+.top-banner img {
   width: 35%;
 }
-.top-banner .desc{
+.top-banner .desc {
   width: 30%;
   text-align: center;
   margin: 3rem auto;
 }
 
-.btn-box{
+.btn-box {
   margin: 3rem;
   justify-content: center;
 }
@@ -42,7 +39,7 @@ body{
   position: absolute;
   top: 0;
   width: 100%;
-  /* height: 120vh; */
+  height: 120vh;
   left: 50%;
   transform: translateX(-50%);
   object-fit: cover;
@@ -55,63 +52,60 @@ body{
   overflow: hidden;
   height: 80px;
   padding-top: 3vw;
-  margin-bottom: -3vw;
+  /* margin-bottom: -3vw; */
 }
 
 .top-banner .line {
-  
   display: block;
   height: 50px;
   margin-top: 0;
   border-left: 1px solid #c8c8c8;
   margin-left: 50%;
-  transition: .2s;
+  transition: 0.2s;
   opacity: 1;
 
   animation: line-ani 2.5s ease-out infinite;
-}  
+}
 
-@keyframes line-ani{
-
-  10%{
-      opacity: 1;
+@keyframes line-ani {
+  10% {
+    opacity: 1;
   }
-  80%{
-      opacity: 0;
-      margin-top: 100px;
+  80% {
+    opacity: 0;
+    margin-top: 100px;
   }
-  100%{
+  100% {
     opacity: 0;
     margin-top: 100px;
   }
 }
 
-
 /*************  1. info area *************/
-#info-area .imgbox img{
-  width:60rem;
+#info-area .imgbox img {
+  width: 60rem;
 }
 
 .btn-link {
   margin-left: -1rem;
   margin-top: 2rem;
 }
-.btn-link a{
+.btn-link a {
   color: #fff;
 }
-.btn-link img{
+.btn-link img {
   margin-right: 2rem;
 }
 
-#info-area .desc-box>div{
+#info-area .desc-box > div {
   margin-top: 4rem;
 }
 
-.bulr-box .gradient{
-  margin-top: 50%;
-    width: 100%;
-    height: 50vh;
-    background-image: linear-gradient(0deg, #000000, #00000000);
+#info-area .gradient {
+  margin-top: 32%;
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(0deg, #000000, #00000000);
 }
 
 .bulr-box {
@@ -121,9 +115,9 @@ body{
   width: 100%;
   height: 100vw;
   backdrop-filter: blur(20px) opacity(100%) saturate(50%) brightness(50%);
-  }
+}
 
-#info-area{
+#info-area {
   overflow: hidden;
   height: 80vh;
   padding-bottom: 15rem;
@@ -131,29 +125,97 @@ body{
   background: url(../sub_badbatch/img/poster_1.jpeg) center/cover no-repeat;
 }
 
-
-
 /*************  2. episode area *************/
 
-#episode-area .tit-box a{
+#episode-area .tit-box a {
   margin: 0 2rem;
-    line-height: 4;
-    text-decoration: none;
+  line-height: 4;
+  text-decoration: none;
 }
 
 /* 카테고리 */
-.Kategorie{
+.Kategorie {
   padding: 2rem 0;
 }
 
-.Kategorie a{
+.Kategorie a {
   color: #797979;
   margin: 0 2rem;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 /* 클래스 on 추가시  */
-.Kategorie li.on a{
+.Kategorie li.on a {
   color: #fff;
   text-decoration: underline;
 }
+/*************  3. sns area *************/
+#sns-area .slider-wrap ul figcaption {
+  width: 80%;
+}
+#sns-area .slider-wrap ul {
+  margin-top: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*************  4. pos area *************/
+
+#pos-area .gradient-top {
+  margin-top: -8%;
+  width: 100%;
+  height: 20vh;
+  background-image: linear-gradient(180deg, #000000, #00000000);
+}
+#pos-area .gradient {
+  margin-top: 12%;
+  width: 100%;
+  height: 20vh;
+  background-image: linear-gradient(0deg, #000000, #00000000);
+}
+#pos-area .tit-wrap .tit-box {
+  width: 30%;
+  translate: 167% 310%;
+}
+
+#pos-area .tit-wrap {
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  width: 100vw;
+  height: 60vh;
+  
+  background: url(../sub_badbatch/img/sub_postitle.jpg) 54% 97%/103% no-repeat;
+}
+
+#pos-area .pos-wrap ul li img {
+  width: 100%;
+}
+#pos-area .pos-wrap {
+  margin-top: 2rem;
+}
+#pos-area .pos-wrap ul {
+  margin-top: 10rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+
+/*************  5. footer banner *************/
+
+#bt-banner-area .desc-wrap {
+  position: relative;
+}
+#bt-banner-area video {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: -184%;
+}
+#bt-banner-area{
+  margin: 4rem;
+  overflow: hidden;
+  height: 40rem;
+  border-radius: 4rem;
+}
+
+
