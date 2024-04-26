@@ -86,101 +86,43 @@ body{
 
 /*************  1. info area *************/
 #info-area .imgbox img{
-  width:70rem;
-}
-/*************  박스 공통 설정 *************/
-img{
-  border-radius: 2rem;
-  object-fit: cover;
+  width:60rem;
 }
 
-/*************  텍스트 공통 설정 *************/
-
-/* 텍스트 설정 */
-
-.title-topic{
-  /* color: #FFE400; */
-  font-size: 1.8rem;
+.btn-link {
+  margin-left: -1rem;
+  margin-top: 2rem;
+}
+.btn-link a{
+  color: #fff;
+}
+.btn-link img{
+  margin-right: 2rem;
 }
 
-.title-sub{
-  font-weight: 700;
-  font-size: 3.5rem;
-  line-height: 1.5;
-}
-.title{
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 1.2;
-  margin-bottom: 2rem;
+#info-area .desc-box>div{
+  margin-top: 4rem;
 }
 
-.desc{
-  text-align: justify;
-  line-height: 1.5;
-}
-/* 링크설정 */
-a{
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #FFE400;
-  text-decoration: none;
+#info-area{
+  backdrop-filter: blur(50px);
+  background: url(../sub_badbatch/img/poster_1.jpeg) center/cover no-repeat;
 }
 
-/*************  공통 꾸밈요소 *************/
-.under-line{
-  margin: 2rem 0;
-  display: block;
-  height: 1px;
-  background-color: #797979;
-}
-/*************  버튼 공통 설정 *************/
 
-/* 버튼초기화 */
-button{
-  cursor: pointer;
+
+/*************  2. episode area *************/
+
+#episode-area .tit-box a{
   margin: 0 2rem;
-  background-color: transparent;
-  border: transparent;
-}
-.btn-main a{
-  color: #000;
+    line-height: 4;
+    text-decoration: none;
 }
 
-.btn-main {
-  height: 7vh;
-  background-color: #FFE400;
-  border-radius: 4.5vw;
-  padding: 1vw;
-  transition: .4s;
+.Kategorie{
+padding: 2rem 0;
 }
-
-.btn-sub::after{
-  content: '';
-  width: 0;
-  height: 100%;
-  background-color: #FFE400;
-  left: 0;
+.Kategorie a{
+  color: #797979;
+  margin: 0 2rem;
 }
-
-.btn-sub {
-  height: 7vh;
-  border: 1px solid #FFE400;
-  border-radius: 4.5vw;
-  box-sizing: border-box;
-  padding: 1vw;
-}
-
-/* 버튼 on class */
-.btn-main.on {
-  background-color: #FFF075;
-  color: #000;
-  transition: .4s;
-
-}
-
-.btn-sub.on::after{
-  content: '';
-  width: 100%;
-}
-
