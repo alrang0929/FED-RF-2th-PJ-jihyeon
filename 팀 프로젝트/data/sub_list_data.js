@@ -1,5 +1,45 @@
-
-]
+const snsData = [
+  {
+    idx: 1,
+    title: "Watch the final season of TheBadBatch streaming on",
+    link: "https://www.instagram.com/starwars/reel/C5jnBDmAp8o/", },
+  {
+    idx: 2,
+    title: "Omega 🤝 Crosshair. ",
+    link: "https://www.tiktok.com/@starwars/video/7350396968591625518?lang=en", },
+  {
+    idx: 3,
+    title: "we'd know those clones anywhere.",
+    link: "https://www.tiktok.com/@starwars/video/7346652217174248746", },
+  {
+    idx: 4,
+    title: "that's Commander Wolffe for you.",
+    link: "https://www.tiktok.com/@starwars/video/7346329001557789994", },
+  {
+    idx: 5,
+    title: "So.Many.Monants.",
+    link: "https://www.tiktok.com/@katarixcruz/video/7339816918142012703", },
+  {
+    idx: 6,
+    title: "*that* tearful reunion from Star Wars: The Bad Batch.",
+    link: "https://www.instagram.com/starwars/reel/C4JcyjPS1ZA/", },
+  {
+    idx: 7,
+    title: "An Omega original",
+    link: "https://www.tiktok.com/@starwars/video/7338867196782857514", },
+  {
+    idx: 8,
+    title: "We are all Clone Force 99.",
+    link: "https://www.tiktok.com/@starwars/video/7338213473756695851", },
+  {
+    idx: 9,
+    title: "To our Bad Batch fans across the galaxy.",
+    link: "https://www.tiktok.com/@starwars/video/7338117826441383210", },
+  {
+    idx: 10,
+    title: "How is Omega coping?",
+    link: "https://www.instagram.com/starwars/reel/C3lPvlUvkXJ/?hl=en", },
+  ];
 
 const epData = [
   {
@@ -57,48 +97,5 @@ const epData = [
   },
 ];
 
-const snsData = [
-  {
-    idx: 1,
-    title: "Watch the final season of TheBadBatch streaming on",
-    link: "https://www.instagram.com/starwars/reel/C5jnBDmAp8o/", },
-  {
-    idx: 2,
-    title: "Omega 🤝 Crosshair. ",
-    link: "https://www.tiktok.com/@starwars/video/7350396968591625518?lang=en", },
-  {
-    idx: 3,
-    title: "we'd know those clones anywhere.",
-    link: "https://www.tiktok.com/@starwars/video/7346652217174248746", },
-  {
-    idx: 4,
-    title: "that's Commander Wolffe for you.",
-    link: "https://www.tiktok.com/@starwars/video/7346329001557789994", },
-  {
-    idx: 5,
-    title: "So.Many.Monants.",
-    link: "https://www.tiktok.com/@katarixcruz/video/7339816918142012703", },
-  {
-    idx: 6,
-    title: "*that* tearful reunion from Star Wars: The Bad Batch.",
-    link: "https://www.instagram.com/starwars/reel/C4JcyjPS1ZA/", },
-  {
-    idx: 7,
-    title: "An Omega original",
-    link: "https://www.tiktok.com/@starwars/video/7338867196782857514", },
-  {
-    idx: 8,
-    title: "We are all Clone Force 99.",
-    link: "https://www.tiktok.com/@starwars/video/7338213473756695851", },
-  {
-    idx: 9,
-    title: "To our Bad Batch fans across the galaxy.",
-    link: "https://www.tiktok.com/@starwars/video/7338117826441383210", },
-  {
-    idx: 10,
-    title: "How is Omega coping?",
-    link: "https://www.instagram.com/starwars/reel/C3lPvlUvkXJ/?hl=en", },
-  ];
-
   /* 내보내기 */
-export {epData,snsData,};
+export {epData, snsData,};
