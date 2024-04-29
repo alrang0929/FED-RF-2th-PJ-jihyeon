@@ -86,11 +86,11 @@ body {
   width: 60rem;
 }
 
-.btn-link {}
 .btn-link {
   margin-left: -1rem;
   margin-top: 2rem;
 }
+
 .btn-link a {
   color: #fff;
 }
@@ -126,6 +126,7 @@ body {
   background: url(../sub_badbatch/img/poster_1.jpeg) center/cover no-repeat;
 }
 
+
 /*************  2. episode area *************/
 
 #episode-area .tit-box a {
@@ -150,14 +151,28 @@ body {
   color: #fff;
   text-decoration: underline;
 }
+
+.epSlide ul{
+  overflow: hidden;
+}
+.epSlide li {
+  padding-left: 4rem;
+}
+.epSlide li img{
+  width: 400px;
+  aspect-ratio: 188/106;
+
+}
+
 /*************  3. sns area *************/
 #sns-area .slider-wrap ul figcaption {
   width: 80%;
 }
-#sns-area .slider-wrap ul {
-  margin-top: 4rem;
-  grid-template-columns: repeat(4, 1fr);
+#sns-area .slider-wrap ul li img {
+  aspect-ratio: 210/312;
+  width: 400px;
 }
+
 
 /*************  4. pos area *************/
 
@@ -188,13 +203,13 @@ body {
   background: url(../sub_badbatch/img/sub_postitle.jpg) 54% 97%/103% no-repeat;
 }
 
-#pos-area .pos-wrap ul li img {
+#pos-area .slider-wrap ul li img {
   width: 100%;
 }
-#pos-area .pos-wrap {
+#pos-area .slider-wrap {
   margin-top: 2rem;
 }
-#pos-area .pos-wrap ul {
+#pos-area .slider-wrap ul {
   margin-top: 10rem;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
