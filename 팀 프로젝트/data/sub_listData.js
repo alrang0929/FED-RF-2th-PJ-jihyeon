@@ -44,4 +44,8 @@ const epData = [
   },
 ];
 
+const snsData = [
+  {idx: 1, title:"", link: "",}
+]
+
 export { epData };
