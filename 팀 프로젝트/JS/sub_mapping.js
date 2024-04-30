@@ -52,7 +52,7 @@ function snsItems(){
 const posItems = mFn.qs(".pos-wrap")
 
 let hcode = `<ul class="slider-wrap gr-box">`;
-for(let i = 1 ; i <= 15 ; i++){
+for(let i = 1 ; i <= 10 ; i++){
  hcode += `
   <li>
   <a href="#">

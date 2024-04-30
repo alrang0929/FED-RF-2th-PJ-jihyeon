@@ -86,6 +86,13 @@ body {
   width: 60rem;
 }
 
+.btn-link svg {
+  stroke-dasharray: 100%;
+  stroke-dasharray: 100%;
+}
+
+
+
 .btn-link {
   margin-left: -1rem;
   margin-top: 2rem;
@@ -165,6 +172,9 @@ body {
 }
 
 /*************  3. sns area *************/
+#sns-area .slider-wrap ul {
+  overflow: hidden;
+}
 #sns-area .slider-wrap ul figcaption {
   width: 80%;
 }
@@ -209,7 +219,7 @@ body {
 #pos-area .slider-wrap {
   margin-top: 2rem;
 }
-#pos-area .slider-wrap ul {
+#pos-area .slider-wrap{
   margin-top: 10rem;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
