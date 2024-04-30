@@ -75,6 +75,7 @@ img{
     line-height: 1.5;
   }
   .title-sub2{
+    text-align: justify;
     font-weight: 500;
     font-size: 2.5rem;
     line-height: 1.3;
@@ -90,6 +91,14 @@ img{
   .desc{
     text-align: justify;
     line-height: 1.5;
+  }
+
+  figcaption>.title-topic{
+    margin-top: 2rem;
+  }
+  
+  figcaption>h4{
+    margin-top: 2rem;
   }
   /* 링크설정 */
   a{

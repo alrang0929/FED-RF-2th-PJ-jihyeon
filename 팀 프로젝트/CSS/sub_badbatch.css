@@ -113,7 +113,7 @@ body {
   stroke:#fff;
   stroke-width: 1;
   
-  stroke-dashoffset: 140%;;
+  stroke-dashoffset: 140%;
   stroke-dasharray: calc(50%*3);
 
   transition: stroke-dashoffset .4s ease-out, opacity .1s ease-out;
@@ -149,7 +149,7 @@ body {
   height: 80vh;
   padding-bottom: 15rem;
   backdrop-filter: blur(70px);
-  background: url(../sub_badbatch/img/poster_1.jpeg) center/cover no-repeat;
+  background: url(../sub_badbatch/img/poster_1.jpg) center/cover no-repeat;
 }
 
 
@@ -192,22 +192,33 @@ body {
 
 /*************  3. sns area *************/
 
-#sns-area .abtn{
-  background-color: #00000040;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  color: #fff;
+.sns-slider-wrap{
+  position: relative;
 }
-#sns-area .slider-wrap ul {
+.sns-abtn-wrap{
+  position: absolute;
+  top: 42%;
+  justify-content: space-between;
+  width: 100%;
+  translate: 0 -50%;
+}
+
+
+
+
+#sns-area .snsSlide{
+  margin-top: 4rem;
   overflow: hidden;
 }
-#sns-area .slider-wrap ul figcaption {
+#sns-area .snsSlide ul figcaption {
   width: 80%;
 }
-#sns-area .slider-wrap ul li img {
+#sns-area .snsSlide ul li {
+  padding-left: 4rem;
+}
+#sns-area .snsSlide ul li img {
   aspect-ratio: 210/312;
-  width: 400px;
+  max-width: 350px;
 }
 
 
@@ -269,6 +280,16 @@ body {
   overflow: hidden;
   height: 40rem;
   border-radius: 4rem;
+}
+
+
+/*********** abtn svg 공통설정 ***********/
+.abtn{
+  background-color: transparent;
+  border-radius: 50%;
+  width: 9rem;
+  height: 4rem;
+  color: rgb(255, 255, 255);
 }
 
 
