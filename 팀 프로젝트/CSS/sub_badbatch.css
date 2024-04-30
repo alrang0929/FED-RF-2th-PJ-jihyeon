@@ -86,10 +86,11 @@ body {
   width: 60rem;
 }
 
-.btn-link .svg-arrow svg {
+.svg-arrow svg {
+  translate: 21% -59%;
   fill:none;
   stroke:#fff;
-  stroke-width: 20;
+  stroke-width: 1;
 }
 
 
