@@ -191,6 +191,14 @@ body {
 }
 
 /*************  3. sns area *************/
+
+#sns-area .abtn{
+  background-color: #00000040;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+}
 #sns-area .slider-wrap ul {
   overflow: hidden;
 }
