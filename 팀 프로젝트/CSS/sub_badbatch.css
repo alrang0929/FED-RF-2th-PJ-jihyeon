@@ -86,15 +86,6 @@ body {
   width: 60rem;
 }
 
-.svg-arrow svg {
-  translate: 21% -59%;
-  fill:none;
-  stroke:#fff;
-  stroke-width: 1;
-}
-
-
-
 .btn-link {
   margin-left: -1rem;
   margin-top: 2rem;
@@ -103,8 +94,34 @@ body {
 .btn-link a {
   color: #fff;
 }
+.btn-link a:hover img {
+  rotate: 180deg;
+
+}
 .btn-link img {
+  transform-origin: 50% 50%;
+  rotate: 0;
   margin-right: 2rem;
+  transition: .4s;
+}
+
+/* 버튼 화살표 호버ef */
+.svg-arrow svg {
+  translate: 21% -59%;
+  fill:none;
+  opacity: 0;
+  stroke:#fff;
+  stroke-width: 1;
+  
+  stroke-dashoffset: 140%;;
+  stroke-dasharray: calc(50%*3);
+
+  transition: stroke-dashoffset .4s ease-out, opacity .1s ease-out;
+}
+.btn-link a:hover .svg-arrow svg {
+  opacity: 1;
+  stroke-dashoffset: 0;
+
 }
 
 #info-area .desc-box > div {

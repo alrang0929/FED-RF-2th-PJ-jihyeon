@@ -101,6 +101,11 @@ img{
   
   /*************  공통 꾸밈요소 *************/
 
+/* 슬라이드 화살표 */
+.abtn span{
+  color: #ffffff;
+}
+
   /* 블릿 */
   .bullet::before{
     content: '';
