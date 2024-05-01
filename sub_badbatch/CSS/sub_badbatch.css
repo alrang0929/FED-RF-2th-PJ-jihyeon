@@ -149,7 +149,7 @@ body {
   height: 80vh;
   padding-bottom: 15rem;
   backdrop-filter: blur(70px);
-  background: url(../sub_badbatch/img/poster_1.jpg) center/cover no-repeat;
+  background: url(./img/poster_1.jpg) center/cover no-repeat;
 }
 
 
@@ -199,6 +199,14 @@ body {
 
 /*************  3. sns area *************/
 
+#sns-area video{
+  opacity: .3;
+  height: 100%;
+  z-index: -1;
+}
+#sns-area{
+  position: relative;
+}
 .sns-slider-wrap{
   position: relative;
 }
@@ -210,9 +218,6 @@ body {
   translate: 0 -50%;
 }
 
-
-
-
 #sns-area .snsSlide{
   margin-top: 4rem;
   overflow: hidden;
@@ -220,12 +225,22 @@ body {
 #sns-area .snsSlide ul figcaption {
   width: 80%;
 }
-#sns-area .snsSlide ul li {
-  padding-left: 4rem;
+.snsSlide ul {
+  gap: 0 2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+.snsSlide li {
+  width: calc(100%/6);
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
 #sns-area .snsSlide ul li img {
   aspect-ratio: 210/312;
   max-width: 350px;
+  width: 100%;
 }
 
 
@@ -255,7 +270,7 @@ body {
   width: 100vw;
   height: 60vh;
   
-  background: url(../sub_badbatch/img/sub_postitle.jpg) 54% 97%/103% no-repeat;
+  background: url(./img/sub_postitle.jpg) 54% 97%/103% no-repeat;
 }
 
 #pos-area .slider-wrap ul li img {

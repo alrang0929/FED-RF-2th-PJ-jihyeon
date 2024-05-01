@@ -10,5 +10,4 @@ import setSlide from "./slide.js";
 listMap.epItems();
 listMap.snsItems();
 
-//슬라이드 함수 호출
-setSlide('banbx');
+
