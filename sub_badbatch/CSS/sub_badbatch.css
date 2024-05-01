@@ -6,6 +6,7 @@
 @import url(./reset.css);
 
 body {
+  position: relative;
   /* overflow: hidden; */
   background-color: #000;
   color: #fff;
@@ -82,9 +83,7 @@ body {
 }
 
 /*************  1. info area *************/
-#info-area .imgbox img {
-  width: 60rem;
-}
+
 
 .btn-link {
   margin-left: -1rem;
@@ -93,6 +92,11 @@ body {
 
 .btn-link a {
   color: #fff;
+  font-weight: 200;
+  transition: .2s linear;
+}
+.btn-link a:hover{
+  font-weight: 600;
 }
 .btn-link a:hover img {
   rotate: 180deg;
@@ -144,6 +148,13 @@ body {
   backdrop-filter: blur(20px) opacity(100%) saturate(50%) brightness(50%);
 }
 
+#info-area .imgbox img{
+  width: 100%;
+}
+#info-area .imgbox{
+  margin-right: 7rem;
+  width: 40%;
+}
 #info-area {
   overflow: hidden;
   height: 80vh;
@@ -188,27 +199,11 @@ body {
   width: calc(100% / 4);
   margin: 4rem;
 }
-.epSlide figure{
-  overflow: hidden;
-  border-radius: 2rem;
-}
 
-.epSlide li:hover img{
-  width: 120%;
-}
-.epSlide li figure img{
-  width: 100%;
-  aspect-ratio: 188/106;
-  transition: .2s;
-}
 
 /*************  3. sns area *************/
 
-#sns-area video{
-  opacity: .3;
-  height: 100%;
-  z-index: -1;
-}
+
 #sns-area{
   position: relative;
 }
@@ -245,7 +240,6 @@ body {
 #sns-area .snsSlide ul li img {
   aspect-ratio: 210/312;
   max-width: 350px;
-  width: 100%;
 }
 
 
@@ -278,9 +272,7 @@ body {
   background: url(../img/sub_postitle.jpg) 54% 97%/103% no-repeat;
 }
 
-#pos-area .slider-wrap ul li img {
-  width: 100%;
-}
+
 #pos-area .slider-wrap {
   margin-top: 2rem;
 }
@@ -291,23 +283,44 @@ body {
 }
 
 
+
+#pos-area .slider-wrap li{
+  scale: 1;
+  z-index: auto;
+  transition: .2s;
+}
+
+#pos-area .slider-wrap li:hover{
+  scale: 1.4;
+  z-index: 1;
+  box-shadow: 53px 50px 50px 3px #70CBFF50;
+}
+
+
 /*************  5. footer banner *************/
 
+#bt-banner-area{
+  position: relative;
+}
 #bt-banner-area .desc-wrap {
   position: relative;
 }
-#bt-banner-area video {
-  z-index: -1;
+
+#bt-banner-area .sub-ban-1 video {
+  object-fit: cover;
+  object-position: 50% 70%;
+  /* width: 100%; */
   position: absolute;
+  z-index: -1;
   left: 0;
-  top: -184%;
-}
+  top: -140%;}
+
 #bt-banner-area{
-  margin: 4rem;
-  overflow: hidden;
-  height: 40rem;
-  border-radius: 4rem;
+
 }
+
+
+
 
 
 /*********** abtn svg 공통설정 ***********/
@@ -319,4 +332,61 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.imgbox{
+  overflow: hidden;
+  border-radius: 2rem;
+}
 
+
+/* 리스트 수정 */
+ul li figcaption{
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div>ul li figure img{
+  width: 110%;
+}
+div>ul li figure{
+  position: relative;
+  background-color: black;
+}
+
+div>ul li:hover figure img{
+  opacity: 0.4;
+}
+div>ul li:hover figure::before{
+  position: absolute;
+  content: 'more view';
+  display: block;
+  z-index: 1;
+  color: #fff;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+div>ul li{
+  line-height: 0;
+  cursor: pointer;
+}
+
+div>ul figure{
+  overflow: hidden;
+  /* aspect-ratio: 188/106; */
+  border-radius: 2rem;
+}
+
+div>ul li:hover img{
+  scale: 1.2;
+  transform-origin: 50%;
+}
+div>ul li img{
+  width: 100%;
+  transition: .2s;
+  backdrop-filter: drop-shadow(5px 5px 5px 5px #00000060);
+}

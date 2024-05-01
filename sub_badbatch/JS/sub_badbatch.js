@@ -9,5 +9,7 @@ import setSlide from "./slide.js";
 /* 슬라이드 리스트 맵핑 */
 listMap.epItems();
 listMap.snsItems();
+listMap.posItems();
+listMap.subbanItems();
 
 

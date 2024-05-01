@@ -14,7 +14,7 @@ function epItems(){
   <ul class="fx-box col-8">
   ${listData.epData.map(v =>`
   <li>
-  <figure>
+  <figure class="imgbox">
   <img src="./img/thumb_${v.idx}.jpg" alt="E${v.title}" /></figure>
   <figcaption>
   <div class="title-topic">Season3, Episode${v.idx}</div>
@@ -33,8 +33,9 @@ function snsItems(){
   mFn.qs('.snsSlide').innerHTML = `
   <ul class="fx-box col-8">
   ${listData.snsData.map(v=>`
-    <li>
-      <figure><a href="${v.link}" target="_blank">
+    <li >
+    
+      <figure class="imgbox"><a href="${v.link}" target="_blank">
         <img src="./img/sns_thumb_${v.idx}.jpg" alt="${v.title}" />
       </a></figure>
       <figcaption>
@@ -49,20 +50,42 @@ function snsItems(){
   `
 }
 
-const posItems = mFn.qs(".pos-wrap")
 
-let hcode = `<ul class="slider-wrap gr-box">`;
-for(let i = 1 ; i <= 10 ; i++){
- hcode += `
-  <li>
-  <a href="#">
-  <img src="./img/poster_${i}.jpg" 
-  alt="스타워즈 포스터${i}"></a>
-  </li>
-  `;
-}////for
-hcode += '</ul>'
-posItems.innerHTML = hcode;
+function posItems(){
+  const posItems = mFn.qs(".pos-wrap")
+
+  let hcode = `
+  
+  <ul class="slider-wrap gr-box">`;
+  for(let i = 1 ; i <= 10 ; i++){
+   hcode += `
+   
+   <li class="imgbox">
+   <a href="#">
+   <img src="./img/poster_${i}.jpg" 
+   alt="스타워즈 포스터${i}"></a>
+   </li>
+  
+    `;
+  }////for
+  hcode += '</ul>'
+  posItems.innerHTML = hcode;
+
+}
+
+function subbanItems(){
+
+  mFn.qs('.sub-ban-wrap').innerHTML = `
+  <ul>
+  ${listData.subBanner.map(v=>`
+    <li class="sub-ban-${v.idx}">${v.data}</li>
+    `).join('')}
+    </ul>
+  `
+}
+
+
+
 
 
 
@@ -72,6 +95,6 @@ posItems.innerHTML = hcode;
 
 
 ///////내보내기 영역//////////////////////
-export {epItems,snsItems, }
+export {epItems,snsItems,posItems,subbanItems, }
 
 
