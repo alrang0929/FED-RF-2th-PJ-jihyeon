@@ -179,15 +179,22 @@ body {
 }
 
 .epSlide ul{
-  overflow: hidden;
+  /* overflow: hidden; */
+  flex-wrap: wrap;
 }
 .epSlide li {
-  padding-left: 4rem;
+  width: calc(100% / 4);
+
+  margin: 4rem;
 }
+.epSlide figure{
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
 .epSlide li img{
   width: 400px;
   aspect-ratio: 188/106;
-
 }
 
 /*************  3. sns area *************/
