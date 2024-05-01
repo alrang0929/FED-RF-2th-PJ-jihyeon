@@ -103,26 +103,5 @@ const epData = [
         title: "&quot;Identity Crisis&quot; Episode Guide | Star Wars: The Bad Batch",
     },
 ];
-
-const subBanner = [
-    {
-        idx: 1,
-        title: "Bad batch",
-        data: (<video src="./img/title_BG.mp4"autoplay muted playsinline loop></video>)
-        ,
-    },
-    {
-        idx: 2,
-        title: "The mandaloriad",
-        data: (<img src="./img/sub_ban_mando.jpg" alt=""></img>),
-    },
-    {
-        idx: 3,
-        title: "Ahosoka",
-        data:(<img src="./img/sub_ban_ahsoka.jpg" alt=""></img>),
-        
-    },
-];
-
 /* 내보내기 */
-export { epData, snsData, subBanner};
+export { epData, snsData, };
