@@ -149,7 +149,7 @@ body {
   height: 80vh;
   padding-bottom: 15rem;
   backdrop-filter: blur(70px);
-  background: url(./img/poster_1.jpg) center/cover no-repeat;
+  background: url(../img/poster_1.jpg) center/cover no-repeat;
 }
 
 
@@ -173,7 +173,7 @@ body {
 }
 
 /* 클래스 on 추가시  */
-.Kategorie li.on a {
+.Kategorie li:hover a {
   color: #fff;
   text-decoration: underline;
 }
@@ -183,8 +183,9 @@ body {
   flex-wrap: wrap;
 }
 .epSlide li {
+  overflow: hidden;
+  border-radius: 2rem;
   width: calc(100% / 4);
-
   margin: 4rem;
 }
 .epSlide figure{
@@ -192,9 +193,13 @@ body {
   border-radius: 2rem;
 }
 
-.epSlide li img{
-  width: 400px;
+.epSlide li:hover img{
+  width: 120%;
+}
+.epSlide li figure img{
+  width: 100%;
   aspect-ratio: 188/106;
+  transition: .2s;
 }
 
 /*************  3. sns area *************/
@@ -270,7 +275,7 @@ body {
   width: 100vw;
   height: 60vh;
   
-  background: url(./img/sub_postitle.jpg) 54% 97%/103% no-repeat;
+  background: url(../img/sub_postitle.jpg) 54% 97%/103% no-repeat;
 }
 
 #pos-area .slider-wrap ul li img {
