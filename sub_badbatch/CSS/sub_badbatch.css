@@ -278,6 +278,9 @@ body {
 
 
 #pos-area .slider-wrap li{
+  border: 0px dashed #85E2FF;
+  backdrop-filter: drop-shadow(inset 0px 0px 5px 3px #85E2FF);
+
   scale: 1;
   z-index: auto;
   transition: .2s;
@@ -286,7 +289,7 @@ body {
 #pos-area .slider-wrap li:hover{
   scale: 1.4;
   z-index: 1;
-  box-shadow: 53px 50px 50px 3px #70CBFF50;
+  box-shadow: 53px 50px 50px 3px #00000080;
 }
 
 
