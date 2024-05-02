@@ -7,8 +7,8 @@ import * as scrollFn from "./smoothScroll23.js"
 
 // console.log(slideFn.carouselSlider);
 
-scrollFn.setScrollPos();
-scrollFn.startSS();
+// scrollFn.setScrollPos();
+// scrollFn.startSS();
 
 /* 슬라이드 리스트 맵핑 */
 listMap.epItems();
@@ -30,7 +30,7 @@ btn.forEach((ele, idx) => {
 
 //ele에 클릭 이벤트가 발생하면 이벤트 할당
 ele.onclick = (e) =>{
-    //preventDefault: 이벤트 버블 방지
+    //preventDefault: 윈도우 기본값 설정 끔, 기본값 변경해야할 경우 사용 
     e.preventDefault();
     inner.style.top = -100 * idx + "%";
     inner.style.transition = ".4s";
@@ -39,3 +39,29 @@ ele.onclick = (e) =>{
 })//forEach////////////////////////
 })()////////하단배너 클릭 이벤트
 
+
+//포스터 호버시 호버된 li 외 오퍼시티 줄이기
+function posOnFn(){
+    const item = mFn.qsa('.pos-wrap li');
+    // console.log("요소확인",item);
+
+    //item 요소, 순번 가지고 들어옴
+    //선택자를 확인해야됨.. this 써야되는디
+    //어케 구분함? if >  mouseenter 이 되믄 on 넣어라 
+    //나머지는 else 처리해서 오퍼시티 죽여야하나<<됨??...?
+    item.forEach((ele,idx)=>{
+        mFn.addEvt(ele,"mouseenter",itemClassAdd)
+        mFn.addEvt(ele,"mouseleave",itemClassDel)
+
+        function itemClassDel(){
+            if(ele)ele.classList.remove('on');
+        }
+        function itemClassAdd(){
+            if(ele)ele.classList.add('on');
+        }
+
+    })//forEach
+
+
+}///////posOnFn 함수//////////////////
+posOnFn();

@@ -84,54 +84,51 @@ body {
 
 /*************  1. info area *************/
 
-
-.btn-link {
-  margin-left: -1rem;
+#info-area .btn-link {
+  text-align-last: left;
+  margin-left: -43rem;
   margin-top: 2rem;
 }
 
 .btn-link a {
   color: #fff;
   font-weight: 200;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
-.btn-link a:hover{
+.btn-link a:hover {
   font-weight: 600;
 }
 .btn-link a:hover img {
   rotate: 180deg;
-
 }
 .btn-link img {
   transform-origin: 50% 50%;
   rotate: 0;
   margin-right: 2rem;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 /* 버튼 화살표 호버ef */
 .svg-arrow svg {
   translate: 21% -59%;
-  fill:none;
+  fill: none;
   opacity: 0;
-  stroke:#fff;
+  stroke: #fff;
   stroke-width: 1;
-  
-  stroke-dashoffset: 140%;
-  stroke-dasharray: calc(50%*3);
 
-  transition: stroke-dashoffset .4s ease-out, opacity .1s ease-out;
+  stroke-dashoffset: 140%;
+  stroke-dasharray: calc(50% * 3);
+
+  transition: stroke-dashoffset 0.4s ease-out, opacity 0.1s ease-out;
 }
 .btn-link a:hover .svg-arrow svg {
   opacity: 1;
   stroke-dashoffset: 0;
-
 }
 
 #info-area .desc-box > div {
   margin-top: 4rem;
 }
-
 
 .bulr-box {
   position: absolute;
@@ -142,10 +139,10 @@ body {
   backdrop-filter: blur(20px) opacity(100%) saturate(50%) brightness(50%);
 }
 
-#info-area .imgbox img{
+#info-area .imgbox img {
   width: 100%;
 }
-#info-area .imgbox{
+#info-area .imgbox {
   margin-right: 7rem;
   width: 40%;
 }
@@ -155,14 +152,12 @@ body {
   /* height: 80vh; */
   padding-bottom: 15rem;
   backdrop-filter: blur(70px);
-  background-image: linear-gradient(to top,#000000,#00000000,#00000000),
-  url(../img/poster_1.jpg);
+  background-image: linear-gradient(to top, #000000, #00000000, #00000000),
+    url(../img/poster_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
-
 
 /*************  2. episode area *************/
 
@@ -189,7 +184,7 @@ body {
   text-decoration: underline;
 }
 
-.epSlide ul{
+.epSlide ul {
   /* overflow: hidden; */
   flex-wrap: wrap;
 }
@@ -200,17 +195,15 @@ body {
   margin: 4rem;
 }
 
-
 /*************  3. sns area *************/
 
-
-#sns-area{
+#sns-area {
   position: relative;
 }
-.sns-slider-wrap{
+.sns-slider-wrap {
   position: relative;
 }
-.sns-abtn-wrap{
+.sns-abtn-wrap {
   position: absolute;
   top: 42%;
   justify-content: space-between;
@@ -218,7 +211,7 @@ body {
   translate: 0 -50%;
 }
 
-#sns-area .snsSlide{
+#sns-area .snsSlide {
   margin-top: 4rem;
   overflow: hidden;
 }
@@ -232,7 +225,7 @@ body {
   justify-content: space-evenly;
 }
 .snsSlide li {
-  width: calc(100%/6);
+  width: calc(100% / 6);
   padding-left: 2rem;
   margin-top: 2rem;
 }
@@ -241,13 +234,18 @@ body {
   aspect-ratio: 250/371;
 }
 
-
 /*************  4. pos area *************/
 
-
+#pos-area .tit-box > h3 {
+  text-align: center;
+  font-size: 5rem;
+}
 #pos-area .tit-wrap .tit-box {
+  position: relative;
   width: 30%;
-  translate: 167% 310%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 #pos-area .tit-wrap {
@@ -256,50 +254,126 @@ body {
   translate: -50%;
   width: 100vw;
   height: 60vh;
-  
-  background-image: linear-gradient(to top,#000000,#00000000),linear-gradient(to bottom,#000000,#00000000,#00000000,#00000000,#00000000),
-  url(../img/sub_postitle.jpg);
+
+  background-image: linear-gradient(to top, #000000, #00000000),
+    linear-gradient(
+      to bottom,
+      #000000,
+      #00000000,
+      #00000000,
+      #00000000,
+      #00000000
+    ),
+    url(../img/sub_postitle.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% 90%;
-
 }
-
 
 #pos-area .slider-wrap {
   margin-top: 2rem;
 }
-#pos-area .slider-wrap{
+#pos-area .slider-wrap {
   margin-top: 10rem;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
-
-
-#pos-area .slider-wrap li{
-  border: 0px dashed #85E2FF;
-  backdrop-filter: drop-shadow(inset 0px 0px 5px 3px #85E2FF);
+#pos-area .slider-wrap li {
+  border: 0px dashed #85e2ff;
+  backdrop-filter: drop-shadow(inset 0px 0px 5px 3px #85e2ff);
 
   scale: 1;
   z-index: auto;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-#pos-area .slider-wrap li:hover{
+#pos-area .slider-wrap li.on {
   scale: 1.4;
   z-index: 1;
   box-shadow: 53px 50px 50px 3px #00000080;
 }
 
+/***************** 포스터 클릭시 플로팅 되는 화면 *****************/
+/* 
+
+포스터 클릭시 가운데에
+포스터 큰버전 + 설명텍스트+ 설명문구 노출
+*/
+
+.pos-data-wrap.on {
+  /* 컨텐츠 가운데 위치할 수 있도록 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 레이어 안깔리게 */
+  z-index: 999;
+}
+
+/* 컨텐츠들 감싸는 박스 */
+.pos-data-box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.pos-data-box {
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.pos-data-imgbox {
+  width: 57%;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.pos-data-imgbox img {
+  width: 100%;
+}
+.pos-data-text .bullet {
+  margin-bottom: 2rem;
+}
+
+.pos-data-text h3 {
+  font-size: 3.5rem;
+  text-align-last: left;
+}
+
+.pos-data-text .close-btn {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+}
+.pos-data-text .btn-link {
+  height: 4rem;
+  margin-top: 4rem;
+  margin-left: -33%;
+}
+.pos-data-text {
+  margin-top: 40%;
+  margin-left: 4rem;
+  width: 40%;
+}
 
 /*************  5. footer banner *************/
-#bt-banner-area{
+#bt-banner-area {
   position: relative;
   margin-bottom: 40rem;
 }
 
-.sub-ban-wrap{
+.sub-ban-wrap {
   position: relative;
   height: 50rem;
 
@@ -307,38 +381,31 @@ body {
   border-radius: 4rem;
 }
 
-.sub-ban-wrap .desc-wrap{
+.sub-ban-wrap .desc-wrap {
   position: absolute;
   z-index: 1;
   top: 50%;
   translate: 14% -50%;
 }
 
-.sub-ban-wrap .sub-ban-img{
-overflow: hidden;
-height: 50rem;
+.sub-ban-wrap .sub-ban-img {
+  overflow: hidden;
+  height: 50rem;
 }
 
-
 /* 기본셋팅 */
-.sub-ban-wrap .sub-ban-box{
+.sub-ban-wrap .sub-ban-box {
   position: relative;
   top: 0;
   /* translate: 0 -50%; */
 }
 
-
-.sub-ban-wrap .sub-ban-img img{
-  aspect-ratio: 1500 / 643 ;
+.sub-ban-wrap .sub-ban-img img {
+  aspect-ratio: 1500 / 643;
 }
 
-
-
-
-
-
 /*********** abtn svg 공통설정 ***********/
-.abtn{
+.abtn {
   background-color: transparent;
   border-radius: 50%;
   width: 9rem;
@@ -346,15 +413,13 @@ height: 50rem;
   color: rgb(255, 255, 255);
 }
 
-.imgbox{
+.imgbox {
   overflow: hidden;
   border-radius: 2rem;
 }
 
-
 /* 리스트 수정 */
-ul li figcaption{
-  
+ul li figcaption {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -362,20 +427,20 @@ ul li figcaption{
   text-overflow: ellipsis;
 }
 
-.zoomImg>ul li figure img{
+.zoomImg > ul li figure img {
   width: 110%;
 }
-.zoomImg>ul li figure{
+.zoomImg > ul li figure {
   position: relative;
   background-color: black;
 }
 
-.zoomImg>ul li:hover figure img{
+.zoomImg > ul li:hover figure img {
   opacity: 0.4;
 }
-.zoomImg>ul li:hover figure::before{
+.zoomImg > ul li:hover figure::before {
   position: absolute;
-  content: 'more view';
+  content: "more view";
   display: block;
   z-index: 1;
   color: #fff;
@@ -384,23 +449,29 @@ ul li figcaption{
   left: 50%;
   translate: -50% -50%;
 }
-div>ul li{
+div > ul li {
   line-height: 0;
   cursor: pointer;
 }
 
-div>ul figure{
+div > ul figure {
   overflow: hidden;
   /* aspect-ratio: 188/106; */
   border-radius: 2rem;
 }
 
-.zoomImg>ul li:hover img{
+.zoomImg > ul li:hover img {
   scale: 1.2;
   transform-origin: 50%;
 }
-.zoomImg>ul li img{
+.zoomImg > ul li img {
   width: 100%;
-  transition: .2s;
+  transition: 0.2s;
   backdrop-filter: drop-shadow(5px 5px 5px 5px #00000060);
+}
+
+.close-btn span{
+  width: 100%;
+  height: 100%;
+  color: #fff;
 }
