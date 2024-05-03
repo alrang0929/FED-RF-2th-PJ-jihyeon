@@ -61,9 +61,9 @@ function posItems(){
    hcode += `
    
    <li class="imgbox">
-   <a href="#">
+   
    <img src="./img/poster_${i}.jpg" 
-   alt="스타워즈 포스터${i}"></a>
+   alt="스타워즈 포스터${i}">
    </li>
   
     `;

@@ -7,7 +7,7 @@
 
 body {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #000;
   color: #fff;
 
@@ -90,7 +90,7 @@ body {
   margin-top: 2rem;
 }
 
-.btn-link a {
+.btn-link>a {
   color: #fff;
   font-weight: 200;
   transition: 0.2s linear;
@@ -271,6 +271,7 @@ body {
 }
 
 #pos-area .slider-wrap {
+
   margin-top: 2rem;
 }
 #pos-area .slider-wrap {
@@ -301,8 +302,22 @@ body {
 포스터 큰버전 + 설명텍스트+ 설명문구 노출
 */
 
+.pos-data-wrap{
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 레이어 안깔리게 */
+  z-index: 999;
+  opacity: 0;
+
+  transition: .2s ;
+}
 .pos-data-wrap.on {
   /* 컨텐츠 가운데 위치할 수 있도록 */
+  /* display: inline-block; */
+  opacity: 1;
+  display: inline;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -351,11 +366,12 @@ body {
 .pos-data-text .close-btn {
   position: absolute;
   top: 0;
-  left: -100%;
+  /* left: -100%; */
   width: 5rem;
   height: 5rem;
   color: #fff;
 }
+
 .pos-data-text .btn-link {
   height: 4rem;
   margin-top: 4rem;

@@ -1,0 +1,27 @@
+    //리스트
+    const video = mFn.qsaEl(videoli, ".video-box");
+    
+    
+    let vdcode = ``;
+    video.forEach((ele, i) => {
+      ele.onclick = () => {
+        ////////포스터 데이터 셋업 /////////////
+        vdcode += `
+        <div class="video-tab-btn fa-solid fa-xmark fa-3x"></div>
+        <iframe src="https://www.youtube.com/embed/${vdData[i].video}"></iframe>
+      `;
+        videoTab.innerHTML = vdcode;
+        ///////////////////////////////////////////////////////////////////////
+        videoBox.classList.add("on");
+    
+        /////x 버튼//////////////////////////////////////
+        mFn.qsEl(videoTab, "div").onclick = () => {
+          console.log("ddd");
+          videoBox.classList.remove("on");
+          vdcode = ``;
+        };
+      };
+    });
+
+    const item = mFn.qsa('.pos-wrap li');
+    const layer = mFn.qsa('.pos-data-wrap');

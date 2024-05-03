@@ -43,24 +43,43 @@ ele.onclick = (e) =>{
 //포스터 호버시 호버된 li 외 오퍼시티 줄이기
 function posOnFn(){
     const item = mFn.qsa('.pos-wrap li');
+    const layer = mFn.qs('.pos-data-wrap');
+    // const layer = mFn.qsa(.)
+    // const onScreen = mFn.qsa('.pos-data-wrap')
     // console.log("요소확인",item);
 
     //item 요소, 순번 가지고 들어옴
     //선택자를 확인해야됨.. this 써야되는디
     //어케 구분함? if >  mouseenter 이 되믄 on 넣어라 
     //나머지는 else 처리해서 오퍼시티 죽여야하나<<됨??...?
+
+    //마우스 호버시 li 커짐
     item.forEach((ele,idx)=>{
         mFn.addEvt(ele,"mouseenter",itemClassAdd)
         mFn.addEvt(ele,"mouseleave",itemClassDel)
-
+        
         function itemClassDel(){
             if(ele)ele.classList.remove('on');
         }
         function itemClassAdd(){
-            if(ele)ele.classList.add('on');
-        }
+            if(ele){
+                ele.classList.add('on')
+        }/////////////if
+        }///////////////itemClassAdd
 
+        ele.onclick = () =>{
+            // console.log("fdfdfd");
+            layerOn();
+        }
     })//forEach
+    
+    function layerOn(){
+        layer.classList.add('on');
+    }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 }///////posOnFn 함수//////////////////

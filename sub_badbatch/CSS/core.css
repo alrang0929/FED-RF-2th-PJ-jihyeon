@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"); */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import url("https://use.typekit.net/jyj1can.css");
 
 /* 
@@ -11,7 +11,7 @@ font-family: "Pretendard",Pretendard, apple-system, system-ui, Roboto, sans-seri
 
 
 html {
-    /* font-family:"Pretendard Variable",sans-serif; */
+    font-family:"Pretendard Variable",sans-serif;
     font-size: 10px;
     /* ### 충돌요소 */
     text-align: center;
