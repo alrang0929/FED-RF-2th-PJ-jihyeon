@@ -12,7 +12,20 @@
       `;
         videoTab.innerHTML = vdcode;
         ///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+        
         videoBox.classList.add("on");
+
+
+
     
         /////x 버튼//////////////////////////////////////
         mFn.qsEl(videoTab, "div").onclick = () => {
@@ -25,3 +38,10 @@
 
     const item = mFn.qsa('.pos-wrap li');
     const layer = mFn.qsa('.pos-data-wrap');
+
+    
+        `
+      <button class="close-btn">
+        <div class="close-i fa-solid fa-xmark fa-3x"></div>
+      </button>
+    </div>`

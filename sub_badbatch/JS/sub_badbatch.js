@@ -71,53 +71,16 @@ function posOnFn(){
 
         ele.onclick = () =>{
             // console.log("fdfdfd");
-            layerOn();
+            // layerSet();
+            listMap.layerSet();
+            setTimeout (layerOn,0);
+            // layerOn();
         }
     })//forEach
     
     function layerOn(){
         layer.classList.add('on');
-    }
-    function layerSet(){
-    //데이터
-    const posData = listData.posData
-    //대상
-    const posBx = mFn.qs(".pos-data-box")
-
-    let hcode =''
-    posData.forEach((v,idx)=>{
-        ele.onclick = () => {
-        hcode += `
-        
-        <div class="pos-data-imgbox">
-        <img src="./img/poster_${v.idx}.jpg" alt="" />
-      </div>
-      <div class="pos-data-text">
-        <div class="bullet"></div>
-        <h3 class="title">&quot;A Different Approach&quot; Episode Guide | Star Wars: The Bad Batch</h3>
-        <div class="desc">
-          Following her capture by Doctor Hemlock, Omega adjusts to life at the Imperial research facility by visiting her prisoner brother Crosshair and getting check-ups from her mysterious and stoic clone sister,
-        </div>
-        <!-- 이동링크 (관련 에피 페이지) -->
-        <button class="btn-link">
-          <img src="./img/icon_link.png" alt="링크 아이콘">
-          <span class="link-txt">Era: Reign of the Empire</span>
-          <!-- svg 부모박스 -->
-          <div class="svg-arrow">
-            <svg class="svg-arrow1">
-              <use href="#arrow">
-            </svg>
-          </div>
-      </button>
-      <button class="close-btn">
-        <div class="close-i fa-solid fa-xmark fa-3x"></div>
-      </button>
-    </div>
-                                      `
-        };//////onclick
-    });////forEach
-
-    }
+    }//////////////layerOn
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////

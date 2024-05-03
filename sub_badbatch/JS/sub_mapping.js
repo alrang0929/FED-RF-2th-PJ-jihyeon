@@ -73,8 +73,31 @@ function posItems(){
 
 }
 
-function subbanItems(){
+function layerSet(){
 
+  const posData = listData.posData
+  const posBx = mFn.qs(".pos-data-box")
+
+
+posBx.innerHTML = `
+${posData.map(v=>`
+
+<div class="pos-data-imgbox">
+<img src="./img/poster_${v.idx}.jpg" alt="${v.title}" />
+</div>
+<div class="pos-data-text">
+<div class="bullet"></div>
+<h3 class="title">${v.title}</h3>
+<div class="desc">
+${v.text}
+</div>
+`.join(''))}
+
+`;}
+
+
+
+function subbanItems(){
   mFn.qs('.sub-ban-wrap').innerHTML = `
   <ul>
   ${listData.subBanner.map(v=>`
@@ -95,6 +118,6 @@ function subbanItems(){
 
 
 ///////내보내기 영역//////////////////////
-export {epItems,snsItems,posItems,subbanItems, }
+export {epItems,snsItems,posItems,subbanItems,layerSet, }
 
 
