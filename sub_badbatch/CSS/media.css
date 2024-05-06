@@ -1,4 +1,45 @@
 @charset "utf-8";
-@media screen {
-    
+@media screen and (max-width: 1200px){
+                /* 레이아웃구성 */
+                .col-2nd-1 {width: 8.33%;}
+                .col-2nd-2 {width: 16.66%;}
+                .col-2nd-3 {width: 25%;}
+                .col-2nd-4 {width: 33.33%;}
+                .col-2nd-5 {width: 41.66%;}
+                .col-2nd-6 {width: 50%;}
+                .col-2nd-7 {width: 58.33%;}
+                .col-2nd-8 {width: 66.66%;}
+                .col-2nd-9 {width: 75%;}
+                .col-2nd-10 {width: 83.33%;}
+                .col-2nd-11 {width: 91.66%;}
+                .col-2nd-12 {width: 100%;}
+                
+                /* 숨길 박스 */
+                .col-2nd-none{display: none;}
+                
+                /* 보일 박스 */
+                .col-2nd-block{display: block;}
+
+                .info-area{
+                    flex-direction: column;
+                }
+
+                #info-area .desc{
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                #info-area .title{
+                text-align: center;
+                }
+
+                #info-area .btn-link {
+                    overflow: hidden;
+                    height: 40px;
+                    translate: 75%;
+                }
+                #info-area .btn-link svg {
+                    width: 70%;
+                  }
+
 }
