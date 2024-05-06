@@ -4,8 +4,6 @@
 @import url(./core.css);
 @import url(./grid_12_flex.css);
 @import url(./reset.css);
-/* 미디어쿼리 */
-@import url(./media.css);
 
 body {
   position: relative;

@@ -97,7 +97,7 @@ html {
   /* 링크설정 */
   /* ### 모든a는 충돌 (네비,다른메뉴등)!
   부모선택자 같이붙이면 좋을듯! */
-  button a{
+  .linktxt{
     font-size: 1.6rem;
     font-weight: 400;
     color: #FFE400;

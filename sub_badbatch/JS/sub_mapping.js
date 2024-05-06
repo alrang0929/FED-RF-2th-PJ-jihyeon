@@ -11,7 +11,7 @@ function epItems(){
   const epSlide = mFn.qs('.epSlide')
   // console.log(epArea);
   epSlide.innerHTML = `
-  <ul class="fx-box col-8">
+  <ul class="fx-box">
   ${listData.epData.map(v =>`
   <li>
   <figure class="imgbox">
@@ -31,7 +31,7 @@ function epItems(){
 function snsItems(){
 
   mFn.qs('.snsSlide').innerHTML = `
-  <ul class="fx-box col-8">
+  <ul class="fx-box">
   ${listData.snsData.map(v=>`
     <li >
     
