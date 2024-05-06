@@ -45,3 +45,41 @@
         <div class="close-i fa-solid fa-xmark fa-3x"></div>
       </button>
     </div>`
+
+
+    
+.btn-link2 span {
+  color: #fff;
+  font-weight: 200;
+  transition: 0.2s linear;
+}
+.btn-link2 span:hover {
+  font-weight: 600;
+}
+.btn-link2 span:hover img {
+  rotate: 180deg;
+}
+.btn-link2 img {
+  transform-origin: 50% 50%;
+  rotate: 0;
+  margin-right: 2rem;
+  transition: 0.4s;
+}
+
+/* 버튼 화살표 호버ef */
+.svg-arrow2 svg {
+  /* translate: 21% -59%; */
+  fill: none;
+  opacity: 0;
+  stroke: #fff;
+  stroke-width: 1;
+
+  stroke-dashoffset: 140%;
+  stroke-dasharray: calc(50% * 3);
+
+  transition: stroke-dashoffset 0.4s ease-out, opacity 0.1s ease-out;
+}
+.btn-link a:hover .svg-arrow svg {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}

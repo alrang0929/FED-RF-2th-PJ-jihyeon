@@ -45,6 +45,7 @@ ele.onclick = (e) =>{
 function posOnFn(){
     const item = mFn.qsa('.pos-wrap li');
     const layer = mFn.qs('.pos-data-wrap');
+    const posdata = listData.posData
     // const layer = mFn.qsa(.)
     // const onScreen = mFn.qsa('.pos-data-wrap')
     // console.log("요소확인",item);
@@ -55,33 +56,71 @@ function posOnFn(){
     //나머지는 else 처리해서 오퍼시티 죽여야하나<<됨??...?
 
     //마우스 호버시 li 커짐
-    item.forEach((ele,idx)=>{
+    item.forEach((ele)=>{
 
         mFn.addEvt(ele,"mouseenter",itemClassAdd)
         mFn.addEvt(ele,"mouseleave",itemClassDel)
         
+        //대상: item .pos-wrap li
         function itemClassDel(){
             if(ele)ele.classList.remove('on');
         }
         function itemClassAdd(){
             if(ele){
                 ele.classList.add('on')
-        }/////////////if
+            }/////////////if
         }///////////////itemClassAdd
-
+        
+        //대상: layer .pos-data-wrap
         ele.onclick = () =>{
-            // console.log("fdfdfd");
-            // layerSet();
-            listMap.layerSet();
-            setTimeout (layerOn,0);
-            // layerOn();
+            layerOn();
         }
     })//forEach
     
     function layerOn(){
-        layer.classList.add('on');
-    }//////////////layerOn
 
+        //포스터 레이어 생성
+        let posCode = '';
+        posdata.forEach((ele, idx)=>{
+            ele.onclick = () => {
+                posCode+= `
+                <div class="pos-data-imgbox">
+                <img src="./img/poster_${posdata[idx].idx}.jpg" alt="${posdata[idx].title}" />
+              </div>
+              <div class="pos-data-text">
+                <div class="bullet"></div>
+                <h3 class="title">${posdata[idx].title}</h3>
+                <div class="desc">
+                ${posdata[idx].text}
+                </div>
+                <!-- 이동링크 (관련 에피 페이지) -->
+                <button class="btn-link">
+                  <img src="./img/icon_link.png" alt="링크 아이콘">
+                  <span class="link-txt">${posdata[idx].title}</span>
+                  <!-- svg 부모박스 -->
+                  <div class="svg-arrow">
+                    <svg class="svg-arrow1">
+                      <use href="#arrow">
+                    </svg>
+                  </div>
+              </button>
+              <button class="close-btn">
+                <div class="close-i fa-solid fa-xmark fa-3x"></div>
+              </button>
+            </div>
+                `
+                layer.innerHTML = posCode;
+            }
+        })
+        layer.classList.add('on');
+        
+        mFn.qs('.close-btn').onclick = () => {
+            layer.classList.remove('on');
+        }////close-btn
+    }//////////////layerOn
+    console.log("aaa",layer)
+    
+    //////닫기버튼
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
