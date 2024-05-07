@@ -235,7 +235,6 @@ body {
 }
 
 #pos-area .slider-wrap {
-
   margin-top: 2rem;
 }
 #pos-area .slider-wrap {
@@ -266,7 +265,7 @@ body {
 포스터 큰버전 + 설명텍스트+ 설명문구 노출
 */
 
-.pos-data-wrap{
+.pos-data-wrap {
   display: none;
   top: 50%;
   left: 50%;
@@ -275,13 +274,14 @@ body {
   z-index: 999;
   opacity: 0;
 
-  transition: .2s ;
+  transition: 0.2s;
 }
 .pos-data-wrap.on {
   /* 컨텐츠 가운데 위치할 수 있도록 */
+  display: flex;
   /* display: inline-block; */
   opacity: 1;
-  display: inline;
+  /* display: inline; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -289,21 +289,19 @@ body {
   /* 레이어 안깔리게 */
   z-index: 999;
 }
-
-/* 컨텐츠들 감싸는 박스 */
-.pos-data-box::after {
+.pos-data-wrap::after {
   content: "";
   position: absolute;
   z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
 }
+
 .pos-data-box {
   overflow: hidden;
   border-radius: 2rem;
@@ -331,16 +329,22 @@ body {
   position: absolute;
   top: 0;
   /* left: -100%; */
+  translate: 190%;
   width: 5rem;
   height: 5rem;
   color: #fff;
 }
 
+.pos-data-text .btn-link svg {
+  width: 73%;
+  translate: 50% -63%;
+}
 .pos-data-text .btn-link {
   height: 4rem;
   margin-top: 4rem;
-  margin-left: -33%;
+  margin-left: -63%;
 }
+
 .pos-data-text {
   margin-top: 40%;
   margin-left: 4rem;
@@ -450,33 +454,34 @@ div > ul figure {
   backdrop-filter: drop-shadow(5px 5px 5px 5px #00000060);
 }
 
-.close-btn span{
+.close-btn span {
   width: 100%;
   height: 100%;
   color: #fff;
 }
 
 /* 링크버튼 애니 */
-.btn-link img{
+.btn-link img {
   transform-origin: 50% 50%;
   rotate: 0;
   transition: 0.2s;
 }
-.btn-link:hover img{ 
-  rotate: 180deg;}
+.btn-link:hover img {
+  rotate: 180deg;
+}
 
-  .btn-link span{
-    color: #fff;
-    padding-left: 2rem;
-  }
-  
-  .btn-link:hover svg{
-    opacity: 1;
-    stroke-dashoffset: 0;
-  }
-  
-  .btn-link svg{
-     translate: 21% -59%;
+.btn-link span {
+  color: #fff;
+  padding-left: 2rem;
+}
+
+.btn-link:hover svg {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+.btn-link svg {
+  translate: 21% -59%;
   fill: none;
   opacity: 0;
   stroke: #fff;
@@ -486,4 +491,4 @@ div > ul figure {
   stroke-dasharray: calc(50% * 3);
 
   transition: stroke-dashoffset 0.4s ease-out, opacity 0.1s ease-out;
-  }
+}
