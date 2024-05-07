@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <head>
+         <meta charset="UTF-8" />
+         <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+         />
+         
+         <!-- 여기서부터 공유-!!   -->
+         
+         <!-- ★ body에 class="scbar" 넣어야 공통 스크롤적용됨! -->
+         <title>STAR WARS-THE BAD BATCH</title>
+         <!-- 파비콘 (공통)  -->
+         <link rel="shortcut icon" href="./main_images/starwars_icon.png" />
+         <!-- 폰트어썸 아이콘CSS (공통) -->
+         <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+         />
+         <!-- sub개별 CSS: (★내부에 공통CSS import하기) -->
+         <link rel="stylesheet" href="./css/test-sub.css" />
+         <!-- sub개별 미디어쿼리 css자리 -->
+         
+         <!-- Sub개별 JS: 모듈로 불러오기 (★내부에 공통js import하기)-->
+         <script type="module" src="./js/test-sub.js"></script>
+      </head>
+   </head>
+   <body class="scbar">
+      <!-- (공통) 상단영역 -->
+      <header id="top-area"></header>
+      <!-- (개별) 서브영역 -->
+      <section style="height: 100vh; background: black;">서브영역</section>
+      <!-- (공통) 하단 영역 -->
+      <footer id="footer-area"></footer>
+   </body>
+</html>
