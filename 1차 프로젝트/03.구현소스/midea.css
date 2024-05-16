@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* 리셋, 코어, 커먼, 공통 외부 css 합치기 */
+@import url(./common.css);
+@import url(./core.css);
+@import url(./reset.css);
+@import url(./scroll.css);
+
+/* 그리드 시스템 */
+@import url(./grid_12_flex.css);
+
+@media screen and (max-width: 1200px){
+
+
+    /* 텍스트박스 센터 위치 보정값 */
+
+    .mstext-box {
+        transform: translate(-40%, -50%);
+      }
+
+    /* 메인 슬라이드 01 */
+    .slider01 .engtitfont h2 {
+        margin-left: auto;
+    }
+
+    .slider01 .stext-box .txt {
+        width: 100%;
+        text-align-last: auto;
+        padding-left: 0;
+      }
+
+      .slider01 .stext-box {
+        padding-bottom: 0;
+      }
+
+      .slider01 .stext-box {
+        width: 100%;
+      }
+
+
+      /* 메인 슬라이드 02 */
+
+      /* 기업소개 타이틀 */
+      .csubtit {
+        margin-top: -2rem;
+        margin-bottom: 0rem;
+      }
+
+      .txt p {
+        width: 40vw;
+      }
+
+    /* 브랜드 소개 섹션*/
+
+      .btitbx{
+        height: 17vw;
+      }
+
+      .brand-lgbx ul{
+        top: 114px;
+      }
+
+
+}
