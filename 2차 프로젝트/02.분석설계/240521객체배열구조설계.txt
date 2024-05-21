@@ -1,0 +1,60 @@
+
+[서브타이틀]
+페이지명 = {
+    idx,
+    title:
+    desc:
+    src:
+}
+
+GNB{
+    1차 서브메뉴:{
+        2차 서브메뉴,
+        2차 서브메뉴,
+        2차 서브메뉴,
+    },
+}
+
+[메인 비쥬얼 슬라이드]
+{
+    idx: 
+    category:
+    title:
+    desc:
+    link:
+    src: 
+}
+
+[서브 비쥬얼 슬라이드 L]
+{
+    idx: 
+    category:
+    title:
+    desc:
+    link:
+    src: 
+}
+[서브 비쥬얼 슬라이드 R]
+{
+    idx: 
+    title:
+    desc:
+    link:
+    src: 
+}
+
+
+
+[제품데이터]
+
+그룹(face, homecare 등) = [
+{idx:
+engtit: 영문 타이틀
+kortit: 국문 타이틀
+src01: 메인 이미지
+src02: 호버 이미지
+price: 가격
+desc: 설명문구},
+],
+
+상세내역을 그대로 둘것인가 데이터로 만들것인감............................

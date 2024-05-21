@@ -1,7 +1,7 @@
 [모듈별 정의: 구조정의, 객체화, 기능정의]
 
 0. 각 섹션 구분: id 명으로 진행 / 디테일: class
-    랩핑: wrap > box > bx
+    랩핑: area > wrap > box > bx
 0-1. 버튼 클래스: 3가지로 진행
     - button-nomal
     - button-outline
@@ -45,7 +45,7 @@ ______________________________________________________________
     
 category-wrap
     ul(category-box)
-        >category-selet(h4) div 
+        > category-selet(h4) div 
         > category-nomal-bx > a li 
     span(underLine)
 
@@ -77,7 +77,7 @@ board-title
         list-slider-wrap(div): 위치배치용
             >list-slide(div):사이즈 조절용 
                 >ul(inner)
-                    >li(item) > desc(en-tit(div), tit(div),
+                    >li(item) > desc(eng-product-tit(div), lor-producttit(div),
                      div[price(span),금액단위(span)])
             >thumb-hover(bg or img)
          >indicator(ol)
@@ -99,13 +99,27 @@ board-title
    상단: category-wrap
    상세페이지 내용:
     product-detail-wrap(div)
-        >L-
-            >img
-        >R-
-   
-    
-    
+        >L // thumb-area 
+                imgbx>img
+        >R // info-area
+                >info-wraa
+                    >product-custom-data
+                        >eng-product-tit
+                        >kor-product-tit
+                        >desc
 
+                    >icon-wrap > a > svg
+                    
+                    >option-wrap(select-box)
+                        ul > li(op-list)
+                    > 상품목록
+                        tbody > tr > td  
+                    >total price > span 전체 + span price + span 원
+                    >button-box(div) > button  
+                    >프로모션 박스 promo_area
+                        >title 
+                        >detail
+______________________________________________________________
 
 
 
