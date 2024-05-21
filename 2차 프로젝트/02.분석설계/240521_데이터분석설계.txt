@@ -1,0 +1,65 @@
+[모듈별 정의: 구조정의, 객체화, 기능정의]
+
+0. 각 섹션 구분: id 명으로 진행 / 디테일: class
+
+[common 모듈]
+GNB
+    >상단 롤링배너(div)
+        >desc-box(div + 인터발)
+            >desc(a)
+    >logo-bx > img(hi)
+    >L-gnb-box
+        >ul(sub-menu)
+            >li(sub-menu-inner)
+        
+
+
+
+
+
+
+
+
+______________________________________________________________
+
+1. 버튼 클래스: 3가지로 진행
+    - button-nomal
+    - button-outline
+    - button-disable
+
+2. 배너모듈
+
+    0) 배너 호버
+        thumb-hover(div)
+            thumb-inner
+                >icon(img)
+                >sub-tit
+                >tit
+                >text
+            >bg or img
+        
+    1) 슬라이드 배너
+      slider-wrap(div)  
+            >slider(div)
+            >ul(inner)
+            >li(item) > sub-tit,desc(tit,txt), imgbx(img) or iframe  
+        indicator(ol)
+        button-box > button(div)
+
+    2) 리스트 슬라이드 배너
+        list-slider-wrap(div): 위치배치용
+            >list-slide(div):사이즈 조절용 
+                >ul(inner)
+                    >li(item) > desc(en-tit(div), tit(div),
+                     div[price(span),금액단위(span)])
+            >thumb-hover(bg or img)
+         >indicator(ol)
+
+    
+
+
+
+
+
+
+
