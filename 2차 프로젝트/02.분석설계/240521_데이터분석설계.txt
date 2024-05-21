@@ -98,7 +98,10 @@ board-title
 
    상단: category-wrap
    상세페이지 내용:
-
+    product-detail-wrap(div)
+        >L-
+            >img
+        >R-
    
     
     
