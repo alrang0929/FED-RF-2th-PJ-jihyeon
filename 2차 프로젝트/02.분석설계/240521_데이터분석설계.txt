@@ -1,35 +1,62 @@
 [모듈별 정의: 구조정의, 객체화, 기능정의]
 
 0. 각 섹션 구분: id 명으로 진행 / 디테일: class
-
-[common 모듈]
-GNB
-    >상단 롤링배너(div)
-        >desc-box(div + 인터발)
-            >desc(a)
-    >logo-bx > img(hi)
-    >L-gnb-box
-        >ul(sub-menu)
-            >li(sub-menu-inner)
-        
-
-
-
-
-
-
-
-
-______________________________________________________________
-
-1. 버튼 클래스: 3가지로 진행
+    랩핑: wrap > box > bx
+0-1. 버튼 클래스: 3가지로 진행
     - button-nomal
     - button-outline
     - button-disable
 
-2. 배너모듈
 
-    0) 배너 호버
+[01. common 모듈]______________________________________________________________
+gnb-wrap
+    >roll-banner(div)
+        >desc-box(div + 인터발)
+            >desc(a)
+    >logo-bx > img(h1)
+    >L-gnb-box
+        >ul(sub-menu)
+            >li(a subm)
+    >R-gnb-box
+        >ul(sub-menu)
+            >li(a subm)
+            >li > iconbox > icbox
+            >li(search-box) > search-bx(icon, ani-box(text-input: 기본값: 검색어를 입력해주세요))
+______________________________________________________________
+footer-wrap
+    >footer
+        >logo(h2)
+        >link-bx > a + span(구분선)
+        >addr
+        >copyright
+        >sns-box > a>img(svg)
+______________________________________________________________
+follow-button
+    top-button
+        img > svg
+    talk-button
+        desc
+______________________________________________________________
+sub-tit-banner
+    >tit-wrap
+        >tit, desc
+    BG
+______________________________________________________________
+    
+category-wrap
+    ul(category-box)
+        >category-selet(h4) div 
+        > category-nomal-bx > a li 
+    span(underLine)
+
+게시판 타이틀
+board-title
+    > board-title
+    > span(underLine)
+
+[2. 배너모듈]______________________________________________________________
+
+    0) 배너 호버(공통)
         thumb-hover(div)
             thumb-inner
                 >icon(img)
@@ -42,11 +69,11 @@ ______________________________________________________________
       slider-wrap(div)  
             >slider(div)
             >ul(inner)
-            >li(item) > sub-tit,desc(tit,txt), imgbx(img) or iframe  
-        indicator(ol)
-        button-box > button(div)
+                >li(item) > sub-tit,desc(tit,txt), imgbx(img) or iframe  
+        >indicator(ol)
+        >button-box(div) > button
 
-    2) 리스트 슬라이드 배너
+    2) 리스트 슬라이드 배너 (1초 마다 1개 넓이 만큼 이동)
         list-slider-wrap(div): 위치배치용
             >list-slide(div):사이즈 조절용 
                 >ul(inner)
@@ -55,6 +82,25 @@ ______________________________________________________________
             >thumb-hover(bg or img)
          >indicator(ol)
 
+    3) 이미지 리스트
+        >ul(inner)
+            >li(item) > desc(en-tit(div), tit(div),
+                    >div[price(span),금액단위(span)])
+                    >sold-out(span / display:none)
+                >>thumb-hover(bg or img)
+    
+    품절시 상태페이지: 
+        옵션선택 disable 상태로 변경
+        버튼: 재고알림 신청하기로 변경
+    
+
+   [3. 상세페이지 모듈]______________________________________________________________ 
+
+   상단: category-wrap
+   상세페이지 내용:
+
+   
+    
     
 
 
