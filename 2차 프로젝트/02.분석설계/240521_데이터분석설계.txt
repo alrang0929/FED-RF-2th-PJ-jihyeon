@@ -35,9 +35,9 @@ follow-button
     top-button
         img > svg
     talk-button
-        desc
+        span
 ______________________________________________________________
-sub-tit-banner
+    roll-banner
     >tit-wrap
         >tit, desc
     BG
