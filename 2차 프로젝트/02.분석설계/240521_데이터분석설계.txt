@@ -16,7 +16,8 @@ gnb-wrap
     >logo-bx > img(h1)
     >L-gnb-box
         >ul(sub-menu)
-            >li(a subm)
+            >ol 1차 메뉴(a subm)
+                >> li 2차 메뉴
     >R-gnb-box
         >ul(sub-menu)
             >li(a subm)
