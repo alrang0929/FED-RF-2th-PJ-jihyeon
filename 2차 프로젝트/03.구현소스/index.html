@@ -76,7 +76,7 @@
       <!-- 탑버튼 -->
       <div class="imgbx" id="top-button">
           <a href="#">
-            <img src="" alt="">
+            <img src="./images/svg/arrow_upward_24dp_FILL0_wght200_GRAD0_opsz24.svg" alt="상단이동">
           </a>
       </div>
       <div class="" id="talk-button">
@@ -86,10 +86,10 @@
      <!-- GNB -->
      <header id="header-wrap">
       <!-- 롤링배너 -->
-      <div class="" id="roll-ban">
-        <div class="" id="cont-box">
-            <div id="cont">
-              <a href=""> 전제품 구매시 핸드크림 샘플 3종 + 핸드겔 파우</a>
+      <div class="" class="roll-ban">
+        <div class="" class="cont-box">
+            <div class="cont">
+              <a href=""> 전제품 구매시 핸드크림 샘플 3종 + 핸드겔 파우치</a>
             </div>
         </div>
       </div>
@@ -98,44 +98,63 @@
         <!-- GNB 왼쪽 메뉴 -->
         <div class="" id="L-submenu-wrap">
           <ul>
-            <ol id="sub-menu">
+            <ol class="sub-menu">
               <!-- 1차 메뉴 -->
               <a href="">1차 메뉴</a>
-                  <li id="sub-inner">
+                  <li class="sub-inner">
                     <a href="">2차 메뉴</a>
                   </li>
-                  <li id="sub-inner">
+                  <li class="sub-inner">
                     <a href="">2차 메뉴</a>
                   </li>
-                  <li id="sub-inner">
+                  <li class="sub-inner">
                     <a href="">2차 메뉴</a>
                   </li>
             </ol>
         </div>
         <!-- 로고박스 -->
       <div class="logo">
-        <h1><img src="" alt="슬밋 로고"></h1>
+        <h1><img src="./images/logo_en.png" alt="슬밋 로고"></h1>
       </div>
         <!-- GNB 오른쪽 메뉴 -->
         <div class="" id="R-submenu-wrap">
           <ul>
-            <ol id="sub-menu">
+            <ol><a href="">LOGIN</a></ol>
+            <ol class="sub-menu">
               <!-- 1차 메뉴 -->
-              <a href="">1차 메뉴</a>
-                  <li id="sub-inner">
+              <a href="">NOTICE</a>
+                  <li class="sub-inner">
                     <a href="">2차 메뉴</a>
                   </li>
-                  <li id="sub-inner">
+                  <li class="sub-inner">
                     <a href="">2차 메뉴</a>
                   </li>
-                  <li id="sub-inner">
+                  <li class="sub-inner">
                     <a href="">2차 메뉴</a>
                   </li>
             </ol>
-            <ul id="icon-menu">
-              <li id="icon-item"><a href="">아이콘</a></li>
-              <li id="icon-item"><a href="">아이콘</a></li>
-              <li id="icon-item"><a href="">아이콘</a></li>
+            <ul class="icon-menu">
+              <li class="icon-item">
+                <a href="">
+                  <img src="./images/svg/local_mall_24dp_FILL0_wght200_GRAD0_opsz24.svg" alt="장바구니">
+                </a>
+              <span class="mall-cunt">(0)</span>
+            </li>
+              <li class="icon-item">
+                <a href="">
+                  <img src="./images/svg/person_24dp_FILL0_wght200_GRAD0_opsz24.svg" alt="내정보">
+                </a>
+              </li>
+              <li class="icon-item">
+                <a href="">
+                  <img src="./images/svg/icon_youtube.svg" alt="유튜브 이동">
+                </a>
+              </li>
+              <li class="icon-item">
+                <a href="">
+                  <img src="./images/svg/search_24dp_FILL0_wght200_GRAD0_opsz24.svg" alt="검색">
+                </a>
+              </li>
             </ul>                
           </ul>
         </div>
@@ -151,8 +170,9 @@
             <li class="item">
               <a href="">
               <div class="cont-box">
-                <span class="sub-tit"></span>  
-                <span class="desc"></span>  
+                <span class="sub-tit">lorem ipsum</span>  
+                <span class="desc">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 </span> 
+                <img src="./images/main_page/mainvisual_01.jpg" alt="메인비쥬얼 1">
               </div>
               </a>
             </li>
@@ -160,28 +180,121 @@
         </div>
       </section>
       <!-- 2. 서브 비쥬얼 슬라이드 영역 -->
-      <section class="" id="sub-visual-area"></section>
+      <section class="" id="sub-visual-area">
+        <ul>
+          <!-- 좌측 메인박스 -->
+          <li class="subvisual_L">
+            <div class="desc-wrap">
+              <div class="category">EVENT</div>
+              <div class="tit">lorem ipsum</div>
+              <span class="desc">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나</span>
+              <span class="desc">그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은</span>
+            </div>
+            <div class="blur">
+              <img src="./images/main_page/subvisual_L.png" alt="좌측 메인이미지">
+            </div>
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R01.jpg" alt="">
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R02.jpg" alt="">
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R03.jpg" alt="">
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R04.jpg" alt="">
+          </li>
+        </ul>
+      </section>
       <!-- 3. 상품추천 리스트 영역 -->
       <section class="prdList">
         <ul>
-          <li><a href=""></a></li>
+          <li>
+            <a href="">
+              <div class="eng-pdtit">Seulmit Soul Insence Stick So Wood
+              </div>
+              <div class="kor-pdtit">
+                슬밋 소울 인센스 스틱 소 우드
+              </div>
+              <div class="desc">
+                나만의 리추얼을 완성하는 소나무 향으로 하루의 지친 몸과 마음을 가장 편안한 공간에서 수면 아래 깊이 내려놓을 수 있게 도와주는 단잠 미스트
+              </div>
+            </a>
+          </li>
         </ul>
       </section>
       <!-- 4. 베스트 상품 추천 배너 -->
-      <section class="best-prdList"></section>
+      <section class="best-prdList">
+        <ul>
+          <li>
+            <div class="desc-wrap">
+              <div class="sub-tit">Skin care</div>
+              <div class="tit">Best item</div>
+              <div class="desc">
+                나에게 오롯이 집중하는 시간. 내 공간을 나만의 향기로 가득 채우는 인센스 스틱과 단잠 미스트로 나만의 리추얼을 완성하세요
+              </div>
+              <button>more view</button>
+            </div>
+            <div class="img-bx">
+              <img src="./images/product/homecare/home_Ritual Set.jpg" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="desc-wrap">
+              <div class="sub-tit">Skin care</div>
+              <div class="tit">Best item</div>
+              <div class="desc">
+                나에게 오롯이 집중하는 시간. 내 공간을 나만의 향기로 가득 채우는 인센스 스틱과 단잠 미스트로 나만의 리추얼을 완성하세요
+              </div>
+              <button>more view</button>
+            </div>
+            <div class="img-bx">
+              <img src="./images/product/homecare/home_Ritual Set.jpg" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="desc-wrap">
+              <div class="sub-tit">Skin care</div>
+              <div class="tit">Best item</div>
+              <div class="desc">
+                나에게 오롯이 집중하는 시간. 내 공간을 나만의 향기로 가득 채우는 인센스 스틱과 단잠 미스트로 나만의 리추얼을 완성하세요
+              </div>
+              <button>more view</button>
+            </div>
+            <div class="img-bx">
+              <img src="./images/product/homecare/home_Ritual Set.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+        <ol class="indicator">헝헝헝</ol>
+      </section>
     </main>
 
     <!-- 하단 영역 -->
     <footer id="footer-area">
       <div id="footer-wrap">
         <div class="logobx">
-          <h2 id="logo"></h2>
+          <h2 id="logo"><img src="./images/logo_en.png" alt="설밋 로고"></h2>
         </div>
-        <address></address>
-        <div id="copyright"></div>
+        <address>
+          <li>상호 : (주)비앤에이치코스메틱</li>
+          <li>대표 : 권기현</li>
+          <li>주소 : 서울특별시 강남구 논현로 731 (논현동) 키드코빌딩 5층</li>
+          <li>사업자등록번호 : 214-88-47878</li>
+          <li>통신판매업신고번호 : 2013-서울강남-00425호 <a href="">[사업자정보확인]</a></li>
+          <li>개인정보관리자 : 권기현(seulmit@bnhcosmetics.co.kr)</li>
+          <li>CUSTOMER SERVICE : 080-343-1803 ㅣ 9:00~17:00 (Lunch time 12:30~13:30) ㅣ 토, 일요일 및 공휴일 휴무</li>
+        </address>
+        <div id="copyright">
+          ⓒ.Seulmit All Rights Reserved designed by Alrang
+        </div>
         <div id="sns-wrap">
           <div class="sns-icon">
-            <a href="">svg</a>
+            <a href=""><img src="./images/svg/icon_facebook.svg" alt="페이스북 이동"></a>
+            <a href=""><img src="./images/svg/icon_instagram.svg" alt="인스타그램 이동"></a>
+            <a href=""><img src="./images/svg/icon_youtube.svg" alt="유튜브 이동"></a>
           </div>
         </div>
       </div>

@@ -1,1 +1,10 @@
 //2차 프로젝트 슬밋 common CSS - _common.scss
+@import "../data/variables";
+
+////////////////////import area////////////////
+
+
+//GNB 영역
+#gnb-area{
+    display: flex;
+}
