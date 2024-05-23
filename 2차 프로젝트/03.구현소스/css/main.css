@@ -161,6 +161,35 @@ html {
   /* margin: 0 auto; */
 }
 
-#gnb-area {
+.fx-box {
   display: flex;
+}
+
+#header-wrap .roll-ban {
+  padding: 10px;
+  background-color: #1E1E1E;
+}
+#header-wrap .roll-ban a {
+  font-size: 13px;
+  color: #FFFFFF;
+}
+#header-wrap #gnb-area {
+  padding: 10px 110px;
+  gap: 0 20px;
+  background-color: #1E1E1E;
+  /* 로고사이즈 변경 */
+  /* 서브메뉴 */
+}
+#header-wrap #gnb-area a {
+  font-size: 13px;
+  color: #FFFFFF;
+}
+#header-wrap #gnb-area #R-submenu-wrap {
+  gap: 0 20px;
+}
+#header-wrap #gnb-area #R-submenu-wrap ul {
+  gap: 0 20px;
+}
+#header-wrap #gnb-area .sub-inner {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

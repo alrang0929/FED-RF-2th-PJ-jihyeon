@@ -4,7 +4,45 @@
 ////////////////////import area////////////////
 
 
+
 //GNB 영역
-#gnb-area{
-    display: flex;
+#header-wrap {
+  .roll-ban {
+    padding: 10px;
+    a {
+      font-size: $fontsize2;
+      color: $FontColor3;
+    }
+    background-color: $MainColor1;
+  }
+
+  #gnb-area {
+    padding: 10px 110px;
+    gap: 0 20px;
+    // justify-content: space-between;
+    background-color: $MainColor1;
+
+    a {
+      font-size: $fontsize2;
+      color: $FontColor3;
+    }
+
+    /* 로고사이즈 변경 */
+
+
+
+
+
+    #R-submenu-wrap{
+        gap: 0 20px;
+        ul{
+            gap: 0 20px;
+        }
+
+    }
+    /* 서브메뉴 */
+    .sub-inner{
+        display: none;
+    }
+  }
 }
