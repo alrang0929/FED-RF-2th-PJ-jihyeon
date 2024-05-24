@@ -162,8 +162,6 @@ html {
   font-family: "Pretendard Variable", sans-serif;
   /* rem 단위 계산 편의를 위하여 */
   font-size: 10px;
-  text-align: center;
-  /* margin: 0 auto; */
 }
 
 .fx-box {
@@ -341,8 +339,6 @@ html {
   font-family: "Pretendard Variable", sans-serif;
   /* rem 단위 계산 편의를 위하여 */
   font-size: 10px;
-  text-align: center;
-  /* margin: 0 auto; */
 }
 
 .fx-box {
@@ -487,6 +483,9 @@ main #main-visual-slider ul > li a .desc {
   margin-top: var(--margin-top-text);
   font-size: 16px;
   font-weight: 200;
+}
+main #sub-visual-area ul {
+  grid-template-columns: repeat(1, 4fr);
 }
 main #sub-visual-area .subvisual_L {
   position: relative;

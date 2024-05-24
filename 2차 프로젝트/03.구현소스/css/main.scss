@@ -33,6 +33,10 @@ main {
   }
 
 #sub-visual-area{
+
+  ul{
+    grid-template-columns: repeat(1, 4fr);
+  }
   .subvisual_L{
     position: relative;
     .desc-wrap{
@@ -40,6 +44,7 @@ main {
       left: 50%;
       top: 50%;
       translate: -50% -50%;
+
     }
   }
 
