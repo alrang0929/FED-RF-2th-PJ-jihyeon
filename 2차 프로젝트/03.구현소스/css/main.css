@@ -174,6 +174,16 @@ html {
   display: grid;
 }
 
+.cbx {
+  /* 부모박스 높이값에 맞춤! */
+  height: 100%;
+}
+
+.bgi {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* 그리드 시스템 12grid 적용 - 가로비율 */
 .col-1 {
   flex-basis: 8.33%;
@@ -343,6 +353,16 @@ html {
   display: grid;
 }
 
+.cbx {
+  /* 부모박스 높이값에 맞춤! */
+  height: 100%;
+}
+
+.bgi {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 :root {
   --font-title: "miller-display", serif;
   --section-margin: 100px;
@@ -424,6 +444,11 @@ html {
   background-color: #1E1E1E;
   color: #D9D9D9;
 }
+#footer-area #footer-wrap {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 40%;
+}
 #footer-area #footer-wrap img {
   max-width: 200px;
 }
@@ -431,6 +456,11 @@ html {
   font-style: normal;
   font-size: 13px;
   font-weight: 200;
+}
+
+/******************* BG cont area *******************/
+.mainvs .bg1 {
+  background: url();
 }
 
 main #main-visual-slider ul > li {

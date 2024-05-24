@@ -46,6 +46,18 @@ html {
 .fx-box{
     display: flex;
 }
+
 .grid-box{
     display: grid;
+}
+
+
+.cbx{
+    /* 부모박스 높이값에 맞춤! */
+    height: 100%;
+}
+
+.bgi{
+    background-repeat: no-repeat;
+    background-size: cover;
 }
