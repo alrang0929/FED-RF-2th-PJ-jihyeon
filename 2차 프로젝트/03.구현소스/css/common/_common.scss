@@ -3,10 +3,17 @@
 
 ////////////////////import area////////////////
 
+:root {
+--section-margin: 100px;
+--fx-menu-gap: gap: 0 20px;
+}
+
+//변수영역////////////////////////////////////////
 
 
 //GNB 영역
 #header-wrap {
+  //롤링배너 설정
   .roll-ban {
     padding: 10px;
     a {
@@ -16,9 +23,11 @@
     background-color: $MainColor1;
   }
 
+  /* gnb 속박스 */
   #gnb-area {
+    //gnb 공통설정
     padding: 10px 110px;
-    gap: 0 20px;
+    gap: var(--fx-menu-gap);
     // justify-content: space-between;
     background-color: $MainColor1;
 
@@ -26,18 +35,34 @@
       font-size: $fontsize2;
       color: $FontColor3;
     }
+   }
 
     /* 로고사이즈 변경 */
 
-
-
-
-
+  /* 좌측메뉴 */
+    #L-submenu-wrap{
+      ul{
+        gap: var(--fx-menu-gap);
+      }
+    }
+    
+    /* 우측메뉴 */
     #R-submenu-wrap{
         gap: 0 20px;
         ul{
             gap: 0 20px;
         }
+
+        
+    //icon 메뉴
+   .icon-item {
+    span.mall-cunt {
+      font-size: $fontsize2;
+      color: $FontColor2;
+  }
+     > a > span{
+        font-weight: 100;
+    }
 
     }
     /* 서브메뉴 */

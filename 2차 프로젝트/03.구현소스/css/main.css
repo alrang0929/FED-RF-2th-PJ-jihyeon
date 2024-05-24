@@ -165,6 +165,17 @@ html {
   display: flex;
 }
 
+:root {
+  --section-margin: 100px;
+  --fx-menu-gap: gap: 0 20px;
+}
+
+#header-wrap {
+  /* gnb 속박스 */
+  /* 로고사이즈 변경 */
+  /* 좌측메뉴 */
+  /* 우측메뉴 */
+}
 #header-wrap .roll-ban {
   padding: 10px;
   background-color: #1E1E1E;
@@ -175,21 +186,30 @@ html {
 }
 #header-wrap #gnb-area {
   padding: 10px 110px;
-  gap: 0 20px;
+  gap: var(--fx-menu-gap);
   background-color: #1E1E1E;
-  /* 로고사이즈 변경 */
-  /* 서브메뉴 */
 }
 #header-wrap #gnb-area a {
   font-size: 13px;
   color: #FFFFFF;
 }
-#header-wrap #gnb-area #R-submenu-wrap {
+#header-wrap #L-submenu-wrap ul {
+  gap: var(--fx-menu-gap);
+}
+#header-wrap #R-submenu-wrap {
+  gap: 0 20px;
+  /* 서브메뉴 */
+}
+#header-wrap #R-submenu-wrap ul {
   gap: 0 20px;
 }
-#header-wrap #gnb-area #R-submenu-wrap ul {
-  gap: 0 20px;
+#header-wrap #R-submenu-wrap .icon-item span.mall-cunt {
+  font-size: 13px;
+  color: #D9D9D9;
 }
-#header-wrap #gnb-area .sub-inner {
+#header-wrap #R-submenu-wrap .icon-item > a > span {
+  font-weight: 100;
+}
+#header-wrap #R-submenu-wrap .sub-inner {
   display: none;
 }/*# sourceMappingURL=main.css.map */
