@@ -4,38 +4,53 @@
 ////import area//////////////////////////////////
 
 /////메인영역
-main{
+main {
+  #main-visual-slider {
+    ul > li {
+      /* 텍스트박스 가운데 위치를 위한 부모박스 */
+      position: relative;
 
-    #main-visual-slider{
-      ul > li{
-        /* 텍스트박스 가운데 위치를 위한 부모박스 */
-        position: relative;
-    
-        .desc-wrap{
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          translate: -50% -50%;
+      .desc-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+      }
+      a {
+        color: $FontColor3;
+        .tit {
+          font-family: var(--font-title);
+          font-size: $fontsize-title1;
         }
-        a{
-          color: $FontColor3;
-          .tit{
-            font-family: var(--font-title);
-            font-size: $fontsize-title1;
-          }
-          .desc{
-            margin-top: var(--margin-top-text);
-    
-            font-size: $fontsize1;
-            font-weight: 200;
-          }
+        .desc {
+          margin-top: var(--margin-top-text);
+
+          font-size: $fontsize1;
+          font-weight: 200;
         }
       }
-    
     }
-    
-    
-    
-    }//////////////////main
-    
-    
+  }
+
+#sub-visual-area{
+  .subvisual_L{
+    position: relative;
+    .desc-wrap{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+    }
+  }
+
+}
+
+
+
+} //////////////////main
+
+/******************* BG cont area *******************/
+
+.mainvs .bg1 {
+  background: url(../main_page/mainvisual_01.jpg);
+}
