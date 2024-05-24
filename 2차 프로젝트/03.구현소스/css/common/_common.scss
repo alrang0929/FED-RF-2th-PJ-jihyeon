@@ -8,9 +8,13 @@
 ////////////////////import area////////////////
 
 :root {
+
+  --font-title: "miller-display", serif;
+
   --section-margin: 100px;
   --fx-menu-gap: 0 20px;
-  --margin-top-text: 20px
+  --margin-top-text: 20px;
+  --padding110: 110px;
 }
 
 //변수영역////////////////////////////////////////
@@ -34,7 +38,7 @@
     //gnb 공통설정
     justify-content: space-between;
 
-    padding: 10px 110px;
+    padding: 10px var(--padding110);
     gap: var(--fx-menu-gap);
     // justify-content: space-between;
     background-color: $MainColor1;
@@ -77,15 +81,15 @@
     gap:var(--fx-menu-gap);
     ul {
       align-items: center;
-      gap:var(--fx-menu-gap);
+      gap: var(--fx-menu-gap);
     }
 
     //icon 메뉴
     .icon-item {
+      align-items: center;
       span.mall-cunt {
         font-size: $fontsize2;
         color: $FontColor2;
-        line-height: 1.8;
       }
       > a > span {
         font-weight: 100;
@@ -98,38 +102,28 @@
   } ////R-menu
 } ////////////header-wrap
 
-/////메인영역
-main{
+/* 푸터영역 */
+#footer-area{
+  padding: 40px;
+  background-color: $MainColor1;
+  color: $FontColor2;
 
-#main-visual-slider{
-  ul > li{
-    /* 텍스트박스 가운데 위치를 위한 부모박스 */
-    position: relative;
+  #footer-wrap{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 40%;
 
-    .desc-box{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      translate: -50% -50%;
-    }
-    a{
-      color: $FontColor3;
-      .tit{
-        font-family: "miller-display", serif;
-        font-size: $fontsize-title2;
-      }
-      .desc{
-        margin-top: var(--margin-top-text);
-
-        font-size: $fontsize1;
-        font-weight: 200;
-      }
+    img{
+      max-width: 200px;
     }
   }
 
+  address{
+    font-style: normal;
+    font-size: $fontsize2;
+    font-weight: 200;
 }
 
+  }
 
-
-}//////////////////main
-
+}////////footer-area

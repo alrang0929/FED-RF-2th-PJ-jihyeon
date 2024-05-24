@@ -170,6 +170,10 @@ html {
   display: flex;
 }
 
+.grid-box {
+  display: grid;
+}
+
 /* 그리드 시스템 12grid 적용 - 가로비율 */
 .col-1 {
   flex-basis: 8.33%;
@@ -335,10 +339,16 @@ html {
   display: flex;
 }
 
+.grid-box {
+  display: grid;
+}
+
 :root {
+  --font-title: "miller-display", serif;
   --section-margin: 100px;
   --fx-menu-gap: 0 20px;
-  --margin-top-text: 20px ;
+  --margin-top-text: 20px;
+  --padding110: 110px;
 }
 
 #header-wrap {
@@ -358,7 +368,7 @@ html {
 #header-wrap #gnb-area {
   position: relative;
   justify-content: space-between;
-  padding: 10px 110px;
+  padding: 10px var(--padding110);
   gap: var(--fx-menu-gap);
   background-color: #1E1E1E;
 }
@@ -394,10 +404,12 @@ html {
   align-items: center;
   gap: var(--fx-menu-gap);
 }
+#header-wrap #R-submenu-wrap .icon-item {
+  align-items: center;
+}
 #header-wrap #R-submenu-wrap .icon-item span.mall-cunt {
   font-size: 13px;
   color: #D9D9D9;
-  line-height: 1.8;
 }
 #header-wrap #R-submenu-wrap .icon-item > a > span {
   font-weight: 100;
@@ -406,11 +418,26 @@ html {
   display: none;
 }
 
+/* 푸터영역 */
+#footer-area {
+  padding: 40px;
+  background-color: #1E1E1E;
+  color: #D9D9D9;
+}
+#footer-area #footer-wrap img {
+  max-width: 200px;
+}
+#footer-area address {
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 200;
+}
+
 main #main-visual-slider ul > li {
   /* 텍스트박스 가운데 위치를 위한 부모박스 */
   position: relative;
 }
-main #main-visual-slider ul > li .desc-box {
+main #main-visual-slider ul > li .desc-wrap {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -420,8 +447,8 @@ main #main-visual-slider ul > li a {
   color: #FFFFFF;
 }
 main #main-visual-slider ul > li a .tit {
-  font-family: "miller-display", serif;
-  font-size: 30px;
+  font-family: var(--font-title);
+  font-size: 45px;
 }
 main #main-visual-slider ul > li a .desc {
   margin-top: var(--margin-top-text);
