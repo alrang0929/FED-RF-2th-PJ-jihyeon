@@ -1,15 +1,19 @@
 //2차 프로젝트 슬밋 common CSS - _common.scss
 @import "../data/variables";
+@import "../common/core";
 
+///웹폰트
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url("https://use.typekit.net/jyj1can.css");
 ////////////////////import area////////////////
 
 :root {
---section-margin: 100px;
---fx-menu-gap: gap: 0 20px;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px
 }
 
 //변수영역////////////////////////////////////////
-
 
 //GNB 영역
 #header-wrap {
@@ -25,7 +29,11 @@
 
   /* gnb 속박스 */
   #gnb-area {
+    //부모박스 설정
+    position: relative;
     //gnb 공통설정
+    justify-content: space-between;
+
     padding: 10px 110px;
     gap: var(--fx-menu-gap);
     // justify-content: space-between;
@@ -35,39 +43,93 @@
       font-size: $fontsize2;
       color: $FontColor3;
     }
-   }
+  }
 
-    /* 로고사이즈 변경 */
+  /* 로고사이즈 변경 */
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    img {
+      max-width: 122px;
+    }
+  }
 
   /* 좌측메뉴 */
-    #L-submenu-wrap{
-      ul{
-        gap: var(--fx-menu-gap);
+  #L-submenu-wrap {
+    ul {
+      align-items: center;
+      gap: var(--fx-menu-gap);
+    }
+    .sub-inner {
+      //임시로 꺼둠
+      display: none;
+      li {
+        align-items: center;
+        justify-content: center;
       }
     }
-    
-    /* 우측메뉴 */
-    #R-submenu-wrap{
-        gap: 0 20px;
-        ul{
-            gap: 0 20px;
-        }
+  } ///L-menu
 
-        
-    //icon 메뉴
-   .icon-item {
-    span.mall-cunt {
-      font-size: $fontsize2;
-      color: $FontColor2;
-  }
-     > a > span{
-        font-weight: 100;
+  /* 우측메뉴 */
+  #R-submenu-wrap {
+    gap:var(--fx-menu-gap);
+    ul {
+      align-items: center;
+      gap:var(--fx-menu-gap);
     }
 
+    //icon 메뉴
+    .icon-item {
+      span.mall-cunt {
+        font-size: $fontsize2;
+        color: $FontColor2;
+        line-height: 1.8;
+      }
+      > a > span {
+        font-weight: 100;
+      }
     }
     /* 서브메뉴 */
-    .sub-inner{
-        display: none;
+    .sub-inner {
+      display: none;
+    }
+  } ////R-menu
+} ////////////header-wrap
+
+/////메인영역
+main{
+
+#main-visual-slider{
+  ul > li{
+    /* 텍스트박스 가운데 위치를 위한 부모박스 */
+    position: relative;
+
+    .desc-box{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+    }
+    a{
+      color: $FontColor3;
+      .tit{
+        font-family: "miller-display", serif;
+        font-size: $fontsize-title2;
+      }
+      .desc{
+        margin-top: var(--margin-top-text);
+
+        font-size: $fontsize1;
+        font-weight: 200;
+      }
     }
   }
+
 }
+
+
+
+}//////////////////main
+
