@@ -23,6 +23,7 @@
 #header-wrap {
   //롤링배너 설정
   .roll-ban {
+    text-align: center;
     padding: 10px;
     a {
       font-size: $fontsize2;
@@ -104,20 +105,26 @@
 
 /* 푸터영역 */
 #footer-area{
+  
   padding: 40px;
   background-color: $MainColor1;
   color: $FontColor2;
 
   #footer-wrap{
-
+    flex-wrap: wrap;
     margin: 0 auto;
 
-    flex-wrap: wrap;
+    text-align: center;
+    line-height: 1.5;
     justify-content: space-around;
     max-width: 40%;
 
     img{
       max-width: 200px;
+    }
+    a{
+      padding-left: 10px;
+      color: $FontColor2;
     }
   }
 

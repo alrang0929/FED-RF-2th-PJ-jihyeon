@@ -374,6 +374,7 @@ html {
   /* 우측메뉴 */
 }
 #header-wrap .roll-ban {
+  text-align: center;
   padding: 10px;
   background-color: #1E1E1E;
 }
@@ -441,13 +442,19 @@ html {
   color: #D9D9D9;
 }
 #footer-area #footer-wrap {
-  margin: 0 auto;
   flex-wrap: wrap;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
   justify-content: space-around;
   max-width: 40%;
 }
 #footer-area #footer-wrap img {
   max-width: 200px;
+}
+#footer-area #footer-wrap a {
+  padding-left: 10px;
+  color: #D9D9D9;
 }
 #footer-area address {
   margin-top: 30px;
@@ -485,7 +492,7 @@ main #main-visual-slider ul > li a .desc {
   font-weight: 200;
 }
 main #sub-visual-area ul {
-  grid-template-columns: repeat(1, 4fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 main #sub-visual-area .subvisual_L {
   position: relative;
@@ -495,6 +502,9 @@ main #sub-visual-area .subvisual_L .desc-wrap {
   left: 50%;
   top: 50%;
   translate: -50% -50%;
+}
+main #sub-visual-area img {
+  width: 100%;
 }
 
 /******************* BG cont area *******************/
