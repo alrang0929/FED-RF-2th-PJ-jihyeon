@@ -1,6 +1,7 @@
 //2차 프로젝트 슬밋 core CSS - _core.scss
 @import "./grid_12_flex";
 @import "./reset";
+@import "../css/data/variables";
 
 ///////웹폰트 영역///////////////////////
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
@@ -26,7 +27,7 @@ font-weight: 700;
 font-style: normal;
 unicode-range: U+0041-005A
 
-
+ 
 */
 body{
     border: 1px dotted #797979;
@@ -58,4 +59,24 @@ html {
 .bgi{
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+
+/* 버튼 클래스 */
+.button-nomal{
+    padding: 15px 20px;
+
+    text-align-last: left;
+    color: $FontColor1;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid $MainColor1;
+    
+    :hover{
+        background-color: $MainColor1;
+        color: $FontColor3;
+
+    }
+
 }

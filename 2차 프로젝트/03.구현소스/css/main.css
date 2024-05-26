@@ -67,11 +67,7 @@
 
 */
 .cont-box {
-  /* width: 90vw; */
-  /* display: flex; */
-  margin: 0 auto;
-  /*     height: 100%;
-   */
+  max-width: 1600px;
 }
 
 /* 기본 초기화 셋팅 */
@@ -180,6 +176,16 @@ html {
 .bgi {
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* 버튼 클래스 */
+.button-namal {
+  -moz-text-align-last: left;
+       text-align-last: left;
+  width: 200px;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid #1E1E1E;
 }
 
 /* 그리드 시스템 12grid 적용 - 가로비율 */
@@ -244,11 +250,7 @@ html {
 
 */
 .cont-box {
-  /* width: 90vw; */
-  /* display: flex; */
-  margin: 0 auto;
-  /*     height: 100%;
-   */
+  max-width: 1600px;
 }
 
 /* 기본 초기화 셋팅 */
@@ -357,6 +359,16 @@ html {
 .bgi {
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* 버튼 클래스 */
+.button-namal {
+  -moz-text-align-last: left;
+       text-align-last: left;
+  width: 200px;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid #1E1E1E;
 }
 
 :root {
@@ -445,7 +457,7 @@ html {
   flex-wrap: wrap;
   margin: 0 auto;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1;
   justify-content: space-around;
   max-width: 40%;
 }
@@ -467,6 +479,24 @@ html {
 }
 #footer-area #copyright {
   margin: 30px 0;
+}
+
+/* 탑버튼 */
+#follow-button {
+  color: #1E1E1E;
+}
+#follow-button div {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+:root {
+  --font-title: "miller-display", serif;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --padding110: 110px;
 }
 
 main #main-visual-slider ul > li {
@@ -495,6 +525,7 @@ main #sub-visual-area ul {
   grid-template-columns: repeat(4, 1fr);
 }
 main #sub-visual-area .subvisual_L {
+  grid-area: 1/1/3/3;
   position: relative;
 }
 main #sub-visual-area .subvisual_L .desc-wrap {
@@ -503,7 +534,51 @@ main #sub-visual-area .subvisual_L .desc-wrap {
   top: 50%;
   translate: -50% -50%;
 }
+main #sub-visual-area .subvisual-R {
+  position: relative;
+}
+main #sub-visual-area .subvisual-R > li {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
 main #sub-visual-area img {
+  width: 100%;
+}
+main #best-prdList .slider {
+  flex-wrap: nowrap;
+  width: 100vw;
+  overflow: hidden;
+}
+main #best-prdList .slider ul {
+  width: 100vw;
+  align-items: center;
+}
+main #best-prdList .slider ul .L-item {
+  padding: 20px;
+  padding-left: 110px;
+}
+main #best-prdList .slider ul li {
+  width: 50vw;
+  display: block;
+}
+main #best-prdList .slider ul li .sub-tit {
+  font-size: 16px;
+  padding-top: var(--margin-top-text);
+}
+main #best-prdList .slider ul li .tit {
+  font-size: 45px;
+  font-weight: 600;
+  padding-top: var(--margin-top-text);
+}
+main #best-prdList .slider ul li .desc {
+  width: 40%;
+  font-size: 13px;
+  padding-top: var(--margin-top-text);
+  line-height: 1.7;
+}
+main #best-prdList .slider ul li img {
   width: 100%;
 }
 
