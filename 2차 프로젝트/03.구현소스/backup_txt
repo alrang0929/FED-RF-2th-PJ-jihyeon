@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seulmit 슬밋</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/pavicon_seulmit.png" />
+
+    <!-- 구글 폰트 아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- 메인 JS -->
+    <script src="./js/main.js" type="module"></script>
+
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="./css/media.css">
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- 제이쿼리 라이브러리 상단에 불러오기 -->
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <script src="./JS/jquery-ui.min.js"></script>
+
+    <!-- 1.리액트 기본 라이브러리 -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <!-- 2.리액트 가상돔 라이브러리 -->
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+
+    <!-- 3.리액트 바벨 라이브러리 -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- 데이터 JSX 호출 영역 -->
+    <!-- <script
+      src="./js/data/gu_data.js"
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+    ></script> -->
+    <!-- DOM 기능JS 호출 -->
+    <!-- <script
+      src="./js/common/com_fn.js"
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+    ></script> -->
+    <!-- 서브컴포넌트1 등록 -->
+    <!-- <script
+      src="./js/components/good_list.jsx"
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+    ></script> -->
+    <!-- 메인 JSX 호출 -->
+    <!-- <script
+      src="./js/01.공유신발.jsx"
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+    ></script> -->
+  </head>
+  <body>
+
+    <!-- 인트로 영역 -->
+    <div id="intro-area">
+      <div class="img-bx">
+        <img src="" alt="">
+      </div>
+    </div>
+    <!--follow 버튼 -->
+    <div class="" id="follow-button">
+      <!-- 탑버튼 -->
+      <div class="imgbx" id="top-button">
+          <a href="#">
+            <img src="./images/svg/arrow_upward_24dp_FILL0_wght200_GRAD0_opsz24.svg" alt="상단이동">
+          </a>
+      </div>
+      <div class="" id="talk-button">
+        <span>Talk</span>
+      </div>
+    </div>
+     <!-- GNB -->
+     <header id="header-wrap">
+      <!-- 롤링배너 -->
+      <div class="roll-ban">
+        <div class="">
+            <div class="cont">
+              <a href=""> 전제품 구매시 핸드크림 샘플 3종 + 핸드겔 파우치</a>
+            </div>
+        </div>
+      </div>
+       <!-- GNB 배너 -->
+       <div class="fx-box" id="gnb-area">
+        <!-- GNB 왼쪽 메뉴 -->
+        <div class="fx-box" id="L-submenu-wrap">
+          <ul class="fx-box">
+            <ol class="sub-menu">
+              <!-- 1차 메뉴 -->
+              <a href="">1차 메뉴</a>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+            </ol>
+            <ol class="sub-menu">
+              <!-- 1차 메뉴 -->
+              <a href="">1차 메뉴</a>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+            </ol>
+            <ol class="sub-menu">
+              <!-- 1차 메뉴 -->
+              <a href="">1차 메뉴</a>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+            </ol>
+        </div>
+        <!-- 로고박스 -->
+      <div class="logo">
+        <h1><a href=""><img src="./images/logo_en.png" alt="슬밋 로고"></a></h1>
+      </div>
+        <!-- GNB 오른쪽 메뉴 -->
+        <div class="fx-box" id="R-submenu-wrap">
+          <ul class="fx-box">
+            <ol><a href="">LOGIN</a></ol>
+            <ol class="sub-menu">
+              <!-- 1차 메뉴 -->
+              <a href="">NOTICE</a>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+                  <li class="sub-inner">
+                    <a href="">2차 메뉴</a>
+                  </li>
+            </ol>
+            <ul class="icon-menu fx-box">
+              <li class="icon-item fx-box">
+                <a href="">
+                  <span class="material-symbols-outlined">
+                    local_mall
+                    </span>
+                </a>
+              <span class="mall-cunt">(0)</span>
+            </li>
+              <li class="icon-item">
+                <a href="">
+                  <span class="material-symbols-outlined">
+                    person
+                    </span>
+                </a>
+              </li>
+              <li class="icon-item">
+                <a href="">
+                  <span class="material-symbols-outlined">
+                    search
+                    </span>
+                </a>
+              </li>
+            </ul>                
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- 메인 영역 -->
+    <main id="main-area">
+      <!-- 1. 메인 비쥬얼 슬라이드 영역 -->
+      <section class="" id="main-visual-area">
+        <div class="" id="main-visual-slider">
+          <!-- 슬라이드 -->
+          <ul class="slider-inner fx-box">
+            <li class="item">
+              <div class="cont-box">
+                <a href="">
+                <div class="desc-wrap">
+                  <div class="tit">lorem ipsum</div>  
+                  <div class="desc">
+                    로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 
+                  </div> 
+                </a>
+                </div>
+                <img src="./images/main_page/mainvisual_01.jpg" alt="메인비쥬얼 1">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 2. 서브 비쥬얼 슬라이드 영역 -->
+      <section class=" " id="sub-visual-area">
+        <ul class="grid-box">
+          <!-- 좌측 메인박스 -->
+          <li class="subvisual_L col-6">
+            <div class="desc-wrap">
+              <div class="category">EVENT</div>
+              <div class="tit">lorem ipsum</div>
+              <span class="desc">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나</span>
+              <span class="desc">그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은</span>
+            </div>
+            <div class="blur">
+              <img src="./images/main_page/subvisual_L.png" alt="">
+            </div>
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R01.jpg" alt="">
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R02.jpg" alt="">
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R03.jpg" alt="">
+          </li>
+          <li class="subvisual-R">
+            <img src="./images/main_page/subvisual_R04.jpg" alt="">
+          </li>
+        </ul>
+      </section>
+      <!-- 3. 상품추천 리스트 영역 -->
+      <section class="prdList">
+        <ul class="">
+          <li>
+            <a href="">
+              <div class="eng-pdtit">Seulmit Soul Insence Stick So Wood
+              </div>
+              <div class="kor-pdtit">
+                슬밋 소울 인센스 스틱 소 우드
+              </div>
+              <div class="desc">
+                나만의 리추얼을 완성하는 소나무 향으로 하루의 지친 몸과 마음을 가장 편안한 공간에서 수면 아래 깊이 내려놓을 수 있게 도와주는 단잠 미스트
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- 4. 베스트 상품 추천 배너 -->
+      <section id="best-prdList">
+        <div class="slider fx-box">
+          <ul class="inner fx-box">
+            <li class="L-item item">
+              <div class="desc-wrap">
+                <div class="sub-tit">Skin care</div>
+                <div class="tit">Best item</div>
+                <div class="desc">
+                  나에게 오롯이 집중하는 시간. 내 공간을 나만의 향기로 가득 채우는 인센스 스틱과 단잠 미스트로 나만의 리추얼을 완성하세요
+                </div>
+                <button class="button-nomal">more view</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="img-bx">
+                <img src="./images/product/homecare/home_Ritual Set.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+          <ul class="inner fx-box">
+            <li class="L-item item">
+              <div class=" desc-wrap">
+                <div class="sub-tit">Skin care</div>
+                <div class="tit">Best item</div>
+                <div class="desc">
+                  나에게 오롯이 집중하는 시간. 내 공간을 나만의 향기로 가득 채우는 인센스 스틱과 단잠 미스트로 나만의 리추얼을 완성하세요
+                </div>
+                <button>more view</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="img-bx">
+                <img src="./images/product/homecare/home_Ritual Set.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+          <ul class="inner fx-box">
+            <li class="L-item">
+              <div class="desc-wrap">
+                <div class="sub-tit">Skin care</div>
+                <div class="tit">Best item</div>
+                <div class="desc">
+                  나에게 오롯이 집중하는 시간. 내 공간을 나만의 향기로 가득 채우는 인센스 스틱과 단잠 미스트로 나만의 리추얼을 완성하세요
+                </div>
+                <button>more view</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="img-bx">
+                <img src="./images/product/homecare/home_Ritual Set.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <ol class="indicator">헝헝헝</ol>
+    </main>
+
+    <!-- 하단 영역 -->
+    <footer id="footer-area">
+      <div id="footer-wrap">
+        <div class="logobx">
+          <h2 id="logo"><img src="./images/logo_en.png" alt="설밋 로고"></h2>
+        </div>
+        <address class="fx-box">
+          <li>상호 : (주)비앤에이치코스메틱</li>
+          <li>대표 : 권기현</li>
+          <li>주소 : 서울특별시 강남구 논현로 731 (논현동) 키드코빌딩 5층</li>
+          <li>사업자등록번호 : 214-88-47878</li>
+          <li>통신판매업신고번호 : 2013-서울강남-00425호 <a href="">[사업자정보확인]</a></li>
+          <li>개인정보관리자 : 권기현(seulmit@bnhcosmetics.co.kr)</li>
+          <li>CUSTOMER SERVICE : 080-343-1803 ㅣ 9:00~17:00 (Lunch time 12:30~13:30) ㅣ 토, 일요일 및 공휴일 휴무</li>
+        </address>
+        <div id="copyright">
+          ⓒ.Seulmit All Rights Reserved designed by Alrang
+        </div>
+        <div id="sns-wrap">
+          <div class="sns-icon">
+            <a href=""><img src="./images/svg/icon_facebook.svg" alt="페이스북 이동"></a>
+            <a href=""><img src="./images/svg/icon_instagram.svg" alt="인스타그램 이동"></a>
+            <a href=""><img src="./images/svg/icon_youtube.svg" alt="유튜브 이동"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
