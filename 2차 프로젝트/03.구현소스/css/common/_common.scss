@@ -14,32 +14,20 @@
 
 //변수영역////////////////////////////////////////
 
-//인트로 영역
-#intro-area{
-  position: relative;
-  height: 100vh;
-  background-color: $MainColor1;
+.mask-logo{
+  position: absolute;
 
-
-  .logo-box{
-    
-    background-image: url(../intro_BG.jpg);
-    -webkit-mask-image: url(../logo_ko.svg);
-    mask-image: url(../intro_BG.jpg);
-    -webkit-mask-repeat: no-repeat;
+    mask-image: url(../logo_ko.png);
+    mask-position: center;
     mask-repeat: no-repeat;
+    mask-size: 550px;
+}
 
-    position: absolute;
-    color: #fff;
-    translate: -50% -50%;
-    top: 50%;
-    left: 50%;
-    height: 40%;
-    
-    svg{
-      height: 100%;
-    }
-  }
+//인트로 영역
+#intro-area {
+    position: relative;
+    height: 100vh;
+    background-color: $MainColor1;
 }
 
 //GNB 영역
@@ -77,20 +65,26 @@
             .sub-menu {
                 align-items: center;
                 gap: var(--fx-menu-gap);
-                margin-left: 20px;
+                margin-left: 10px;
                 & > a {
-                    font-size: $fontsize1;
+                    font-size: $fontsize2;
                     font-weight: 200;
                     color: $FontColor3;
+
+                    &:hover .sub-inner{
+                      height: 200px;
+                    }
                 }
-                li {
+                .sub-inner{
                     overflow: hidden;
                     height: 0;
                     > a {
+                      display: none;
                         font-size: $fontsize2;
                         font-weight: 200;
                         color: $FontColor3;
                     }
+
                 }
             }
         } ///L-menu
@@ -105,7 +99,7 @@
                 li {
                     > a {
                         margin-left: 20px;
-                        font-size: $fontsize1;
+                        font-size: $fontsize2;
                         font-weight: 200;
                         font-weight: 200;
                         color: $FontColor3;
@@ -126,7 +120,7 @@
 
 /* 푸터영역 */
 #footer-area {
-    padding: 40px;
+    padding: 80px;
     background-color: $MainColor1;
     color: $FontColor2;
 
@@ -135,7 +129,7 @@
         margin: 0 auto;
 
         text-align: center;
-        line-height: 1;
+        line-height: 1.5;
         justify-content: space-around;
         max-width: 40%;
 
@@ -164,9 +158,10 @@
 
 /* 탑버튼 */
 #follow-button {
-    position: absolute;
-    left: 0;
-    top: 0;
+  position: fixed;
+    // position: absolute;
+    left: 97vw;
+    top: 92vh;
     z-index: 9999;
 
     #top-button {
