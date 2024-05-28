@@ -8,14 +8,12 @@
 ////import area//////////////////////////////////
 
 :root {
-
   --font-title: "miller-display", serif;
   --section-margin: 100px;
   --fx-menu-gap: 0 20px;
   --margin-top-text: 20px;
   --padding110: 110px;
-} 
-
+}
 
 /////메인영역
 main {
@@ -46,86 +44,147 @@ main {
     }
   }
 
-#sub-visual-area{
-
-  ul{
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .subvisual_L{
-    grid-area: 1/1/3/3;
-
-    position: relative;
-    .desc-wrap{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      translate: -50% -50%;
+  #sub-visual {
+    ul {
+      height: 100vh;
+      grid-template-columns: repeat(4, 1fr);
     }
-  }/////subvisual_L
-  .subvisual-R{
-    position: relative;
-    &>li{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      translate: -50% -50%;
-    }
-  }
+    .main-box {
+      grid-area: 1/1/3/3;
 
-  img{
-    width: 100%;
-  }
-}
-
-#best-prdList
-{
-  .slider{
-    flex-wrap: nowrap;
-    width: 100vw;
-    overflow: hidden;
-    ul{
-      width: 100vw;
-      align-items: center;
-
-      .L-item{
-        padding: 20px;
-        padding-left: 110px;
+      position: relative;
+      .desc-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
       }
+    } /////subvisual_L
+    .subvisual-R {
+      position: relative;
+      & > li {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+      }
+    }
 
-      li{
-        width: 50vw;
-        display: block;
+    img {
+      width: 100%;
+    }
+  }
 
-        .sub-tit{
-          font-size: $fontsize1;
-          padding-top: var( --margin-top-text);
+  /* 상품추천 리스트 */
+  #prd-list {
+    .slider {
+      margin: 0 auto;
+      li {
+        //이미지 설정
+        .img-wrap {
+          position: relative;
+          .imgbx {
+            opacity: 1;
+            transition: opacity 0.4s;
+
+            &:hover {
+              opacity: 0;
+            }
+          }
+
+          .blur {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+          }
+          img {
+            width: 100%;
+          }
         }
-        .tit{
-          font-size: $fontsize-title1;
-          font-weight: 600;
-          padding-top: var( --margin-top-text);
-        }
 
-        .desc{
+        //텍스트 설정
+        .desc-wrap {
           width: 40%;
-          font-size: $fontsize2;
-          padding-top: var( --margin-top-text);
-          line-height: 1.7;
-        }
+          .eng-pdtit {
+            color: $FontColor2;
+            font-size: $fontsize2;
+          }
+          .kor-pdtit{
+            color: $FontColor1;
+            font-size: $fontsize1;
+            font-weight: 600;
 
-        img{
-          width: 100%;
+            margin-top: var(--margin-top-text);
+          }
+          
+          .desc{
+            font-size: $fontsize2;
+            line-height: 1.5;
+            margin: var(--margin-top-text) 0;
+          }
         }
       }
     }
   }
-}
 
+  #best-prdList {
+    .slider {
+      flex-wrap: nowrap;
+      width: 100vw;
+      overflow: hidden;
+      ul {
+        width: 100vw;
+        align-items: center;
 
+        .L-item {
+          padding: 20px;
+          padding-left: 110px;
+        }
+
+        li {
+          width: 50vw;
+          display: block;
+
+          .sub-tit {
+            font-size: $fontsize1;
+            padding-top: var(--margin-top-text);
+          }
+          .tit {
+            font-size: $fontsize-title3;
+            font-weight: 600;
+            padding-top: var(--margin-top-text);
+          }
+
+          .desc {
+            width: 40%;
+            font-size: $fontsize2;
+            padding-top: var(--margin-top-text);
+            line-height: 1.7;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 } //////////////////main
 
 /******************* BG cont area *******************/
-
-.mainvs .bg1 {
-  background: url(../main_page/mainvisual_01.jpg);
+//서브 비쥬얼 배너
+.main-box.bg1 {
+  background: url(../images/main_page/subvisual_L.png);
+}
+.sub-box.bg2 {
+  background: url(../images/main_page/subvisual_R01.jpg);
+}
+.sub-box.bg3 {
+  background: url(../images/main_page/subvisual_R02.jpg);
+}
+.sub-box.bg3 {
+  background: url(../images/main_page/subvisual_R03.jpg);
+}
+.sub-box.bg4 {
+  background: url(../images/main_page/subvisual_R04.jpg);
 }

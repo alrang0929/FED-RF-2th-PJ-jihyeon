@@ -4,7 +4,6 @@
 ////////////////////import area////////////////
 
 :root {
-
   --font-title: "miller-display", serif;
 
   --section-margin: 100px;
@@ -19,17 +18,83 @@
 #header-area {
   background-color: $MainColor1;
   text-align: center;
- 
+
+  .roll-ben {
+    text-align: center;
+    padding: 10px;
+    a {
+      font-size: $fontsize2;
+      color: $FontColor3;
+    }
+    background-color: $MainColor1;
+  }
+  
+  #gnb-area {
+    position: relative;
+    justify-content: space-between;
+    padding: 20px 110px;
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      img {
+        max-width: 120px;
+      }
+    }
+
+    /* 좌측메뉴 */
+    #L-menu-wrap {
+      .sub-menu {
+        align-items: center;
+        gap: var(--fx-menu-gap);
+        margin-left: 20px;
+        & > li {
+          //임시로 꺼둠
+          display: none;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    } ///L-menu
+
+    /* 우측메뉴 */
+    #R-menu-wrap {
+      gap: var(--fx-menu-gap);
+      ul {
+        align-items: center;
+        gap: var(--fx-menu-gap);
+
+        li {
+          align-items: center;
+
+          .icon-img {
+            font-weight: 200;
+            font-size: 20px;
+            .mall-cunt {
+              font-size: $fontsize1;
+              flood-color: $FontColor3;
+            }
+          }
+        }
+      }
+    } //gnb area
+    a {
+      color: $FontColor3;
+      font-weight: 200;
+      font-size: $fontsize2;
+    }
+  } /////gnb area
 } ////////////header-wrap
 
 /* 푸터영역 */
-#footer-area{
-   
+#footer-area {
   padding: 40px;
   background-color: $MainColor1;
   color: $FontColor2;
 
-  #footer-wrap{
+  #footer-wrap {
     flex-wrap: wrap;
     margin: 0 auto;
 
@@ -38,16 +103,16 @@
     justify-content: space-around;
     max-width: 40%;
 
-    img{
+    img {
       max-width: 200px;
     }
-    a{
+    a {
       padding-left: 10px;
       color: $FontColor2;
     }
   }
 
-  address{
+  address {
     margin-top: 30px;
     font-style: normal;
     font-size: $fontsize2;
@@ -55,23 +120,18 @@
     gap: 5px 0;
     flex-wrap: wrap;
     justify-content: center;
-}
-#copyright{
-  margin: 30px 0;
-}
-
-  }////////footer-area
-
-
-
-  /* 탑버튼 */
-  #follow-button{
-    div{
-      display: block;
-      width: 50px;
-      height: 50px;
-    }
-    color: $MainColor1;
   }
+  #copyright {
+    margin: 30px 0;
+  }
+} ////////footer-area
 
-
+/* 탑버튼 */
+#follow-button {
+  div {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  color: $MainColor1;
+}
