@@ -1,7 +1,5 @@
 //2차 프로젝트 슬밋 메인 CSS - main.scss
-@import "./common/core";
-@import "./common/common";
-@import "../css/data/variables";
+@import "./common/core"; 
 ////import area//////////////////////////////////
 
 :root {
@@ -11,7 +9,7 @@
   --fx-menu-gap: 0 20px;
   --margin-top-text: 20px;
   --padding110: 110px;
-}
+} 
 
 
 /////메인영역

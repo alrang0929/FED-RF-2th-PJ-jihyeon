@@ -1,0 +1,158 @@
+//2차 프로젝트 슬밋 common CSS - _common.scss
+@import "../data/variables";
+@import "../common/core";
+
+///웹폰트
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url("https://use.typekit.net/jyj1can.css");
+////////////////////import area////////////////
+
+:root {
+
+  --font-title: "miller-display", serif;
+
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --padding110: 110px;
+}
+
+//변수영역////////////////////////////////////////
+
+//GNB 영역
+#header-area {
+  //롤링배너 설정
+  .roll-ben {
+    text-align: center;
+    padding: 10px;
+    a {
+      font-size: $fontsize2;
+      color: $FontColor3;
+    }
+    background-color: $MainColor1;
+  }
+
+  /* gnb 속박스 */
+  #gnb-area {
+    //부모박스 설정
+    position: relative;
+    //gnb 공통설정
+    justify-content: space-between;
+
+    padding: 10px var(--padding110);
+    gap: var(--fx-menu-gap);
+    // justify-content: space-between;
+    background-color: $MainColor1;
+
+    a {
+      font-size: $fontsize2;
+      color: $FontColor3;
+    }
+  }
+
+  /* 로고사이즈 변경 */
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    img {
+      max-width: 122px;
+    }
+  }
+
+  /* 좌측메뉴 */
+  #L-submenu-wrap {
+    ul {
+      align-items: center;
+      gap: var(--fx-menu-gap);
+    }
+    .sub-inner {
+      //임시로 꺼둠
+      display: none;
+      li {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  } ///L-menu
+
+  /* 우측메뉴 */
+  #R-submenu-wrap {
+    gap:var(--fx-menu-gap);
+    ul {
+      align-items: center;
+      gap: var(--fx-menu-gap);
+    }
+
+    //icon 메뉴
+    .icon-item {
+      align-items: center;
+      span.mall-cunt {
+        font-size: $fontsize2;
+        color: $FontColor2;
+      }
+      > a > span {
+        font-weight: 100;
+      }
+    }
+    /* 서브메뉴 */
+    .sub-inner {
+      display: none;
+    }
+  } ////R-menu
+} ////////////header-wrap
+
+/* 푸터영역 */
+#footer-area{
+  
+  padding: 40px;
+  background-color: $MainColor1;
+  color: $FontColor2;
+
+  #footer-wrap{
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    text-align: center;
+    line-height: 1;
+    justify-content: space-around;
+    max-width: 40%;
+
+    img{
+      max-width: 200px;
+    }
+    a{
+      padding-left: 10px;
+      color: $FontColor2;
+    }
+  }
+
+  address{
+    margin-top: 30px;
+    font-style: normal;
+    font-size: $fontsize2;
+    font-weight: 200;
+    gap: 5px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#copyright{
+  margin: 30px 0;
+}
+
+  }////////footer-area
+
+
+
+  /* 탑버튼 */
+  #follow-button{
+    div{
+      display: block;
+      width: 50px;
+      height: 50px;
+    }
+    color: $MainColor1;
+  }
+
+
