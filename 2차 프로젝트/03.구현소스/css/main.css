@@ -145,13 +145,19 @@ unicode-range: U+0041-005A
 
 */
 body {
+  position: relative;
   border: 1px dotted #797979;
+  overflow-x: hidden;
 }
 
 html {
   font-family: "Pretendard Variable", sans-serif;
   /* rem 단위 계산 편의를 위하여 */
   font-size: 10px;
+}
+
+.svg-area {
+  display: none;
 }
 
 .fx-box {
@@ -200,8 +206,29 @@ html {
   --padding110: 110px;
 }
 
-#header-area {
+#intro-area {
+  position: relative;
+  height: 100vh;
   background-color: #1E1E1E;
+}
+#intro-area .logo-box {
+  background-image: url(../intro_BG.jpg);
+  -webkit-mask-image: url(../logo_ko.svg);
+  mask-image: url(../intro_BG.jpg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  position: absolute;
+  color: #fff;
+  translate: -50% -50%;
+  top: 50%;
+  left: 50%;
+  height: 40%;
+}
+#intro-area .logo-box svg {
+  height: 100%;
+}
+
+#header-area {
   text-align: center;
 }
 #header-area .roll-ben {
@@ -214,6 +241,7 @@ html {
   color: #FFFFFF;
 }
 #header-area #gnb-area {
+  background-color: #1E1E1E;
   position: relative;
   justify-content: space-between;
   padding: 20px 110px;
@@ -229,38 +257,48 @@ html {
 #header-area #gnb-area .logo img {
   max-width: 120px;
 }
+#header-area #gnb-area #L-menu-wrap {
+  align-items: center;
+}
 #header-area #gnb-area #L-menu-wrap .sub-menu {
   align-items: center;
   gap: var(--fx-menu-gap);
   margin-left: 20px;
 }
-#header-area #gnb-area #L-menu-wrap .sub-menu > li {
-  display: none;
-  align-items: center;
-  justify-content: center;
+#header-area #gnb-area #L-menu-wrap .sub-menu > a {
+  font-size: 16px;
+  font-weight: 200;
+  color: #FFFFFF;
 }
-#header-area #gnb-area #R-menu-wrap {
-  gap: var(--fx-menu-gap);
+#header-area #gnb-area #L-menu-wrap .sub-menu li {
+  overflow: hidden;
+  height: 0;
+}
+#header-area #gnb-area #L-menu-wrap .sub-menu li > a {
+  font-size: 13px;
+  font-weight: 200;
+  color: #FFFFFF;
 }
 #header-area #gnb-area #R-menu-wrap ul {
   align-items: center;
-  gap: var(--fx-menu-gap);
 }
-#header-area #gnb-area #R-menu-wrap ul li {
+#header-area #gnb-area #R-menu-wrap ul .icon-item {
   align-items: center;
 }
-#header-area #gnb-area #R-menu-wrap ul li .icon-img {
-  font-weight: 200;
-  font-size: 20px;
-}
-#header-area #gnb-area #R-menu-wrap ul li .icon-img .mall-cunt {
+#header-area #gnb-area #R-menu-wrap ul li > a {
+  margin-left: 20px;
   font-size: 16px;
-  flood-color: #FFFFFF;
-}
-#header-area #gnb-area a {
-  color: #FFFFFF;
   font-weight: 200;
-  font-size: 13px;
+  font-weight: 200;
+  color: #FFFFFF;
+}
+#header-area #gnb-area #R-menu-wrap ul li .icon-img {
+  font-size: 35px;
+  font-weight: 100;
+}
+#header-area #gnb-area #R-menu-wrap ul li .mall {
+  align-items: center;
+  font-size: 30px;
 }
 
 /* 푸터영역 */
@@ -299,12 +337,35 @@ html {
 
 /* 탑버튼 */
 #follow-button {
-  color: #1E1E1E;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
 }
-#follow-button div {
-  display: block;
-  width: 50px;
-  height: 50px;
+#follow-button #top-button {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #1E1E1E;
+  width: 40px;
+  height: 40px;
+}
+#follow-button #top-button a {
+  color: #FFFFFF;
+}
+#follow-button #top-button a span {
+  font-weight: 150;
+}
+#follow-button #talk-button {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #494D4B;
+}
+#follow-button #talk-button a {
+  font-size: 13px;
+  font-weight: 200;
+  color: #FFFFFF;
 }
 
 /* 그리드 시스템 12grid 적용 - 가로비율 */
@@ -567,13 +628,19 @@ unicode-range: U+0041-005A
 
 */
 body {
+  position: relative;
   border: 1px dotted #797979;
+  overflow-x: hidden;
 }
 
 html {
   font-family: "Pretendard Variable", sans-serif;
   /* rem 단위 계산 편의를 위하여 */
   font-size: 10px;
+}
+
+.svg-area {
+  display: none;
 }
 
 .fx-box {
