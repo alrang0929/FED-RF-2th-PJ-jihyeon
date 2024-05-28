@@ -1,450 +1,14 @@
 @charset "UTF-8";
-/* 그리드 시스템 12grid 적용 - 가로비율 */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
-@import url("https://use.typekit.net/jyj1can.css");
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
-@import url("https://use.typekit.net/jyj1can.css");
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
-@import url("https://use.typekit.net/jyj1can.css");
-.col-1 {
-  flex-basis: 8.33%;
-}
-
-.col-2 {
-  flex-basis: 16.66%;
-}
-
-.col-3 {
-  flex-basis: 25%;
-}
-
-.col-4 {
-  flex-basis: 33.33%;
-}
-
-.col-5 {
-  flex-basis: 41.66%;
-}
-
-.col-6 {
-  flex-basis: 50%;
-}
-
-.col-7 {
-  flex-basis: 58.33%;
-}
-
-.col-8 {
-  flex-basis: 66.66%;
-}
-
-.col-9 {
-  flex-basis: 75%;
-}
-
-.col-10 {
-  flex-basis: 83.33%;
-}
-
-.col-11 {
-  flex-basis: 91.66%;
-}
-
-.col-12 {
-  flex-basis: 100%;
-}
-
-/* 파티션 비율박스 공통*/
-[class*=col-] {
-  /* padding: 10px; */
-  box-sizing: border-box;
-  /* 원래는 높이값 100%로 부모박스 채우기를 해야하지만 flex의 자식 요소는
-  자동으로 부모를 채우도록 설정되어있다 */
-}
-
-/* 컨텐트 박스  
--> 플랙스박스는 싸고있는 부모를 설정함!
-
-*/
-.cont-box {
-  max-width: 1600px;
-}
-
-/* 기본 초기화 셋팅 */
-/* 기본 초기화 */
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-dl,
-dt,
-dd,
-p,
-figure,
-figcaption {
-  margin: 0;
-  padding: 0;
-}
-
-/* ul,ol 순번,블릿없앰 */
-ul, ol, li {
-  list-style: none;
-}
-
-/* 공통클래스: 클리어 설정 */
-ul::after,
-ol::after,
-.clb::after {
-  content: "";
-  display: block;
-}
-
-/* a요소 리셋 */
-a {
-  text-decoration: none;
-}
-
-/* heading 요소 글자크기 */
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  /* 박스 디자인시 글자크기로 인한
-  영향을 없애기 위한 초기화! */
-}
-
-/* 이미지 초기화 */
-img {
-  /* 이미지 링크시 서버에서 볼때
-  파란 테두리 없앰 */
-  border: none;
-  /* 박스에 이미지만 넣을때
-  엔터간극 4px 하단공백 없애기  */
-  vertical-align: middle;
-}
-
-/*font
-
-1. 본문, 한글, 숫자: 프리텐다드
-
-font-family: "Pretendard Variable",Pretendard, apple-system, system-ui, Roboto, sans-serif;
-
-2. 영문 타이틀: miller-display
-
-font-family: "miller-display", serif;
-font-weight: 400;
-font-style: normal;
-Miller Display Italic
-font-family: "miller-display", serif;
-font-weight: 400;
-font-style: italic;
-Miller Display Bold
-font-family: "miller-display", serif;
-font-weight: 700;
-font-style: normal;
-unicode-range: U+0041-005A
-
-
-*/
-body {
-  border: 1px dotted #797979;
-}
-
-html {
-  font-family: "Pretendard Variable", sans-serif;
-  /* rem 단위 계산 편의를 위하여 */
-  font-size: 10px;
-}
-
-.fx-box {
-  display: flex;
-}
-
-.grid-box {
-  display: grid;
-}
-
-.cbx {
-  /* 부모박스 높이값에 맞춤! */
-  height: 100%;
-}
-
-.bgi {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* 버튼 클래스 */
-.button-namal {
-  -moz-text-align-last: left;
-       text-align-last: left;
-  width: 200px;
-  padding: 15px 20px;
-  background-color: transparent;
-  border: 1px solid #1E1E1E;
-}
-
-/* 그리드 시스템 12grid 적용 - 가로비율 */
-.col-1 {
-  flex-basis: 8.33%;
-}
-
-.col-2 {
-  flex-basis: 16.66%;
-}
-
-.col-3 {
-  flex-basis: 25%;
-}
-
-.col-4 {
-  flex-basis: 33.33%;
-}
-
-.col-5 {
-  flex-basis: 41.66%;
-}
-
-.col-6 {
-  flex-basis: 50%;
-}
-
-.col-7 {
-  flex-basis: 58.33%;
-}
-
-.col-8 {
-  flex-basis: 66.66%;
-}
-
-.col-9 {
-  flex-basis: 75%;
-}
-
-.col-10 {
-  flex-basis: 83.33%;
-}
-
-.col-11 {
-  flex-basis: 91.66%;
-}
-
-.col-12 {
-  flex-basis: 100%;
-}
-
-/* 파티션 비율박스 공통*/
-[class*=col-] {
-  /* padding: 10px; */
-  box-sizing: border-box;
-  /* 원래는 높이값 100%로 부모박스 채우기를 해야하지만 flex의 자식 요소는
-  자동으로 부모를 채우도록 설정되어있다 */
-}
-
-/* 컨텐트 박스  
--> 플랙스박스는 싸고있는 부모를 설정함!
-
-*/
-.cont-box {
-  max-width: 1600px;
-}
-
-/* 기본 초기화 셋팅 */
-/* 기본 초기화 */
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-dl,
-dt,
-dd,
-p,
-figure,
-figcaption {
-  margin: 0;
-  padding: 0;
-}
-
-/* ul,ol 순번,블릿없앰 */
-ul, ol, li {
-  list-style: none;
-}
-
-/* 공통클래스: 클리어 설정 */
-ul::after,
-ol::after,
-.clb::after {
-  content: "";
-  display: block;
-}
-
-/* a요소 리셋 */
-a {
-  text-decoration: none;
-}
-
-/* heading 요소 글자크기 */
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  /* 박스 디자인시 글자크기로 인한
-  영향을 없애기 위한 초기화! */
-}
-
-/* 이미지 초기화 */
-img {
-  /* 이미지 링크시 서버에서 볼때
-  파란 테두리 없앰 */
-  border: none;
-  /* 박스에 이미지만 넣을때
-  엔터간극 4px 하단공백 없애기  */
-  vertical-align: middle;
-}
-
-/*font
-
-1. 본문, 한글, 숫자: 프리텐다드
-
-font-family: "Pretendard Variable",Pretendard, apple-system, system-ui, Roboto, sans-serif;
-
-2. 영문 타이틀: miller-display
-
-font-family: "miller-display", serif;
-font-weight: 400;
-font-style: normal;
-Miller Display Italic
-font-family: "miller-display", serif;
-font-weight: 400;
-font-style: italic;
-Miller Display Bold
-font-family: "miller-display", serif;
-font-weight: 700;
-font-style: normal;
-unicode-range: U+0041-005A
-
-
-*/
-body {
-  border: 1px dotted #797979;
-}
-
-html {
-  font-family: "Pretendard Variable", sans-serif;
-  /* rem 단위 계산 편의를 위하여 */
-  font-size: 10px;
-}
-
-.fx-box {
-  display: flex;
-}
-
-.grid-box {
-  display: grid;
-}
-
-.cbx {
-  /* 부모박스 높이값에 맞춤! */
-  height: 100%;
-}
-
-.bgi {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* 버튼 클래스 */
-.button-namal {
-  -moz-text-align-last: left;
-       text-align-last: left;
-  width: 200px;
-  padding: 15px 20px;
-  background-color: transparent;
-  border: 1px solid #1E1E1E;
-}
-
-:root {
+@imp :root {
   --font-title: "miller-display", serif;
   --section-margin: 100px;
   --fx-menu-gap: 0 20px;
   --margin-top-text: 20px;
   --padding110: 110px;
 }
-
-#header-wrap {
-  /* gnb 속박스 */
-  /* 로고사이즈 변경 */
-  /* 좌측메뉴 */
-  /* 우측메뉴 */
-}
-#header-wrap .roll-ban {
+#header-area {
+  background-color: #1E1E1E;
   text-align: center;
-  padding: 10px;
-  background-color: #1E1E1E;
-}
-#header-wrap .roll-ban a {
-  font-size: 13px;
-  color: #FFFFFF;
-}
-#header-wrap #gnb-area {
-  position: relative;
-  justify-content: space-between;
-  padding: 10px var(--padding110);
-  gap: var(--fx-menu-gap);
-  background-color: #1E1E1E;
-}
-#header-wrap #gnb-area a {
-  font-size: 13px;
-  color: #FFFFFF;
-}
-#header-wrap .logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-}
-#header-wrap .logo img {
-  max-width: 122px;
-}
-#header-wrap #L-submenu-wrap ul {
-  align-items: center;
-  gap: var(--fx-menu-gap);
-}
-#header-wrap #L-submenu-wrap .sub-inner {
-  display: none;
-}
-#header-wrap #L-submenu-wrap .sub-inner li {
-  align-items: center;
-  justify-content: center;
-}
-#header-wrap #R-submenu-wrap {
-  gap: var(--fx-menu-gap);
-  /* 서브메뉴 */
-}
-#header-wrap #R-submenu-wrap ul {
-  align-items: center;
-  gap: var(--fx-menu-gap);
-}
-#header-wrap #R-submenu-wrap .icon-item {
-  align-items: center;
-}
-#header-wrap #R-submenu-wrap .icon-item span.mall-cunt {
-  font-size: 13px;
-  color: #D9D9D9;
-}
-#header-wrap #R-submenu-wrap .icon-item > a > span {
-  font-weight: 100;
-}
-#header-wrap #R-submenu-wrap .sub-inner {
-  display: none;
 }
 
 /* 푸터영역 */
@@ -489,6 +53,128 @@ html {
   display: block;
   width: 50px;
   height: 50px;
+}
+
+/* 그리드 시스템 12grid 적용 - 가로비율 */
+.col-1 {
+  flex-basis: 8.33%;
+}
+
+.col-2 {
+  flex-basis: 16.66%;
+}
+
+.col-3 {
+  flex-basis: 25%;
+}
+
+.col-4 {
+  flex-basis: 33.33%;
+}
+
+.col-5 {
+  flex-basis: 41.66%;
+}
+
+.col-6 {
+  flex-basis: 50%;
+}
+
+.col-7 {
+  flex-basis: 58.33%;
+}
+
+.col-8 {
+  flex-basis: 66.66%;
+}
+
+.col-9 {
+  flex-basis: 75%;
+}
+
+.col-10 {
+  flex-basis: 83.33%;
+}
+
+.col-11 {
+  flex-basis: 91.66%;
+}
+
+.col-12 {
+  flex-basis: 100%;
+}
+
+/* 파티션 비율박스 공통*/
+[class*=col-] {
+  /* padding: 10px; */
+  box-sizing: border-box;
+  /* 원래는 높이값 100%로 부모박스 채우기를 해야하지만 flex의 자식 요소는
+  자동으로 부모를 채우도록 설정되어있다 */
+}
+
+/* 컨텐트 박스  
+-> 플랙스박스는 싸고있는 부모를 설정함!
+
+*/
+.cont-box {
+  max-width: 1600px;
+}
+
+/* 기본 초기화 셋팅 */
+/* 기본 초기화 */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dt,
+dd,
+p,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* ul,ol 순번,블릿없앰 */
+ul, ol, li {
+  list-style: none;
+}
+
+/* 공통클래스: 클리어 설정 */
+ul::after,
+ol::after,
+.clb::after {
+  content: "";
+  display: block;
+}
+
+/* a요소 리셋 */
+a {
+  text-decoration: none;
+}
+
+/* heading 요소 글자크기 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  /* 박스 디자인시 글자크기로 인한
+  영향을 없애기 위한 초기화! */
+}
+
+/* 이미지 초기화 */
+img {
+  /* 이미지 링크시 서버에서 볼때
+  파란 테두리 없앰 */
+  border: none;
+  /* 박스에 이미지만 넣을때
+  엔터간극 4px 하단공백 없애기  */
+  vertical-align: middle;
 }
 
 :root {

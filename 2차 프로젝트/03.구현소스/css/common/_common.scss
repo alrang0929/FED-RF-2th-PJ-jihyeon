@@ -1,4 +1,5 @@
 //2차 프로젝트 슬밋 common CSS - _common.scss
+@import "../data/variables";
 @import "./core";
 ////////////////////import area////////////////
 
@@ -23,7 +24,7 @@
 
 /* 푸터영역 */
 #footer-area{
-  
+   
   padding: 40px;
   background-color: $MainColor1;
   color: $FontColor2;
