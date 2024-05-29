@@ -220,8 +220,7 @@ html {
   --padding110: 110px;
 }
 
-.mask-logo {
-  position: absolute;
+.mask-logo img {
   -webkit-mask-image: url(../logo_ko.png);
           mask-image: url(../logo_ko.png);
   -webkit-mask-position: center;
