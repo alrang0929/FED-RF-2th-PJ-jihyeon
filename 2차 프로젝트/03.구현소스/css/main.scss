@@ -24,12 +24,12 @@
   background-color: #000;
   .cont-wrap{
     z-index: 1;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
     position: absolute;
+    left: 50%;
+    top: 44%;
+    translate: -50% -50%;
     width: 10%;
-    
+
     .desc{
       position: absolute;
 
@@ -45,8 +45,20 @@
       font-size: $fontsize1;
       color: $FontColor3;
   }
+      } //// cont-wrap
+      .loading{
 
-  }
+        position: absolute;
+        left: 50%;
+        top: 180%;
+        translate: -50% -50%;
+
+        width: 400px;
+        height: 1px;
+        
+        background-color: #fff;
+    
+      }
 
   .bg{
     object-fit: fill;
@@ -59,7 +71,7 @@
     background-repeat: no-repeat;
   }
 
-}
+}///////intro-area-end
 
 
 /////메인영역
@@ -79,15 +91,15 @@ main {
       a {
         color: $FontColor3;
         .tit {
+          margin-bottom: 30px;
           font-family: var(--font-title);
           font-size: $fontsize-title1;
+          
         }
         .desc {
           margin: 0 auto;
           line-height: 1.5;
           width: 70%;
-          margin-top: var(--margin-top-text);
-
           font-size: $fontsize1;
           font-weight: 200;
         }
@@ -96,12 +108,15 @@ main {
   }
 
   #sub-visual {
+    height: 67vh;
+    overflow: hidden;
+
     ul {
       height: 100vh;
       grid-template-columns: repeat(4, 1fr);
     }
     .main-box {
-      grid-area: -3 / 1 / 2 / 3;
+      grid-area: -2 / 1 / 2 / 3;
 
       position: relative;
 
@@ -116,6 +131,7 @@ main {
           color: $FontColor1;
         }
         .tit{
+          margin-bottom: 30px;
           font-family: var(--font-title);
           font-size: $fontsize-title1;
         }
@@ -146,6 +162,22 @@ main {
   /* 상품추천 리스트 */
   #prd-list {
     padding: 100px 0;
+
+
+    .desc-box{
+      text-align: center;
+      color: $FontColor1;
+      padding: 60px 0;
+      .tit{
+        margin-bottom: 20px;
+        font-family: var(--font-title);
+        font-size: $fontsize-title1;
+      }
+      .desc{
+        font-size: $fontsize1;
+      }
+
+    }
 
     .indic{
       margin: 20px auto;
@@ -215,6 +247,10 @@ main {
             line-height: 1.5;
             margin: var(--margin-top-text) 0;
             margin-bottom: 40px;
+
+            a{
+              color: $FontColor1;
+            }
           }
         }
       }

@@ -100,8 +100,13 @@ ol::after,
 }
 
 /* a요소 리셋 */
-a {
+a:hover, a:visited, a:link, a:active {
   text-decoration: none;
+  color: #1E1E1E;
+}
+
+a:hover {
+  color: #1E1E1E;
 }
 
 /* heading 요소 글자크기 */
@@ -462,8 +467,13 @@ ol::after,
 }
 
 /* a요소 리셋 */
-a {
+a:hover, a:visited, a:link, a:active {
   text-decoration: none;
+  color: #1E1E1E;
+}
+
+a:hover {
+  color: #1E1E1E;
 }
 
 /* heading 요소 글자크기 */
@@ -580,8 +590,13 @@ ol::after,
 }
 
 /* a요소 리셋 */
-a {
+a:hover, a:visited, a:link, a:active {
   text-decoration: none;
+  color: #1E1E1E;
+}
+
+a:hover {
+  color: #1E1E1E;
 }
 
 /* heading 요소 글자크기 */
@@ -708,10 +723,10 @@ html {
 }
 #intro-area .cont-wrap {
   z-index: 1;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
   position: absolute;
+  left: 50%;
+  top: 44%;
+  translate: -50% -50%;
   width: 10%;
 }
 #intro-area .cont-wrap .desc {
@@ -725,6 +740,15 @@ html {
   line-height: var(--line-height);
   font-size: 16px;
   color: #FFFFFF;
+}
+#intro-area .loading {
+  position: absolute;
+  left: 50%;
+  top: 180%;
+  translate: -50% -50%;
+  width: 400px;
+  height: 1px;
+  background-color: #fff;
 }
 #intro-area .bg {
   -o-object-fit: fill;
@@ -754,6 +778,7 @@ main #main-visual-slider ul > li a {
   color: #FFFFFF;
 }
 main #main-visual-slider ul > li a .tit {
+  margin-bottom: 30px;
   font-family: var(--font-title);
   font-size: 45px;
 }
@@ -761,16 +786,19 @@ main #main-visual-slider ul > li a .desc {
   margin: 0 auto;
   line-height: 1.5;
   width: 70%;
-  margin-top: var(--margin-top-text);
   font-size: 16px;
   font-weight: 200;
+}
+main #sub-visual {
+  height: 67vh;
+  overflow: hidden;
 }
 main #sub-visual ul {
   height: 100vh;
   grid-template-columns: repeat(4, 1fr);
 }
 main #sub-visual .main-box {
-  grid-area: -3/1/2/3;
+  grid-area: -2/1/2/3;
   position: relative;
 }
 main #sub-visual .main-box .desc-wrap {
@@ -787,6 +815,7 @@ main #sub-visual .main-box .desc-wrap .category {
   color: #1E1E1E;
 }
 main #sub-visual .main-box .desc-wrap .tit {
+  margin-bottom: 30px;
   font-family: var(--font-title);
   font-size: 45px;
 }
@@ -810,6 +839,19 @@ main #sub-visual img {
 }
 main #prd-list {
   padding: 100px 0;
+}
+main #prd-list .desc-box {
+  text-align: center;
+  color: #1E1E1E;
+  padding: 60px 0;
+}
+main #prd-list .desc-box .tit {
+  margin-bottom: 20px;
+  font-family: var(--font-title);
+  font-size: 45px;
+}
+main #prd-list .desc-box .desc {
+  font-size: 16px;
 }
 main #prd-list .indic {
   margin: 20px auto;
@@ -867,6 +909,9 @@ main #prd-list .slider li .desc-wrap .desc {
   line-height: 1.5;
   margin: var(--margin-top-text) 0;
   margin-bottom: 40px;
+}
+main #prd-list .slider li .desc-wrap .desc a {
+  color: #1E1E1E;
 }
 main #best-prdList .slider {
   width: 100vw;

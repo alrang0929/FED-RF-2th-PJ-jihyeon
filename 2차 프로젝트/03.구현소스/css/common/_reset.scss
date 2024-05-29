@@ -36,8 +36,12 @@ ol::after,
 }
 
 /* a요소 리셋 */
-a{
+a:hover, a:visited, a:link, a:active{
     text-decoration: none;
+    color: $FontColor1;
+}
+a:hover{
+    color: $FontColor1;
 }
 
 /* heading 요소 글자크기 */
