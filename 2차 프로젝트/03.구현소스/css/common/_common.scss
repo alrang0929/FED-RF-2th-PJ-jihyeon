@@ -14,27 +14,6 @@
 
 //변수영역////////////////////////////////////////
 
-.masking3{
-//   position: absolute;
-
-
-
-}
-
-//인트로 영역
-#intro-area {
-    img{
-        height: 100%;;
-        mask-image: url(../logo_ko.png);
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: 550px;
-    }
-
-    position: relative;
-    height: 100vh;
-    background-color: $MainColor1;
-}
 
 //GNB 영역
 #header-area {

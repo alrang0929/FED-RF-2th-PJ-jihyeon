@@ -17,6 +17,51 @@
   --line-height: 1.7;
 }
 
+
+//인트로 영역
+#intro-area {
+  overflow: hidden;
+  background-color: #000;
+  .cont-wrap{
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    position: absolute;
+    width: 10%;
+    
+    .desc{
+      position: absolute;
+
+      width: 280%;
+      
+      left: 50%;
+      top: 139%;
+      translate: -50% -50%;
+
+      text-align: center;
+      font-weight: 200;
+      line-height: var(--line-height);
+      font-size: $fontsize1;
+      color: $FontColor3;
+  }
+
+  }
+
+  .bg{
+    object-fit: fill;
+    opacity: 1;
+    position: relative;
+    height: 100vh;
+    // background-image: url(../images/intro_BG.jpg);
+    // background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}
+
+
 /////메인영역
 main {
   #main-visual-slider {

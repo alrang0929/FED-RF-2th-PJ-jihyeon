@@ -220,23 +220,6 @@ html {
   --padding110: 110px;
 }
 
-#intro-area {
-  position: relative;
-  height: 100vh;
-  background-color: #1E1E1E;
-}
-#intro-area img {
-  height: 100%;
-  -webkit-mask-image: url(../logo_ko.png);
-          mask-image: url(../logo_ko.png);
-  -webkit-mask-position: center;
-          mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: 550px;
-          mask-size: 550px;
-}
-
 #header-area {
   width: 100vw;
   text-align: center;
@@ -717,6 +700,40 @@ html {
   --margin-top-40: 40px
   --padding110: 110px;
   --line-height: 1.7;
+}
+
+#intro-area {
+  overflow: hidden;
+  background-color: #000;
+}
+#intro-area .cont-wrap {
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  position: absolute;
+  width: 10%;
+}
+#intro-area .cont-wrap .desc {
+  position: absolute;
+  width: 280%;
+  left: 50%;
+  top: 139%;
+  translate: -50% -50%;
+  text-align: center;
+  font-weight: 200;
+  line-height: var(--line-height);
+  font-size: 16px;
+  color: #FFFFFF;
+}
+#intro-area .bg {
+  -o-object-fit: fill;
+     object-fit: fill;
+  opacity: 1;
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main {
