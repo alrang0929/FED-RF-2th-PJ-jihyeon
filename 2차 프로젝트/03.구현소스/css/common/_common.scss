@@ -17,15 +17,20 @@
 .masking3{
 //   position: absolute;
 
-mask-image: url(../logo_ko.png);
-mask-position: center;
-mask-repeat: no-repeat;
-mask-size: 550px;
+
 
 }
 
 //인트로 영역
 #intro-area {
+    img{
+        height: 100%;;
+        mask-image: url(../logo_ko.png);
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: 550px;
+    }
+
     position: relative;
     height: 100vh;
     background-color: $MainColor1;
