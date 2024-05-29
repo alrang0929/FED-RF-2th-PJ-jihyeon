@@ -239,6 +239,7 @@ html {
 }
 
 #header-area {
+  width: 100vw;
   text-align: center;
 }
 #header-area .roll-ben {
@@ -761,15 +762,32 @@ main #sub-visual .main-box .desc-wrap {
   left: 50%;
   top: 50%;
   translate: -50% -50%;
+  text-align: center;
 }
-main #sub-visual .subvisual-R {
+main #sub-visual .main-box .desc-wrap .category {
+  -moz-tab-size: 16px;
+    -o-tab-size: 16px;
+       tab-size: 16px;
+  color: #1E1E1E;
+}
+main #sub-visual .main-box .desc-wrap .tit {
+  font-family: var(--font-title);
+  font-size: 45px;
+}
+main #sub-visual .main-box .desc-wrap .desc {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: var(--line-height);
+}
+main #sub-visual .sub-box {
   position: relative;
 }
-main #sub-visual .subvisual-R > li {
+main #sub-visual .sub-box > a {
   position: absolute;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
+  font-size: 16px;
 }
 main #sub-visual img {
   width: 100%;

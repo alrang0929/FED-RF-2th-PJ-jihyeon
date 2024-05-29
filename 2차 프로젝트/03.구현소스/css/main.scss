@@ -59,21 +59,38 @@ main {
       grid-area: -3 / 1 / 2 / 3;
 
       position: relative;
+
       .desc-wrap {
         position: absolute;
         left: 50%;
         top: 50%;
         translate: -50% -50%;
+        text-align: center;
+        .category{
+          tab-size: $fontsize1;
+          color: $FontColor1;
+        }
+        .tit{
+          font-family: var(--font-title);
+          font-size: $fontsize-title1;
+        }
+        .desc{
+          margin-top: $text-margin-40;
+          font-size: $fontsize1;
+          line-height: var(--line-height);
+        }
       }
     } /////subvisual_L
-    .subvisual-R {
-      position: relative;
-      & > li {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        translate: -50% -50%;
-      }
+    .sub-box {
+        position: relative;
+        > a  {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          translate: -50% -50%;
+          
+          font-size: $fontsize1;
+        }
     }
 
     img {
