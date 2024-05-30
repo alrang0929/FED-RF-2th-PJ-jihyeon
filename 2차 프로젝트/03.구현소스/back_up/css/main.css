@@ -859,9 +859,6 @@ main #prd-list .desc-box .tit {
   font-family: var(--font-title);
   font-size: 45px;
 }
-main #prd-list .desc-box .desc {
-  font-size: 16px;
-}
 main #prd-list .indic {
   margin: 20px auto;
 }

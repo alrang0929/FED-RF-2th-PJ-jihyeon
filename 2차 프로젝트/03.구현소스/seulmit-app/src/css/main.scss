@@ -18,71 +18,6 @@
 }
 
 
-//인트로 영역
-#intro-area {
-  overflow: hidden;
-  background-color: #000;
-  .cont-wrap{
-    z-index: 1;
-    position: absolute;
-    left: 50%;
-    top: 44%;
-    translate: -50% -50%;
-    width: 10%;
-    span{
-   margin: 0 auto;
-    width: 20%;
-    display: block;
-    margin-bottom: 50px;
-    img{
-      width: 100%;
-    }
-    }
-
-    .desc{
-      position: absolute;
-
-      width: 280%;
-      
-      left: 50%;
-      top: 139%;
-      translate: -50% -50%;
-
-      text-align: center;
-      font-weight: 200;
-      line-height: var(--line-height);
-      font-size: $fontsize1;
-      color: $FontColor3;
-  }
-      } //// cont-wrap
-      .loading{
-
-        position: absolute;
-        left: 50%;
-        top: 180%;
-        translate: -50% -50%;
-
-        width: 400px;
-        height: 1px;
-        
-        background-color: #fff;
-    
-      }
-
-  .bg{
-    object-fit: fill;
-    opacity: 1;
-    position: relative;
-    height: 100vh;
-    // background-image: url(../images/intro_BG.jpg);
-    // background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-}///////intro-area-end
-
-
 /////메인영역
 main {
   #main-visual-slider {
@@ -167,15 +102,13 @@ main {
       width: 100%;
     }
   }
-
+ 
   /* 상품추천 리스트 */
   #prd-list {
     padding: 100px 0;
 
-
     .desc-box{
       text-align: center;
-      color: $FontColor1;
       padding: 60px 0;
       .tit{
         margin-bottom: 20px;
@@ -221,7 +154,6 @@ main {
             &:hover {
               opacity: 0;
             }
-
           }
           
           .blur {
@@ -233,7 +165,6 @@ main {
           img {
             width: 100%;
           }
-         
         }
 
         //텍스트 설정
@@ -257,14 +188,11 @@ main {
             margin: var(--margin-top-text) 0;
             margin-bottom: 40px;
 
-            a{
-              color: $FontColor1;
-            }
           }
         }
-      }
-    }
-  }
+      }//li
+    }//slider
+  }//prd-list end
 
   #best-prdList {
     .slider {
@@ -303,10 +231,10 @@ main {
           img {
             width: 100%;
           }
-        }
-      }
-    }
-  }
+        }// li
+      }// ul
+    }//slider
+  }//best-prdList
 
 #best-banner{
   height: 80vh;
@@ -331,13 +259,12 @@ main {
         width: 60%;
         line-height: var(--line-height);
         font-size: $fontsize2;
-        color: $FontColor1;
       }
       button{
         margin-top: 40px;
       }
-  }
-}
+  }//contwrap
+}//best banner
 
 
 
