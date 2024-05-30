@@ -1,0 +1,102 @@
+//2차 프로젝트 슬밋 core CSS - _core.scss
+@import "./grid_12_flex";
+@import "./reset";
+@import "../data/variables";
+///////웹폰트 영역///////////////////////
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url("https://use.typekit.net/jyj1can.css");
+/*font
+
+1. 본문, 한글, 숫자: 프리텐다드
+
+font-family: "Pretendard Variable",Pretendard, apple-system, system-ui, Roboto, sans-serif;
+
+2. 영문 타이틀: miller-display
+
+font-family: "miller-display", serif;
+font-weight: 400;
+font-style: normal;
+Miller Display Italic
+font-family: "miller-display", serif;
+font-weight: 400;
+font-style: italic;
+Miller Display Bold
+font-family: "miller-display", serif;
+font-weight: 700;
+font-style: normal;
+unicode-range: U+0041-005A 
+
+ 
+*/
+body{
+    position: relative;
+    border: 1px dotted #797979;
+    overflow-x: hidden;
+}
+
+html {
+    font: {
+        family:'Pretendard Variable',sans-serif;
+        /* rem 단위 계산 편의를 위하여 */
+        size: 10px;
+    }//////////////font
+
+}
+.svg-area{
+    display:none;
+}
+
+.fx-box{
+    display: flex;
+}
+
+.grid-box{
+    display: grid;
+}
+
+.cont-box{
+    max-width: 1600px;
+    }
+
+
+.cbx{
+    /* 부모박스 높이값에 맞춤! */
+    height: 100%;
+}
+
+.bgi{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.indic{
+    
+    margin: 20px auto;
+    width: 100%;
+    border-bottom: 1px solid #00000050;
+    &::after{
+        content: '';
+        display: block;
+        width: 200px;
+        border: 1px solid #000000;
+    }
+}
+
+/* 버튼 클래스 */
+.button-nomal{
+    padding: 15px 20px;
+
+    text-align-last: left;
+    color: $FontColor1;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid $MainColor1;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        background-color: $MainColor1;
+        color: $FontColor3;
+    }
+
+}

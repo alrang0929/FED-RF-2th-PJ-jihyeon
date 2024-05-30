@@ -1,0 +1,178 @@
+//2차 프로젝트 슬밋 common CSS - _common.scss
+@import "../data/variables";
+@import "./core";
+////////////////////import area////////////////
+
+:root {
+    --font-title: "miller-display", serif;
+
+    --section-margin: 100px;
+    --fx-menu-gap: 0 20px;
+    --margin-top-text: 20px;
+    --padding110: 110px;
+}
+
+//변수영역////////////////////////////////////////
+
+
+//GNB 영역
+#header-area {
+    width: 100vw;
+    text-align: center;
+    .roll-ben {
+        text-align: center;
+        padding: 10px;
+        a {
+            font-size: $fontsize2;
+            color: $FontColor3;
+        }
+        background-color: $MainColor1;
+    }
+
+    #gnb-area {
+        background-color: $MainColor1;
+        position: relative;
+        justify-content: space-between;
+        padding: 20px 110px;
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            img {
+                max-width: 120px;
+            }
+        }
+
+        /* 좌측메뉴 */
+        #L-menu-wrap {
+            align-items: center;
+            .sub-menu {
+                align-items: center;
+                gap: var(--fx-menu-gap);
+                margin-left: 10px;
+                & > a {
+                    font-size: $fontsize2;
+                    font-weight: 200;
+                    color: $FontColor3;
+
+                    &:hover .sub-inner{
+                      height: 200px;
+                    }
+                }
+                .sub-inner{
+                    overflow: hidden;
+                    height: 0;
+                    > a {
+                      display: none;
+                        font-size: $fontsize2;
+                        font-weight: 200;
+                        color: $FontColor3;
+                    }
+
+                }
+            }
+        } ///L-menu
+
+        /* 우측메뉴 */
+        #R-menu-wrap {
+            ul {
+                align-items: center;
+                .icon-item {
+                    align-items: center;
+                }
+                li {
+                    > a {
+                        margin-left: 20px;
+                        font-size: $fontsize2;
+                        font-weight: 200;
+                        font-weight: 200;
+                        color: $FontColor3;
+                    }
+                    .icon-img {
+                        font-size: 35px;
+                        font-weight: 100;
+                    }
+                    .mall {
+                        align-items: center;
+                        font-size: 30px;
+                    }
+                }
+            }
+        } ///R-menu
+    } /////gnb area
+} ////////////header-wrap
+
+/* 푸터영역 */
+#footer-area {
+    padding: 80px;
+    background-color: $MainColor1;
+    color: $FontColor2;
+
+    #footer-wrap {
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        text-align: center;
+        line-height: 1.5;
+        justify-content: space-around;
+        max-width: 40%;
+
+        img {
+            max-width: 200px;
+        }
+        a {
+            padding-left: 10px;
+            color: $FontColor2;
+        }
+    }
+
+    address {
+        margin-top: 30px;
+        font-style: normal;
+        font-size: $fontsize2;
+        font-weight: 200;
+        gap: 5px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #copyright {
+        margin: 30px 0;
+    }
+} ////////footer-area
+
+/* 탑버튼 */
+#follow-button {
+  position: fixed;
+    // position: absolute;
+    left: 97vw;
+    top: 92vh;
+    z-index: 9999;
+
+    #top-button {
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: $MainColor1;
+        width: 40px;
+        height: 40px;
+        a {
+            color: $FontColor3;
+            span {
+                font-weight: 150;
+            }
+        }
+    }
+    #talk-button {
+        box-sizing: border-box;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: $MainColor2;
+        a {
+            font-size: $fontsize2;
+            font-weight: 200;
+            color: $FontColor3;
+        }
+    }
+}
