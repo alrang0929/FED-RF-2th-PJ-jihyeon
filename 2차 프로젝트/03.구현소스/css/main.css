@@ -729,6 +729,15 @@ html {
   translate: -50% -50%;
   width: 10%;
 }
+#intro-area .cont-wrap span {
+  margin: 0 auto;
+  width: 20%;
+  display: block;
+  margin-bottom: 50px;
+}
+#intro-area .cont-wrap span img {
+  width: 100%;
+}
 #intro-area .cont-wrap .desc {
   position: absolute;
   width: 280%;
