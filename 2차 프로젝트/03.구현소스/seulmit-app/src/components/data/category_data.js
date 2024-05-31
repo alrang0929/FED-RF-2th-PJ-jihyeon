@@ -1,5 +1,5 @@
 //카테고리 데이터 js
-const gnbData = {
+const categoryData = {
     "SHOP":{
         "mainmenu": "SHOP",
         "submenu":["All", "Face", "Body", "Hand", "Home Fragrance", "Gift", "Acc",],
@@ -39,4 +39,9 @@ const gnbData = {
             "FAQ",
         ],
     },
-}//////gnbdata///////////////////////////
+}//////categorydata///////////////////////////
+
+
+
+/////////export area///////////////////////////////////////
+export default {categoryData};
