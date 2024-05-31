@@ -3,6 +3,19 @@
 export default function TopArea(){
 
 return(
+  <>
+   {/* <!--follow 버튼 --> */}
+  <div className="" id="follow-button">
+    {/* <!-- 탑버튼 --> */}
+    <div className="imgbx" id="top-button">
+      <a href="#">
+        <span className="material-symbols-outlined"> arrow_upward </span>
+      </a>
+    </div>
+    <div className="" id="talk-button">
+      <a href="#">Talk</a>
+    </div>
+  </div>
 <header id="header-area">
       {/* <!-- 롤링배너 --> */}
       <div className="roll-ben">
@@ -93,7 +106,7 @@ return(
         {/* <!-- R menu end --> */}
       </div>
     </header>
-
+    </>
 );
 
 

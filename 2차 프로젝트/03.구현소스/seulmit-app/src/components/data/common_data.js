@@ -2,37 +2,44 @@
 
 const gnbData = {
     "SHOP":{
+        "mainmenu": "SHOP",
         "submenu":["All", "Face", "Body", "Hand", "Home Fragrance", "Gift", "Acc",],
     },
     "INSIDE":{
+        "mainmenu": "INSIDE",
         "submenu":[
             "Brand",
             "Episode",
         ],
     },
     "TASTE":{
+        "mainmenu": "TASTE",
         "submenu":[
             "none",
         ],
     },
     "BENEFIT":{
+        "mainmenu": "BENEFIT",
         "submenu":[
-            "BENEFIT",
-            "BENEFIT",
+            "Promotion",
+            "Membership",
         ],
     },
     "LOGIN":{
+        "mainmenu": "LOGIN",
         "submenu":[
             "none",
         ],
     },
     "NOTICE":{
+        "mainmenu": "NOTICE",
         "submenu":[
-            "NOTICE",
-            "NOTICE",
-            "NOTICE",
+            "공지사항",
+            "Review",
+            "Q&A",
+            "FAQ",
         ],
     },
+}//////gnbdata///////////////////////////
 
-}
 
