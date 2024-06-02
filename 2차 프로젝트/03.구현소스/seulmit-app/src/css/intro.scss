@@ -1,10 +1,9 @@
 //2차 프로젝트 슬밋 인트로 SCSS
-@import "../common/common";
-@import "../common/grid_12_flex";
-@import "../common/reset";
-@import "../data/variables";
-@import "../common/core";
-
+@import "./variables/common";
+@import "./variables/grid_12_flex";
+@import "./variables/reset";
+@import "./variables/variables";
+@import "./variables/core";
 ////import area//////////////////////////////////
 
 :root {
