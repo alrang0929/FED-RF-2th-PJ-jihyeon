@@ -20,7 +20,7 @@ export default function MainArea() {
             </div>
             <div className="bluer">
               <img
-                src="./images/main_page/mainvisual_01.jpg"
+                src="../images/main_page/mainvisual_01.jpg"
                 alt="메인 비쥬얼"
               />
             </div>
@@ -85,11 +85,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="./images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="./images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -115,11 +115,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="./images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="./images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -145,11 +145,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="./images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="./images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -175,11 +175,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="./images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="./images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -205,11 +205,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="./images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="./images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -246,7 +246,7 @@ export default function MainArea() {
             <li>
               <div className="imgbx">
                 <img
-                  src="./images/product/homecare/home_Ritual Set.jpg"
+                  src="../images/product/homecare/home_Ritual Set.jpg"
                   alt=""
                 />
               </div>

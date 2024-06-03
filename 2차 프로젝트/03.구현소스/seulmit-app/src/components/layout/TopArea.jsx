@@ -65,7 +65,7 @@ return(
         {/* <!-- L menu end --> */}
         <div className="logo">
           <h1>
-            <a href=""><img src="./images/logo_en.png" alt="슬밋 로고" /></a>
+            <a href=""><img src="../images/logo_en.png" alt="슬밋 로고" /></a>
           </h1>
         </div>
         {/* <!-- R menu --> */}
