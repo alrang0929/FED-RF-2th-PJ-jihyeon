@@ -25,3 +25,11 @@ npm i react-router-dom@latest jquery jquery-ui-dist jquery-ui-touch-punch swiper
 - 스크립트:
     (1) 시작: npm start
     (2) 멈춤: ctrl+c 후 질문에 답: y
+
+
+////리액트 삭제 재설치
+npm uninstall -g create-react-app  
+npm install -g create-react-app  
+  
+# create-react-app 재실행  
+npx create-react-app my-app  
