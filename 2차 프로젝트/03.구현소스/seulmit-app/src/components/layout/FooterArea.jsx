@@ -6,7 +6,7 @@ export default function FooterArea() {
       <div id="footer-wrap">
         <div className="logobx">
           <h2 id="logo">
-            <img src="./images/logo_en.png" alt="설밋 로고" />
+          <img src="../images/pavicon_seulmit.png" alt=""/>
           </h2>
         </div>
         <address className="fx-box">
@@ -30,16 +30,16 @@ export default function FooterArea() {
         <div id="sns-wrap">
           <div className="sns-icon">
             <a href="">
-              <img src="./images/svg/icon_facebook.svg" alt="페이스북 이동" />
+              <img src="../images/svg/icon_facebook.svg" alt="페이스북 이동" />
             </a>
             <a href="">
               <img
-                src="./images/svg/icon_instagram.svg"
+                src="../images/svg/icon_instagram.svg"
                 alt="인스타그램 이동"
               />
             </a>
             <a href="">
-              <img src="./images/svg/icon_youtube.svg" alt="유튜브 이동" />
+              <img src="../images/svg/icon_youtube.svg" alt="유튜브 이동" />
             </a>
           </div>
         </div>
