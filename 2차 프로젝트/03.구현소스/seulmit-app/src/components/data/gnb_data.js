@@ -1,6 +1,6 @@
 ///메뉴 카테고리 데이터
 
-export const gnbData = [
+const gnbData = [
   {
     txt: "SHOP",
     link: "/",
@@ -70,7 +70,10 @@ export const gnbData = [
       },
     ],
   },
+];
 
+const gnbDataR =[
+  
   {
     txt: "LOGIN",
     link: "/",
@@ -99,3 +102,5 @@ export const gnbData = [
     ],
   },
 ];
+
+export {gnbData, gnbDataR};

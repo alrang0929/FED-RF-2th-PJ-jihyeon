@@ -1,7 +1,7 @@
 export const mainVisualData = [
     {
         topic:"EVENT",
-        title:"구매금액별 사은품 증정 이벤트",
+        title:"Gift Event",
         text:"6.1 ~ 6.30",
     },
     {

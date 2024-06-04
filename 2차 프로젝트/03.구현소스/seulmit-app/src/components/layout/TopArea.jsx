@@ -1,11 +1,9 @@
 //상단영역 컴포넌트 - top_area.jsx
 import { Link } from "react-router-dom";
 
-
-
 /////////data
 import Logo from "../modules/Logo";
-import { gnbData } from "../data/gnb_data";
+import { gnbData, gnbDataR } from "../data/gnb_data";
 import { rollBanner } from "../data/rollbanner_data";
 
 /////import area///////////////////////////////////////////////////////////
@@ -28,10 +26,13 @@ export default function TopArea() {
       <header id="header-area">
       {/* <!-- 롤링배너 --> */}
       <div className="roll-ben">
-        <div className="">
-          <div className="cont">
-            <a href=""> 전제품 구매시 핸드크림 샘플 3종 + 핸드겔 파우치</a>
-          </div>
+        <div className="roll-ben-wrap">
+          {rollBanner.map((v,i)=>
+          <div key={i} className="cont">
+          <a href={v.link}> {v.txt}</a>
+        </div>
+          )}
+
         </div>
       </div>
       {/* <!-- GNB area --> */}
@@ -39,51 +40,27 @@ export default function TopArea() {
         {/* <!-- L menu --> */}
         <div className="fx-box" id="L-menu-wrap">
           <div className="menu-inner fx-box">
+            {gnbData.map((v,i)=>
             <ul className="sub-menu">
-              <a href="">1차 메뉴</a>
-              <ul className="sub-inner">
-                <li>
-                  <a href="">2차 메뉴</a>
-                  <a href="">2차 메뉴</a>
-                  <a href="">2차 메뉴</a>
-                </li>
-              </ul>
-            </ul>
-            <ul className="sub-menu">
-              <a href="">1차 메뉴</a>
-              <ul className="sub-inner">
-                <li>
-                  <a href="">2차 메뉴</a>
-                  <a href="">2차 메뉴</a>
-                  <a href="">2차 메뉴</a>
-                </li>
-              </ul>
-            </ul>
-            <ul className="sub-menu">
-              <a href="">1차 메뉴</a>
-              <ul className="sub-inner">
-                <li>
-                  <a href="">2차 메뉴</a>
-                  <a href="">2차 메뉴</a>
-                  <a href="">2차 메뉴</a>
-                </li>
-              </ul>
-            </ul>
+            <a href={v.link}>{v.txt}</a>
+          </ul>
+            )}
           </div>
         </div>
         {/* <!-- L menu end --> */}
         <div className="logo">
           <h1>
-            <a href=""><img src="./images/logo_en.png" alt="슬밋 로고" /></a>
+            <Logo logoStyle="top"/>
           </h1>
         </div>
         {/* <!-- R menu --> */}
         <div className="fx-box" id="R-menu-wrap">
-          <ul className="fx-box">
-            <li className="text-menu">
-              <a href="">LOGIN</a>
-              <a href="">NOTICE</a>
-            </li>
+          <ul className="fx-box sub-menu">
+          {gnbDataR.map((v,i)=>
+            <li className="">
+            <a href={v.link}>{v.txt}</a>
+          </li>
+            )}
             {/* <!-- icon box --> */}
             <ul className="icon-box fx-box">
               <li className="icon-item fx-box">

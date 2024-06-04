@@ -1,13 +1,15 @@
 //하단영역 컴포넌트 - FooterArea.jsx
+import Logo from "../modules/Logo";
+
+
+/////import area///////////////////////////////////////////////////////////
 
 export default function FooterArea() {
   return (
     <footer id="footer-area">
       <div id="footer-wrap">
         <div className="logobx">
-          <h2 id="logo">
-          <img src="../images/pavicon_seulmit.png" alt=""/>
-          </h2>
+            <Logo logoStyle="bottom"/>
         </div>
         <address className="fx-box">
           <li>상호 : (주)비앤에이치코스메틱</li>
