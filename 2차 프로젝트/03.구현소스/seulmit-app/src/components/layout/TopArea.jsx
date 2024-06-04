@@ -1,7 +1,12 @@
 //상단영역 컴포넌트 - top_area.jsx
+import {Link} from "react-router-dom";
+import {menu} from "../data/common_data";
+
+/////import area///////////////////////////////////////////////////////////
 
 export default function TopArea(){
 
+  const bentext = menu[rollbanData];
 return(
   <>
    {/* <!--follow 버튼 --> */}
@@ -19,11 +24,13 @@ return(
 <header id="header-area">
       {/* <!-- 롤링배너 --> */}
       <div className="roll-ben">
-        <div className="">
-          <div className="cont">
-            <a href=""> 전제품 구매시 핸드크림 샘플 3종 + 핸드겔 파우치</a>
-          </div>
-        </div>
+        <ul className="">
+            {menu.map((v,i)=>{
+          <li className="cont">
+            <a href=""> {v.rollbanData}</a>
+          </li>
+            })}
+        </ul>
       </div>
       {/* <!-- GNB area --> */}
       <div className="fx-box" id="gnb-area">
