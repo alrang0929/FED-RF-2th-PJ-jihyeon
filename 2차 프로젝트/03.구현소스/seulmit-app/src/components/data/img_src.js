@@ -5,5 +5,5 @@ export const isrc = {
 
 
     //로고
-    logo: "/images/"  
+    logo: "/images/logo_en.png",  
 };

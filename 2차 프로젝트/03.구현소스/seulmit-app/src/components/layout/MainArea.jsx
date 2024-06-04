@@ -1,5 +1,9 @@
 //메인영역 컴포넌트 - main_area.jsx
 
+import { mainVisualData } from "../data/main_visual_data";
+
+//////import area /////////////////////////////////
+
 export default function MainArea() {
   return (
     <main id="main-area">
@@ -7,27 +11,26 @@ export default function MainArea() {
       <section className="" id="main-visual-slider">
         {/* <!-- 메인비쥬얼 내용 start --> */}
         <ul id="main-bisual-inner">
-          <li className="item main-box bg1 cbx bgi">
-            <div className="desc-wrap">
-              {/* <!-- 텍스트 클릭시 해당 상세 페이지 이동 --> */}
-              <a href="">
-                <div className="tit">lorem ipsum</div>
-                <div className="desc">
-                  로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽
-                  디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은
+          {mainVisualData.map((v, i) => (
+            <li key={i} className={"item main-box bg" + i + " cbx bgi"}>
+              <div className="desc-wrap">
+                <div className="topic">
+                    {v.topic}
                 </div>
-              </a>
-            </div>
-            <div className="bluer">
-              <img
-                src="../images/main_page/mainvisual_01.jpg"
-                alt="메인 비쥬얼"
-              />
-            </div>
-          </li>
+                <div className="topic">
+                    {v.title}
+                </div>
+                <div className="topic">
+                    {v.text}
+                </div>
+              </div>
+              <div key={i} className={`bluer item main-box bg${i} cbx bgi`}></div>
+            </li>
+          ))}
         </ul>
       </section>
       {/* <!-- 메인비쥬얼 내용 end --> */}
+
       {/* <!-- 서브 비쥬얼 start --> */}
       <section id="sub-visual">
         <ul className="grid-box">
@@ -85,11 +88,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="/images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="/images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -115,11 +118,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="/images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="/images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -145,11 +148,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="/images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="/images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -175,11 +178,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="/images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="/images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -205,11 +208,11 @@ export default function MainArea() {
               {/* <!-- desc-wrap end --> */}
               <div className="img-wrap">
                 <div className="imgbx">
-                  <img src="../images/product/skin/skin_ SolSerum.jpg" alt="" />
+                  <img src="/images/product/skin/skin_ SolSerum.jpg" alt="" />
                 </div>
                 <div className="blur">
                   <img
-                    src="../images/product/skin/skin_ SolSerum_detail.jpg"
+                    src="/images/product/skin/skin_ SolSerum_detail.jpg"
                     alt=""
                   />
                 </div>
@@ -246,7 +249,7 @@ export default function MainArea() {
             <li>
               <div className="imgbx">
                 <img
-                  src="../images/product/homecare/home_Ritual Set.jpg"
+                  src="/images/product/homecare/home_Ritual Set.jpg"
                   alt=""
                 />
               </div>
