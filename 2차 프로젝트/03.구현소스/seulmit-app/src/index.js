@@ -13,12 +13,14 @@ import FooterArea from "./components/layout/FooterArea";
 function Layout() {
   return (
     <>
-      <h1> 왜안대</h1>
       <TopArea />
       <MainArea />
       <FooterArea />
     </>
   );/////return
 } //////layout
-
-ReactDOM.render(<Layout />, document.querySelector("#root"));
+/// 컴포넌트 출력 ///
+// 먼저 root 객체 만들기
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+// 출력하기
+root.render(<Layout />);

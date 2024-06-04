@@ -2,8 +2,10 @@
 @import "./common/common";
 @import "./common/grid_12_flex";
 @import "./common/reset";
-@import "./variables/variables";
 @import "./common/core";
+
+@import "./variables/variables";
+@import "./images";
 ////import area//////////////////////////////////
 
 :root {
@@ -269,20 +271,3 @@ main {
 
 } //////////////////main
 
-/******************* BG cont area *******************/
-//서브 비쥬얼 배너
-.main-box.bg1 {
-  background: url(../images/main_page/subvisual_L.png);
-}
-.sub-box.bg2 {
-  background: url(../images/main_page/subvisual_R01.jpg);
-}
-.sub-box.bg3 {
-  background: url(../images/main_page/subvisual_R02.jpg);
-}
-.sub-box.bg3 {
-  background: url(../images/main_page/subvisual_R03.jpg);
-}
-.sub-box.bg4 {
-  background: url(../images/main_page/subvisual_R04.jpg);
-}

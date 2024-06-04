@@ -7,7 +7,7 @@ export default function MainArea() {
       <section className="" id="main-visual-slider">
         {/* <!-- 메인비쥬얼 내용 start --> */}
         <ul id="main-bisual-inner">
-          <li className="item">
+          <li className="item main-box bg1 cbx bgi">
             <div className="desc-wrap">
               {/* <!-- 텍스트 클릭시 해당 상세 페이지 이동 --> */}
               <a href="">
@@ -31,7 +31,7 @@ export default function MainArea() {
       {/* <!-- 서브 비쥬얼 start --> */}
       <section id="sub-visual">
         <ul className="grid-box">
-          <li className="main-box bg1 cbx bgi">
+          <li className="sub-main-box bg1 cbx bgi">
             <div className="desc-wrap">
               <div className="category">EVENT</div>
               <div className="tit">lorem ipsum</div>
