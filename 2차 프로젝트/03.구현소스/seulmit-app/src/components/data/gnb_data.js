@@ -3,70 +3,70 @@
 const gnbData = [
   {
     txt: "SHOP",
-    link: "/",
+    link: "/SHOP",
     sub: [
       {
         txt: "All",
-        link: "/",
+        link: "/All",
       },
       {
         txt: "Face",
-        link: "/",
+        link: "/Face",
       },
       {
         txt: "Body",
-        link: "/",
+        link: "/Body",
       },
       {
         txt: "Hand",
-        link: "/",
+        link: "/Hand",
       },
       {
         txt: "Home Fragrance",
-        link: "/",
+        link: "/Home-Fragrance",
       },
       {
         txt: "Gift",
-        link: "/",
+        link: "/Gift",
       },
       {
         txt: "Acc",
-        link: "/",
+        link: "/Acc",
       },
     ],
   },
 
   {
     txt: "INSIDE",
-    link: "/",
+    link: "/INSIDE",
     sub: [
       {
-        txt: "Episode",
-        link: "/",
+        txt: "Brand",
+        link: "/Brand",
       },
       {
         txt: "Episode",
-        link: "/",
+        link: "/Episode",
       },
     ],
   },
 
   {
     txt: "TASTE",
-    link: "/",
+    link: "/TASTE",
   },
 
   {
     txt: "BENEFIT",
-    link: "/",
+    link: "/BENEFIT",
     sub: [
       {
         txt: "Promotion",
-        link: "/",
+        link: "/Promotion",
       },
       {
         txt: "Membership",
-        link: "/",
+        link: "/Membership",
       },
     ],
   },
@@ -76,28 +76,28 @@ const gnbDataR =[
   
   {
     txt: "LOGIN",
-    link: "/",
+    link: "/LOGIN",
   },
 
   {
     txt: "NOTICE",
-    link: "/",
+    link: "/NOTICE",
     sub: [
       {
         txt: "공지사항",
-        link: "/",
+        link: "/notic",
       },
       {
         txt: "Review",
-        link: "/",
+        link: "/Review",
       },
       {
         txt: "Q&A",
-        link: "/",
+        link: "/Q&A",
       },
       {
         txt: "FAQ",
-        link: "/",
+        link: "/FAQ",
       },
     ],
   },

@@ -40,6 +40,7 @@ export default function TopArea() {
         {/* <!-- L menu --> */}
         <div className="fx-box" id="L-menu-wrap">
           <div className="menu-inner fx-box">
+            
             {gnbData.map((v,i)=>
             <ul className="sub-menu">
             <a href={v.link}>{v.txt}</a>
