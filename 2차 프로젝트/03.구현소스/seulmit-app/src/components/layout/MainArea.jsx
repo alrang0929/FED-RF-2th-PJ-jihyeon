@@ -9,37 +9,7 @@ export default function MainArea() {
             {/* <!-- 1. 메인 비쥬얼 슬라이드 영역 --> */}
             <section className="" id="main-visual-slider">
                 {/* <!-- Slider main container --> */}
-                <div className="swiper">
-                    {/* <!-- Additional required wrapper --> */}
-                    <div className="swiper-wrapper main-visual-inner">
-                        {/* <!-- Slides --> */}
-                        {mainVisualData.map((v, i) => (
-                            <div
-                                key={i}
-                                className={`"item main-box bg${
-                                    i + 1
-                                } cbx bgi swiper-slide"`}
-                            >
-                                <div className="desc-wrap">
-                                    <div className="topic">{v.topic}</div>
-                                    <div className="title">{v.title}</div>
-                                    <div className="text">{v.text}</div>
-                                </div>
-                                <div
-                                    key={i}
-                                    className={`bluer item main-box bg${
-                                        i + 1
-                                    } cbx bgi`}
-                                ></div>
-                            </div>
-                        ))}
-                    </div>
-                    {/* <!-- 페이징 필요시 추가 --> */}
-                    <div className="swiper-pagination"></div>
-                    {/* 이전, 다음 버튼 필요시 추가 */}
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+                
                 {/* <!-- 메인비쥬얼 내용 start --> */}
                 <ul id="main-bisual-inner fx-box"></ul>
             </section>
