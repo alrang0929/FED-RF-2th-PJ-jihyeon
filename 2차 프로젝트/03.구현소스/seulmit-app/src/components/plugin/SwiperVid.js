@@ -61,10 +61,6 @@ function save() {
         </div>
       ))}
     </div>
-    {/* <!-- 페이징 필요시 추가 --> */}
-    <div className="swiper-pagination"></div>
-    {/* 이전, 다음 버튼 필요시 추가 */}
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+
   </div>;
 }
