@@ -51,7 +51,9 @@ export default function TopArea() {
         {/* <!-- L menu end --> */}
         <div className="logo">
           <h1>
+            <a href="">
             <Logo logoStyle="top"/>
+            </a>
           </h1>
         </div>
         {/* <!-- R menu --> */}

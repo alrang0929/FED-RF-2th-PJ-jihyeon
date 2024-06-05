@@ -10,7 +10,8 @@ export default function Login() {
         {/* 1. 타이틀 문구 */}
         <section>
         <div className="title">
-          <h3>슬밋 Seulmit 슬밋 아우라 뷰티가 시작됩니다</h3>
+          <h3>슬밋 Seulmit</h3>
+          <h3>슬밋 아우라 뷰티가 시작됩니다</h3>
         </div>
         {/* <form action=""> */}
         {/* input-wrap */}

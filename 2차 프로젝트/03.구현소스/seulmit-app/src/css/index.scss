@@ -20,76 +20,87 @@
 
 /////메인영역
 main {
-    #main-visual-slider{
+    #main-visual-slider {
         .main-box {
             /* 텍스트박스 가운데 위치를 위한 부모박스 */
             position: relative;
             height: 100vh;
-        }//mainbox
+        } //mainbox
         .desc-wrap {
-          z-index: 1;
-          text-align: center;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          translate: -50% -50%;
-          color: $FontColor3;
-      }///descWrap
-      .title {
-        margin-bottom: 30px;
-        font-family: var(--font-title);
-        font-size: $fontsize-title1;
-    }//title
-    .text {
-        margin: 0 auto;
-        line-height: 1.5;
-        width: 70%;
-        font-size: $fontsize1;
-        font-weight: 200;
-    }//text
-    }//mainVisualSlider
+            z-index: 1;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            color: $FontColor3;
+        } ///descWrap
+        .title {
+            margin-bottom: 30px;
+            font-family: var(--font-title);
+            font-size: $fontsize-title1;
+        } //title
+        .text {
+            margin: 0 auto;
+            line-height: 1.5;
+            width: 70%;
+            font-size: $fontsize1;
+            font-weight: 200;
+        } //text
+    } //mainVisualSlider
 
     #sub-visual {
-        height: 67vh;
+        height: 90vh;
         overflow: hidden;
 
         ul {
-            height: 100vh;
+            height: 140vh;
             grid-template-columns: repeat(4, 1fr);
-        }
-        .sub-main-box {
-            grid-area: -2 / 1 / 2 / 3;
 
-            position: relative;
-        
-            &:hover .desc-wrap{
-                display: inline-block;
-                opacity: 1;
+            li {
+                transform-origin: 50% 50%;
                 cursor: pointer;
-                transition: opacity .4s ease-in-out;
+                .desc-wrap, a {
+                    // display: none;
+                    opacity: 0;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    translate: -50% -50%;
+                    text-align: center;
+
+                    .category {
+                        tab-size: $fontsize1;
+                        color: $FontColor1;
+                    }
+                    .tit {
+                        margin-bottom: 30px;
+                        font-family: var(--font-title);
+                        font-size: $fontsize-title1;
+                    }
+                    .desc {
+                        margin-top: $text-margin-40;
+                        font-size: $fontsize1;
+                        line-height: var(--line-height);
+                    }
+                }
+
+                background-size: 100%;
+                &:hover {
+                    .desc-wrap, a {
+                        // display: inline-block;
+                        opacity: 1;
+                    }
+                    background-size: 200%;
+                    transition: 
+                    background-size 10s,
+                    opacity 0.4s,
+                    ;
+                }
             }
-            .desc-wrap {
-                display: none;
-                opacity: 0;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                translate: -50% -50%;
-                text-align: center;
-                .category {
-                    tab-size: $fontsize1;
-                    color: $FontColor1;
-                }
-                .tit {
-                    margin-bottom: 30px;
-                    font-family: var(--font-title);
-                    font-size: $fontsize-title1;
-                }
-                .desc {
-                    margin-top: $text-margin-40;
-                    font-size: $fontsize1;
-                    line-height: var(--line-height);
-                }
+            .sub-main-box {
+                grid-area: -2 / 1 / 2 / 3;
+                position: relative;
             }
         } /////subvisual_L
         .sub-box {
@@ -245,16 +256,22 @@ main {
     #best-banner {
         padding: 100px;
         .cont-wrap {
-            height: 51.8vh;
             overflow: hidden;
-            align-items: center;
-            // margin: 0 auto;
-            .L-ben{
+            height: 596px;
+            .imgbx{
+                width: 600px;
+                img{
+                    width: 100%;
+                }
+            }
+            .L-ben {
                 width: 80vw;
                 margin: 0 auto;
             }
-                justify-content: space-between;
-            ul>li{
+            justify-content: space-between;
+            ul > li {
+                height: 596px;
+                align-items: center;
                 justify-content: space-between;
             }
             .sub-tit {
