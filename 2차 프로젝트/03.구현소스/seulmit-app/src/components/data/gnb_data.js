@@ -85,7 +85,7 @@ const gnbDataR =[
     sub: [
       {
         txt: "공지사항",
-        link: "/notic",
+        link: "/notice",
       },
       {
         txt: "Review",

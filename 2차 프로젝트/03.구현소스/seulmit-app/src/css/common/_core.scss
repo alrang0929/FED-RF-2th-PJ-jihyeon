@@ -86,7 +86,8 @@ html {
 /* 버튼 클래스 */
 .button-nomal{
     padding: 15px 20px;
-
+    font-size: 11px;
+    font-weight: 100;
     text-align-last: left;
     color: $FontColor1;
     width: 200px;
@@ -98,5 +99,54 @@ html {
         background-color: $MainColor1;
         color: $FontColor3;
     }
+}
+.button-nomal2{
+    padding: 15px 20px;
+    font-size: 11px;
+    font-weight: 100;
+    text-align-last: left;
+    color: $FontColor3;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid $FontColor3;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        background-color: $MainColor1;
+        color: $FontColor3;
+    }
+}
 
+.button-fill{
+    padding: 15px 20px;
+    font-size: 11px;
+    font-weight: 100;
+    text-align-last: left;
+    color: $FontColor3;
+    width: 200px;
+    background-color: $MainColor2;
+    border: 1px solid $MainColor2;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        background-color: $PointColor1;
+        color: $FontColor3;
+    }
+}
+
+.button-main{
+    padding: 15px 20px;
+    font-size: 11px;
+    font-weight: 100;
+    text-align-last: left;
+    color: $FontColor3;
+    width: 200px;
+    background-color: $PointColor1;
+    border: 1px solid $PointColor1;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        background-color: $PointColor2;
+        color: $FontColor3;
+    }
 }

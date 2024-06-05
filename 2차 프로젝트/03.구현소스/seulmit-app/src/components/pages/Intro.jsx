@@ -1,3 +1,6 @@
+import "../../css/index.scss";
+import "../func/intro";
+
 export default function Intro(){
     <body>
     {/* <!-- 인트로 영역 --> */}

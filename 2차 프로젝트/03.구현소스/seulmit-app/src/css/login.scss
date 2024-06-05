@@ -1,0 +1,50 @@
+//2차 프로젝트 슬밋 / Login SCSS
+@import "./common/common";
+@import "./common/grid_12_flex";
+@import "./common/reset";
+@import "./variables/variables";
+@import "./common/core";
+////import area//////////////////////////////////
+
+
+#login-area{
+    height: 100vh;
+    position: relative;
+
+    background-color: $MainColor2;
+
+    section{
+        position: absolute;
+        width: 20vw;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+
+        text-align: center;
+        .title{
+            width: 80%;
+            font-size: $fontsize-title3;
+            font-weight: 200;
+            margin-bottom: 40px;
+        }
+        .input-box{
+            height: 40px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .btn-wrap{
+            button{
+                width: 260px;
+                height: 50px;
+            }
+            .desc-wrap{
+                font-size: $fontsize1;
+                width: 100%;
+                justify-content: space-around;
+            }
+            .desc{
+                font-size: $fontsize1;
+            }
+        }
+    }
+}
