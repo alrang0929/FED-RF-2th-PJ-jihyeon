@@ -15,6 +15,17 @@
 //변수영역////////////////////////////////////////
 
 //GNB 영역
+.scrollbar{
+    
+// ::-webkit-scrollbar	스크롤바 전체
+// ::-webkit-scrollbar-thumb	스크롤 막대
+// ::-webkit-scrollbar-track	스크롤 막대 외부
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+}
 #header-area {
     width: 100vw;
     text-align: center;
