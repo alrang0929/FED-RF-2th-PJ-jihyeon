@@ -24,7 +24,7 @@
     section {
         position: absolute;
         // width: 20vw;
-        top: 50%;
+        top: 48%;
         left: 50%;
         translate: -50% -50%;
         text-align: center;
@@ -51,7 +51,7 @@
                 text-align: right;
                 label {
                     color: $FontColor3;
-                    font-size: $fontsize1;
+                    font-size: $fontsize2;
                 }
             }
 
@@ -69,9 +69,9 @@
             .desc-wrap {
                 color: $FontColor3;
                 font-weight: 200;
-                font-size: $fontsize1;
+                font-size: $fontsize2;
                 width: 100%;
-                justify-content: space-around;
+                justify-content: space-between;
 
                 margin-bottom: 40px;
 
