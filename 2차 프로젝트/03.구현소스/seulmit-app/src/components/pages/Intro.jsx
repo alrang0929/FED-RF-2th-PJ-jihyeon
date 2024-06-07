@@ -1,5 +1,5 @@
-import "../../css/index.scss";
-import "../func/intro";
+import "../../css/intro.scss";
+import introFn from "../func/intro";
 
 export default function Intro(){
     <body>
