@@ -15,29 +15,116 @@
   --line-height: 1.2;
 }
 
-#sub-header {
+.sub-header {
   height: 34vh;
   background-color: red;
+  padding-bottom: 5vh;
 
-.title {
-  padding-top: 15vh;
-  text-align: center;
-  .icon {
-    width: 20px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    img {
-      width: 100%;
+  .title {
+    padding-top: 15vh;
+    text-align: center;
+    .icon {
+      width: 20px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    h3 {
+      font-family: var(--font-title);
+      font-size: $fontsize-title1;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    span {
+      font-size: $fontsize1;
     }
   }
-  h3 {
-    font-family: var(--font-title);
-    font-size: $fontsize-title2;
-    font-weight: 600;
-    margin-bottom: 20px;
+} // sub-header end
+
+#sell-pd-list {
+  margin: 0 auto;
+  padding: 10vh;
+
+  .category {
+    font-size: $fontsize2;
+    padding-bottom: 40px;
+
+    .under-line{
+      margin-top: 20px;
+      border-bottom: 1px solid $MainColor1;
+    }
+    ul {
+      margin: 0 auto;
+      align-items: center;
+      gap: 1vw;
+      li a {
+        color: $FontColor4;
+        &.on {
+          color: $FontColor1;
+          font-weight: 600;
+          font-size: $fontsize1;
+        }
+      }//li a
+    }//ul
+  }//category
+  .pd-list {
+    margin: 0 auto;
+    ul {
+      margin: 0 auto;
+      flex-wrap: wrap;
+      flex-direction: row;
+      li {
+        // padding: 10px;
+        width: calc(100%/4);
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        .imgbx {
+          img {
+            width: 100%;
+          }
+        } //imgbx
+        .desc-wrap {
+          padding: 0 20px;
+          .eng-pdtit{
+            margin-bottom: 10px;
+            font-size: $fontsize2;
+            color: $FontColor2;
+          }
+          .kor-pdtit{
+            margin-bottom: 30px;
+            font-size: $fontsize1;
+            font-weight: 600;
+          }
+          .price {
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: $fontsize2;
+          }
+        }
+        &:hover{
+          box-sizing: border-box;
+          border: 1px solid $MainColor1;
+        }
+      } //li
+    } //ul
   }
-  span {
-    font-size: $fontsize1;
+
+  .page-num {
+    padding: 40px 0;
+    justify-content: center;
+    .prev,
+    .next {
+      span {
+        font-weight: 200;
+        color: $FontColor4;
+      }
+    }
+    ul {
+      font-size: $fontsize2;
+      gap: 0.5vw;
+      align-items: center;
+    }
   }
-}
-}
+} ///sell-pd-list end

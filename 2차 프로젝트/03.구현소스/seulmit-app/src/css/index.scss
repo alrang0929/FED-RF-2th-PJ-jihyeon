@@ -35,6 +35,10 @@ main {
             translate: -50% -50%;
             color: $FontColor3;
         } ///descWrap
+        .topic{
+            margin-bottom: 10px;
+            font-size: $fontsize2;
+        }
         .title {
             margin-bottom: 30px;
             font-family: var(--font-title);
