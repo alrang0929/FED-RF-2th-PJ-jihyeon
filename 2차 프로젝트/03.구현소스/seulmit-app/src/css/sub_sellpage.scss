@@ -6,44 +6,38 @@
 @import "./common/core";
 ////import area//////////////////////////////////
 :root {
-    --font-title: "miller-display", serif;
-    --section-margin: 100px;
-    --fx-menu-gap: 0 20px;
-    --margin-top-text: 20px;
-    --margin-top-40: 40px;
-    --padding110: 110px;
-    --line-height: 1.2;
+  --font-title: "miller-display", serif;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --margin-top-40: 40px;
+  --padding110: 110px;
+  --line-height: 1.2;
 }
 
 #sub-header {
-    height: 25vh;
-    background-color: red;
+  height: 34vh;
+  background-color: red;
 
+.title {
+  padding-top: 15vh;
+  text-align: center;
+  .icon {
+    width: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
     }
-    .title {
-        padding: 60px;
-        text-align: center;
-        .icon{
-            width: 20px;
-            margin: 0 auto;
-            margin-bottom: 20px;
-            img{width: 100%;}
-        }
-        h3 {
-            font-family: var(--font-title);
-            font-size: $fontsize-title2;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        span {
-            font-size: $fontsize1;
-        }
-        
-        }
-        
-
-    
-
-main{
-    height: 80vh;
+  }
+  h3 {
+    font-family: var(--font-title);
+    font-size: $fontsize-title2;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  span {
+    font-size: $fontsize1;
+  }
+}
 }

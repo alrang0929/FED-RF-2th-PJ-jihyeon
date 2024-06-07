@@ -95,13 +95,13 @@ export default function Main() {
                 <div className="img-wrap">
                   <div className="imgbx">
                     <img
-                      src={`./images/product/${v.category}/${v.img}.jpg`}
+                      src={`/images/product/${v.category}/${v.img}.jpg`}
                       alt={`"${v.tit}"`}
                     />
                   </div>
                   <div className="blur">
                     <img
-                      src={`./images/product/${v.category}/${v.img}_detail.jpg`}
+                      src={`/images/product/${v.category}/${v.img}_detail.jpg`}
                       alt={`"${v.tit}"`}
                     />
                   </div>
