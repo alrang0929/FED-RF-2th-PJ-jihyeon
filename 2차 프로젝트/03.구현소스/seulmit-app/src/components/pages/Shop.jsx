@@ -2,7 +2,6 @@
 
 import "../../css/sub_sellpage.scss";
 
-
 /////import area/////////////////////////////////////////////////
 
 export default function Shop(){
@@ -15,7 +14,7 @@ export default function Shop(){
                 <div className="icon">
                     <img src="/images/icon-sim-black.svg" alt="" />
                 </div>
-                <h3>Shop</h3>
+                <h3>NOTICE</h3>
                 <span>슬밋의 공지사항을 확인하세요</span>
             </div>
         </div>

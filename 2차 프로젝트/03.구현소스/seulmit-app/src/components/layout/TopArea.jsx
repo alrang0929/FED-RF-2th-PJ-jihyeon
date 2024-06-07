@@ -8,21 +8,7 @@ import { rollBanner } from "../data/rollbanner_data";
 
 /////import area///////////////////////////////////////////////////////////
 
-export default function TopArea({changeMenu}) {
-
-    // 메뉴 변경하기 함수 ///////
-    const chgMenuFn = (v) => {
-
-      console.log(v);
-  
-      // 전달값 변경하기 : 소문자 변경
-      v = v.toLowerCase();
-  
-      // 부모 메뉴변경 상태메서드로 메뉴변경
-      changeMenu(v);
-  
-    }; ////////// chgMenuFn 함수 /////////
-
+export default function TopArea() {
   return (
     <>
       {/* <!--follow 버튼 --> */}

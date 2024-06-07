@@ -21,7 +21,6 @@
 
     }
     .title {
-        font-family: var(--font-title);
         padding: 60px;
         text-align: center;
         .icon{
@@ -31,6 +30,7 @@
             img{width: 100%;}
         }
         h3 {
+            font-family: var(--font-title);
             font-size: $fontsize-title2;
             font-weight: 600;
             margin-bottom: 20px;
