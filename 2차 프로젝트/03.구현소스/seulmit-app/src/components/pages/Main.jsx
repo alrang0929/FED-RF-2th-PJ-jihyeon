@@ -36,8 +36,8 @@ export default function Main() {
           {/* <!-- 페이징 필요시 추가 --> */}
           <div className="swiper-pagination"></div>
           {/* 이전, 다음 버튼 필요시 추가 */}
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
         </div>
         {/* <!-- 메인비쥬얼 내용 start --> */}
         <ul id="main-bisual-inner fx-box"></ul>

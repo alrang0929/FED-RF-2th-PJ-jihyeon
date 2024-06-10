@@ -24,7 +24,7 @@ export default function Login() {
               name="mid"
               type="text"
               maxLength="30"
-              value="아이디(이메일)를 입력해주세요"
+              placeholder="아이디(이메일)를 입력해주세요"
             ></input>
             <span className="msg"></span>
           </div>
@@ -37,7 +37,7 @@ export default function Login() {
               name="mpw"
               type="text"
               maxLength="15"
-              value="비밀번호를 입력해주세요(6~12자 이내)"
+              placeholder="비밀번호를 입력해주세요(6~12자 이내)"
             ></input>
             <span className="msg"></span>
           </div>

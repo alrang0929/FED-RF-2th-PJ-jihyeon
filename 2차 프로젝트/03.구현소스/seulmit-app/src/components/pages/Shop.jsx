@@ -1,11 +1,9 @@
 // shop 페이지 컴포넌트 ///
 //데이터 임시호출
 import { bestItemData } from "../data/slide_item_data";
-//데이터 임시호출
-import { gnbData } from "../data/gnb_data";
-
 //CSS
-import "../../css/sub_sellpage.scss";
+import "../../css/shop.scss";
+import Category from "../modules/Category";
 /////import area/////////////////////////////////////////////////
 
 export default function Shop() {
@@ -23,41 +21,13 @@ export default function Shop() {
       </div>
 
       <section id="sell-pd-list" className="cont-box">
-        {/* 상단 메뉴 리스트 */}
-        <div className="category">
-          <ul className="fx-box">
-            <li className="">
-              <a className="on" href="">
-                All
-              </a>
-            </li>
-            <li className="">
-              <a href="">FACE</a>
-            </li>
-            <li className="">
-              <a href="">FACE</a>
-            </li>
-            <li className="">
-              <a href="">FACE</a>
-            </li>
-            <li className="">
-              <a href="">FACE</a>
-            </li>
-            <li className="">
-              <a href="">FACE</a>
-            </li>
-            <li className="">
-              <a href="">FACE</a>
-            </li>
-          </ul>
-          <div className="under-line"></div>
-        </div>
         {/* 메뉴 리스트 */}
+          <Category />
         <div className="pd-list">
           <ul className="fx-box">
             {bestItemData.map((v, i) => (
               <li key={i} className="item">
-                <a href="">
+                <a href="/pddetail">
                   <div className="imgbx">
                     <img
                       src={`./images/product/${v.category}/${v.img}.jpg`}

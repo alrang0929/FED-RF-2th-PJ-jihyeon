@@ -1,14 +1,24 @@
 import "../../css/intro.scss";
 import introFn from "../func/intro";
-import React from "react";
+import React, { useContext } from "react";
+import { sCon } from "./sCon";
 
 export default function Intro() {
+  React.useEffect(() => {
+    // introFn();
+
+    return(()=>{
+      myCon.setIntroSts(false);
+    });
+  },[]);
+
+  let myCon = useContext(sCon);
+
+  ////// 코드 리턴구역 //////////////
   return (
-    React.useEffect(() => {
-    introFn();
     <>
       <div id="intro-area">
-        <a href="">
+        <a href="#" onClick={(e)=>{e.preventDefault();myCon.setIntroSts(false);}}>
           <div className="cont-wrap">
             <span>
               <img src="/images/icon-sim-white.svg" alt="" />
@@ -28,6 +38,5 @@ export default function Intro() {
         </a>
       </div>
     </>
-},[])
   ); ///////return
 }

@@ -43,28 +43,6 @@
   margin: 0 auto;
   padding: 10vh;
 
-  .category {
-    font-size: $fontsize2;
-    padding-bottom: 40px;
-
-    .under-line{
-      margin-top: 20px;
-      border-bottom: 1px solid $MainColor1;
-    }
-    ul {
-      margin: 0 auto;
-      align-items: center;
-      gap: 1vw;
-      li a {
-        color: $FontColor4;
-        &.on {
-          color: $FontColor1;
-          font-weight: 600;
-          font-size: $fontsize1;
-        }
-      }//li a
-    }//ul
-  }//category
   .pd-list {
     margin: 0 auto;
     ul {

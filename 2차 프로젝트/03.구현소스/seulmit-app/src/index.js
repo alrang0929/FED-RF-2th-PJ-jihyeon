@@ -13,6 +13,7 @@ import Taste from "./components/pages/Taste";
 import Benefit from "./components/pages/Benefit";
 import Login from "./components/pages/Login";
 import Notice from "./components/pages/Notice";
+import PdDetail from "./components/pages/PdDetail";
 
 //sass 패키지 호출
 import "./css/index.scss";
@@ -41,9 +42,11 @@ export default function MainComponent() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/inside" element={<Inside />} />
             <Route path="/taste" element={<Taste />} />
-            <Route path="/Benefit" element={<Benefit />} />
+            <Route path="/benefit" element={<Benefit />} />
             <Route path="/login" element={<Login />} />
             <Route path="/notice" element={<Notice />} />
+            <Route path="/pddetail" element={<PdDetail/>} />
+
           </Route>
         </Routes>
       </BrowserRouter>
