@@ -1,9 +1,5 @@
 //2차 프로젝트 슬밋 인트로 SCSS
-@import "./common/common";
-@import "./common/grid_12_flex";
-@import "./common/reset";
 @import "./variables/variables";
-@import "./common/core";
 ////import area//////////////////////////////////
 
 :root {
@@ -19,6 +15,10 @@
 
 //인트로 영역
 #intro-area {
+  z-index: 999;
+  top: 0;
+  left: 0;
+  
   overflow: hidden;
   background-color: #000;
   .cont-wrap{
