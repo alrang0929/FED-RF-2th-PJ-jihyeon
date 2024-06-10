@@ -13,7 +13,7 @@ import Taste from "./components/pages/Taste";
 import Benefit from "./components/pages/Benefit";
 import Login from "./components/pages/Login";
 import Notice from "./components/pages/Notice";
-import PdDetail from "./components/pages/pdDetail";
+import Detail from "./components/pages/Detail";
 
 //sass 패키지 호출
 import "./css/index.scss";
@@ -36,7 +36,6 @@ export default function MainComponent() {
             {/* 하위라우트 셋팅: path 대신
             index로 설정하면 첫 페이지로 */}
             {/* <Route index element={<Intro />} /> */}
-            {/* <Route index element={<Intro />} /> */}
             <Route index element={<Main />} />
             <Route path="/" element={<Main />} />
             <Route path="/shop" element={<Shop />} />
@@ -45,7 +44,7 @@ export default function MainComponent() {
             <Route path="/benefit" element={<Benefit />} />
             <Route path="/login" element={<Login />} />
             <Route path="/notice" element={<Notice />} />
-            <Route path="/pdDetail" element={<PdDetail/>} />
+            <Route path="/Detail" element={<Detail/>} />
 
           </Route>
         </Routes>
