@@ -3,12 +3,12 @@ import introFn from "../func/intro";
 import React from "react";
 
 export default function Intro() {
-  introFn();
   return (
-  // React.useLayoutEffect(() => {
+    React.useEffect(() => {
+    introFn();
     <>
       <div id="intro-area">
-        <a href="/">
+        <a href="">
           <div className="cont-wrap">
             <span>
               <img src="/images/icon-sim-white.svg" alt="" />
@@ -21,17 +21,13 @@ export default function Intro() {
             <div className="loading"></div>
           </div>
           <div className="bg">
-            <video
-              id="myvid"
-              src="/images/intro_bg1.mp4"
-              autoplay
-              muted
-              playsinline
-            ></video>
+            <video id="myvid" muted autoPlay loop>
+              <source src="/images/intro_bg1.mp4" type="video/mp4" />
+            </video>
           </div>
         </a>
       </div>
     </>
-  // },[])
+},[])
   ); ///////return
 }
