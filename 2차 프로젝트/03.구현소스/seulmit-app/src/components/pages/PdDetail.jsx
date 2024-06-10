@@ -1,7 +1,7 @@
 import React from "react";
 import Category from "../modules/Category";
 
-function PdDetail() {
+export default function PdDetail() {
   ///////코드리턴구역
   return (
     <>
@@ -87,10 +87,12 @@ function PdDetail() {
             </li>
           </ul>
         </div>
-        <div className="tap-cont"></div>
+        <div className="tap-cont">
+          <TabBox>
+
+          </TabBox>
+        </div>
       </section>
     </>
   );
 }
-
-export default PdDetail;
