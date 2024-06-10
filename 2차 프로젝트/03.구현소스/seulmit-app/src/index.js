@@ -16,12 +16,14 @@ import Notice from "./components/pages/Notice";
 
 //sass 패키지 호출
 import "./css/index.scss";
+
 //컴포넌트 호출
 // import "./components/layout/Intro";
 /////////////////////import area/////////////////////////////
 
 /// 컴포넌트 출력 ///
 export default function MainComponent() {
+  
   return (
     <>
       <BrowserRouter>

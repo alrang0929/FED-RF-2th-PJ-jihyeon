@@ -2,7 +2,8 @@ import "../../css/intro.scss";
 import introFn from "../func/intro";
 
 export default function Intro(){
-    <body>
+   return(
+    <>
     {/* <!-- 인트로 영역 --> */}
     <div id="intro-area">
       <a href="main.html">
@@ -20,5 +21,8 @@ export default function Intro(){
       </div>
     </a>
     </div>
-  </body>
+    </>
+
+   );
+
 }
