@@ -12,37 +12,46 @@
   --line-height: 1.7;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
 
 //인트로 영역
 #intro-area {
+  // ::-webkit-scrollbar	스크롤바 전체
+  // ::-webkit-scrollbar-thumb	스크롤 막대
+  // ::-webkit-scrollbar-track	스크롤 막대 외부
+
+  position: fixed;
   z-index: 999;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
-  
+
   overflow: hidden;
   background-color: #000;
-  .cont-wrap{
-    z-index: 1;
+  .cont-wrap {
     position: absolute;
     left: 50%;
     top: 44%;
     translate: -50% -50%;
     width: 10%;
-    span{
-   margin: 0 auto;
-    width: 20%;
-    display: block;
-    margin-bottom: 50px;
-    img{
-      width: 100%;
-    }
+    span {
+      margin: 0 auto;
+      width: 20%;
+      display: block;
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+      }
     }
 
-    .desc{
+    .desc {
       position: absolute;
 
       width: 280%;
-      
+
       left: 50%;
       top: 139%;
       translate: -50% -50%;
@@ -52,23 +61,22 @@
       line-height: var(--line-height);
       font-size: $fontsize1;
       color: $FontColor3;
+    }
+  } //// cont-wrap
+  .loading {
+    position: absolute;
+    left: 50%;
+    top: 180%;
+    translate: -50% -50%;
+
+    width: 400px;
+    height: 1px;
+
+    background-color: #fff;
   }
-      } //// cont-wrap
-      .loading{
 
-        position: absolute;
-        left: 50%;
-        top: 180%;
-        translate: -50% -50%;
-
-        width: 400px;
-        height: 1px;
-        
-        background-color: #fff;
-    
-      }
-
-  .bg{
+  .bg {
+    z-index: -1;
     object-fit: fill;
     opacity: 1;
     position: relative;
@@ -78,5 +86,4 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-
-}///////intro-area-end
+} ///////intro-area-end

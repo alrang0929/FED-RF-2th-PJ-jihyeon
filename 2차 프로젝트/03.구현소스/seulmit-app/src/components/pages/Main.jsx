@@ -118,12 +118,12 @@ export default function Main() {
         <div className="cont-wrap fx-box">
           <ul className="L-ben">
             {bestItem.map((v, i) => (
-              <li key={i} className = "fx-box">
+              <li key={i} className="fx-box">
                 <div className="desc-wrap">
                   <div className="sub-tit">{v.subtitle}</div>
                   <div className="tit">{v.title}</div>
                   <div className="desc">{v.text}</div>
-                <button className="button-nomal">more view</button>
+                  <button className="button-nomal">more view</button>
                 </div>
                 <div className="imgbx R-ben">
                   <img
