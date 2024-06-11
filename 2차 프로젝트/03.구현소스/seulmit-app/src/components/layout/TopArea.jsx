@@ -20,12 +20,12 @@ export default function TopArea() {
       <div className="" id="follow-button">
         {/* <!-- 탑버튼 --> */}
         <div className="imgbx" id="top-button">
-          <a href="#">
+          <Link to="#">
             <span className="material-symbols-outlined"> arrow_upward </span>
-          </a>
+          </Link>
         </div>
         <div className="" id="talk-button">
-          <a href="#">Talk</a>
+          <Link to="#">Talk</Link>
         </div>
       </div>
       <header id="header-area">
@@ -34,7 +34,7 @@ export default function TopArea() {
           <div className="roll-ben-wrap">
             {rollBanner.map((v, i) => (
               <div key={i} className="cont">
-                <a href={v.link}> {v.txt}</a>
+                <Link to={v.link}> {v.txt}</Link>
               </div>
             ))}
           </div>
@@ -50,7 +50,7 @@ export default function TopArea() {
                     //하위메뉴 有: a요소 cnffur / 無: Link 라우팅 출력
                     v.sub ? (
                       <Link to={v.link}>{v.txt}</Link>
-                      // <a href="#">{v.txt}</a>
+                      // <Link to="#">{v.txt}</Link>
                     ) : (
                       <Link to={v.link}>{v.txt}</Link>
                     )
@@ -84,32 +84,32 @@ export default function TopArea() {
             <ul className="fx-box sub-menu">
               {gnbDataR.map((v, i) => (
                 <li key={i}>
-                  <a href={v.link}>{v.txt}</a>
+                  <Link to={v.link}>{v.txt}</Link>
                 </li>
               ))}
               {/* <!-- icon box --> */}
               <ul className="icon-box fx-box">
                 <li className="icon-item fx-box">
-                  <a href="">
+                  <Link to="">
                     <span className="icon-img mall material-symbols-outlined">
                       local_mall
                     </span>
                     {/* <!-- <span className="mall-cunt">(0)</span> --> */}
-                  </a>
+                  </Link>
                 </li>
                 <li className="icon-item">
-                  <a href="">
+                  <Link to="">
                     <span className="icon-img material-symbols-outlined">
                       person
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="icon-item">
-                  <a href="">
+                  <Link to="">
                     <span className="icon-img material-symbols-outlined">
                       search
                     </span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
               {/* <!-- icon-box end --> */}

@@ -1,6 +1,7 @@
 import React from "react";
 import { gnbData } from "../data/gnb_data";
 import "../../css/category.scss";
+import { Link } from "react-router-dom";
 
 function Category() {
   //catName = 카테고리명
@@ -13,9 +14,9 @@ function Category() {
         <ul className="fx-box cgmenu">
           {selData.map((v, i) => (
             <li key={i} className={"cgitem"}>
-              <a className={v.i == 0 ? "on" : ""} href="">
+              <Link to="" className={v.i == 0 ? "on" : ""} >
                 {v.txt}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
