@@ -1,14 +1,9 @@
 //하단영역 컴포넌트 - FooterArea.jsx
-import { memo } from "react";
 import Logo from "../modules/Logo";
-
-import Intro from "../pages/Intro";
-
 
 /////import area///////////////////////////////////////////////////////////
 
-const FooterArea = memo(({ival}) => {
-  console.log("footer:",ival);
+function FooterArea ()  {
   return (
     <>
       <footer id="footer-area">
@@ -52,9 +47,8 @@ const FooterArea = memo(({ival}) => {
           </div>
         </div>
       </footer>
-      {ival && <Intro />}
     </>
   );
-}); ///////FooterArea 컴포넌트//////////////////
+} ///////FooterArea 컴포넌트//////////////////
 
 export default FooterArea;
