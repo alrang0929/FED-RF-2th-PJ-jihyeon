@@ -45,7 +45,7 @@ export default function TopArea() {
                   {
                     //하위메뉴 有: a요소 cnffur / 無: Link 라우팅 출력
                     v.sub ? (
-                      <a href="#">{v.txt}</a>
+                      <a href={v.link}>{v.txt}</a>
                     ) : (
                       <Link t0={v.link}>{v.txt}</Link>
                     )
