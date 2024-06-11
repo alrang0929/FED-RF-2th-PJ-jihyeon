@@ -59,31 +59,31 @@ export default function MainVisualSwiper (){
 
 
 
-<ul className="slider fx-box cont-box">
-{bestItemData.map((v, i) => (
-  <li key={i} className="item">
-    <a href="">
-      <div className="desc-wrap">
-        <div className="eng-pdtit">{v.engtit}</div>
-        <div className="kor-pdtit">{v.tit}</div>
-        <div className="desc">{v.txt}</div>
-      </div>
+// <ul className="slider fx-box cont-box">
+// {bestItemData.map((v, i) => (
+//   <li key={i} className="item">
+//     <a href="">
+//       <div className="desc-wrap">
+//         <div className="eng-pdtit">{v.engtit}</div>
+//         <div className="kor-pdtit">{v.tit}</div>
+//         <div className="desc">{v.txt}</div>
+//       </div>
 
-      <div className="img-wrap">
-        <div className="imgbx">
-          <img
-            src={`/images/product/${v.category}/${v.img}.jpg`}
-            alt={`"${v.tit}"`}
-          />
-        </div>
-        <div className="blur">
-          <img
-            src={`/images/product/${v.category}/${v.img}_detail.jpg`}
-            alt={`"${v.tit}"`}
-          />
-        </div>
-      </div>
-    </a>
-  </li>
-))}
-</ul>
+//       <div className="img-wrap">
+//         <div className="imgbx">
+//           <img
+//             src={`/images/product/${v.category}/${v.img}.jpg`}
+//             alt={`"${v.tit}"`}
+//           />
+//         </div>
+//         <div className="blur">
+//           <img
+//             src={`/images/product/${v.category}/${v.img}_detail.jpg`}
+//             alt={`"${v.tit}"`}
+//           />
+//         </div>
+//       </div>
+//     </a>
+//   </li>
+// ))}
+// </ul>
