@@ -36,7 +36,7 @@ export const bestItemData = [
       },
     {   category:"lip",
         engtit:"Seulmit Serum in Lip Balm 02 Tinted",
-        tit:"슬밋 세럼 인 립밤 0.2틴티드",
+        tit:"슬밋 세럼 인 립밤 02.틴티드",
         txt:`건조하고 생기없는 입술에 자연스러운 핑크빛 생기를 부여하고, 비즈 왁스와
         소나무의 농축된 영양감을 채워주는 무향의 틴티드 립밤`,
         price:"30000",
@@ -44,7 +44,7 @@ export const bestItemData = [
       },
     {   category:"lip",
         engtit:"Seulmit Serum in Lip Balm 01 Clear",
-        tit:"슬밋 세럼 인 립밤 0.1클리어",
+        tit:"슬밋 세럼 인 립밤 01.클리어",
         txt:`솔 세럼의 농축된 영양감을 담은 섬세하면서도 부드러운 텍스처가 매끄럽게 녹아들어
         건조한 입술 피부를 촉촉하게 가꾸어 주는 무향, 무색의 립밤`,
         price:"30000",

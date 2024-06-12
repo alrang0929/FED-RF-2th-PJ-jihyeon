@@ -1,5 +1,4 @@
 // shop 페이지 컴포넌트 ///
-import { Link } from "react-router-dom";
 //데이터 임시호출
 import { bestItemData } from "../data/slide_item_data";
 //CSS
@@ -28,7 +27,7 @@ export default function Shop() {
           <ul className="fx-box">
             {bestItemData.map((v, i) => (
               <li key={i} className="item">
-                <Link to="/Detail">
+                <a href="/Detail">
                   <div className="imgbx">
                     <img
                       src={`./images/product/${v.category}/${v.img}.jpg`}
@@ -40,7 +39,7 @@ export default function Shop() {
                     <div className="kor-pdtit">{v.tit}</div>
                     <div className="price">{v.price} <span>원</span></div>
                   </div>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -54,19 +53,19 @@ export default function Shop() {
           </div>
           <ul className="fx-box">
             <li className="select-ef">
-              <Link to="">1</Link>
+              <a href="">1</a>
             </li>
             <li>
-              <Link to="">2</Link>
+              <a href="">2</a>
             </li>
             <li>
-              <Link to="">3</Link>
+              <a href="">3</a>
             </li>
             <li>
-              <Link to="">4</Link>
+              <a href="">4</a>
             </li>
             <li>
-              <Link to="">5</Link>
+              <a href="">5</a>
             </li>
           </ul>
           <div className="next">

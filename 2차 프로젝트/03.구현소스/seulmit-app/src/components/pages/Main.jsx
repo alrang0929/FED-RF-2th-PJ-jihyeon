@@ -2,9 +2,9 @@
 
 //data
 
-import BestItemBen from "../plugin/swiper_best-item-ben";
+import { bestItemData } from "../data/slide_item_data";
+import { bestItem } from "../data/eventban_data";
 import MainVisualSwiper from "../plugin/swiper_main-visual"; 
-import BestItemListSwiper from "../plugin/swiper_prd-list";
 //////import area /////////////////////////////////
 
 export default function Main() {
@@ -55,12 +55,39 @@ export default function Main() {
           </span>
         </div>
           {/* 베스트상품 추천리스트 swiper */}
-          <BestItemListSwiper/>
+        <div className="indic cont-box"></div>
       </section>
       {/* <!-- 추천상품리스트 end --> */}
+      {/* <!-- best item banner start --> */}
       <section id="best-banner">
-        <BestItemBen/>
+        <div className="cont-wrap fx-box">
+          <ul className="L-ben">
+            {bestItem.map((v, i) => (
+              <li key={i} className="fx-box">
+                <div className="desc-wrap">
+                  <div className="sub-tit">{v.subtitle}</div>
+                  <div className="tit">{v.title}</div>
+                  <div className="desc">{v.text}</div>
+                  <button className="button-nomal">more view</button>
+                </div>
+                <div className="imgbx R-ben">
+                  <img
+                    src={`/images/main_page/${v.img}.jpg`}
+                    alt={`${v.title}`}
+                  />
+                </div>
+              </li>
+            ))}
+            {/* L-ben map end */}
+            <ol id="indic">
+              <span className="first-num"></span>
+              <div className="bar"></div>
+              <span className="last-num"></span>
+            </ol>
+          </ul>
+        </div>
       </section>
+      {/* <!-- best item banner end --> */}
     </main>
   );
 } ////MainArea///////////////////////////////////
