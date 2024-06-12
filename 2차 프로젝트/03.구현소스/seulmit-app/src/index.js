@@ -37,6 +37,7 @@ export default function MainComponent() {
             index로 설정하면 첫 페이지로 */}
             {/* <Route index element={<Intro />} /> */}
             <Route index element={<Main />} />
+            <Route path="/" element={<Main />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/inside" element={<Inside />} />
             <Route path="/taste" element={<Taste />} />
