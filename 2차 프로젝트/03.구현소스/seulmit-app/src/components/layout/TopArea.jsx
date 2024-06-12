@@ -81,7 +81,7 @@ export default function TopArea() {
           <div className="fx-box" id="R-menu-wrap">
             <ul className="fx-box sub-menu">
               {gnbDataR.map((v, i) => (
-                <li className="">
+                <li key={i} className="">
                   <a href={v.link}>{v.txt}</a>
                 </li>
               ))}
