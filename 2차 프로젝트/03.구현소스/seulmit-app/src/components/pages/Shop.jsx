@@ -27,7 +27,7 @@ export default function Shop() {
           <ul className="fx-box">
             {bestItemData.map((v, i) => (
               <li key={i} className="item">
-                <a href="/Detail">
+                <a href="/pddetail">
                   <div className="imgbx">
                     <img
                       src={`./images/product/${v.category}/${v.img}.jpg`}

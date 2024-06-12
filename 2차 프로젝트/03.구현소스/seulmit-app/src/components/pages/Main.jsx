@@ -1,10 +1,9 @@
 //메인영역 컴포넌트 - main_area.jsx
 
 //data
-
+import { mainVisualData } from "../data/main_visual_data";
 import { bestItemData } from "../data/slide_item_data";
 import { bestItem } from "../data/eventban_data";
-import MainVisualSwiper from "../plugin/swiper_main-visual"; 
 //////import area /////////////////////////////////
 
 export default function Main() {
@@ -12,11 +11,40 @@ export default function Main() {
     <main id="main-area">
       {/* <!-- 1. 메인 비쥬얼 슬라이드 영역 --> */}
       <section className="" id="main-visual-slider">
-          {/* 2. 메인비쥬얼 슬라이드: MainVisualSwiper */}
-              <MainVisualSwiper/>
+        {/* <!-- Slider main container --> */}
+        <div className="swiper">
+          {/* <!-- Additional required wrapper --> */}
+          <div className="swiper-wrapper main-visual-inner">
+            {/* <!-- Slides --> */}
+            {mainVisualData.map((v, i) => (
+              <div
+                key={i}
+                className={`"item main-box bg${i + 1} cbx bgi swiper-slide"`}
+              >
+                <div className="desc-wrap">
+                  <div className="topic">{v.topic}</div>
+                  <div className="title">{v.title}</div>
+                  <div className="text">{v.text}</div>
+                </div>
+                <div
+                  key={i}
+                  className={`bluer item main-box bg${i + 1} cbx bgi`}
+                ></div>
+              </div>
+            ))}
+          </div>
+          {/* <!-- 페이징 필요시 추가 --> */}
+          <div className="swiper-pagination"></div>
+          {/* 이전, 다음 버튼 필요시 추가 */}
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
+        </div>
+        {/* <!-- 메인비쥬얼 내용 start --> */}
+        <ul id="main-bisual-inner fx-box"></ul>
       </section>
+      {/* <!-- 메인비쥬얼 내용 end --> */}
 
-      {/* <!-- 서브 비쥬얼 start --> */}
+      {/* <!-- 서브 비쥬얼 sta`rt --> */}
       <section id="sub-visual">
         <ul className="grid-box">
           <li className="sub-main-box bg1 cbx bgi">
@@ -54,7 +82,34 @@ export default function Main() {
             로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나
           </span>
         </div>
-          {/* 베스트상품 추천리스트 swiper */}
+        <ul className="slider fx-box cont-box">
+          {bestItemData.map((v, i) => (
+            <li key={i} className="item">
+              <a href="">
+                <div className="desc-wrap">
+                  <div className="eng-pdtit">{v.engtit}</div>
+                  <div className="kor-pdtit">{v.tit}</div>
+                  <div className="desc">{v.txt}</div>
+                </div>
+
+                <div className="img-wrap">
+                  <div className="imgbx">
+                    <img
+                      src={`/images/product/${v.category}/${v.img}.jpg`}
+                      alt={`"${v.tit}"`}
+                    />
+                  </div>
+                  <div className="blur">
+                    <img
+                      src={`/images/product/${v.category}/${v.img}_detail.jpg`}
+                      alt={`"${v.tit}"`}
+                    />
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
         <div className="indic cont-box"></div>
       </section>
       {/* <!-- 추천상품리스트 end --> */}
