@@ -1,21 +1,17 @@
 import React from "react";
 import Category from "../modules/Category";
 import SelectBox from "../modules/SelectBox";
+import PdDetailThumb from "../plugin/swiper_pd_detail-thumb";
 
 export default function Detail() {
   ///////코드리턴구역
   return (
     <>
+      <section id="product-cont cont-box">
       <Category />
-      <section id="product-cont">
-        <div className="top-Cont fx-box">
         {/*1. 오른쪽 배너: 상품 썸네일 */}
-        <div className="imgbx">
-          <img
-            src="/images/product/skin/skin_MistSolSoul.jpg"
-            alt="단잠 필로우 미스트 소울 던 50ml"
-          />
-        </div>
+        < PdDetailThumb/>
+        <div className="top-Cont fx-box">
         <div className="custum-Cont fx-box">
           {/*2. 왼쪽 배너: 상품 정보 */}
           <div className="info-area">

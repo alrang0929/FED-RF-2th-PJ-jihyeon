@@ -8,7 +8,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
-import './css/swiper.scss';
+import './css/swiper_pd_detail-thumb.scss';
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
@@ -23,7 +23,6 @@ export default function App() {
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
         }}
-        loop={true}
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
@@ -63,7 +62,6 @@ export default function App() {
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
-        loop={true}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
