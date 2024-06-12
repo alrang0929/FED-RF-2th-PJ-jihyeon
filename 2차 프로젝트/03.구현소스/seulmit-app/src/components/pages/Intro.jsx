@@ -2,6 +2,7 @@ import "../../css/intro.scss";
 import introFn from "../func/intro";
 import React, { useContext } from "react";
 import { sCon } from "./sCon";
+import { Link } from "react-router-dom";
 
 export default function Intro() {
   React.useEffect(() => {
@@ -18,7 +19,7 @@ export default function Intro() {
   return (
     <>
       <div id="intro-area">
-        <a href="#" onClick={(e)=>{e.preventDefault();myCon.setIntroSts(false);}}>
+        <Link to="#" onClick={(e)=>{e.preventDefault();myCon.setIntroSts(false);}}>
           <div className="cont-wrap">
             <span>
               <img src="/images/icon-sim-white.svg" alt="" />
@@ -35,7 +36,7 @@ export default function Intro() {
               <source src="/images/intro_bg1.mp4" type="video/mp4" />
             </video>
           </div>
-        </a>
+        </Link>
       </div>
     </>
   ); ///////return

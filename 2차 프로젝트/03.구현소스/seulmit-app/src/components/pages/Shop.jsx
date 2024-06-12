@@ -4,6 +4,7 @@ import { bestItemData } from "../data/slide_item_data";
 //CSS
 import "../../css/shop.scss";
 import Category from "../modules/Category";
+import { Link } from "react-router-dom";
 /////import area/////////////////////////////////////////////////
 
 export default function Shop() {
@@ -27,7 +28,7 @@ export default function Shop() {
           <ul className="fx-box">
             {bestItemData.map((v, i) => (
               <li key={i} className="item">
-                <a href="/pddetail">
+                <Link to="/Detail">
                   <div className="imgbx">
                     <img
                       src={`./images/product/${v.category}/${v.img}.jpg`}
@@ -39,7 +40,7 @@ export default function Shop() {
                     <div className="kor-pdtit">{v.tit}</div>
                     <div className="price">{v.price} <span>원</span></div>
                   </div>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,19 +54,19 @@ export default function Shop() {
           </div>
           <ul className="fx-box">
             <li className="select-ef">
-              <a href="">1</a>
+              <Link to="">1</Link>
             </li>
             <li>
-              <a href="">2</a>
+              <Link to="">2</Link>
             </li>
             <li>
-              <a href="">3</a>
+              <Link to="">3</Link>
             </li>
             <li>
-              <a href="">4</a>
+              <Link to="">4</Link>
             </li>
             <li>
-              <a href="">5</a>
+              <Link to="">5</Link>
             </li>
           </ul>
           <div className="next">
