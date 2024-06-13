@@ -1,0 +1,66 @@
+/// swiper css - best item
+@import "../../../css/variables/variables";
+
+:root {
+  --font-title: "miller-display", serif;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --margin-top-40: 40px;
+  --padding110: 110px;
+  --line-height: 1.7;
+}
+
+.swiper-slide {
+  justify-content: center;
+}
+
+#best-banner {
+  padding: 100px;
+  .cont-wrap {
+    overflow: hidden;
+    height: 596px;
+    justify-content: space-between;
+
+    .imgbx {
+      width: 600px;
+      img {
+        width: 100%;
+      }
+    }
+    .L-ben {
+      width: 80vw;
+      margin: 0 auto;
+    }
+    li {
+      height: 596px;
+      align-items: center;
+      width: 70vw;
+      justify-content: space-between;
+
+      .desc-wrap {
+        opacity: 0;
+        .sub-tit {
+          font-size: $fontsize2;
+          color: $FontColor2;
+        }
+        .tit {
+          margin-top: 20px;
+          font-size: $fontsize-title1;
+          color: $FontColor1;
+          font-weight: 600;
+        }
+        .desc {
+          margin-top: 40px;
+
+          width: 80%;
+          line-height: var(--line-height);
+          font-size: $fontsize2;
+        }
+        button {
+          margin-top: 40px;
+        }
+      }
+    }
+  } //contwrap
+} //best banner

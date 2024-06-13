@@ -1,3 +1,6 @@
+/// swiper css - prd list
+
+
 @import "../../../css/variables/variables";
 :root {
   --font-title: "miller-display", serif;
@@ -9,10 +12,18 @@
   --line-height: 1.7;
 }
 
+
+////swiper
 .swiper-wrapper {
   transition-timing-function: linear;
 }
 
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+  bottom: -10%;
+}
+
+
+////////////////////////////////////////////////////////////////////////////
 #prd-list {
   .swiper {
     overflow: visible;
@@ -27,16 +38,17 @@
       box-sizing: border-box;
       transition: 0.2s;
       height: auto;
-
+      border: 1px solid transparent;
+      
       &:hover {
         z-index: 1;
         scale: 1.05;
-        border: 1px solid #000;
         box-shadow: 40px 40px 40px #00000010;
+        border: 1px solid $FontColor1;
       }
       .img-wrap {
-        position: relative;
         height: auto;
+        position: relative;
 
         //이미지 공통사항
         img {
@@ -44,10 +56,7 @@
         }
 
         .imgbx {
-          position: absolute;
           width: 100%;
-          top: 0;
-          left: 0;
           height: auto;
           opacity: 1;
           transition: opacity 0.2s;
@@ -56,13 +65,13 @@
             opacity: 0;
           }
         } /////imgbx
-
         .blur {
           z-index: -1;
           position: absolute;
           top: 0;
           left: 0;
         } //호버시 보이는 이미지
+
       } //img-wrap
 
       //텍스트 설정

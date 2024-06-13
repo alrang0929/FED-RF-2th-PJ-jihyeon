@@ -1,9 +1,10 @@
 //메인영역 컴포넌트 - main_area.jsx
 
 //data
-import { bestItem } from "../data/eventban_data";
-import SwiperPrdList from "../plugin/Swiper_prd-list";
+import { Link } from "react-router-dom";
+import SwiperPrdList from "../plugin/Swiper_prdList";
 import SwipverMainVisual from "../plugin/Swipver_MainVisual";
+import SwiperBestItem from "../plugin/Swiper_bestItem";
 //////import area /////////////////////////////////
 
 export default function Main() {
@@ -32,16 +33,16 @@ export default function Main() {
                         </div>
                     </li>
                     <li className="sub-box bg2 cbx bgi">
-                        <a href="">more view</a>
+                        <Link to="">more view</Link>
                     </li>
                     <li className="sub-box bg3 cbx bgi">
-                        <a href="">more view</a>
+                        <Link to="">more view</Link>
                     </li>
                     <li className="sub-box bg4 cbx bgi">
-                        <a href="">more view</a>
+                        <Link to="">more view</Link>
                     </li>
                     <li className="sub-box bg5 cbx bgi">
-                        <a href="">more view</a>
+                        <Link to="">more view</Link>
                     </li>
                 </ul>
             </section>
@@ -60,34 +61,8 @@ export default function Main() {
             {/* <!-- 추천상품리스트 end --> */}
             {/* <!-- best item banner start --> */}
             <section id="best-banner">
-                <div className="cont-wrap fx-box">
-                    <ul className="L-ben">
-                        {bestItem.map((v, i) => (
-                            <li key={i} className="fx-box">
-                                <div className="desc-wrap">
-                                    <div className="sub-tit">{v.subtitle}</div>
-                                    <div className="tit">{v.title}</div>
-                                    <div className="desc">{v.text}</div>
-                                    <button className="button-nomal">
-                                        more view
-                                    </button>
-                                </div>
-                                <div className="imgbx R-ben">
-                                    <img
-                                        src={`/images/main_page/${v.img}.jpg`}
-                                        alt={`${v.title}`}
-                                    />
-                                </div>
-                            </li>
-                        ))}
-                        {/* L-ben map end */}
-                        <ol id="indic">
-                            <span className="first-num"></span>
-                            <div className="bar"></div>
-                            <span className="last-num"></span>
-                        </ol>
-                    </ul>
-                </div>
+                {/* swiper best item banner */}
+                <SwiperBestItem/>
             {/* <!-- best item banner end --> */}
             </section>
         </main>
