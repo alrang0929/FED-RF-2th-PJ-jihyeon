@@ -165,25 +165,31 @@ main {
         .img-wrap {
           position: relative;
           width: 100%;
-  
+
+          //이미지 공통사항
+          img {
+            width: 100%;
+          }
+
           .imgbx {
+            position: absolute;
+            top: 0;
+            left: 0;
             opacity: 1;
             transition: opacity 0.2s;
-  
+
             &:hover {
               opacity: 0;
             }
-            .blur {
-              z-index: -1;
-              position: absolute;
-              top: 0;
-            }
-      
-            img {
-              width: 100%;
-            }
-      }
-      
+          } /////imgbx
+
+          .blur {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+          } //호버시 보이는 이미지
+       } //img-wrap
 
         //텍스트 설정
         .desc-wrap {
@@ -206,7 +212,7 @@ main {
             margin: var(--margin-top-text) 0;
             margin-bottom: 40px;
           }
-        }//desc wrap
+        } //desc wrap
       } //item
     } //slider
   } //prd-list end

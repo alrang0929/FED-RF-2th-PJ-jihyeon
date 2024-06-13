@@ -20,6 +20,11 @@ export default function SwiperPrdList() {
   return (
     <>
       <Swiper
+        slidesPerView={4}
+        spaceBetween={0}
+        pagination={{
+          clickable: true,
+        }}
         scrollbar={{
           hide: true,
         }}
