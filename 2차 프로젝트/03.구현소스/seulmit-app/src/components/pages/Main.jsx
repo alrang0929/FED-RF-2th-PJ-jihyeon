@@ -1,9 +1,8 @@
 //메인영역 컴포넌트 - main_area.jsx
 
 //data
-
-import { bestItemData } from "../data/slide_item_data";
 import { bestItem } from "../data/eventban_data";
+import SwiperPrdList from "../plugin/Swiper_prd-list";
 import SwipverMainVisual from "../plugin/Swipver_MainVisual";
 //////import area /////////////////////////////////
 
@@ -55,35 +54,8 @@ export default function Main() {
                         로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나
                     </span>
                 </div>
-                <ul className="slider fx-box cont-box">
-                    {bestItemData.map((v, i) => (
-                        <li key={i} className="item">
-                            <a href="">
-                                <div className="desc-wrap">
-                                    <div className="eng-pdtit">{v.engtit}</div>
-                                    <div className="kor-pdtit">{v.tit}</div>
-                                    <div className="desc">{v.txt}</div>
-                                </div>
-
-                                <div className="img-wrap">
-                                    <div className="imgbx">
-                                        <img
-                                            src={`/images/product/${v.category}/${v.img}.jpg`}
-                                            alt={`"${v.tit}"`}
-                                        />
-                                    </div>
-                                    <div className="blur">
-                                        <img
-                                            src={`/images/product/${v.category}/${v.img}_detail.jpg`}
-                                            alt={`"${v.tit}"`}
-                                        />
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-                <div className="indic cont-box"></div>
+                {/* 베스트상품 리스트 swiper : Swiper_prd-list */}
+                <SwiperPrdList/>
             </section>
             {/* <!-- 추천상품리스트 end --> */}
             {/* <!-- best item banner start --> */}

@@ -1,17 +1,22 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+//data
+import { bestItemData } from "../data/slide_item_data";
+
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/scrollbar';
+import "swiper/css";
+import "swiper/css/scrollbar";
+import "./css/swiper_prd-list.scss";
 
-import './styles.css';
+//////import area/////////////////////////////////////////////
 
 // import required modules
-import { Scrollbar } from 'swiper/modules';
+import { Scrollbar } from "swiper/modules";
 
-export default function App() {
+export default function SwiperPrdList() {
   return (
     <>
       <Swiper
@@ -19,17 +24,34 @@ export default function App() {
           hide: true,
         }}
         modules={[Scrollbar]}
-        className="mySwiper"
+        className="mySwiper slider fx-box cont-box"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {bestItemData.map((v, i) => (
+          <SwiperSlide key={i} className="item">
+            <Link to="">
+              <div className="desc-wrap">
+                <div className="eng-pdtit">{v.engtit}</div>
+                <div className="kor-pdtit">{v.tit}</div>
+                <div className="desc">{v.txt}</div>
+              </div>
+
+              <div className="img-wrap">
+                <div className="imgbx">
+                  <img
+                    src={`/images/product/${v.category}/${v.img}.jpg`}
+                    alt={`"${v.tit}"`}
+                  />
+                </div>
+                <div className="blur">
+                  <img
+                    src={`/images/product/${v.category}/${v.img}_detail.jpg`}
+                    alt={`"${v.tit}"`}
+                  />
+                </div>
+              </div>
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
