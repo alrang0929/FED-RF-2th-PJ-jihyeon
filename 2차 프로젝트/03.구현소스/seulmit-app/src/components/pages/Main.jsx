@@ -88,8 +88,8 @@ export default function Main() {
                         </ol>
                     </ul>
                 </div>
-            </section>
             {/* <!-- best item banner end --> */}
+            </section>
         </main>
     );
 } ////MainArea///////////////////////////////////

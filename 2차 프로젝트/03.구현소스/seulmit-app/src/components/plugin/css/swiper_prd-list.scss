@@ -18,7 +18,7 @@
 	overflow: visible;
     // overflow: hidden;
     margin: 0 auto;
-	height: 80vh;
+	// height: 80vh;
 
     .item {
       flex-shrink: 0;
@@ -27,6 +27,7 @@
       padding: 20px;
       box-sizing: border-box;
       transition: 0.2s;
+      height: auto;
 
       &:hover {
         z-index: 1;
@@ -36,7 +37,7 @@
       }
       .img-wrap {
         position: relative;
-        width: 100%;
+        height: auto;
 
         //이미지 공통사항
         img {
@@ -45,8 +46,10 @@
 
         .imgbx {
           position: absolute;
+          width: 100%;
           top: 0;
           left: 0;
+          height: auto;
           opacity: 1;
           transition: opacity 0.2s;
 
