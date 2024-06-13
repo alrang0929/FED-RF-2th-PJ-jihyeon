@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import $ from "jquery";
 //data
 import { bestItemData } from "../data/slide_item_data";
 
@@ -17,6 +18,31 @@ import "./css/swiper_prd-list.scss";
 import { Scrollbar } from "swiper/modules";
 
 export default function SwiperPrdList() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    function checkImagesLoaded() {
+      const images = $(".swiper-slide img");
+      console.log("이미지 대상선정",images);
+      return Promise.all(
+        Array.from(images).map((img) => {
+          return new Promise((resolve) => {
+            img.complete ? resolve() : (img.onload = resolve);
+          });
+        })
+      );
+    }
+
+    checkImagesLoaded().then(() => {
+      if (swiperRef.current) {
+        console.log("커런트 값 확인",swiperRef.current);
+        // swiperRef.current가 null이 아닌지 확인!
+        swiperRef.current.swiper.updateSize(); // updateSize() 호출
+        swiperRef.current.swiper.updateSlides(); // updateSlides() 호출
+      }
+    });
+  }, []);
+
   return (
     <>
       <Swiper
@@ -26,13 +52,18 @@ export default function SwiperPrdList() {
           clickable: true,
         }}
         scrollbar={{
-          hide: true,
+          hide: false,
         }}
+        // autoHeight={true}
+        lazy={true}
         modules={[Scrollbar]}
         className="mySwiper slider fx-box cont-box"
       >
         {bestItemData.map((v, i) => (
-          <SwiperSlide key={i} className="item">
+          <SwiperSlide 
+          key={i} className="item" 
+          ref={swiperRef}>
+            <section>
             <Link to="">
               <div className="desc-wrap">
                 <div className="eng-pdtit">{v.engtit}</div>
@@ -55,6 +86,7 @@ export default function SwiperPrdList() {
                 </div>
               </div>
             </Link>
+            </section>
           </SwiperSlide>
         ))}
       </Swiper>

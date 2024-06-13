@@ -15,10 +15,9 @@
 
 #prd-list {
   .swiper {
-	overflow: visible;
-    // overflow: hidden;
+    overflow: visible;
+    height: auto;
     margin: 0 auto;
-	// height: 80vh;
 
     .item {
       flex-shrink: 0;
