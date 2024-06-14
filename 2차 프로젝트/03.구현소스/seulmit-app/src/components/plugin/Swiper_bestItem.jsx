@@ -50,6 +50,8 @@ export default function SwiperBestItem() {
         pagination={{
           clickable: true,
         }}
+        //되감기 방지
+        loop={true}
         autoplay={
             // 자동 슬라이드 설정 , 비 활성화 시 false
             { delay: 5500, disableOnInteraction: false }

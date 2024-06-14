@@ -15,6 +15,10 @@
   transition-timing-function: linear;
 }
 
+.swiper-pagination {
+  display: none !important; /* 블릿 숨기기 */
+}
+
 ////////////////////////////////////////////////////////////
 #main-visual-slider {
   .main-box {
@@ -25,7 +29,6 @@
   } //mainbox
 
   .desc-wrap {
-    // filter: blur(100px);
     opacity: 0;
     z-index: 1;
     text-align: center;

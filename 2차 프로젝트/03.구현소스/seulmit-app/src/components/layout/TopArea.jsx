@@ -1,10 +1,14 @@
 //상단영역 컴포넌트 - top_area.jsx
+
 import { Link } from "react-router-dom";
+//module
+import Logo from "../modules/Logo";
+import Topbtn from "../modules/Topbtn";
 
 /////////data
-import Logo from "../modules/Logo";
 import { gnbData, gnbDataR } from "../data/gnb_data";
 import { rollBanner } from "../data/rollbanner_data";
+import SwiperRollben from "../plugin/Swiper_rollben";
 
 /////import area///////////////////////////////////////////////////////////
 
@@ -12,20 +16,11 @@ export default function TopArea() {
   return (
     <>
       {/* <!--follow 버튼 --> */}
-      <div className="" id="follow-button">
-        {/* <!-- 탑버튼 --> */}
-        <div className="imgbx" id="top-button">
-          <Link to="#">
-            <span className="material-symbols-outlined"> arrow_upward </span>
-          </Link>
-        </div>
-        <div className="" id="talk-button">
-          <Link to="#">Talk</Link>
-        </div>
-      </div>
+      <Topbtn />
       <header id="header-area">
-      {/* <!-- 롤링배너 --> */}
-      <div className="roll-ben">
+        {/* <!-- 롤링배너 --> */}
+        <SwiperRollben />
+        {/* <div className="roll-ben">
         <div className="roll-ben-wrap">
           {rollBanner.map((v,i)=>
           <div key={i} className="cont">
@@ -34,9 +29,9 @@ export default function TopArea() {
           )}
 
         </div>
-      </div>
-      {/* <!-- GNB area --> */}
-      <div className="fx-box" id="gnb-area">
+      </div> */}
+        {/* <!-- GNB area --> */}
+        <div className="fx-box" id="gnb-area">
           {/* <!-- L menu --> */}
           <div className="fx-box" id="L-menu-wrap">
             <ul className="menu-inner fx-box">
@@ -45,7 +40,7 @@ export default function TopArea() {
                   {
                     //하위메뉴 有: a요소 cnffur / 無: Link 라우팅 출력
                     v.sub ? (
-                    <Link to={v.link}>{v.txt}</Link>
+                      <Link to={v.link}>{v.txt}</Link>
                     ) : (
                       <Link to={v.link}>{v.txt}</Link>
                     )
@@ -55,14 +50,11 @@ export default function TopArea() {
                     v.sub && (
                       <div className="sub-inner">
                         <ol>
-                          {
-                          v.sub.map((v, i) => 
+                          {v.sub.map((v, i) => (
                             <li key={i}>
-                              <Link to={v.link}>
-                                {v.txt}
-                                </Link>
+                              <Link to={v.link}>{v.txt}</Link>
                             </li>
-                          )}
+                          ))}
                         </ol>
                       </div>
                     )
@@ -115,7 +107,7 @@ export default function TopArea() {
           </div>
           {/* <!-- R menu end --> */}
         </div>
-    </header>
+      </header>
     </>
   );
 } /////TopArea컴포넌트////////////

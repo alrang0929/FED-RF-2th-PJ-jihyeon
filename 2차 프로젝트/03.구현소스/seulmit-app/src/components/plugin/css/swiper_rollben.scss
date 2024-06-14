@@ -1,0 +1,29 @@
+/// swiper css - best item
+@import "../../../css/variables/variables";
+
+:root {
+  --font-title: "miller-display", serif;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --margin-top-40: 40px;
+  --padding110: 110px;
+  --line-height: 1.7;
+}
+// #header-area {
+  .roll-ben-wrap {
+    text-align: center;
+    padding: 10px;
+    height: 28px;
+    overflow: hidden;
+    line-height: 2.7;
+
+    .desc{
+      font-size: 14px;
+      color: $FontColor3;
+      font-weight: 200;
+    }
+
+    background-color: $MainColor1;
+  }
+// }///////header-area
