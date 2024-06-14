@@ -1,0 +1,38 @@
+ // onInit={(swiper) => {
+        //   // Swiper 초기화 완료 후 실행되는 코드
+        //   descAni(swiper); // 초기 슬라이드 애니메이션 실행
+        // }}
+        onSlideChangeTransitionStart={
+          (swiper) =>{ 
+            descAni(swiper);
+          }}
+        // onSlideChangeTransitionEnd={(swiper) => {
+        //   descAni(swiper);
+        // }}
+
+
+
+
+
+          // const descAni = (swiper) => {
+  //   const realIndex = swiper.realIndex; // realIndex 사용
+  //   const $activeSlide = $(swiper.slides[realIndex]);
+  //   const $descWrap = $activeSlide.find(".desc-wrap");
+
+  //   $descWrap
+  //     .css({
+  //       // filter: "blur(50px)",
+  //       // display: "block",
+  //       bottom: "70%",
+  //       opacity: "0",
+  //     })
+  //     .animate(
+  //       {
+  //         // filter: "blur(0px)",
+  //         bottom: "20%",
+  //         opacity: "1",
+  //       },
+  //       2000
+  //     ).fadeTo(1500,0);
+     
+  // };
