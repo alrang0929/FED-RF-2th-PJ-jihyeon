@@ -34,7 +34,7 @@
   .cont-wrap {
     position: absolute;
     left: 50%;
-    top: 44%;
+    top: 40%;
     translate: -50% -50%;
     width: 10%;
     span {
@@ -53,7 +53,7 @@
       width: 280%;
 
       left: 50%;
-      top: 139%;
+      top: 128%;
       translate: -50% -50%;
 
       text-align: center;
@@ -66,10 +66,10 @@
   .loading {
     position: absolute;
     left: 50%;
-    top: 180%;
+    top: 150%;
     translate: -50% -50%;
 
-    width: 400px;
+    // width: 550px;
     height: 1px;
 
     background-color: #fff;
