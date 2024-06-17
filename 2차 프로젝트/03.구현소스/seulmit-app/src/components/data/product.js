@@ -11,9 +11,14 @@ const product = {
       img: [
         { isrc: "/images/shop/face/face_01.jpg" },
         { blur: "/images/shop/face/face_02.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "",
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Serum in Lip Balm 02 Tinted",
@@ -24,9 +29,14 @@ const product = {
       img: [
         { isrc: "/images/shop/face/face_03.jpg" },
         { blur: "/images/shop/face/face_04.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
   ],
   body: [
@@ -39,9 +49,14 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_01.jpg" },
         { blur: "/images/shop/body/body_04.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Sol Soop Body Mini Kit",
@@ -52,9 +67,14 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_02.jpg" },
         { blur: "/images/shop/body/body_04.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Sol Soop Body Wash",
@@ -65,9 +85,14 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_05.jpg" },
         { blur: "/images/shop/body/body_06.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Sol Soop Body Lotion",
@@ -78,9 +103,14 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_07.jpg" },
         { blur: "/images/shop/body/body_08.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
   ],
   hand: [
@@ -93,9 +123,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_01.jpg" },
         { blur: "/images/shop/hand/hand_02.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "",
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Cream 300ml (So Wood)",
@@ -106,9 +141,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_03.jpg" },
         { blur: "/images/shop/hand/hand_04.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "",
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Cream 300ml (Sol Soul Seoul)",
@@ -119,9 +159,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_05.jpg" },
         { blur: "/images/shop/hand/hand_06.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "",
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Cream 30ml (Soul Dawn)",
@@ -132,9 +177,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_07.jpg" },
         { blur: "/images/shop/hand/hand_08.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Cream 30ml (So Wood)",
@@ -145,9 +195,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_09.jpg" },
         { blur: "/images/shop/hand/hand_10.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Cream 30ml (Sol Soul Seoul)",
@@ -158,9 +213,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_11.jpg" },
         { blur: "/images/shop/hand/hand_12.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Wash 50ml (Soul Dawn)",
@@ -171,9 +231,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_13.jpg" },
         { blur: "/images/shop/hand/hand_14.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Wash 50ml (So Wood)",
@@ -184,9 +249,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_15.jpg" },
         { blur: "/images/shop/hand/hand_16.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Wash 300ml (Sol Soul Seoul)",
@@ -197,9 +267,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_17.jpg" },
         { blur: "/images/shop/hand/hand_18.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Wash 300ml (Soul Dawn)",
@@ -210,9 +285,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_19.jpg" },
         { blur: "/images/shop/hand/hand_20.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Wash 300ml (So Wood)",
@@ -223,9 +303,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_21.jpg" },
         { blur: "/images/shop/hand/hand_22.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Hand Wash Sol Soul Seoul",
@@ -236,9 +321,14 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_23.jpg" },
         { blur: "/images/shop/hand/hand_24.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
   ],
   homefragrance: [
@@ -251,9 +341,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_01.jpg" },
         { blur: "/images/shop/home/home_02.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Deep Sleep Pillow Mist 50ml (Sol Soul Seoul)",
@@ -264,9 +359,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_03.jpg" },
         { blur: "/images/shop/home/home_04.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Soul Insence Stick Set",
@@ -277,9 +377,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_05.jpg" },
         { blur: "/images/shop/home/home_06.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Deep Sleep Pillow Mist 125ml (Soul Dawn)",
@@ -290,9 +395,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_07.jpg" },
         { blur: "/images/shop/home/home_08.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Ritual Set (Deep Sleep Mist & Insense Stick)",
@@ -303,9 +413,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_09.jpg" },
         { blur: "/images/shop/home/home_10.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Soul Insence Stick (Soul Dawn)",
@@ -316,9 +431,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_11.jpg" },
         { blur: "/images/shop/home/home_12.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Soul Insence Stick (So Wood)",
@@ -329,9 +449,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_13.jpg" },
         { blur: "/images/shop/home/home_14.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Soul Insence Stick (Sol Soul Seoul)",
@@ -342,9 +467,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_15.jpg" },
         { blur: "/images/shop/home/home_16.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Deep Sleep Pillow Mist Sol Soul Seoul",
@@ -355,9 +485,14 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_17.jpg" },
         { blur: "/images/shop/home/home_18.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
   ],
   gift: [
@@ -370,9 +505,14 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_01.jpg" },
         { blur: "/images/shop/gift/gift_02.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Ritual Set (Deep Sleep Mist & Insense Stick)",
@@ -383,9 +523,14 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_03.jpg" },
         { blur: "/images/shop/gift/gift_04.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Sol Soop Body Set",
@@ -396,9 +541,14 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_05.jpg" },
         { blur: "/images/shop/gift/gift_06.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Sol Soop Body Mini Kit",
@@ -409,9 +559,14 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_07.jpg" },
         { blur: "/images/shop/gift/gift_08.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
   ],
   acc: [
@@ -424,9 +579,14 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_01.jpg" },
         { blur: "/images/shop/acc/acc_02.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Shopping Bag",
@@ -436,9 +596,14 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_03.jpg" },
         { blur: "/images/shop/acc/acc_04.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Soul Insense Holder (Glass Stone)",
@@ -449,9 +614,14 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_05.jpg" },
         { blur: "/images/shop/acc/acc_06.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
     {
       engtit: "Seulmit Soul Insense Holder (Glass Apple)",
@@ -462,15 +632,27 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_07.jpg" },
         { blur: "/images/shop/acc/acc_08.jpg" },
-        { sisrc: "" },
+        { thumb: 
+          "", 
+          ditail:
+           "",
+        },
       ],
-      opId:[]//해당 상품에 적용되는 옵션 아이디
+      opId: [1,], //해당 상품에 적용되는 옵션 아이디
+      isSoldOut: false, // 품절 여부 ("false": 판매 중, true: 품절)
     },
   ],
 };
 
 const options = [
-  
+  {
+    id: "1",
+    option: "기본옵션",
+    values: [
+      { value: "쇼핑백 추가", price: "2,000", IsSoldOut: false },
+      { value: "선물 포장", price: "1,000", IsSoldOut: false },
+    ],
+  },
 ];
 
 export { product, options };
