@@ -46,10 +46,20 @@
 .bt-padding80 {
   padding-bottom: 80px;
 }
+.bt-padding200 {
+  padding-bottom: 200px;
+}
 
 //마진설정////////////////////////////
 .L-margin20{
   margin-left: 20px;
+}
+
+.bt-margin40{
+  margin-bottom: 40px;
+}
+.bt-margin80{
+  margin-bottom: 80px;
 }
 
 //gap 설정/////////////////////////////
@@ -154,11 +164,12 @@
 
 #product-cont {
   .info-wrap {
-    height: 81vh;
+    height: 140vh;
     //영역확인용
     // background: #c8c8c850;
-
+    
     .info-area {
+      width: 25vw;
       position: sticky;
       top: 0;
       padding: 30px;

@@ -202,3 +202,14 @@ body{
     }
   }
 }
+
+///////기타설정///////////////////
+//옵션버튼
+.selectBox{
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  .opBox{
+    height: 20px;
+  }
+}

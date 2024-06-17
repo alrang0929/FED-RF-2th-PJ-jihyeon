@@ -44,8 +44,8 @@ concat: 제이쿼리 내장함수, 배열 딥카피 가능
 
 $.each(face, (index, product) => {
   product.img = product.img.concat(
-    $.map(Array(product.thumbCnt), (_, i) => ({
-      thumb: `/images/shop/face/face_01/thumb_${i + 1}.jpg`,
+    thumb: `/images/shop/face/face_01/thumb_${i + 1}.jpg`,
+    $.map(Array(producthumbCnt), (,i) => ({
       detail: "",
     }))
   );
@@ -72,8 +72,8 @@ const product = {
       img: [
         { isrc: "/images/shop/face/face_01.jpg" },
         { blur: "/images/shop/face/face_02.jpg" },
-        { thumbCnt: 5 },
       ],
+      thumbCnt: 4,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -92,8 +92,8 @@ const product = {
       img: [
         { isrc: "/images/shop/face/face_03.jpg" },
         { blur: "/images/shop/face/face_04.jpg" },
-        { thumbCnt: 7 },
       ],
+      thumbCnt: 7,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -114,8 +114,8 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_01.jpg" },
         { blur: "/images/shop/body/body_04.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -134,8 +134,8 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_02.jpg" },
         { blur: "/images/shop/body/body_04.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
 
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
@@ -155,8 +155,8 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_05.jpg" },
         { blur: "/images/shop/body/body_06.jpg" },
-        { thumbCnt: 7 },
       ],
+      thumbCnt: 7,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -175,8 +175,8 @@ const product = {
       img: [
         { isrc: "/images/shop/body/body_07.jpg" },
         { blur: "/images/shop/body/body_08.jpg" },
-        { thumbCnt: 8 },
       ],
+      thumbCnt: 8,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -197,8 +197,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_01.jpg" },
         { blur: "/images/shop/hand/hand_02.jpg" },
-        { thumbCnt: 4 },
       ],
+      thumbCnt: 4,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -217,8 +217,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_03.jpg" },
         { blur: "/images/shop/hand/hand_04.jpg" },
-        { thumbCnt: 4 },
       ],
+      thumbCnt: 4,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -237,8 +237,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_05.jpg" },
         { blur: "/images/shop/hand/hand_06.jpg" },
-        { thumbCnt: 4 },
       ],
+      thumbCnt: 4,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -257,8 +257,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_07.jpg" },
         { blur: "/images/shop/hand/hand_08.jpg" },
-        { thumbCnt: 7 },
       ],
+      thumbCnt: 7,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -281,8 +281,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_09.jpg" },
         { blur: "/images/shop/hand/hand_10.jpg" },
-        { thumbCnt: 8 },
       ],
+      thumbCnt: 8,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -304,8 +304,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_11.jpg" },
         { blur: "/images/shop/hand/hand_12.jpg" },
-        { thumbCnt: 7 },
       ],
+      thumbCnt: 7,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -327,8 +327,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_13.jpg" },
         { blur: "/images/shop/hand/hand_14.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -347,8 +347,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_15.jpg" },
         { blur: "/images/shop/hand/hand_16.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -367,8 +367,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_17.jpg" },
         { blur: "/images/shop/hand/hand_18.jpg" },
-        { thumbCnt: 5 },
       ],
+      thumbCnt: 5,
 
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
@@ -388,8 +388,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_19.jpg" },
         { blur: "/images/shop/hand/hand_20.jpg" },
-        { thumbCnt: 5 },
       ],
+      thumbCnt: 5,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -408,8 +408,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_21.jpg" },
         { blur: "/images/shop/hand/hand_22.jpg" },
-        { thumbCnt: 5 },
       ],
+      thumbCnt: 5,
       detail: [
         "/images/shop/hand/hand_11/detail_1.jpg",
         "/images/shop/hand/hand_11/detail_2.jpg",
@@ -428,8 +428,8 @@ const product = {
       img: [
         { isrc: "/images/shop/hand/hand_23.jpg" },
         { blur: "/images/shop/hand/hand_24.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
       detail: [
         "/images/shop/hand/hand_12/detail_1.jpg",
         "/images/shop/hand/hand_12/detail_2.jpg",
@@ -450,8 +450,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_01.jpg" },
         { blur: "/images/shop/home/home_02.jpg" },
-        { thumbCnt: 3 },
       ],
+      thumbCnt: 3,
       detail: [
         "/images/shop/home/home_01/detail_1.jpg",
         "/images/shop/home/home_01/detail_2.gif",
@@ -471,8 +471,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_03.jpg" },
         { blur: "/images/shop/home/home_04.jpg" },
-        { thumbCnt: 3 },
       ],
+      thumbCnt: 3,
       detail: [
         "/images/shop/home/home_02/detail_1.jpg",
         "/images/shop/home/home_02/detail_2.gif",
@@ -492,8 +492,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_05.jpg" },
         { blur: "/images/shop/home/home_06.jpg" },
-        { thumbCnt: 10 },
       ],
+      thumbCnt: 10,
       detail: [
         "/images/shop/home/home_03/detail_1.jpg",
         "/images/shop/home/home_03/detail_2.jpg",
@@ -512,8 +512,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_07.jpg" },
         { blur: "/images/shop/home/home_08.jpg" },
-        { thumbCnt: 8 },
       ],
+      thumbCnt: 8,
       detail: [
         "/images/shop/home/home_04/detail_1.jpg",
         "/images/shop/home/home_04/detail_2.gif",
@@ -533,8 +533,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_09.jpg" },
         { blur: "/images/shop/home/home_10.jpg" },
-        { thumbCnt: 7 },
       ],
+      thumbCnt: 7,
       detail: [
         "/images/shop/home/home_05/detail_1.jpg",
         "/images/shop/home/home_05/detail_2.jpg",
@@ -553,8 +553,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_11.jpg" },
         { blur: "/images/shop/home/home_12.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
       detail: [
         "/images/shop/home/home_06/detail_1.jpg",
         "/images/shop/home/home_06/detail_2.jpg",
@@ -573,8 +573,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_13.jpg" },
         { blur: "/images/shop/home/home_14.jpg" },
-        { thumbCnt: 8 },
       ],
+      thumbCnt: 8,
       detail: [
         "/images/shop/home/home_07/detail_1.jpg",
         "/images/shop/home/home_07/detail_2.jpg",
@@ -593,8 +593,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_15.jpg" },
         { blur: "/images/shop/home/home_16.jpg" },
-        { thumbCnt: 9 },
       ],
+      thumbCnt: 9,
       detail: [
         "/images/shop/home/home_08/detail_1.jpg",
         "/images/shop/home/home_08/detail_2.jpg",
@@ -613,8 +613,8 @@ const product = {
       img: [
         { isrc: "/images/shop/home/home_17.jpg" },
         { blur: "/images/shop/home/home_18.jpg" },
-        { thumbCnt: 8 },
       ],
+      thumbCnt: 8,
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
@@ -635,8 +635,8 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_01.jpg" },
         { blur: "/images/shop/gift/gift_02.jpg" },
-        { thumbCnt: 10 },
       ],
+      thumbCnt: 10,
       detail: [
         "/images/shop/gift/gift_01/detail_1.jpg",
         "/images/shop/gift/gift_01/detail_2.jpg",
@@ -655,8 +655,8 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_03.jpg" },
         { blur: "/images/shop/gift/gift_04.jpg" },
-        { thumbCnt: 7 },
       ],
+      thumbCnt: 7,
       detail: [
         "/images/shop/gift/gift_02/detail_1.jpg",
         "/images/shop/gift/gift_02/detail_2.jpg",
@@ -675,8 +675,8 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_05.jpg" },
         { blur: "/images/shop/gift/gift_06.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
       detail: [
         "/images/shop/gift/gift_03/detail_1.jpg",
         "/images/shop/gift/gift_03/detail_2.jpg",
@@ -695,8 +695,8 @@ const product = {
       img: [
         { isrc: "/images/shop/gift/gift_07.jpg" },
         { blur: "/images/shop/gift/gift_08.jpg" },
-        { thumbCnt: 6 },
       ],
+      thumbCnt: 6,
       detail: [
         "/images/shop/gift/gift_05/detail_1.jpg",
         "/images/shop/gift/gift_05/detail_2.jpg",
@@ -717,8 +717,8 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_01.jpg" },
         { blur: "/images/shop/acc/acc_02.jpg" },
-        { thumbCnt: 5 },
       ],
+      thumbCnt: 5,
       detail: [
         "/images/shop/acc/acc_01/detail_1.jpg",
         "/images/shop/acc/acc_01/detail_2.jpg",
@@ -736,8 +736,8 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_03.jpg" },
         { blur: "/images/shop/acc/acc_04.jpg" },
-        { thumbCnt: 3 },
       ],
+      thumbCnt: 3,
       detail: ["/images/shop/acc/acc_02/detail_1.jpg"],
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
@@ -753,8 +753,8 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_05.jpg" },
         { blur: "/images/shop/acc/acc_06.jpg" },
-        { thumbCnt: 5 },
       ],
+      thumbCnt: 5,
       detail: ["/images/shop/acc/acc_03/detail_1.jpg"],
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
@@ -770,8 +770,8 @@ const product = {
       img: [
         { isrc: "/images/shop/acc/acc_07.jpg" },
         { blur: "/images/shop/acc/acc_08.jpg" },
-        { thumbCnt: 5 },
       ],
+      thumbCnt: 5,
       detail: ["/images/shop/acc/acc_04/detail_1.jpg"],
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
