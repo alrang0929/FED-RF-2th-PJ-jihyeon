@@ -2,7 +2,8 @@ import React from "react";
 
 //data
 //임시 상품데이터
-import { bestItemData } from "../data/slide_item_data";
+import { product, options, notiImg } from "../data/product";
+import { Link } from "react-router-dom";
 ///////////////import area////////////////////////
 
 function ShopCustomCont(props) {
@@ -25,14 +26,16 @@ function ShopCustomCont(props) {
             </p>
             <ul className="iconbx fx-box bt-padding20 gap10">
               <li className="share-icon">
-                <a href="">
-                  <span class="material-symbols-outlined">share</span>
-                </a>
+                <Link to="">
+                  <span className="material-symbols-outlined">share</span>
+                </Link>
               </li>
               <li className="like-icon">
-                <a href="">
-                  <span class="material-symbols-outlined">favorite</span>
-                </a>
+                <Link to="">
+                  <span className="material-symbols-outlined icon-favorite"
+                  
+                  >favorite</span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -41,11 +44,10 @@ function ShopCustomCont(props) {
           {/* 3. btn area */}
           <div className="btn-wrap bt-padding80">
             <button className="button-nomal">
-              <span class="material-symbols-outlined">shopping_cart</span>{" "}
               장바구니 추가
             </button>
             <button className="button-main L-margin20">
-              <span class="material-symbols-outlined ">toll</span> 구매하기
+              구매하기
             </button>
           </div>
           {/* 4. promotion area */}
