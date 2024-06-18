@@ -3,7 +3,10 @@ import React from "react";
 //data
 import { product, options, notiImg } from "../data/product";
 import { Link } from "react-router-dom";
+
+//modules
 import OptionBox from "./OptionBox";
+import OptionTable from "./OptionTable";
 ///////////////import area////////////////////////
 
 function ShopCustomCont({ catName }) {
@@ -44,10 +47,11 @@ function ShopCustomCont({ catName }) {
           <OptionBox />
           {/* 4. 옵션 선택 표시 리스트 */}
           {/* 테이블 컴포넌트 */}
+          <OptionTable/>
           {/* 5. btn area */}
           <div className="btn-wrap bt-padding80">
             <button className="button-nomal">장바구니 추가</button>
-            <button className="button-main L-margin20">구매하기</button>
+            <button className="button-main L-margin10">구매하기</button>
           </div>
 
           {/* 6. promotion area */}
