@@ -1,5 +1,5 @@
 //슬밋pj - 인트로페이지 jsx
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 
@@ -15,7 +15,11 @@ export default function Intro() {
     console.log("로딩바", bar);
     const [IsLoading, setIsLoading] = useState(true);
 
-    React.useEffect(() => {
+    // const introArea = document.getElementById('intro-area');
+    // introArea.style.cursor = `url('/images/cursor.svg'), auto`; // 커서 이미지 경로 설정
+    
+    useEffect(() => {
+        
       const checkResourcesLoaded = async () => {
         // 이미지, 비디오 등 외부 리소스 로딩 확인 로직
         await Promise.all([

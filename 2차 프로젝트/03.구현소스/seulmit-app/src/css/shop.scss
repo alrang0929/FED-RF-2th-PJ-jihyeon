@@ -23,10 +23,10 @@
   font-size: 20px;
   font-weight: 600;
 }
-.price {
-  text-align: right;
-  font-size: $fontsize2;
-}
+// .price {
+//   text-align: right;
+//   font-size: $fontsize2;
+// }
 
 .desc {
   font-size: $fontsize2;
@@ -51,22 +51,22 @@
 }
 
 //마진설정////////////////////////////
-.L-margin20{
+.L-margin20 {
   margin-left: 20px;
 }
-.L-margin10{
+.L-margin10 {
   margin-left: 10px;
 }
 
-.bt-margin40{
+.bt-margin40 {
   margin-bottom: 40px;
 }
-.bt-margin80{
+.bt-margin80 {
   margin-bottom: 80px;
 }
 
 //gap 설정/////////////////////////////
-.gap10{
+.gap10 {
   gap: 10px;
 }
 
@@ -121,6 +121,7 @@
         } //imgbx
         .desc-wrap {
           padding: 0 20px;
+          width: 70%;
           .eng-pdtit {
             margin-bottom: 10px;
             font-size: $fontsize2;
@@ -166,11 +167,13 @@
 ////////////////product-cont start/////////////////////////////////////////////////////
 
 #product-cont {
+  margin: 0 auto;
+  padding: 40px;
   .info-wrap {
     height: 140vh;
     //영역확인용
     // background: #c8c8c850;
-    
+
     .info-area {
       width: 25vw;
       position: sticky;
@@ -182,11 +185,92 @@
   }
 } //////product cont/////////////////////////////
 
-
 ///테이블 디자인 설정
-table{
+table {
   padding: 10px;
   margin: 20px 0;
-border-top: 1px solid $MainColor1;
-border-bottom: 1px solid $MainColor1;
+  border-top: 1px solid $MainColor1;
+  border-bottom: 1px solid $MainColor1;
+
+  td {
+    padding: 10px;
+    font-size: $fontsize2;
+    align-items: center;
+    line-height: 1.4;
+
+    
+      .btn-add {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid $MainColor1;
+        height: 34px;
+        width: 34px;
+        font-size: 20px;
+      }
+      .btn-increase {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+          border: 1px solid $MainColor1;
+          height: 34px;
+          width: 34px;
+          font-size: 20px;
+      }
+    
+      input {
+        order: 2;
+        height: 30px;
+        width: 40px;
+        text-align: center;
+      }
+    
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"] {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        appearance: none;
+        margin: 0;
+        // border-bottom: 1px solid $MainColor1;
+      }
+  }
 }
+
+
+//상세페이지 이미지박스
+.detail-wrap{
+
+.tab-btn-wrap{
+  height: 40px;
+  width: 60%;
+  margin: 70px auto;
+
+  justify-content: center;
+  button{
+    border: 4px solid transparent;
+    border-bottom: 1px solid $MainColor1;
+    width: 100%;
+    background-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    &:active{
+      border-bottom: 3px solid $MainColor1;
+
+    }
+
+  }
+}  
+
+  .detail-box{
+    margin: 0 auto;
+    width: 60%;
+    img{
+      width: 100%;
+    }
+  }
+}//detail-wrap
+
+
+//////pd-list///////////////////////////////

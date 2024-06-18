@@ -71,7 +71,7 @@ const product = {
       price: "7,900",
       img: [
         { isrc: "/images/shop/face/face_01.jpg" },
-        { blur: "/images/shop/face/face_02.jpg" },
+        { isrc: "/images/shop/face/face_02.jpg" },
       ],
       thumbCnt: 4,
       notiId: [1],
@@ -91,7 +91,7 @@ const product = {
       price: "5,900",
       img: [
         { isrc: "/images/shop/face/face_03.jpg" },
-        { blur: "/images/shop/face/face_04.jpg" },
+        { isrc: "/images/shop/face/face_04.jpg" },
       ],
       thumbCnt: 7,
       notiId: [1],
@@ -113,7 +113,7 @@ const product = {
       price: "69,000",
       img: [
         { isrc: "/images/shop/body/body_01.jpg" },
-        { blur: "/images/shop/body/body_04.jpg" },
+        { isrc: "/images/shop/body/body_04.jpg" },
       ],
       thumbCnt: 6,
       notiId: [1],
@@ -133,7 +133,7 @@ const product = {
       price: "20,000",
       img: [
         { isrc: "/images/shop/body/body_02.jpg" },
-        { blur: "/images/shop/body/body_04.jpg" },
+        { isrc: "/images/shop/body/body_04.jpg" },
       ],
       thumbCnt: 6,
 
@@ -154,7 +154,7 @@ const product = {
       price: "21,400",
       img: [
         { isrc: "/images/shop/body/body_05.jpg" },
-        { blur: "/images/shop/body/body_06.jpg" },
+        { isrc: "/images/shop/body/body_06.jpg" },
       ],
       thumbCnt: 7,
       notiId: [1],
@@ -174,7 +174,7 @@ const product = {
       price: "23,400",
       img: [
         { isrc: "/images/shop/body/body_07.jpg" },
-        { blur: "/images/shop/body/body_08.jpg" },
+        { isrc: "/images/shop/body/body_08.jpg" },
       ],
       thumbCnt: 8,
       notiId: [1],
@@ -196,7 +196,7 @@ const product = {
       price: "33,000",
       img: [
         { isrc: "/images/shop/hand/hand_01.jpg" },
-        { blur: "/images/shop/hand/hand_02.jpg" },
+        { isrc: "/images/shop/hand/hand_02.jpg" },
       ],
       thumbCnt: 4,
       notiId: [1],
@@ -216,7 +216,7 @@ const product = {
       price: "33,000",
       img: [
         { isrc: "/images/shop/hand/hand_03.jpg" },
-        { blur: "/images/shop/hand/hand_04.jpg" },
+        { isrc: "/images/shop/hand/hand_04.jpg" },
       ],
       thumbCnt: 4,
       notiId: [1],
@@ -236,7 +236,7 @@ const product = {
       price: "33,000",
       img: [
         { isrc: "/images/shop/hand/hand_05.jpg" },
-        { blur: "/images/shop/hand/hand_06.jpg" },
+        { isrc: "/images/shop/hand/hand_06.jpg" },
       ],
       thumbCnt: 4,
       notiId: [1],
@@ -256,7 +256,7 @@ const product = {
       price: "13,500",
       img: [
         { isrc: "/images/shop/hand/hand_07.jpg" },
-        { blur: "/images/shop/hand/hand_08.jpg" },
+        { isrc: "/images/shop/hand/hand_08.jpg" },
       ],
       thumbCnt: 7,
       notiId: [1],
@@ -280,7 +280,7 @@ const product = {
       price: "15,000",
       img: [
         { isrc: "/images/shop/hand/hand_09.jpg" },
-        { blur: "/images/shop/hand/hand_10.jpg" },
+        { isrc: "/images/shop/hand/hand_10.jpg" },
       ],
       thumbCnt: 8,
       notiId: [1],
@@ -303,7 +303,7 @@ const product = {
       price: "13,500",
       img: [
         { isrc: "/images/shop/hand/hand_11.jpg" },
-        { blur: "/images/shop/hand/hand_12.jpg" },
+        { isrc: "/images/shop/hand/hand_12.jpg" },
       ],
       thumbCnt: 7,
       notiId: [1],
@@ -326,7 +326,7 @@ const product = {
       price: "15,000",
       img: [
         { isrc: "/images/shop/hand/hand_13.jpg" },
-        { blur: "/images/shop/hand/hand_14.jpg" },
+        { isrc: "/images/shop/hand/hand_14.jpg" },
       ],
       thumbCnt: 6,
       notiId: [1],
@@ -346,7 +346,7 @@ const product = {
       price: "15,000",
       img: [
         { isrc: "/images/shop/hand/hand_15.jpg" },
-        { blur: "/images/shop/hand/hand_16.jpg" },
+        { isrc: "/images/shop/hand/hand_16.jpg" },
       ],
       thumbCnt: 6,
       notiId: [1],
@@ -366,7 +366,7 @@ const product = {
       price: "33,000",
       img: [
         { isrc: "/images/shop/hand/hand_17.jpg" },
-        { blur: "/images/shop/hand/hand_18.jpg" },
+        { isrc: "/images/shop/hand/hand_18.jpg" },
       ],
       thumbCnt: 5,
 
@@ -387,7 +387,7 @@ const product = {
       price: "33,000",
       img: [
         { isrc: "/images/shop/hand/hand_19.jpg" },
-        { blur: "/images/shop/hand/hand_20.jpg" },
+        { isrc: "/images/shop/hand/hand_20.jpg" },
       ],
       thumbCnt: 5,
       notiId: [1],
@@ -407,7 +407,7 @@ const product = {
       price: "33,000",
       img: [
         { isrc: "/images/shop/hand/hand_21.jpg" },
-        { blur: "/images/shop/hand/hand_22.jpg" },
+        { isrc: "/images/shop/hand/hand_22.jpg" },
       ],
       thumbCnt: 5,
       detail: [
@@ -427,7 +427,7 @@ const product = {
       price: "15,000",
       img: [
         { isrc: "/images/shop/hand/hand_23.jpg" },
-        { blur: "/images/shop/hand/hand_24.jpg" },
+        { isrc: "/images/shop/hand/hand_24.jpg" },
       ],
       thumbCnt: 6,
       detail: [
@@ -449,7 +449,7 @@ const product = {
       price: "16,200",
       img: [
         { isrc: "/images/shop/home/home_01.jpg" },
-        { blur: "/images/shop/home/home_02.jpg" },
+        { isrc: "/images/shop/home/home_02.jpg" },
       ],
       thumbCnt: 3,
       detail: [
@@ -470,7 +470,7 @@ const product = {
       price: "16,200",
       img: [
         { isrc: "/images/shop/home/home_03.jpg" },
-        { blur: "/images/shop/home/home_04.jpg" },
+        { isrc: "/images/shop/home/home_04.jpg" },
       ],
       thumbCnt: 3,
       detail: [
@@ -491,7 +491,7 @@ const product = {
       price: "75,000",
       img: [
         { isrc: "/images/shop/home/home_05.jpg" },
-        { blur: "/images/shop/home/home_06.jpg" },
+        { isrc: "/images/shop/home/home_06.jpg" },
       ],
       thumbCnt: 10,
       detail: [
@@ -511,7 +511,7 @@ const product = {
       price: "38,000",
       img: [
         { isrc: "/images/shop/home/home_07.jpg" },
-        { blur: "/images/shop/home/home_08.jpg" },
+        { isrc: "/images/shop/home/home_08.jpg" },
       ],
       thumbCnt: 8,
       detail: [
@@ -532,7 +532,7 @@ const product = {
       price: "63,000",
       img: [
         { isrc: "/images/shop/home/home_09.jpg" },
-        { blur: "/images/shop/home/home_10.jpg" },
+        { isrc: "/images/shop/home/home_10.jpg" },
       ],
       thumbCnt: 7,
       detail: [
@@ -552,7 +552,7 @@ const product = {
       price: "16,200",
       img: [
         { isrc: "/images/shop/home/home_11.jpg" },
-        { blur: "/images/shop/home/home_12.jpg" },
+        { isrc: "/images/shop/home/home_12.jpg" },
       ],
       thumbCnt: 6,
       detail: [
@@ -572,7 +572,7 @@ const product = {
       price: "16,200",
       img: [
         { isrc: "/images/shop/home/home_13.jpg" },
-        { blur: "/images/shop/home/home_14.jpg" },
+        { isrc: "/images/shop/home/home_14.jpg" },
       ],
       thumbCnt: 8,
       detail: [
@@ -592,7 +592,7 @@ const product = {
       price: "16,200",
       img: [
         { isrc: "/images/shop/home/home_15.jpg" },
-        { blur: "/images/shop/home/home_16.jpg" },
+        { isrc: "/images/shop/home/home_16.jpg" },
       ],
       thumbCnt: 9,
       detail: [
@@ -612,7 +612,7 @@ const product = {
       price: "38,000",
       img: [
         { isrc: "/images/shop/home/home_17.jpg" },
-        { blur: "/images/shop/home/home_18.jpg" },
+        { isrc: "/images/shop/home/home_18.jpg" },
       ],
       thumbCnt: 8,
       notiId: [1],
@@ -634,7 +634,7 @@ const product = {
       price: "75,000",
       img: [
         { isrc: "/images/shop/gift/gift_01.jpg" },
-        { blur: "/images/shop/gift/gift_02.jpg" },
+        { isrc: "/images/shop/gift/gift_02.jpg" },
       ],
       thumbCnt: 10,
       detail: [
@@ -654,7 +654,7 @@ const product = {
       price: "63,000",
       img: [
         { isrc: "/images/shop/gift/gift_03.jpg" },
-        { blur: "/images/shop/gift/gift_04.jpg" },
+        { isrc: "/images/shop/gift/gift_04.jpg" },
       ],
       thumbCnt: 7,
       detail: [
@@ -674,7 +674,7 @@ const product = {
       price: "69,000",
       img: [
         { isrc: "/images/shop/gift/gift_05.jpg" },
-        { blur: "/images/shop/gift/gift_06.jpg" },
+        { isrc: "/images/shop/gift/gift_06.jpg" },
       ],
       thumbCnt: 6,
       detail: [
@@ -694,7 +694,7 @@ const product = {
       price: "20,000",
       img: [
         { isrc: "/images/shop/gift/gift_07.jpg" },
-        { blur: "/images/shop/gift/gift_08.jpg" },
+        { isrc: "/images/shop/gift/gift_08.jpg" },
       ],
       thumbCnt: 6,
       detail: [
@@ -716,7 +716,7 @@ const product = {
       price: "49,000",
       img: [
         { isrc: "/images/shop/acc/acc_01.jpg" },
-        { blur: "/images/shop/acc/acc_02.jpg" },
+        { isrc: "/images/shop/acc/acc_02.jpg" },
       ],
       thumbCnt: 5,
       detail: [
@@ -735,7 +735,7 @@ const product = {
       price: "2,000",
       img: [
         { isrc: "/images/shop/acc/acc_03.jpg" },
-        { blur: "/images/shop/acc/acc_04.jpg" },
+        { isrc: "/images/shop/acc/acc_04.jpg" },
       ],
       thumbCnt: 3,
       detail: ["/images/shop/acc/acc_02/detail_1.jpg"],
@@ -752,7 +752,7 @@ const product = {
       price: "68,000",
       img: [
         { isrc: "/images/shop/acc/acc_05.jpg" },
-        { blur: "/images/shop/acc/acc_06.jpg" },
+        { isrc: "/images/shop/acc/acc_06.jpg" },
       ],
       thumbCnt: 5,
       detail: ["/images/shop/acc/acc_03/detail_1.jpg"],
@@ -769,7 +769,7 @@ const product = {
       price: "210,000",
       img: [
         { isrc: "/images/shop/acc/acc_07.jpg" },
-        { blur: "/images/shop/acc/acc_08.jpg" },
+        { isrc: "/images/shop/acc/acc_08.jpg" },
       ],
       thumbCnt: 5,
       detail: ["/images/shop/acc/acc_04/detail_1.jpg"],

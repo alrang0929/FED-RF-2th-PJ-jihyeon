@@ -5,6 +5,7 @@ import { bestItemData } from "../data/slide_item_data";
 import "../../css/shop.scss";
 import Category from "../modules/Category";
 import { Link } from "react-router-dom";
+import ShopPdList from "../modules/ShopPdList";
 /////import area/////////////////////////////////////////////////
 
 export default function Shop() {
@@ -24,27 +25,8 @@ export default function Shop() {
       <section id="sell-pd-list" className="cont-box">
         {/* 메뉴 리스트 */}
           <Category />
-        <div className="pd-list">
-          <ul className="fx-box">
-            {bestItemData.map((v, i) => (
-              <li key={i} className="item">
-                <Link to="/Detail">
-                  <div className="imgbx">
-                    <img
-                      src={`./images/product/${v.category}/${v.img}.jpg`}
-                      alt={`"${v.tit}"`}
-                    />
-                  </div>
-                  <div className="desc-wrap">
-                    <div className="eng-pdtit">{v.engtit}</div>
-                    <div className="kor-pdtit">{v.tit}</div>
-                    <div className="price">{v.price} <span>원</span></div>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* 상품리스트 컴포넌트*/}
+        <ShopPdList/>
         {/* page Num */}
         <div className="page-num fx-box">
           <div className="prev">
