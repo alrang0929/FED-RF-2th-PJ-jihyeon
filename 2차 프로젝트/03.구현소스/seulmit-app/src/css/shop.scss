@@ -198,79 +198,113 @@ table {
     align-items: center;
     line-height: 1.4;
 
-    
-      .btn-add {
-        display: inline-block;
-        text-align: center;
-        text-decoration: none;
-        border: 1px solid $MainColor1;
-        height: 34px;
-        width: 34px;
-        font-size: 20px;
-      }
-      .btn-increase {
-        display: inline-block;
-        text-align: center;
-        text-decoration: none;
-          border: 1px solid $MainColor1;
-          height: 34px;
-          width: 34px;
-          font-size: 20px;
-      }
-    
-      input {
-        order: 2;
-        height: 30px;
-        width: 40px;
-        text-align: center;
-      }
-    
-      input[type="number"]::-webkit-inner-spin-button,
-      input[type="number"]::-webkit-outer-spin-button,
-      input[type="number"] {
-        -webkit-appearance: none;
-        -moz-appearance: textfield;
-        appearance: none;
-        margin: 0;
-        // border-bottom: 1px solid $MainColor1;
-      }
+    .btn-add {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid $MainColor1;
+      height: 34px;
+      width: 34px;
+      font-size: 20px;
+    }
+    .btn-increase {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid $MainColor1;
+      height: 34px;
+      width: 34px;
+      font-size: 20px;
+    }
+
+    input {
+      order: 2;
+      height: 30px;
+      width: 40px;
+      text-align: center;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"] {
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+      appearance: none;
+      margin: 0;
+      // border-bottom: 1px solid $MainColor1;
+    }
   }
 }
 
-
 //상세페이지 이미지박스
-.detail-wrap{
+.detail-wrap {
+  .tab-btn-wrap {
+    height: 40px;
+    width: 60%;
+    margin: 70px auto;
 
-.tab-btn-wrap{
-  height: 40px;
-  width: 60%;
-  margin: 70px auto;
+    justify-content: center;
+    button {
+      border: 4px solid transparent;
+      border-bottom: 1px solid $MainColor1;
+      width: 100%;
+      background-color: #fff;
+      cursor: pointer;
+      box-sizing: border-box;
 
-  justify-content: center;
-  button{
-    border: 4px solid transparent;
-    border-bottom: 1px solid $MainColor1;
-    width: 100%;
-    background-color: #fff;
-    cursor: pointer;
-    box-sizing: border-box;
-    
-    &:active{
-      border-bottom: 3px solid $MainColor1;
-
+      &:active {
+        border-bottom: 3px solid $MainColor1;
+      }
     }
-
   }
-}  
 
-  .detail-box{
+  .detail-box {
     margin: 0 auto;
     width: 60%;
-    img{
+    img {
       width: 100%;
     }
   }
-}//detail-wrap
-
+} //detail-wrap
 
 //////pd-list///////////////////////////////
+
+.pd-list {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+
+  li{
+
+    width: calc(100%/4);
+    .img-wrap {
+      height: auto;
+      position: relative;
+  
+      //이미지 공통사항
+      img {
+        width: 100%;
+      }
+  
+      .imgbx {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: opacity 0.2s;
+  
+        &:hover {
+          opacity: 0;
+        }
+      } /////imgbx
+      .blur {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+      } //호버시 보이는 이미지
+    }
+  }//li
+}///pd list
