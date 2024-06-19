@@ -276,25 +276,50 @@ table {
   flex-wrap: wrap;
   justify-content: flex-start;
 
+  gap: 20px;
 
-  li{
+  li {
+    padding: 10px;
+    width: calc(100% / 4);
+    border: 1px solid transparent;
+    box-sizing: border-box;
 
-    width: calc(100%/4);
+    &:hover{
+      border: 1px solid $MainColor1;
+    }
+
+    
+    .desc-wrap {
+      .eng-pdtit {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: $fontsize2;
+      }
+      .kor-pdtit {
+        margin-bottom: 10px;
+        font-size: $fontsize1;
+      }
+      .price {
+        font-size: $fontsize1;
+        text-align: right;
+      }
+    }
+
     .img-wrap {
       height: auto;
       position: relative;
-  
+
       //이미지 공통사항
       img {
         width: 100%;
       }
-  
+
       .imgbx {
         width: 100%;
         height: auto;
         opacity: 1;
         transition: opacity 0.2s;
-  
+
         &:hover {
           opacity: 0;
         }
@@ -306,5 +331,5 @@ table {
         left: 0;
       } //호버시 보이는 이미지
     }
-  }//li
-}///pd list
+  } //li
+} ///pd list
