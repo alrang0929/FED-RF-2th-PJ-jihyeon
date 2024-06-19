@@ -1,11 +1,14 @@
 import React from "react";
-import { gnbData } from "../data/gnb_data";
+import { product } from "../data/product"; 
 import "../../css/category.scss";
 import { Link } from "react-router-dom";
 
-function Category() {
-  //catName = 카테고리명
-  const selData = gnbData;
+function Category({onCat, selCat}) {
+  //onCat : 현재 클릭한 카테고리
+  //selCat : 선택되어 있는 카테고리
+
+  const selData = Object.keys(product);
+  // console.log(selData);
 
   return (
     <>
@@ -13,9 +16,13 @@ function Category() {
       <div className="category">
         <ul className="fx-box cgmenu">
           {selData.map((v, i) => (
-            <li key={i} className={"cgitem"}>
-              <Link to="" className={v.i == 0 ? "on" : ""} >
-                {v.txt}
+            <li key={v} className="cgitem">
+              <Link to= ""
+              // {`/shop/${v}`} 
+              className={v === selCat ? "on" : ""} 
+              onClick={()=> onCat(v)}
+              >
+                {v}
               </Link>
             </li>
           ))}

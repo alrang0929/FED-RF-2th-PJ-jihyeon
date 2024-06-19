@@ -117,6 +117,7 @@
         .imgbx {
           img {
             width: 100%;
+            aspect-ratio: 1 / 1
           }
         } //imgbx
         .desc-wrap {
@@ -279,7 +280,7 @@ table {
   gap: 20px;
 
   li {
-    padding: 10px;
+    padding: 20px;
     width: calc(100% / 4);
     border: 1px solid transparent;
     box-sizing: border-box;

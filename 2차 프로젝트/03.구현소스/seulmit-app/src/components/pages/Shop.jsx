@@ -6,9 +6,21 @@ import "../../css/shop.scss";
 import Category from "../modules/Category";
 import { Link } from "react-router-dom";
 import ShopPdList from "../modules/ShopPdList";
+import { product } from "../data/product";
+import { useState } from "react";
 /////import area/////////////////////////////////////////////////
 
 export default function Shop() {
+
+  //selCat = 선택된 카테고리
+  const [selCat, setCat] = useState("face");
+
+  //activeCat = 클릭된 카테고리
+  const activeCat = (cat) =>{
+    setCat(cat); // 클릭된 카테고리로 상태 업데이트
+  }
+
+
   //// 코드 리턴구역 //////////////
   return (
     <>
@@ -24,9 +36,9 @@ export default function Shop() {
 
       <section id="sell-pd-list" className="cont-box">
         {/* 메뉴 리스트 */}
-          <Category />
+          <Category onCat={activeCat} selCat={selCat}/>
         {/* 상품리스트 컴포넌트*/}
-        <ShopPdList/>
+        <ShopPdList products={product[selCat]}/>
         {/* page Num */}
         <div className="page-num fx-box">
           <div className="prev">

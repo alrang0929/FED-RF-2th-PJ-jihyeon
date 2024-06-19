@@ -16,11 +16,8 @@ import { product, notiImg } from "../data/product";
 ////////import area//////////////////////////////////
 
 export default function Detail() {
-
-const selData = product.face[0];
-const notiData = notiImg;
-
-
+  const selData = product.face[0];
+  const notiData = notiImg;
 
   ///////코드리턴구역
   return (
@@ -29,39 +26,37 @@ const notiData = notiImg;
         <Category />
         <div className="top-Cont fx-box">
           {/*1. 왼쪽 배너: 상품 썸네일 */}
-          <SwiperThumbsList catName="face"/>
+          <SwiperThumbsList catName="face" />
           {/*2. 오른쪽 배너: 상품 정보 */}
-          <ShopCustomCont catName="face"/>
+          <ShopCustomCont catName="face" />
         </div>
       </section>
-        {/* top cont end */}
+      {/* top cont end */}
 
-        <section className="detail-wrap">
-          {/* 3. 상세페이지 (tab) */}
-          <div className="tab-btn-wrap fx-box">
-            <button>detail</button>
-            <button>info</button>
-          </div>
-          <div className="detail-box">
+      <section className="detail-wrap">
+        {/* 3. 상세페이지 (tab) */}
+        <div className="tab-btn-wrap fx-box">
+          <button>detail</button>
+          <button>info</button>
+        </div>
+        <div className="detail-box">
           <img src={notiData[1].isrc} alt={notiData.tit} />
-          {
-            selData.detail.map((v,i)=>
-            <img src={v} alt={selData.tit} key={i}/>
-            )
-          }
+          {selData.detail.map((v, i) => (
+            <img src={v} alt={selData.tit} key={i} />
+          ))}
           {/* <TabBox/> */}
-          </div>
-        </section>
+        </div>
+      </section>
 
       {/*5. 추천 아이템 */}
-      
-      <section id="prd-list" style={{overflow:"hidden"}}>
-      <div className="desc-box">
-                    <div className="tit">lorem ipsum</div>
-                    <span className="desc">
-                        로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나
-                    </span>
-                </div>
+
+      <section id="prd-list" style={{ overflow: "hidden" }}>
+        <div className="desc-box">
+          <div className="tit">lorem ipsum</div>
+          <span className="desc">
+            로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나
+          </span>
+        </div>
         <SwiperPrdList />
       </section>
     </>
