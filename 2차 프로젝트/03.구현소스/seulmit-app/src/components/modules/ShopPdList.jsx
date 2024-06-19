@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { product } from "../data/product";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import "../../css/shop.scss";
 
 ////import area//////////////////////////////
 
 function ShopPdList({ products }) {
-
-  //products: products={product[selCat]} : 클릭된 메뉴의 배열 
+  //products: products={product[selCat]} : 클릭된 메뉴의 배열
 
   // console.log("선택데이터 머불러옴",selData);
 
@@ -18,18 +17,34 @@ function ShopPdList({ products }) {
   //읽어와 그에 해당되는 값들을 맵핑을 돌아 셋팅할것
   //여기서 selData의 .face 자리에 Object.keys(products); 를 어떻게 넣을것인가
 
-  // const selData = products.face;
   //위의 selData 대신 구조분해할당
   //products로 활성화된 배열을 할당받아 맵핑
 
+  const nav = useNavigate();
+  const clickProduct = (product) => {
+    nav("/detail/${product.idx}", { state: { product } });
+    //상품 데이터를 state에 담아 이동
+  };
 
   return (
     <>
       <div className="pd-list">
         {products.map((v, i) => (
           //product의 배열 순회
-          <li key={i} className="item">
-            <Link to={`/Detail/${v.idx}`}>
+          <li
+            key={i}
+            className="item"
+            onClick={() => {
+              clickProduct(v);
+            }}
+          >
+            <Link
+              to={`/Detail/${v.idx}`}
+              onClick={(e) => {
+                e.preventDefault();
+                clickProduct(v);
+              }}
+            >
               <div className="img-wrap">
                 <div className="imgbx">
                   <img src={v.img[0].isrc} alt={v.tit} />

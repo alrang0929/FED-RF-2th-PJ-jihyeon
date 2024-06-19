@@ -8,7 +8,12 @@ import Topbtn from "../modules/Topbtn";
 /////////data
 import { gnbData, gnbDataR } from "../data/gnb_data";
 import { rollBanner } from "../data/rollbanner_data";
+
+//module
 import SwiperRollben from "../plugin/Swiper_rollben";
+import SwiperPrdList from "../plugin/Swiper_prdList";
+
+import "../plugin/css/swiper_prd-list.scss";
 
 /////import area///////////////////////////////////////////////////////////
 
@@ -94,11 +99,25 @@ export default function TopArea() {
                     </span>
                   </Link>
                 </li>
-                <li className="icon-item">
+                <li className="icon-item search-box">
                   <Link to="">
                     <span className="icon-img material-symbols-outlined">
                       search
                     </span>
+                    <div className="search-inner">
+                      <div className="input-box fx-box">
+                        <input type="text" placeholder="검색어를 입력하세요" />
+                        <button>
+                          <span className="icon-img material-symbols-outlined">
+                            search
+                          </span>
+                        </button>
+                      </div>
+
+                      <section id="prd-list">
+                        <SwiperPrdList />
+                      </section>
+                    </div>
                   </Link>
                 </li>
               </ul>
