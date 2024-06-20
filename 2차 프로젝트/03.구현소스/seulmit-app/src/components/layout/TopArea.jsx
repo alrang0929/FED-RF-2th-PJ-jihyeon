@@ -1,6 +1,7 @@
 //상단영역 컴포넌트 - top_area.jsx
-
 import { Link } from "react-router-dom";
+import $ from "jquery";
+
 //module
 import Logo from "../modules/Logo";
 import Topbtn from "../modules/Topbtn";
@@ -18,6 +19,18 @@ import "../plugin/css/swiper_prd-list.scss";
 /////import area///////////////////////////////////////////////////////////
 
 export default function TopArea() {
+
+
+  //search 버튼 클릭시 search-inner 박스 나타나기
+//대상선정
+//서치버튼
+const searchBtn = $('.search-btn');
+//서치박스
+const tg = $('search-inner');
+console.log(searchBtn,tg);
+
+
+  /////코드리턴구역
   return (
     <>
       {/* <!--follow 버튼 --> */}
@@ -101,7 +114,7 @@ export default function TopArea() {
                 </li>
                 <li className="icon-item search-box">
                   <Link to="">
-                    <span className="icon-img material-symbols-outlined">
+                    <span className="icon-img material-symbols-outlined search-btn">
                       search
                     </span>
                     <div className="search-inner">
