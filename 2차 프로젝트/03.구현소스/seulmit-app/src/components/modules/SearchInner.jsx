@@ -13,13 +13,16 @@ import SwiperBestItem from "../plugin/Swiper_bestItem";
 
 function SearchInner() {
   const searchClose = () => {
+    $('body,html').css('overflow', 'hidden'); // body 스크롤 막기
     //대상선정
     const closeBtn = $(".close-btn");
     closeBtn.click(() => {
       $(".search-inner").animate({
         right: "-72vw",
       },500);
+      
     });
+
   };
 
   ///////코드리턴구역 /////////////////////////////
