@@ -19,21 +19,24 @@ import { product } from "../data/product";
 
 //////////improt area//////////////////////////////////////
 
-export default function SwiperThumbsList({ catName }) {
+export default function SwiperThumbsList({ catName,seq,cnt,num }) {
   // const selData = product[catName];
-  const selDataCnt = product[catName][0].thumbCnt;
-  const selData = Object.keys(product)[0];
+  const selDataCnt = cnt;//product[catName][seq].thumbCnt;
+  const selData = Object.keys(product)[catName];
   console.log("썸네일 갯수: \n 키값 확인:", selDataCnt,selData);
+  console.log("선택원본:", product[catName]);
 
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
     const newSlides = []; // 빈 배열 생성
 
-    $.each(Array(selDataCnt), (i) => {
+    if(catName=="homefragrance") catName = "home";
+
+    $.each(Array(cnt), (i) => {
       const slide = (
         <SwiperSlide key={i} className="thumb">
-          <img src={`/images/shop/${selData}/${selData}_01/thumb_${i+1}.jpg`} />
+          <img src={`/images/shop/${catName}/${catName}_${seq<10?"0"+seq:seq}/thumb_${i+1}.jpg`} />
         </SwiperSlide>
       );
       newSlides.push(slide); // 슬라이드 요소 배열에 추가

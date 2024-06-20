@@ -1,23 +1,23 @@
 // shop 페이지 컴포넌트 ///
 //데이터 임시호출
 import { bestItemData } from "../data/slide_item_data";
+import { sCon } from "./sCon";
 //CSS
 import "../../css/shop.scss";
 import Category from "../modules/Category";
 import { Link } from "react-router-dom";
 import ShopPdList from "../modules/ShopPdList";
 import { product } from "../data/product";
-import { useState } from "react";
+import { useContext, useState } from "react";
 /////import area/////////////////////////////////////////////////
 
 export default function Shop() {
+  const myCon = useContext(sCon);
 
-  //selCat = 선택된 카테고리
-  const [selCat, setCat] = useState("face");
 
   //activeCat = 클릭된 카테고리
   const activeCat = (cat) =>{
-    setCat(cat); // 클릭된 카테고리로 상태 업데이트
+    myCon.setSelCat(cat); // 클릭된 카테고리로 상태 업데이트
   }
 
 
@@ -36,9 +36,9 @@ export default function Shop() {
 
       <section id="sell-pd-list" className="cont-box">
         {/* 메뉴 리스트 */}
-          <Category onCat={activeCat} selCat={selCat}/>
+          <Category onCat={activeCat} selCat={myCon.selCat}/>
         {/* 상품리스트 컴포넌트*/}
-        <ShopPdList products={product[selCat]}/>
+        <ShopPdList products={product[myCon.selCat]}/>
         {/* page Num */}
         <div className="page-num fx-box">
           <div className="prev">

@@ -16,15 +16,20 @@ import SearchInner from "../modules/SearchInner";
 export default function TopArea() {
   const goSearch = () => {
     
+    // console.log("검색버튼 잡았낭", searchBtn, tg);
+    // searchBtn.click(() => {
+    //   console.log(33333);
+    //   tg
+    // });
+  };
+
+  const showMenu = (e) => {
     const searchBtn = $(".search-btn");
     //서치박스
     const tg = $(".search-inner");
-    // console.log("검색버튼 잡았낭", searchBtn, tg);
-    searchBtn.click(() => {
-      tg.animate({
+    tg.stop().animate({
         right: 0
       },500)
-    });
   };
 
   /////코드리턴구역
@@ -105,7 +110,8 @@ export default function TopArea() {
                 </li>
                 <li className="icon-item search-box">
                   <Link to="" onClick={goSearch}>
-                    <span className="icon-img material-symbols-outlined search-btn">
+                    <span className="icon-img material-symbols-outlined search-btn"
+                    onClick={showMenu}>
                       search
                     </span>
                   </Link>

@@ -1,6 +1,6 @@
 //슬밋PJ 상품 디테일 페이지
 
-import React from "react";
+import React, { useContext } from "react";
 
 //css
 import "../../css/shop.scss";
@@ -11,6 +11,8 @@ import ShopCustomCont from "../modules/ShopCustomCont";
 import SwiperThumbsList from "../plugin/Swiper_ThumbsList";
 // import TabBox from "../modules/Tabbox";
 
+import { sCon } from "./sCon";
+
 //data
 import { product, notiImg } from "../data/product";
 import { useParams, useLocation } from "react-router-dom";
@@ -18,27 +20,38 @@ import { useParams, useLocation } from "react-router-dom";
 ////////import area//////////////////////////////////
 
 export default function Detail() {
+  
+  const myCon = useContext(sCon);
+
   // const nav = useLocation();
-  const { productId } = useParams(); // url 피라미터에서 상품 id 로드
+  // const { productId } = useParams(); // url 피라미터에서 상품 id 로드
   const { state } = useLocation(); // state에서 상품 데이터 가져오기
   const selData =
-    state?.product || product.face.find((item) => item.idx === productId); //product에서 상품 데이터 찾기
+    product[state.topcat].find((item) => item.idx === state.product); //product에서 상품 데이터 찾기
+    // state?.product || product.face.find((item) => item.idx === state.product); //product에서 상품 데이터 찾기
 
   //data
   // const selData = product.face[0];
   // const selData = state.product;
   const notiData = notiImg;
+  console.log(product[state.topcat]);
+  console.log(selData);
+  console.log("셀데이터idx:",selData.idx);
+  // 상위카테고리 state.topcat
+  console.log(state.topcat);
+  console.log(product.face);
+  console.log(state.product);
 
   ///////코드리턴구역
   return (
     <>
       <section id="product-cont" className="cont-box">
-        <Category />
+        <Category onCat={myCon.setSelCat} selCat={myCon.selCat} />
         <div className="top-Cont fx-box">
           {/*1. 왼쪽 배너: 상품 썸네일 */}
-          <SwiperThumbsList catName="face" />
+          <SwiperThumbsList catName={state.topcat} seq={selData.idx} cnt={selData.thumbCnt} num={state.product} />
           {/*2. 오른쪽 배너: 상품 정보 */}
-          <ShopCustomCont catName="face" />
+          <ShopCustomCont catName={state.topcat} />
         </div>
       </section>
       {/* top cont end */}

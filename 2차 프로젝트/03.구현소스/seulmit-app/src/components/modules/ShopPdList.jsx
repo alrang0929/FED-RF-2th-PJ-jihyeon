@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { product } from "../data/product";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import $ from "jquery";
 
 import "../../css/shop.scss";
 
@@ -22,7 +23,8 @@ function ShopPdList({ products }) {
 
   const nav = useNavigate();
   const clickProduct = (product) => {
-    nav("/detail/${product.idx}", { state: { product } });
+    console.log(product);
+    nav("/detail", { state: { product:product.idx, topcat:$(".cgmenu a.on").text() } });
     //상품 데이터를 state에 담아 이동
   };
 
