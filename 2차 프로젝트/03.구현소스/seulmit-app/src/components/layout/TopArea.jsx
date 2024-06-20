@@ -5,49 +5,40 @@ import $ from "jquery";
 //module
 import Logo from "../modules/Logo";
 import Topbtn from "../modules/Topbtn";
+import SwiperRollben from "../plugin/Swiper_rollben";
 
 /////////data
 import { gnbData, gnbDataR } from "../data/gnb_data";
-import { rollBanner } from "../data/rollbanner_data";
-
-//module
-import SwiperRollben from "../plugin/Swiper_rollben";
-import SwiperPrdList from "../plugin/Swiper_prdList";
-
-import "../plugin/css/swiper_prd-list.scss";
+import SearchInner from "../modules/SearchInner";
 
 /////import area///////////////////////////////////////////////////////////
 
 export default function TopArea() {
-
-
-  //search 버튼 클릭시 search-inner 박스 나타나기
-//대상선정
-//서치버튼
-const searchBtn = $('.search-btn');
-//서치박스
-const tg = $('search-inner');
-console.log(searchBtn,tg);
-
+  const goSearch = () => {
+    
+    const searchBtn = $(".search-btn");
+    //서치박스
+    const tg = $(".search-inner");
+    // console.log("검색버튼 잡았낭", searchBtn, tg);
+    searchBtn.click(() => {
+      tg.animate({
+        right: 0
+      },500)
+    });
+  };
 
   /////코드리턴구역
   return (
     <>
       {/* <!--follow 버튼 --> */}
       <Topbtn />
+      {/* 서치버튼 클릭시 search-inner 우 > 좌 등장 */}
+      <SearchInner />
+
+      
       <header id="header-area">
         {/* <!-- 롤링배너 --> */}
         <SwiperRollben />
-        {/* <div className="roll-ben">
-        <div className="roll-ben-wrap">
-          {rollBanner.map((v,i)=>
-          <div key={i} className="cont">
-          <Link to={v.link}> {v.txt}</Link>
-        </div>
-          )}
-
-        </div>
-      </div> */}
         {/* <!-- GNB area --> */}
         <div className="fx-box" id="gnb-area">
           {/* <!-- L menu --> */}
@@ -113,24 +104,10 @@ console.log(searchBtn,tg);
                   </Link>
                 </li>
                 <li className="icon-item search-box">
-                  <Link to="">
+                  <Link to="" onClick={goSearch}>
                     <span className="icon-img material-symbols-outlined search-btn">
                       search
                     </span>
-                    <div className="search-inner">
-                      <div className="input-box fx-box">
-                        <input type="text" placeholder="검색어를 입력하세요" />
-                        <button>
-                          <span className="icon-img material-symbols-outlined">
-                            search
-                          </span>
-                        </button>
-                      </div>
-
-                      <section id="prd-list">
-                        <SwiperPrdList />
-                      </section>
-                    </div>
                   </Link>
                 </li>
               </ul>

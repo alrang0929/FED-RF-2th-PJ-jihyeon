@@ -17,6 +17,7 @@ import Detail from "./components/pages/Detail";
 
 //sass 패키지 호출
 import "./css/index.scss";
+import SearchPage from "./components/pages/Search";
 
 //컴포넌트 호출
 // import "./components/layout/Intro";
@@ -45,6 +46,8 @@ export default function MainComponent() {
             <Route path="/login" element={<Login />} />
             <Route path="/notice" element={<Notice />} />
             <Route path="/Detail" element={<Detail/>} />
+            <Route path="/search" element={<SearchPage/>} />
+
 
           </Route>
         </Routes>
