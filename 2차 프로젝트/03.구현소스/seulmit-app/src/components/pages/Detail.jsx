@@ -34,19 +34,26 @@ export default function Detail() {
   // const selData = product.face[0];
   // const selData = state.product;
   const notiData = notiImg;
-  console.log(product[state.topcat]);
-  console.log(selData);
-  console.log("셀데이터idx:",selData.idx);
+  // console.log(product[state.topcat]);
+  // console.log(selData);
+  // console.log("셀데이터idx:",selData.idx);
   // 상위카테고리 state.topcat
-  console.log(state.topcat);
-  console.log(product.face);
-  console.log(state.product);
+  // console.log(state.topcat);
+  // console.log(product.face);
+  // console.log(state.product);
+
+  //activeCat = 클릭된 카테고리
+  const activeCat = (cat) =>{
+    myCon.setSelCat(cat); // 클릭된 카테고리로 상태 업데이트
+  }
+
 
   ///////코드리턴구역
   return (
     <>
       <section id="product-cont" className="cont-box">
-        <Category onCat={myCon.setSelCat} selCat={myCon.selCat} />
+        <Category onCat={activeCat} selCat={myCon.selCat} />
+        {/* <Category onCat={myCon.setSelCat} selCat={myCon.selCat} /> */}
         <div className="top-Cont fx-box">
           {/*1. 왼쪽 배너: 상품 썸네일 */}
           <SwiperThumbsList catName={state.topcat} seq={selData.idx} cnt={selData.thumbCnt} num={state.product} />
