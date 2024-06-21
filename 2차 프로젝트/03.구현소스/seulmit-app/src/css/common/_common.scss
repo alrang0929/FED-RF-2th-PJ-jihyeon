@@ -20,16 +20,20 @@ html {
   // ::-webkit-scrollbar-thumb	스크롤 막대
   // ::-webkit-scrollbar-track	스크롤 막대 외부
 
-  ::-webkit-scrollbar {
-    width: 8px;
-    background-color: $FontColor2;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: $MainColor1;
-  }
+
+overflow-x: hidden;
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: $FontColor2;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $MainColor1;
+}
 }
 
 body {
+  overflow-x: hidden;
   position: relative;
 }
 

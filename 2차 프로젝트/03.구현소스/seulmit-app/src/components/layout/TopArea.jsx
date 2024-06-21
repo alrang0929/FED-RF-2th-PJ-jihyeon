@@ -15,7 +15,6 @@ import SearchInner from "../modules/SearchInner";
 
 export default function TopArea() {
   const goSearch = () => {
-    
     // console.log("검색버튼 잡았낭", searchBtn, tg);
     // searchBtn.click(() => {
     //   console.log(33333);
@@ -27,9 +26,17 @@ export default function TopArea() {
     const searchBtn = $(".search-btn");
     //서치박스
     const tg = $(".search-inner");
-    tg.stop().animate({
-        right: 0
-      },500)
+    tg.stop().animate(
+      {
+        right: 0,
+      },
+      500
+    );
+    
+    //서치 버튼을 클릭시 스크롤 막기
+    searchBtn.click(()=>{
+      $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
+    })
   };
 
   /////코드리턴구역
@@ -40,7 +47,6 @@ export default function TopArea() {
       {/* 서치버튼 클릭시 search-inner 우 > 좌 등장 */}
       <SearchInner />
 
-      
       <header id="header-area">
         {/* <!-- 롤링배너 --> */}
         <SwiperRollben />
@@ -109,9 +115,11 @@ export default function TopArea() {
                   </Link>
                 </li>
                 <li className="icon-item search-box">
-                  <Link to="" onClick={goSearch}>
-                    <span className="icon-img material-symbols-outlined search-btn"
-                    onClick={showMenu}>
+                  <Link to="">
+                    <span
+                      className="icon-img material-symbols-outlined search-btn"
+                      onClick={showMenu}
+                    >
                       search
                     </span>
                   </Link>

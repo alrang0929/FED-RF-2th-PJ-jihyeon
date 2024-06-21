@@ -12,14 +12,20 @@ import SwiperBestItem from "../plugin/Swiper_bestItem";
 //////import area/////////////////////////////////////////
 
 function SearchInner() {
+  // $('body,html').css('overflow', 'hidden'); // body 스크롤 막기
   const searchClose = () => {
-    $('body,html').css('overflow', 'hidden'); // body 스크롤 막기
     //대상선정
-    // const closeBtn = $(".close-btn");
-    
-      $(".search-inner").stop().animate({
-        right: "-72vw",
-      },500);
+    const tg = $('body,html');
+
+    //1. 클릭시 오버플로우 히든 해제
+    $(".close-btn").click(()=>{
+      tg.css({overflow: 'auto'}); // body 스크롤 막기
+    });
+
+    //2. 버튼 클릭시 화면 밖으로 사라짐
+    $(".search-inner").stop().animate({
+      right: "-72vw",
+    },500)
   };
 
   ///////코드리턴구역 /////////////////////////////
