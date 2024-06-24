@@ -1,5 +1,5 @@
 //상단영역 컴포넌트 - top_area.jsx
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
 
 //module
@@ -14,13 +14,23 @@ import SearchInner from "../modules/SearchInner";
 /////import area///////////////////////////////////////////////////////////
 
 export default function TopArea() {
-  const goSearch = () => {
-    // console.log("검색버튼 잡았낭", searchBtn, tg);
-    // searchBtn.click(() => {
-    //   console.log(33333);
-    //   tg
-    // });
-  };
+
+
+  //검색관련 함수들////////////
+  //1. 검색창 보이기 함수
+  const showSearch = (e) => {
+    //기본기능 막기
+    e.preventDefault();
+    //1.검색창 보이기
+    $(".search-inner").show();
+    //show() -> display 보이게함
+    //2. 입력창에 포커스 보내기
+    $("#schinGnb").focus();
+  }; ////////showSearch함수
+
+
+
+
 
   const showMenu = (e) => {
     const searchBtn = $(".search-btn");
