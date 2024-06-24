@@ -5,6 +5,10 @@ import React from "react";
 import SwiperPrdList from "../plugin/Swiper_prdList";
 //css
 import "../../css/search.scss";
+
+//data
+import { product } from "../data/product";
+
 ///import area/////////////////////////////////////
 
 function SearchPage(props) {
