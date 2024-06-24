@@ -85,7 +85,7 @@ function SearchInner() {
             </ul>
           </div>
         </div>
-        <SwiperBestItem />
+        {/* <SwiperBestItem /> */}
       </div>
     </>
   );
