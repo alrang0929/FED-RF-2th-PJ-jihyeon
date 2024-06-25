@@ -34,8 +34,8 @@ export default function SwiperThumbsList({ catName,seq,cnt,num }) {
   // const selData = product[catName];
   const selDataCnt = cnt;//product[catName][seq].thumbCnt;
   const selData = Object.keys(product)[catName];
-  console.log("썸네일 갯수: \n 키값 확인:", selDataCnt,selData);
-  console.log("선택원본:", product[catName]);
+  // console.log("썸네일 갯수: \n 키값 확인:", selDataCnt,selData);
+  // console.log("선택원본:", product[catName]);
 
   const [slides, setSlides] = useState([]);
 
@@ -56,7 +56,7 @@ export default function SwiperThumbsList({ catName,seq,cnt,num }) {
     
     setSlides(newSlides); // 상태 변수 업데이트
 }, [selDataCnt]); // selDataCnt 값이 변경될 때마다 useEffect 실행
-console.log("슬라이드 생성 확인",slides)
+// console.log("슬라이드 생성 확인",slides)
 
   ///////////////////////////////////////////////////
 

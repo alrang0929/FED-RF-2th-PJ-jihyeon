@@ -14,7 +14,8 @@ export default function Layout() {
 
 
   useEffect(() =>{
-    console.log(introSts)});
+    // console.log(introSts)
+  });
 
   // 코드리턴구역 ///////////////
   return (

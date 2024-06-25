@@ -8,7 +8,7 @@ import Intro from "../pages/Intro";
 /////import area///////////////////////////////////////////////////////////
 
 const FooterArea = memo(({ival}) => {
-  console.log("footer:",ival);
+  // console.log("footer:",ival);
   return (
     <>
       <footer id="footer-area">

@@ -21,6 +21,7 @@ function Category({onCat, selCat}) {
               // {`/shop/${v}`} 
               className={v === selCat ? "on" : ""} 
               onClick={()=> onCat(v)}
+              state={{topcat:v,product:onCat}}
               >
                 {v}
               </Link>

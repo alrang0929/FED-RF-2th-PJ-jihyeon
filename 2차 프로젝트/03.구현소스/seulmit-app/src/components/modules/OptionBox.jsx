@@ -12,7 +12,7 @@ import { options } from "../data/product";
 function OptionBox(props) {
 
   const selData = options[0].values;
-  console.log("선택데이터 확인", selData);
+  // console.log("선택데이터 확인", selData);
 
   /////리턴코드
   return (

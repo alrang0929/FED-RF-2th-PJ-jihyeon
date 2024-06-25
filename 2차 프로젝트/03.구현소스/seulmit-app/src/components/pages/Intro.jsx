@@ -12,7 +12,7 @@ import "../../css/intro.scss";
 
 export default function Intro() {
     const bar = $(".loading");
-    console.log("로딩바", bar);
+    // console.log("로딩바", bar);
     const [IsLoading, setIsLoading] = useState(true);
 
     // const introArea = document.getElementById('intro-area');

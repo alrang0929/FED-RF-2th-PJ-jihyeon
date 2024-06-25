@@ -1,0 +1,21 @@
+ㅈ됨.. 정리하자..정리정리..
+activeCat 의 정체를 몰겠음..
+
+Detail 페이지에서 Category 의 역할: 
+
+selCat = 클릭된 아이템의 카테고리 < 이상x
+
+클릭시 shop page / 클릭한 카테고리(아마 이걸 activeCat 으로 정의)
+ 로 이동
+
+ Failed to execute 'replaceState' on 'History': cat => {
+    myCon.setSelCat(cat); // 클릭된 카테고리로 상태 업데이트
+  } could not be cloned.
+  
+
+이렇게 한거겠지..??..??..?
+===============================================
++발견된 버그
+1. search box 활성화 상태에서 새로고침 or 페이지 이동시 width 값이 늘어남
+왜그런지 모름.. 손봐야됨 << swiper 죽여도 마찬가지
+2. search: icon 클릭시 overflowX hidden on/off 이 지멋대로임.. 손봐야됨
