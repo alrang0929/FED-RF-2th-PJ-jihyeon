@@ -11,11 +11,15 @@ selCat = 클릭된 아이템의 카테고리 < 이상x
  Failed to execute 'replaceState' on 'History': cat => {
     myCon.setSelCat(cat); // 클릭된 카테고리로 상태 업데이트
   } could not be cloned.
-  
+
+  console.log("state.topcat KEY",Object.keys(product[state.topcat]));
+  // key = seldata의 idx가 찍힘... ㅈ됨..
+
+
 
 이렇게 한거겠지..??..??..?
 ===============================================
 +발견된 버그
 1. search box 활성화 상태에서 새로고침 or 페이지 이동시 width 값이 늘어남
 왜그런지 모름.. 손봐야됨 << swiper 죽여도 마찬가지
-2. search: icon 클릭시 overflowX hidden on/off 이 지멋대로임.. 손봐야됨
+2. search: icon 클릭시 overflowX hidden on/off 이 지멋대로임.. 손 봐야됨

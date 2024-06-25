@@ -17,13 +17,13 @@ function Category({onCat, selCat}) {
         <ul className="fx-box cgmenu">
           {selData.map((v, i) => (
             <li key={v} className="cgitem">
-              <Link to= ""
+              <Link to=""
               // {`/shop/${v}`} 
               className={v === selCat ? "on" : ""} 
               onClick={()=> onCat(v)}
-              state={{topcat:v,product:onCat}}
+              // state={{}}
               >
-                {v}
+              {v}
               </Link>
             </li>
           ))}

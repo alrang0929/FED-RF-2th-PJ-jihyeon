@@ -36,7 +36,7 @@ export default function Shop() {
 
       <section id="sell-pd-list" className="cont-box">
         {/* 메뉴 리스트 */}
-          <Category onCat={activeCat} selCat={myCon.selCat}/>
+          <Category onCat={(cat)=>activeCat(cat)} selCat={myCon.selCat}/>
         {/* 상품리스트 컴포넌트*/}
         <ShopPdList products={product[myCon.selCat]}/>
         {/* page Num */}

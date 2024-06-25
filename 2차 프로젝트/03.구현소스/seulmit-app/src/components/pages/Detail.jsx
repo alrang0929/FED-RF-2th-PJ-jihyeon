@@ -22,37 +22,36 @@ import { useParams, useLocation } from "react-router-dom";
 export default function Detail() {
   
   const myCon = useContext(sCon);
-
+  //state값
+  const initialProduct = product[Object.keys(product)[0]][0];
   // const nav = useLocation();
   // const { productId } = useParams(); // url 피라미터에서 상품 id 로드
   const { state } = useLocation(); // state에서 상품 데이터 가져오기
-  const selData =
+
+const selData =
     product[state.topcat].find((item) => item.idx === state.product); //product에서 상품 데이터 찾기
     // state?.product || product.face.find((item) => item.idx === state.product); //product에서 상품 데이터 찾기
 
+  // const selData = product[state.topcat].find((item) => item.idx === state.product.idx); 
+console.log("myCon.setSelCat",myCon.setSelCat);
   //data
   // const selData = product.face[0];
   // const selData = state.product;
   const notiData = notiImg;
-  // console.log(product[state.topcat]);
+  console.log("state.topcat",product[state.topcat]);
+  console.log("state KEY",Object.keys(product));
+  console.log("state.topcat KEY",Object.keys(product[state.topcat]));
   // console.log(selData);
   // console.log("셀데이터idx:",selData.idx);
-  // 상위카테고리 state.topcat
+  // // 상위카테고리 state.topcat
   // console.log(state.topcat);
   // console.log(product.face);
   // console.log(state.product);
-
-  //activeCat = 클릭된 카테고리
-  const activeCat = (cat) =>{
-    myCon.setSelCat(cat); // 클릭된 카테고리로 상태 업데이트
-  }
-
 
   ///////코드리턴구역
   return (
     <>
       <section id="product-cont" className="cont-box">
-        <Category onCat={activeCat} selCat={myCon.selCat} />
         {/* <Category onCat={myCon.setSelCat} selCat={myCon.selCat} /> */}
         <div className="top-Cont fx-box">
           {/*1. 왼쪽 배너: 상품 썸네일 */}

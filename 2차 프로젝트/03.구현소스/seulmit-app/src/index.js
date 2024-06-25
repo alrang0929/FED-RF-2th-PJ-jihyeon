@@ -17,7 +17,7 @@ import Detail from "./components/pages/Detail";
 
 //sass 패키지 호출
 import "./css/index.scss";
-import SearchPage from "./components/pages/Search";
+import SearchPage from "./components/pages/SearchPage";
 
 //컴포넌트 호출
 // import "./components/layout/Intro";
