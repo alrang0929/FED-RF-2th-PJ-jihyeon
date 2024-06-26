@@ -39,7 +39,6 @@ function SearchingProduct({ dt }) {
                   </div>
                   <div className="img-wrap">
                     <div className="imgbx">
-                      {/* 비상.....................배열 머지 시켜서 key값이 없음 */}
                       <img src={`${v.img[0].isrc}`} alt={`"${v.tit}"`} />
                     </div>
                     <div className="blur">
@@ -53,7 +52,8 @@ function SearchingProduct({ dt }) {
         )}
 
         {/* case2. 데이터 없는 경우 */}
-        {total == 0 && (
+        {
+        total == 0 && (
           <>
             <h2>검색 결과가 존재하지 않습니다.</h2>
             <section id="prd-list">

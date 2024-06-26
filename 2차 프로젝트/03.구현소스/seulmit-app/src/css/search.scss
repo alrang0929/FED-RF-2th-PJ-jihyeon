@@ -4,8 +4,16 @@
 
 .title {
   padding-top: 70px;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
+}
+.result-text {
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+  span {
+    font-weight: 600;
+  }
 }
 
 .blocking-bg {
@@ -215,6 +223,18 @@
 
     li {
       width: calc(100% / 4);
+      padding: 20px;
+      box-sizing: border-box;
+      transition: 0.2s;
+      height: auto;
+      border: 1px solid transparent;
+
+      &:hover {
+        z-index: 1;
+        scale: 1.05;
+        box-shadow: 40px 40px 40px #00000010;
+        border: 1px solid $FontColor1;
+      }
     }
 
     .desc-wrap {

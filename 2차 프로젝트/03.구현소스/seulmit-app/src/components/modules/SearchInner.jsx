@@ -17,12 +17,12 @@ function SearchInner() {
   // $('body,html').css('overflow', 'hidden'); // body 스크롤 막기
   const searchClose = () => {
     //대상선정
-    const tg = $("body,html");
+    // const tg = $("body,html");
 
     //1. 클릭시 오버플로우 히든 해제
-    $(".close-btn").click(() => {
-      tg.css({ overflow: "auto" }); // body 스크롤 막기
-    });
+    // $(".close-btn").click(() => {
+    //   tg.css({ overflow: "auto" }); // body 스크롤 막기
+    // });
 
     //가림막 BG 히든
     $(".blocking-bg").fadeOut(200);
@@ -92,11 +92,19 @@ function SearchInner() {
               type="text"
               placeholder="검색어를 입력하세요"
               onKeyUp={enterkey}
-              // onClick={() => {
-              //   $(".blocking-bg").fadeOut(200).css({display: "none"});
-              // }}
+              onClick={(e) => {
+                let stxt = e.currentTarget.nextElementSibling.value;
+                //nextElementSibling: 부모로 지정된 요소 바로 뒤에 있거나 null지정된 요소가 목록의 마지막 요소인 경우 해당 요소를 반환
+                if(stxt.trim!="")goSearch(stxt);
+                else{
+                  alert("검색어를 입력해주세요");
+                }
+                
+              }}
             />
-            <button className="search-btn">
+            <button className="search-btn"
+            onClick={enterkey}
+            >
               <span className="icon-img material-symbols-outlined search-btn">
                 search
               </span>
@@ -131,7 +139,7 @@ function SearchInner() {
           </div>
         </div>
         <section className="best-item-ban">
-          <SwiperBestItem />
+          {/* <SwiperBestItem /> */}
         </section>
       </div>
       <div className="blocking-bg"></div>

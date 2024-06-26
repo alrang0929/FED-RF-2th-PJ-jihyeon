@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import $ from "jquery";
 
 //module
@@ -25,8 +25,25 @@ function Searching({ kword }) {
   const [kw, setKw] = useState(kword); //초기값 셋팅: 검색어 변수 넣어줌
   //2. 정렬기준 상태관리변수
   const [sort, setSort] = useState("asc"); //오름차순: asc, 내림차순 - desc
-  //3. 체크박스 체크여부 상태관리 변수
-  //   const [checkbox, setCheckbox] = useState
+
+  //3. 참조변수
+  const beforeKword = useRef(kword);
+  //참조변수는 객체! 그래서 하위속성중
+  //current 속성으로 값을 읽거나 업데이트 한다
+  //상단메뉴 검색창에서 다시 검색할 경우 비교하여 동일할 경우 재검색x, 다를 경우 리렌더링 하도록 설정
+
+  if(beforeKword.current != kword){
+    //1. 컴포넌트 리렌더링(검색결과 변경)
+    setKw(kword);
+
+    //2. 다음 검색을 위해 다시 현재 검색어를 참조 변수에 저장
+    beforeKword.current = kword;
+    console.log(beforeKword.current,"==?",kword);
+
+    //3. 상단 검색어를 현재 검색창에 넣기 (단순 업데이트)
+    $("#schin").value = kword;
+
+  }///kword
 
   ///////////////////////////////////////////////////////////////////////////
   //검색결과 있는 데이터 필터 : filter()은 검색결과가 항상 배열로 나옴
@@ -52,11 +69,13 @@ function Searching({ kword }) {
 
       //includes(): 문자열 안에 특정 문자열이 있는지 확인하는 것, true/false로 값 반환, but 위치값 안알려줌
       //indexOf(): 배열안 특정값이 있는지 확인 후 위치(index)알려줌, 0 / -0으로 값 반환
+      
     }); //filter
   }); //newList
 
   //filteredList: 필터링된 데이터
   const filteredList = newList;
+
   // console.log("filteredList",filteredList);
 
   //[정렬기능 추가]////////////////////
@@ -81,15 +100,15 @@ function Searching({ kword }) {
             type="text"
             placeholder="검색어를 입력하세요"
             defaultValue={kword}
-            onKeyUp={(e)=>{
-                if(e.key == "Enter"){
-                    //1. 검색어 상대값 변경
-                    setKw(e.target.value);
-                    //2. 처음 검색시 정렬은 기본정렬
-                    setSort("asc");
-                    //정렬선택박스 선택값 변경(DOM에서 보이는 것 변경)
-                    $("#sel").value = "asc";
-                }//////if
+            onKeyUp={(e) => {
+              if (e.key == "Enter") {
+                //1. 검색어 상대값 변경
+                setKw(e.target.value);
+                //2. 처음 검색시 정렬은 기본정렬
+                setSort("asc");
+                //정렬선택박스 선택값 변경(DOM에서 보이는 것 변경)
+                $("#sel").value = "asc";
+              } //////if
             }}
           />
           <button className="search-btn">
@@ -100,21 +119,21 @@ function Searching({ kword }) {
         </div>
       </section>
       <aside className="sortbx">
-            <select
-              name="sel"
-              id="sel"
-              className="sel"
-              // 값을 변경할때 이벤트발생
-              onChange={(e) => {
-                console.log(e.target.value);
-                // 정렬기준 상태변수 업데이트
-                setSort(e.target.value);
-              }}
-            >
-              <option value="asc">이름 오름차순</option>
-              <option value="desc">이름 내림차순</option>
-            </select>
-          </aside>
+        <select
+          name="sel"
+          id="sel"
+          className="sel"
+          // 값을 변경할때 이벤트발생
+          onChange={(e) => {
+            console.log(e.target.value);
+            // 정렬기준 상태변수 업데이트
+            setSort(e.target.value);
+          }}
+        >
+          <option value="asc">오름차순</option>
+          <option value="desc">내림차순</option>
+        </select>
+      </aside>
       <SearchingProduct dt={filteredList} />
     </>
   );

@@ -23,7 +23,10 @@ function SearchPage() {
   //코드리턴구역////////////////////////////
   return (
     <>
-      <h2 className="title">블라블라블라</h2>
+      <h2 className="title">
+        검색결과
+      </h2>
+      <div className="result-text"><span>"{keyword}"</span>에 대한 검색결과 입니다.</div>
       <section className="searching-wrap cont-box">
         <Searching kword={keyword} />
       </section>

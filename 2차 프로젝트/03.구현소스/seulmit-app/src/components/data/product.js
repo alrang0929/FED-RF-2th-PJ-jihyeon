@@ -470,7 +470,7 @@ const product = {
         { isrc: "/images/shop/home/home_01.jpg" },
         { isrc: "/images/shop/home/home_02.jpg" },
       ],
-      thumbCnt: 3,
+      thumbCnt: 2,
       detail: [
         "/images/shop/home/home_01/detail_1.jpg",
         "/images/shop/home/home_01/detail_2.gif",
