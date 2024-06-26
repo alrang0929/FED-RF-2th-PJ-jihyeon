@@ -24,7 +24,7 @@ function SearchPage() {
   return (
     <>
       <h2 className="title">블라블라블라</h2>
-      <section className="cont-box">
+      <section className="searching-wrap cont-box">
         <Searching kword={keyword} />
       </section>
     </>
