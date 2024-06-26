@@ -27,7 +27,7 @@ export default function TopArea() {
   // }; ////////showSearch함수
 
   const showMenu = (e) => {
-    const searchBtn = $(".search-btn");
+    // const searchBtn = $(".search-btn");
     //서치박스 위치값 이동
     const tg = $(".search-inner");
     tg.stop().animate(
@@ -43,10 +43,9 @@ export default function TopArea() {
       display: "block",
     }).animate({opacity: 1,},200)
 
-    //서치 버튼을 클릭시 스크롤 막기
-    searchBtn.click(() => {
+    //서치 버튼을 클릭시 스크롤 막기    
       $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
-    });
+    
   };
 
   /////코드리턴구역

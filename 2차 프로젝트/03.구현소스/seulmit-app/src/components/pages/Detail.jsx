@@ -1,6 +1,6 @@
 //슬밋PJ 상품 디테일 페이지
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 //css
 import "../../css/shop.scss";
@@ -23,30 +23,50 @@ export default function Detail() {
   
   const myCon = useContext(sCon);
   //state값
-  const initialProduct = product[Object.keys(product)[0]][0];
+  // const initialProduct = product[Object.keys(product)[0]][0];
   // const nav = useLocation();
   // const { productId } = useParams(); // url 피라미터에서 상품 id 로드
   const { state } = useLocation(); // state에서 상품 데이터 가져오기
 
-const selData =
-    product[state.topcat].find((item) => item.idx === state.product); //product에서 상품 데이터 찾기
-    // state?.product || product.face.find((item) => item.idx === state.product); //product에서 상품 데이터 찾기
+ // 전달값 정리 /////////
+ // 1. 카테고리
+ let topCat = state.topcat;
+ if(topCat == "home") topCat = "homefragrance";
+ // 2. 상품순번
+ let prodIdx =  state.product;
+ // 3. 
 
-  // const selData = product[state.topcat].find((item) => item.idx === state.product.idx); 
+
+  console.log(topCat);
+  console.log(prodIdx);
+  console.log(product[topCat]);
+
+  // engtit: v.engtit, // 상품 영문 타이틀
+  //                   tit: v.tit, // 한글 타이틀
+  //                   txt: v.txt, // 상세내용
+const selData =
+    product[topCat].find((item) => item.idx === prodIdx); //product에서 상품 데이터 찾기
+    // state?.product || product.face.find((item) => item.idx === prodIdx); //product에서 상품 데이터 찾기
+console.log(selData);
+  // const selData = product[topCat].find((item) => item.idx === prodIdx.idx); 
 console.log("myCon.setSelCat",myCon.setSelCat);
   //data
   // const selData = product.face[0];
-  // const selData = state.product;
+  // const selData = prodIdx;
   const notiData = notiImg;
-  console.log("state.topcat",product[state.topcat]);
+  console.log("topCat",product[topCat]);
   console.log("state KEY",Object.keys(product));
-  console.log("state.topcat KEY",Object.keys(product[state.topcat]));
+  console.log("topCat KEY",Object.keys(product[topCat]));
   // console.log(selData);
   // console.log("셀데이터idx:",selData.idx);
-  // // 상위카테고리 state.topcat
-  // console.log(state.topcat);
+  // // 상위카테고리 topCat
+  // console.log(topCat);
   // console.log(product.face);
-  // console.log(state.product);
+  // console.log(prodIdx);
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  });
 
   ///////코드리턴구역
   return (
@@ -55,9 +75,9 @@ console.log("myCon.setSelCat",myCon.setSelCat);
         {/* <Category onCat={myCon.setSelCat} selCat={myCon.selCat} /> */}
         <div className="top-Cont fx-box">
           {/*1. 왼쪽 배너: 상품 썸네일 */}
-          <SwiperThumbsList catName={state.topcat} seq={selData.idx} cnt={selData.thumbCnt} num={state.product} />
+          <SwiperThumbsList catName={topCat} seq={selData.idx} cnt={selData.thumbCnt} num={prodIdx} />
           {/*2. 오른쪽 배너: 상품 정보 */}
-          <ShopCustomCont catName={state.topcat} />
+          <ShopCustomCont catName={topCat} />
         </div>
       </section>
       {/* top cont end */}

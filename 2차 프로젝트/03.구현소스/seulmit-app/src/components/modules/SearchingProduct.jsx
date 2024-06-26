@@ -28,9 +28,8 @@ function SearchingProduct({ dt }) {
                 <Link
                   to="/detail"
                   state={{
-                    engtit: v.engtit, // 상품 영문 타이틀
-                    tit: v.tit, // 한글 타이틀
-                    txt: v.txt, // 상세내용
+                    topcat: v.category, // 상위카테고리
+                    product: v.idx, // 상품순번
                   }}
                 >
                   <div className="desc-wrap">

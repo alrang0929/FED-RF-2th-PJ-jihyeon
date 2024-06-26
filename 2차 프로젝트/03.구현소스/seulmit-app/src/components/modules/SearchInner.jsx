@@ -34,6 +34,7 @@ function SearchInner() {
       },
       500
     );
+    $("body,html").css({ overflow: "auto" });
   };
 
   //2. 검색창에 엔터키 누르면 검색함수 호출
@@ -49,10 +50,12 @@ function SearchInner() {
       //빈값이 아니면 검색함수 호출(검색어 전달)
       if (txt != "") {
         //입력창 비우고 부모박스 닫기
-        $(e.target).val("").parent().parent().parent().hide();
+        $(e.target).val("").parent().parent().parent().css({right:"-72vw"});
         console.log("검색창 부모는?", e.target);
         //검색 보내기
         goSearch(txt);
+        $(".blocking-bg").fadeOut(200);
+        $("body,html").css({ overflow: "auto" });
       } ///if
     } ////if
   };
@@ -89,9 +92,9 @@ function SearchInner() {
               type="text"
               placeholder="검색어를 입력하세요"
               onKeyUp={enterkey}
-              onClick={() => {
-                $(".blocking-bg").fadeOut(200).css({display: "none"});
-              }}
+              // onClick={() => {
+              //   $(".blocking-bg").fadeOut(200).css({display: "none"});
+              // }}
             />
             <button className="search-btn">
               <span className="icon-img material-symbols-outlined search-btn">

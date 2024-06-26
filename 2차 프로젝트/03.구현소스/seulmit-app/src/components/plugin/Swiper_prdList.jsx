@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
+
 //data
-import { bestItemData } from "../data/slide_item_data";
+import { product } from "../data/product";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,7 +19,21 @@ import "./css/swiper_prd-list.scss";
 import { Scrollbar } from "swiper/modules";
 
 export default function SwiperPrdList() {
-  
+
+  const selData = Object.values(product);
+
+  let newSelData=[];
+  selData.forEach(v=>{
+    console.log(v);
+    v.forEach(v2=>{
+      newSelData.push(v2);
+    })
+  });
+
+
+console.log(selData);
+console.log(newSelData);
+
   return (
     <>
       <Swiper
@@ -35,33 +50,37 @@ export default function SwiperPrdList() {
         modules={[Scrollbar]}
         className="mySwiper slider fx-box cont-box"
       >
-        {bestItemData.map((v, i) => (
-          <SwiperSlide 
-          key={i} className="item" 
-          >
+        {newSelData.map((v, i) => (
+          <SwiperSlide key={i} className="item">
             <section>
-            <Link to="">
-              <div className="desc-wrap">
-                <div className="eng-pdtit">{v.engtit}</div>
-                <div className="kor-pdtit">{v.tit}</div>
-                <div className="desc">{v.txt}</div>
-              </div>
+              <Link
+                to="/detail"
+                state={{
+                  topcat: v.category, // 상위카테고리
+                  product: v.idx, // 상품순번
+                }}
+              >
+                <div className="desc-wrap">
+                  <div className="eng-pdtit">{v.engtit}</div>
+                  <div className="kor-pdtit">{v.tit}</div>
+                  <div className="desc">{v.txt}</div>
+                </div>
 
-              <div className="img-wrap">
-                <div className="imgbx">
-                  <img
-                    src={`/images/product/${v.category}/${v.img}.jpg`}
-                    alt={`"${v.tit}"`}
-                  />
+                <div className="img-wrap">
+                  <div className="imgbx">
+                    <img
+                      src={`${v.img[0].isrc}`}
+                      alt={`"${v.tit}"`}
+                    />
+                  </div>
+                  <div className="blur">
+                    <img
+                      src={`${v.img[1].isrc}`}
+                      alt={`"${v.tit}"`}
+                    />
+                  </div>
                 </div>
-                <div className="blur">
-                  <img
-                    src={`/images/product/${v.category}/${v.img}_detail.jpg`}
-                    alt={`"${v.tit}"`}
-                  />
-                </div>
-              </div>
-            </Link>
+              </Link>
             </section>
           </SwiperSlide>
         ))}

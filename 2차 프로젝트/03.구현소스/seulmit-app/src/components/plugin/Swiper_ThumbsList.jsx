@@ -47,7 +47,7 @@ export default function SwiperThumbsList({ catName,seq,cnt,num }) {
     $.each(Array(cnt), (i) => {
       const slide = (
         <SwiperSlide key={i} className="thumb">
-          <img src={`/images/shop/${catName}/${catName}_${seq<10?"0"+seq:seq}/thumb_${i+1}.jpg`} />
+          <img src={`/images/shop/${catName}/${catName}_${seq<10?"0"+seq:seq}/thumb_${i+1<10?"0"+(i+1):(i+1)}.jpg`} />
         </SwiperSlide>
       );
       newSlides.push(slide); // 슬라이드 요소 배열에 추가

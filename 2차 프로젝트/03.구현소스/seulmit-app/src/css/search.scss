@@ -2,7 +2,7 @@
 
 @import "./variables/variables";
 
-.title{
+.title {
   padding-top: 70px;
   font-size: 30px;
   text-align: center;
@@ -171,11 +171,11 @@
 
 ////searching/////////////////////
 
-.searching-wrap{
+.searching-wrap {
   margin: 0 auto;
 }
 
-.sortbx{
+.sortbx {
   text-align: right;
   height: 20px;
 }
@@ -208,57 +208,58 @@
     }
   }
 }
-.plist-wrap{
+.plist-wrap {
+  .plist {
+    display: flex;
+    flex-wrap: wrap;
 
-
-.plist {
-  display: flex;
-  width: calc(100% / 4);
-  flex-wrap: wrap;
-
-  .desc-wrap {
-    padding-right: 20px;
-    .eng-pdtit {
-      margin-top: 10px;
-      margin-bottom: 5px;
-      font-size: $fontsize2;
-    }
-    .kor-pdtit {
-      margin-bottom: 10px;
-      font-size: 16px !important;
-    }
-    .desc {
-      display: none;
-    }
-  }
-
-  .img-wrap {
-    height: auto;
-    position: relative;
-
-    //이미지 공통사항
-    img {
-      width: 100%;
+    li {
+      width: calc(100% / 4);
     }
 
-    .imgbx {
-      // aspect-ratio: 1/1.2;
-      // width: 100%;
-      object-fit: cover;
-      height: auto;
-      opacity: 1;
-      transition: opacity 0.2s;
-
-      &:hover {
-        opacity: 0;
+    .desc-wrap {
+      padding-right: 20px;
+      .eng-pdtit {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: $fontsize2;
       }
-    } /////imgbx
-    .blur {
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      left: 0;
-    } //호버시 보이는 이미지
-  } //img-wrap
-}
+      .kor-pdtit {
+        margin-bottom: 10px;
+        font-size: 16px !important;
+      }
+      .desc {
+        display: none;
+      }
+    }
+
+    .img-wrap {
+      height: auto;
+      position: relative;
+
+      //이미지 공통사항
+      img {
+        width: 100%;
+      }
+
+      .imgbx {
+        // aspect-ratio: 1/1.2;
+        // width: 100%;
+        object-fit: cover;
+        height: auto;
+        opacity: 1;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 0;
+        }
+      } /////imgbx
+      .blur {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+      } //호버시 보이는 이미지
+    } //img-wrap
+  }
 }
