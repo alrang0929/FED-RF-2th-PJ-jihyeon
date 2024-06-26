@@ -9,6 +9,8 @@ import SwiperPrdList from "../plugin/Swiper_prdList";
 ///import area//////////////////////////////
 
 function SearchingProduct({ dt }) {
+  console.log("dt",dt);
+  // console.log("dt img",dt.img[0]);
   //dt : 검색배열 데이터
   //total = 검색된 배열데이터 개수
   const total = dt.length;
@@ -17,6 +19,8 @@ function SearchingProduct({ dt }) {
   //dt: Searching에서 결과값 전달받음
   return (
     <>
+
+    
       {/* case1. 데이터 개수 有 */}
       {total > 0 && (
         <ul className="plist">
@@ -25,9 +29,9 @@ function SearchingProduct({ dt }) {
               <Link
                 to="/detail"
                 state={{
-                  engtit: v.engtit,
-                  tit: v.tit,
-                  txt: v.txt,
+                  engtit: v.engtit, // 상품 영문 타이틀
+                  tit: v.tit, // 한글 타이틀
+                  txt: v.txt, // 상세내용
                 }}
               >
                 <div className="desc-wrap">
@@ -37,14 +41,15 @@ function SearchingProduct({ dt }) {
                 </div>
                 <div className="img-wrap">
                   <div className="imgbx">
+                    {/* 비상.....................배열 머지 시켜서 key값이 없음 */}
                     <img
-                      src={`/images/product/${v.category}/${v.img}.jpg`}
+                      src={`${v.img[0].isrc}`}
                       alt={`"${v.tit}"`}
                     />
                   </div>
                   <div className="blur">
                     <img
-                      src={`/images/product/${v.category}/${v.img}_detail.jpg`}
+                      src={`${v.img[1].isrc}`}
                       alt={`"${v.tit}"`}
                     />
                   </div>

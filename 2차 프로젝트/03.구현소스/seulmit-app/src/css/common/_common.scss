@@ -20,10 +20,10 @@ html {
   // ::-webkit-scrollbar-thumb	스크롤 막대
   // ::-webkit-scrollbar-track	스크롤 막대 외부
 
-  height: 100vh;
+  // height: 100vh;
   // overflow: hidden;
 
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   ::-webkit-scrollbar {
     width: 8px;
@@ -35,9 +35,9 @@ html {
 }
 
 body {
-  height: 100vh;
-  overflow-x: hidden;
+  // height: 100vh;
   position: relative;
+  // overflow-x: hidden;
 }
 
 #header-area {
@@ -61,6 +61,7 @@ body {
 
     background-color: $MainColor1;
   }
+
 
   #gnb-area {
     background-color: $MainColor1;
@@ -129,6 +130,14 @@ body {
           .mall {
             align-items: center;
             font-size: 30px;
+          }
+          .search-btn{
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: 200;
+            font-weight: 200;
+            color: $FontColor3;
+            cursor: pointer;
           }
         }
       }

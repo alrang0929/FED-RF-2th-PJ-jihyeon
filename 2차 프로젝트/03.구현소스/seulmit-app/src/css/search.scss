@@ -2,6 +2,22 @@
 
 @import "./variables/variables";
 
+.blocking-bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  backdrop-filter: blur(20px);
+
+  width: 100vw;
+  height: 100vh;
+  background: #00000040;
+  opacity: 0;
+
+  // pointer-events: none;
+}
+
 ////gnb 검색박스///////////////////////////////
 .search-inner {
   background-color: #fff;
@@ -12,9 +28,7 @@
   right: -72vw;
   z-index: 999;
 
- 
-
-  .search-box{
+  .search-box {
     width: 80%;
     margin: 0 auto;
 
@@ -30,27 +44,26 @@
       .close-btn {
         background-color: transparent;
         border: transparent;
-  
+
         span {
           font-size: 50px;
         }
       }
-      button{
+      button {
         cursor: pointer;
       }
     } //search-header
-  
 
     .input-box {
       margin: 0 auto;
       margin-top: 50px;
       justify-content: center;
       align-items: center;
-  
+
       width: 100%;
       background-color: #cbcbcb40;
       border-radius: 20px;
-  
+
       input {
         //버튼 위치조정을 위한 부모값
         position: relative;
@@ -63,23 +76,23 @@
           outline: none;
         } /* outline 테두리 없애기 */
       }
-  
+
       button {
         cursor: pointer;
         margin-right: 10px;
         background-color: transparent;
         border: transparent;
       }
-    }//input-box
+    } //input-box
 
-    .recent-search-list{
+    .recent-search-list {
       width: 100%;
       padding: 20px 0;
-    line-height: 2;
-      h4{
+      line-height: 2;
+      h4 {
         font-size: $fontsize-title3;
       }
-      span{
+      span {
         font-size: $fontsize1;
       }
     }
@@ -149,3 +162,82 @@
     }
   }
 } ////search page
+
+////searching/////////////////////
+
+.schbx {
+  .input-box {
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+
+    width: 60%;
+    background-color: #cbcbcb40;
+    border-radius: 20px;
+
+    input {
+      padding-left: 20px;
+      width: 100%;
+      height: 45px;
+      border: transparent;
+      background-color: transparent;
+      &:focus {
+        outline: none;
+      } /* outline 테두리 없애기 */
+    }
+
+    button {
+      margin-right: 20px;
+      background-color: transparent;
+      border: transparent;
+    }
+  }
+}
+.plist {
+  display: flex;
+  width: calc(100% / 4);
+  
+  .desc-wrap {
+    padding-right: 20px;
+    .eng-pdtit {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: $fontsize2;
+    }
+    .kor-pdtit {
+      margin-bottom: 10px;
+      font-size: 16px !important;
+    }
+    .desc {
+      display: none;
+    }
+  }
+
+  .img-wrap {
+    height: auto;
+    position: relative;
+
+    //이미지 공통사항
+    img {
+      width: 100%;
+    }
+
+    .imgbx {
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0;
+      }
+    } /////imgbx
+    .blur {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+    } //호버시 보이는 이미지
+  } //img-wrap
+}

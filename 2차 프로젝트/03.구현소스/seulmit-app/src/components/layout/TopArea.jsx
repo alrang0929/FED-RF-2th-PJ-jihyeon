@@ -14,27 +14,21 @@ import SearchInner from "../modules/SearchInner";
 /////import area///////////////////////////////////////////////////////////
 
 export default function TopArea() {
-
-
   //검색관련 함수들////////////
   //1. 검색창 보이기 함수
-  const showSearch = (e) => {
-    //기본기능 막기
-    e.preventDefault();
-    //1.검색창 보이기
-    $(".search-inner").show();
-    //show() -> display 보이게함
-    //2. 입력창에 포커스 보내기
-    $("#schinGnb").focus();
-  }; ////////showSearch함수
-
-
-
-
+  // const showSearch = (e) => {
+  //   //기본기능 막기
+  //   e.preventDefault();
+  //   //1.검색창 보이기
+  //   $(".search-inner").show();
+  //   //show() -> display 보이게함
+  //   //2. 입력창에 포커스 보내기
+  //   $("#schinGnb").focus();
+  // }; ////////showSearch함수
 
   const showMenu = (e) => {
     const searchBtn = $(".search-btn");
-    //서치박스
+    //서치박스 위치값 이동
     const tg = $(".search-inner");
     tg.stop().animate(
       {
@@ -42,11 +36,17 @@ export default function TopArea() {
       },
       500
     );
-    
+
+    //가림막 BG 등장
+    // $(".blocking-bg").fadeIn(300);
+    $(".blocking-bg").show().css({
+      display: "block",
+    }).animate({opacity: 1,},200)
+
     //서치 버튼을 클릭시 스크롤 막기
-    searchBtn.click(()=>{
+    searchBtn.click(() => {
       $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
-    })
+    });
   };
 
   /////코드리턴구역
@@ -56,7 +56,7 @@ export default function TopArea() {
       <Topbtn />
       {/* 서치버튼 클릭시 search-inner 우 > 좌 등장 */}
       <SearchInner />
-
+      
       <header id="header-area">
         {/* <!-- 롤링배너 --> */}
         <SwiperRollben />
@@ -125,14 +125,14 @@ export default function TopArea() {
                   </Link>
                 </li>
                 <li className="icon-item search-box">
-                  <Link to="">
+                  {/* <Link to=""> */}
                     <span
                       className="icon-img material-symbols-outlined search-btn"
                       onClick={showMenu}
                     >
                       search
                     </span>
-                  </Link>
+                  {/* </Link> */}
                 </li>
               </ul>
               {/* <!-- icon-box end --> */}
