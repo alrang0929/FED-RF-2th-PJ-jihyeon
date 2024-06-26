@@ -2,6 +2,12 @@
 
 @import "./variables/variables";
 
+.title{
+  padding-top: 70px;
+  font-size: 30px;
+  text-align: center;
+}
+
 .blocking-bg {
   display: none;
   position: absolute;
@@ -165,6 +171,10 @@
 
 ////searching/////////////////////
 
+.sortbx{
+  text-align: right;
+  height: 20px;
+}
 .schbx {
   .input-box {
     margin: 0 auto;
@@ -194,10 +204,14 @@
     }
   }
 }
+.plist-wrap{
+
+
 .plist {
   display: flex;
   width: calc(100% / 4);
-  
+  flex-wrap: wrap;
+
   .desc-wrap {
     padding-right: 20px;
     .eng-pdtit {
@@ -224,7 +238,9 @@
     }
 
     .imgbx {
-      width: 100%;
+      // aspect-ratio: 1/1.2;
+      // width: 100%;
+      object-fit: cover;
       height: auto;
       opacity: 1;
       transition: opacity 0.2s;
@@ -240,4 +256,5 @@
       left: 0;
     } //호버시 보이는 이미지
   } //img-wrap
+}
 }
