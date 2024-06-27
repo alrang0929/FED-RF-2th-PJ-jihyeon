@@ -45,6 +45,19 @@ console.log(newSelData);
         scrollbar={{
           hide: false,
         }}
+
+        //스와이퍼 미디어쿼리
+        breakpoints={{
+          900: {
+              slidesPerView: 3,
+          },
+          500: {
+              slidesPerView: 1,
+              // spaceBetween: 0,
+          },
+  
+        }}
+     
         // autoHeight={true}
         // lazy={true}
         modules={[Scrollbar]}

@@ -26,7 +26,7 @@ export default function TopArea() {
   //   $("#schinGnb").focus();
   // }; ////////showSearch함수
 
-  const showMenu = (e) => {
+  const searchShowMenu = (e) => {
     // const searchBtn = $(".search-btn");
     //서치박스 위치값 이동
     const tg = $(".search-inner");
@@ -39,14 +39,62 @@ export default function TopArea() {
 
     //가림막 BG 등장
     // $(".blocking-bg").fadeIn(300);
-    $(".blocking-bg").show().css({
-      display: "block",
-    }).animate({opacity: 1,},200)
+    $(".blocking-bg")
+      .show()
+      .css({
+        display: "block",
+      })
+      .animate({ opacity: 1 }, 200);
 
-    //서치 버튼을 클릭시 스크롤 막기    
-      $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
-    
+    //서치 버튼을 클릭시 스크롤 막기
+    $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
   };
+
+  const showMenu = (e) => {
+    // const searchBtn = $(".search-btn");
+    //서치박스 위치값 이동
+    const tg = $(".toggle-menu-box");
+    tg.stop().animate(
+      {
+        right: 0,
+      },
+      500
+    );
+
+    //가림막 BG 등장
+    // $(".blocking-bg").fadeIn(300);
+    $(".blocking-bg")
+      .show()
+      .css({
+        display: "block",
+      })
+      .animate({ opacity: 1 }, 200);
+
+    $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
+  };
+
+  const hideMenu = () => {
+    //대상선정
+    // const tg = $("body,html");
+
+    //1. 클릭시 오버플로우 히든 해제
+    // $(".close-btn").click(() => {
+    //   tg.css({ overflow: "auto" }); // body 스크롤 막기
+    // });
+
+    //가림막 BG 히든
+    $(".blocking-bg").fadeOut(200);
+
+    //2. 버튼 클릭시 화면 밖으로 사라짐
+    $(".toggle-menu-box").stop().animate(
+      {
+        right: "-72vw",
+      },
+      500
+    );
+    $("body,html").css({ overflowX: "hidden" });
+  };
+
 
   /////코드리턴구역
   return (
@@ -55,15 +103,23 @@ export default function TopArea() {
       <Topbtn />
       {/* 서치버튼 클릭시 search-inner 우 > 좌 등장 */}
       <SearchInner />
-      
+
       <header id="header-area">
         {/* <!-- 롤링배너 --> */}
         <SwiperRollben />
         {/* <!-- GNB area --> */}
         <div className="fx-box" id="gnb-area">
           {/* <!-- L menu --> */}
-          <div className="fx-box" id="L-menu-wrap">
+          <div className="fx-box toggle-menu-box" id="L-menu-wrap">
             <ul className="menu-inner fx-box">
+            <button 
+            className="close-btn"
+            onClick={hideMenu}
+            >
+              <span className="icon-img material-symbols-outlined search-btn">
+                close
+              </span>
+            </button>
               {gnbData.map((v, i) => (
                 <li key={i} className="sub-menu">
                   {
@@ -125,14 +181,21 @@ export default function TopArea() {
                 </li>
                 <li className="icon-item search-box">
                   {/* <Link to=""> */}
-                    <span
-                      className="icon-img material-symbols-outlined search-btn"
-                      onClick={showMenu}
-                    >
-                      search
-                    </span>
+                  <span
+                    className="icon-img material-symbols-outlined search-btn"
+                    onClick={searchShowMenu}
+                  >
+                    search
+                  </span>
                   {/* </Link> */}
                 </li>
+                <button className="ham-btn"
+                onClick={showMenu}
+                >
+                  <span className="icon-img material-symbols-outlined search-btn">
+                    menu
+                  </span>
+                </button>
               </ul>
               {/* <!-- icon-box end --> */}
             </ul>
@@ -140,6 +203,7 @@ export default function TopArea() {
           {/* <!-- R menu end --> */}
         </div>
       </header>
+        <div className="blocking-bg"></div>
     </>
   );
 } /////TopArea컴포넌트////////////

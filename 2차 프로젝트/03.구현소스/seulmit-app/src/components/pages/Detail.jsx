@@ -75,7 +75,9 @@ console.log("myCon.setSelCat",myCon.setSelCat);
         {/* <Category onCat={myCon.setSelCat} selCat={myCon.selCat} /> */}
         <div className="top-Cont fx-box">
           {/*1. 왼쪽 배너: 상품 썸네일 */}
+          <section className="thumb-wrap">
           <SwiperThumbsList catName={topCat} seq={selData.idx} cnt={selData.thumbCnt} num={prodIdx} />
+          </section>
           {/*2. 오른쪽 배너: 상품 정보 */}
           <ShopCustomCont catName={topCat} />
         </div>

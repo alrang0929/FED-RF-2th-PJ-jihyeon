@@ -20,7 +20,6 @@
 
 /////메인영역
 main {
- 
   #sub-visual {
     height: 90vh;
     translate: 0 -2%;
@@ -108,5 +107,21 @@ main {
       }
     }
   } //prd-list end
-
 } //////////////////main
+
+////midea/////////////////////////////
+@media screen and (max-width: 900px) {
+  main {
+    #sub-visual {
+      height: 108vh;
+      ul {
+       li{
+        .desc-wrap,a{
+          opacity: 1;
+        }
+       }
+        grid-template-columns: repeat(2, 2fr);
+      }
+    }
+  }
+}

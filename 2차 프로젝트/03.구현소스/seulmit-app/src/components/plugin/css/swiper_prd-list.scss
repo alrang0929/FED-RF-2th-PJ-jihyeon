@@ -28,13 +28,13 @@
   .swiper {
     overflow: visible;
     height: auto;
-    margin: 0 auto;
+    margin: 0 20px;
 
     .item {
       flex-shrink: 0;
-      margin: 0 10px;
+      // margin: 0 10px;
       // width: calc(100% / 4);
-      padding: 20px;
+      // padding: 20px;
       box-sizing: border-box;
       transition: 0.2s;
       height: auto;
@@ -99,3 +99,11 @@
     } //item
   } //slider
 } //prd-list end
+
+
+////midea/////////////////////////////
+@media screen and (max-width: 900px) {
+  .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+    bottom: 0%;
+  }
+}

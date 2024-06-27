@@ -11,6 +11,11 @@
   --line-height: 1.2;
 }
 
+html,body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 ////icon effect///////////////////////////////
 
 ///////text 셋팅/////////////////////////////////////////
@@ -117,7 +122,7 @@
         .imgbx {
           img {
             width: 100%;
-            aspect-ratio: 1 / 1
+            aspect-ratio: 1 / 1;
           }
         } //imgbx
         .desc-wrap {
@@ -285,11 +290,10 @@ table {
     border: 1px solid transparent;
     box-sizing: border-box;
 
-    &:hover{
+    &:hover {
       border: 1px solid $MainColor1;
     }
 
-    
     .desc-wrap {
       .eng-pdtit {
         margin-top: 10px;
@@ -334,3 +338,27 @@ table {
     }
   } //li
 } ///pd list
+
+//////midea////////////////////////////////////
+@media screen and (max-width: 900px) {
+  #product-cont {
+    .top-Cont {
+      flex-direction: column;
+
+      .thumb-wrap {
+        height: 90vh;
+        overflow: hidden;
+      }
+    }
+    .info-wrap {
+      height: auto;
+      .info-area {
+        width: 100%;
+
+        table{
+          width: 100%;
+        }
+      }
+    }
+  }
+} /////900px

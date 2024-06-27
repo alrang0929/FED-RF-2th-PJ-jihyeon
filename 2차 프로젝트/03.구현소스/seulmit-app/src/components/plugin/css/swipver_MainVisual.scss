@@ -56,3 +56,21 @@
     } //text
   } ///descWrap
 } //mainVisualSlider
+
+////media/////////////////////////////////////////
+@media screen and (max-width: 900px) {
+  #main-visual-slider {
+    
+    .desc-wrap {
+      top: 43%;
+      .title {
+        padding-top: 35px;
+        font-size: 100px;
+        line-height: 0.9;
+      }
+      .text{
+        font-size: 18px;
+      }
+    }
+  }
+} ///////900

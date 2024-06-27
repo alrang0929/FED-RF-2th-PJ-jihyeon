@@ -18,12 +18,6 @@ function SearchInner() {
   const searchClose = () => {
     //대상선정
     // const tg = $("body,html");
-
-    //1. 클릭시 오버플로우 히든 해제
-    // $(".close-btn").click(() => {
-    //   tg.css({ overflow: "auto" }); // body 스크롤 막기
-    // });
-
     //가림막 BG 히든
     $(".blocking-bg").fadeOut(200);
 
@@ -34,7 +28,7 @@ function SearchInner() {
       },
       500
     );
-    $("body,html").css({ overflow: "auto" });
+    $("body,html").css({ overflowX: "hidden" });
   };
 
   //2. 검색창에 엔터키 누르면 검색함수 호출
@@ -55,7 +49,8 @@ function SearchInner() {
         //검색 보내기
         goSearch(txt);
         $(".blocking-bg").fadeOut(200);
-        $("body,html").css({ overflow: "auto" });
+
+        // $("body,html").css({ overflowX: "hidden" });
       } ///if
     } ////if
   };
@@ -78,8 +73,14 @@ function SearchInner() {
               <Link to="/">
                 <img src={process.env.PUBLIC_URL+"/images/logo_en_B.png"} alt="슬밋로고" />
               </Link>
+              
             </div>
-            <button className="close-btn" onClick={searchClose}>
+            <button className="close-btn" onClick={
+              (e)=>{
+                searchClose(e)
+
+              }
+              }>
               <span className="icon-img material-symbols-outlined search-btn">
                 close
               </span>

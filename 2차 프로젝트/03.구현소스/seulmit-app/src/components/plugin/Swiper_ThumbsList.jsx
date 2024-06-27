@@ -72,19 +72,19 @@ export default function SwiperThumbsList({ catName,seq,cnt,num }) {
         }}
         spaceBetween={0}
         navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        // thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, ]}
         className="mySwiper2"
       >
        {slides.map((slide) => slide)}
       </Swiper>
       <Swiper
-        onSwiper={setThumbsSwiper}
+        // onSwiper={setThumbsSwiper}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
+        // watchSlidesProgress={true}
+        modules={[FreeMode, Navigation, ]}
         className="mySwiper"
       >
         {slides.map((slide) => slide)}

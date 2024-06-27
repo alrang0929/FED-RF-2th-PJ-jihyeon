@@ -39,7 +39,7 @@ export default function SwiperBestItem() {
         2000
       )
       .delay(2000)
-      .fadeTo(1000,0);
+      // .fadeTo(1000,0);
   };
 
   //////////리턴코드 구역/////////////////////////////////
@@ -52,10 +52,10 @@ export default function SwiperBestItem() {
         }}
         //되감기 방지
         loop={true}
-        autoplay={
-            // 자동 슬라이드 설정 , 비 활성화 시 false
-            { delay: 5500, disableOnInteraction: false }
-        }
+        // autoplay={
+        //     // 자동 슬라이드 설정 , 비 활성화 시 false
+        //     { delay: 5500, disableOnInteraction: false }
+        // }
         // observer={true}
         onInit={(swiper) => {
           // Swiper 초기화 완료 후 실행되는 코드

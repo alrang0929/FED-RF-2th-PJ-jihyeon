@@ -16,6 +16,10 @@
   display: none;
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
 //인트로 영역
 #intro-area {
   // ::-webkit-scrollbar	스크롤바 전체
@@ -31,6 +35,30 @@
 
   overflow: hidden;
   background-color: #000;
+
+.click-text{
+ 
+margin-top: 40px;
+  font-size: 14px;
+  font-weight: 200;
+  color: #fff;
+
+  opacity: 1;
+  animation: textOploop 2.8s linear infinite;
+}
+
+@keyframes textOploop {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
   .cont-wrap {
     position: absolute;
     left: 50%;
@@ -53,7 +81,8 @@
       width: 280%;
 
       left: 50%;
-      top: 128%;
+      top: 151%;
+      // top: 128%;
       translate: -50% -50%;
 
       text-align: center;
@@ -87,3 +116,19 @@
     background-repeat: no-repeat;
   }
 } ///////intro-area-end
+
+//////media///////////////////////////////////
+@media screen and (max-width: 900px) {
+
+  #intro-area{
+    .cont-wrap{
+      width: 27%;
+
+      .desc{
+        top: 154%;
+      }
+    }
+  }
+
+
+}///900

@@ -64,3 +64,29 @@
     }
   } //contwrap
 } //best banner
+
+/////media//////////////////////////
+@media screen and (max-width: 900px) {
+  #best-banner {
+    padding: 20px;
+    .cont-wrap {
+      .imgbx {
+        width: auto;
+      }
+    }
+    .cont-wrap li {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      .desc-wrap {
+        padding: 10px;
+        height: auto;
+        // width: 100%;
+        .tit{
+          width: 70vw;
+        }
+      }
+    }
+  }
+} /////900////////////////
