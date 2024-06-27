@@ -52,9 +52,9 @@ export default function Intro() {
                     >
                         <div className="cont-wrap">
                             <span>
-                                <img src="/images/icon-sim-white.svg" alt="" />
+                                <img src={process.env.PUBLIC_URL+"/images/icon-sim-white.svg"} alt="" />
                             </span>
-                            <img src="/images/logo_ko.svg" alt="" />
+                            <img src={process.env.PUBLIC_URL+"/images/logo_ko.svg"} alt="" />
                             <div className="desc">
                                 로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은
                                 출판이나 그래픽 디자인 분야에서 폰트,
@@ -65,7 +65,7 @@ export default function Intro() {
                         <div className="bg">
                             <video id="myvid" muted autoPlay loop>
                                 <source
-                                    src="/images/intro_bg1.mp4"
+                                    src={process.env.PUBLIC_URL+"/images/intro_bg1.mp4"}
                                     type="video/mp4"
                                 />
                             </video>

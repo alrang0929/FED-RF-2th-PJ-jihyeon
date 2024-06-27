@@ -31,7 +31,7 @@ export default function Logo({logoStyle}) {
         <h1 style={logoSetStyle[logoStyle]}>
             <img
             style={logoImgStyle[logoStyle]}
-            src={isrc.logo} alt="슬밋 로고" />
+            src={process.env.PUBLIC_URL+isrc.logo} alt="슬밋 로고" />
         </h1>
     );
 

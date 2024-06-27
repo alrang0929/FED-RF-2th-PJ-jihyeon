@@ -79,7 +79,7 @@ export default function SwiperBestItem() {
               </div>
               <div className="imgbx R-ben">
                 <img
-                  src={`/images/main_page/${v.img}.jpg`}
+                  src={process.env.PUBLIC_URL+`/images/main_page/${v.img}.jpg`}
                   alt={`${v.title}`}
                 />
               </div>

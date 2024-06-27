@@ -69,13 +69,13 @@ console.log(newSelData);
                 <div className="img-wrap">
                   <div className="imgbx">
                     <img
-                      src={`${v.img[0].isrc}`}
+                      src={process.env.PUBLIC_URL+`${v.img[0].isrc}`}
                       alt={`"${v.tit}"`}
                     />
                   </div>
                   <div className="blur">
                     <img
-                      src={`${v.img[1].isrc}`}
+                      src={process.env.PUBLIC_URL+`${v.img[1].isrc}`}
                       alt={`"${v.tit}"`}
                     />
                   </div>

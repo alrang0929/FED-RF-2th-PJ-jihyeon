@@ -76,7 +76,7 @@ function SearchInner() {
           <div className="search-header fx-box">
             <div className="logo">
               <Link to="/">
-                <img src="/images/logo_en_B.png" alt="슬밋로고" />
+                <img src={process.env.PUBLIC_URL+"/images/logo_en_B.png"} alt="슬밋로고" />
               </Link>
             </div>
             <button className="close-btn" onClick={searchClose}>

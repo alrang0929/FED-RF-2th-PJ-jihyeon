@@ -9,7 +9,7 @@ export default function SubHeader({ subtitle }) {
         <header style="background: url(/images/intro_BG.jpg);">
             <div className="title">
                 <div className="icon">
-                    <img src="/images/icon-sim-black.svg" alt="" />
+                    <img src={process.env.PUBLIC_URL+"/images/icon-sim-black.svg"} alt="" />
                 </div>
                 <h3>공지사항</h3>
                 <span>슬밋의 공지사항을 확인하세요</span>

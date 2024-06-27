@@ -89,9 +89,9 @@ console.log("myCon.setSelCat",myCon.setSelCat);
           <button>info</button>
         </div>
         <div className="detail-box">
-          <img src={notiData[1].isrc} alt={notiData.tit} />
+          <img src={process.env.PUBLIC_URL+notiData[1].isrc} alt={notiData.tit} />
           {selData.detail.map((v, i) => (
-            <img src={v} alt={selData.tit} key={i} />
+            <img src={process.env.PUBLIC_URL+v} alt={selData.tit} key={i} />
           ))}
           {/* <TabBox/> */}
         </div>

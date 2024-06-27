@@ -37,16 +37,16 @@ const FooterArea = memo(({ival}) => {
           <div id="sns-wrap">
             <div className="sns-icon">
               <a href="">
-                <img src="../images/svg/icon_facebook.svg" alt="페이스북 이동" />
+                <img src={process.env.PUBLIC_URL+"/images/svg/icon_facebook.svg"} alt="페이스북 이동" />
               </a>
               <a href="">
                 <img
-                  src="../images/svg/icon_instagram.svg"
+                  src={process.env.PUBLIC_URL+"/images/svg/icon_instagram.svg"}
                   alt="인스타그램 이동"
                 />
               </a>
               <a href="">
-                <img src="../images/svg/icon_youtube.svg" alt="유튜브 이동" />
+                <img src={process.env.PUBLIC_URL+"/images/svg/icon_youtube.svg"} alt="유튜브 이동" />
               </a>
             </div>
           </div>
