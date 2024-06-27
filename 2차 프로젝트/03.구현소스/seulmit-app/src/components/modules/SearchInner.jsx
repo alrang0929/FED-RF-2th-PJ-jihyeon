@@ -50,7 +50,7 @@ function SearchInner() {
         goSearch(txt);
         $(".blocking-bg").fadeOut(200);
 
-        // $("body,html").css({ overflowX: "hidden" });
+        $("body,html").attr("style","").css({ overflowX: "hidden" });
       } ///if
     } ////if
   };

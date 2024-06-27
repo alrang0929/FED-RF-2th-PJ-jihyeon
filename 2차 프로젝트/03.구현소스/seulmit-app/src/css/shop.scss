@@ -176,16 +176,30 @@ html,body {
   margin: 0 auto;
   padding: 40px;
   .info-wrap {
-    height: 140vh;
+    height: 100%;
     overflow: scroll;
     //영역확인용
     // background: #c8c8c850;
+
+    .top-Cont {
+      .thumb-wrap {
+        width: 50%;
+       }
+       }
 
     .info-area {
       width: auto;
       position: sticky;
       top: 0;
       padding: 30px;
+      table{
+        width: 100%;
+      }
+      .promotion-bx{
+        .title{
+          text-align: left;
+        }
+      }
       //영역확인용
       // background: #c8c8c8;
     }

@@ -43,7 +43,7 @@ function Searching({ kword }) {
     //3. 상단 검색어를 현재 검색창에 넣기 (단순 업데이트)
     $("#schin").value = kword;
 
-  }///kword
+  }///if
 
   ///////////////////////////////////////////////////////////////////////////
   //검색결과 있는 데이터 필터 : filter()은 검색결과가 항상 배열로 나옴
@@ -65,6 +65,9 @@ function Searching({ kword }) {
 
       //2) 문자열이 있는 값만 재수집
       // console.log("newVal.indexOf(key)",newVal.indexOf(key));
+
+      // if(newVal.indexOf(key) !== -1 &&)
+
       return newVal.indexOf(key);
 
       //includes(): 문자열 안에 특정 문자열이 있는지 확인하는 것, true/false로 값 반환, but 위치값 안알려줌

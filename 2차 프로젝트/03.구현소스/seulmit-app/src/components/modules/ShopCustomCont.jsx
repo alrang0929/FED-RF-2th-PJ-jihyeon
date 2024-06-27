@@ -25,7 +25,7 @@ function ShopCustomCont({ catName }) {
           <div className="desc-wrap custum-data">
             <p className="eng-pdtit bt-padding20">{selData[0].engtit}</p>
             <h4 className="kor-pdtit bt-padding20">{selData[0].tit}</h4>
-            <p className="desc bt-padding200">{selData[0].txt}</p>
+            <p className="desc bt-padding80">{selData[0].txt}</p>
             {/* 2.  아이콘 박스 */}
             <ul className="iconbx fx-box bt-padding20 gap10">
               <li className="share-icon">
