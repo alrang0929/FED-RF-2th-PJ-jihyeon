@@ -25,7 +25,7 @@ export default function Intro() {
         await Promise.all([
           new Promise((resolve) => {
             const img = new Image();
-            img.src = process.env.PUBLIC_URL+"/images/icon-sim-white.svg";
+            img.src = `${process.env.PUBLIC_URL}/images/icon-sim-white.svg`;
             img.onload = resolve;
           }),
           // ... (다른 리소스 로딩 확인)
