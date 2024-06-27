@@ -28,7 +28,7 @@ function SearchInner() {
       },
       500
     );
-    $("body,html").css({ overflowX: "hidden" });
+    $("html,body").attr("style","").css({ overflowX: "hidden",});
   };
 
   //2. 검색창에 엔터키 누르면 검색함수 호출
@@ -44,7 +44,7 @@ function SearchInner() {
       //빈값이 아니면 검색함수 호출(검색어 전달)
       if (txt != "") {
         //입력창 비우고 부모박스 닫기
-        $(e.target).val("").parent().parent().parent().css({right:"-72vw"});
+        $(e.target).val("").parent().parent().parent().css({ right: "-72vw" });
         console.log("검색창 부모는?", e.target);
         //검색 보내기
         goSearch(txt);
@@ -71,16 +71,18 @@ function SearchInner() {
           <div className="search-header fx-box">
             <div className="logo">
               <Link to="/">
-                <img src={process.env.PUBLIC_URL+"/images/logo_en_B.png"} alt="슬밋로고" />
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logo_en_B.png"}
+                  alt="슬밋로고"
+                />
               </Link>
-              
             </div>
-            <button className="close-btn" onClick={
-              (e)=>{
-                searchClose(e)
+            <button className="close-btn" onClick={()=>{
+              
+              searchClose();
+              console.log("엉엉");
+              }}>
 
-              }
-              }>
               <span className="icon-img material-symbols-outlined search-btn">
                 close
               </span>
@@ -96,16 +98,13 @@ function SearchInner() {
               onClick={(e) => {
                 let stxt = e.currentTarget.nextElementSibling.value;
                 //nextElementSibling: 부모로 지정된 요소 바로 뒤에 있거나 null지정된 요소가 목록의 마지막 요소인 경우 해당 요소를 반환
-                if(stxt.trim!="")goSearch(stxt);
-                else{
+                if (stxt.trim != "") goSearch(stxt);
+                else {
                   alert("검색어를 입력해주세요");
                 }
-                
               }}
             />
-            <button className="search-btn"
-            onClick={enterkey}
-            >
+            <button className="search-btn" onClick={enterkey}>
               <span className="icon-img material-symbols-outlined search-btn">
                 search
               </span>
@@ -139,9 +138,7 @@ function SearchInner() {
             </ul>
           </div>
         </div>
-        <section className="best-item-ban">
-          {/* <SwiperBestItem /> */}
-        </section>
+        <section className="best-item-ban">{/* <SwiperBestItem /> */}</section>
       </div>
       <div className="blocking-bg"></div>
     </>

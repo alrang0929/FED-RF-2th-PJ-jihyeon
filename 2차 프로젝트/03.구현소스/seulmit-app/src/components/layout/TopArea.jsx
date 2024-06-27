@@ -92,7 +92,7 @@ export default function TopArea() {
       },
       500
     );
-    $("body,html").css({ overflowX: "hidden" });
+    $("html,body").attr("style","").css({ overflowX: "hidden",});
   };
 
 
