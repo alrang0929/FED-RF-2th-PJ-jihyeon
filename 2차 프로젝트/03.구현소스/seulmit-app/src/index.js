@@ -26,10 +26,13 @@ import SearchPage from "./components/pages/SearchPage";
 /// 컴포넌트 출력 ///
 export default function MainComponent() {
   return (
+    // 라우터 루트로 라우터 구성시작
+    // basename 속성은 package.json의 "homepage"속성값을
+    // 읽어옴 (읽는 방법은 process.env.PUBLIC_URL)
     <>
-      <BrowserRouter>
-          {/* 라우터 경로 변경시 최상단이동 컴포넌트 */}
-          <ScrollTop />
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/* 라우터 경로 변경시 최상단이동 컴포넌트 */}
+        <ScrollTop />
         <Routes>
           {/* 중요! 레이아웃 컴포넌트를 루트로 설정!!
           홀로 당기기 ㄴㄴ 반드시 하위 라우트 감싸기 */}
