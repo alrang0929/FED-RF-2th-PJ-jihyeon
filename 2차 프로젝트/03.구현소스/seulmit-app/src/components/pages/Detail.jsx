@@ -38,14 +38,15 @@ export default function Detail() {
 
 
   console.log(topCat);
-  console.log(prodIdx);
+  console.log("prodIdx",prodIdx);
   console.log(product[topCat]);
 
   // engtit: v.engtit, // 상품 영문 타이틀
   //                   tit: v.tit, // 한글 타이틀
   //                   txt: v.txt, // 상세내용
 const selData =
-    product[topCat].find((item) => item.idx === prodIdx); //product에서 상품 데이터 찾기
+    product[topCat].find((item) => 
+    item.idx === prodIdx); //product에서 상품 데이터 찾기
     // state?.product || product.face.find((item) => item.idx === prodIdx); //product에서 상품 데이터 찾기
 console.log(selData);
   // const selData = product[topCat].find((item) => item.idx === prodIdx.idx); 
@@ -64,9 +65,9 @@ console.log("myCon.setSelCat",myCon.setSelCat);
   // console.log(product.face);
   // console.log(prodIdx);
 
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  });
+  // useEffect(()=>{
+  //   window.scrollTo(0,0);
+  // });
 
   ///////코드리턴구역
   return (
