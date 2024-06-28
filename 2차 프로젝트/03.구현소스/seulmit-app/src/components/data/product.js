@@ -750,7 +750,7 @@ const product = {
         { isrc: "/images/shop/acc/acc_01.jpg" },
         { isrc: "/images/shop/acc/acc_02.jpg" },
       ],
-      thumbCnt: 5,
+      thumbCnt: 4,
       detail: [
         "/images/shop/acc/acc_01/detail_1.jpg",
         "/images/shop/acc/acc_01/detail_2.jpg",
@@ -770,7 +770,7 @@ const product = {
         { isrc: "/images/shop/acc/acc_03.jpg" },
         { isrc: "/images/shop/acc/acc_04.jpg" },
       ],
-      thumbCnt: 3,
+      thumbCnt: 2,
       detail: ["/images/shop/acc/acc_02/detail_1.jpg"],
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
@@ -806,7 +806,7 @@ const product = {
         { isrc: "/images/shop/acc/acc_07.jpg" },
         { isrc: "/images/shop/acc/acc_08.jpg" },
       ],
-      thumbCnt: 5,
+      thumbCnt: 4,
       detail: ["/images/shop/acc/acc_04/detail_1.jpg"],
       notiId: [1],
       opId: [1], //해당 상품에 적용되는 옵션 아이디

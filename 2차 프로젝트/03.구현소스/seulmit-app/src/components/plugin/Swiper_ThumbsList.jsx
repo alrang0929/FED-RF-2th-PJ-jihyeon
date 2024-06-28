@@ -25,7 +25,7 @@ export default function SwiperThumbsList({ catName,seq,cnt }) {
   [구조분해할당]
   1. catName: product 데이터 내 key 값 // 데이터 경로 지정시 사용
   2. seq : 썸네일 갯수 (data : product > [key : idx로 데이터 서치 후] > 해당 데이터 안에 있는 thumbCnt 로 썸네일 셋팅 )
-  3. cnt : 
+  3. cnt : key
   4. num
   
   */
@@ -33,6 +33,7 @@ export default function SwiperThumbsList({ catName,seq,cnt }) {
 
   // const selData = product[catName];
   const selDataCnt = cnt;//product[catName][seq].thumbCnt;
+ 
   const selData = Object.keys(product)[catName];
   // console.log("썸네일 갯수: \n 키값 확인:", selDataCnt,selData);
   // console.log("선택원본:", product[catName]);
