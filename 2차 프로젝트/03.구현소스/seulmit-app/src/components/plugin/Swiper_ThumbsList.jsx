@@ -19,7 +19,7 @@ import { product } from "../data/product";
 
 //////////improt area//////////////////////////////////////
 
-export default function SwiperThumbsList({ catName,seq,cnt,num }) {
+export default function SwiperThumbsList({ catName,seq,cnt }) {
 
   /* 
   [구조분해할당]
@@ -72,19 +72,19 @@ export default function SwiperThumbsList({ catName,seq,cnt,num }) {
         }}
         spaceBetween={0}
         navigation={true}
-        // thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, ]}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation,Thumbs ]}
         className="mySwiper2"
       >
        {slides.map((slide) => slide)}
       </Swiper>
       <Swiper
-        // onSwiper={setThumbsSwiper}
+        onSwiper={setThumbsSwiper}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
-        // watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, ]}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
       >
         {slides.map((slide) => slide)}
