@@ -11,6 +11,41 @@
   --margin-top-text: 20px;
   --padding110: 110px;
 }
+///밑줄애니/////////////////////
+
+.link-box a {
+  &:after {
+    content: "";
+    border-bottom: solid 1px #fff;
+    position: absolute;
+    font-weight: 100;
+    bottom: 0;
+    width: 0;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &:hover:after {
+    width: 50%;
+    font-weight: 400;
+  }
+
+  /* 클릭후 볼드 고정 */
+  &:active {
+    font-weight: 400;
+  }
+
+  &:after {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}
 
 //변수영역////////////////////////////////////////
 
@@ -43,7 +78,6 @@ body {
 }
 
 #header-area {
- 
   width: 100vw;
   text-align: center;
 
@@ -67,7 +101,7 @@ body {
 
   #gnb-area {
     z-index: 999;
-    
+
     background-color: $MainColor1;
     position: relative;
     justify-content: space-between;
@@ -83,7 +117,6 @@ body {
       }
     }
 
-
     /* 좌측메뉴 */
     #L-menu-wrap {
       align-items: center;
@@ -95,7 +128,6 @@ body {
         color: #fff;
       }
       .sub-menu {
-
         .sub-inner {
           text-align: left;
           width: 200px;
@@ -105,19 +137,19 @@ body {
           height: 0;
           top: 29px;
           background: black;
-          transition: .2s ease-in-out;
+          transition: 0.2s ease-in-out;
           a {
             line-height: 2.4;
             font-weight: 200;
             font-size: 13px;
             // opacity: 0;
           }
-      }
-      &:hover .sub-inner{
-        color: #ffffff;
-        padding: 10px;
-        height: 200px;
-      }
+        }
+        &:hover .sub-inner {
+          color: #ffffff;
+          padding: 10px;
+          height: 200px;
+        }
       }
     } ///L-menu
 

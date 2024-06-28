@@ -121,7 +121,7 @@ export default function TopArea() {
               </span>
             </button>
               {gnbData.map((v, i) => (
-                <li key={i} className="sub-menu">
+                <li key={i} className="sub-menu link-box">
                   {
                     //하위메뉴 有: a요소 cnffur / 無: Link 라우팅 출력
                     v.sub ? (
@@ -136,7 +136,7 @@ export default function TopArea() {
                       <div className="sub-inner">
                         <ol>
                           {v.sub.map((v, i) => (
-                            <li key={i}>
+                            <li key={i} className="link-box">
                               <Link to={v.link}>{v.txt}</Link>
                             </li>
                           ))}
