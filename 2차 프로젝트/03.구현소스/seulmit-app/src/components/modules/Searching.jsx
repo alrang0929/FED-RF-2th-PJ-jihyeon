@@ -66,9 +66,7 @@ function Searching({ kword }) {
       //2) 문자열이 있는 값만 재수집
       // console.log("newVal.indexOf(key)",newVal.indexOf(key));
 
-      // if(newVal.indexOf(key) !== -1 &&)
-
-      return newVal.indexOf(key);
+      if(newVal.indexOf(key) !== -1 ) return newVal.indexOf(key);
 
       //includes(): 문자열 안에 특정 문자열이 있는지 확인하는 것, true/false로 값 반환, but 위치값 안알려줌
       //indexOf(): 배열안 특정값이 있는지 확인 후 위치(index)알려줌, 0 / -0으로 값 반환

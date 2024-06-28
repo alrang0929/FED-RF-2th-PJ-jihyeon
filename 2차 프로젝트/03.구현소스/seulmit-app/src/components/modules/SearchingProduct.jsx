@@ -55,12 +55,12 @@ function SearchingProduct({ dt }) {
         {
         total == 0 && (
           <>
-            <h2>검색 결과가 존재하지 않습니다.</h2>
-            <section id="prd-list">
+            <h2 className="none-text">검색 결과가 존재하지 않습니다.</h2>
+            <section id="prd-list" className="search-pdlist ">
               <div className="desc-box">
-                <div className="tit">lorem ipsum</div>
+                {/* <div className="tit">lorem ipsum</div> */}
                 <span className="desc">
-                  로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나
+                  이런 상품은 어떠신가요?
                 </span>
               </div>
               {/* 베스트상품 리스트 swiper : Swiper_prd-list */}
