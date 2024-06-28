@@ -18,6 +18,7 @@ import "./css/swiper_best_item.scss";
 
 // import required modules
 import { Pagination, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function SwiperBestItem() {
   //각 배너의 left 값이 0이 되었을때 .desc-wrap가 페이드인 + 올라오기
@@ -75,7 +76,10 @@ export default function SwiperBestItem() {
                 <div className="sub-tit">{v.subtitle}</div>
                 <div className="tit">{v.title}</div>
                 <div className="desc">{v.text}</div>
-                <button className="button-nomal">more view</button>
+                <button className="button-nomal"
+                >
+                <Link to="/detail">more view</Link>
+                </button>
               </div>
               <div className="imgbx R-ben">
                 <img

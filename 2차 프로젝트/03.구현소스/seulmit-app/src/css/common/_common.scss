@@ -43,6 +43,7 @@ body {
 }
 
 #header-area {
+ 
   width: 100vw;
   text-align: center;
 
@@ -65,6 +66,8 @@ body {
   }
 
   #gnb-area {
+    z-index: 999;
+    
     background-color: $MainColor1;
     position: relative;
     justify-content: space-between;
@@ -80,35 +83,41 @@ body {
       }
     }
 
+
     /* 좌측메뉴 */
     #L-menu-wrap {
       align-items: center;
       .close-btn {
         display: none;
       }
+      a {
+        margin-right: 20px;
+        color: #fff;
+      }
       .sub-menu {
-        align-items: center;
-        gap: var(--fx-menu-gap);
-        margin-left: 10px;
-        & > a {
-          font-size: $fontsize2;
-          font-weight: 200;
-          color: $FontColor3;
 
-          &:hover .sub-inner {
-            height: 200px;
-          }
-        }
         .sub-inner {
+          text-align: left;
+          width: 200px;
+          padding: 10px;
+          position: absolute;
           overflow: hidden;
           height: 0;
-          > a {
-            display: none;
-            font-size: $fontsize2;
+          top: 29px;
+          background: black;
+          transition: .2s ease-in-out;
+          a {
+            line-height: 2.4;
             font-weight: 200;
-            color: $FontColor3;
+            font-size: 13px;
+            // opacity: 0;
           }
-        }
+      }
+      &:hover .sub-inner{
+        color: #ffffff;
+        padding: 10px;
+        height: 200px;
+      }
       }
     } ///L-menu
 
@@ -338,4 +347,4 @@ body {
       }
     }
   } //gnb
-}////////480
+} ////////480

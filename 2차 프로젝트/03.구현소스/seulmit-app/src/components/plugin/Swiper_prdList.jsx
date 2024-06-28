@@ -6,7 +6,7 @@ import $ from "jquery";
 import { product } from "../data/product";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide,} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,7 +16,7 @@ import "./css/swiper_prd-list.scss";
 //////import area/////////////////////////////////////////////
 
 // import required modules
-import { Scrollbar } from "swiper/modules";
+import { Scrollbar,} from "swiper/modules";
 
 export default function SwiperPrdList() {
 
@@ -37,7 +37,7 @@ console.log(newSelData);
   return (
     <>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={5}
         spaceBetween={20}
         pagination={{
           clickable: true,
@@ -45,7 +45,7 @@ console.log(newSelData);
         scrollbar={{
           hide: false,
         }}
-
+        autoplay={{ delay: 5500, disableOnInteraction: false }}
         //스와이퍼 미디어쿼리
         breakpoints={{
           900: {
@@ -60,7 +60,7 @@ console.log(newSelData);
      
         // autoHeight={true}
         // lazy={true}
-        modules={[Scrollbar]}
+        modules={[Scrollbar,]}
         className="mySwiper slider fx-box cont-box"
       >
         {newSelData.map((v, i) => (
