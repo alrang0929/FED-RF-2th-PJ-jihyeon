@@ -19,8 +19,10 @@
     border-bottom: solid 1px #fff;
     position: absolute;
     font-weight: 100;
+    margin-top: 2px;
     bottom: 0;
     width: 0;
+    left: 0;
   }
 
   &:before {
@@ -32,7 +34,45 @@
   }
 
   &:hover:after {
-    width: 50%;
+    left: 0;
+    width: 100%;
+    font-weight: 400;
+  }
+
+  /* 클릭후 볼드 고정 */
+  &:active {
+    font-weight: 400;
+  }
+
+  &:after {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}
+
+.link-box2 a {
+  &:after {
+    content: "";
+    margin-top: 2px;
+    border-bottom: solid 1px #000;
+    position: absolute;
+    font-weight: 100;
+    bottom: 0;
+    width: 0;
+    left: 0;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &:hover:after {
+    left: 0;
+    width: 100%;
     font-weight: 400;
   }
 
@@ -128,6 +168,7 @@ body {
         color: #fff;
       }
       .sub-menu {
+        position: relative;
         .sub-inner {
           text-align: left;
           width: 200px;
@@ -135,7 +176,7 @@ body {
           position: absolute;
           overflow: hidden;
           height: 0;
-          top: 29px;
+          // top: 29px;
           background: black;
           transition: 0.2s ease-in-out;
           a {
@@ -143,6 +184,11 @@ body {
             font-weight: 200;
             font-size: 13px;
             // opacity: 0;
+          }
+          ol{
+            li{
+              position: relative;
+            }
           }
         }
         &:hover .sub-inner {

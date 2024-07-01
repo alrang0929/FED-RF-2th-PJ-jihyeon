@@ -16,7 +16,7 @@ function Category({onCat, selCat}) {
       <div className="category">
         <ul className="fx-box cgmenu">
           {selData.map((v, i) => (
-            <li key={v} className="cgitem">
+            <li key={v} className="cgitem link-box2">
               <Link to=""
               // {`/shop/${v}`} 
               className={v === selCat ? "on" : ""} 
