@@ -173,7 +173,7 @@ export default function TopArea() {
                   </Link>
                 </li>
                 <li className="icon-item">
-                  <Link to="">
+                  <Link to="/Member">
                     <span className="icon-img material-symbols-outlined">
                       person
                     </span>
