@@ -75,11 +75,6 @@ const gnbData = [
 const gnbDataR =[
   
   {
-    txt: "LOGIN",
-    link: "/LOGIN",
-  },
-
-  {
     txt: "NOTICE",
     link: "/NOTICE",
     sub: [

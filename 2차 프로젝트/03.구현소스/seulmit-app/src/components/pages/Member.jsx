@@ -16,7 +16,7 @@ function Member(props) {
         <section className="membx">
           <h3>회원가입</h3>
           <form action="process.php" method="post">
-            <ul>
+            <ul className="user-data">
               {/* 1. 아이디 */}
               <li>
                 <label>아이디(id):</label>
@@ -53,25 +53,25 @@ function Member(props) {
                   placeholder="이메일을 입력해주세요"
                 />
               </li>
+            </ul>
+            <ul>
               {/* 5. 약관동의 */}
-              <li>
+              <li className="termsbx">
                 <h3>약관동의</h3>
-                <div className="terms-text">
-                    {terms.이용동의}
+                <div className="terms-text scrollbar">{terms.이용동의}</div>
+                <input type="checkbox" id="terms1" name="terms" />
+                <label htmlFor="terms1">
+                  <span>
+                    <i className="icon-check"></i>
+                  </span>
+                  이용약관에 동의합니다.
+                </label>
+                <div className="buttonbx">
+                  {/* 6.로그인 화면으로 돌아가기 */}
+                  <button className="button-nomal sbtn">로그인 하기</button>
+                  {/* 7. 가입버튼 */}
+                  <button className="button-fill sbtn">가입하기</button>
                 </div>
-                    <input type="checkbox" id="terms1" name="terms" />
-                    <label htmlFor="terms1">
-                      <span>
-                        <i className="icon-check"></i>
-                      </span>
-                      이용약관에 동의합니다.
-                    </label>
-              </li>
-              {/* 6. 가입버튼 */}
-              <li>
-                <button className="button-nomal sbtn">
-                    가입하기
-                </button>
               </li>
             </ul>
           </form>

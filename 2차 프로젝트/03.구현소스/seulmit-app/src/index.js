@@ -52,7 +52,7 @@ export default function MainComponent() {
             <Route path="/notice" element={<Notice />} />
             <Route path="/Detail" element={<Detail />} />
             <Route path="/search" element={<SearchPage />} />
-            <Route path="/Member" element={<Member />} />
+            <Route path="/member" element={<Member />} />
           </Route>
         </Routes>
       </BrowserRouter>

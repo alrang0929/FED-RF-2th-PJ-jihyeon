@@ -1,6 +1,6 @@
 // 코믹스 페이지 컴포넌트 ///
 import "../../css/login.scss";
-
+import { Link } from "react-router-dom";
 
 export default function Login() {
   //// 코드 리턴구역 //////////////
@@ -64,7 +64,11 @@ export default function Login() {
             <div className="desc">
             <span>슬밋 Seulmit이 처음이신가요?</span>
             </div>
-            <button className="button-fill">SING UP</button>
+            <Link to ="/member">
+            <button 
+            className="button-fill"
+            >SING UP</button>
+            </Link>
         </div>
         {/* btn-wrap-end */}
         {/* </form> */}
