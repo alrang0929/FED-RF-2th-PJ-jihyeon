@@ -5,6 +5,7 @@ import "../../css/member.scss";
 
 //data
 import { terms } from "../data/terms_text";
+import { Link } from "react-router-dom";
 
 ////import area//////////////////////////////////
 
@@ -67,10 +68,12 @@ function Member(props) {
                   이용약관에 동의합니다.
                 </label>
                 <div className="buttonbx">
-                  {/* 6.로그인 화면으로 돌아가기 */}
-                  <button className="button-nomal sbtn">로그인 하기</button>
-                  {/* 7. 가입버튼 */}
+                  {/* 6. 가입버튼 */}
                   <button className="button-fill sbtn">가입하기</button>
+                  {/* 7.로그인 화면으로 돌아가기 */}
+                  <div className="login-msg">
+                    <span>이미 계정이 있으신가요?</span><Link to="/login">로그인 하기</Link>
+                  </div>
                 </div>
               </li>
             </ul>

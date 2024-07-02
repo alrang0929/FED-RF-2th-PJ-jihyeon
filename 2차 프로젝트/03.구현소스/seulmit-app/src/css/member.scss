@@ -50,5 +50,11 @@
         margin: 40px 10px;
       }
     }
+    .login-msg{
+      font-size: $fontsize2;
+      a{
+        color: $MainColor1;
+      }
+    }
   }
 }
