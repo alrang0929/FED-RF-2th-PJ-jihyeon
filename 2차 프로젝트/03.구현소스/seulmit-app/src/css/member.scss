@@ -8,7 +8,7 @@
     margin: 0 auto;
     min-height: 60vh;
     max-width: 700px;
-    padding: 15px;
+    padding: 50px;
     border: 1px solid hsl(0, 0%, 33%);
     background-color: #fff;
     h3 {
@@ -47,13 +47,13 @@
       }
       button {
         width: 40%;
-        margin: 40px 10px;
+        margin: 20px 10px;
       }
     }
     .login-msg{
       font-size: $fontsize2;
       a{
-        color: $MainColor1;
+        color: $PointColor2;
       }
     }
   }
