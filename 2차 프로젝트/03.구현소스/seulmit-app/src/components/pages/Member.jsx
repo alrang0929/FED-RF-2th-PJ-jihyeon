@@ -179,6 +179,20 @@ function Member(props) {
         setEmail(val);
     }; /////changeChkPwd//////////////////////////////////////////
 
+    //[6. 전체 유효성 검사]
+    const totalValid = ()=>{
+
+        //1. 모든 상태변수 빈값일 시 에러상태값 업데이트
+        if(!userId) setUserIdError(true);
+        if(!userName) setUserNameError(true);
+        if(!pwd) setPwdError(true);
+        if(!chkPwd) setChkPwdError(true);
+        if(!email) setEmailError(true);
+        //2. 통과: true, 통과X : false
+
+    };////// totalValidFn//////////////////////////////
+
+
     ////코드 리턴구역/////////////////////////
     return (
         <>
