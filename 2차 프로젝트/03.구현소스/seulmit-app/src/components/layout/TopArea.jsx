@@ -47,7 +47,7 @@ export default function TopArea() {
       .animate({ opacity: 1 }, 200);
 
     //서치 버튼을 클릭시 스크롤 막기
-    $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
+    // $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
   };
 
   const showMenu = (e) => {
@@ -70,7 +70,7 @@ export default function TopArea() {
       })
       .animate({ opacity: 1 }, 200);
 
-    $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
+    // $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
   };
 
   const hideMenu = () => {
@@ -92,7 +92,7 @@ export default function TopArea() {
       },
       500
     );
-    $("html,body").attr("style","").css({ overflowX: "hidden",});
+    // $("html,body").attr("style","").css({ overflowX: "hidden",});
   };
 
 

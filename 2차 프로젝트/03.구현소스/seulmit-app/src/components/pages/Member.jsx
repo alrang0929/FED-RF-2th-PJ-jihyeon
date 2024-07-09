@@ -5,12 +5,13 @@ import "../../css/member.scss";
 
 //data
 import { terms } from "../data/terms_text";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { initData } from "../func/memFn";
 
 ////import area//////////////////////////////////
 
-function Member(props) {
+function Member() {
+  const goNav = useNavigate();
   // [ 상태관리변수 ] /////////////
   // [1] 입력요소 상태변수
   // 1. 아이디변수
@@ -23,6 +24,8 @@ function Member(props) {
   const [userName, setUserName] = useState("");
   // 5. 이메일변수
   const [email, setEmail] = useState("");
+  // 6. 약관동의 체크박스 체크여부 상태관리변수
+  const [chk, setChk] = useState("");
 
   // [2] 에러상태관리 변수
   // -> 에러상태값 초기값은 에러아님(false)
@@ -36,6 +39,9 @@ function Member(props) {
   const [userNameError, setUserNameError] = useState(false);
   // 5. 이메일변수
   const [emailError, setEmailError] = useState(false);
+
+  // 6. 약관동의 체크박스 체크여부 상태관리변수 : 선택 아닐시 에러(true)
+  const [chkError, setChkError] = useState(false);
 
   ///////////////////////////////////////////////////////////
   //메세지 프리셋
@@ -177,7 +183,15 @@ function Member(props) {
 
     //실제 화면출력을 위해 setUserName에 상태 업데이트
     setEmail(val);
-  }; /////changeChkPwd//////////////////////////////////////////
+  }; /////changeEmail//////////////////////////////////////////
+
+  //[6. 약관동의 체크]
+  const changeTerms = (e) => {
+    setChk(e.target.checked); // 체크상태 업데이트
+    setChkError(!e.target.checked); //체크 상태에 따른 에러상태 업데이트
+   ;
+    console.log("체크작동확인", chk);
+  }; /////changTerms//////////////////////////////////////////
 
   //[6. 전체 유효성 검사]
   const totalValid = () => {
@@ -187,42 +201,84 @@ function Member(props) {
     if (!pwd) setPwdError(true);
     if (!chkPwd) setChkPwdError(true);
     if (!email) setEmailError(true);
+    if (!chk) setChkError(true);
+
+    
 
     //2. 통과: true, 통과X : false
-    //통과조건: 빈값X 
+    //통과조건: 빈값X
     if (
       userId &&
       userName &&
       pwd &&
       chkPwd &&
       email &&
+      chk &&
       !userIdError &&
       !userNameError &&
       !pwdError &&
       !chkPwdError &&
-      !emailError
-    )
-      return true;
-    //+ 에러후크변수 all false
-    else return false;
-  }; ////// totalValidFn//////////////////////////////
+      !emailError &&
+      !chkError
+    )return true;
+
+      
+      //+ 에러후크변수 all false
+      else return false;
+
+    }; ////// totalValidFn//////////////////////////////
 
   //[submit 기능함수]
-  const onSubmit = (e)=>{
+  const onSubmit = (e) => {
     e.preventDefault();
 
     //최종검사
-    console.log("최종검사",totalValid());
-
+    console.log("최종검사", totalValid());
+    console.log(
+      "\nuserId",userIdError,
+      "\nuserName",userNameError,
+      "\npwd",pwdError,
+      "\nchkPwd",chkPwdError,
+      "\nemail",emailError,
+      "\nchk",chkError,
+      );
     //2. 유효성 검사 전체 통과시
-    if(totalValid()){
-        console.log("통과통과!");
-        //[회원정보를 로컬스토리지에 저장하기]
-    //1. 로컬스 체크함수호출(없을시 생성)
-    initData();
+    if (totalValid()) {
+      console.log("통과통과!");
+      //[회원정보를 로컬스토리지에 저장하기]
+      //1. 로컬스 체크함수호출(없을시 생성)
+      initData();
 
+      //2. 로컬스 변수할당
+      let memData = localStorage.getItem("mem-data");
+
+      //3. 로컬스 객체변환
+      memData = JSON.parse(memData);
+
+      //최대수를 위한 배열값 뽑기 (idx항목)
+      let temp = memData.map((v) => v.idx);
+      //구해온 배열의 최대idx +1
+      console.log("다음번호", Math.max(...temp) + 1);
+
+      //4. 새로운 데이터 구성하기
+      let newData = {
+        idx: Math.max(...temp) + 1,
+        uid: userId,
+        pwd: pwd,
+        unm: userName,
+        eml: email,
+      };
+
+      //5. 데이터 추가하기: 배열에 데이터 추가 push()
+      memData.push(newData)
+
+      //6. 로컬스에 반영하기: 문자화 변환
+      localStorage.setItem("mem-data", JSON.stringify(memData));
+
+      //7. 회원가입 환영메세지 + 로그인 페이지 이동
+      goNav("/login");
     }
-  }
+  };
 
   ////코드 리턴구역/////////////////////////
   return (
@@ -238,7 +294,7 @@ function Member(props) {
                 <input
                   type="text"
                   maxLength="16"
-                  placeholder="영문,숫자 포함 16자 이내"
+                 placeholder="영문,숫자 포함 16자 이내"
                   value={userId}
                   onChange={changeUserId}
                 />
@@ -279,7 +335,7 @@ function Member(props) {
                 <input
                   type="password"
                   maxLength="16"
-                  placeholder="영문,숫자,특수문자 포함 16자 이내"
+                 placeholder="영문,숫자,특수문자 포함 16자 이내"
                   value={pwd}
                   onChange={changePwd}
                 />
@@ -305,7 +361,7 @@ function Member(props) {
                 <input
                   type="password"
                   maxLength="16"
-                  placeholder="영문,숫자,특수문자 포함 16자 이내"
+                 placeholder="영문,숫자,특수문자 포함 16자 이내"
                   value={chkPwd}
                   onChange={changeChkPwd}
                 />
@@ -331,7 +387,7 @@ function Member(props) {
                 <input
                   type="text"
                   maxLength="16"
-                  placeholder="실명으로 작성해주세요"
+                 placeholder="실명으로 작성해주세요"
                   value={userName}
                   onChange={changeName}
                 />
@@ -358,7 +414,7 @@ function Member(props) {
                 <input
                   type="text"
                   maxLength="50"
-                  placeholder="이메일을 입력해주세요"
+                 placeholder="이메일을 입력해주세요"
                   value={email}
                   onChange={changeEmail}
                 />
@@ -384,7 +440,12 @@ function Member(props) {
               <li className="termsbx">
                 <h3>약관동의</h3>
                 <div className="terms-text scrollbar">{terms.이용동의}</div>
-                <input type="checkbox" id="terms1" name="terms" />
+                <input
+                  type="checkbox"
+                  id="terms1"
+                  name="terms"
+                  onChange={changeTerms}
+                />
                 <label htmlFor="terms1">
                   <span>
                     <i className="icon-check"></i>
@@ -393,7 +454,12 @@ function Member(props) {
                 </label>
                 <div className="buttonbx">
                   {/* 6. 가입버튼 */}
-                  <button className="button-fill sbtn">가입하기</button>
+                  <button
+                    className="button-fill sbtn submit"
+                    onClick={onSubmit}
+                  >
+                    가입하기
+                  </button>
                   {/* 7.로그인 화면으로 돌아가기 */}
                   <div className="login-msg">
                     <span>이미 계정이 있으신가요?</span>

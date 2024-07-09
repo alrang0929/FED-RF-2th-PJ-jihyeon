@@ -28,7 +28,7 @@ function SearchInner() {
       },
       500
     );
-    $("html,body").attr("style","").css({ overflowX: "hidden",});
+    // $("html,body").attr("style","").css({ overflowX: "hidden",});
   };
 
   //2. 검색창에 엔터키 누르면 검색함수 호출
@@ -50,7 +50,7 @@ function SearchInner() {
         goSearch(txt);
         $(".blocking-bg").fadeOut(200);
 
-        $("body,html").attr("style","").css({ overflowX: "hidden" });
+        // $("body,html").attr("style","").css({ overflowX: "hidden" });
       } ///if
     } ////if
   };

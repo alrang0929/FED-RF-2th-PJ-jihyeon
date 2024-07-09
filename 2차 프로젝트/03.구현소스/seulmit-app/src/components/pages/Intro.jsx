@@ -15,7 +15,7 @@ export default function Intro() {
 
   //닫기버튼 이벤트
   const clickClose = () => {
-    $("body,html").css({ overflowX: "hidden" });
+    // $("body,html").css({ overflowX: "hidden" });
   };
 
 

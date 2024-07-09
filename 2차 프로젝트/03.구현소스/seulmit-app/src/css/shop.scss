@@ -11,9 +11,10 @@
   --line-height: 1.2;
 }
 
-html,body {
+html,
+body {
   width: 100vw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 ////icon effect///////////////////////////////
@@ -173,30 +174,34 @@ html,body {
 ////////////////product-cont start/////////////////////////////////////////////////////
 
 #product-cont {
+  //스티키 body
+  height: 100vh;
+
   margin: 0 auto;
   padding: 40px;
   .info-wrap {
-    height: 100%;
-    overflow: scroll;
+    //컨테인
+    height: 112vh;
     //영역확인용
-    // background: #c8c8c850;
+    // background: red;
 
     .top-Cont {
       .thumb-wrap {
         width: 50%;
-       }
-       }
+      }
+    }
 
     .info-area {
-      width: auto;
       position: sticky;
       top: 0;
+
+      width: auto;
       padding: 30px;
-      table{
+      table {
         width: 100%;
       }
-      .promotion-bx{
-        .title{
+      .promotion-bx {
+        .title {
           font-size: 16px;
           text-align: left;
         }
@@ -371,7 +376,7 @@ table {
       .info-area {
         width: 100%;
 
-        table{
+        table {
           width: 100%;
         }
       }

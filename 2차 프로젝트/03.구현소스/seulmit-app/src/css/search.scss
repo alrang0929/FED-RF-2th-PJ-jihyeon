@@ -2,7 +2,7 @@
 
 @import "./variables/variables";
 
-.none-text{
+.none-text {
   text-align: center;
   font-size: 16px;
   font-weight: 200;
@@ -40,7 +40,7 @@
 ////gnb 검색박스///////////////////////////////
 .search-inner {
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   width: 34vw;
   height: 100vh;
   top: 0;
@@ -287,10 +287,8 @@
         left: 0;
       } //호버시 보이는 이미지
     } //img-wrap
-    
   }
-
 }
-.search-pdlist{
+.search-pdlist {
   margin-top: 20vh;
 }
