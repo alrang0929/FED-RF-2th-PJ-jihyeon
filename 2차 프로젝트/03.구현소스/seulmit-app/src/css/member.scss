@@ -36,7 +36,12 @@
         font-size: $fontsize2;
       }
       .terms-text {
-        overflow: scroll;
+
+        border: 1px solid #c8c8c8;
+        padding: 15px;
+        box-sizing: border-box;
+
+        overflow-x: hidden;
         height: 20vh;
         width: 100%;
         margin: 20px 0;

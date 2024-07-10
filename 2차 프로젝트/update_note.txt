@@ -1,0 +1,95 @@
+240710
+[intro 컴포넌트]
+1. 기존에 넣어둔 html에 등록된 스크롤 display none이 유지되어 다른 컴포넌트에도 영향을 줌
+    a) 상태변수로 변경하여 intro 화면 클릭시 "scbar-display-none" 클레스 제거를 함
+    a-1) 제이쿼리로 클레스 토글, 상태변수를 쓸까 했으나 html에 직접적으로 클래스를 줘야해서
+        제이쿼리로 진행
+      $("html").addClass("scbar-display-none");
+     $("#intro-area").click(()=>{
+      $("html").removeClass("scbar-display-none");
+    })
+
+
+
+[Member 컴포넌트(회원가입)]:
+>>요약
+1. 약관 체크버튼 추가
+2. submit 클릭시 뜨는 에러 분기
+
+1. 약관 체크버튼 추가
+2. submit(가입하기) 버튼 클릭시 error 상태일시 얼럿창 호출하도록 코드 추가
+    a) 추후 체크사항 에러, 필수 입력사항 에러 분기하여 에러메세지 구분기능 추가
+    a-1) if 문으로 분기했는데 !totalValid() <<가 다른 에러들도 포함하고 있어서
+        !chk 조건을 확인도 못함..
+
+         else if(!totalValid()) {
+          alert("회원가입을 위해 필수 정보를 입력해주세요 ");
+          return;
+        }
+        if (!chk) {
+            alert("약관에 동의해주세요");
+            return;
+        } 
+    a-2) switch문으로 변경
+            해석:
+                1. 순차적 검사를 위해 swith메서드에 true값을 넣음
+                    1) 메서드 값true를 각 case 문의 조건식과 비교
+                    2) 조건식이 true로 판명되면 case 문 실행
+                    3) 아닐시 return문으로 빠져나옴
+                2. totalValid() 로 필수정보 에러 분기를 설정했으나
+                totalValid()에 chkError도 포함되므로 케이스 구분을 위해 아래와 같이 작성..
+
+         switch(true){
+          case 
+          !userId ||
+          !userName ||
+          !pwd ||
+          !chkPwd ||
+          !email 
+          : alert("필수 정보를 입력해주세요");
+          return;
+          case !chk: alert("약관에 동의해주세요");
+          return;
+        }
+
+[Login 컴포넌트]
+1. id 정보가 매칭이 안됐었음.. find 비교때 vid 오타 ..ㅠ uid로 비교했어야!!!!
+2. 아이디 저장기능 추가
+3. 미뤄놨던 로그인 후 제작
+
+    a) 상태관리 추가 후 상태관리변수값에 따라 로컬스에서 데이터 삭제, 추가 + 체크박스 체크드 상태 변경
+    (1) 상태관리 변수 추가 
+    //[3] 아이디 저장 체크상태 변수
+    const [chkSaveId, setChkSaveId] = useState(false);
+
+    (2) 체크 박스에 상태변수값 전달
+
+        {/* 4. 아이디 저장 */}
+    <div className="saveId">
+    <input
+     onChange={(e) => {
+             setChkSaveId(e.target.checked);
+             // console.log("상태확인",setChkSaveId) }}
+
+    (3) 화면 랜더링 구역 추가 : [chkSaveId, userId])의존 상태변화에 따라 레지스토리에 아이디 추가, 삭제 토글
+            useEffect(() => {
+        if (chkSaveId) {
+            localStorage.setItem("savedUserId", userId);
+        } else {
+            localStorage.removeItem("savedUserId");
+        }
+    }, [chkSaveId, userId]);
+
+    (4) 의존성 없는 화면 랜더링 구역에 savedUserId 정의
+                
+        //로컬 스토리지에 저장된 아이디가 있다면 체크박스를 체크
+        //아이디 입력값을 설정
+
+        const savedUserId = localStorage.getItem("savedUserId");
+        if (savedUserId) {
+            setChkSaveId(true);
+            setUserId(savedUserId);
+        }
+
+    (5) 요걸 선택박스 checked로 전달
+        checked={chkSaveId}

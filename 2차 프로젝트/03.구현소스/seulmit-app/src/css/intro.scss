@@ -12,12 +12,16 @@
   --line-height: 1.7;
 }
 
-::-webkit-scrollbar{
-  display: none;
-}
-
 html, body{
   overflow-x: hidden;
+  
+}
+
+.scbar-display-none{
+  
+  ::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 //인트로 영역
