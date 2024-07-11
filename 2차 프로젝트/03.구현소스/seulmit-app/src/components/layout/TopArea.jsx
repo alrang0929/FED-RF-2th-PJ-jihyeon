@@ -14,7 +14,7 @@ import { memo } from "react";
 
 /////import area///////////////////////////////////////////////////////////
 
-export const TopArea = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
+export const TopArea = memo(({ loginMsg, loginSts, logoutFn, goPage, setRecentSearches, recentSearches }) => {
     //전달값
     //1. loginMsg - 로그인 메시지변수
     //2. loginSts - 로그인 상태변수
@@ -57,6 +57,9 @@ export const TopArea = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
 
         //서치 버튼을 클릭시 스크롤 막기
         // $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
+
+        const searchLog = JSON.parse(sessionStorage.getItem("search-Log")||"[]");
+        setRecentSearches(searchLog);
     };
 
     const showMenu = (e) => {

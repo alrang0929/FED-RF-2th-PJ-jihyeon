@@ -31,7 +31,8 @@ function SearchInner() {
             },
             500
         );
-        // $("html,body").attr("style","").css({ overflowX: "hidden",});
+        //세션스토리지 초기화
+        sessionStorage.removeItem("search-Log");
     };
 
     //2. 검색창에 엔터키 누르면 검색함수 호출
@@ -76,14 +77,14 @@ function SearchInner() {
 
         //검색어 저장, 검색어가 없을시 빈배열
         const searchLog = JSON.parse(
-            localStorage.getItem("search-Log") || "[]"
+            sessionStorage.getItem("search-Log") || "[]"
         );
         //검색어 배열형태로 저장
         const newSearchLog = Array.from(new Set([txt, ...searchLog])).slice(
             0,
             MAX_SEARCH_LOG
         );
-        localStorage.setItem("search-log", JSON.stringify(newSearchLog));
+        sessionStorage.setItem("search-log", JSON.stringify(newSearchLog));
 
         // 최근 검색어 상태 업데이트
         setRecentSearches(newSearchLog);
@@ -93,7 +94,7 @@ function SearchInner() {
     useEffect(() => {
         //컴포넌트가 최초 리랜더링 될때(상태값변수로 체크) 값을 받음
         const searchLog = JSON.parse(
-            localStorage.getItem("search-Log") || "[]"
+            sessionStorage.getItem("search-Log") || "[]"
         );
         setRecentSearches(searchLog);
     }, []);

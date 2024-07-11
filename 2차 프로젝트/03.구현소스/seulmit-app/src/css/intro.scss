@@ -13,13 +13,13 @@
 }
 
 html, body{
-  overflow-x: hidden;
+  // overflow-x: hidden;
   
 }
 
 .scbar-display-none{
   
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar{d
     display: none;
   }
 }
