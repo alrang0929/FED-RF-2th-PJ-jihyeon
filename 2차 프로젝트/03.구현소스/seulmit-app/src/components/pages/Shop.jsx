@@ -1,14 +1,16 @@
 // shop 페이지 컴포넌트 ///
-//데이터 임시호출
-import { bestItemData } from "../data/slide_item_data";
+import { Link } from "react-router-dom";
+import { product } from "../data/product";
+import { useContext, useState } from "react";
+//컨텍스트
 import { sCon } from "./sCon";
 //CSS
 import "../../css/shop.scss";
+
+//module
 import Category from "../modules/Category";
-import { Link } from "react-router-dom";
 import ShopPdList from "../modules/ShopPdList";
-import { product } from "../data/product";
-import { useContext, useState } from "react";
+import SubTitle from "../modules/SubTitle";
 /////import area/////////////////////////////////////////////////
 
 export default function Shop() {
@@ -24,6 +26,7 @@ export default function Shop() {
   //// 코드 리턴구역 //////////////
   return (
     <>
+    <SubTitle/>
       <section id="sell-pd-list" className="cont-box">
         {/* 메뉴 리스트 */}
           <Category onCat={(cat)=>activeCat(cat)} selCat={myCon.selCat}/>
