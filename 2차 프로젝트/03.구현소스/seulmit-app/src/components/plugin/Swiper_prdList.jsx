@@ -16,7 +16,7 @@ import "./css/swiper_prd-list.scss";
 //////import area/////////////////////////////////////////////
 
 // import required modules
-import { Scrollbar,} from "swiper/modules";
+import { Scrollbar,Autoplay} from "swiper/modules";
 
 export default function SwiperPrdList() {
 
@@ -45,7 +45,11 @@ console.log(newSelData);
         scrollbar={{
           hide: false,
         }}
-        autoplay={{ delay: 5500, disableOnInteraction: false }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        
         //스와이퍼 미디어쿼리
         breakpoints={{
           900: {
@@ -60,7 +64,7 @@ console.log(newSelData);
      
         // autoHeight={true}
         // lazy={true}
-        modules={[Scrollbar,]}
+        modules={[Scrollbar,Autoplay]}
         className="mySwiper slider fx-box cont-box"
       >
         {newSelData.map((v, i) => (

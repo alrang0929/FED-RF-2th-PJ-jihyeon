@@ -241,10 +241,11 @@ export default function Login() {
                                 userIdError && (
                                     <div
                                         className="msg"
-                                        style={{ padding: "4px" }}
+                                        style={{ padding: "2px" }}
                                     >
                                         <small
                                             style={{
+                                                textAlign: "left",
                                                 color: "yellow",
                                                 fontSize: "13px",
                                             }}
@@ -273,10 +274,11 @@ export default function Login() {
                                 pwdError && (
                                     <div
                                         className="msg"
-                                        style={{ padding: "4px" }}
+                                        style={{ padding: "2px" }}
                                     >
                                         <small
                                             style={{
+                                                textAlign: "left",
                                                 color: "yellow",
                                                 fontSize: "13px",
                                             }}

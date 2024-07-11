@@ -3,6 +3,7 @@
 @import "./variables/variables";
 
 .none-text {
+  margin: 150px;
   text-align: center;
   font-size: 16px;
   font-weight: 200;
@@ -190,13 +191,19 @@
 }
 
 .sortbx {
-  text-align: right;
+  text-align: center;
   height: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  select{
+    height: 30px;
+    width: 150px;
+  }
 }
 .schbx {
   .input-box {
     margin: 0 auto;
-    margin-top: 50px;
+    // margin-top: 20px;
     justify-content: center;
     align-items: center;
 

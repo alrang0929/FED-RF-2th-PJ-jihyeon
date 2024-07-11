@@ -159,6 +159,7 @@ html {
 .link-box a {
     &:after {
       content: "";
+      margin-top: 18px;
       border-bottom: solid 1px #fff;
       position: absolute;
       font-weight: 100;
@@ -169,16 +170,18 @@ html {
     }
   
     &:before {
+      margin-top: 18px;
       left: 0;
     }
   
     &:after {
+      margin-top: 18px;
       right: 0;
     }
   
     &:hover:after {
       left: 0;
-      width: 100%;
+      width: 60%;
       font-weight: 400;
     }
   
