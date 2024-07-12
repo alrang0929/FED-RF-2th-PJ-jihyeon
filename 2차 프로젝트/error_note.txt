@@ -23,3 +23,5 @@ Require stack:
             // -> 넣을때는 JSON.stringify()
             sessionStorage.setItem("minfo",
             JSON.stringify(result));
+
+2. topA
