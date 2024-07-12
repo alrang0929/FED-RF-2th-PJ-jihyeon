@@ -7,20 +7,20 @@ import { options, product } from "../data/product";
 function OptionTable({ catName }) {
   const selData = product.face[0];
   //a링크 기본기능 막기
-  const preventDefault = (e)=>{
+  const preventDefault = (e) => {
     e.preventDefault();
-  }
+  };
 
   //코드리턴구역/////////////////////////////////////////////
   return (
     <>
       <table>
-        <thead style={{display:"none"}}>
-            <tr>
-                <th scope="col">상품명</th>
-                <th scope="col">상품수</th>
-                <th scope="col">가격</th>
-            </tr>
+        <thead style={{ display: "none" }}>
+          <tr>
+            <th scope="col">상품명</th>
+            <th scope="col">상품수</th>
+            <th scope="col">가격</th>
+          </tr>
         </thead>
         <tbody className="default-option">
           <tr>
@@ -29,7 +29,12 @@ function OptionTable({ catName }) {
               <a href="#" className="btn-add" onClick={preventDefault}>
                 +
               </a>
-              <input id="quantity" name="quantity_otp[]" type="number" defaultValue={1} />
+              <input
+                id="quantity"
+                name="quantity_otp[]"
+                type="number"
+                defaultValue={1}
+              />
               <a href="#" className="btn-increase" onClick={preventDefault}>
                 -
               </a>
@@ -38,6 +43,10 @@ function OptionTable({ catName }) {
           </tr>
         </tbody>
       </table>
+      {/* 총합계 가격 */}
+      <div className="total-price" style={{fontSize:"15px",marginBottom:"20px"}}>
+        총<span style={{fontSize:"30px"}}>{selData.price}</span>원
+      </div>
     </>
   );
 }

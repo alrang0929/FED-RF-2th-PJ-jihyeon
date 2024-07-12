@@ -65,9 +65,9 @@ console.log("myCon.setSelCat",myCon.setSelCat);
   // console.log(product.face);
   // console.log(prodIdx);
 
-  // useEffect(()=>{
-  //   window.scrollTo(0,0);
-  // });
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[]);
 
   ///////코드리턴구역
   return (
