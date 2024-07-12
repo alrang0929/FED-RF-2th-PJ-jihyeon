@@ -9,8 +9,7 @@ Require stack:
 
 
 1. Member 컴포넌트
-    1) 약관동의 스크롤이 안보임..
-
+    1) 약관동의 스크롤이 안보임.. << 해결, intro에 디폴트로 박아놓은 overflow 제이쿼리로 유동적 처리
 
     minfo =>  if(pwd === result.pwd){
             // 같을 경우 로그인 성공처리
@@ -24,4 +23,10 @@ Require stack:
             sessionStorage.setItem("minfo",
             JSON.stringify(result));
 
-2. topA
+
+240712
+2. topArea 
+    1) 로그아웃시 에러남! 에러 체크
+    2) 로그인 후 추가된 문구 안나옴
+    3) 장바구니 수량 추가
+    4) 장바구니 기능 추가
