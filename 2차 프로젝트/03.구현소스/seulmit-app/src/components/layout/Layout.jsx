@@ -14,8 +14,14 @@ export default function Layout() {
     const [loginSts, setLoginSts] = useState(sessionStorage.getItem(""));
     //로그인 메세지
     const [loginMsg, setLoginMsg] = useState(sessionStorage.getItem(""));
+
     //최근 검색어 상태관리
     const [recentSearches, setRecentSearches] = useState([]);
+
+    //검색어 데이터 상태변수
+    const [localSearch, setLocalSearch] = useState(localStorage.getItem("searchLog"));
+
+
     ////[공통함수 영역]///////////////////////////////////////
     //1. 라우팅 이동함수: 라우터 이동후크 useNavigate는 다른 useCallback로 처리가능
     const goNave = useNavigate();
@@ -84,6 +90,8 @@ export default function Layout() {
                 goPage={goPage}
                 setRecentSearches = {setRecentSearches}
                 recentSearches = {recentSearches}
+                localSearch = {localSearch}
+                setLocalSearch = {setLocalSearch}
 
             />
             <MainArea />

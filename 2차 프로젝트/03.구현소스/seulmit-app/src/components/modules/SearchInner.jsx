@@ -1,5 +1,5 @@
 //서치박스 내용물
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
 
@@ -8,12 +8,20 @@ import Logo from "./Logo";
 
 //css
 import "../../css/search.scss";
+import { sCon } from "../pages/sCon";
 //////import area/////////////////////////////////////////
 
 function SearchInner() {
+  //콘텍스트 사용
+  const myCon = useContext(sCon)
   //상태변수///////////////////////////////////////
-  //컴포넌트가 처음 렌더링 될 때 상태변수에 검색어 저장
+  //검색단어 상태변수
+  const selData = JSON.parse(myCon.searchLog|| "[]");
+
+  //recentSearches, set'':컴포넌트가 처음 렌더링 될 때 상태변수에 검색어 반영을 위한 변수
+  //근데 필요한감..?
   const [recentSearches, setRecentSearches] = useState([]);
+
   const goNav = useNavigate();
 
   // $('body,html').css('overflow', 'hidden'); // body 스크롤 막기
@@ -70,12 +78,10 @@ function SearchInner() {
     goNav("search", { state: { keyword: txt } });
 
     //검색어 저장, 검색어가 없을시 빈배열
-    const searchLog = JSON.parse(localStorage.getItem("search-Log") || "[]");
+    // const searchLog = JSON.parse(localStorage.getItem("search-Log") || "[]");
     //검색어 배열형태로 저장
-    const newSearchLog = Array.from(new Set([txt, ...searchLog])).slice(
-      0,
-      MAX_SEARCH_LOG
-    );
+    const newSearchLog = 
+    Array.from(new Set([txt, ...selData])).slice(0,MAX_SEARCH_LOG);
     localStorage.setItem("search-log", JSON.stringify(newSearchLog));
 
     // 최근 검색어 상태 업데이트
@@ -85,8 +91,8 @@ function SearchInner() {
   ///화면 렌더링 구역/////////////////////////////////
   useEffect(() => {
     //컴포넌트가 최초 리랜더링 될때(상태값변수로 체크) 값을 받음
-    const searchLog = JSON.parse(localStorage.getItem("search-Log") || "[]");
-    setRecentSearches(searchLog);
+    // const selData = JSON.parse(localStorage.getItem("search-Log") || "[]");
+    setRecentSearches(selData);
   }, []);
 
   ///////코드리턴구역 /////////////////////////////

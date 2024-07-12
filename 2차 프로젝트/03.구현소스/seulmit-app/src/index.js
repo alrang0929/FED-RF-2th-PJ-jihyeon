@@ -21,11 +21,13 @@ import SearchPage from "./components/pages/SearchPage";
 import Member from "./components/pages/Member";
 
 //컴포넌트 호출
-// import "./components/layout/Intro";
 /////////////////////import area/////////////////////////////
 
 /// 컴포넌트 출력 ///
 export default function MainComponent() {
+
+
+  //////////화면랜더링 구역///////////////////////////////////////////////////////////
   return (
     // 라우터 루트로 라우터 구성시작
     // basename 속성은 package.json의 "homepage"속성값을
