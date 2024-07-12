@@ -16,7 +16,7 @@ function SearchInner() {
   const myCon = useContext(sCon)
   //상태변수///////////////////////////////////////
   //검색단어 상태변수
-  const selData = JSON.parse(myCon.searchLog|| "[]");
+  const selData = JSON.parse(myCon.searchLog || "[]");
 
   //recentSearches, set'':컴포넌트가 처음 렌더링 될 때 상태변수에 검색어 반영을 위한 변수
   //근데 필요한감..?
