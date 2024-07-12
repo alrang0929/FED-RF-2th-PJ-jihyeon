@@ -35,16 +35,14 @@ export default function Layout() {
         //2. 세션스 지우기 : minfo
         sessionStorage.removItem("minfo");
         //3. 로그인 메세지 초기화
-        setLoginMsg(null);
+        // setLoginMsg(null);
         //4. 메인페이지로 이동
         goPage("/");
     }, []);
 
+
     //selCat = 선택된 카테고리
     const [selCat, setSelCat] = useState("face");
-    useEffect(() => {
-        // console.log(introSts)
-    });
 
     //화면 랜더링 구역/////////////////////////////////////////////////////
     useEffect(() => {

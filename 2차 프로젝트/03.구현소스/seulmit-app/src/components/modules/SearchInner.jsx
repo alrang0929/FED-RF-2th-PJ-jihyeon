@@ -77,14 +77,14 @@ function SearchInner() {
 
         //검색어 저장, 검색어가 없을시 빈배열
         const searchLog = JSON.parse(
-            sessionStorage.getItem("search-Log") || "[]"
+            localStorage.getItem("search-Log") || "[]"
         );
         //검색어 배열형태로 저장
         const newSearchLog = Array.from(new Set([txt, ...searchLog])).slice(
             0,
             MAX_SEARCH_LOG
         );
-        sessionStorage.setItem("search-log", JSON.stringify(newSearchLog));
+        localStorage.setItem("search-log", JSON.stringify(newSearchLog));
 
         // 최근 검색어 상태 업데이트
         setRecentSearches(newSearchLog);
@@ -94,7 +94,7 @@ function SearchInner() {
     useEffect(() => {
         //컴포넌트가 최초 리랜더링 될때(상태값변수로 체크) 값을 받음
         const searchLog = JSON.parse(
-            sessionStorage.getItem("search-Log") || "[]"
+            localStorage.getItem("search-Log") || "[]"
         );
         setRecentSearches(searchLog);
     }, []);

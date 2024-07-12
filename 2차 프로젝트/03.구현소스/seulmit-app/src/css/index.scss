@@ -19,6 +19,9 @@
 }
 
 /////메인영역
+body{
+  overflow-x: hidden;
+}
 main {
   #sub-visual {
     height: 90vh;
