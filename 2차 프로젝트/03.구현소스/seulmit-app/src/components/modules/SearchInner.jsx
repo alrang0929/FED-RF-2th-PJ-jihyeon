@@ -1,5 +1,5 @@
 //서치박스 내용물
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
 
@@ -16,7 +16,8 @@ function SearchInner() {
   const myCon = useContext(sCon)
   //상태변수///////////////////////////////////////
   //검색단어 상태변수
-  const selData = JSON.parse(myCon.searchLog || "[]");
+  // const selData = useRef(JSON.parse(myCon.searchLog || "[]"));
+  // console.log(selData.current);
 
   //recentSearches, set'':컴포넌트가 처음 렌더링 될 때 상태변수에 검색어 반영을 위한 변수
   //근데 필요한감..?
@@ -63,6 +64,10 @@ function SearchInner() {
 
         // $("body,html").attr("style","").css({ overflowX: "hidden" });
       } ///if
+      else{
+        alert("검색어를 입력하세요.");
+
+      }
     } ////if
   };
 
@@ -80,19 +85,25 @@ function SearchInner() {
     //검색어 저장, 검색어가 없을시 빈배열
     // const searchLog = JSON.parse(localStorage.getItem("search-Log") || "[]");
     //검색어 배열형태로 저장
-    const newSearchLog = 
-    Array.from(new Set([txt, ...selData])).slice(0,MAX_SEARCH_LOG);
-    localStorage.setItem("search-log", JSON.stringify(newSearchLog));
+
+    let memory = myCon.searchLog.current;
+
+    memory.push(txt);
+    if(memory.length > 10) memory.shift();
+    localStorage.setItem("search-log", JSON.stringify(memory));
+    // const newSearchLog = 
+    // Array.from(new Set([txt, ...selData.current])).slice(0,MAX_SEARCH_LOG);
+    // localStorage.setItem("search-log", JSON.stringify(newSearchLog));
 
     // 최근 검색어 상태 업데이트
-    setRecentSearches(newSearchLog);
+    // setRecentSearches(newSearchLog);
   };
 
   ///화면 렌더링 구역/////////////////////////////////
   useEffect(() => {
     //컴포넌트가 최초 리랜더링 될때(상태값변수로 체크) 값을 받음
     // const selData = JSON.parse(localStorage.getItem("search-Log") || "[]");
-    setRecentSearches(selData);
+    // setRecentSearches(selData.current);
   }, []);
 
   ///////코드리턴구역 /////////////////////////////
@@ -128,14 +139,14 @@ function SearchInner() {
               type="text"
               placeholder="검색어를 입력하세요"
               onKeyUp={enterkey}
-              onClick={(e) => {
-                let stxt = e.currentTarget.nextElementSibling.value;
-                //nextElementSibling: 부모로 지정된 요소 바로 뒤에 있거나 null지정된 요소가 목록의 마지막 요소인 경우 해당 요소를 반환
-                if (stxt.trim != "") goSearch(stxt);
-                else {
-                  alert("검색어를 입력해주세요");
-                }
-              }}
+              // onClick={(e) => {
+              //   let stxt = e.currentTarget.nextElementSibling.value;
+              //   //nextElementSibling: 부모로 지정된 요소 바로 뒤에 있거나 null지정된 요소가 목록의 마지막 요소인 경우 해당 요소를 반환
+              //   if (stxt.trim != "") goSearch(stxt);
+              //   else {
+              //     alert("검색어를 입력해주세요");
+              //   }
+              // }}
             />
             <button className="search-btn" onClick={enterkey}>
               <span className="icon-img material-symbols-outlined search-btn">
@@ -150,7 +161,7 @@ function SearchInner() {
             <ul>
               {
                 //최근 검색어 노출
-                recentSearches.map((search, i) => (
+                myCon.searchLog.current.map((search, i) => (
                   //search = 값 = 검색어
                   <li key={i}>
                     <Link

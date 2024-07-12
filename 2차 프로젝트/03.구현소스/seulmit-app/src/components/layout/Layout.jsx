@@ -1,25 +1,32 @@
 import { TopArea } from "./TopArea";
 import MainArea from "./MainArea";
 import FooterArea from "./FooterArea";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { sCon } from "../pages/sCon";
 import { useNavigate } from "react-router-dom";
 ///////import area///////////////////////////////////
 
 export default function Layout() {
+    let loginTemp = null;
+    if(sessionStorage.getItem("login-sts")) 
+    loginTemp = sessionStorage.getItem("login-sts");
+
     ///[상태관리변수]///////////////////////////////////////////
     //1. 인트로 상태관리 변수
     const [introSts, setIntroSts] = useState(true);
     //2. 로그인 상태관리변수
-    const [loginSts, setLoginSts] = useState(sessionStorage.getItem(""));
+    const [loginSts, setLoginSts] = useState(loginTemp);
     //로그인 메세지
-    const [loginMsg, setLoginMsg] = useState(sessionStorage.getItem(""));
-
+    const [loginMsg, setLoginMsg] = useState(null);
+console.log("로그인?",loginSts);
     //최근 검색어 상태관리
     const [recentSearches, setRecentSearches] = useState([]);
 
     //검색어 데이터 상태변수
     const [localSearch, setLocalSearch] = useState(localStorage.getItem("searchLog"));
+    const searchLog = useRef(
+        localStorage.getItem("search-log")
+        ?JSON.parse(localStorage.getItem("search-log")):[]);
 
 
     ////[공통함수 영역]///////////////////////////////////////
@@ -39,7 +46,7 @@ export default function Layout() {
         //1. 로그인 상태값 null
         setLoginSts(null);
         //2. 세션스 지우기 : minfo
-        sessionStorage.removItem("minfo");
+        sessionStorage.removeItem("login-sts");
         //3. 로그인 메세지 초기화
         // setLoginMsg(null);
         //4. 메인페이지로 이동
@@ -80,7 +87,8 @@ export default function Layout() {
                 makeMsg,
                 logoutFn,
                 recentSearches,
-                setRecentSearches
+                setRecentSearches,
+                searchLog,
             }}
         >
             <TopArea

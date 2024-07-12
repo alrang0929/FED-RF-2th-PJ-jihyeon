@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import $ from "jquery";
 
 //module
@@ -13,18 +13,19 @@ import "../../css/search.scss";
 
 function Searching({ kword }) {
   //kword: SearchPage 에서 keyword 로 전달받음
-  console.log("kword", kword);
   //   console.log("data", product);
   //   console.log("타이틀검색 되나..?", product.tit);
   //   console.log("Object.val", Object.values(product));
-
+  
   //키워드에 따라 검색결과가 달라짐 > 핵심 데이터 검색어로 상태관리 변수 생성
-
+  
   //상태관리변수/////////////////////////////////////
   //1. 검색어 상태관리변수
   const [kw, setKw] = useState(kword); //초기값 셋팅: 검색어 변수 넣어줌
   //2. 정렬기준 상태관리변수
   const [sort, setSort] = useState("asc"); //오름차순: asc, 내림차순 - desc
+  console.log("kword", kword,kw);
+
 
   //3. 참조변수
   const beforeKword = useRef(kword);
@@ -58,7 +59,7 @@ function Searching({ kword }) {
     //2. 머지시킨 배열값 필터
     //flatMap에 값을 반환하기위해 return (filter 안에서 return 한 값은 flatMap에 전달안됨)
     return v.filter((v) => {
-      console.log("filter의 v값", v);
+      // console.log("filter의 v값", v);
       //1) 검색어 대소문자 통일
       let newVal = v.tit.toLocaleLowerCase();
       let key = kw.toLocaleLowerCase();
@@ -90,6 +91,11 @@ function Searching({ kword }) {
     filteredList.sort((a, b) => (a.tit > b.tit ? -1 : a.tit < b.tit ? 1 : 0));
   }
 
+  useEffect(()=>{
+   $("#schin").val(kw);
+   $(".result-text span").text(kw);
+  });
+
   /////코드 리턴구역///////////////////////////////////
   return (
     <>
@@ -100,7 +106,7 @@ function Searching({ kword }) {
             id="schin"
             type="text"
             placeholder="검색어를 입력하세요"
-            defaultValue={kword}
+            defaultValue={kw}
             onKeyUp={(e) => {
               if (e.key == "Enter") {
                 //1. 검색어 상대값 변경

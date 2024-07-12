@@ -156,12 +156,12 @@ export default function Login() {
                     // -> 서버 세션을 대신하여 사용함!
                     // -> 결과가 result에 배열로 담김
                     // -> 넣을때는 JSON.stringify()
-                    sessionStorage.setItem("minfo", JSON.stringify(result));
+                    sessionStorage.setItem("login-sts", JSON.stringify(result));
                     // ㄴ> 로그인 성공한 정보를 문자화 하여 minfo키에 저장
 
                     //2. 컨텍스트 API로그인 상태 업데이트
                     myCon.setLoginSts(
-                        sessionStorage.getItem("minfo")
+                        sessionStorage.getItem("login-sts")
                         //sessionStorage 임시보관함에 로그인 회원정보 보관
                         // ㄴ> 타 페이지 이동시에도 로그인 상태 유지
                     );
