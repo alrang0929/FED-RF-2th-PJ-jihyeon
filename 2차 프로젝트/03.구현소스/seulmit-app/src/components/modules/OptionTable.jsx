@@ -2,6 +2,7 @@ import React from "react";
 
 //data
 import { options, product } from "../data/product";
+import { addComma } from "../func/common_fn";
 /////import area////////////////////////////
 
 function OptionTable({ catName }) {
@@ -39,13 +40,13 @@ function OptionTable({ catName }) {
                 -
               </a>
             </td>
-            <td className="price">{selData.price}</td>
+            <td className="price">{addComma(selData.price)}</td>
           </tr>
         </tbody>
       </table>
       {/* 총합계 가격 */}
       <div className="total-price" style={{fontSize:"15px",marginBottom:"20px"}}>
-        총<span style={{fontSize:"30px"}}>{selData.price}</span>원
+        총<span style={{fontSize:"30px"}}>{addComma(selData.price)}</span>원
       </div>
     </>
   );

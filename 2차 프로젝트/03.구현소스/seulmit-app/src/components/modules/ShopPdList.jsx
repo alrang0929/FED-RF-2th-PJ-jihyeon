@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import $ from "jquery";
 
 import "../../css/shop.scss";
+import { addComma } from "../func/common_fn";
 
 ////import area//////////////////////////////
 
@@ -59,7 +60,7 @@ function ShopPdList({ products }) {
                 <div className="eng-pdtit">{v.engtit}</div>
                 <div className="kor-pdtit">{v.tit}</div>
                 <div className="price">
-                  {v.price} <span>원</span>
+                  {addComma(v.price)} <span>원</span>
                 </div>
               </div>
             </Link>

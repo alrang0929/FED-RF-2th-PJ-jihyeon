@@ -21,6 +21,13 @@ body {
 
 ///////text 셋팅/////////////////////////////////////////
 
+button.button-nomal{
+  width: 49%;
+}
+button.button-main.L-margin10{
+  width: 49%;
+}
+
 .eng-pdtit {
   font-size: $fontsize2;
   color: $FontColor2;
@@ -286,6 +293,8 @@ table {
       }
     }
   }
+
+
 
   .detail-box {
     margin: 0 auto;
