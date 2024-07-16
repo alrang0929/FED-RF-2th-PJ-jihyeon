@@ -44,7 +44,7 @@ export default function Shop() {
   //// 코드 리턴구역 //////////////
   return (
     <>
-      <SubTitle />
+      <SubTitle  selCat="SHOP"/>
       <section id="sell-pd-list" className="cont-box">
         {/* 메뉴 리스트 */}
         <Category onCat={(cat) => activeCat(cat)} selCat={myCon.selCat} />

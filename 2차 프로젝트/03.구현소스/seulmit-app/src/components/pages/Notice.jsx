@@ -1,24 +1,18 @@
 // 공지사항 페이지 컴포넌트 ///
-
+import React, { useContext } from 'react';
+import SubTitle from "../modules/SubTitle";
 
 ///////import area////////////////////////////
 
-export default function Notice(){
+export default function Notice({selCat}){
+
 
     //// 코드 리턴구역 //////////////
     return(
         <>
-        <div id="sub-header">
-            <div className="title">
-                <div className="icon">
-                    <img src={process.env.PUBLIC_URL+"/images/icon-sim-black.svg"} alt="" />
-                </div>
-                <h3>공지사항</h3>
-                <span>슬밋의 공지사항을 확인하세요</span>
-            </div>
-        </div>
+        <SubTitle selCat="NOTICE"/>
         <main id="notice-area">
-           <h1>Notice</h1>
+        
 
            <table>
             <td>

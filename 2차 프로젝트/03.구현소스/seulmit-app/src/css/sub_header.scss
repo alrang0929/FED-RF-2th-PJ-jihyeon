@@ -11,26 +11,35 @@
     --line-height: 1.2;
 }
 
-header {
-    height: 25vh;
+/////////////////////////////////////////////////////////
+.sub-header {
+    height: 34vh;
     background-color: red;
+    padding-bottom: 5vh;
+  
     .title {
-        padding: 60px;
-        text-align: center;
-        .icon{
-            width: 20px;
-            margin: 0 auto;
-            margin-bottom: 20px;
-            img{width: 100%;}
+      
+      padding-top: 15vh;
+      text-align: center;
+      .icon {
+        width: 20px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
         }
-        h3 {
-            font-size: $fontsize-title2;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        span {
-            font-size: $fontsize1;
-        }
-
+      }
+      h3 {
+        color: #fff;
+        font-family: var(--font-title);
+        font-size: $fontsize-title1;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      span {
+        color: #fff;
+        font-weight: 200;
+        font-size: $fontsize2;
+      }
     }
-}
+  } // sub-header end
