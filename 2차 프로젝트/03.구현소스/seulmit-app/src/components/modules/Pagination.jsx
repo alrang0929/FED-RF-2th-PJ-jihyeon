@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 
 //////import area///////////////////////////////////////////////////
 
-function Pagination({ totalPg, limit, page, setPage }) {
+function Pagination({ totalPage, limit, page, setPage }) {
   //1. totalPg: 프로덕트 데이터 전체 돌아서 나온 배열의 갯수
   //2. limit: 한 페이지당 노출되는 갯수
   //3. page: 현 페이지, useEffect에서 의존성에 적용해 리렌더링, 리렌더링 시 해당되는 데이터 셋업
 
   //[상태관리 변수]///////////////////////////////
   //useState는 컴포넌트의 상태를 저장하고 관리하는 변수를 만드는 훅
-  const [totalPgArray, setTotalPgArray] = useState(sliceArrayByLimit(totalPg, limit));
+  const [totalPgArray, setTotalPgArray] = useState(sliceArrayByLimit(totalPage, limit));
   const [currentPgArray, setCurrentPgArray] = useState([0]);
 
   ////화면 랜더링 구역////////////////////////////
@@ -32,10 +32,10 @@ function Pagination({ totalPg, limit, page, setPage }) {
 
   //totalPg 변경시 페이지 자르기
   useEffect(() => {
-    const slicedPgArray = sliceArrayByLimit(totalPg, limit);
+    const slicedPgArray = sliceArrayByLimit(totalPage, limit);
     setTotalPgArray(slicedPgArray);
     setCurrentPgArray(slicedPgArray[0]);
-  }, [totalPg]);
+  }, [totalPage]);
 
   ////코드 리턴구역//////////////////////////////
   return (

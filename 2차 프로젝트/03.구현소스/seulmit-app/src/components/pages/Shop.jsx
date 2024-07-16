@@ -1,7 +1,7 @@
 // shop 페이지 컴포넌트 ///
 import { Link } from "react-router-dom";
 import { product } from "../data/product";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, } from "react";
 //컨텍스트
 import { sCon } from "./sCon";
 //CSS
@@ -11,7 +11,7 @@ import "../../css/shop.scss";
 import Category from "../modules/Category";
 import ShopPdList from "../modules/ShopPdList";
 import SubTitle from "../modules/SubTitle";
-import { Pagination } from "swiper/modules";
+import { Pagination } from "../modules/Pagination";
 
 /////import area/////////////////////////////////////////////////
 
@@ -22,13 +22,13 @@ export default function Shop() {
   const activeCat = (cat) => {
     myCon.setSelCat(cat); // 클릭된 카테고리로 상태 업데이트
   };
-
+  
+  const [productList, setProductList] = useRecoilState(productListSts); //상품 데이터 목록
+  const [page, setPage] = useState(1); //현재 페이지
+  const listPerPage = 10; //페이지당 상품 개수
+  const totalPage = Math.ceil(productList.length / listPerPage); // 전체 페이지 수
   //페이지 셋팅
   const ProductList = () => {
-    const [productList, setProductList] = useState([]); //상품 데이터 목록
-    const [page, setPage] = useState(1); //현재 페이지
-    const listPerPage = 10; //페이지당 상품 개수
-    const totalPage = Math.ceil(productList.length / listPerPage); // 전체 페이지 수
 
 
     //페이지네이션 된 상품 목록 서버 업데이트 (page 업데이트 될때 마다 새로운 상품 데이터 가져옴)
@@ -60,7 +60,7 @@ export default function Shop() {
         <ShopPdList products={product[myCon.selCat]} />
         {/* page Num */}
         <Pagination
-          totalPg={totalPg}
+          totalPage={totalPage}
           limit={10}
           page={page}
           setPage={setPage}
