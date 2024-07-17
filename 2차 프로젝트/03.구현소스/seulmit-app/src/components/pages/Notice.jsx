@@ -1,5 +1,10 @@
 // 공지사항 페이지 컴포넌트 ///
-import React, { Fragment, useContext, useRef } from "react";
+import React, { Fragment, useContext, useRef, useState } from "react";
+import $ from "jquery";
+
+//공지사항 css
+import "../../css/notice.scss";
+
 //타이틀 데이터
 import SubTitle from "../modules/SubTitle";
 
@@ -226,12 +231,11 @@ export default function Notice({ selCat }) {
     } ///////if//////
   }; //////deleFn
 
-//서브밋 처리함수 /////////////
-const submitFn =()=>{
-//제목입력항목
-let title = $()
-
-};/////submitFn ///////////////////
+  //서브밋 처리함수 /////////////
+  const submitFn = () => {
+    //제목입력항목
+    let title = $();
+  }; /////submitFn ///////////////////
 
   //// 코드 리턴구역 //////////////
   return (
@@ -239,32 +243,314 @@ let title = $()
       <SubTitle selCat="NOTICE" />
       <main id="notice-area">
         {
-            //1. 리스트 모드일 경우 리스트 출력하기
-            //2. 읽기 모드일 경우 상세보기 출력하기
-            //3. 쓰기 모드일 경우 로그인 정보 보내기
-            //4. 수정 모드일 경우 상세보기 출력하기
-
+          //1. 리스트 모드일 경우 리스트 출력하기
+          mode == "L" && (
+            <ListMode bindList={bindList} pagingList={pagingList} />
+          )
         }
-{/* 모드별 버튼출 력박스 */}
-<table className="btn-wrap">
-        <tr>
+        {
+          //2. 읽기 모드일 경우 상세보기 출력하기
+          mode == "R" && <ReadMode selRecord={selRecord} />
+        }
+        {
+          //3. 쓰기 모드일 경우 로그인 정보 보내기
+          mode == "W" && <WriteMode sts={JSON.parse(sts)} />
+        }
+        {
+          //4. 수정 모드일 경우 상세보기 출력하기
+          mode == "M" && <ModifyMode selRecord={selRecord} />
+        }
+        <br />
+        {/* 모드별 버튼출 력박스 */}
+        <table className="btn-wrap">
+          <tr>
             <td>
-                { 
+              {
                 // 1. 글쓰기 버튼: 로그인상태: ㅇ, 모드: L
                 mode == "L" && sts && (
-                    <button onClick={clickButton}>Write</button>
+                  <button 
+                  className="button-nomal"
+                  onClick={clickButton}>Write</button>
                 )
-                }
-                { 
-                // 2. 읽기 버튼: 로그인상태: x, 모드: W
-                mode == "R" && (
-                    <button onClick={clickButton}>Write</button>
+              }
+              {
+                // 2. 읽기 버튼: 로그인상태: x, 모드: R
+                <>
+                  {mode == "R" && <button onClick={clickButton}>List</button>}
+
+                  {
+                    //로그인한 상태, 글쓴이 일치 = 수정보드 이동버튼 노출
+                    //현재글은 selRecord참조변수에 저장
+                    // uid: 사용자 아이디
+                    //sts.uid 와 비교하여 일치할 시 수정보드 이동
+
+                    mode == "R" &&
+                      sts &&
+                      JSON.parse(sts).uid === selRecord.current.uid && (
+                        <button onClick={clickButton}>Modify</button>
+                      )
+                  }
+                </>
+                //읽기상태 끝
+              }
+
+              {
+                // 3. 쓰기상태(w)일 경우
+                mode == "W" && (
+                  <>
+                    <button onClick={clickButton}>List</button>
+                    <button onClick={clickButton}>Submit</button>
+                  </>
                 )
-                }
+              }
+              {
+                //4. 수정상태 "M"일 경우
+                mode == "M" && (
+                  <>
+                    <button onClick={clickButton}>Delete</button>
+                    <button onClick={clickButton}>List</button>
+                    <button onClick={clickButton}>Submit</button>
+                  </>
+                )
+              }
             </td>
-        </tr>
-</table>
+          </tr>
+        </table>
       </main>
     </>
   );
 } /////////// Notice /////////////////////
+
+/****************************************** 
+        리스트 모드 서브 컴포넌트
+******************************************/
+const ListMode = ({ bindList, pagingList }) => {
+  return (
+    <>
+
+      <table className="dtbl" id="board">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Writer</th>
+            <th>Date</th>
+            <th>Hits</th>
+          </tr>
+        </thead>
+        <tbody>{bindList()}</tbody>
+        <tfoot>
+          <tr>
+            <td colSpan="5" className="paging">
+              {pagingList()}
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <div className="selbx">
+        <select name="cta" id="cta" className="cta">
+          <option value="tit">Title</option>
+          <option value="cont">Contents</option>
+          <option value="unm">Writer</option>
+        </select>
+        <select name="sel" id="sel" className="sel">
+          <option value="0">Descending</option>
+          <option value="1">Ascending</option>
+        </select>
+        <input id="stxt" type="text" maxLength="50" />
+        <button className="sbtn button-nomal">Search</button>
+      </div>
+    </>
+  );
+}; //////////// ListMode ///////////////////
+
+/*********************************************** 
+            수정 모드 서브 컴포넌트
+***********************************************/
+
+const ModifyMode = ({ selRecord }) => {
+  //읽기 모드가 호출됨? = 리스트 제목 클릭됨!
+  // -> 레코드 값도 저장됨!
+  //전달된 데이터 객체를 변수에 할당
+  const data = selRecord.current;
+
+  return (
+    <>
+      <table className="dtblview readone">
+        <caption>option : Modify</caption>
+        <Fragment>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>
+              <input
+                type="text"
+                className="name"
+                size="20"
+                readOnly
+                value={data.unm}
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Title</th>
+            <td>
+              <input
+                type="text"
+                className="subject"
+                size="60"
+                readOnly
+                value={data.tit}
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Content</th>
+            <td>
+              <textarea
+                className="content"
+                cols="60"
+                rows="10"
+                readOnly
+                value={data.cont}
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>Attachment</th>
+            <td></td>
+          </tr>
+        </tbody>
+        </Fragment>
+      </table>
+    </>
+  );
+}; //////////////ModifyMode
+
+/*********************************************** 
+            쓰기 모드 서브 컴포넌트
+***********************************************/
+
+const WriteMode = ({ sts }) => {
+  //sts - 로그인 상태정보
+  //로그인한 사람만 글쓰기 가능!
+  return (
+    <>
+      <table className="dtblview readone">
+        <caption>OPINION : Write</caption>
+        <Fragment>
+
+        
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>
+              <input
+                type="text"
+                className="name"
+                size="20"
+                readOnly
+                // 로그인한 사람이름
+                value={sts.unm}
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>
+              <input
+                type="text"
+                className="email"
+                size="40"
+                readOnly
+                // 로그인한 사람이메일
+                value={sts.eml}
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Title</th>
+            <td>
+              <input type="text" className="subject" size="60" />
+            </td>
+          </tr>
+          <tr>
+            <th>Content</th>
+            <td>
+              <textarea className="content" cols="60" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>Attachment</th>
+            <td></td>
+          </tr>
+        </tbody>
+        </Fragment>
+      </table>
+    </>
+  );
+}; //////////////WriteMode
+
+/*********************************************** 
+            읽기 모드 서브 컴포넌트
+***********************************************/
+
+const ReadMode = ({ selRecord }) => {
+  // 읽기모드 호출 > 리스트 제목 클릭됨!
+  // 따라서 selRecord에 현재 리스트값 저장됨!
+  // 전달 데이터 변수할당
+  const data = selRecord.current;
+
+  return (
+    <>
+      <table className="dtblview readone">
+        <caption>OPINION : Read</caption>
+        <Fragment>
+        
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>
+              <input
+                type="text"
+                className="name"
+                size="20"
+                readOnly
+                value={data.unm}
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Title</th>
+            <td>
+              <input
+                type="text"
+                className="subject"
+                size="60"
+                readOnly
+                value={data.tit}
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Content</th>
+            <td>
+              <textarea
+                className="content"
+                cols="60"
+                rows="10"
+                readOnly
+                value={data.cont}
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>Attachment</th>
+            <td></td>
+          </tr>
+        </tbody>
+        </Fragment>
+      </table>
+    </>
+  );
+}; //////////////ReadMode

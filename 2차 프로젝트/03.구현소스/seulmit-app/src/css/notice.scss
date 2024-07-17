@@ -1,0 +1,65 @@
+//슬밋PJ - 공지사항 css
+@import "./variables/variables";
+
+#notice-area {
+    button.button-nomal{
+        margin: 0 20px;
+        line-height: 0.2;
+        height: 20px;
+        width: 83px;
+        text-align: center;
+    }
+
+  .selbx {
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    height: 25px;
+
+    select{
+        height:  129%;
+        margin-left: 4px;
+    }
+    // 검색창
+    
+    input {
+        margin-left: 4px;
+        height: 100%;
+        width: 32%;
+    }
+  }
+
+  //테이블 css
+  table {
+    padding: auto;
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+    caption {
+      font-size: $fontsize-title4;
+      padding: 40px;
+    }
+    width: 60vw;
+    th{
+        color: #fff;
+        background-color: $MainColor1;
+    }
+    tr {
+      height: 40px;
+      td {
+        input {
+          text-align-last: left;
+          width: 100%;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+    }
+  }
+  .btn-wrap {
+    border-top: transparent;
+    border-bottom: transparent;
+  }
+}

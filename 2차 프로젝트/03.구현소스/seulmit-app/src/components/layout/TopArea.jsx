@@ -11,6 +11,7 @@ import SwiperRollben from "../plugin/Swiper_rollben";
 import { gnbData, gnbDataR } from "../data/gnb_data";
 import SearchInner from "../modules/SearchInner";
 import { memo } from "react";
+import CartList from "../modules/CartList";
 
 /////import area///////////////////////////////////////////////////////////
 
@@ -122,6 +123,7 @@ export const TopArea = memo(
       <>
         {/* <!--follow 버튼 --> */}
         <Topbtn />
+        <CartList/>
         {/* 서치버튼 클릭시 search-inner 우 > 좌 등장 */}
         <SearchInner />
         <header id="header-area">

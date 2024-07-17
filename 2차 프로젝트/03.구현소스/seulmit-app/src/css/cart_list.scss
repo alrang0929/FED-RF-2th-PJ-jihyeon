@@ -1,0 +1,42 @@
+// 슬밋pj - 카트목록 css
+//임시로 검색 css 넣어둠
+
+@import "./variables/variables";
+
+.cart-list {
+  background-color: #fff;
+  position: fixed;
+  width: 34vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  // right: -72vw;
+  z-index: 9999;
+
+  .search-box {
+    width: 80%;
+    margin: 0 auto;
+
+    .search-header {
+      justify-content: flex-start;
+      padding-top: 40px;
+      .logo {
+        width: 200px;
+        img {
+          width: 100%;
+        }
+      }
+      .close-btn {
+        background-color: transparent;
+        border: transparent;
+
+        span {
+          font-size: 50px;
+        }
+      }
+      button {
+        cursor: pointer;
+      }
+    } //search-header
+  }
+}

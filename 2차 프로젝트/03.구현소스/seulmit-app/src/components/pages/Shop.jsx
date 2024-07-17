@@ -40,8 +40,7 @@ export default function Shop() {
         {/* 메뉴 리스트 */}
         <Category onCat={(cat) => activeCat(cat)} selCat={myCon.selCat} />
         {/* 상품리스트 컴포넌트*/}
-        <ShopPdList />
-        {/* <ShopPdList products={productList} /> */}
+        <ShopPdList products={product[myCon.selCat]} />
         {/* 페이지네이션 */}
         {/* {pageCount > 0 && (
           <Pagination
