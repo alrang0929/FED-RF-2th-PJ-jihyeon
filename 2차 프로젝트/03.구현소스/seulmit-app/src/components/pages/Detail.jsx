@@ -80,7 +80,7 @@ console.log("myCon.setSelCat",myCon.setSelCat);
           <SwiperThumbsList catName={topCat} seq={selData.idx} cnt={selData.thumbCnt} num={prodIdx} />
           </section>
           {/*2. 오른쪽 배너: 상품 정보 */}
-          <ShopCustomCont catName={topCat} />
+          <ShopCustomCont catName={topCat} products={product[myCon.selCat]}/>
         </div>
       </section>
       {/* top cont end */}

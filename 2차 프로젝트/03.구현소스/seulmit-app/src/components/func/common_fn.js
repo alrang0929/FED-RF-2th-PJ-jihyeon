@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 
 // [1] 숫자 세자리마다 콤마추가함수
-function addComma(x) {
+function addComma(x = 0) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 

@@ -11,17 +11,17 @@ import OptionBox from "./OptionBox";
 import OptionTable from "./OptionTable";
 ///////////////import area////////////////////////
 
-function ShopCustomCont({ catName }) {
+function ShopCustomCont({ catName, products }) {
   const myCon = useContext(sCon);
   //catName 어떻게 연계시킬지 고민해야될듯
   const selData = product[catName];
-  // console.log("텍스트 데이터 선택", selData);
+  console.log("텍스트 데이터 선택", selData);
 
   //로컬스토리지값 정의
-  const idx = selData[0].idx;
+  const idx = selData.idx;
   const category = catName;
-  const tit = selData[0].tit;
-  const price = selData[0].price;
+  const tit = selData.tit;
+  const price = selData.price;
 
   //////코드리턴구역//////////////////////////////////////
   return (
