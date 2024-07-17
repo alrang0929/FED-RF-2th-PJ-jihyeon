@@ -4,9 +4,9 @@
 @import "./variables/variables";
 
 .cart-list {
-  //공통 설정
-  padding: 40px;
-  
+    //공통 설정
+    padding: 40px;
+
     button.close-btn {
         border: transparent;
         background: transparent;
@@ -26,17 +26,11 @@
     z-index: 9999;
 
     //테이블css
-    table{
-        .img-bx{
-            width: 30%;
-            img{
-                width: 100%;
-            }
-        }
-        tr{
-            td{
-                
-            }
+    .img-bx {
+        width: 30%;
+        img {
+            width: 100%;
         }
     }
+    
 }

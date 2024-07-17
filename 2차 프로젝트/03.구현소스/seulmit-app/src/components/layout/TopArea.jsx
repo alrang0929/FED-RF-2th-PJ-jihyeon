@@ -208,7 +208,7 @@ export const TopArea = memo(
                     }
                   </li>
                   <li className="icon-item fx-box">
-                      <span style={{color:"#ffffff"}} 
+                      <span style={{color:"#ffffff", cursor: "pointer",}} 
                       className="icon-img mall material-symbols-outlined"
                       onClick={()=>{showCart()}}>
                         local_mall
