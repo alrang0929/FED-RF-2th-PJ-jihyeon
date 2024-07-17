@@ -119,7 +119,6 @@ export default function Layout() {
         localsCart,
       }}
     >
-      <RecoilRoot>
         <TopArea
           loginMsg={loginMsg}
           loginSts={loginSts}
@@ -134,7 +133,6 @@ export default function Layout() {
         {cartSts && <CartList />}
         <MainArea />
         <FooterArea ival={introSts} />
-      </RecoilRoot>
     </sCon.Provider>
   ); /////return
 } //////layout
