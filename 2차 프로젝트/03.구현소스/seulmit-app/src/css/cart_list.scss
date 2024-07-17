@@ -4,39 +4,25 @@
 @import "./variables/variables";
 
 .cart-list {
-  background-color: #fff;
-  position: fixed;
-  width: 34vw;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  // right: -72vw;
-  z-index: 9999;
-
-  .search-box {
-    width: 80%;
-    margin: 0 auto;
-
-    .search-header {
-      justify-content: flex-start;
-      padding-top: 40px;
-      .logo {
-        width: 200px;
-        img {
-          width: 100%;
-        }
-      }
-      .close-btn {
-        background-color: transparent;
+  //공통 설정
+  padding: 40px;
+  
+    button.close-btn {
         border: transparent;
-
-        span {
-          font-size: 50px;
-        }
-      }
-      button {
+        background: transparent;
         cursor: pointer;
-      }
-    } //search-header
-  }
+        span {
+            font-size: 50px;
+        }
+    }
+
+    background-color: #fff;
+    position: fixed;
+    width: 34vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    // right: -72vw;
+    z-index: 9999;
+
 }

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
 
 //숫자 콤마 추가
-import { BoxCloseFn, addComma } from "../func/common_fn";
+import { addComma } from "../func/common_fn";
 
 //css
 import "../../css/cart_list.scss";
@@ -52,8 +52,54 @@ function CartList() {
                         close
                     </span>
                 </button>
-                <h3>장바구니</h3>
-                
+                {/* 장바구니 시작 */}
+                <caption>Cart List</caption>
+                {/* 테이블 상단영역 */}
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>상품</th>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                    <th>합계</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                {/* 테이블 메인영역 */}
+                <tbody>
+                  <tr>
+                    <td>
+                      <div 
+                      className="scbar"
+                      style={{
+                        overflowY:"auto",
+                        height:"60vh",
+                        width:"100%",
+                      }}
+                      >
+                        {/* 내부 스크롤되는 테이블 */}
+                        <table
+                        style={{
+                          margin:"0",
+                          width:"100%",
+                        }}
+                        >
+                          <tbody>
+                        {/* 
+                        카트 데이터 연동
+                          idx: 번호
+
+                        */}
+                      
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+
             </div>
             <div className="blocking-bg"></div>
         </>

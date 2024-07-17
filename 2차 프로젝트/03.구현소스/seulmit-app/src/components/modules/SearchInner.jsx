@@ -111,16 +111,7 @@ function SearchInner() {
     <>
       <div className="search-inner">
         <div className="search-box">
-          <div className="search-header fx-box">
-            <div className="logo">
-              <Link to="/">
-                <img
-                  src={process.env.PUBLIC_URL + "/images/logo_en_B.png"}
-                  alt="슬밋로고"
-                />
-              </Link>
-            </div>
-            <button
+          <button
               className="close-btn"
               onClick={() => {
                 searchClose();
@@ -131,6 +122,16 @@ function SearchInner() {
                 close
               </span>
             </button>
+          <div className="search-header fx-box">
+            <div className="logo">
+              <Link to="/">
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logo_en_B.png"}
+                  alt="슬밋로고"
+                />
+              </Link>
+            </div>
+            
           </div>
 
           <div className="input-box fx-box">
