@@ -32,20 +32,7 @@ export const TopArea = memo(
     // const goNav = useNavigate();
     // 사용시 goNav(라우터주소,{전달객체})
 
-    //검색관련 함수들////////////
-    //1. 검색창 보이기 함수
-    // const showSearch = (e) => {
-    //   //기본기능 막기
-    //   e.preventDefault();
-    //   //1.검색창 보이기
-    //   $(".search-inner").show();
-    //   //show() -> display 보이게함
-    //   //2. 입력창에 포커스 보내기
-    //   $("#schinGnb").focus();
-    // }; ////////showSearch함수
-
     const searchShowMenu = (e) => {
-      // const searchBtn = $(".search-btn");
       //서치박스 위치값 이동
       const tg = $(".search-inner");
       tg.stop().animate(
@@ -55,8 +42,7 @@ export const TopArea = memo(
         500
       );
 
-      //가림막 BG 등장
-      // $(".blocking-bg").fadeIn(300);
+
       $(".blocking-bg")
         .show()
         .css({
@@ -73,9 +59,8 @@ export const TopArea = memo(
       setRecentSearches(searchLog);
     };
 
-    const showMenu = (e) => {
-      // const searchBtn = $(".search-btn");
-      //서치박스 위치값 이동
+    
+    const showMenu = () => {
       const tg = $(".toggle-menu-box");
       tg.stop().animate(
         {
@@ -85,7 +70,6 @@ export const TopArea = memo(
       );
 
       //가림막 BG 등장
-      // $(".blocking-bg").fadeIn(300);
       $(".blocking-bg")
         .show()
         .css({
@@ -93,19 +77,30 @@ export const TopArea = memo(
         })
         .animate({ opacity: 1 }, 200);
 
-      // $("body,html").css({ overflow: "hidden" }); // body 스크롤 막기
+    };
+
+    //카트박스 보이기
+    const showCart = () => {
+      const tg = $(".cart-list");
+      tg.stop().animate(
+        {
+          right: 0,
+        },
+        500
+      );
+
+      //가림막 BG 등장
+      $(".blocking-bg")
+        .show()
+        .css({
+          display: "block",
+        })
+        .animate({ opacity: 1 }, 200);
+
     };
 
     const hideMenu = () => {
-      //대상선정
-      // const tg = $("body,html");
-
-      //1. 클릭시 오버플로우 히든 해제
-      // $(".close-btn").click(() => {
-      //   tg.css({ overflow: "auto" }); // body 스크롤 막기
-      // });
-
-      //가림막 BG 히든
+     
       $(".blocking-bg").fadeOut(200);
 
       //2. 버튼 클릭시 화면 밖으로 사라짐
@@ -115,7 +110,7 @@ export const TopArea = memo(
         },
         500
       );
-      // $("html,body").attr("style","").css({ overflowX: "hidden",});
+     
     };
 
     /////코드리턴구역
@@ -213,7 +208,10 @@ export const TopArea = memo(
                     }
                   </li>
                   <li className="icon-item fx-box">
-                    <Link to="">
+                    <Link 
+                    to=""
+                    onClick={()=>{showCart()}}
+                    >
                       <span className="icon-img mall material-symbols-outlined">
                         local_mall
                       </span>
