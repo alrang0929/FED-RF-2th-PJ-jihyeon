@@ -208,15 +208,12 @@ export const TopArea = memo(
                     }
                   </li>
                   <li className="icon-item fx-box">
-                    <Link 
-                    to=""
-                    onClick={()=>{showCart()}}
-                    >
-                      <span className="icon-img mall material-symbols-outlined">
+                      <span style={{color:"#ffffff"}} 
+                      className="icon-img mall material-symbols-outlined"
+                      onClick={()=>{showCart()}}>
                         local_mall
                       </span>
                       {/* <!-- <span className="mall-cunt">(0)</span> --> */}
-                    </Link>
                   </li>
                   <li className="icon-item search-box">
                     {/* <Link to=""> */}
