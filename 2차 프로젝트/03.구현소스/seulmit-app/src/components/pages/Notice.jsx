@@ -250,7 +250,7 @@ export default function Notice({ selCat }) {
         }
         {
           //2. 읽기 모드일 경우 상세보기 출력하기
-          mode == "R" && <ReadMode selRecord={selRecord} />
+          mode == "R" && <ReadMode selRecord={selRecord} sts = {sts} />
         }
         {
           //3. 쓰기 모드일 경우 로그인 정보 보내기
@@ -368,7 +368,8 @@ const ListMode = ({ bindList, pagingList }) => {
             수정 모드 서브 컴포넌트
 ***********************************************/
 
-const ModifyMode = ({ selRecord }) => {
+const ModifyMode = ({ selRecord, sts }) => {
+
   //읽기 모드가 호출됨? = 리스트 제목 클릭됨!
   // -> 레코드 값도 저장됨!
   //전달된 데이터 객체를 변수에 할당
@@ -439,7 +440,6 @@ const WriteMode = ({ sts }) => {
       <table className="dtblview readone">
         <caption>OPINION : Write</caption>
         <Fragment>
-
         
         <tbody>
           <tr>
@@ -495,12 +495,24 @@ const WriteMode = ({ sts }) => {
             읽기 모드 서브 컴포넌트
 ***********************************************/
 
-const ReadMode = ({ selRecord }) => {
+const ReadMode = ({ selRecord, sts }) => {
   // 읽기모드 호출 > 리스트 제목 클릭됨!
   // 따라서 selRecord에 현재 리스트값 저장됨!
   // 전달 데이터 변수할당
   const data = selRecord.current;
 
+  //[조회수 증가하기]
+  //규칙1: 자신의 글은 증가하지 않는다
+  //규칙2: 타인의 글은 증가
+  //규칙3: 로그인한 상태에서 한번만 증가
+
+  /*************************************************************** 
+   [조회된 글 저장방법]
+   - 종류는 세션스토리지, 쿠키, 전역 참조변수 있음..
+ 
+ ***************************************************************/
+
+  /////////화면 랜더링 구역////////////////////
   return (
     <>
       <table className="dtblview readone">
