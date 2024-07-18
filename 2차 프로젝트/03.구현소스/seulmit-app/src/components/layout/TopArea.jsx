@@ -118,7 +118,7 @@ export const TopArea = memo(
       <>
         {/* <!--follow 버튼 --> */}
         <Topbtn />
-        {/* <CartList/> */}
+        <CartList/>
         {/* 서치버튼 클릭시 search-inner 우 > 좌 등장 */}
         <SearchInner />
         <header id="header-area">

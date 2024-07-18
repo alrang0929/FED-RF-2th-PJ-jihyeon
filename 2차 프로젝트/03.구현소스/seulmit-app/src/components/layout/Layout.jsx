@@ -13,6 +13,8 @@ export default function Layout() {
   if (sessionStorage.getItem("login-sts"))
     loginTemp = sessionStorage.getItem("login-sts");
 
+
+
   ///[상태관리변수]///////////////////////////////////////////
   //1. 인트로 상태관리 변수
   const [introSts, setIntroSts] = useState(true);
@@ -31,11 +33,15 @@ export default function Layout() {
 
   //////////cart/////////////////////////////////////////////
   // 로컬스 카트 존재여부변수
-  let cartTemp = false;
+  // let cartTemp = false;
+  let cartTemp = null;
+  if (localStorage.getItem("cart-data"))
+    cartTemp = localStorage.getItem("cart-data");
 
   // [ 로컬스 카트 데이터 상태변수 ] ///
   const [localsCart, setLocalsCart] = useState(
-    localStorage.getItem("cart-data")
+    // []
+    localStorage.getItem("cart-data") || []
   );
   // 카트리스트 사용여부: true일때 사용
   const [cartSts, setCartSts] = useState(cartTemp);
