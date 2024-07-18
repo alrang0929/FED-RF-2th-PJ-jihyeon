@@ -148,7 +148,9 @@ export default function Layout() {
       {/* 카트리스트 : 카트상태값 true 출력 */}
       {cartSts && <CartList />}
       <MainArea />
-      <FooterArea ival={introSts} />
+      <FooterArea 
+      // ival={introSts} 
+      />
     </sCon.Provider>
   ); /////return
 } //////layout

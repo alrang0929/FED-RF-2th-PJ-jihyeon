@@ -145,6 +145,7 @@ body {
             font-weight: 100;
           }
           .mall {
+            margin-left: 20px;
             align-items: center;
             font-size: 30px;
           }
@@ -289,13 +290,14 @@ body {
       display: block;
     }
     #R-menu-wrap {
-      li {
-        > a {
+      .icon-item{
+        margin-left: 8px !important;
+        span{
           margin-left: 8px !important;
         }
-        .search-btn {
-          margin-left: 8px !important;
-        }
+      }
+      .search-btn {
+        margin-left: 8px !important;
       }
     }
     #L-menu-wrap {

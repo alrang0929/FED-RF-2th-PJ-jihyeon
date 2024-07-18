@@ -5,7 +5,6 @@ import $ from "jquery";
 
 ////module
 import { sCon } from "./sCon";
-import introFn from "../func/intro";
 
 import "../../css/intro.scss";
 //////////////////import area///////////////////////
@@ -41,7 +40,7 @@ export default function Intro() {
     ////// 코드 리턴구역 //////////////
     return (
         <>
-            <div id="intro-area">
+            <div id="intro-area" >
                 {!IsLoading && (
                     <Link
                         to="/"
