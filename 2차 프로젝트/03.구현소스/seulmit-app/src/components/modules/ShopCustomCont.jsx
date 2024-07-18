@@ -4,7 +4,7 @@ import { sCon } from "../pages/sCon";
 
 //data
 import { product, options, notiImg } from "../data/product";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 //modules
 import OptionBox from "./OptionBox";
@@ -13,15 +13,19 @@ import OptionTable from "./OptionTable";
 
 function ShopCustomCont({ catName, products }) {
   const myCon = useContext(sCon);
+const {state} = useLocation();
+
   //catName 어떻게 연계시킬지 고민해야될듯
-  const selData = product[catName];
-  console.log("텍스트 데이터 선택", selData);
+  const selData = product[catName][state.product-1];
+  console.log("텍스트 데이터 선택", selData, state.product);
 
   //로컬스토리지값 정의
   const idx = selData.idx;
   const category = catName;
   const tit = selData.tit;
   const price = selData.price;
+
+  console.log(idx, category, tit, price);
 
   //////코드리턴구역//////////////////////////////////////
   return (
@@ -30,9 +34,9 @@ function ShopCustomCont({ catName, products }) {
         <div className="info-area">
           {/* 1. desc wrap */}
           <div className="desc-wrap custum-data">
-            <p className="eng-pdtit bt-padding20">{selData[0].engtit}</p>
-            <h4 className="kor-pdtit bt-padding20">{selData[0].tit}</h4>
-            <p className="desc bt-padding80">{selData[0].txt}</p>
+            <p className="eng-pdtit bt-padding20">{selData.engtit}</p>
+            <h4 className="kor-pdtit bt-padding20">{selData.tit}</h4>
+            <p className="desc bt-padding80">{selData.txt}</p>
             {/* 2.  아이콘 박스 */}
             <ul className="iconbx fx-box bt-padding20 gap10">
               <li className="share-icon">
@@ -66,60 +70,67 @@ function ShopCustomCont({ catName, products }) {
                   localStorage.setItem("cart-data", "[]");
                 } //// if /////
 
+                
                 // 2. 로컬스 읽어와서 파싱하기
                 let locals = localStorage.getItem("cart-data");
                 locals = JSON.parse(locals);
+                // console.log(typeof locals);
 
                 // 3. 기존 데이터 중 동일한 데이터 거르기
                 // 파싱된 로컬스 데이터 중 idx항목을 검사하여
                 // idx로 넣을 상품 idx와 같은 것이 있으면
                 // 메시지와 함께 리턴처리하여 입력을 막아준다!
-
+                
                 // [ 방법1 ]
                 // 배열 중복검사시 사용하는 메서드: some()
                 // -> some()은 중복데이터 발생시 true리턴
                 // 시켜서 구분해준다!
                 // let retSts = locals.some(v=>{
-                //   if(v.idx==idx) return true;
-                // });
-
-                // [ 방법2 ]
-                // 배열.includes(비교값)
-                // 주의사항: 배열값이 단일값이어야 비교가된다!
-                // 예) let aa = [11,22,33]
-                // aa.includes(22) -> 있으면 결과 true!
-
-                // idx값만 모아서 다른 배열만들기
-                let newLocals = locals.map((v) => v.idx);
-                console.log("idx새배열:", newLocals);
-
-                // 인클루드 비교
-                let retSts = newLocals.includes(idx);
-
-                console.log("중복상태:", retSts);
-                if (retSts) {
-                  // 메시지 보이기
-                  alert("이미 선택하신 상품입니다!");
-                  // 함수 나가기
-                  return;
-                } ///// if //////
-
-                // 4.로컬스에 객체 데이터 추가하기
-                locals.push({
-                  idx: idx,
-                  category: category,
-                  tit: tit,
-                  cnt: $("#sum").val(),
-                  price: price,
-                });
-                /************************** 
-                [데이터 구조정의]
-                1. idx : 상품고유번호
-                2. category : 카테고리
-                3. tit : 상품이름
-                4. cnt : 상품개수
-                5. price : 상품가격
-              **************************/
+                  //   if(v.idx==idx) return true;
+                  // });
+                  
+                  // [ 방법2 ]
+                  // 배열.includes(비교값)
+                  // 주의사항: 배열값이 단일값이어야 비교가된다!
+                  // 예) let aa = [11,22,33]
+                  // aa.includes(22) -> 있으면 결과 true!
+                  
+                  
+                  console.log(locals.length);
+                  if(locals.length > 0){
+                    // idx값만 모아서 다른 배열만들기
+                    let newLocals = locals.map((v) => v.idx);
+                    console.log("idx새배열:", newLocals);
+                    
+                    // // 인클루드 비교
+                    let retSts = newLocals.includes(idx);
+                    
+                    console.log("중복상태:", retSts);
+                    if (retSts) {
+                      // 메시지 보이기
+                      alert("이미 선택하신 상품입니다!");
+                      // 함수 나가기
+                      return;
+                    } ///// if //////
+                    
+                  }
+                  
+                  //   /************************** 
+                  //   [데이터 구조정의]
+                  //   1. idx : 상품고유번호
+                  //   2. category : 카테고리
+                  //   3. tit : 상품이름
+                  //   4. cnt : 상품개수
+                  //   5. price : 상품가격
+                  // **************************/
+                  // 4.로컬스에 객체 데이터 추가하기
+                  locals.push({
+                    idx: idx,
+                    category: category,
+                    tit: tit,
+                    cnt: $("#sum").val(),
+                    price: price,
+                  });
 
                 // 로컬스에 문자화하여 입력하기
                 localStorage.setItem("cart-data", JSON.stringify(locals));

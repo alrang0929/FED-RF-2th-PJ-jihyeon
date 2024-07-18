@@ -43,10 +43,10 @@ function ShopPdList({ products }) {
           >
             <Link
               to={`/Detail/${v.idx}`}
-              onClick={(e) => {
-                e.preventDefault();
-                clickProduct(v);
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              //   clickProduct(v);
+              // }}
             >
               <div className="img-wrap">
                 <div className="imgbx">

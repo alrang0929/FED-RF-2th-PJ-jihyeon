@@ -38,7 +38,7 @@ export default function Detail() {
 
 
   console.log(topCat);
-  console.log("prodIdx",prodIdx);
+  console.log("요기~~prodIdx:",prodIdx);
   console.log(product[topCat]);
 
   // engtit: v.engtit, // 상품 영문 타이틀
