@@ -14,12 +14,15 @@ import { sCon } from "../pages/sCon";
 function CartList() {
     //콘텍스트 사용
     const myCon = useContext(sCon);
-
+    const { selCat } = useContext(sCon)
     //상태 리렌더링을 위한 상태변수
     const [force, setForce] = useState(false);
 
+    //선택 데이터 상태변수
+    const [selData, setSelData] = useState([]);
+
     //로컬스 데이터 가져오기
-    const selData = JSON.parse(myCon.localsCart);
+    // const selData = JSON.parse(myCon.localsCart || "[]");
     console.log("카트로컬스", selData);
 
     //전체 데이터 개수
@@ -63,7 +66,17 @@ function CartList() {
         console.log("tgRef:", tgRef);
     });
 
-    //상태변수///////////////////////////////////////
+    //카트 로컬스 에러시 빈배열 할당
+    useEffect(() => {
+        try {
+          setSelData(JSON.parse(myCon.localsCart || "[]")); // 빈 문자열일 경우 빈 배열 사용
+        } catch (error) {
+          console.error("로컬 스토리지 데이터 파싱 에러:", error);
+          setSelData([]); // 에러 발생 시 빈 배열 설정
+        }
+      }, [myCon.localsCart]);
+      
+
 
     ///////코드리턴구역 /////////////////////////////
     return (
@@ -117,8 +130,8 @@ function CartList() {
                                 <img
                                     src={
                                         process.env.PUBLIC_URL +
-                                        `/images/shop/${v.category}/${
-                                            v.category
+                                        `/images/shop/${selCat}/${
+                                            selCat
                                         }_${`${i + 1}`.padStart(2, "0")}.jpg`
                                     }
                                     alt="item"

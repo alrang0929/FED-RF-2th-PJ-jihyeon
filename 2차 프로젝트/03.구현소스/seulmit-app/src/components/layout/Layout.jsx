@@ -13,16 +13,16 @@ export default function Layout() {
   if (sessionStorage.getItem("login-sts"))
     loginTemp = sessionStorage.getItem("login-sts");
 
-
-
   ///[상태관리변수]///////////////////////////////////////////
   //1. 인트로 상태관리 변수
   const [introSts, setIntroSts] = useState(true);
-  //2. 로그인 상태관리변수
-  const [loginSts, setLoginSts] = useState(loginTemp);
-  //로그인 메세지
-  const [loginMsg, setLoginMsg] = useState(null);
-  console.log("로그인?", loginSts);
+  const [loginSts, setLoginSts] = useState(
+    sessionStorage.getItem("login-sts") || "{}" // 빈 문자열일 경우 빈 객체 사용
+  );
+  const [loginMsg, setLoginMsg] = useState(
+    sessionStorage.getItem("login-msg") || "" // 빈 문자열일 경우 빈 문자열 사용
+  );
+  // console.log("로그인?", loginSts);
   //최근 검색어 상태관리
   const [recentSearches, setRecentSearches] = useState([]);
 
@@ -33,15 +33,12 @@ export default function Layout() {
 
   //////////cart/////////////////////////////////////////////
   // 로컬스 카트 존재여부변수
-  // let cartTemp = false;
-  let cartTemp = null;
-  if (localStorage.getItem("cart-data"))
-    cartTemp = localStorage.getItem("cart-data");
+  let cartTemp = false;
+
 
   // [ 로컬스 카트 데이터 상태변수 ] ///
   const [localsCart, setLocalsCart] = useState(
-    // []
-    localStorage.getItem("cart-data") || []
+    JSON.parse(localStorage.getItem("cart-data") || "[]") // 빈 문자열일 경우 빈 배열 사용
   );
   // 카트리스트 사용여부: true일때 사용
   const [cartSts, setCartSts] = useState(cartTemp);
@@ -50,15 +47,15 @@ export default function Layout() {
   if (localsCart) {
     // 데이터가 있으면 cartTemp값 true로 변경
     // 데이터 개수가 0이 아니어야함!
+    let localsCart = localStorage.getItem("cart-data") || "[]"; // 빈 문자열일 경우 빈 배열 사용
     let cartCnt = JSON.parse(localsCart).length;
     console.log("카트 데이터수:", cartCnt);
     if (cartCnt > 0) cartTemp = true;
   } //////////// 카트존재여부 if ////////
 
+ 
   const searchLog = useRef(
-    localStorage.getItem("search-log")
-      ? JSON.parse(localStorage.getItem("search-log"))
-      : []
+    JSON.parse(localStorage.getItem("search-log") || "[]")
   );
 
   ////[공통함수 영역]///////////////////////////////////////
@@ -89,20 +86,33 @@ export default function Layout() {
   const [selCat, setSelCat] = useState("face");
 
   //화면 랜더링 구역/////////////////////////////////////////////////////
+
   useEffect(() => {
-    //로그인 상태 체크//////////////
-    //만약 세션스의 minfo 값이 null이 아니라면 로그인 상태변수 업데이트
-    //ㄴ> null이 아니면 조건문 true 처리
-    if (sessionStorage.getItem("minfo")) {
-      //세션스 변수할당
-      let sessionSts = sessionStorage.getItem("minfo");
-      //로그인 상태값
-      setLoginSts(sessionSts);
-      //로그인 메시지 업데이트
-      //ㄴ> 세션스의 unm(이름값)을 보내준다
-      makeMsg(JSON.parse(sessionSts).unm);
-    } ////if/////////////
+    try {
+      const minfo = JSON.parse(sessionStorage.getItem("minfo")) || {};
+      setLoginSts(minfo);
+      makeMsg(minfo.unm);
+    } catch (error) {
+      console.error("sessionStorage 데이터 파싱 에러:", error);
+      setLoginSts(null); // 또는 다른 기본값 설정
+    }
   }, []);
+
+
+  // useEffect(() => {
+  //   //로그인 상태 체크//////////////
+  //   //만약 세션스의 minfo 값이 null이 아니라면 로그인 상태변수 업데이트
+  //   //ㄴ> null이 아니면 조건문 true 처리
+  //   if (sessionStorage.getItem("minfo")) {
+  //     //세션스 변수할당
+  //     let sessionSts = sessionStorage.getItem("minfo");
+  //     //로그인 상태값
+  //     setLoginSts(sessionSts);
+  //     //로그인 메시지 업데이트
+  //     //ㄴ> 세션스의 unm(이름값)을 보내준다
+  //     makeMsg(JSON.parse(sessionSts).unm);
+  //   } ////if/////////////
+  // }, []);
 
   // 코드리턴구역 ///////////////
   return (
@@ -125,20 +135,20 @@ export default function Layout() {
         localsCart,
       }}
     >
-        <TopArea
-          loginMsg={loginMsg}
-          loginSts={loginSts}
-          logoutFn={logoutFn}
-          goPage={goPage}
-          setRecentSearches={setRecentSearches}
-          recentSearches={recentSearches}
-          localSearch={localSearch}
-          setLocalSearch={setLocalSearch}
-        />
-        {/* 카트리스트 : 카트상태값 true 출력 */}
-        {cartSts && <CartList />}
-        <MainArea />
-        <FooterArea ival={introSts} />
+      <TopArea
+        loginMsg={loginMsg}
+        loginSts={loginSts}
+        logoutFn={logoutFn}
+        goPage={goPage}
+        setRecentSearches={setRecentSearches}
+        recentSearches={recentSearches}
+        localSearch={localSearch}
+        setLocalSearch={setLocalSearch}
+      />
+      {/* 카트리스트 : 카트상태값 true 출력 */}
+      {cartSts && <CartList />}
+      <MainArea />
+      <FooterArea ival={introSts} />
     </sCon.Provider>
   ); /////return
 } //////layout
