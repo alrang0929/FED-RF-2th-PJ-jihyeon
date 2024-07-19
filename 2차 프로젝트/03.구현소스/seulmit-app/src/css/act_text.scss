@@ -1,12 +1,17 @@
 .act-text {
-    .seulmit-text {
-      opacity: 0; // 초기 투명도 0으로 설정
-      animation: fadeIn 0.5s ease forwards;
-    }
+  &.on span {
+    opacity: 1;
   }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
+  span{
+    opacity: 0; // 초기 투명도 0으로 설정
+    // animation: fadeIn 0.5s ease forwards;
+    transition: 0.5s ease;
+
   }
+}
+
+// @keyframes fadeIn {
+//   to {
+//     opacity: 1;
+//   }
+// }

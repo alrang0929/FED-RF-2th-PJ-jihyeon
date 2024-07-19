@@ -11,16 +11,24 @@ import $ from "jquery";
     const [displayedChars, setDisplayedChars] = useState([]);
 
     const charsRef = useRef(text.replace(/&nbsp;/g, ' ').split('')); // chars를 useRef로 관리
+    const retVal = x => x.getBoundingClientRect().top;
 
     useEffect(() => {
+
       $(window).on("scroll", function () {
         const scrollTop = $(this).scrollTop();
         const windowHeight = $(this).height();
         const triggerPoint = windowHeight / 2;
+
+document.querySelectorAll(".act-text").forEach(v=>{
+  if(retVal(v) < triggerPoint){
+    v.classList.add("on");
+  }
+});
   
-        if (scrollTop > triggerPoint && !isAni) {
-          setIsAni(true); // 스크롤 위치가 트리거 포인트를 넘어가면 isAni를 true로 변경
-        }
+        // if (scrollTop > triggerPoint && !isAni) {
+        //   setIsAni(true); // 스크롤 위치가 트리거 포인트를 넘어가면 isAni를 true로 변경
+        // }
       });
     }, []);
 
@@ -30,19 +38,19 @@ import $ from "jquery";
       let intervalId; // intervalId 변수 선언
   
       const chars = text.replace(/&nbsp;/g, ' ').split(''); // 염병할 띄어쓰기
-        console.log(chars);
+        console.log("zzz",chars);
 
 
-      intervalId = setInterval(() => {
+      // intervalId = setInterval(() => {
         if (index < chars.length) {
-          setDisplayedChars((prevChars) => [...prevChars, chars[index]]);
-          index++;
-          setIsAni(false);
+          setDisplayedChars(chars);
+          // index++;
+          // setIsAni(false);
         } 
-      },0); // 200ms 간격으로 한 글자씩 출력
+      // },0); // 200ms 간격으로 한 글자씩 출력
   
       return () => clearInterval(intervalId); // 컴포넌트 언마운트 시 setInterval 해제
-    }, [isAni,charsRef]); // text를 의존성 배열에 추가
+    }, [isAni]); // text를 의존성 배열에 추가
   
     return (
       <div className="act-text">
@@ -50,7 +58,7 @@ import $ from "jquery";
           <span
             key={i}
             className="seulmit-text"
-            style={{ animationDelay: `${i * 0.1}s` }}
+            style={{ transitionDelay: `${i * 0.1}s` }}
           >
             {char}
           </span>

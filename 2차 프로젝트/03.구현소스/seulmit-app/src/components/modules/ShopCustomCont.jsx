@@ -99,11 +99,11 @@ const {state} = useLocation();
                   console.log(locals.length);
                   if(locals.length > 0){
                     // idx값만 모아서 다른 배열만들기
-                    let newLocals = locals.map((v) => v.idx);
+                    let newLocals = locals.map((v) => v.idx+v.category);
                     console.log("idx새배열:", newLocals);
                     
                     // // 인클루드 비교
-                    let retSts = newLocals.includes(idx);
+                    let retSts = newLocals.includes(idx+category);
                     
                     console.log("중복상태:", retSts);
                     if (retSts) {

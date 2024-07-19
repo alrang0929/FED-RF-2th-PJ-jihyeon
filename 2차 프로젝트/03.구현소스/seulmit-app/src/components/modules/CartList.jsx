@@ -130,9 +130,10 @@ function CartList() {
                                 <img
                                     src={
                                         process.env.PUBLIC_URL +
-                                        `/images/shop/${selCat}/${
-                                            selCat
-                                        }_${`${i + 1}`.padStart(2, "0")}.jpg`
+                                        `/images/shop/${v.category=="homefragrance"?"home":v.category}/${
+                                            v.category=="homefragrance"?"home":v.category
+                                        }_${`${(i + 1) < 4 ? "01":`${i + 1}`.padStart(2, "0")}`}.jpg`
+                                        // }_${`${i + 1}`.padStart(2, "0")}.jpg`
                                     }
                                     alt="item"
                                 />
@@ -285,13 +286,13 @@ function CartList() {
                             {/* 합계 */}
                             <td>
                                 <span className="sum-num1">
-                                    {addComma(v.price * v.cnt)}
+                                    {addComma(v.price * (v.cnt?v.cnt:1))}
                                 </span>
                                 원
                                 <input
                                     className="sum-num2"
                                     type="hidden"
-                                    defaultValue={v.price * v.cnt}
+                                    defaultValue={v.price * (v.cnt?v.cnt:1)}
                                 />
                             </td>
                             {/* 삭제 */}
