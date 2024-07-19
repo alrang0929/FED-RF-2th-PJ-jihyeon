@@ -24,15 +24,15 @@ export default function SwiperPrdList() {
 
   let newSelData=[];
   selData.forEach(v=>{
-    console.log(v);
+    // console.log(v);
     v.forEach(v2=>{
       newSelData.push(v2);
     })
   });
 
 
-console.log(selData);
-console.log(newSelData);
+// console.log(selData);
+// console.log(newSelData);
 
   return (
     <>

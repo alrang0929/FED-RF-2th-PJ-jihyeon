@@ -23,6 +23,7 @@ export const TopArea = memo(
     goPage,
     setRecentSearches,
     recentSearches,
+    cartSts,
   }) => {
     //전달값
     //1. loginMsg - 로그인 메시지변수
@@ -42,7 +43,6 @@ export const TopArea = memo(
         500
       );
 
-
       $(".blocking-bg")
         .show()
         .css({
@@ -59,7 +59,6 @@ export const TopArea = memo(
       setRecentSearches(searchLog);
     };
 
-    
     const showMenu = () => {
       const tg = $(".toggle-menu-box");
       tg.stop().animate(
@@ -76,7 +75,6 @@ export const TopArea = memo(
           display: "block",
         })
         .animate({ opacity: 1 }, 200);
-
     };
 
     //카트박스 보이기
@@ -96,11 +94,9 @@ export const TopArea = memo(
           display: "block",
         })
         .animate({ opacity: 1 }, 200);
-
     };
 
     const hideMenu = () => {
-     
       $(".blocking-bg").fadeOut(200);
 
       //2. 버튼 클릭시 화면 밖으로 사라짐
@@ -110,7 +106,6 @@ export const TopArea = memo(
         },
         500
       );
-     
     };
 
     /////코드리턴구역
@@ -118,7 +113,8 @@ export const TopArea = memo(
       <>
         {/* <!--follow 버튼 --> */}
         <Topbtn />
-        {/* <CartList/> */}
+        {/* 카트리스트 : 카트상태값 true 출력 */}
+        <CartList />
         {/* 서치버튼 클릭시 search-inner 우 > 좌 등장 */}
         <SearchInner />
         <header id="header-area">
@@ -208,12 +204,16 @@ export const TopArea = memo(
                     }
                   </li>
                   <li className="icon-item fx-box">
-                      <span style={{color:"#ffffff", cursor: "pointer",}} 
+                    <span
+                      style={{ color: "#ffffff", cursor: "pointer" }}
                       className="icon-img mall material-symbols-outlined"
-                      onClick={()=>{showCart()}}>
-                        local_mall
-                      </span>
-                      {/* <!-- <span className="mall-cunt">(0)</span> --> */}
+                      onClick={() => {
+                        showCart();
+                      }}
+                    >
+                      local_mall
+                    </span>
+                    {/* <!-- <span className="mall-cunt">(0)</span> --> */}
                   </li>
                   <li className="icon-item search-box">
                     {/* <Link to=""> */}

@@ -41,7 +41,7 @@ export default function Layout() {
     JSON.parse(localStorage.getItem("cart-data") || "[]") // 빈 문자열일 경우 빈 배열 사용
   );
   // 카트리스트 사용여부: true일때 사용
-  const [cartSts, setCartSts] = useState(cartTemp);
+  const [cartSts, setCartSts] = useState(false);
 
   // 로컬스 카트 데이터 존재여부에 따라 상태값 변경
   if (localsCart) {
@@ -49,7 +49,7 @@ export default function Layout() {
     // 데이터 개수가 0이 아니어야함!
     let localsCart = localStorage.getItem("cart-data") || "[]"; // 빈 문자열일 경우 빈 배열 사용
     let cartCnt = JSON.parse(localsCart).length;
-    console.log("카트 데이터수:", cartCnt);
+    // console.log("카트 데이터수:", cartCnt);
     if (cartCnt > 0) cartTemp = true;
   } //////////// 카트존재여부 if ////////
 
@@ -144,6 +144,7 @@ export default function Layout() {
         recentSearches={recentSearches}
         localSearch={localSearch}
         setLocalSearch={setLocalSearch}
+        
       />
       {/* 카트리스트 : 카트상태값 true 출력 */}
       {cartSts && <CartList />}
