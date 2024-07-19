@@ -1,7 +1,7 @@
 .act-text {
     .seulmit-text {
-      opacity: 1; // 초기 투명도 0으로 설정
-      transition: opacity 0.5s ease; // 부드러운 페이드인 효과
+      opacity: 0; // 초기 투명도 0으로 설정
+      animation: fadeIn 0.5s ease forwards;
     }
   }
   
