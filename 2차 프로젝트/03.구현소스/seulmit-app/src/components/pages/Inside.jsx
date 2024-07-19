@@ -13,17 +13,18 @@ function Inside(props) {
   //화면 랜더링 구역
   useEffect(() => {
     //애니메이션 세팅
-
     // 브랜드 헤더
     const logoWrap = $(".brand-header .object-wrap");
     console.log("로고 박스", logoWrap);
     logoWrap
       .animate({ opacity: "1" }, 1000)
       .delay(1500) // logoWrap 요소에 딜레이 적용
-      .animate({ bottom: "-65%" }, 1000); // 1초 동안 서서히 나타나기
-    $(".blind-L").delay(3500).animate({ left: "-50vw" }, 1000);
-    $(".blind-R").delay(3500).animate({ right: "-50vw" }, 1000);
+      .animate({ bottom: "-65%" }, 1000,()=>{
+        $(".blind-L").animate({ left: "-50vw" }, 1000);
+        $(".blind-R").animate({ right: "-50vw" }, 1000);
+      }); 
 
+      //스크롤에 따른 애니 호출
     $(window).on("scroll", function () {
       const scrollTop = $(this).scrollTop();
       const windowHeight = $(this).height();
@@ -31,7 +32,6 @@ function Inside(props) {
       
       // 코드해석: 화면 절반 위치에 스크롤top 이 도달했는데 애니 실행을 안했냐? ㄱ
       if (scrollTop > triggerPoint && !isAni) {
-        
         //인트로 섹션
         $(".back-object .brand-bg").animate({
           width: "60vw",
@@ -39,12 +39,12 @@ function Inside(props) {
         $(".back-object .logo").delay(1200).animate({
           opacity: 1,
           top: "80%",
-        },1000);
+        },1000,()=>{
+          $(".front-object").animate({
+            top: "80%",
+          },1500);
+        });
       }//if
-      //promis 사용해서 위 애니 끝나고 실행하도록 수정
-      $(".front-object").delay(3200).animate({
-        top: "80%",
-      },1500);
 
     });
   }, []);

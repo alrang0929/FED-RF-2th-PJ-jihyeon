@@ -1,26 +1,50 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "../../css/act_text.scss"; // CSS 파일 연결
+import $ from "jquery";
+
 
 function Act_text({ text }) {
   //text = 외부에서 전달받은 텍스트값
+  //상태관리변수//////////////////////////////////////////////
   // const text = text;
   const [displayedChars, setDisplayedChars] = useState([]);
+  //애니 상태변수
+  const [isAni, setIsAni] = useState(false);
+
+    
+  useEffect(() => {
+    $(window).on("scroll", function () {
+      const scrollTop = $(this).scrollTop();
+      const windowHeight = $(this).height();
+      const triggerPoint = windowHeight / 2;
+
+      if (scrollTop > triggerPoint && !isAni) {
+        setIsAni(true); // 스크롤 위치가 트리거 포인트를 넘어가면 isAni를 true로 변경
+      }
+    });
+  }, []); // 빈 배열: 컴포넌트 마운트 후 한 번만 실행
 
   useEffect(() => {
-    const chars = text.split(""); // 텍스트를 한 글자씩 배열로 분리
-
     let index = 0;
-    const intervalId = setInterval(() => {
-      //... << 배열 연산자던ㄱ가..
-      setDisplayedChars((prevChars) => [...prevChars, chars[index]]);
-      index++;
+    let intervalId; // intervalId 변수 선언
 
-      if (index === chars.length) {
-        clearInterval(intervalId);
-      }
-    }, 200); // 200ms 간격으로 한 글자씩 출력
-  }, []);
+    if (isAni) {
+      const chars = text.split("");
+
+      intervalId = setInterval(() => {
+        setDisplayedChars((prevChars) => [...prevChars, chars[index]]);
+        index++;
+
+        if (index === chars.length) {
+          clearInterval(intervalId);
+        }
+      }, 200);
+    }
+
+    return () => clearInterval(intervalId); // 컴포넌트 언마운트 시 setInterval 해제
+  }, [isAni, text]); // isAni와 text를 의존성 배열에 추가
+
 
   return (
     <div className="act-text">
