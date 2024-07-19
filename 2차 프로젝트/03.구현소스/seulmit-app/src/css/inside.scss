@@ -66,6 +66,7 @@ main.inside-area {
   }
   // 1. 인트로 섹션
   section.intro {
+    position: relative;
     .back-object {
       height: 100vh;
       position: relative;
@@ -82,10 +83,11 @@ main.inside-area {
       .logo {
 
         z-index: 1;
+        opacity: 0;
+        top: 90%;
 
         width: 5vw;
         position: absolute;
-        top: 60%;
         left: 50%;
         translate: -50% -50%;
         margin: 0 auto;
@@ -96,7 +98,15 @@ main.inside-area {
     }
 
     .front-object {
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 100%;
       z-index: 99;
+
+
+
       background: #000;
       .object-wrap {
         margin: 0 auto;
