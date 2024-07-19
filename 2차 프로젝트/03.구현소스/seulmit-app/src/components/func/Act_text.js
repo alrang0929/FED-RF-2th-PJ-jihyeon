@@ -12,17 +12,18 @@ import $ from "jquery";
 
     const charsRef = useRef(text.replace(/&nbsp;/g, ' ').split('')); // chars를 useRef로 관리
 
-    $(window).on("scroll", function () {
-      const scrollTop = $(this).scrollTop();
-      const windowHeight = $(this).height();
-      const triggerPoint = windowHeight / 2; // 화면 절반 위치
-      
-      // 코드해석: 화면 절반 위치에 스크롤top 이 도달했는데 애니 실행을 안했냐? ㄱ
-      if (scrollTop > triggerPoint && !isAni) {
-        // setIsAni(true);
-  }//if
+    useEffect(() => {
+      $(window).on("scroll", function () {
+        const scrollTop = $(this).scrollTop();
+        const windowHeight = $(this).height();
+        const triggerPoint = windowHeight / 2;
+  
+        if (scrollTop > triggerPoint && !isAni) {
+          setIsAni(true); // 스크롤 위치가 트리거 포인트를 넘어가면 isAni를 true로 변경
+        }
+      });
+    }, []);
 
-  }, []);
 
     useEffect(() => {
       let index = 0;
