@@ -17,15 +17,36 @@ main.inside-area {
 
   //0. 브랜드 헤더
   section.brand-header {
+    position: relative;
     height: 100vh;
     background-image: url(../../public/images/inside/ep1_brandmain.jpg); /* 이미지 경로 */
     background-repeat: no-repeat; /* 반복 안 함 */
     background-position: center; /* 가운데 정렬 */
     background-size: cover; /* 꽉 채우기 */
 
+    .blind-L {
+      position: absolute;
+      width: 50vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: #000;
+    }
+    .blind-R {
+      position: absolute;
+      width: 50vw;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      background-color: #000;
+    }
+
+
     .object-wrap {
+      z-index: 1;
       position: relative;
-      bottom: -62%;
+      opacity: 0;
+      bottom: -37%;
       text-align: center;
       span {
         color: #fff;
@@ -46,8 +67,22 @@ main.inside-area {
   // 1. 인트로 섹션
   section.intro {
     .back-object {
+      height: 100vh;
       position: relative;
+      .brand-bg{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        width: 20vw;
+        img{
+          width: 100%;
+        }
+      }
       .logo {
+
+        z-index: 1;
+
         width: 5vw;
         position: absolute;
         top: 60%;
@@ -173,36 +208,32 @@ main.inside-area {
     }
   }
 
-section.brand-ban{
+  section.brand-ban {
     background-image: url(../../public/images/inside/brand05_bg.png); /* 이미지 경로 */
     background-repeat: no-repeat; /* 반복 안 함 */
     background-position: center; /* 가운데 정렬 */
     background-size: cover; /* 꽉 채우기 */
 
-    .text-box{    
-        padding: 90px 0;
-        text-align: center;
-    width: 50%;
-    margin: 0 auto;
-    span{
+    .text-box {
+      padding: 90px 0;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto;
+      span {
         display: block;
         color: #fff;
         text-align: center;
         font-size: 20px;
         font-weight: 300;
         line-height: 1.7;
-    }
-    .logo{
+      }
+      .logo {
         margin: 80px auto;
         width: 4vw;
-            img{
-                width: 100%;
-            }
+        img {
+          width: 100%;
         }
+      }
     }
-
-
-}
-
-
+  }
 } //inside

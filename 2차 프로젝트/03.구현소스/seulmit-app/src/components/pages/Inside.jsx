@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Act_text from "../func/Act_text";
 import $ from "jquery";
 //css
@@ -6,22 +6,44 @@ import "../../css/inside.scss";
 ////////import area//////////////////////////////////////////////
 
 function Inside(props) {
-  $(".object-wrap")
-    .css({
-      bottom: "70%",
-      opacity: "0",
-    })
-    .animate(
-      {
-        bottom: "20%",
-        opacity: "1",
-      },200)
+  //상태관리변수//////////////////////////////////////////////
+  //애니 상태변수
+  const [isAni, setIsAni] = useState(false);
+
+  //화면 랜더링 구역
+  useEffect(() => {
+    //애니메이션 세팅
+
+    // 브랜드 헤더
+    const logoWrap = $(".brand-header .object-wrap");
+    console.log("로고 박스", logoWrap);
+    logoWrap
+      .animate({ opacity: "1" }, 1000)
+      .delay(2000) // logoWrap 요소에 딜레이 적용
+      .animate({ bottom: "-65%" }, 1000); // 1초 동안 서서히 나타나기
+    $(".blind-L").delay(4000).animate({ left: "-50vw" }, 1000);
+    $(".blind-R").delay(4000).animate({ right: "-50vw" }, 1000);
+
+    //인트로 섹션
+    $(window).on("scroll", function () {
+      const scrollTop = $(this).scrollTop();
+      const windowHeight = $(this).height();
+      const triggerPoint = windowHeight / 2; // 화면 절반 위치
+
+      // 코드해석: 화면 절반 위치에 스크롤top 이 도달했는데 애니 실행을 안했냐? ㄱ
+      if (scrollTop > triggerPoint && !isAni) {
+        $(".brand-bg").animate({
+          width: "80vw",
+        },2000);
+      }
+    });
+  }, []);
 
   /////코드 리턴구역 //////////////////////////
   return (
     <>
+      {/* 0. 브랜드 헤더 */}
       <main className="inside-area">
-        {/* 0. 브랜드 헤더 */}
         <section className="brand-header">
           <div className="object-wrap">
             <div className="img-box">
@@ -32,6 +54,8 @@ function Inside(props) {
             </div>
             <span>섬세하고 강인한 한국 여성의 아우라 뷰티, 슬밋</span>
           </div>
+          <div className="blind-L"></div>
+          <div className="blind-R"></div>
         </section>
         {/* 1. 인트로 섹션 */}
         <section className="intro">
