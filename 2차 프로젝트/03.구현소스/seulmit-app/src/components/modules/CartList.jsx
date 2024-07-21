@@ -2,19 +2,19 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
+import { sCon } from "../pages/sCon";
 
 //숫자 콤마 추가
 import { addComma } from "../func/common_fn";
 
 //css
 import "../../css/cart_list.scss";
-import { sCon } from "../pages/sCon";
 //////import area/////////////////////////////////////////
 
 function CartList() {
   //콘텍스트 사용
   const myCon = useContext(sCon);
-  const { selCat } = useContext(sCon);
+  // const { selCat } = useContext(sCon);
   //상태 리렌더링을 위한 상태변수
   const [force, setForce] = useState(false);
 
@@ -23,7 +23,7 @@ function CartList() {
 
   //로컬스 데이터 가져오기
   // const selData = JSON.parse(myCon.localsCart || "[]");
-//   console.log("카트로컬스", selData);
+  console.log("카트로컬스", selData);
 
   //전체 데이터 개수
   const dataCnt = selData.length;
@@ -121,8 +121,8 @@ function CartList() {
           <tbody>
             {selData.map((v, i) => (
               <tr key={i}>
-                {/* 번호 */}
                 <td>{i + 1}</td>
+                {/* 번호 */}
                 {/* 상품이미지 */}
                 <td className="img-bx">
                   <img
@@ -285,7 +285,7 @@ function CartList() {
                       // confirm()의 "확인"클릭시 true
                       if (
                         window.confirm(
-                          "정말정말정말로 지우시겠습니까? 할인도하는데???"
+                          "선택항목을 삭제하시겠습니까?"
                         )
                       ) {
                         // console.log("삭제함!!!");

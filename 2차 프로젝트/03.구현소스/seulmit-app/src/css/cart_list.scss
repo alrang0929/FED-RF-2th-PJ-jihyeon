@@ -25,34 +25,36 @@
         }
     }
 
-    //테이블css
-    table{
-        font-size: 16px;
-        font-weight: 200;
-        width: 100%;
-        .btn-buy{
-            font-size: 20px;
-            font-weight: 200;
-            position: absolute;
-            width: 90%;
-            bottom: 13%;
-            height: 70px;
-        }
-        caption{
-            text-align: left;
-            font-size: 30px;
-            margin-bottom: 20px;
-            span{
-                font-size: 16px;
-            }
-        }
-        .img-bx {
-            width: 30%;
-            img {
-                width: 100%;
-            }
-        }
-        
-    } 
+  
+
     
 }
+  //테이블css
+  table{
+    font-size: 16px;
+    font-weight: 200;
+    width: 100%;
+    .btn-buy{
+        font-size: 20px;
+        font-weight: 200;
+        position: absolute;
+        width: 90%;
+        bottom: 13%;
+        height: 70px;
+    }
+    caption{
+        text-align: left;
+        font-size: 30px;
+        margin-bottom: 20px;
+        span{
+            font-size: 16px;
+        }
+    }
+    .img-bx {
+        width: 30%;
+        img {
+            width: 100%;
+        }
+    }
+    
+} 

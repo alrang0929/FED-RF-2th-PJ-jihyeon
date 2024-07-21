@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { addComma } from "../func/common_fn";
 
 //css
 import "../../css/shop.scss";
@@ -19,9 +20,13 @@ function OptionBox(props) {
     <>
       <select name={selData} id={selData} className="selectBox bt-margin40">
         <option value="">선택하세요</option> {/* placeholder 옵션 추가 */}
-        {selData.map((option, i) => (
-          <option key={i} value={option.value} className="opBox ">
-            {option.value} ({option.price})
+        {selData.map((option, i) => 
+        (
+          <option key={i} 
+          value={option.value} 
+          className="opBox ">
+            {option.value} 
+            {"(+"+addComma(option.price)+"원)"}
           </option>
         ))}
       </select>

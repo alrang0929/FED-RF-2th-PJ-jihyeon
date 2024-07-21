@@ -27,6 +27,27 @@ function ShopCustomCont({ catName, products, }) {
 
   // console.log(idx, category, tit, price);
 
+//카트박스 보이기 애니
+  //카트박스 보이기
+  const showCart = () => {
+    const tg = $(".cart-list");
+    tg.stop().animate(
+      {
+        right: 0,
+      },
+      500
+    );
+
+    //가림막 BG 등장
+    $(".blocking-bg")
+      .show()
+      .css({
+        display: "block",
+      })
+      .animate({ opacity: 1 }, 200);
+  };
+
+
   //////코드리턴구역//////////////////////////////////////
   return (
     <>
@@ -63,7 +84,8 @@ function ShopCustomCont({ catName, products, }) {
           <div className="btn-wrap bt-padding80">
             <button
               className="button-nomal"
-              onClick={() => {
+              onClick={(e) => {
+                showCart(e);
                 // [ 로컬스 카트 데이터 넣기 ]
                 // 1. 로컬스 없으면 만들어라!
                 if (!localStorage.getItem("cart-data")) {
