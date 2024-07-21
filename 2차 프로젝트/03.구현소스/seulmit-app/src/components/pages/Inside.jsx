@@ -10,19 +10,48 @@ function Inside(props) {
   //애니 상태변수
   const [isAni, setIsAni] = useState(false);
 
-  //화면 랜더링 구역
+  //화면 랜더링 구역////////////////////////////////////////
   useEffect(() => {
     //애니메이션 세팅
-    // 브랜드 헤더
-    const logoWrap = $(".brand-header .object-wrap");
-    console.log("로고 박스", logoWrap);
-    logoWrap
-      .animate({ opacity: "1" }, 1000)
-      .delay(1500) // logoWrap 요소에 딜레이 적용
-      .animate({ bottom: "-65%" }, 1000,()=>{
-        $(".blind-L").animate({ left: "-50vw" }, 1000);
-        $(".blind-R").animate({ right: "-50vw" }, 1000);
-      }); 
+
+      //첫번째 섹션 애니 끝난 후 자동 스크롤
+      const aniLogoWrap = () => {
+        return $(".brand-header .object-wrap")
+          .animate({ opacity: "1" }, 1000)
+          .delay(1500)
+          .animate({ bottom: "-65%" }, 1000)
+          //체이닝으로 promise 메서드를 사용하면 애니를 순차적으로 사용할 수 있음
+          .promise();
+      };
+    
+      //Promise.all() : 여러 비동기 애니를 동시에 실행하고 싶을 때 사용
+      //즉, logoWrap 애니가 끝나면 promise.all 안의 블라인드 애니를 실행해라
+      
+
+      const aniBlinds = () => {
+
+        return Promise.all([
+          $(".blind-L").animate({ left: "-50vw" }, 1000).promise(),
+          $(".blind-R").animate({ right: "-50vw" }, 1000).promise(),
+        ]);
+      };
+    
+      const scrollToAboutArea = () => {
+        const aboutArea = document.querySelector('.intro');
+        aboutArea.scrollIntoView({ behavior: 'smooth' });
+      };
+    
+//최종적으로!! 모든 애니가 끝난 후 스크롤 이동을 실행하기 위해
+//async 비동기 호출! await 을 사용하여 로고 애니  > 블라인드 애니 > 스크롤 애니가 순차적으로 실행되도록 함
+
+      async function startAni() {
+        await aniLogoWrap();
+        await aniBlinds();
+        scrollToAboutArea();
+      }
+    
+      startAni();
+
 
       //스크롤에 따른 애니 호출
     $(window).on("scroll", function () {
@@ -47,6 +76,7 @@ function Inside(props) {
       }//if
 
       
+
     });
   }, []);
 

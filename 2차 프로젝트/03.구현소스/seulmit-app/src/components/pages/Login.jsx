@@ -74,8 +74,8 @@ export default function Login() {
         let val = e.target.value;
 
         //1. 비밀번호 유효성 검사
-        const valid =
-            /^.*(?=^.{5,16}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+        // const valid =
+            // /^.*(?=^.{5,16}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
         //유효성 검사볍: 정규식.test(값)
 
         //1. 빈값 체크 (빈값X = false:에러아님)
@@ -88,15 +88,15 @@ export default function Login() {
         }
 
         //입력값 유효성 검사 ㄱ
-        if (valid.test(val)) setPwdError(false);
-        //검사결과 에러일 때
-        else {
-            //1) 메시지 띄우기
-            setPwdMsg(msgPwd[1]);
+        // if (valid.test(val)) setPwdError(false);
+        // //검사결과 에러일 때
+        // else {
+        //     //1) 메시지 띄우기
+        //     setPwdMsg(msgPwd[1]);
 
-            //2) 에러상태값 변경하기
-            setPwdError(true);
-        }
+        //     //2) 에러상태값 변경하기
+        //     setPwdError(true);
+        // }
 
         //실제 화면출력을 위해 setUserId에 상태 업데이트
         setPwd(val);
