@@ -15,20 +15,26 @@ import { addComma } from "../func/common_fn";
 function ShopCustomCont({ catName, products, }) {
   const myCon = useContext(sCon);
   const { state } = useLocation();
+  
+  //selectedOpt, setSelectedOpt: 카트리스트 추가옵션값 저장 상태변수
+   const {selectedOpt, setSelectedOpt, localsCart} = useContext(sCon);
 
   //catName 어떻게 연계시킬지 고민해야될듯
   const selData = product[catName][state.product - 1];
+  // 일단 기본옵션으로 선택, 추후 catName(카테고리 = 제품분류) 사용하여 항목별 선택옵셜 추가
+  const optData = options[0];
   // console.log("텍스트 데이터 선택", selData, state.product);
 
+  
   //로컬스토리지값 정의
   const idx = selData.idx;
   const category = catName;
   const tit = selData.tit;
   const price = selData.price;
-
+  
   // console.log(idx, category, tit, price);
-
-//카트박스 보이기 애니
+  
+  //카트박스 보이기 애니
   //카트박스 보이기
   const showCart = () => {
     const tg = $(".cart-list");
@@ -38,16 +44,17 @@ function ShopCustomCont({ catName, products, }) {
       },
       500
     );
-
+    
     //가림막 BG 등장
     $(".blocking-bg")
-      .show()
-      .css({
-        display: "block",
-      })
-      .animate({ opacity: 1 }, 200);
+    .show()
+    .css({
+      display: "block",
+    })
+    .animate({ opacity: 1 }, 200);
   };
-
+  
+  // console.log(myCon.localsCart);
 
   //////코드리턴구역//////////////////////////////////////
   return (
@@ -78,10 +85,10 @@ function ShopCustomCont({ catName, products, }) {
           </div>
           {/* desc wrap end */}
           {/* 3. option area */}
-          <OptionBox />
+          <OptionBox optData={optData} selectedOpt={selectedOpt} onOptionChange={setSelectedOpt}/>
           {/* 4. 옵션 선택 표시 리스트 */}
           {/* 테이블 컴포넌트 */}
-          <OptionTable />
+          <OptionTable optData={optData} selectedOpt={selectedOpt} onOptionChange={setSelectedOpt}/>
           {/* 5. btn area */}
           <div className="btn-wrap bt-padding80">
             <button

@@ -11,6 +11,7 @@ import "../../css/cart_list.scss";
 /////import area////////////////////////////
 
 function OptionTable() {
+
   //콘텍스트 사용
   const myCon = useContext(sCon);
 
@@ -46,14 +47,14 @@ function OptionTable() {
         </thead>
         <tbody className="default-option">
 
-        {options.map((v, i) => (
+        {selData.map((v, i) => (
               <tr key={i}>
                 <td>{i + 1}</td>
                 {/* 번호 */}
                 {/* 상품이미지 */}
 
                 {/* 상품명 */}
-                <td>{v.tit}</td>
+                <td>{v.value}</td>
                 {/* 가격 */}
                 <td>{addComma(v.price)}원</td>
                 {/* 수량 */}

@@ -35,13 +35,15 @@ export default function Layout() {
   // 로컬스 카트 존재여부변수
   let cartTemp = false;
 
-
   // [ 로컬스 카트 데이터 상태변수 ] ///
   const [localsCart, setLocalsCart] = useState(
     JSON.parse(localStorage.getItem("cart-data") || "[]") // 빈 문자열일 경우 빈 배열 사용
   );
   // 카트리스트 사용여부: true일때 사용
   const [cartSts, setCartSts] = useState(false);
+
+  //카트리스트 추가옵션값 저장 상태변수
+  const{selectedOpt, setSelectedOpt} = useState(JSON.parse(localStorage.getItem("cart-data") || "[]"));
 
   // 로컬스 카트 데이터 존재여부에 따라 상태값 변경
   if (localsCart) {
@@ -133,6 +135,8 @@ export default function Layout() {
         setCartSts,
         setLocalsCart,
         localsCart,
+        selectedOpt,
+        setSelectedOpt,
       }}
     >
       <TopArea
