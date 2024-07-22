@@ -5,10 +5,11 @@ import $ from "jquery";
 import "../../css/inside.scss";
 ////////import area//////////////////////////////////////////////
 
-function Inside(props) {
+function Inside() {
   //상태관리변수//////////////////////////////////////////////
-  //애니 상태변수
+  //컴포넌트 전체 애니 상태변수
   const [isAni, setIsAni] = useState(false);
+
 
   //화면 랜더링 구역////////////////////////////////////////
   useEffect(() => {
@@ -36,31 +37,35 @@ function Inside(props) {
         ]);
       };
     
-      const scrollToAboutArea = () => {
-        const aboutArea = document.querySelector('.intro');
-        aboutArea.scrollIntoView({ behavior: 'smooth' });
+      const scrollToIntroArea = () => {
+        let isAniStart = false; //애니시작 여부를 저장하는 변수, 스크롤 애니에서만 사용
+        if(!isAniStart){
+          const introArea = document.querySelector('.intro');
+          introArea.scrollIntoView({ behavior: 'smooth' });
+        }
+             isAniStart = true;
       };
     
 //최종적으로!! 모든 애니가 끝난 후 스크롤 이동을 실행하기 위해
 //async 비동기 호출! await 을 사용하여 로고 애니  > 블라인드 애니 > 스크롤 애니가 순차적으로 실행되도록 함
-
-      async function startAni() {
-        await aniLogoWrap();
-        await aniBlinds();
-        scrollToAboutArea();
-      }
-    
-      startAni();
-
-
-      //스크롤에 따른 애니 호출
-    $(window).on("scroll", function () {
+async function startAni() {
+  
+  await aniLogoWrap();
+  await aniBlinds();
+          scrollToIntroArea();
+          // console.log("애니시작 함수 호출여부", startAni())
+          //스크롤에 따른 애니 호출
+        }
+        startAni();
+      $(window).on("scroll", function () {
+      
       const scrollTop = $(this).scrollTop();
       const windowHeight = $(this).height();
+      //여기서 this는? 이벤트가 발생한 요소! 즉 스크롤 이벤트는 window에서 발생하므로 window를 가르킴
       const triggerPoint = windowHeight / 2; // 화면 절반 위치
-      
       // 코드해석: 화면 절반 위치에 스크롤top 이 도달했는데 애니 실행을 안했냐? ㄱ
-      if (scrollTop > triggerPoint && !isAni) {
+      if (scrollTop > triggerPoint) {
+        $(".ep-list-wrap").addClass("on");
         //인트로 섹션
         $(".back-object .brand-bg").animate({
           width: "60vw",
@@ -75,9 +80,7 @@ function Inside(props) {
         });
       }//if
 
-      
-
-    });
+    }); //on
   }, []);
 
   /////코드 리턴구역 //////////////////////////
@@ -198,7 +201,7 @@ function Inside(props) {
                 </li>
                 <li>
                   <div className="text-wrap">
-                    <span>EPISODE 01.</span>
+                    <span>EPISODE 02.</span>
                     <h4>SOL SOUL SEOUL</h4>
                   </div>
                   <div className="img-box">

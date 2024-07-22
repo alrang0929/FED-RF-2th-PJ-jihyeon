@@ -16,7 +16,6 @@ import $ from "jquery";
     useEffect(() => {
 
       $(window).on("scroll", function () {
-        const scrollTop = $(this).scrollTop();
         const windowHeight = $(this).height();
         const triggerPoint = windowHeight / 2;
 
@@ -37,8 +36,8 @@ document.querySelectorAll(".act-text").forEach(v=>{
       let index = 0;
       let intervalId; // intervalId 변수 선언
   
-      const chars = text.replace(/&nbsp;/g, ' ').split(''); // 염병할 띄어쓰기
-        console.log("zzz",chars);
+      const chars = text.replace(/&nbsp;/g, ' ').split(''); //띄어쓰기 변환
+        // console.log("zzz",chars);
 
 
       // intervalId = setInterval(() => {
