@@ -46,31 +46,12 @@ function OptionTable() {
         </thead>
         <tbody className="default-option">
 
-        {selData.map((v, i) => (
+        {options.map((v, i) => (
               <tr key={i}>
                 <td>{i + 1}</td>
                 {/* 번호 */}
                 {/* 상품이미지 */}
-                <td className="img-bx">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      `/images/shop/${
-                        v.category == "homefragrance" ? "home" : v.category
-                      }/${
-                        v.category == "homefragrance" ? "home" : v.category
-                      }_${`${i % 2 === 1 ? 
-                        (i < 9 ? `0${(i+1) + 1}` : (i+1) + 1) 
-                        : ( i < 8 ? `0${i + 1}` : i + 1)}`}.jpg`
 
-                      // }_${`${i + 1}`.padStart(2, "0")}.jpg`
-                      // i가 홀수냐 ? 홀수인데 10보다 작으면 "0" + idx+1 : 홀수인데 10보다 크면 idx+1
-                      // i가 짝수냐 ? 짝수인데 10보다 작으면 "0" + idx+2 : 짝수인데 10보다 크면 idx +2
-                      //이게 뭔짓임
-                    }
-                    alt="item"
-                  />
-                </td>
                 {/* 상품명 */}
                 <td>{v.tit}</td>
                 {/* 가격 */}

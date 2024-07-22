@@ -9,6 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 //modules
 import OptionBox from "./OptionBox";
 import OptionTable from "./OptionTable";
+import { addComma } from "../func/common_fn";
 ///////////////import area////////////////////////
 
 function ShopCustomCont({ catName, products, }) {
@@ -58,6 +59,7 @@ function ShopCustomCont({ catName, products, }) {
             <p className="eng-pdtit bt-padding20">{selData.engtit}</p>
             <h4 className="kor-pdtit bt-padding20">{selData.tit}</h4>
             <p className="desc bt-padding80">{selData.txt}</p>
+            <p className="desc bt-padding80">{addComma(selData.price)+"원"}</p>
             {/* 2.  아이콘 박스 */}
             <ul className="iconbx fx-box bt-padding20 gap10">
               <li className="share-icon">

@@ -59,14 +59,12 @@ async function startAni() {
         startAni();
       $(window).on("scroll", function () {
       
-      const scrollTop = $(this).scrollTop();
-      const windowHeight = $(this).height();
+      const scrollTop = $(window).scrollTop();
+      const windowHeight = $(window).height();
       //여기서 this는? 이벤트가 발생한 요소! 즉 스크롤 이벤트는 window에서 발생하므로 window를 가르킴
       const triggerPoint = windowHeight / 2; // 화면 절반 위치
       // 코드해석: 화면 절반 위치에 스크롤top 이 도달했는데 애니 실행을 안했냐? ㄱ
       if (scrollTop > triggerPoint) {
-        $(".ep-list-wrap").addClass("on");
-        //인트로 섹션
         $(".back-object .brand-bg").animate({
           width: "60vw",
         },2000);
@@ -81,6 +79,22 @@ async function startAni() {
       }//if
 
     }); //on
+
+    $(window).on('scroll', function() {
+      var scrollpoint = $('.ep-list-wrap');
+      var windowHeight = $(window).height();
+      var scrollTop = $(window).scrollTop();
+      var elementOffset = scrollpoint.offset().top;
+      var elementHeight = scrollpoint.height();
+  
+      if (scrollTop + windowHeight / 2 >= elementOffset && scrollTop + windowHeight / 2 <= elementOffset + elementHeight) {
+        //scrollTop + windowHeight / 2 <= elementOffset + elementHeight: 현재 화면의 중간 지점이 요소의 맨 아래쪽보다 위에 있거나 같은지 확인 (요소가 화면에서 완전히 사라지지 않았는지 확인)
+          scrollpoint.addClass('on');
+
+      } else {
+          scrollpoint.removeClass('on');
+      }
+  });
   }, []);
 
   /////코드 리턴구역 //////////////////////////
