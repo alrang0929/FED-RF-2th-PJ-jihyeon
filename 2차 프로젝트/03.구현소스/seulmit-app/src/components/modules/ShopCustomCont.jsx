@@ -12,12 +12,12 @@ import OptionTable from "./OptionTable";
 import { addComma } from "../func/common_fn";
 ///////////////import area////////////////////////
 
-function ShopCustomCont({ catName, products, }) {
+function ShopCustomCont({ catName, products}) {
   const myCon = useContext(sCon);
   const { state } = useLocation();
   
   //selectedOpt, setSelectedOpt: 카트리스트 추가옵션값 저장 상태변수
-   const {selectedOpt, setSelectedOpt, localsCart} = useContext(sCon);
+  //  const {selectedOpt, setSelectedOpt, localsCart} = useContext(sCon);
 
   //catName 어떻게 연계시킬지 고민해야될듯
   const selData = product[catName][state.product - 1];
@@ -85,10 +85,10 @@ function ShopCustomCont({ catName, products, }) {
           </div>
           {/* desc wrap end */}
           {/* 3. option area */}
-          <OptionBox optData={optData} selectedOpt={selectedOpt} onOptionChange={setSelectedOpt}/>
+          <OptionBox optData={optData} selectedOpt={myCon.selectedOpt} setSelectedOpt={myCon.setSelectedOpt}/>
           {/* 4. 옵션 선택 표시 리스트 */}
           {/* 테이블 컴포넌트 */}
-          <OptionTable optData={optData} selectedOpt={selectedOpt} onOptionChange={setSelectedOpt}/>
+          <OptionTable optData={optData} selectedOpt={myCon.selectedOpt} setSelectedOpt={myCon.setSelectedOpt}/>
           {/* 5. btn area */}
           <div className="btn-wrap bt-padding80">
             <button

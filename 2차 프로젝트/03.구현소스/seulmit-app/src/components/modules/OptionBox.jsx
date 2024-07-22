@@ -1,86 +1,80 @@
-import React, { useContext, useEffect, useState } from "react";
-import styled from "styled-components";
+import React, {  useContext, useEffect } from "react";
 import { addComma } from "../func/common_fn";
-import { sCon } from "../pages/sCon";
 
 //css
 import "../../css/shop.scss";
 
 //data
+//ShopCustomCont 에서 props 값으로 전달받음: 옵션박스, 옵션 테이블이 데이터 공통으로 사용하기 때문
 import { options } from "../data/product";
+import { sCon } from "../pages/sCon";
 
 ///////////import area//////////////////////
 
-function OptionBox({ selData, selectedOpt, onOptionChange }) {
-  console.log("옵션데이터 가져오고싶어",selData);
-    // OptionTable의 역할: 데이터를 cart-data 에 저장하여
-    //OptionTable에 전달하여 데이터 값 노출 + 변경 가능하게 함
+function OptionBox({ optData, selectedOpt, setSelectedOpt }) {
+    console.log("setSelectedOpt:", setSelectedOpt);
+    //1. optData : 데이터
+    //2. selectedOpt: 전역변수, 데이터 저장 및 전달
+    //3. setSelectedOpt : 전역변수, 상태 감시하다 값 변경되면 로컬에 저장
 
-    //선택관리변수
-    //유즈 콘텍스트 사용
-
-    // const selData = options[0].values;
-
-    useEffect(() => {
-        let cartData;
-
-        if (selectedOpt) {
-            let cartData = JSON.parse(
-                localStorage.getItem("cart-data") || "[]"
-            );
-            //선택 옵션정보 추가
-            cartData.push({
-                // optName: selData,
-                [selData[0].name]: selectedOpt,
-                
-            });
-        } else {
-            //selectedOpt가 null 이면 cartData 초기화
-            cartData = [];
-        }
-        //로컬에 파싱하여 저장
-        localStorage.setItem("cart-data", JSON.stringify(cartData));
-    }, [selectedOpt]);
+    const {localsCart, setLocalsCart} = useContext(sCon);
 
     const handleChange = (e) => {
-        onOptionChange({ ...selectedOpt, [selData?.[0]?.name || ""]: e.target.value,
-          // 옵셔널 체이닝(?.):
-          // 옵셔널 체이닝 없이 호출하면 에러 빠바박, 그치만 옵셔널 체이닝 .?을 사용하면 undefined로 값 반환
-          // 즉, 값이 없어도 기능은 잘 돌아감.. 뭔가 위험해보이는디
-          
-          // selData[0]가 undefined인 경우 빈 문자열 사용
-         });
+        setSelectedOpt(e.target.value);
     };
-    // console.log("선택데이터 확인", selData);
 
     
+
+    //화면 랜더링 구역
+    useEffect(() => {
+        // 로컬 스토리지에서 카트 데이터 가져오기
+        let cartData = JSON.parse(localStorage.getItem("cart-data") || "[]"); // 빈 문자열 또는 null일 경우 빈 배열 사용
+
+        if (selectedOpt) {
+            // cartData = JSON.parse(localStorage.getItem("cart-data") || "[]");
+            // 기존에 같은 옵션이 있는지 확인하고 업데이트 또는 추가
+            const defaultOpt = cartData.findIndex(
+                (item) => item.optName === optData.value
+            );
+
+            if (defaultOpt > -1) {
+                cartData[defaultOpt] = {
+                    optName: optData.value,
+                    optVal: selectedOpt,
+                };
+            } else {
+                cartData.push({
+                    optName: optData.value,
+                    optVal: selectedOpt,
+                });
+            }
+
+            // 로컬 스토리지에 업데이트된 카트 데이터 저장
+            localStorage.setItem("cart-data", JSON.stringify(cartData));
+            setLocalsCart(cartData); // setLocalsCart 함수 호출
+        }
+    }, [selectedOpt, optData, localsCart]); // selData 추가
+
+
 
     /////리턴코드
     return (
         <>
             <select
-                name={selData?.[0]?.name || ""}
-                id={selData?.[0]?.name || ""}
-                className="selectBox bt-margin40"
-                value={selectedOpt?.[selData?.[0]?.name] || ""}
+                name={optData.value}
+                id={optData.value}
+                classvalue="selectBox bt-margin40"
+                value={optData.value}
                 onChange={handleChange}
             >
-                <option value="">선택하세요</option>{" "}
-                {/* placeholder 옵션 추가 */}
-                {selData.length > 0 && (
-                    <>
-                        {selData?.map((option, i) => (
-                            <option
-                                key={i}
-                                value={option.value}
-                                className="opBox"
-                            >
-                                {option.value}
-                                {"(+" + addComma(option.price) + "원)"}
-                            </option>
-                        ))}
-                    </>
-                )}
+                {/* {console.log("옵션데이터 가져오고싶어3", optData)} */}
+                <option value="">선택하세요</option> {/* 옵션 추가 */}
+                {optData.values.map((opt, i) => (
+                    <option key={i} value={opt.value} className="opBox">
+                        {opt.value}
+                        {"(+" + addComma(opt.price) + "원)"}
+                    </option>
+                ))}
             </select>
         </>
     );

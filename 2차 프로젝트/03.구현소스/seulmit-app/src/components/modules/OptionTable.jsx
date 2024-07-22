@@ -3,7 +3,9 @@ import { sCon } from "../pages/sCon";
 import $ from "jquery";
 
 //data
-import { options, product } from "../data/product";
+// props  값으로 외부에서 받아옴 : 옵션 테이블, 옵션 박스에서 공유하기 때문
+// import { options, product } from "../data/product";
+
 //module
 import { addComma } from "../func/common_fn";
 //css

@@ -15,6 +15,8 @@ export default function Login() {
     //컨텍스트 사용 셋팅
     const myCon = useContext(sCon);
 
+    
+
     //[상태관리변수]/////////////////////////////////////
     // [1] 입력요소 상태변수
     // 1. 아이디변수
@@ -189,6 +191,8 @@ export default function Login() {
         }
     };
 
+    // const enterkey = onSubmit();
+
     ///화면 랜더링 구역///////////////////////////////////
     useEffect(() => {
         //아이디 입력창 포커스
@@ -235,6 +239,7 @@ export default function Login() {
                                 placeholder="아이디(이메일)를 입력해주세요"
                                 value={userId}
                                 onChange={changeUserId}
+                                onKeyUp={onSubmit}
                             ></input>
                             {
                                 // 에러 메세지 출력
@@ -268,6 +273,7 @@ export default function Login() {
                                 placeholder="비밀번호를 입력해주세요(6~12자 이내)"
                                 value={pwd}
                                 onChange={changePwd}
+                                onKeyUp={onSubmit}
                             ></input>
                             {
                                 // 에러 메세지 출력
@@ -308,7 +314,10 @@ export default function Login() {
 
                     {/* btn-wrap-start */}
                     <div className="btn-wrap">
-                        <button className="button-nomal2" onClick={onSubmit}>
+                        <button className="button-nomal2" 
+                        onClick={onSubmit}
+                        onKeyUp={onSubmit}
+                        >
                             LOG IN
                         </button>
                         <div className="desc-wrap fx-box">
