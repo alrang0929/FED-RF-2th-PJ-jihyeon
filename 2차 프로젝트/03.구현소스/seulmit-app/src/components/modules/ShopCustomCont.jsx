@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import $ from "jquery";
 import { sCon } from "../pages/sCon";
 
@@ -12,10 +12,13 @@ import OptionTable from "./OptionTable";
 import { addComma } from "../func/common_fn";
 ///////////////import area////////////////////////
 
-function ShopCustomCont({ catName, products}) {
+function ShopCustomCont({ catName, products }) {
   const myCon = useContext(sCon);
   const { state } = useLocation();
-  
+
+  //상태관리변수
+  const [selOptData,setSelOptData] = useState([]);
+
   //selectedOpt, setSelectedOpt: 카트리스트 추가옵션값 저장 상태변수
   //  const {selectedOpt, setSelectedOpt, localsCart} = useContext(sCon);
 
@@ -85,10 +88,10 @@ function ShopCustomCont({ catName, products}) {
           </div>
           {/* desc wrap end */}
           {/* 3. option area */}
-          <OptionBox optData={optData} selectedOpt={myCon.selectedOpt} setSelectedOpt={myCon.setSelectedOpt}/>
+          <OptionBox optData={optData} selectedOpt={myCon.selectedOpt} setSelectedOpt={myCon.setSelectedOpt} selOptData={selOptData} setSelOptData={setSelOptData}/>
           {/* 4. 옵션 선택 표시 리스트 */}
           {/* 테이블 컴포넌트 */}
-          <OptionTable optData={optData} selectedOpt={myCon.selectedOpt} setSelectedOpt={myCon.setSelectedOpt}/>
+          <OptionTable selData={selData} optData={optData} selectedOpt={myCon.selectedOpt} setSelectedOpt={myCon.setSelectedOpt} selOptData = {selOptData} setSelOptData={setSelOptData}/>
           {/* 5. btn area */}
           <div className="btn-wrap bt-padding80">
             <button
@@ -104,28 +107,6 @@ function ShopCustomCont({ catName, products}) {
                 // 2. 로컬스 읽어와서 파싱하기
                 let locals = localStorage.getItem("cart-data");
                 locals = JSON.parse(locals);
-                // console.log(typeof locals);
-
-                // 3. 기존 데이터 중 동일한 데이터 거르기
-                // 파싱된 로컬스 데이터 중 idx항목을 검사하여
-                // idx로 넣을 상품 idx와 같은 것이 있으면
-                // 메시지와 함께 리턴처리하여 입력을 막아준다!
-
-                // [ 방법1 ]
-                // 배열 중복검사시 사용하는 메서드: some()
-                // -> some()은 중복데이터 발생시 true리턴
-                // 시켜서 구분해준다!
-                // let retSts = locals.some(v=>{
-                //   if(v.idx==idx) return true;
-                // });
-
-                // [ 방법2 ]
-                // 배열.includes(비교값)
-                // 주의사항: 배열값이 단일값이어야 비교가된다!
-                // 예) let aa = [11,22,33]
-                // aa.includes(22) -> 있으면 결과 true!
-
-                // console.log(locals.length);
                 if (locals.length > 0) {
                   // idx값만 모아서 다른 배열만들기
                   let newLocals = locals.map((v) => v.idx + v.category);

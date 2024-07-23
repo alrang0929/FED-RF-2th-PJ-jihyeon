@@ -43,8 +43,7 @@ export default function Layout() {
   const [cartSts, setCartSts] = useState(false);
 
   //카트리스트 추가옵션값 저장 상태변수
-  const{selectedOpt, setSelectedOpt} = useState(null);
-  
+  const[selectedOpt, setSelectedOpt] = useState([]);
 
   // 로컬스 카트 데이터 존재여부에 따라 상태값 변경
   if (localsCart) {
