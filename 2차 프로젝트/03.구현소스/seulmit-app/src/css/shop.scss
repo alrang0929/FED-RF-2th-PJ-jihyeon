@@ -116,6 +116,7 @@ button.button-main.L-margin10{
   margin: 0 auto;
   padding: 10vh;
 
+
   .pd-list {
     margin: 0 auto;
     ul {
@@ -373,6 +374,8 @@ table {
 
 //////midea////////////////////////////////////
 @media screen and (max-width: 900px) {
+
+
   #product-cont {
     .top-Cont {
       // flex-direction: column;
@@ -393,4 +396,21 @@ table {
       }
     }
   }
-} /////900px
+
+  #sell-pd-list {
+    .pd-list {
+        li {
+    width: calc(100% /2);
+   }
+  }
+}
+} //////900px
+@media screen and (max-width: 500px) {
+  #sell-pd-list {
+    .pd-list {
+        li {
+    width: calc(100% /1);
+   }
+  }
+}
+} //////500px

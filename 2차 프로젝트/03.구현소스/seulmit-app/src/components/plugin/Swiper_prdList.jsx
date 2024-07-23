@@ -52,13 +52,15 @@ export default function SwiperPrdList() {
         
         //스와이퍼 미디어쿼리
         breakpoints={{
-          900: {
-              slidesPerView: 3,
-          },
-          500: {
+          
+       
+          700: {
               slidesPerView: 1,
               // spaceBetween: 0,
           },
+          900: {
+            slidesPerView: 3,
+        },
   
         }}
      
