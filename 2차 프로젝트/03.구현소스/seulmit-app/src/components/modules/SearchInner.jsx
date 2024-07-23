@@ -115,7 +115,7 @@ function SearchInner() {
               className="close-btn"
               onClick={() => {
                 searchClose();
-                console.log("엉엉");
+                // console.log("엉엉");
               }}
             >
               <span className="icon-img material-symbols-outlined search-btn">
