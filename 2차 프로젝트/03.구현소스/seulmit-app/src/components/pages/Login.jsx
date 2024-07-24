@@ -225,7 +225,7 @@ export default function Login() {
                         <h3>슬밋 Seulmit</h3>
                         <h3>슬밋 아우라 뷰티가 시작됩니다</h3>
                     </div>
-                    {/* <form action=""> */}
+                    <form action="">
                     {/* input-wrap */}
                     <div className="input-wrap">
                         {/*2. 아이디 입력창 */}
@@ -335,7 +335,7 @@ export default function Login() {
                         </Link>
                     </div>
                     {/* btn-wrap-end */}
-                    {/* </form> */}
+                    </form>
                 </section>
             </main>
         </>
