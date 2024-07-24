@@ -154,7 +154,7 @@ export default function Layout() {
       {cartSts && <CartList />}
       <MainArea />
       <FooterArea 
-      // ival={introSts} 
+      ival={introSts} 
       />
     </sCon.Provider>
   ); /////return
