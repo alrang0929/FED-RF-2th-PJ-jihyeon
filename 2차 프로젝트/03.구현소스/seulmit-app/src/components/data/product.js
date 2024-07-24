@@ -75,7 +75,7 @@ const product = {
         { isrc: "/images/shop/face/face_02.jpg" },
       ],
       thumbCnt: 4,
-      notiId: [1],
+      notiId: [3],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
         "/images/shop/face/face_01/detail_1.jpg",
@@ -96,7 +96,7 @@ const product = {
         { isrc: "/images/shop/face/face_04.jpg" },
       ],
       thumbCnt: 6,
-      notiId: [1],
+      notiId: [2],
       opId: [1], //해당 상품에 적용되는 옵션 아이디
       detail: [
         "/images/shop/face/face_02/detail_1.jpg",

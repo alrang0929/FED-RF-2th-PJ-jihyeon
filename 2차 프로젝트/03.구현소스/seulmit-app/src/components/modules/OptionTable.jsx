@@ -89,7 +89,7 @@ function OptionTable({
         console.log("refNum 값 :", refNum);
         //5) priceNum에 담긴 배열값들을 전부 더해서 resNum 에 담기
         const resPrice = refNum.reduce((acc, cur) => acc + cur * optRef.current[pseq], 0);
-        total.text(addComma(resPrice) + "원");
+        total.text(addComma(resPrice));
         console.log("total값은?", total);
       }); //click
 
@@ -183,11 +183,11 @@ function OptionTable({
       </table>
       {/* 총합계 가격 */}
       <div
-        id="total"
+        
         className="total-price"
-        style={{ fontSize: "15px", marginBottom: "20px" }}
+        
       >
-        총<span style={{ fontSize: "30px" }}>{addComma(selData.price)}</span>원
+        총<span id="total">{addComma(selData.price)}</span>원
       </div>
     </>
   );
