@@ -34,6 +34,11 @@ export default function Intro() {
         };
 
         checkResourcesLoaded();
+
+        return()=>{
+            window.scrollTo(0,0);
+        }
+
     }, []);
     let myCon = useContext(sCon);
 
