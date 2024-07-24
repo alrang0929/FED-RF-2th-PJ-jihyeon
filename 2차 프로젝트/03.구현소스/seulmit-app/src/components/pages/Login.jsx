@@ -239,7 +239,7 @@ export default function Login() {
                                 placeholder="아이디(이메일)를 입력해주세요"
                                 value={userId}
                                 onChange={changeUserId}
-                                onKeyUp={onSubmit}
+                                // onKeyUp={onSubmit}
                             ></input>
                             {
                                 // 에러 메세지 출력
@@ -273,7 +273,7 @@ export default function Login() {
                                 placeholder="비밀번호를 입력해주세요(6~12자 이내)"
                                 value={pwd}
                                 onChange={changePwd}
-                                onKeyUp={onSubmit}
+                                // onKeyUp={onSubmit}
                             ></input>
                             {
                                 // 에러 메세지 출력
