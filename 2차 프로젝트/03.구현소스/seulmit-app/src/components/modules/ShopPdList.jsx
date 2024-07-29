@@ -4,10 +4,18 @@ import $ from "jquery";
 
 import "../../css/shop.scss";
 import { addComma } from "../func/common_fn";
+import PagingList from "./PagingList";
 
 ////import area//////////////////////////////
 
-function ShopPdList({ products }) {
+function ShopPdList({  products,
+    bindList,
+    pageNum,
+    setPageNum,
+    totalCount,
+    pgPgNum,
+    unitSize,
+    pgPgSize,}) {
     //products: products={product[selCat]} : 클릭된 메뉴의 배열
 
     // console.log("선택데이터 머불러옴",selData);
@@ -21,23 +29,7 @@ function ShopPdList({ products }) {
     //위의 selData 대신 구조분해할당
     //products로 활성화된 배열을 할당받아 맵핑
 
-    // [ 상태관리 변수 ]////////////////////
-    // 1. 페이지 번호
-    const [pageNum, setPageNum] = useState(1);
-
-    // [ 참조변수 ]///////////////////
-    //1. 전체 제품갯수 : 항목별 갯수 불러옴
-    const totalCount = useRef(products.length);
-    //2. 선택 데이터 저장 : 필요여부 추후 체크
-    const selSecord = useRef(null);
-    // ㄴ> 특정리스트 클릭시 데이터 저장을 위해 사용된 참조변수
-    const pgPgNum = useRef(1); // 페이징의 페이징 번호
-
-    //페이징 셋팅 변수//////////////////////////////////
-    //1. 페이지당 갯수 : 1페이지당 노출되는 페이지 수
-    const unitSize = 4;
-    //2. 페이징의 페이징 개수 : 한 번에 노출되는 페이징 갯수
-    const pgPgSize = 3;
+   
 
     //[ 네비게이션 ]///////////////////
     const nav = useNavigate();
@@ -105,6 +97,16 @@ onClick={() => {
 </li>
 ))}
 </div>
+{/* 페이징 컴포넌트 */}
+<PagingList
+      products={products}
+      pageNum={pageNum}
+      setPageNum={setPageNum}
+      totalCount={totalCount}
+      pgPgNum={pgPgNum}
+      unitSize={unitSize}
+      pgPgSize={pgPgSize}
+    />
 </>
 );
 }
