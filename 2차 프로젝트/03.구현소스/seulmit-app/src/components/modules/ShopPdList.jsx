@@ -22,6 +22,8 @@ function ShopPdList({ products }) {
   //위의 selData 대신 구조분해할당
   //products로 활성화된 배열을 할당받아 맵핑
 
+console.log("페이징을 위한 전체 수 확인", products.length);
+
   const nav = useNavigate();
   const clickProduct = (product) => {
     nav("/detail", { state: { product: product.idx, topcat: $(".cgmenu a.on").text() }, replace: true });

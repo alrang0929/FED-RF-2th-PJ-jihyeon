@@ -41,14 +41,7 @@ export default function Shop() {
         <Category onCat={(cat) => activeCat(cat)} selCat={myCon.selCat} />
         {/* 상품리스트 컴포넌트*/}
         <ShopPdList products={product[myCon.selCat]} />
-        {/* 페이지네이션 */}
-        {/* {pageCount > 0 && (
-          <Pagination
-            pageCount={Math.max(1, pageCount - 1)}
-            onPageChange={handlePageChange}
-            currentPage={currentPage}
-          />
-        )} */}
+       
       </section>
     </>
   );
