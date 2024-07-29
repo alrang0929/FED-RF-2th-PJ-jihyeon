@@ -1,14 +1,7 @@
 // shop 페이지 컴포넌트 ///
-import { Link } from "react-router-dom";
 import { product } from "../data/product";
-import { useContext, useEffect, useState } from "react";
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from "recoil";
+import { useContext} from "react";
+
 //컨텍스트
 import { sCon } from "./sCon";
 //CSS
@@ -18,8 +11,7 @@ import "../../css/shop.scss";
 import Category from "../modules/Category";
 import ShopPdList from "../modules/ShopPdList";
 import SubTitle from "../modules/SubTitle";
-// import Pagination from "../modules/Pagination";
-// import { productListState } from "../modules/atom";
+import PagingList from "../modules/PagingList";
 
 /////import area/////////////////////////////////////////////////
 
@@ -41,7 +33,8 @@ export default function Shop() {
         <Category onCat={(cat) => activeCat(cat)} selCat={myCon.selCat} />
         {/* 상품리스트 컴포넌트*/}
         <ShopPdList products={product[myCon.selCat]} />
-       
+        {/* 페이징 컴포넌트 */}
+        <PagingList totalCount={product[myCon.selCat]}/>
       </section>
     </>
   );
