@@ -206,13 +206,10 @@ function PagingList({
             setPageNum(landingPage);
         }; //////////// goPaging /////////////
 
-        // 페이징 요소 초기화 (예시)
-        $(pagingRef.current).somePlugin(); // 플러그인 초기화
-
         return pgCode;
 
 
-    }, [products, pageNum, pgPgSize, unitSize]);
+    }, [products]);
 
     ////////////코드 리턴구역 ////////////////
     return (
