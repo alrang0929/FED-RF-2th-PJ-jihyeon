@@ -94,7 +94,8 @@ export default function Shop() {
         pgPgSize={pgPgSize}
         />
         {/* 페이징 컴포넌트 */}
-        <PagingList products={product[myCon.selCat]}
+        <PagingList 
+        products={product[myCon.selCat]}
           pageNum={pageNum}
           setPageNum={setPageNum}
           totalCount={totalCount}
