@@ -9,7 +9,6 @@ import PagingList from "./PagingList";
 ////import area//////////////////////////////
 
 function ShopPdList({  products,
-    bindList,
     pageNum,
     setPageNum,
     totalCount,
@@ -97,16 +96,6 @@ onClick={() => {
 </li>
 ))}
 </div>
-{/* 페이징 컴포넌트 */}
-<PagingList
-      products={products}
-      pageNum={pageNum}
-      setPageNum={setPageNum}
-      totalCount={totalCount}
-      pgPgNum={pgPgNum}
-      unitSize={unitSize}
-      pgPgSize={pgPgSize}
-    />
 </>
 );
 }
