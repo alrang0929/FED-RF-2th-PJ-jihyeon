@@ -25,7 +25,7 @@ mFn.qs(".top-area").innerHTML = `
 ${
     Object.keys(cmData.gnbData).map((v) =>`
     <li>
-      <h2><a href="#">${v}</a></h2>
+      <h2><a href="sub_ourbland.html">${v}</a></h2>
       ${
         cmData.gnbData[v]=="없음"?"":`
         <div class="submenu">
