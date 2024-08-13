@@ -120,6 +120,9 @@ body * {
 
 
 /************* 002 그래픽 인포 영역 *************/
+.graphic-info-area .cbx{
+    justify-content: center;
+}
 .graphic-info-area{
     /* width: 100%; */
     /* background-color: #F5FAFF; */
@@ -159,9 +162,12 @@ body * {
 
 /************* 003 ci 영역 *************/
 
+.ci-area .cont-box{
+    justify-content: center;
+}
 .ci-area{
     padding-top: auto;
-    justify-content: center;
+    
 }
 .ci-area .imgbx{
     margin-top: auto;}
