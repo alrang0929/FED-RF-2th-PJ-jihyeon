@@ -14,21 +14,19 @@ mFn.qs(".top-area").innerHTML = `
 <div class="col-2">
           <!-- 로고박스 -->
           <h1 class="logo">
-            <a href="#">
+            <a href="index.html">
               <img src="./images/ci_w.png" alt="아모레퍼시픽 로고" />
             </a>
           </h1>
         </div>
 <div class="col-8">
 <nav class="gnb">
-<div class="ham-btn fx-box">
+<div class="ham-btn">
 <span></span>
 <span></span>
 <span></span>
 </div>
-<div class="close-btn">
-      <span></span>
-</div>
+
 <ul>
 ${
     Object.keys(cmData.gnbData).map((v) =>`

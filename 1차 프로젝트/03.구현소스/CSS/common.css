@@ -237,7 +237,7 @@ h2 a {
 }
 
 .ham-btn {
-    display: none !important;
+  display: none ;
   z-index: 1;
   align-content: space-around;
   flex-wrap: wrap;
@@ -260,8 +260,22 @@ h2 a {
   margin-top: 8px;
 }
 
+.ham-btn.active span:first-child{
+  translate: 0 13px;
+  transform: rotate(45deg);
+}
+.ham-btn.active span:nth-child(2){
+  opacity: 0;
+  /* display: none; */
+}
+.ham-btn.active span:last-child{
+  translate: 0 -13px;
+  transform: rotate(-45deg);
+}
+
+
 .close-btn {
-    display: none;
+  display: none;
   margin: 20px;
   /* background-color: red; */
   width: 80px;

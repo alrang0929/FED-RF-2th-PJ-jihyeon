@@ -75,7 +75,12 @@
     /* 브랜드 소개 섹션*/
 
       .btitbx{
-        height: 17vw;
+        height: 11vw;
+      }
+
+      .sticky h2{
+        font-size: 5rem;
+        padding: 0 0;
       }
 
       .brand-lgbx ul{
@@ -86,10 +91,15 @@
 /* 1020시작 */
 @media screen and (max-width: 1020px){
   .ham-btn{
-    display: flex !important
-    ;
+    display: flex;
   }
   .gnb ul{
     display: none;
+    margin-top: 60px;
+    transition: .2 ease-in-out;
+  }
+  .gnb.active ul {
+    display: block; /* active 클래스가 추가되면 메뉴 표시 */
+    opacity: 1;
   }
 }

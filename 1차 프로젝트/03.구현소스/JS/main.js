@@ -40,7 +40,19 @@ myFn.addEvt(window,'scroll',scrollFn.zimgScroll2);
 // }
 // zimgScroll();
 
+// 햄버거 메뉴 작동 함수
 
+  // 문서 로드 후 실행구역
+  (()=>{
+    const hamBtn = $(".ham-btn, .gnb ul");
+    const target = $(".gnb"); // 토글할 메뉴 요소 선택
+    console.log("gnb ul", target);
+  
+    hamBtn.on("click", () => {
+      hamBtn.toggleClass("active"); // 햄버거 버튼 토글
+      target.toggleClass("active"); // 메뉴 토글
+    });
+  })();
 
 ////////브랜드 리스트 슬라이드
 (() => {
