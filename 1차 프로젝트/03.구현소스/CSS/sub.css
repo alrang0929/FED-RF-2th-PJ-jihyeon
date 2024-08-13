@@ -161,6 +161,7 @@ body * {
 
 .ci-area{
     padding-top: auto;
+    justify-content: center;
 }
 .ci-area .imgbx{
     margin-top: auto;}
