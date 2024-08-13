@@ -9,9 +9,31 @@
 /* 그리드 시스템 */
 @import url(./grid_12_flex.css);
 
+/* 1320 시작 */
+@media screen and (max-width: 1320px) {
+  .top-box{
+      justify-content: space-evenly;
+  }
+  .top-box{
+    /* height: 100vh; */
+  }
+.gnb ul {
+  text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100vh;
+}
+.gnb li a{
+  font-size: 4rem;
+  padding:auto;
+  line-height: 2;
+}
+}
+/* 1320 끝 */
+
+
+/* 1200시작 */
 @media screen and (max-width: 1200px){
-
-
     /* 텍스트박스 센터 위치 보정값 */
 
     .mstext-box {
@@ -59,6 +81,15 @@
       .brand-lgbx ul{
         top: 114px;
       }
-
-
+}
+/* 1200 끝 */
+/* 1020시작 */
+@media screen and (max-width: 1020px){
+  .ham-btn{
+    display: flex !important
+    ;
+  }
+  .gnb ul{
+    display: none;
+  }
 }

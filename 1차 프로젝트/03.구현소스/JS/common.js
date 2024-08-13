@@ -21,6 +21,14 @@ mFn.qs(".top-area").innerHTML = `
         </div>
 <div class="col-8">
 <nav class="gnb">
+<div class="ham-btn fx-box">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="close-btn">
+      <span></span>
+</div>
 <ul>
 ${
     Object.keys(cmData.gnbData).map((v) =>`

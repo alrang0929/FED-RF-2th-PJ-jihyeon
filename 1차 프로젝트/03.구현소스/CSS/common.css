@@ -3,250 +3,287 @@
 /* 아모래퍼시픽 PJ : 공통 모듈 CSS - common.css */
 /* 공유기능 요소 셋팅 */
 
-body{
-    position: relative;
-    margin-top: 50px
-}
-body{
-    overflow-x: hidden;
+body {
+  position: relative;
+  margin-top: 50px;
+  overflow-x: hidden;
 }
 
-body *{
-    /* 공사중 표시 */
-    /* outline: 2px dotted red; */
+body * {
+  /* 공사중 표시 */
+  /* outline: 2px dotted red; */
 }
 
-
-.logo img{
-    height: 20px;
+.logo img {
+  height: 20px;
 }
 
 /* 0. top버튼 영역*/
-.tbtn-area{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: -4vh;
-    width: 6vw;
-    z-index: 999;
+.tbtn-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -4vh;
+  width: 6vw;
+  z-index: 999;
 }
 
 /* top 버튼 설정 */
-.btn-top{
-    top: 92%;
-    position: sticky;
-    background: #062C5E;
-    width: 80px;
-    height: 70px;
-    color: #fff;
-    right: 0vw;
-    bottom: -17vh;
-    z-index: 999;
-    float: right;
+.btn-top {
+  top: 92%;
+  position: sticky;
+  background: #062c5e;
+  width: 80px;
+  height: 70px;
+  color: #fff;
+  right: 0vw;
+  bottom: -17vh;
+  z-index: 999;
+  float: right;
 }
 
-.btn-top a{
-    display: flex;
-    flex-direction: column;
-    gap:4px;
-    color: #fff;
-
+.btn-top a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #fff;
 }
 
 /* 1. 상단영역 */
 
 /* 인디케이터 설정 */
 .indicator {
-    position: fixed;
-    width: 100%;
-    height: 10px;
-    top: 0;
-    background: #ffffff;
-    z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 10px;
+  top: 0;
+  background: #ffffff;
+  z-index: 999;
 }
 .top-area {
-    z-index: 999;
-    top: 0;
-    position: fixed;
-    width: 100%;
-
+  z-index: 999;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 
-.top-box{
-    position: relative;
-    top: 10px;
-    display: flex;
-    background-color: #062c5e00;
+.top-box {
+  position: relative;
+  /* top: 10px; */
+  display: flex;
+  background-color: #062c5e00;
 
-    transition: .4s;
+  transition: 0.4s;
 }
 /* 영역 호버시 BG 투명도 up */
-.top-box:hover{
-    background-color: #062c5e;
+.top-box:hover {
+  background-color: #062c5e;
 }
 
 /* logo */
-.logo{
-    line-height: 7;
-    /* padding: 13rem 0; */
+.logo {
+  line-height: 7;
+  /* padding: 13rem 0; */
 }
 
-.gnb{
-    /* position: relative; */
-    top: 10px;
-    margin-top: 7px;
-    z-index: 999;
-    
+.gnb {
+  /* position: relative; */
+  top: 10px;
+  margin-top: 7px;
+  z-index: 999;
 }
 /* GNB메뉴 */
-.gnb ul{
-    display: flex;
-    justify-content: center;
-    /* 메뉴 줄바꿈 방지 */
-    white-space: nowrap;
+.gnb ul {
+  display: flex;
+  justify-content: center;
+  /* 메뉴 줄바꿈 방지 */
+  white-space: nowrap;
 }
-.gnb ul>li{
-    position: relative;
-    /* 서브메뉴 부모자격 */
+.gnb ul > li {
+  position: relative;
+  /* 서브메뉴 부모자격 */
 }
 
 /* GNB링크 */
 .gnb ul a {
-    display: block;
-    padding: 0 1.5vw;
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 5;
-  }
-  
-
-
+  display: block;
+  padding: 0 1.5vw;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 5;
+}
 
 /* link icon메뉴 */
 
-.link-box ul{
-    display: flex;
-    justify-content: flex-start;
-    /* 메뉴 줄바꿈 방지 */
-    white-space: nowrap;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+.link-box ul {
+  display: flex;
+  justify-content: flex-start;
+  /* 메뉴 줄바꿈 방지 */
+  white-space: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
+.link-box ul > li {
+  position: relative;
+  padding: 0 10px;
+  line-height: 51px;
+  font-weight: 500;
 
-.link-box ul > li{
-    position: relative;
-    padding: 0 10px;
-    line-height: 51px;
-    font-weight: 500;
-
-    opacity: .5;
-    transition: .3s;
+  opacity: 0.5;
+  transition: 0.3s;
 }
-
 
 /* 호버효과 */
-.link-box ul > li:hover{
-    opacity: 1;
+.link-box ul > li:hover {
+  opacity: 1;
 }
 
 /* h2 스타일 */
-h2 a{
-    color: #fff;
-    font-weight: 400;
+h2 a {
+  color: #fff;
+  font-weight: 400;
 }
 
-.submenu{
-    left: 50%;
-    /* transform: translateX(-50%); */
-    width: 200px;
-    /* background-color: #fff; */
-    
-    text-align: center;
-    line-height: 38px;
-    font-weight: normal;
-    max-height: 0;
-    overflow: hidden;
-    transition: .4s;
+.submenu {
+  left: 50%;
+  /* transform: translateX(-50%); */
+  width: 200px;
+  /* background-color: #fff; */
+
+  text-align: center;
+  line-height: 38px;
+  font-weight: normal;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
 }
 
-.submenu a{
-    font-weight: 200;
-    color: #fff;
-    font-size: 1.6rem;
-    opacity: 0.4;
+.submenu a {
+  font-weight: 200;
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 0.4;
 
-    transition: .4s;
+  transition: 0.4s;
 }
 
-.submenu a:hover{
-    opacity: 1;
+.submenu a:hover {
+  opacity: 1;
 }
 
-.gnb ul > li:hover .submenu{
-    max-height: 400px;
+.gnb ul > li:hover .submenu {
+  max-height: 400px;
 }
 
-.submenu ol{
-    padding: 10px;
+.submenu ol {
+  padding: 10px;
 }
 
-.submenu li{
-    /* opacity: 0; */
-    transition: all .4s;
+.submenu li {
+  /* opacity: 0; */
+  transition: all 0.4s;
 }
-
 
 /* 푸터 */
 #footer-area {
-    height: 300px;
-    background: #fff;
-    margin: 40px 0;
-  }
-
-  #footer-area a{
-    padding-left: 10px;
-  }
-
-#footer-area .logo{
-margin-bottom: 20px;
-}
-  /* 푸터 sns영역*/
-  .footer-list-sns{
-    position: relative;
-    width: 100%;
-    margin: 40px 0;
-  }
-
-  .footer-list-sns ul{
-    display: flex;
-    gap: 6px;
-    text-align: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  height: 300px;
+  background: #fff;
+  margin: 40px 0;
 }
 
-
-  .footer-list-sns li a img{
-    /* float: left; */
-    width: 2.4rem;
+#footer-area a {
+  padding-left: 10px;
 }
 
-
-.follow-cp{
-    font-size: 1.4rem;
-    color: #797979;
-    display: block;
-    margin-bottom: 20px;
+#footer-area .logo {
+  margin-bottom: 20px;
+}
+/* 푸터 sns영역*/
+.footer-list-sns {
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
 }
 
-.cpr{
-    display: block;
-    margin: 40px 0;
-    color: #797979;
-
-    /* font-size: 1.5rem; */
+.footer-list-sns ul {
+  display: flex;
+  gap: 6px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
+.footer-list-sns li a img {
+  /* float: left; */
+  width: 2.4rem;
+}
+
+.follow-cp {
+  font-size: 1.4rem;
+  color: #797979;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.cpr {
+  display: block;
+  margin: 40px 0;
+  color: #797979;
+
+  /* font-size: 1.5rem; */
+}
+
+.ham-btn {
+    display: none !important;
+  z-index: 1;
+  align-content: space-around;
+  flex-wrap: wrap;
+
+  /* margin: 20px; */
+  /* background-color: blue; */
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 12px;
+  right: 10px;
+}
+
+.ham-btn span {
+  /* z-index: 99999; */
+  height: 2px;
+  width: 80px;
+  background-color: #fff;
+  display: block;
+  margin-top: 8px;
+}
+
+.close-btn {
+    display: none;
+  margin: 20px;
+  /* background-color: red; */
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  /* top: 0.2%; */
+  top: 0;
+  right: 0;
+}
+
+.close-btn span::before,
+.close-btn span::after {
+  position: absolute;
+  content: "";
+  height: 80px;
+  width: 2px;
+  background-color: #fff;
+}
+
+.close-btn span::before {
+  transform: rotate(45deg);
+}
+.close-btn span::after {
+  transform: rotate(-45deg);
+}
