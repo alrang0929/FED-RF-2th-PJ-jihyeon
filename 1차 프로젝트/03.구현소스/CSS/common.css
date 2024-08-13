@@ -65,6 +65,9 @@ body * {
   top: 0;
   position: fixed;
   width: 100%;
+  div{
+    padding-left: 20px;
+  }
 }
 
 .top-box {
@@ -274,30 +277,18 @@ h2 a {
 }
 
 
-.close-btn {
-  display: none;
-  margin: 20px;
-  /* background-color: red; */
-  width: 80px;
-  height: 80px;
-  position: fixed;
-  /* top: 0.2%; */
-  top: 0;
-  right: 0;
-}
+@media screen and (max-width: 1320px) {
+  .ham-btn{
+    display: flex;
+  }
 
-.close-btn span::before,
-.close-btn span::after {
-  position: absolute;
-  content: "";
-  height: 80px;
-  width: 2px;
-  background-color: #fff;
-}
-
-.close-btn span::before {
-  transform: rotate(45deg);
-}
-.close-btn span::after {
-  transform: rotate(-45deg);
+  .gnb ul{
+    display: none;
+    margin-top: 60px;
+    transition: .2 ease-in-out;
+  }
+  .gnb.active ul {
+    display: block; /* active 클래스가 추가되면 메뉴 표시 */
+    opacity: 1;
+  }
 }

@@ -12,21 +12,46 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0"
   />
     <!-- css -->
+    <link rel="stylesheet" href="./midea.css" />
     <link rel="stylesheet" href="./CSS/sub.css" />
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- 제이쿼리 UI -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- 제이쿼리 rotate js : transform:rotate() 를 
+        animate({rotate:'숫자각도deg'})에사용하게함! -->
+    <script src="./js/jquery.rotate.js"></script>
+    <!-- 모듈 js 호출 -->
     <script type="module" src="./JS/sub.js" ></script>
+
+    
+
 </head>
 
 <body>
  
   <!-- GNB 영역 -->
-  <div class="top-area">
-  </div>
+  <div class="top-area"></div>
   <!-- 타이틀 배너 영역 -->
-  <div id="title-area" style="position: relative;"></div>
+  <div id="tit-area" style="position: relative;">
+    <div class="titbx">
+      <div class="tit engtitfont">
+        Our Brand
+      </div>
+      <div class="desc">
+        아모레퍼시픽의 다양한 브랜드를 만나보세요
+      </div>
+    </div>
+    <div class="linebx">
+      <div class="line"></div>
+    </div>
+  </div>
   
   <div class="main-area">
     <!-- 컨텐츠 영역 -->
-    <div class="indicator"></div>
+    <!-- <div class="indicator"></div> -->
+    
     <div class="cont-wrap " id="cont-area">
       <!-- 1page / intro-->
       <div class="intro-area cont-box" id="1pg">
@@ -48,6 +73,9 @@
           </div>
         </div>
       </div>
+  </div>
+
+
     
       <!-- 2page -->
       <div class="graphic-info-area" id="2pg">
@@ -64,8 +92,12 @@
           </div>
           <!-- 이미지 박스 -->
           <div class="imgbx fx-box">
-            <img src="./images/sub01/gp01.jpg" alt="아모레퍼시픽 엠블럼">
-            <img src="./images/sub01/gp02.jpg" alt="아모레퍼시픽 그래픽">
+            <div class="imgbox">
+              <img src="./images/sub01/gp01.jpg" alt="아모레퍼시픽 엠블럼">
+            </div>
+            <div class="imgbox">
+              <img src="./images/sub01/gp02.jpg" alt="아모레퍼시픽 그래픽">
+            </div>
           </div>
         </div>
       </div>

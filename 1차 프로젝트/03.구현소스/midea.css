@@ -9,97 +9,123 @@
 /* 그리드 시스템 */
 @import url(./grid_12_flex.css);
 
-/* 1320 시작 */
-@media screen and (max-width: 1320px) {
-  .top-box{
-      justify-content: space-evenly;
-  }
-  .top-box{
-    /* height: 100vh; */
-  }
-.gnb ul {
-  text-align: right;
-  flex-direction: column;
-  align-items: flex-end;
-  height: 100vh;
-}
-.gnb li a{
-  font-size: 4rem;
-  padding:auto;
-  line-height: 2;
-}
-}
-/* 1320 끝 */
-
-
 /* 1200시작 */
-@media screen and (max-width: 1200px){
-    /* 텍스트박스 센터 위치 보정값 */
+@media screen and (max-width: 1200px) {
+  /* 텍스트박스 센터 위치 보정값 */
 
-    .mstext-box {
-        transform: translate(-40%, -50%);
-      }
+  .mstext-box {
+    transform: translate(-40%, -50%);
+  }
 
-    /* 메인 슬라이드 01 */
-    .slider01 .engtitfont h2 {
-        margin-left: auto;
-    }
+  /* 메인 슬라이드 01 */
+  .slider01 .engtitfont h2 {
+    margin-left: auto;
+  }
 
-    .slider01 .stext-box .txt {
-        width: 100%;
-        text-align-last: auto;
-        padding-left: 0;
-      }
+  .slider01 .stext-box .txt {
+    width: 100%;
+    text-align-last: auto;
+    padding-left: 0;
+  }
 
-      .slider01 .stext-box {
-        padding-bottom: 0;
-      }
+  .slider01 .stext-box {
+    padding-bottom: 0;
+  }
 
-      .slider01 .stext-box {
-        width: 100%;
-      }
+  .slider01 .stext-box {
+    width: 100%;
+  }
 
+  /* 메인 슬라이드 02 */
 
-      /* 메인 슬라이드 02 */
+  /* 기업소개 타이틀 */
+  .csubtit {
+    margin-top: -2rem;
+    margin-bottom: 0rem;
+  }
 
-      /* 기업소개 타이틀 */
-      .csubtit {
-        margin-top: -2rem;
-        margin-bottom: 0rem;
-      }
+  .txt p {
+    width: 40vw;
+  }
 
-      .txt p {
-        width: 40vw;
-      }
+  /* 브랜드 소개 섹션*/
 
-    /* 브랜드 소개 섹션*/
+  .btitbx {
+    height: 11vw;
+  }
 
-      .btitbx{
-        height: 11vw;
-      }
+  .sticky h2 {
+    font-size: 5rem;
+    padding: 0 0;
+  }
 
-      .sticky h2{
-        font-size: 5rem;
-        padding: 0 0;
-      }
+  .brand-lgbx ul {
+    top: 114px;
+  }
 
-      .brand-lgbx ul{
-        top: 114px;
-      }
+  /********************* 서브페이지 미디어쿼리 *********************/
+  .intro-area h3 {
+    font-size: 3rem;
+  }
+
+  .intro-area,
+  .graphic-info-area,
+  .ci-area {
+    padding-bottom: 2rem;
+  }
+  .intro-area.cont-box .cbx {
+    flex-direction: column;
+    align-items: center;
+  }
+  .graphic-info-area .cbx {
+    flex-direction: column;
+    align-items: center;
+  }
+  .graphic-info-area .descbx {
+    margin-right: 0;
+  }
+  .ci-area .descbx {
+    margin-right: 0;
+  }
+  .graphic-info-area .imgbx {
+    width: 80vw;
+  }
+
+  .ci-area .cbx .imgbx-wrap {
+    justify-content: center;
+  }
+  .ci-area .cbx {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .slide-area .tit-box h3 {
+    font-size: 4rem;
+  }
+  .slide-area .tit-box .desc {
+    width: 80% !important;
+  }
+  .slide-area .slide-wrap {
+    height: 387vw;
+  }
+
+  .slide-area {
+    height: 388vh;
+    padding: 6.4vw;
+  }
+  .slide-area .cont-wrap {
+    /* margin: 0 auto; */
+    width: 90%;
+  }
+  .slide-wrap .slide:nth-child(2) {
+    margin-top: 50px;
+  }
 }
+.slide-wrap .slide {
+  height: 70vh;
+}
+
 /* 1200 끝 */
 /* 1020시작 */
-@media screen and (max-width: 1020px){
-  .ham-btn{
-    display: flex;
-  }
-  .gnb ul{
-    display: none;
-    margin-top: 60px;
-    transition: .2 ease-in-out;
-  }
-  .gnb.active ul {
-    display: block; /* active 클래스가 추가되면 메뉴 표시 */
-    opacity: 1;
-  }
+@media screen and (max-width: 1020px) {
 }

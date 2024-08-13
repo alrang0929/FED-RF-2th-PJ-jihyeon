@@ -19,7 +19,17 @@ cmFn.makeFooter();
 
 
 /////////////////////슬라이드 데이터/////////////////////
+(()=>{
+  const hamBtn = $(".ham-btn, .gnb ul");
+  const target = $(".gnb"); // 토글할 메뉴 요소 선택
+  console.log("gnb ul", target);
+  console.log("hamBtn", hamBtn);
 
+  hamBtn.on("click", () => {
+    hamBtn.toggleClass("active"); // 햄버거 버튼 토글
+    target.toggleClass("active"); // 메뉴 토글
+  });
+})();
 (() => {
     /* 슬라이드 박스 */
     const sdBox = myFn.qs('.slide-wrap');

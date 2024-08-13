@@ -22,7 +22,7 @@ body * {
 #tit-area{
     padding-top: 11rem;
     padding-bottom:4rem;
-    /* background: url(../images/sub01/BG_tit.jpg) no-repeat center/cover; */
+    background: url(../images/sub01/BG_tit1.jpg) no-repeat center/cover;
 }
 
 
@@ -64,10 +64,11 @@ body * {
 #tit-area .tit{
     color: #fff;
 }
-#tit-area .desc {
+#tit-area .titbx .desc {
+    font-size: 1.6rem;
     padding-top: 3rem;
     margin: 0 auto;
-    width: 40%;
+    width: 70%;
     color: #fff;
 }
 
@@ -141,18 +142,18 @@ body * {
     text-align-last: left;
     margin-right: 4rem;
 }
-.graphic-info-area .imgbx img{
-    /* width: 100%; */
+.graphic-info-area .imgbox img{
+    width: 100%;
 }
+
 .graphic-info-area .imgbx{
-    /* margin: 0 auto; */
-    /* width: 20%; */
-    /* width: 50%; */
+        align-items: center;
+    margin: 0 auto;
+    width: 80vw;
     gap: 20px;
     padding-left: 20px;
-    /* flex-basis: calc(100% / 2); */
     flex-wrap: nowrap;
-    flex-direction: row;
+    justify-content: center;
 }
 
 
@@ -216,6 +217,7 @@ body * {
     top: 100px;
 }
 .slide-area  .line {
+
     display: block;
     top: 0;
     height: 100px;
@@ -224,6 +226,9 @@ body * {
 }  
 
 .slide-area .tit-box h3{
+    word-break: break-all; /* 긴 단어를 줄바꿈 */
+    word-wrap: break-word; /* 긴 단어를 줄바꿈 */
+    overflow-wrap: break-word; /* 긴 단어를 줄바꿈 */
 line-height: 1;
 }
     
