@@ -29,21 +29,21 @@ export default function Shop() {
   //페이징 셋팅
   // [ 상태관리 변수 ]////////////////////
     // 1. 페이지 번호
-    const [pageNum, setPageNum] = useState(1);
+    // const [pageNum, setPageNum] = useState(1);
 
-    // [ 참조변수 ]///////////////////
-    //1. 전체 제품갯수 : 값 초기화
-    const totalCount = useRef(0);
-    //2. 선택 데이터 저장 : 필요여부 추후 체크
-    // const selRecord = useRef(null);
-    // ㄴ> 특정리스트 클릭시 데이터 저장을 위해 사용된 참조변수
-    const pgPgNum = useRef(1); // 페이징의 페이징 번호
+    // // [ 참조변수 ]///////////////////
+    // //1. 전체 제품갯수 : 값 초기화
+    // const totalCount = useRef(0);
+    // //2. 선택 데이터 저장 : 필요여부 추후 체크
+    // // const selRecord = useRef(null);
+    // // ㄴ> 특정리스트 클릭시 데이터 저장을 위해 사용된 참조변수
+    // const pgPgNum = useRef(1); // 페이징의 페이징 번호
 
-    //페이징 셋팅 변수//////////////////////////////////
-    //1. 페이지당 갯수 : 1페이지당 노출되는 페이지 수
-    const unitSize = 4;
-    //2. 페이징의 페이징 개수 : 한 번에 노출되는 페이징 갯수
-    const pgPgSize = 3;
+    // //페이징 셋팅 변수//////////////////////////////////
+    // //1. 페이지당 갯수 : 1페이지당 노출되는 페이지 수
+    // const unitSize = 4;
+    // //2. 페이징의 페이징 개수 : 한 번에 노출되는 페이징 갯수
+    // const pgPgSize = 3;
 
     // const bindList = () => {
     //   // 1. 상품 데이터 선택
@@ -86,14 +86,15 @@ export default function Shop() {
         <Category onCat={(cat) => activeCat(cat)} selCat={myCon.selCat} />
         {/* 상품리스트 컴포넌트*/}
         <ShopPdList products={product[myCon.selCat]}
-        pageNum={pageNum}
-        setPageNum={setPageNum}
-        totalCount={totalCount}
-        pgPgNum={pgPgNum}
-        unitSize={unitSize}
-        pgPgSize={pgPgSize}
+        // pageNum={pageNum}
+        // setPageNum={setPageNum}
+        // totalCount={totalCount}
+        // pgPgNum={pgPgNum}
+        // unitSize={unitSize}
+        // pgPgSize={pgPgSize}
         />
         {/* 페이징 컴포넌트 */}
+        {/* 
         <PagingList 
         products={product[myCon.selCat]}
           pageNum={pageNum}
@@ -103,6 +104,8 @@ export default function Shop() {
           unitSize={unitSize}
           pgPgSize={pgPgSize}
         />
+        
+        */}
       </section>
     </>
   );
