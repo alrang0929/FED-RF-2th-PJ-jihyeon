@@ -338,9 +338,10 @@ body * {
 .brand-lgbx ul{
   z-index: 1;
   transform: translateX(-50%);
+  top: 14%;
   left: 50%;
   position: absolute;
-  padding: 4vw 0;
+  padding: 1.3vw 0;
   flex-basis: calc(100%/5);
   /* background-color: red; */
   margin: 0 auto;
@@ -428,7 +429,7 @@ body * {
   position: sticky;
   bottom: -1vw;
   top: 0vw;
-  height: 12vw;
+  height: 6.2vw;
   background: #fff;
   z-index: 1;
 
