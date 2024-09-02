@@ -12,7 +12,6 @@
   --padding110: 110px;
 }
 
-
 //변수영역////////////////////////////////////////
 
 //GNB 영역
@@ -96,7 +95,6 @@ body {
       .sub-menu {
         position: relative;
         .sub-inner {
-
           display: none;
 
           text-align: left;
@@ -114,8 +112,8 @@ body {
             font-size: 13px;
             // opacity: 0;
           }
-          ol{
-            li{
+          ol {
+            li {
               position: relative;
             }
           }
@@ -293,9 +291,9 @@ body {
       display: block;
     }
     #R-menu-wrap {
-      .icon-item{
+      .icon-item {
         margin-left: 8px !important;
-        span{
+        span {
           margin-left: 8px !important;
         }
       }
@@ -355,5 +353,10 @@ body {
         left: 50%;
       }
     }
+   
   } //gnb
+
+  #header-area #gnb-area #R-menu-wrap ul li > a{
+    display: none !important;
+  }
 } ////////480

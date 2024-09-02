@@ -37,7 +37,7 @@ export default function SwiperPrdList() {
   return (
     <>
       <Swiper
-        slidesPerView={5}
+        // slidesPerView={5}
         spaceBetween={20}
         pagination={{
           clickable: true,

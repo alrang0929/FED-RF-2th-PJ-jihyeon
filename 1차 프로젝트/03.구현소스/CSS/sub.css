@@ -150,9 +150,9 @@ body * {
 }
 
 .graphic-info-area .imgbx{
-        align-items: center;
-    margin: 0 auto;
-    width: 80vw;
+        /* align-items: center; */
+    /* margin: 0 auto; */
+    /* width: 80vw; */
     gap: 20px;
     padding-left: 20px;
     flex-wrap: nowrap;
@@ -164,6 +164,7 @@ body * {
 
 .ci-area .cont-box{
     justify-content: center;
+    padding-bottom: 10rem;
 }
 .ci-area{
     padding-top: auto;
@@ -211,7 +212,7 @@ body * {
 }
 
 .cont-wrap{
-    width: 60%;
+    max-width: 70%;
     margin: 0 auto;
     background: #fff;
     padding: 5vw ;
