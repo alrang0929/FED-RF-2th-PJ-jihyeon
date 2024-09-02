@@ -310,8 +310,9 @@ body {
       line-height: 2;
 
       .close-btn {
+        position: relative;
+        right: -24vw;
         display: block;
-        text-align: right;
         background: transparent;
         border: 1px solid transparent;
         color: #fff;
@@ -344,7 +345,7 @@ body {
   }
 } ///////900px///////////////////////////
 
-@media screen and (max-width: 480) {
+@media screen and (max-width: 480px) {
   #gnb-area {
     padding: 6px;
     #L-menu-wrap {
@@ -355,8 +356,8 @@ body {
     }
    
   } //gnb
-
+  
   #header-area #gnb-area #R-menu-wrap ul li > a{
-    display: none !important;
+    display: none;
   }
 } ////////480
