@@ -1,0 +1,8 @@
+
+240903
+1. 개발환경 셋팅
+    1) react, scss, jquery 설치
+    2) module, plugin은 폴더 내 별도 css 폴더 셋팅
+    3) data, 가이드문서는 기존 프로잭트 data 그대로 사용,
+    4) react Router 사용하여 페이지 이동관리
+        router은 index.js 에 설정하며 최상위 컴포넌트는 Layout.jsx

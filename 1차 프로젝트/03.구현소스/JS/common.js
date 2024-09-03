@@ -63,7 +63,7 @@ mFn.qs("#footer-area").innerHTML =`
   </div>
   <!-- 이용약관 및 이동 메뉴 -->
   <div class="link-wrap">
-    <a href="#">윤리경</a>
+    <a href="#">윤리경dud</a>
     <a href="#">인재채용</a>
     <a href="#">고객서비스</a>
     <a href="#">글로벌 네트워크</a>
