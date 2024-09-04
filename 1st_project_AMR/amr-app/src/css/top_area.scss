@@ -17,19 +17,18 @@ header {
     color: #fff;
     font-weight: 300;
   }
-  &:hover .search-icon{
+  &:hover .search-icon {
     color: #fff;
   }
-  &:hover .ham-btn span{
+  &:hover .ham-btn span {
     background-color: #fff;
-  } 
+  }
   .logo {
     width: 10em;
     img {
       width: 100%;
     }
   } //logo
-
 
   .menu-wrap {
     gap: 2em;
@@ -49,8 +48,8 @@ header {
       }
     }
     & > li > a {
-        position: relative;
-        &::after{
+      position: relative;
+      &::after {
         content: "";
         border-bottom: 1px solid #fff;
         position: absolute;
@@ -60,33 +59,32 @@ header {
         left: 0;
 
         transition: all 0.2s ease-in-out;
-        }
-        &:hover::after{
-            content: "";
-            left: 0;
-            width: 100%;
-            font-weight: 400;
-        }
+      }
+      &:hover::after {
+        content: "";
+        left: 0;
+        width: 100%;
+        font-weight: 400;
+      }
     } // 라인 애니 사용위한 li선택자
-    li{
+    li {
+      &:hover .sub-menu {
+        padding-top: 1em;
+        height: 283px;
+      }
+    } //li
 
-        &:hover .sub-menu {
-            padding-top: 1em;
-            height: 283px;
+    .search-box {
+      color: #000;
+      a {
+        .search-icon {
+          font-size: 1.6rem;
         }
-    }//li
-
-    .search-box{
-        color: #000;
-        a{
-            
-            width: 40px;
-        }
+      }
     }
-  }//menu-wrap
+  } //menu-wrap
 
   .ham-btn {
-
     display: none;
 
     align-content: space-around;
@@ -105,18 +103,18 @@ header {
       background-color: $main-color;
       display: block;
       margin-top: 8px;
-      transition: .2s ease-in-out;
+      transition: 0.2s ease-in-out;
     }
-    
-    &:hover span:first-child{
+
+    &:hover span:first-child {
       translate: 0 13px;
       transform: rotate(45deg);
     }
-    &:hover span:nth-child(2){
+    &:hover span:nth-child(2) {
       opacity: 0;
       /* display: none; */
     }
-    &:hover span:last-child{
+    &:hover span:last-child {
       translate: 0 -13px;
       transform: rotate(-45deg);
     }
@@ -127,18 +125,19 @@ header {
     width: 40px; /* 초기 너비: 아이콘 크기 */
     transition: width 0.3s ease-in-out; /* 너비 변화에 애니메이션 적용 */
   }
-  
-  .search-box:hover { /* .search-box 내부 요소가 포커스를 얻었을 때 */
+
+  .search-box:hover {
+    /* .search-box 내부 요소가 포커스를 얻었을 때 */
     width: 200px; /* 원하는 너비로 변경 */
   }
-  
+
   .search-box input {
     flex-grow: 1; /* 빈 공간을 채우도록 확장 */
     margin-left: 10px; /* 아이콘과 입력 필드 사이 간격 */
     opacity: 0; /* 초기 투명도 0 */
     transition: opacity 0.3s ease-in-out; /* 투명도 변화에 애니메이션 적용 */
   }
-  
+
   .search-box:hover input {
     opacity: 1; /* 포커스 시 투명도 1 */
   }
