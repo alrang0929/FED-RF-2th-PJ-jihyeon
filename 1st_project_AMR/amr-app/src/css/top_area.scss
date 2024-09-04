@@ -1,8 +1,8 @@
 @import "./variable/common_variable.scss";
 header {
-  padding: 1.6em;
+  padding: 1em;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 2em;
 
   transition: 0.2s ease-in-out;
@@ -32,13 +32,30 @@ header {
 
   .menu-wrap {
     gap: 2em;
+    align-items: center;
+    position: relative;
     .sub-menu {
+      z-index: -1;
+      opacity: 0;
+      top: 0;
+      position: absolute;
       overflow: hidden;
       height: 0;
+
       line-height: 2.2;
       font-size: 0.9em;
+      background: $main-color;
+      padding: 10px 20px;
 
-      transition: 0.2s ease-in-out;
+
+      transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out; /* 애니메이션 추가 */
+
+      &:hover { 
+        opacity: 1;
+        padding-top: 1em;
+        height: 283px;
+      }
+
       a {
         opacity: 0.5;
       }
@@ -49,6 +66,7 @@ header {
     }
     & > li > a {
       position: relative;
+      color: $basic-font-color;
       &::after {
         content: "";
         border-bottom: 1px solid #fff;
@@ -67,15 +85,16 @@ header {
         font-weight: 400;
       }
     } // 라인 애니 사용위한 li선택자
-    li {
-      &:hover .sub-menu {
+
+     & li:hover + .sub-menu,
+      .sub-menu:hover { 
+        opacity: 1;
         padding-top: 1em;
         height: 283px;
       }
-    } //li
 
     .search-box {
-      color: #000;
+      color: $basic-font-color;
       a {
         .search-icon {
           font-size: 1.6rem;
@@ -107,7 +126,7 @@ header {
     }
 
     &:hover span:first-child {
-      translate: 0 13px;
+      translate: 0 9px;
       transform: rotate(45deg);
     }
     &:hover span:nth-child(2) {
@@ -115,30 +134,80 @@ header {
       /* display: none; */
     }
     &:hover span:last-child {
-      translate: 0 -13px;
+      translate: 0 -14px;
       transform: rotate(-45deg);
     }
   }
   .search-box {
+    position: relative;
     align-items: center; /* 수직 가운데 정렬 */
     overflow: hidden; /* 넘치는 부분 숨기기 */
-    width: 40px; /* 초기 너비: 아이콘 크기 */
+    width: 4rem; /* 초기 너비: 아이콘 크기 */
     transition: width 0.3s ease-in-out; /* 너비 변화에 애니메이션 적용 */
-  }
+    // 밑줄 애니를 위한 가상요소
+    &::after{
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      position: absolute;
+      width: 0%;
+      border-bottom: 1px solid #fff;
+      transition: .3s ease-in-out;
+     }
+     &:hover::after{
+      opacity: 1;
+      left: 0;
+      width: 100%;
+    }
+    //  호버시
+    &:hover {
+      /* .search-box 내부 요소가 포커스를 얻었을 때 */
+      width: 300px; /* 원하는 너비로 변경 */
+    }
 
-  .search-box:hover {
-    /* .search-box 내부 요소가 포커스를 얻었을 때 */
-    width: 200px; /* 원하는 너비로 변경 */
-  }
-
-  .search-box input {
-    flex-grow: 1; /* 빈 공간을 채우도록 확장 */
-    margin-left: 10px; /* 아이콘과 입력 필드 사이 간격 */
-    opacity: 0; /* 초기 투명도 0 */
-    transition: opacity 0.3s ease-in-out; /* 투명도 변화에 애니메이션 적용 */
-  }
-
-  .search-box:hover input {
-    opacity: 1; /* 포커스 시 투명도 1 */
+    
+    .search-icon{
+      font-size: 1.7rem;
+    } //search-icon
+    
+    & input {
+      flex-grow: 1; /* 빈 공간을 채우도록 확장 */
+      margin-left: 10px; /* 아이콘과 입력 필드 사이 간격 */
+      opacity: 0; /* 초기 투명도 0 */
+      &:focus {
+        outline: none; 
+      }
+      border: transparent;
+      background-color: transparent;
+      color: #fff;
+      transition: opacity 0.3s ease-in-out; /* 투명도 변화에 애니메이션 적용 */
+    }
+    
+    &:hover input {
+      opacity: 1; /* 포커스 시 투명도 1 */
+    }
   }
 } //header
+
+
+@media screen and (max-width: 1000px) {
+  header .menu-wrap > li > a{
+    font-size: .8rem;
+  }
+}//1000px
+@media screen and (max-width: 890px){
+  header{
+    flex-direction: column;
+  }
+  .ham-btn{
+    display: flex !important;
+  }
+  header .menu-wrap {
+    flex-direction: column;
+  }
+  header .search-box{
+    display: none;
+  }
+}//890px
