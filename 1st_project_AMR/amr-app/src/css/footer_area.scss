@@ -1,3 +1,46 @@
-footer{
+@import "./variable/common_variable.scss";
+// footer 하단 패딩 공통 설정
+footer {
+  .logo {
+    margin: 0 auto;
+    padding: 2em;
+    width: 14em;
+    img {
+      width: 100%;
+    }
+  } //logo
+  .link-wrap {
+    padding-bottom: 2em;
+    justify-content: center;
+    gap: 20px;
+    a{
+        color: $basic-font-color;
+        font-size: $annotation-size;
+    }
+  } //link-wrap
+  .footer-list-sns {
     text-align: center;
+    .sns-icon-wrap {
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      li {
+        width: 1.6em;
+        a {
+          opacity: 0.4;
+          transition: .2s ease-in-out;
+          img {
+            width: 100%;
+          }
+          &:hover{
+            opacity: 1;
+          }
+        }
+      } //li
+    } //sns-icon-wrap
+    .cpr {
+      font-size: $annotation-size;
+    }
+  } //footer-list-sns
 }

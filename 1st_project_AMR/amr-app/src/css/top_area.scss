@@ -1,0 +1,145 @@
+@import "./variable/common_variable.scss";
+header {
+  padding: 1.6em;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+
+  transition: 0.2s ease-in-out;
+  &:hover {
+    background-color: $main-color;
+  }
+  // 호버시 로고 이미지 교체
+  &:hover .logo img {
+    content: url("../../public/images/ci_w.png");
+  }
+  &:hover .menu-wrap a {
+    color: #fff;
+    font-weight: 300;
+  }
+  &:hover .search-icon{
+    color: #fff;
+  }
+  &:hover .ham-btn span{
+    background-color: #fff;
+  } 
+  .logo {
+    width: 10em;
+    img {
+      width: 100%;
+    }
+  } //logo
+
+
+  .menu-wrap {
+    gap: 2em;
+    .sub-menu {
+      overflow: hidden;
+      height: 0;
+      line-height: 2.2;
+      font-size: 0.9em;
+
+      transition: 0.2s ease-in-out;
+      a {
+        opacity: 0.5;
+      }
+      li:hover a {
+        opacity: 1;
+        transition: 0.1s ease-in-out;
+      }
+    }
+    & > li > a {
+        position: relative;
+        &::after{
+        content: "";
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        font-weight: 100;
+        bottom: 0;
+        width: 0;
+        left: 0;
+
+        transition: all 0.2s ease-in-out;
+        }
+        &:hover::after{
+            content: "";
+            left: 0;
+            width: 100%;
+            font-weight: 400;
+        }
+    } // 라인 애니 사용위한 li선택자
+    li{
+
+        &:hover .sub-menu {
+            padding-top: 1em;
+            height: 283px;
+        }
+    }//li
+
+    .search-box{
+        color: #000;
+        a{
+            
+            width: 40px;
+        }
+    }
+  }//menu-wrap
+
+  .ham-btn {
+
+    display: none;
+
+    align-content: space-around;
+    position: fixed;
+    flex-wrap: wrap;
+
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    right: 0;
+    margin: 1em 1.9em;
+    & span {
+      /* z-index: 99999; */
+      height: 2px;
+      width: 40px;
+      background-color: $main-color;
+      display: block;
+      margin-top: 8px;
+      transition: .2s ease-in-out;
+    }
+    
+    &:hover span:first-child{
+      translate: 0 13px;
+      transform: rotate(45deg);
+    }
+    &:hover span:nth-child(2){
+      opacity: 0;
+      /* display: none; */
+    }
+    &:hover span:last-child{
+      translate: 0 -13px;
+      transform: rotate(-45deg);
+    }
+  }
+  .search-box {
+    align-items: center; /* 수직 가운데 정렬 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+    width: 40px; /* 초기 너비: 아이콘 크기 */
+    transition: width 0.3s ease-in-out; /* 너비 변화에 애니메이션 적용 */
+  }
+  
+  .search-box:hover { /* .search-box 내부 요소가 포커스를 얻었을 때 */
+    width: 200px; /* 원하는 너비로 변경 */
+  }
+  
+  .search-box input {
+    flex-grow: 1; /* 빈 공간을 채우도록 확장 */
+    margin-left: 10px; /* 아이콘과 입력 필드 사이 간격 */
+    opacity: 0; /* 초기 투명도 0 */
+    transition: opacity 0.3s ease-in-out; /* 투명도 변화에 애니메이션 적용 */
+  }
+  
+  .search-box:hover input {
+    opacity: 1; /* 포커스 시 투명도 1 */
+  }
+} //header

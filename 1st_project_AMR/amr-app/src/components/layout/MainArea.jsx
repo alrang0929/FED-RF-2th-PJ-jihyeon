@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom";
 function MainArea(props) {
     /////코드 리턴구역//////////////////////////////////////////
     return (
-        <div>
+        <main>
           
-        </div>
+        </main>
     );
 }
 
