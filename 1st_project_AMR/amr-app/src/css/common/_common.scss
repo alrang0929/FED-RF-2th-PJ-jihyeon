@@ -1,0 +1,27 @@
+// 폰트셋팅
+// 텍스트 기본 폰트: 프리텐다드
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://use.typekit.net/jyj1can.css");
+
+// 2. 영문 타이틀: miller-display
+
+// font-family: "miller-display", serif;
+// font-weight: 400;
+// font-style: normal;
+// Miller Display Italic
+// font-family: "miller-display", serif;
+// font-weight: 400;
+// font-style: italic;
+// Miller Display Bold
+// font-family: "miller-display", serif;
+// font-weight: 700;
+// font-style: normal;
+// unicode-range: U+0041-005A
+
+
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; 
+}
+
