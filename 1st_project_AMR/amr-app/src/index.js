@@ -1,26 +1,17 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-import { Routes, Route, } from "react-router-dom";
-import Layout from './components/layout/Layout';
-import Main from './components/pages/Main';
-import Brand from './components/pages/Brand';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-export default function MainComponent(){
-  return(
-    <>
-    <Routes>
-      <Route path='/' element={<Layout/>}>
-      <Route index element={<Main/>}/>
-      <Route path='/Brand' element={<Brand/>}/>
-      </Route>
-    </Routes>
-    </>
-  );
-}
-
-//root객체 생성
-const root = ReactDOM.createRoot(document.querySelector('#root'));
-
-//출력하기
-root.render(<MainComponent />);
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery-ui-dist": "^1.13.3",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "react-router-dom": "^6.26.1",
+    "swiper": "^11.1.12"
+  }
+}
