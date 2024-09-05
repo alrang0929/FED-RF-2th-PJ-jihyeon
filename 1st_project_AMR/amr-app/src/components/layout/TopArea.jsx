@@ -4,12 +4,22 @@ import { Link } from "react-router-dom";
 import "../../css/top_area.scss";
 import { IoIosSearch } from "react-icons/io";
 function TopArea(props) {
-  // 화면랜더링구역//////////////////////////////////////////
+  /****************** 상태관리변수 ******************/
+  // 1. menu-wrap의 표시 상태 관리
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // 1. ham-btn 클릭 이벤트 처리
+  const handleHamBtnClick = () => {
+    setIsMenuOpen(!isMenuOpen); // 상태 토글
+  };
+
+  // 화면랜더링구역//////////////////////////////////////////
+  
+  
   //코드리턴구역////////////////////////////////////////////////////
   return (
     <>
-    <header className="fxbox">
+    <header className={`fxbox ${isMenuOpen ? 'open' : ''}`}>
       {/* <!-- 로고박스 --> */}
       <Link to="/">
         <h1 className="logo">
@@ -19,8 +29,9 @@ function TopArea(props) {
           />
         </h1>
       </Link>
-      <nav>
-        <ul className="menu-wrap fxbox">
+
+        {/* isMenuOpen이 ture냐? open 클래스 추가 : 아니냐? 빈것 */}
+        <ul className={`menu-wrap fxbox ${isMenuOpen ? 'open' : ''}`}>
           {Object.keys(gnbData).map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
 
@@ -39,7 +50,6 @@ function TopArea(props) {
             </li>
           ))}
         </ul>
-      </nav>
         <div className="search-box fxbox">
           <a href=""
           onClick={(e)=> e.preventDefault }
@@ -51,7 +61,8 @@ function TopArea(props) {
             defaultValue={"검색어를 입력해주세요"}
             />
         </div>
-      <div className="ham-btn">
+        
+      <div className="ham-btn" onClick={handleHamBtnClick}>
         <span></span>
         <span></span>
         <span></span>

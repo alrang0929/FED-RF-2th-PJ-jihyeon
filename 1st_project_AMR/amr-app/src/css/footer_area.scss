@@ -1,6 +1,7 @@
 @import "./variable/common_variable.scss";
 // footer 하단 패딩 공통 설정
 footer {
+  padding: 2rem;
   .logo {
     margin: 0 auto;
     padding: 2em;
@@ -12,13 +13,15 @@ footer {
   .link-wrap {
     padding-bottom: 2em;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     a{
         color: $basic-font-color;
         font-size: $annotation-size;
-    }
-  } //link-wrap
-  .footer-list-sns {
+      }
+    } //link-wrap
+    .footer-list-sns {
+    font-size: $annotation-size;
     text-align: center;
     .sns-icon-wrap {
       padding: 20px;
@@ -44,3 +47,18 @@ footer {
     }
   } //footer-list-sns
 }
+
+// 미디어쿼리///////////////
+@media screen and (max-width: 390px){
+  footer .logo{
+    width: 10rem;
+  }
+}//390
+@media screen and (max-width: 360px){
+  footer .logo{
+    width: 10rem;
+  }
+  footer .link-wrap{
+    padding: 20px;
+  }
+}//360

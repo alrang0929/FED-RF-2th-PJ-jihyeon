@@ -47,10 +47,9 @@ header {
       background: $main-color;
       padding: 10px 20px;
 
-
       transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out; /* 애니메이션 추가 */
 
-      &:hover { 
+      &:hover {
         opacity: 1;
         padding-top: 1em;
         height: 283px;
@@ -86,12 +85,12 @@ header {
       }
     } // 라인 애니 사용위한 li선택자
 
-     & li:hover + .sub-menu,
-      .sub-menu:hover { 
-        opacity: 1;
-        padding-top: 1em;
-        height: 283px;
-      }
+    & li:hover + .sub-menu,
+    .sub-menu:hover {
+      opacity: 1;
+      padding-top: 1em;
+      height: 283px;
+    }
 
     .search-box {
       color: $basic-font-color;
@@ -114,7 +113,7 @@ header {
     height: 2rem;
     top: 0;
     right: 0;
-    margin: 1em 1.9em;
+    margin: 0.6em 1.9em;
     & span {
       /* z-index: 99999; */
       height: 2px;
@@ -145,7 +144,7 @@ header {
     width: 4rem; /* 초기 너비: 아이콘 크기 */
     transition: width 0.3s ease-in-out; /* 너비 변화에 애니메이션 적용 */
     // 밑줄 애니를 위한 가상요소
-    &::after{
+    &::after {
       content: "";
       top: 0;
       left: 0;
@@ -154,9 +153,9 @@ header {
       position: absolute;
       width: 0%;
       border-bottom: 1px solid #fff;
-      transition: .3s ease-in-out;
-     }
-     &:hover::after{
+      transition: 0.3s ease-in-out;
+    }
+    &:hover::after {
       opacity: 1;
       left: 0;
       width: 100%;
@@ -167,47 +166,85 @@ header {
       width: 300px; /* 원하는 너비로 변경 */
     }
 
-    
-    .search-icon{
+    .search-icon {
       font-size: 1.7rem;
     } //search-icon
-    
+
     & input {
       flex-grow: 1; /* 빈 공간을 채우도록 확장 */
       margin-left: 10px; /* 아이콘과 입력 필드 사이 간격 */
       opacity: 0; /* 초기 투명도 0 */
       &:focus {
-        outline: none; 
+        outline: none;
       }
       border: transparent;
       background-color: transparent;
       color: #fff;
       transition: opacity 0.3s ease-in-out; /* 투명도 변화에 애니메이션 적용 */
     }
-    
+
     &:hover input {
       opacity: 1; /* 포커스 시 투명도 1 */
     }
   }
 } //header
 
-
 @media screen and (max-width: 1000px) {
-  header .menu-wrap > li > a{
-    font-size: .8rem;
+  header .menu-wrap > li > a {
+    font-size: 0.8rem;
+    height: 30px;
   }
-}//1000px
-@media screen and (max-width: 890px){
-  header{
+} //1000px
+@media screen and (max-width: 890px) {
+  header {
     flex-direction: column;
+    height: 30px;
   }
-  .ham-btn{
+  .ham-btn {
     display: flex !important;
   }
-  header .menu-wrap {
+  // ham-btn 클릭시 open클래스 추가하여 보이게
+
+  .menu-wrap {
+    display: flex; /* 초기 상태: 숨김 처리를 위해 flex로 변경 */
     flex-direction: column;
+    align-items: flex-start;
+    left: -100vw; /* 초기 상태: 화면 왼쪽 밖으로 숨김 */
+    opacity: 0;
+    transition: 0.2s 0.1s ease-in-out; /* 부드러운 슬라이딩 효과 */
+    background-color: $main-color;
+    .link-box a {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 200;
+    }
   }
-  header .search-box{
+  .menu-wrap.open {
+    display: flex; /* 'open' 클래스 추가 시: 표시 */
+    opacity: 1;
+    left: 0;
+    align-items: flex-start;
+    color: #fff;
+    
+    width: 80vw;
+    height: 100vh;
+    background-color: $main-color;
+  }
+  header.open {
+    height: 100vh;
+    transition: 0.2s ease-in-out;
+    background-color: $main-color;
+    .logo img {
+      content: url("../../public/images/ci_w.png");
+    }
+    .ham-btn {
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+
+  header .search-box {
     display: none;
   }
-}//890px
+} //890px
