@@ -6,3 +6,5 @@
     3) data, 가이드문서는 기존 프로잭트 data 그대로 사용,
     4) react Router 사용하여 페이지 이동관리
         router은 index.js 에 설정하며 최상위 컴포넌트는 Layout.jsx
+2. 아이콘은 react-icons 라이브러리 사용
+    import { iconsName } from "react-icons/io";

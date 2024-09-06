@@ -1,0 +1,34 @@
+.rslider-info-wrap{
+  .rslider-info {
+      position: relative;
+      left: 0;
+      display: flex;
+      width: 200%;
+      animation: slider-ani 10s linear infinite;
+    }
+    @keyframes slider-ani {
+      to {
+        left: -100%;
+      }
+    }
+   .rslider-info div {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 6vw;
+      box-sizing: border-box;
+      flex: 1;
+    }
+    
+  .rslider-info img {
+      width: 14vw;
+      margin: 20px 0;
+    }
+}//rslider-info-wrap
+
+
+
+@media screen and (max-width: 890px) {
+  .rslider-info-wrap{
+    display: none;
+  }
+} //890px

@@ -14,24 +14,25 @@ function TopArea(props) {
   };
 
   // 화면랜더링구역//////////////////////////////////////////
-  
-  
+
   //코드리턴구역////////////////////////////////////////////////////
   return (
     <>
-    <header className={`fxbox ${isMenuOpen ? 'open' : ''}`}>
-      {/* <!-- 로고박스 --> */}
-      <Link to="/">
-        <h1 className="logo">
-          <img
-            src={process.env.PUBLIC_URL + "/images/ci.png"}
-            alt="아모레퍼시픽 로고"
-          />
-        </h1>
-      </Link>
+      <header className={`fxbox ${isMenuOpen ? "open" : ""}`}>
+        {/* <!-- 로고박스 --> */}
+        <div className="logobx">
+          <Link to="/">
+            <h1 className="logo">
+              <img
+                src={process.env.PUBLIC_URL + "/images/ci.png"}
+                alt="아모레퍼시픽 로고"
+              />
+            </h1>
+          </Link>
+        </div>
 
         {/* isMenuOpen이 ture냐? open 클래스 추가 : 아니냐? 빈것 */}
-        <ul className={`menu-wrap fxbox ${isMenuOpen ? 'open' : ''}`}>
+        <ul className={`menu-wrap fxbox ${isMenuOpen ? "open" : ""}`}>
           {Object.keys(gnbData).map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
 
@@ -51,23 +52,18 @@ function TopArea(props) {
           ))}
         </ul>
         <div className="search-box fxbox">
-          <a href=""
-          onClick={(e)=> e.preventDefault }
-          >
+          <a href="" onClick={(e) => e.preventDefault}>
             <IoIosSearch className="search-icon" />
           </a>
-            <input 
-            type="text"
-            defaultValue={"검색어를 입력해주세요"}
-            />
+          <input type="text" defaultValue={"검색어를 입력해주세요"} />
         </div>
-        
-      <div className="ham-btn" onClick={handleHamBtnClick}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </header>
+
+        <div className="ham-btn" onClick={handleHamBtnClick}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
     </>
   );
 }
