@@ -24,6 +24,7 @@
     opacity: 1;
   }
   .swiper-slide {
+    transition: transform 0.5s ease-out; // 부드러운 parallax 
     .text-wrap{
         position: absolute;
         top: 50%;

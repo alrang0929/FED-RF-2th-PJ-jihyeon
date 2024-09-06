@@ -1,5 +1,70 @@
-.rslider-info-wrap{
-  .rslider-info {
+@import "./variable/common_variable.scss";
+
+/**************** 변수 리스트 ****************/
+$container-padding: 6.25rem; //100px
+$padding-smail: 1.25rem; //20px
+$padding-ragular: 2.5rem; //40px
+
+////////////////////////////////////////////////
+
+main {
+  .main-info {
+    /* 박스 사이 간격 조절 */
+    & > div:first-child {
+      padding-bottom: $padding-ragular;
+    }
+    & > div:not(:last-child) {
+      padding-bottom: $padding-ragular;
+    }
+    & > div + div {
+      padding-bottom: $padding-ragular;
+    }
+    ////////////////////////////////////
+    // 컨테이너
+    padding: $container-padding 0;
+    .title {
+      text-align: center;
+      letter-spacing: 0em;
+      span {
+        display: block;
+        color: $main-color;
+        font-size: 3.5rem;
+      }
+    }
+    .img-box {
+      margin: 0 auto;
+      width: 20%;
+      img {
+        width: 100%;
+      }
+    } //img-box
+    .desc {
+      text-align: center;
+      line-height: 1.7;
+      span {
+        display: block;
+      }
+    } //desc
+    .mcolor-mbtn {
+      margin: 0 auto;
+      width: 14rem;
+    }
+  } //main-info
+  .brand-info {
+    padding: $container-padding 0;
+    .title {
+      font-size: 4rem;
+      text-align: center;
+      color: $main-color;
+    } //title
+    .desc {
+      text-align: center;
+      padding: $padding-ragular 0;
+    }
+  }
+
+  .rslider-info-wrap {
+    .rslider-info {
       position: relative;
       left: 0;
       display: flex;
@@ -11,24 +76,25 @@
         left: -100%;
       }
     }
-   .rslider-info div {
+    .rslider-info div {
       display: flex;
       justify-content: space-between;
       padding-left: 6vw;
       box-sizing: border-box;
       flex: 1;
     }
-    
-  .rslider-info img {
+
+    .rslider-info img {
       width: 14vw;
       margin: 20px 0;
     }
-}//rslider-info-wrap
-
-
+  } //rslider-info-wrap
+} //main
 
 @media screen and (max-width: 890px) {
-  .rslider-info-wrap{
-    display: none;
+  main {
+    .rslider-info-wrap {
+      display: none;
+    }
   }
 } //890px

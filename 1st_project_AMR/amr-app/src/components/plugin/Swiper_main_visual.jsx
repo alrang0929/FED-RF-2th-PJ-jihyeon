@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "./css/swiper_main_visual.scss";
 
 // import required modules
-import { Pagination, Virtual, Parallax, Mousewheel, } from "swiper/modules";
+import { Pagination, Virtual, Parallax, Mousewheel, Autoplay } from "swiper/modules";
 
 export default function MainVisualSlide() {
   const videoRef = useRef(null);
@@ -28,20 +28,19 @@ export default function MainVisualSlide() {
   return (
     <>
       <Swiper
+       modules={[Pagination, Virtual, Parallax,Mousewheel, Autoplay]}
        onInit={handleSwiperInit}
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Pagination, Virtual, Parallax,Mousewheel]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         parallax={true}
         mousewheel={{
             releaseOnEdges: true, // 가장자리에서 마우스 휠 해제
           }}
-          
-        // autoplay={{
-        //   delay: 1000, // 슬라이드 전환 간격 (밀리초)
-        //   disableOnInteraction: false, // 사용자 상호작용 후에도 자동 재생 유지
-        // }}
         className="mySwiper"
       >
         <SwiperSlide data-swiper-parallax="-23%">

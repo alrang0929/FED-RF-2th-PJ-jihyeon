@@ -1,0 +1,73 @@
+.brand-info {
+  .brand-swiper {
+    height: 100vh;
+    position: relative;
+    .button-wrap {
+      position: absolute;
+      left: 50%;
+      top: 10.6%;
+      z-index: 1;
+      translate: -50% 0;
+      gap: 30px;
+      button {
+        position: relative;
+
+        background: transparent;
+        border: transparent;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: .2s ease-in-out;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          background-color: #fff;
+          height: 1px;
+          width: 0%;
+          transition: .2s ease-in-out;
+        }
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+          &::after {
+            left: 0;
+            width: 100%;
+          }
+        }
+       
+      } //button
+    } //button-wrap
+    .swiper-wrapper {
+      .swiper-slide {
+        transition: transform 0.5s ease-out; // 부드러운 parallax 효과를 위한 transition 추가
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .img-wrap {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          translate: -50% -50%;
+          .imgbox {
+            margin: 0 auto;
+            width: 30%;
+            img {
+              width: 100%;
+            }
+          }
+          .desc {
+            line-height: 1.7;
+            span {
+              color: #fff;
+              font-weight: 200;
+              display: block;
+            }
+          } //desc
+        } //imgbox
+      } //swiper-slide
+    } //swiper-wrapper
+  } //brand-swiper
+} //brand-info

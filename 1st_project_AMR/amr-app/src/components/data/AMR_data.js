@@ -32,7 +32,7 @@ const pdData =[
     name:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
     price:"29,400",},
 ]
-const blList = [
+const brandList = [
 {
   idx: 1,
   title:"iope",
@@ -41,41 +41,66 @@ const blList = [
   고객의 피부를 정확하게 진단하고, 차별화된 기술력을
   통해 고효능의 성분을 안전하고 효과적으로 피부에
   전달합니다.`,
+  isrc:{
+    bg:"/images/brand_bg_iope.jpg",
+    thumb:"/images/brand_thm_iope.jpg",
+    button: "/images/bi_iope.png",
+  },
 },
 {
   idx: 2,
   title:"hanyul",
   text:`한율은 피부가 건강하게 빛나는 한국 여성의 스킨케어 비법을 전파하는 브랜드 입니다.
   매일 꾸준히 피부와 마음의 ‘비움’과 ‘채움’ 균형을 찾아 관리한 것이 본연의 피부 그 자체로 좋아보이는 한국 여성의 ‘K-glass Skin’의 비결이라고 한율은 생각합니다.`,
+  isrc:{
+    bg:"/images/brand_bg_hanyul.jpg",
+    thumb:"/images/brand_thm_hanyul.jpg",
+    button: "/images/bi_hanyul.png",
+  },
 },
 {
   idx: 3,
   title:"laneige",
-  text:`자신의 피부가 가진 건강함을 되찾을 수 있도록 라네즈는 오늘도 당신의 피부를 위한 최적의 솔루션을 찾기 위해 분석하고 연구합니다.<br>
+  text:`자신의 피부가 가진 건강함을 되찾을 수 있도록 라네즈는 오늘도 당신의 피부를 위한 최적의 솔루션을 찾기 위해 분석하고 연구합니다.^
 
   라네즈가 선사하는 피부 솔루션으로 피부 본연의 건강한 빛을 되찾고 더 나아가 스스로를 믿고 자신감을 가지고 나아가세요.
-  <br>
+  ^
   
-  라네즈와 함께라면 언제나 빛나고 아름다울 거에요.<br>
+  라네즈와 함께라면 언제나 빛나고 아름다울 거에요.^
   FEEL the GLOW with LANEIGE`,
+  isrc:{
+    bg:"/images/brand_bg_laneige.jpg",
+    thumb:"/images/brand_thm_laneige.jpg",
+    button: "/images/bi_laneige.png",
+  },
 },
 {
   idx: 4,
   title:"mamonde",
-  text:`Hyper Flora™는 꽃에서 찾은 효능 성분과 부스팅 성분을 결합하여 피부 시너지를 생성하는 스킨케어 솔루션 입니다.<br>
+  text:`Hyper Flora™는 꽃에서 찾은 효능 성분과 부스팅 성분을 결합하여 피부 시너지를 생성하는 스킨케어 솔루션 입니다.^
 
   마몽드는 고객들이 자신만의 독특한 방식으로 삶을 꽃 피울 수 있도록, 경계 없는 혁신을 바탕으로 나만의 아름다움을 만들어 나갑니다.`,
+  isrc:{
+    bg:"/images/brand_bg_mamonde.jpg",
+    thumb:"/images/brand_thm_mamonde.jpg",
+    button: "/images/bi_mamonde.png",
+  },
 },
 {
   idx: 5,
   title:"sulwhasoo",
   text:`예술과 헤리티지 정신으로 아름다움을 창조합니다.
-  <br>
+  ^
   우리의 고유한 헤리티지와 독자적인 피부 과학을 동력으로
   시간과 세대를 초월하는 예술 작품과도 같은 제품을 만들어 냅니다.
-  <br>
+  ^
   세상 모든 사람들이 그들이 가진 헤리티지를 바탕으로
   자신만의 아름다움을 만들 수 있도록 영감을 불어넣을 것입니다.`,
+  isrc:{
+    bg:"/images/brand_bg_sulwhasoo.jpg",
+    thumb:"/images/brand_thm_sulwhasoo.jpg",
+    button: "/images/bi_sulwhasoo.png",
+  },
 },
 
 ]
@@ -236,4 +261,4 @@ const mslideData =[
 
   
 /* 내보내기 */
-export {sdData,blList,pdData,storyData,newsData,mslideData};
+export {sdData,brandList,pdData,storyData,newsData,mslideData};
