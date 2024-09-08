@@ -1,0 +1,59 @@
+@import "../../../css/variable/common_variable.scss";
+@import "../../../css/variable/interval_variable.scss";
+.news-area{
+    .news-slide-wrap{
+        // width: 80%;
+        margin: 0 auto;
+        padding: $container-padding 0;
+        .mySwiper{
+            // border: 1px solid red;
+            position: relative;
+            width: 70vw;
+            // padding: 0 100px;
+            .swiper-wrapper{
+                justify-content: center;
+                .swiper-slide{
+                cursor: pointer;
+                .img-box{
+                    border: 1px solid #c8c8c830;
+                    width: 100%;
+                    img{
+                        width: 100%;
+
+                    }
+                }//img-box
+                .data-wrap{
+                    width: 100%;
+                    .date{
+                        font-size: $annotation-size;
+                        color: $disabled-font-color;
+                        padding: $padding-Xsmall 0;
+                    }
+                    .title{
+                        font-weight: 400;
+                        font-size: 1.2rem;
+                    }
+                }//data-wrap
+            }//.swiper-slide
+        }//swiper-wrapper
+      .gradient-L{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 400px;
+        width: 20%;
+        background: linear-gradient(90deg,#ffffff,#ffffff00);
+      }
+      .gradient-R{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        height: 400px;
+        width: 20%;
+        background: linear-gradient(90deg,#ffffff00,#ffffff);
+      }
+    }//mySwiper
+}//news-slide-wrap
+}//news-area

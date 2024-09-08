@@ -19,6 +19,7 @@ import Detail from "./components/pages/Detail";
 import "./css/index.scss";
 import SearchPage from "./components/pages/SearchPage";
 import Member from "./components/pages/Member";
+import MainArea from "./components/layout/MainArea";
 
 //컴포넌트 호출
 /////////////////////import area/////////////////////////////
@@ -44,7 +45,7 @@ export default function MainComponent() {
             {/* 하위라우트 셋팅: path 대신
             index로 설정하면 첫 페이지로 */}
             {/* <Route index element={<Intro />} /> */}
-            <Route index element={<Main />} />
+            <Route index element={<MainArea />} />
             <Route path="/" element={<Main />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/inside" element={<Inside />} />

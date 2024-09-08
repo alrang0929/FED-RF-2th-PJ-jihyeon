@@ -10,7 +10,7 @@ function NomalButton({text, link}) {
     ************************************/
   return (
     <div>
-      <button class="mcolor-mbtn">
+      <button className="mcolor-mbtn">
         <a href={link}>{text}</a>
         <IoIosArrowForward className="arrow-R" />
       </button>

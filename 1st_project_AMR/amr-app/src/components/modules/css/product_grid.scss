@@ -118,10 +118,10 @@
       .product-data-wrap {
         width: 100%;
         line-height: 1.7;
+        .brand-name {
+          color: $disabled-font-color;
+        }
         .pd-data {
-          .brand-name {
-            color: $disabled-font-color;
-          }
           justify-content: space-between;
           .pd-name {
             color: $basic-font-color;

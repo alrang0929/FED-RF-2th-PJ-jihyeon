@@ -7,6 +7,14 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 2em;
+  top: 0;
+  left: 0;
+  transition: top 0.3s ease-in-out; /* 부드러운 애니메이션 효과 */
+
+  &.hide {
+    /* 스크롤 내릴 때 숨김 */
+    top: -100px; /* GNB 높이만큼 위로 이동 */
+  }
 
   transition: 0.2s ease-in-out;
   &:hover {
@@ -69,9 +77,8 @@ header {
     & > li > a {
       position: relative;
       color: $basic-font-color;
-      font-size: .9rem;
-      cor
-      &::after {
+      font-size: 0.9rem;
+      cor &::after {
         content: "";
         border-bottom: 1px solid #fff;
         position: absolute;
@@ -205,10 +212,9 @@ header {
   header {
     flex-direction: column;
     height: 30px;
-    .logobx{
+    .logobx {
       position: absolute;
       left: 20px;
-      
     }
   }
   .ham-btn {
@@ -237,7 +243,7 @@ header {
     left: 0;
     align-items: flex-start;
     color: #fff;
-    
+
     width: 80vw;
     height: 100vh;
   }

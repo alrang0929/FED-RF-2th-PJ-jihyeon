@@ -47,8 +47,8 @@ function MainArea(props) {
         </div>
         {/* 3) 더보기 버튼 */}
         <NomalButton text={"more view"} link={"#"}/>
-        <section class="rslider-info-wrap">
-          <div class="rslider-info">
+        <section className="rslider-info-wrap">
+          <div className="rslider-info">
             <div>
               <img
                 src={process.env.PUBLIC_URL + "/images/RS_info01.jpg"}

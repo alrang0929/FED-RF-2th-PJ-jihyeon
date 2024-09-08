@@ -17,7 +17,7 @@ main {
     }
     ////////////////////////////////////
     // 컨테이너
-    padding: $container-padding 0;
+    padding-top: $container-padding;
     .title {
       text-align: center;
       letter-spacing: 0em;
@@ -52,6 +52,7 @@ main {
       font-size: 4rem;
       text-align: center;
       color: $main-color;
+      padding-bottom: $padding-ragular;
     } //title
     .desc {
       text-align: center;
@@ -60,6 +61,7 @@ main {
   }
 
   .rslider-info-wrap {
+    padding: $container-padding 0;
     .rslider-info {
       position: relative;
       left: 0;
