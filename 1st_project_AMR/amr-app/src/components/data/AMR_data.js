@@ -2,35 +2,54 @@
 
 ///////제품 리스트
 const pdData =[
-    { img: "01",
-    brand:"설화수",
-    name:"진설크림 THE ULTIMATE S CREAM",
-    price:"520,000",},
+    { 
+      idx:1,
+      brand:"설화수",
+      name:"진설크림 THE ULTIMATE S CREAM",
+      price:"520000",
+      isrc: "/images/pd_img01.png",
+  },
 
-    {img: "04",
-    brand:"마몽드",
-    name:"크리미틴트 컬러밤 쉬폰 2.5G",
-    price:"9,800",},
+    {
+      idx:2,
+      brand:"마몽드",
+      name:"크리미틴트 컬러밤 쉬폰 2.5G",
+      price:"9800",
+      isrc: "/images/pd_img04.png",
+  },
+    
 
-    {img: "03",
-    brand:"한율",
-    name:"달빛유자 수면팩 70ML",
-    price:"30,600",},
+    {
+      idx:3,
+      brand:"한율",
+      name:"달빛유자 수면팩 70ML",
+      price:"30600",
+      isrc: "/images/pd_img03.png",
+  },
 
-    {img: "02",
-    brand:"아이오페",
-    name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
-    price:"112,500",},
+    {
+      idx:4,
+      brand:"아이오페",
+      name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
+      price:"112500",
+      isrc: "/images/pd_img02.png",
+  },
 
-    { img: "05",
-    brand:"라네즈",
-    name:"워터뱅크 블루 히알루로닉 인텐시브 크림",
-    price:"33,600",},
+    { 
+      idx:5,
+      brand:"라네즈",
+      name:"워터뱅크 블루 히알루로닉 인텐시브 크림",
+      price:"33600",
+      isrc: "/images/pd_img05.png",
+  },
 
-    { img: "06",
-    brand:"라네즈",
-    name:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
-    price:"29,400",},
+    { 
+      idx:6,
+      brand:"라네즈",
+      name:"워터뱅크 블루 히알루로닉 에멀젼 중‧건성용",
+      price:"29400",
+      isrc: "/images/pd_img06.png",
+  },
 ]
 const brandList = [
 {

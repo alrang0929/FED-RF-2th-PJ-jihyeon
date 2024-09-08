@@ -27,7 +27,7 @@
           height: 1px;
           width: 0%;
           transition: .2s ease-in-out;
-        }
+        }//after
 
         &:focus,
         &:hover {
@@ -35,8 +35,15 @@
           &::after {
             left: 0;
             width: 100%;
+          } //hover:after
+        } //focus,hover
+
+        .imgbox{
+          height: 1.25rem;
+          img{
+            height: 100%;
           }
-        }
+        }//imgbox
        
       } //button
     } //button-wrap
