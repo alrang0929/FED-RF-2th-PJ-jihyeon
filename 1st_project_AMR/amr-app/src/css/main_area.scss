@@ -1,9 +1,5 @@
 @import "./variable/common_variable.scss";
-
-/**************** 변수 리스트 ****************/
-$container-padding: 6.25rem; //100px
-$padding-smail: 1.25rem; //20px
-$padding-ragular: 2.5rem; //40px
+@import "./variable/interval_variable.scss";
 
 ////////////////////////////////////////////////
 
@@ -51,7 +47,7 @@ main {
     }
   } //main-info
   .brand-info {
-    padding: $container-padding 0;
+    padding-bottom: $container-padding;
     .title {
       font-size: 4rem;
       text-align: center;
@@ -89,6 +85,24 @@ main {
       margin: 20px 0;
     }
   } //rslider-info-wrap
+
+  .product-info{
+    padding-bottom: $container-padding;
+  }//product-info
+  .news-area{
+    .title-wrap{
+      .title{
+        font-size: 4rem;
+        color: $main-color;
+        text-align: center;
+        padding-bottom: $padding-small;
+      }
+      .desc{
+        color: $basic-font-color;
+        text-align: center;
+      }
+    }
+  }
 } //main
 
 @media screen and (max-width: 890px) {

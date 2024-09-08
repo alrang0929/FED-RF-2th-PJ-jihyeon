@@ -1,10 +1,15 @@
 import React from "react";
 import "../../css/main_area.scss";
+//module
+// 1. 메인 비쥬얼 슬라이드
 import MainVisualSlide from "../plugin/Swiper_main_visual";
+// 2. 기본버튼
 import NomalButton from "../modules/Nomal_button";
+//3. 브랜드 비쥬얼 슬라이드
 import BrandVisual from "../plugin/Swiper_brand_visual";
-
-
+//4. 프로덕트 그리드
+import ProductGrid from "../modules/Product_grid";
+import MainNewsSilde from "../plugin/Swiper_news_slide";
 
 function MainArea(props) {
   /////코드 리턴구역//////////////////////////////////////////
@@ -105,20 +110,17 @@ function MainArea(props) {
       {/* 4. 대표 제품 소개 */}
       <section className="product-info">
         {/* 1) 타이틀 박스 */}
-        <div className="title-wrap">
-          <div className="title">OUR PRODUCTS</div>
-        
-          {/* 2) 제품 그리드 박스 */}
-        </div>
+          <ProductGrid/>
       </section>
       {/* 5. 사내 뉴스 */}
-      <section className="news">
+      <section className="news-area">
         {/* 1) 타이틀 박스 */}
         <div className="title-wrap">
-          <div className="title">Latest Amorepacific News</div>
-        
+          <div className="title miller-display">Latest Amorepacific News</div>
+          <div className="desc">아모레퍼시픽의 새로운 소식을 만나보세요</div>
         </div>
         {/* 2) 뉴스 콘텐츠 스와이퍼 */}
+        <MainNewsSilde/>
       </section>
     </main>
   );

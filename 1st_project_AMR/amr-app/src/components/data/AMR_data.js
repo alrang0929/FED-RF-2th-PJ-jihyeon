@@ -9,16 +9,14 @@ const pdData =[
       price:"520000",
       isrc: "/images/pd_img01.png",
   },
-
-    {
-      idx:2,
-      brand:"마몽드",
-      name:"크리미틴트 컬러밤 쉬폰 2.5G",
-      price:"9800",
-      isrc: "/images/pd_img04.png",
-  },
-    
-
+  {
+    idx:2,
+    brand:"아이오페",
+    name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
+    price:"112500",
+    isrc: "/images/pd_img02.png",
+},
+ 
     {
       idx:3,
       brand:"한율",
@@ -27,13 +25,15 @@ const pdData =[
       isrc: "/images/pd_img03.png",
   },
 
-    {
-      idx:4,
-      brand:"아이오페",
-      name:"레티놀 엑스퍼트 0.3% 링클 코렉터 20ML",
-      price:"112500",
-      isrc: "/images/pd_img02.png",
-  },
+  {
+    idx:4,
+    brand:"마몽드",
+    name:"크리미틴트 컬러밤 쉬폰 2.5G",
+    price:"9800",
+    isrc: "/images/pd_img04.png",
+},
+  
+
 
     { 
       idx:5,

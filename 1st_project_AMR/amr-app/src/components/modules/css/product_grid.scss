@@ -1,0 +1,137 @@
+@import "../../../css/variable/common_variable.scss";
+@import "../../../css/variable/interval_variable.scss";
+
+
+.product-info {
+  .product-grid-wrap {
+    .title-wrap {
+      .title {
+        font-size: 4rem;
+        color: $main-color;
+        padding-bottom: $padding-small;
+      }
+
+      button {
+        width: 14rem;
+      }
+    }
+    width: 84vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
+    // grid-auto-rows: 1fr;
+    grid-auto-rows: min-content;
+    // grid-auto-flow: dense;
+
+    li {
+      // 공사표시
+      // border: 1px solid red;
+
+      // grid
+      &:first-child {
+        // 로시/컬시/로끝/컬끝
+
+        grid-area: 1/1/2/7;
+
+      }
+      &:nth-child(2) {
+        border-bottom: 1px solid $disabled-font-color;
+        border-left: 1px solid $disabled-font-color;
+
+        grid-area: 1/7/2/13;
+
+        .imgbox {
+          width: 100%;
+          img {
+            aspect-ratio: 764/764;
+            width: 100%;
+          }
+        } //imgbox
+      }
+      &:nth-child(3) {
+        border-top: 1px solid $disabled-font-color;
+        border-right: 1px solid $disabled-font-color;
+        grid-area: 2/1/4/7;
+        
+        .imgbox {
+            width: 100%;
+            aspect-ratio: 764/764;
+            img {
+              width: 100%;
+            }
+          } //imgbox
+      }
+      &:nth-child(4) {
+        grid-area: 2/7/3/10;
+        border-bottom: 1px solid $disabled-font-color;
+        border-right: 1px solid $disabled-font-color;
+        .imgbox {
+          width: 50%;
+          img {
+            aspect-ratio: 778/715;
+            width: 100%;
+          }
+        } //imgbox
+      }
+      &:nth-child(5) {
+        grid-area: 2/10/3/13;
+        border-bottom: 1px solid $disabled-font-color;
+        .imgbox {
+          width: 50%;
+          img {
+            aspect-ratio: 778/715;
+            width: 100%;
+          }
+        } //imgbox
+      }
+      &:nth-child(6) {
+        grid-area: 3/7/4/10;
+        border-right: 1px solid $disabled-font-color;
+        .imgbox {
+          width: 50%;
+          img {
+            aspect-ratio: 778/715;
+            width: 100%;
+          }
+        } //imgbox
+      }
+      &:nth-child(7) {
+        grid-area: 3/10/4/13;
+        .imgbox {
+          width: 50%;
+          img {
+            aspect-ratio: 778/715;
+            width: 100%;
+          }
+        } //imgbox
+      }
+
+      .img-box {
+        object-fit: cover;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      } //img-box
+      padding: $padding-small;
+      .product-data-wrap {
+        width: 100%;
+        line-height: 1.7;
+        .pd-data {
+          .brand-name {
+            color: $disabled-font-color;
+          }
+          justify-content: space-between;
+          .pd-name {
+            color: $basic-font-color;
+            font-weight: 500;
+          } //.pd-name
+          .price-wrap {
+            color: $basic-font-color;
+          } //price-wrap
+        } //pd-data
+      } //product-data-wrap
+    }
+  } //product-grid-wrap
+}
