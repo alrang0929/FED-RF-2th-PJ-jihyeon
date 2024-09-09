@@ -21,7 +21,6 @@ export default function MainNewsSilde() {
         spaceBetween={20}
         initialSlide={0}
         navigation={true}
-        allowSlideNext= {false}
         breakpoints={{
             640: {
               slidesPerView: 2,

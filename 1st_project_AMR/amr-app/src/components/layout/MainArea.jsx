@@ -10,6 +10,7 @@ import BrandVisual from "../plugin/Swiper_brand_visual";
 //4. 프로덕트 그리드
 import ProductGrid from "../modules/Product_grid";
 import MainNewsSilde from "../plugin/Swiper_news_slide";
+import ScrollFadeIn from "../func/scroll_fade_in";
 
 function MainArea(props) {
   /////코드 리턴구역//////////////////////////////////////////
@@ -21,6 +22,7 @@ function MainArea(props) {
         <MainVisualSlide />
       </section>
       {/* 2. 안내문구 */}
+      <ScrollFadeIn>
       <section className="main-info">
         {/* 1) 그래픽+텍스트 */}
           <div className="title">
@@ -96,23 +98,27 @@ function MainArea(props) {
           </div>
         </section>
       </section>
-
+      </ScrollFadeIn>
       {/* 3. 브랜드 소개 */}
+      <ScrollFadeIn>
       <section className="brand-info">
        
-        <div className="desc">아모레퍼시픽의 브랜드를 소개합니다</div>
-        <div className="title miller-display">
-          OUR BRAND
-        </div>
-        {/* 버튼 클릭시 이동하는 슬라이드 */}
-        <BrandVisual/>
-      </section>
-      {/* 4. 대표 제품 소개 */}
-      <section className="product-info">
-        {/* 1) 타이틀 박스 */}
-          <ProductGrid/>
-      </section>
+       <div className="desc">아모레퍼시픽의 브랜드를 소개합니다</div>
+       <div className="title miller-display">
+         OUR BRAND
+       </div>
+       {/* 버튼 클릭시 이동하는 슬라이드 */}
+       <BrandVisual/>
+     </section>
+     {/* 4. 대표 제품 소개 */}
+     <section className="product-info">
+       {/* 1) 타이틀 박스 */}
+         <ProductGrid/>
+     </section>
+      </ScrollFadeIn>
+   
       {/* 5. 사내 뉴스 */}
+      <ScrollFadeIn>
       <section className="news-area">
         {/* 1) 타이틀 박스 */}
         <div className="title-wrap">
@@ -122,6 +128,8 @@ function MainArea(props) {
         {/* 2) 뉴스 콘텐츠 스와이퍼 */}
         <MainNewsSilde/>
       </section>
+      </ScrollFadeIn>
+    
     </main>
   );
 }
