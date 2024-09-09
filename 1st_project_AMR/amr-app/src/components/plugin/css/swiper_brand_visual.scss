@@ -57,8 +57,12 @@
           z-index: 1;
           position: absolute;
           left: 50%;
-          top: 50%;
+          // 애니 사전설정
+          opacity: 0;
+          top: 70%;
+          filter: blur(10px);
           translate: -50% -50%;
+          transition: 1s .5s ease-in-out;
           .imgbox {
             margin: 0 auto;
             width: 30%;
@@ -88,3 +92,24 @@
     } //swiper-wrapper
   } //brand-swiper
 } //brand-info
+
+// 미디어쿼리//////////////////////////////////////
+@media screen and (max-width: 999px){
+  .brand-info .brand-swiper .swiper-wrapper .swiper-slide .cont-wrap .imgbox{
+    width: 35%;
+  }
+}//999
+
+@media screen and (max-width: 800px){
+  .brand-info .brand-swiper .swiper-wrapper .swiper-slide .cont-wrap .imgbox {
+    width: 58%;
+}
+.brand-info .brand-swiper .swiper-wrapper .swiper-slide .cont-wrap .desc{
+  width: 80vw;
+  font-size: 1.2rem;
+}
+.brand-info .brand-swiper .swiper-wrapper .swiper-slide .cont-wrap{
+  top: 59% !important;
+}
+
+}//800

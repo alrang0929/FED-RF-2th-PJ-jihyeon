@@ -124,6 +124,7 @@ function MainArea(props) {
         <div className="title-wrap">
           <div className="title miller-display">Latest Amorepacific News</div>
           <div className="desc">아모레퍼시픽의 새로운 소식을 만나보세요</div>
+          <NomalButton text={"more view"} link={"#"}/>
         </div>
         {/* 2) 뉴스 콘텐츠 스와이퍼 */}
         <MainNewsSilde/>

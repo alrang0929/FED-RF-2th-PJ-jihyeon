@@ -124,6 +124,7 @@
         .pd-data {
           justify-content: space-between;
           .pd-name {
+            padding-right: $padding-small;
             color: $basic-font-color;
             font-weight: 500;
           } //.pd-name
@@ -135,3 +136,19 @@
     }
   } //product-grid-wrap
 }
+
+// 1430
+// 미디어쿼리 //////////////////////////////////////
+@media screen and (max-width: 1430px){
+  .product-info .product-grid-wrap{
+    width: 91vw;
+  }
+}//1430
+@media screen and (max-width: 865px){
+  .product-info .product-grid-wrap .title-wrap .title{
+    font-size: 3.2rem;
+  }
+  .product-info .product-grid-wrap li .product-data-wrap .pd-data{
+    flex-direction: column;
+  }
+}//865

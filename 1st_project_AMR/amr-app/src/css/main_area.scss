@@ -93,18 +93,26 @@ main {
   }//product-info
   .news-area{
     .title-wrap{
+      padding: $padding-ragular 0;
       .title{
         font-size: 4rem;
         color: $main-color;
         text-align: center;
-        padding-bottom: $padding-small;
-      }
+        padding-bottom: $padding-ragular;
+      }//title
+      
       .desc{
         color: $basic-font-color;
         text-align: center;
+        padding-bottom: $padding-ragular;
       }
-    }
-  }
+
+      button{
+        margin: 0 auto;
+        width: 14rem;
+      }
+    }//title-wrap
+  }//news-area
 } //main
 
 @media screen and (max-width: 890px) {
