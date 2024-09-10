@@ -139,6 +139,7 @@
 
 // 1430
 // 미디어쿼리 //////////////////////////////////////
+// 모바일 분기점: 661px
 @media screen and (max-width: 1430px){
   .product-info .product-grid-wrap{
     width: 91vw;
@@ -152,3 +153,21 @@
     flex-direction: column;
   }
 }//865
+@media screen and (max-width: 661px){
+  .product-info .product-grid-wrap{
+    display: flex;
+    flex-direction: column;
+    .title-wrap{
+      text-align: center;
+    }
+    .mcolor-mbtn{
+      margin: 0 auto;
+    }
+    li{
+      border:transparent !important;
+      .product-data-wrap{
+        text-align: center;
+      }
+    }
+  }
+}//661px

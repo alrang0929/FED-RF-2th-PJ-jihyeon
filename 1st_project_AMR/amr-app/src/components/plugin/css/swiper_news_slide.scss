@@ -11,7 +11,7 @@
             width: 70vw;
             // padding: 0 100px;
             .swiper-wrapper{
-                justify-content: center;
+                // justify-content: center;
                 .swiper-slide{
                 cursor: pointer;
                 .img-box{
@@ -42,7 +42,7 @@
         left: 0;
         z-index: 1;
         height: 400px;
-        width: 20%;
+        width: 10%;
         background: linear-gradient(90deg,#ffffff,#ffffff00);
       }
       .gradient-R{
@@ -51,9 +51,17 @@
         right: 0;
         z-index: 1;
         height: 400px;
-        width: 20%;
+        width: 10%;
         background: linear-gradient(90deg,#ffffff00,#ffffff);
       }
     }//mySwiper
 }//news-slide-wrap
 }//news-area
+
+// 미디어쿼리 ////////////////////////////////////////
+//모바일 분기점: 661px
+@media screen and (max-width: 661px){
+    .gradient-L, .gradient-R{
+        display: none;
+    }
+}//661px

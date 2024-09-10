@@ -17,12 +17,12 @@ export default function MainNewsSilde() {
     <>
     <div className="news-slide-wrap">
       <Swiper
-        slidesPerView={4.5}
+        // slidesPerView={4.5}
         spaceBetween={20}
         initialSlide={0}
         navigation={true}
         breakpoints={{
-            640: {
+            661: {
               slidesPerView: 2,
               spaceBetween: 20,
             },

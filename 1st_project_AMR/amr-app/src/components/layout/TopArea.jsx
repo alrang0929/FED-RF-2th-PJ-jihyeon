@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { isMobile } from 'react-device-detect';
 import { gnbData } from "../data/common_data";
 import { Link } from "react-router-dom";
 import "../../css/top_area.scss";
@@ -37,7 +38,20 @@ function TopArea(props) {
   //코드리턴구역////////////////////////////////////////////////////
   return (
     <>
-      <header className={`fxbox ${isMenuOpen ? "open" : ""} ${isScrollingUp ? '' : 'hide'}`}>
+      <header className={`fxbox ${isMenuOpen && !isMobile ? "open" : ""} ${isScrollingUp ? '' : 'hide'}`}>
+        {/* isMobile: 리액트 내장 메서드, 모바일 기기인지 아닌지 판단
+          즉! 마우스가 아래로 내려가고 모바일 기기가 아니냐? open class 추가, 반대냐? 빈칸
+
+
+          isMobile:
+          장점: 코드 재활용 및 가비지 코드 감소
+          단점: pc와 동일한 코드를 사용하기 때문에 성능이 저하될 수 있음, 복잡성 증가
+          ________________________________________________________________
+          
+          모바일 전용 코드 생성:
+            장점: PC/Mobile 구분이 명확해짐
+            단점: 코드 중복이 발생할 수 있음, 유지보수 어려움
+        */}
         {/* <!-- 로고박스 --> */}
         <div className="logobx">
           <Link to="/">
@@ -51,7 +65,7 @@ function TopArea(props) {
         </div>
 
         {/* isMenuOpen이 ture냐? open 클래스 추가 : 아니냐? 빈것 */}
-        <ul className={`menu-wrap fxbox ${isMenuOpen ? "open" : ""}`}>
+        <ul className={`menu-wrap fxbox ${isMenuOpen && !isMobile ? "open" : ""}`}>
           {Object.keys(gnbData).map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
 

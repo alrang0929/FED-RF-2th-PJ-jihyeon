@@ -94,6 +94,8 @@
 } //brand-info
 
 // 미디어쿼리//////////////////////////////////////
+// 모바일 분기점: 661px
+
 @media screen and (max-width: 999px){
   .brand-info .brand-swiper .swiper-wrapper .swiper-slide .cont-wrap .imgbox{
     width: 35%;
@@ -113,3 +115,15 @@
 }
 
 }//800
+
+@media screen and (max-width: 670px){
+  // 모바일에선 애니 사전설정 제거
+  .brand-info .brand-swiper .swiper-wrapper .swiper-slide .cont-wrap {
+    opacity: 1;
+     top: 50%;
+    filter: blur(0px);
+  }
+  .brand-info .brand-swiper .swiper-wrapper .swiper-slide .cont-wrap .desc span{
+    font-size: 1rem;
+  }
+}//661

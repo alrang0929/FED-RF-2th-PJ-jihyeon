@@ -46,8 +46,36 @@ main {
       width: 14rem;
     }
   } //main-info
+
+  .brand-imgbox{
+    padding-top: $container-padding;
+    max-width: 35vw;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+
+    animation: slideUpImg .2s ease-in-out forwards;
+    
+    margin: 0 auto;
+    img{
+      width: 100%;
+    }
+
+    @keyframes slideUpImg {
+      0%{
+        opacity: 0;
+        height: 0;
+      }
+      100%{
+        opacity: 1;
+        height: 100%;
+      }
+    }
+  }
+
   .brand-info {
     padding-bottom: $container-padding;
+  
     .title {
       font-size: 4rem;
       text-align: center;
@@ -88,33 +116,35 @@ main {
     }
   } //rslider-info-wrap
 
-  .product-info{
+  .product-info {
     padding-bottom: $container-padding;
-  }//product-info
-  .news-area{
-    .title-wrap{
+  } //product-info
+  .news-area {
+    .title-wrap {
       padding: $padding-ragular 0;
-      .title{
+      .title {
         font-size: 4rem;
         color: $main-color;
         text-align: center;
         padding-bottom: $padding-ragular;
-      }//title
-      
-      .desc{
+      } //title
+
+      .desc {
         color: $basic-font-color;
         text-align: center;
         padding-bottom: $padding-ragular;
       }
 
-      button{
+      button {
         margin: 0 auto;
         width: 14rem;
       }
-    }//title-wrap
-  }//news-area
+    } //title-wrap
+  } //news-area
 } //main
 
+// 미디어쿼리 /////////////////////////////////////////
+// 모바일 분기점: 661px
 @media screen and (max-width: 890px) {
   main {
     .rslider-info-wrap {
@@ -122,3 +152,20 @@ main {
     }
   }
 } //890px
+@media screen and (max-width: 661px) {
+  main .main-info {
+
+    .title {
+      span {
+        font-size: 2.9rem;
+      }
+      padding: 0 $padding-ragular;
+    }
+    .img-box {
+      width: 40%;
+    }
+    .desc{
+      padding: 0 $padding-ragular;
+    }
+  }
+} //661px
