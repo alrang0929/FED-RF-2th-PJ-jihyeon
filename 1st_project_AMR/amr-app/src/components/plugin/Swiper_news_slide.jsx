@@ -45,7 +45,7 @@ export default function MainNewsSilde() {
             {/* 1. 이미지 박스 > img / data-wrap: title(최대 2줄 넘김...처리)+date */}
             <div className="img-box">
               <img
-                src={process.env.PUBLIC_URL+v.isrc}
+                src={process.env.PUBLIC_URL + v.isrc}
                 alt={v.title + "썸네일"}
               />
             </div>
