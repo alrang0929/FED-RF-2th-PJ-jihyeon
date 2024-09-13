@@ -48,8 +48,8 @@ main {
   } //main-info
 
   .brand-imgbox{
-    padding-top: $container-padding;
-    max-width: 35vw;
+    padding: $container-padding 0;
+    max-width: 20vw;
     overflow: hidden;
     opacity: 0;
     height: 0;
@@ -59,6 +59,11 @@ main {
     margin: 0 auto;
     img{
       width: 100%;
+    }
+    .desc{
+      text-align: center;
+      padding: $padding-small;
+      font-weight: 200;
     }
 
     @keyframes slideUpImg {

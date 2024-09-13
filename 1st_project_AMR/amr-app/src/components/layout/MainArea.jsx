@@ -123,12 +123,12 @@ function MainArea(props) {
             src={process.env.PUBLIC_URL + "/images/brand_thm_add.jpg"}
             alt="아모레퍼시픽 건물 전경"
           />
+          <div className="desc">아모레퍼시픽의 브랜드를 소개합니다</div>
         </div>
       </ScrollFadeIn>
 
       <ScrollFadeIn>
         <section className="brand-info">
-          <div className="desc">아모레퍼시픽의 브랜드를 소개합니다</div>
           <div className="title miller-display">OUR BRAND</div>
 
           {/* PC: 버튼 클릭시 이동하는 슬라이드 */}

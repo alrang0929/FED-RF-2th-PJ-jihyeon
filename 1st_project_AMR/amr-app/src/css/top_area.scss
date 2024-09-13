@@ -57,6 +57,7 @@ header {
       font-size: 0.9em;
       background: $main-color;
       padding: 10px 20px;
+      padding-top: 3em;
 
       transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out; /* 애니메이션 추가 */
 
@@ -97,10 +98,14 @@ header {
       }
     } // 라인 애니 사용위한 li선택자
 
-    & li:hover + .sub-menu,
-    .sub-menu:hover {
+    // & li:hover + .sub-menu,
+    // .sub-menu:hover { :  li:hover + .sub-menu 선택자는 li 바로 뒤에 오는 sub-menu만 선택함. but 실제로는 sub-menu는 li의 자식요소로 중첩되어있으므로
+
+    // 자식요소를 선택하는 > 를 사용
+      & li:hover > .sub-menu, // '>' 선택자로 변경!
+      .sub-menu:hover{
       opacity: 1;
-      padding-top: 1em;
+      padding-top: 3em;
       height: 283px;
     }
 
