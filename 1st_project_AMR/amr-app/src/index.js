@@ -14,7 +14,7 @@ export default function MainComponent() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<MainArea />} /> 
+            <Route index element={<Main />} /> 
             <Route path='/Brand' element={<Brand />} /> 
           </Route>
         </Routes>
