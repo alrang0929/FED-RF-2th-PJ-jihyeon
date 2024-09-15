@@ -12,7 +12,23 @@ import { brandList } from "../data/AMR_data";
 
 export default function BrandVisual() {
   //참조변수
-  const swiperRef = useRef(null); // Swiper 참조 생성
+  // 1. swiper slideTo 내장함수 사용을 위한 참조변수
+  const swiperRef = useRef(null); 
+
+  /********************************************************8* 
+  
+    [swiper slideTo 내장함수 사용방법]
+    1. swiperRef 참조변수 생성 (이동 슬라이드 index 참조를 위함)
+    2. swiper에 참조 설정 
+          ex)     
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper; // Swiper 인스턴스 저장
+          }}
+          >
+    3. 이동 컨트롤러로 설정한 요소에 핸들러 추가
+        ex) <button onClick={() => swiperRef.current.slideTo(i)}>
+
+  *********************************************************/
 
   // shandleSlideChange: 스와이퍼 슬라이드가 변경될때 효과를 주기 위함
   function handleSlideChange(swiper) {
@@ -32,7 +48,7 @@ export default function BrandVisual() {
       previousBgBox.style.opacity = 0;
       previousContent.style.opacity = 0;
       previousContent.style.top = "50%";
-      previousContent.style.filter= "blur(10px)";
+      previousContent.style.filter = "blur(10px)";
     }
 
     // 2. 활성화된 슬라이드 인덱스 수집
@@ -52,7 +68,7 @@ export default function BrandVisual() {
       activeBgBox.style.backdropFilter = "blur(15px)";
       activeContent.style.opacity = 1;
       activeContent.style.top = "50%";
-      activeContent.style.filter= "blur(0px)";
+      activeContent.style.filter = "blur(0px)";
     }
   } // handleSlideChange
 
@@ -67,9 +83,9 @@ export default function BrandVisual() {
       const firstContent = firstSlide.querySelector(".cont-wrap");
       if (firstBgBox && firstContent) {
         firstBgBox.style.backdropFilter = "blur(5px)";
-        firstContent.style.opacity= 1;
-        firstContent.style.top= "50%";
-        firstContent.style.filter= "blur(0px)";
+        firstContent.style.opacity = 1;
+        firstContent.style.top = "50%";
+        firstContent.style.filter = "blur(0px)";
       }
     }
   }, []); // 빈 배열을 dependency로 전달하여 처음 마운트될 때만 실행되도록 설정
@@ -112,19 +128,19 @@ export default function BrandVisual() {
           }}
         >
           {/*1. 이미지+텍스트 박스 */}
-            <div className="cont-wrap">
-              <div className="imgbox">
-                <img
-                  src={process.env.PUBLIC_URL + v.isrc.thumb}
-                  alt={v.title + "썸네일"}
-                />
-              </div>
-              <div className="desc">
-                {v.text.split("^").map((text, i) => (
-                  <span key={i}>{text}</span>
-                ))}
-              </div>
+          <div className="cont-wrap">
+            <div className="imgbox">
+              <img
+                src={process.env.PUBLIC_URL + v.isrc.thumb}
+                alt={v.title + "썸네일"}
+              />
             </div>
+            <div className="desc">
+              {v.text.split("^").map((text, i) => (
+                <span key={i}>{text}</span>
+              ))}
+            </div>
+          </div>
           <div className="bg-box"></div>
         </SwiperSlide>
       ))}

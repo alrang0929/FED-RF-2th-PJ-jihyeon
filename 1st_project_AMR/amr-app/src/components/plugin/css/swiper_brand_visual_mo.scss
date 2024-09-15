@@ -1,0 +1,43 @@
+@import "../../../css/variable/common_variable.scss";
+@import "../../../css/variable/interval_variable.scss";
+.brand-swiper-mo{
+    height: 100vh;
+    position: relative;
+    .cont-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 75vw;
+        // padding: $padding-ragular;
+        .logo{
+            height: 8vw;
+            // margin: auto 0;
+            text-align: center;
+            img{
+               height: 100%;
+            }
+        }//logo
+        .desc{
+            span{
+                color: #fff;
+                font-weight: 200;
+                line-height: 1.7;
+            }
+        }//desc
+        .imgbox{
+            width: 50vw;
+            margin: 0 auto;
+            img{width: 100%;}
+        }
+    }//cont-wrap
+    .bg-box{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}

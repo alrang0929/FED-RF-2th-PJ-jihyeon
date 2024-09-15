@@ -231,7 +231,7 @@ header {
   .menu-wrap {
     display: flex; /* 초기 상태: 숨김 처리를 위해 flex로 변경 */
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start !important;
     top: 70px;
     left: -100vw; /* 초기 상태: 화면 왼쪽 밖으로 숨김 */
     opacity: 0;
@@ -246,7 +246,7 @@ header {
     display: flex; /* 'open' 클래스 추가 시: 표시 */
     opacity: 1;
     top: 70px;
-    left: 0;
+    left: -8.4vw;
     align-items: flex-start;
     color: #fff;
 
@@ -271,3 +271,4 @@ header {
     display: none;
   }
 } //890px
+

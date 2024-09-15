@@ -65,7 +65,11 @@ function TopArea(props) {
         </div>
 
         {/* isMenuOpen이 ture냐? open 클래스 추가 : 아니냐? 빈것 */}
-        <ul className={`menu-wrap fxbox ${isMenuOpen && !isMobile ? "open" : ""}`}>
+        <ul className={`menu-wrap fxbox ${isMenuOpen && !isMobile ? "open" : ""}`
+
+        }>
+          {/* 상태변수 작동 확인 */}
+          {console.log("isMenuOpen 상태:",isMenuOpen)}
           {Object.keys(gnbData).map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
 
