@@ -24,7 +24,7 @@ main {
       span {
         display: block;
         color: $main-color;
-        font-size: 3.5rem;
+        font-size: $title-size;
       }
     }
     .img-box {
@@ -60,11 +60,7 @@ main {
     img{
       width: 100%;
     }
-    .desc{
-      text-align: center;
-      padding: $padding-small;
-      font-weight: 200;
-    }
+
 
     @keyframes slideUpImg {
       0%{
@@ -78,11 +74,17 @@ main {
     }
   }
 
+  .brand-desc{
+    text-align: center;
+    padding: $padding-small;
+    font-weight: 200;
+  }
+
   .brand-info {
     padding-bottom: $container-padding;
   
     .title {
-      font-size: 4rem;
+      font-size: $title-size;
       text-align: center;
       color: $main-color;
       padding-bottom: $padding-ragular;
@@ -128,7 +130,7 @@ main {
     .title-wrap {
       padding: $padding-ragular 0;
       .title {
-        font-size: 4rem;
+        font-size: $title-size;
         color: $main-color;
         text-align: center;
         padding-bottom: $padding-ragular;
@@ -158,19 +160,42 @@ main {
   }
 } //890px
 @media screen and (max-width: 661px) {
-  main .main-info {
+  //모바일 타이틀 사이즈
+  $title-size: 2.7rem;
 
-    .title {
-      span {
-        font-size: 2.9rem;
+  main{
+    .brand-imgbox{
+      padding: 2.25rem 0;
+      max-width: 50vw;
+    }
+    .brand-info{
+      .title{
+        font-size: $title-size;
       }
-      padding: 0 $padding-ragular;
     }
-    .img-box {
-      width: 40%;
-    }
-    .desc{
-      padding: 0 $padding-ragular;
-    }
+    .main-info {
+      .title {
+        span {
+          font-size: $title-size;
+        }
+        padding: 0 $padding-ragular;
+      }
+      .img-box {
+        width: 40%;
+      }
+      .desc{
+        padding: 0 $padding-ragular;
+      }
+    }//main-info
+
+  } //main
+  .product-info .product-grid-wrap .title-wrap .title{
+    font-size: $title-size;
   }
+  main .news-area .title-wrap{
+    padding: $padding-ragular 3vw;
+    .title{
+      font-size: $title-size;
+    }
+  } 
 } //661px
