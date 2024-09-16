@@ -5,7 +5,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Main from "./components/pages/Main";
 import Brand from "./components/pages/Brand";
-import MainArea from "./components/layout/MainArea";
+import Amorepacific from "./components/pages/Amorepacific";
+import ResearchnInnovatio from "./components/pages/ResearchnInnovatio";
+import VisualIdentity from "./components/pages/VisualIdentity";
+import OurCulture from "./components/pages/OurCulture";
 
 export default function MainComponent() {
   //////코드 리턴구역/////////////////
@@ -16,6 +19,10 @@ export default function MainComponent() {
           <Route path='/' element={<Layout />}>
             <Route index element={<Main />} /> 
             <Route path='/Brand' element={<Brand />} /> 
+            <Route path='/Amorepacific' element={<Amorepacific />} /> 
+            <Route path='/ResearchnInnovatio' element={<ResearchnInnovatio />} /> 
+            <Route path='/VisualIdentity' element={<VisualIdentity />} /> 
+            <Route path='/OurCulture' element={<OurCulture />} /> 
           </Route>
         </Routes>
       </BrowserRouter>

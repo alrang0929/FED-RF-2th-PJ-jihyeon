@@ -1,10 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { isMobile } from 'react-device-detect';
 import { gnbData } from "../data/common_data";
 import { Link } from "react-router-dom";
 import "../../css/top_area.scss";
 import { IoIosSearch } from "react-icons/io";
+// import { aCon } from "./aCon";
 function TopArea(props) {
+  // useContext 사용
+  // const {setCatchMenu} = useContext(aCon);
+
+  
+  // const handleMenuClick = (menuName) => {
+  //   setCatchMenu(menuName); // 클릭된 메뉴 이름을 Context를 통해 업데이트
+  // };
+
   /****************** 상태관리변수 ******************/
   // 1. menu-wrap의 표시 상태 관리
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,20 +81,24 @@ function TopArea(props) {
           {console.log("isMenuOpen 상태:",isMenuOpen)}
           {Object.keys(gnbData).map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
-
+            <>
+            {console.log("category",category)}
             <li key={index} className="link-box">
-              <Link to={"/Brand"}>{category}</Link>
+              <Link 
+              to={category}
+              >{category}</Link>
 
               {gnbData[category] !== "없음" && (
                 <ol className="sub-menu">
                   {gnbData[category].map((submenu, subIndex) => (
                     <li key={subIndex}>
-                      <Link to={"/Brand"}>{submenu}</Link>
+                      <Link to={category}>{submenu}</Link>
                     </li>
                   ))}
                 </ol>
               )}
             </li>
+            </>
           ))}
         </ul>
         <div className="search-box fxbox">

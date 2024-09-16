@@ -1,12 +1,12 @@
 import React from 'react';
 import SubTitle from '../modules/SubTitle';
 
-function Brand(props) {
+function VisualIdentity(props) {
     return (
         <>
-            <SubTitle />
+            <SubTitle/>
         </>
     );
 }
 
-export default Brand;
+export default VisualIdentity;
