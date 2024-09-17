@@ -68,3 +68,14 @@
     }
   }
 }
+
+// 미디어쿼리/////////////////////////////////////////
+// 모바일 분기: 661px
+@media screen and (max-width: 661px) {
+  .sub-title{
+    height: 70vh !important;
+  }
+  .sub-title .title-wrap .desc{
+    width: 100%;
+  }
+}
