@@ -45,7 +45,7 @@ export default function MainComponent() {
             {/* 하위라우트 셋팅: path 대신
             index로 설정하면 첫 페이지로 */}
             {/* <Route index element={<Intro />} /> */}
-            <Route index element={<MainArea />} />
+            <Route index element={<Main />} />
             <Route path="/" element={<Main />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/inside" element={<Inside />} />

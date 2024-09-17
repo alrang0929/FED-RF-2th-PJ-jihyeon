@@ -1,28 +1,50 @@
-const gnbData =
-{
-"Amorepacific":"없음",
-"Research & Innovatio":"없음",
-"Visual Identity":"없음",
-"BRANDS":[
-    "화장품",
-    "향수",
-    "메디컬뷰티",
-    "뷰티 디바이스",
-    "이너뷰티",
-    "헤어케어",
-    "바디케어",
-    "덴탈케어티",
-    "티컬처",
-    ],
-"OUR CULTURE":[
-"Our Story",
-"Our History",
-"Our Values",
-    ],
-"Visual Identity":[
-"CI",
-"아리따 글꼴",
-    ],
-}
+const gnbData = [
+    {
+        text:"Amorepacific",
+        link:"/Amorepacific",
+        sub:[
+            {text:"", link:"",},
+        ]
+    },
+    {
+        text:"Research & Innovatio",
+        link:"/ResearchnInnovatio",
+        sub:[
+            {text:"", link:"",},
+        ]
+    },
+    {
+        text:"Visual Identity",
+        link:"/VisualIdentity",
+        sub:[
+            {text:"CI", link:"/VisualIdentity",},
+            {text:"아리따 글꼴", link:"/VisualIdentity",},
+        ]
+    },
+    {
+        text:"BRANDS",
+        link:"/Brand",
+        sub:[
+            {text:"화장품,", link:"/Brand",},
+            {text:"향수,", link:"/Brand",},
+            {text:"메디컬뷰티,", link:"/Brand",},
+            {text:"뷰티 디바이스,", link:"/Brand",},
+            {text:"이너뷰티,", link:"/Brand",},
+            {text:"헤어케어,", link:"/Brand",},
+            {text:"바디케어,", link:"/Brand",},
+            {text:"덴탈케어티,", link:"/Brand",},
+            {text:"티컬처,", link:"/Brand",},
+        ]
+    },
+    {
+        text:"OUR CULTURE",
+        link:"/OurCulture",
+        sub:[
+            {text:"Our Story", link:"/OurCulture",},
+            {text:"Our History", link:"/OurCulture",},
+            {text:"Our Values", link:"/OurCulture",},
+        ]
+    },
+]
 
 export {gnbData};
