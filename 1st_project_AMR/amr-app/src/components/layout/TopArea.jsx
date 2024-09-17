@@ -26,6 +26,14 @@ function TopArea(props) {
   const handleHamBtnClick = () => {
     setIsMenuOpen(!isMenuOpen); // 상태 토글
   };
+  // 2. 모바일 상태에서 메뉴 클릭시 gnb 닫기
+  const handleMenuClick = () => {
+    if (isMobile) { 
+      // 해석: isMobile이냐?  setIsMenuOpen를 false로 바꿔라
+      setIsMenuOpen(false);
+    }
+  };
+
 
   // 화면랜더링구역//////////////////////////////////////////
 
@@ -47,7 +55,7 @@ function TopArea(props) {
   //코드리턴구역////////////////////////////////////////////////////
   return (
     <>
-      <header className={`fxbox ${isMenuOpen && !isMobile ? "open" : ""} ${isScrollingUp ? '' : 'hide'}`}>
+      <header className={`fxbox ${isMenuOpen ? "open" : ""} ${isScrollingUp ? '' : 'hide'}`}>
         {/* isMobile: 리액트 내장 메서드, 모바일 기기인지 아닌지 판단
           즉! 마우스가 아래로 내려가고 모바일 기기가 아니냐? open class 추가, 반대냐? 빈칸
 
@@ -74,7 +82,7 @@ function TopArea(props) {
         </div>
 
         {/* isMenuOpen이 ture냐? open 클래스 추가 : 아니냐? 빈것 */}
-        <ul className={`menu-wrap fxbox ${isMenuOpen && !isMobile ? "open" : ""}`
+        <ul className={`menu-wrap fxbox ${isMenuOpen ? "open" : ""}`
 
         }>
           {/* 상태변수 작동 확인 */}
@@ -86,6 +94,7 @@ function TopArea(props) {
             <li key={index} className="link-box">
               <Link 
               to={category.link}
+              onClick={handleMenuClick}
               >{category.text}</Link>
 
               {category.sub !== "없음" && (

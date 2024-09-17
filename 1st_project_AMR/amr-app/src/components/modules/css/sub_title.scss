@@ -42,17 +42,23 @@
   position: relative;
   height: 80vh;
   .title-wrap {
+    z-index: 1;
     position: absolute;
     text-align: center;
 
-    top: 75%;
+    top: 100%;
+    opacity: 0;
+    filter: blur(10px);
+
+
     left: 50%;
     translate: -50% -50%;
 
     width: 80vw;
-    
+
     padding-bottom: $padding-ragular;
     .title {
+      overflow-wrap: break-word;
       padding-bottom: $padding-ragular;
       h2 {
         font-size: 3rem;
@@ -66,16 +72,54 @@
       width: 40vw;
       color: #fff;
     }
-  }
-}
+    animation: slideUp .8s .1s ease-in-out forwards;
+    @keyframes slideUp {
+      0%{
+        opacity: 0;
+        top: 100%;
+        filter: blur(10px);
+      }
+      100%{
+        opacity: 1;
+        top: 75%;
+        filter: blur(0px);
+      }
+      
+    }
+  }//title-wrap
+  
+    .blur-box{
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0;
+
+      animation: opacity .6s ease-in-out forwards;
+
+      @keyframes opacity {
+        0%{
+          top: -50%;
+          opacity: 0;
+        }
+        100%{
+          top: 0%;
+          opacity: 0.4;
+        }
+      }
+      
+    }
+}//sub-title
 
 // 미디어쿼리/////////////////////////////////////////
 // 모바일 분기: 661px
 @media screen and (max-width: 661px) {
-  .sub-title{
+  .sub-title {
     height: 70vh !important;
   }
-  .sub-title .title-wrap .desc{
+  .sub-title .title-wrap .desc {
     width: 100%;
   }
 }

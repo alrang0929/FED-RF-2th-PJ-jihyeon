@@ -81,8 +81,8 @@ function SubTitle() {
         {/* 1-2 desc */}
         <div className="desc">{desc}</div>
       </div>
-
       {/* 2. ani-bar */}
+      <div className="blur-box"></div>
     </div>
   );
 }
