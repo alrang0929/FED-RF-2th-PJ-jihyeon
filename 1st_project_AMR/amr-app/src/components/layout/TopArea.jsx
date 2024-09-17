@@ -79,20 +79,20 @@ function TopArea(props) {
         }>
           {/* 상태변수 작동 확인 */}
           {console.log("isMenuOpen 상태:",isMenuOpen)}
-          {Object.keys(gnbData).map((category, index) => (
+          {gnbData.map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
             <>
             {console.log("category",category)}
             <li key={index} className="link-box">
               <Link 
-              to={category}
-              >{category}</Link>
+              to={category.link}
+              >{category.text}</Link>
 
-              {gnbData[category] !== "없음" && (
+              {category.sub !== "없음" && (
                 <ol className="sub-menu">
-                  {gnbData[category].map((submenu, subIndex) => (
+                  {category.sub.map((submenu, subIndex) => (
                     <li key={subIndex}>
-                      <Link to={category}>{submenu}</Link>
+                      <Link to={submenu.link}>{submenu.text}</Link>
                     </li>
                   ))}
                 </ol>

@@ -27,12 +27,12 @@ function SubTitle() {
   // 2. desc : 데이터 값 있냐? 퉤퉤 : 없음문구
   const desc = pageData ? pageData.desc : 'Default Desc';
 
-//   console.log("pathName", pathName);
+  console.log("pageData", pageData);
 
   // pathname을 이용하여 클릭된 페이지 데이터 찾기
   // const pageData = getPageDataFromPathname(pathname); // 실제 데이터 가져오는 로직은 필요에 따라 구현
   return (
-    <div className={"bg" + pathname}>
+    <div className={"sub-title"+"bg-" + title.toLowerCase()}>
       {/* 1. title-wrap */}
       <div className="title-wrao">
         {/* 1-1 title */}

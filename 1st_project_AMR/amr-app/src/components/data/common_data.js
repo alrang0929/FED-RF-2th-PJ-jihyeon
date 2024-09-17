@@ -2,16 +2,16 @@ const gnbData = [
     {
         text:"Amorepacific",
         link:"/Amorepacific",
-        sub:[
-            {text:"", link:"",},
-        ]
+        sub:
+            "없음",
+        
     },
     {
         text:"Research & Innovatio",
         link:"/ResearchnInnovatio",
-        sub:[
-            {text:"", link:"",},
-        ]
+        sub:
+            "없음",
+        
     },
     {
         text:"Visual Identity",
@@ -25,15 +25,15 @@ const gnbData = [
         text:"BRANDS",
         link:"/Brand",
         sub:[
-            {text:"화장품,", link:"/Brand",},
-            {text:"향수,", link:"/Brand",},
-            {text:"메디컬뷰티,", link:"/Brand",},
-            {text:"뷰티 디바이스,", link:"/Brand",},
-            {text:"이너뷰티,", link:"/Brand",},
-            {text:"헤어케어,", link:"/Brand",},
-            {text:"바디케어,", link:"/Brand",},
-            {text:"덴탈케어티,", link:"/Brand",},
-            {text:"티컬처,", link:"/Brand",},
+            {text:"화장품", link:"/Brand",},
+            {text:"향수", link:"/Brand",},
+            {text:"메디컬뷰티", link:"/Brand",},
+            {text:"뷰티 디바이스", link:"/Brand",},
+            {text:"이너뷰티", link:"/Brand",},
+            {text:"헤어케어", link:"/Brand",},
+            {text:"바디케어", link:"/Brand",},
+            {text:"덴탈케어티", link:"/Brand",},
+            {text:"티컬처", link:"/Brand",},
         ]
     },
     {
