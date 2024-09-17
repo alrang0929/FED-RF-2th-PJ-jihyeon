@@ -65,7 +65,7 @@ function Main(props) {
             </span>
           </div>
           {/* 3) 더보기 버튼 */}
-          <NomalButton text={"more view"} link={"#"} />
+          <NomalButton text={"more view"} link={"/Amorepacific"} />
           <section className="rslider-info-wrap">
             <div className="rslider-info">
               <div>

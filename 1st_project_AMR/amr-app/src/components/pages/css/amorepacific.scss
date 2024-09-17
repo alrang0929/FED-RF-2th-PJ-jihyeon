@@ -1,0 +1,96 @@
+@import "../../../css/variable/common_variable.scss";
+@import "../../../css/variable/interval_variable.scss";
+.amr-page {
+  position: relative;
+  .bg-box {
+    background-color: #f5faff;
+    z-index: -1;
+    width: 100%;
+    height: 65vh;
+    position: absolute;
+    top: 40%;
+  }
+  .line-bar {
+    background-color: $basic-font-color;
+    height: 40px;
+    width: 1px;
+    margin: $padding-ragular 0;
+  }
+  .cont-box {
+    // 컨텐츠 공통 넓이 설정
+    margin: 0 auto;
+    width: 80vw;
+    // 공통여백 설정
+    & > div {
+      padding-top: $container-padding;
+    }
+    & > div:last-child {
+      padding-bottom: $container-padding;
+    }
+    & > .fxbox {
+      gap: $padding-XL;
+    }
+
+    .img-wrap {
+      gap: $padding-ragular;
+      .imgbox {
+        border: 1px solid #c8c8c805;
+        img{
+            width: 100%;
+        }
+      }
+    }
+
+    // 공통 폰트설정
+    .title-wrap {
+        .title {
+          width: 23vw;
+        font-size: $sub-title-size;
+        span {
+          display: block;
+        } //span
+      }
+      .desc {
+        line-height: 1.7;
+      }
+    } //title-wrap
+    .mcolor-mbtn {
+      margin-top: $padding-small;
+      height: 50px;
+      width: 100%;
+    }
+    .intro{
+        .imgbox{
+            img{
+                width: 100%;
+            }
+        }
+    }
+  } //cont-box
+} //amr-page
+
+// 미디어쿼리 /////////////////////////////////
+// 모바일분기: 661px
+@media screen and (max-width: 661px) {
+  .amr-page {
+    .cont-box {
+      & > .fxbox {
+        flex-direction: column;
+      }
+      .title-wrap{
+        .title{
+            width: 100%;
+        }
+      }
+      .ci-info{
+        flex-direction: column-reverse;
+        .img-wrap{
+            flex-wrap: wrap;
+        }
+      }
+    } //.cont-box
+    .bg-box{
+        display: none;
+    }
+  }
+}
