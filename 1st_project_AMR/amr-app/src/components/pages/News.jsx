@@ -1,7 +1,7 @@
 import React from 'react';
 import SubTitle from '../modules/SubTitle';
 
-function OurCulture(props) {
+function News(props) {
     return (
         <>
         <SubTitle/>
@@ -9,4 +9,4 @@ function OurCulture(props) {
     );
 }
 
-export default OurCulture;
+export default News;

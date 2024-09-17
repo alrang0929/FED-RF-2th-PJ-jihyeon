@@ -37,13 +37,9 @@ const gnbData = [
         ]
     },
     {
-        text:"OUR CULTURE",
-        link:"/OurCulture",
-        sub:[
-            {text:"Our Story", link:"/OurCulture",},
-            {text:"Our History", link:"/OurCulture",},
-            {text:"Our Values", link:"/OurCulture",},
-        ]
+        text:"News",
+        link:"/News",
+        sub: "없음"
     },
 ]
 

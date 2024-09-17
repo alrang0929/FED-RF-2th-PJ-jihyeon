@@ -8,7 +8,7 @@ import Brand from "./components/pages/Brand";
 import Amorepacific from "./components/pages/Amorepacific";
 import ResearchnInnovatio from "./components/pages/ResearchnInnovatio";
 import VisualIdentity from "./components/pages/VisualIdentity";
-import OurCulture from "./components/pages/OurCulture";
+import News from "./components/pages/News";
 
 export default function MainComponent() {
   //////코드 리턴구역/////////////////
@@ -22,7 +22,7 @@ export default function MainComponent() {
             <Route path='/Amorepacific' element={<Amorepacific />} /> 
             <Route path='/ResearchnInnovatio' element={<ResearchnInnovatio />} /> 
             <Route path='/VisualIdentity' element={<VisualIdentity />} /> 
-            <Route path='/OurCulture' element={<OurCulture />} /> 
+            <Route path='/News' element={<News />} /> 
           </Route>
         </Routes>
       </BrowserRouter>

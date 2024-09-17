@@ -25,7 +25,8 @@ function ProductGrid(props) {
             OUR<br/>
             PRODUCTS
             </div>
-          <NomalButton text={"more view"} link={"#"}/>
+          
+          
           {/* 2) 제품 그리드 박스 */}
         </li>
         {pdData.map((v, i) => (

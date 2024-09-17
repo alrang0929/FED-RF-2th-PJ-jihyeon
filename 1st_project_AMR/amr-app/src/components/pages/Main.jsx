@@ -123,14 +123,16 @@ function Main(props) {
             src={process.env.PUBLIC_URL + "/images/brand_thm_add.jpg"}
             alt="아모레퍼시픽 건물 전경"
           />
-        </div>
           <div className="brand-desc">아모레퍼시픽의 브랜드를 소개합니다</div>
+        </div>
       </ScrollFadeIn>
 
       <ScrollFadeIn>
         <section className="brand-info">
-          <div className="title miller-display">OUR BRAND</div>
+          <div className="title miller-display">OUR BRAND
 
+          <NomalButton text={"more view"} link={"/Brand"}/>
+          </div>
           {/* PC: 버튼 클릭시 이동하는 슬라이드 */}
           {/* 모바일: 스와이프 형식의 슬라이드로 변경 */}
           {windowWidth > 661 ? <BrandVisual /> : <BrandVisualMobile />}
@@ -140,6 +142,7 @@ function Main(props) {
       <section className="product-info">
         <ProductGrid />
       </section>
+        {/* <NomalButton text={"more view"} link={"/Amorepacific"} /> */}
 
       {/* 5. 사내 뉴스 */}
       <ScrollFadeIn>
@@ -148,7 +151,7 @@ function Main(props) {
           <div className="title-wrap">
             <div className="title miller-display">Latest Amorepacific News</div>
             <div className="desc">아모레퍼시픽의 새로운 소식을 만나보세요</div>
-            <NomalButton text={"more view"} link={"#"} />
+            <NomalButton text={"more view"} link={"/News"} />
           </div>
           {/* 2) 뉴스 콘텐츠 스와이퍼 */}
           <MainNewsSilde />

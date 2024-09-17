@@ -1,6 +1,9 @@
 @import "../../../css/variable/common_variable.scss";
 
 // 버튼설정
+.mcolor-mbtn{
+  cursor: pointer;
+}
 .mcolor-mbtn .arrow-R {
     padding-left: 10px;
     font-size: .9rem;

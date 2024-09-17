@@ -82,12 +82,16 @@ main {
 
   .brand-info {
     padding-bottom: $container-padding;
-  
+    .mcolor-mbtn{
+      // margin: 0 auto;
+      margin: $padding-ragular auto;
+      width: 14rem;
+    }
     .title {
       font-size: $title-size;
       text-align: center;
       color: $main-color;
-      padding-bottom: $padding-ragular;
+      padding: $padding-ragular 0;
     } //title
     .desc {
       text-align: center;
@@ -125,6 +129,9 @@ main {
 
   .product-info {
     padding-bottom: $container-padding;
+    button{
+      pointer-events: auto;
+    }
   } //product-info
   .news-area {
     .title-wrap {
