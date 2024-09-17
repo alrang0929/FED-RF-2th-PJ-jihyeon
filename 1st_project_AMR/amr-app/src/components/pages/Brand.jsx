@@ -4,8 +4,8 @@ import SubTitle from '../modules/SubTitle';
 function Brand(props) {
     return (
         <>
-            <SubTitle />
-        </>
+        <SubTitle/>
+    </>
     );
 }
 

@@ -4,8 +4,8 @@ import SubTitle from '../modules/SubTitle';
 function OurCulture(props) {
     return (
         <>
-            <SubTitle/>
-        </>
+        <SubTitle/>
+    </>
     );
 }
 

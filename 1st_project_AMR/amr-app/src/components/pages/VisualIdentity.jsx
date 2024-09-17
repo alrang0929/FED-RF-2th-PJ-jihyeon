@@ -4,8 +4,8 @@ import SubTitle from '../modules/SubTitle';
 function VisualIdentity(props) {
     return (
         <>
-            <SubTitle/>
-        </>
+        <SubTitle/>
+    </>
     );
 }
 

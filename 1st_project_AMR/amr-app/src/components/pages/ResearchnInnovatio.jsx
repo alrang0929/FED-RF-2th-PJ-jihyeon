@@ -1,12 +1,12 @@
-import React from 'react';
-import SubTitle from '../modules/SubTitle';
+import React from "react";
+import SubTitle from "../modules/SubTitle";
 
 function ResearchnInnovatio(props) {
-    return (
-        <>
-            <SubTitle/>
-        </>
-    );
+  return (
+    <>
+      <SubTitle />
+    </>
+  );
 }
 
 export default ResearchnInnovatio;

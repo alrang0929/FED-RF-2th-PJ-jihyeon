@@ -1,18 +1,70 @@
 // sub title scss
+@import "../../../css/variable/common_variable.scss";
+@import "../../../css/variable/interval_variable.scss";
+// 서브타이틀 BG
+.sub-title.bg-amorepacific {
+  background-image: url("../../../../public/images/sub_bg_amore.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.sub-title.bg-researchninnovatio {
+  background-image: url("../../../../public/images/sub_bg_resarch.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.sub-title.bg-visualidentity {
+  background-image: url("../../../../public/images/sub_bg_visual.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.sub-title.bg-brand {
+  background-image: url("../../../../public/images/sub_bg_brand.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.sub-title.bg-ourculture {
+  background-image: url("../../../../public/images/sub_bg_culture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/////////////////////////////////////////////////////////////////////
+.sub-title {
+  position: relative;
+  height: 80vh;
+  .title-wrap {
+    position: absolute;
+    text-align: center;
 
-// "bg-" + title.toLowerCase()
-.sub-title.bg-amorepacific{
-    background-image: url("../../../../public/images/")
-};
-.sub-title.bg-researchninnovatio{
-    background-image: url("../../../../public/images/")
-};
-.sub-title.bg-visualidentity{
-    background-image: url("../../../../public/images/")
-};
-.sub-title.bg-brand{
-    background-image: url("../../../../public/images/")
-};
-.sub-title.bg-ourculture{
-    background-image: url("../../../../public/images/")
-};
+    top: 75%;
+    left: 50%;
+    translate: -50% -50%;
+
+    width: 80vw;
+    
+    padding-bottom: $padding-ragular;
+    .title {
+      padding-bottom: $padding-ragular;
+      h2 {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 200;
+      }
+    }
+    .desc {
+      margin: 0 auto;
+      line-height: 1.7;
+      width: 40vw;
+      color: #fff;
+    }
+  }
+}
