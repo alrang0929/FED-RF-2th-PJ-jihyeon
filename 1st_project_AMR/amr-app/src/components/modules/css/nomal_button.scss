@@ -10,11 +10,11 @@
     color: $main-color;
     
   }
-  .mcolor-mbtn a {
+  .mcolor-mbtn {
     display: block;
     /* height: 24px; */
     // font-weight: 300;
-    font-size: .8rem;
+    font-size: .6rem;
     text-decoration: none;
     color: $main-color;
   }
@@ -54,7 +54,7 @@
   }
   /* 버튼 호버시 */
   
-  .mcolor-mbtn:hover a,
+  .mcolor-mbtn:hover,
   .arrow-R {
     color: #fff;
   }

@@ -20,19 +20,18 @@ function DownloadButton({ text, link, file }) {
 
   // 코드 리턴구역 //////////////////////////////////////////
   return (
-    <div>
-      <button className="mcolor-mbtn">
-        <Link
-          to={link}
-          onClick={() => {
-            handleDownload("/api/download/" + file, link);
-          }}
-        >
-          {text}
-        </Link>
+    <>
+      <button
+        className="mcolor-mbtn"
+        onClick={(e) => {
+          e.preventDefault(); // Link의 기본 동작 방지
+          handleDownload("/api/download/" + file, link);
+        }}
+      >
+        {text}
         <IoIosDocument className="arrow-R" />
       </button>
-    </div>
+    </>
   );
 }
 

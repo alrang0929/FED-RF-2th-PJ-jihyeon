@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import TopArea from "./TopArea";
 import MainArea from "./MainArea";
 import FooterArea from "./FooterArea";
 // import { aCon } from "./aCon";
 
 function Layout(props) {
+
   // 상태관리변수 :
   // 1. menuName을 가져오기 위한 상태관리변수
   // const [catchMenu, setCatchMenu] = useState(null);

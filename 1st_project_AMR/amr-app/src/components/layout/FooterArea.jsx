@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import "../../css/footer_area.scss";
 function FooterArea(props) {
 
-  useEffect(() => {
-    // 컴포넌트가 마운트되거나 업데이트될 때마다 스크롤 위치를 맨 위로 이동
-    window.scrollTo(0, 0);
-  });
+ 
   // 코드 리턴구역////////////////////////////////////
   return (
     
