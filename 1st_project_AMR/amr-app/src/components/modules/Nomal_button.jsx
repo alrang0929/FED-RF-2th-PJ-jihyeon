@@ -14,6 +14,8 @@ function NomalButton({text, link}) {
   const goNav = () => {
     navigate(link); // 버튼 클릭 시 페이지 이동
   };
+
+  
   return (
     <>
       <button 
