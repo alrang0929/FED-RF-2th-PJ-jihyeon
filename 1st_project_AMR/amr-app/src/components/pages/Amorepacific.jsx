@@ -3,9 +3,17 @@ import SubTitle from "../modules/SubTitle";
 import NomalButton from "../modules/Nomal_button";
 import "./css/amorepacific.scss";
 import ScrollFadeIn from "../func/scroll_fade_in";
+import download from 'downloadjs';
+import DownloadButton from "../modules/Download_button";
 function Amorepacific(props) {
 
+ const handleDownload = async (fileUrl, fileName) => {
+    const response = await fetch(fileUrl);
+    const blob = await response.blob();
+    download(blob, fileName);
+  };
 
+//코드 리턴구역/////////////////////////////////////////////////////////////////
   return (
     <>
       <SubTitle />
@@ -83,7 +91,7 @@ function Amorepacific(props) {
                       alt="아모레퍼시픽 ci"
                     />
                   </div>
-                  <NomalButton text={"CI 다운로드 받기"} link={"#"} />
+                  <DownloadButton text={"CI 다운로드 받기"} link={"/images/sub01/ci01.jpg"} file={"ci01.jpg"} />
                 </div>
                 <div className="imgbox">
                   <div className="imgbx">
@@ -92,7 +100,7 @@ function Amorepacific(props) {
                       alt="아모레하트"
                     />
                   </div>
-                  <NomalButton text={"AMORE HEART 다운로드 받기"} link={"#"} />
+                  <DownloadButton text={"AMORE HEART 다운로드 받기"} link={"/images/sub01/ci02.jpg"}  file={"ci02.jpg"} />
                 </div>
               </div>
             </ScrollFadeIn>
