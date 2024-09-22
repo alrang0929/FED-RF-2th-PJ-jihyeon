@@ -1,0 +1,72 @@
+// 갤러리 리스트 css
+// display: flex
+
+// 폰트 사이즈, 컬러
+@import "../../../css/variable/common_variable.scss";
+// 여백
+@import "../../../css/variable/interval_variable.scss";
+
+$padding-small-percent: 5%;
+
+.gallery-list-wrap {
+  width: 80vw;
+  margin: 0 auto;
+  padding: $container-padding 0;
+  .gallery-list-inner {
+    // width: 100%;
+    flex-wrap: wrap;
+    gap: $padding-small;
+    li {
+        width: 23.9%;
+    //   width: calc((100% / 4) - $padding-small-percent);
+      flex-grow: 0; // 남는 공간을 균등하게 차지하도록 설정
+    //   flex-basis: 0; // 기본 너비를 0으로 설정
+      .img-box {
+        aspect-ratio: 260/260;
+        img {
+          width: 100%;
+        }
+      }//img-box
+      .info-wrap{
+        // 패딩 공통관리
+        & > div + div{
+            padding-bottom: $padding-Xsmall;
+        }
+        & > div:first-child{
+            padding:  $padding-Xsmall 0;
+        }
+        
+        & > div:last-child{
+            padding-bottom: 0;
+        }
+        .category{
+            color: $main-color;
+            font-size: $annotation-size;
+        }//category
+        .title{
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: $basic-font-color;
+            line-height: 1.4;
+
+            // 줄넘길시 ... 처리/////////////////
+            text-overflow: ellipsis;
+            // 줄 지정
+            -webkit-line-clamp: 2;
+            // 박스 정렬 가로
+            -webkit-box-orient: vertical;
+        }//title
+        .date{
+            color: $disabled-font-color;
+            font-size: $annotation-size;
+        }
+      }
+
+    //호버시 상태
+    // 1. 이미지 박스 확대 효과
+    // 2. 텍스트 효과 > 밑줄 + bold
+
+    
+    } //li
+  }
+} //gallery-list-wrap
