@@ -1,0 +1,66 @@
+@import "../../../css/variable/common_variable.scss";
+@import "../../../css/variable/interval_variable.scss";
+
+.detail-page {
+  .title-wrap {
+    &::after{
+        content: "";
+        background-color: $disabled-font-color;
+        height: 1px;
+        width: 80vw;
+        margin: 0 auto;
+    }
+    & > div:first-child {
+      padding-bottom: $padding-small;
+    }
+    & > div + div {
+      padding-bottom: $padding-ragular;
+    }
+    padding: 40px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 30vh;
+
+    .bar {
+      color: $disabled-font-color;
+    }
+    .title {
+      font-size: $sub-title-size;
+      font-weight: 500;
+    } //title
+  } //title-wrap
+  .contents-wrap {
+    width: 80vw;
+    margin: 0 auto;
+
+    .annotation {
+        span{
+            display: block;
+            line-height: 1.7;
+        }
+        padding: $padding-ragular 0;
+    }
+
+    .img-wrap {
+        text-align: center;
+        .img-box {
+            margin: 0 auto;
+            width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+      figcaption{
+        padding-top: $padding-small;
+        font-size: $annotation-size;
+        color: $disabled-font-color;
+      }
+    } //img-wrap
+    .desc{
+        padding-top: $padding-ragular;
+        text-indent: 1rem;
+        line-height: 1.7;
+    }
+  }//contents-wrap
+} //detail-page

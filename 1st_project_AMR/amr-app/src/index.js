@@ -9,6 +9,7 @@ import Amorepacific from "./components/pages/Amorepacific";
 import ResearchnInnovatio from "./components/pages/ResearchnInnovatio";
 import VisualIdentity from "./components/pages/VisualIdentity";
 import News from "./components/pages/News";
+import Detail from "./components/pages/Detail";
 
 export default function MainComponent() {
   //////코드 리턴구역/////////////////
@@ -23,6 +24,7 @@ export default function MainComponent() {
             <Route path='/ResearchnInnovatio' element={<ResearchnInnovatio />} /> 
             <Route path='/VisualIdentity' element={<VisualIdentity />} /> 
             <Route path='/News' element={<News />} /> 
+            <Route path='/Detail' element={<Detail />} /> 
           </Route>
         </Routes>
       </BrowserRouter>

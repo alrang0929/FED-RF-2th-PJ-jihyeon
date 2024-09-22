@@ -19,18 +19,21 @@ import "./css/list_garrery.scss";
             : 상위 카테고리 + idx 값으로 고유값 생성
                 ㄴ> 클릭시 그 고유값으로 이동, 카테고리에 해당되는
                     디테일 페이지로 이동. ->  조건문으로 구현해야되나?
-
-
 ************************************************/
-function ListGallery(props) {
+function ListGallery({selectData}) {
+    /****************************************************** 
+    [props list]
+    1. selectData : 선택된 데이터, 외부 컴포넌트에서 데이터 들고옴
+    
+    ******************************************************/
   //코드리턴구역/////////////////////////////////////////////////
   return (
     <>
       <div className="gallery-list-wrap">
         <ul className="gallery-list-inner fxbox">
-          {newsData.map((item, idx) => (
+          {selectData.map((item, idx) => (
             <li key={idx}>
-              <Link to="">
+              <Link to="/Detail">
                 {/* 1. 이미지 */}
                 <div className="img-box">
                   <img

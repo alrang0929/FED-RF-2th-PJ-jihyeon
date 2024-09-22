@@ -8,7 +8,7 @@ function News(props) {
     return (
         <>
         <SubTitle/>
-        <ListGallery/>
+        <ListGallery selectData={newsData}/>
     </>
     );
 }

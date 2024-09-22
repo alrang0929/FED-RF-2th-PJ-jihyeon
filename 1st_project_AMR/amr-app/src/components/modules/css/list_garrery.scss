@@ -18,13 +18,20 @@ $padding-small-percent: 5%;
     gap: $padding-small;
     li {
         width: 23.9%;
-    //   width: calc((100% / 4) - $padding-small-percent);
-      flex-grow: 0; // 남는 공간을 균등하게 차지하도록 설정
-    //   flex-basis: 0; // 기본 너비를 0으로 설정
-      .img-box {
-        aspect-ratio: 260/260;
-        img {
-          width: 100%;
+        padding: $padding-Xsmall;
+        box-sizing: border-box;
+        //   width: calc((100% / 4) - $padding-small-percent);
+        flex-grow: 0; // 남는 공간을 균등하게 차지하도록 설정
+        //   flex-basis: 0; // 기본 너비를 0으로 설정
+        .img-box {
+            aspect-ratio: 260/260;
+            transform-origin: center center;
+            overflow: hidden;
+            img {
+                width: 100%;
+                scale: 1;
+                transition: 4s linear ;
+                
         }
       }//img-box
       .info-wrap{
@@ -38,6 +45,7 @@ $padding-small-percent: 5%;
         
         & > div:last-child{
             padding-bottom: 0;
+            padding-top: $padding-Xsmall;
         }
         .category{
             color: $main-color;
@@ -50,11 +58,17 @@ $padding-small-percent: 5%;
             line-height: 1.4;
 
             // 줄넘길시 ... 처리/////////////////
+            display: -webkit-box;
+
+            max-height: 2.5rem;
+            overflow: hidden;
             text-overflow: ellipsis;
             // 줄 지정
             -webkit-line-clamp: 2;
             // 박스 정렬 가로
             -webkit-box-orient: vertical;
+
+            transition: .1s linear;
         }//title
         .date{
             color: $disabled-font-color;
@@ -65,7 +79,12 @@ $padding-small-percent: 5%;
     //호버시 상태
     // 1. 이미지 박스 확대 효과
     // 2. 텍스트 효과 > 밑줄 + bold
-
+    &:hover .img-box img{
+        scale: 1.5;
+    }
+    &:hover .title{
+        font-weight: 700;;
+    }
     
     } //li
   }
