@@ -2,13 +2,20 @@
 @import "../../../css/variable/interval_variable.scss";
 
 .detail-page {
+  .contents-wrap {
+    width: 70vw;
+    margin: 0 auto;
   .title-wrap {
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 30vh;
+
     &::after{
         content: "";
         background-color: $disabled-font-color;
         height: 1px;
-        width: 80vw;
-        margin: 0 auto;
+        width: 100%;
     }
     & > div:first-child {
       padding-bottom: $padding-small;
@@ -16,11 +23,6 @@
     & > div + div {
       padding-bottom: $padding-ragular;
     }
-    padding: 40px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 30vh;
 
     .bar {
       color: $disabled-font-color;
@@ -30,9 +32,7 @@
       font-weight: 500;
     } //title
   } //title-wrap
-  .contents-wrap {
-    width: 80vw;
-    margin: 0 auto;
+
 
     .annotation {
         span{

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./css/index.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Main from "./components/pages/Main";
 import Brand from "./components/pages/Brand";

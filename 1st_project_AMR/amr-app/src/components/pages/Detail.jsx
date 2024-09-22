@@ -15,6 +15,7 @@ function Detail(props) {
   return (
     <>
       <div className="detail-page">
+      <div className="contents-wrap">
         <div className="title-wrap fxbox">
           {/* 1. title */}
           <div className="title">{testData.title}</div>
@@ -26,7 +27,7 @@ function Detail(props) {
           </div>
         </div>
 
-<div className="contents-wrap">
+
         {/* 3. 요약 */}
         <div className="annotation">
             {testData.annotation.split("^").map((item,i)=>
