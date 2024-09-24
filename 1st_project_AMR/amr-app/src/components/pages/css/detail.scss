@@ -2,6 +2,9 @@
 @import "../../../css/variable/interval_variable.scss";
 
 .detail-page {
+  .back-btn{
+    margin: $container-padding auto;
+  }
   .contents-wrap {
     width: 70vw;
     margin: 0 auto;

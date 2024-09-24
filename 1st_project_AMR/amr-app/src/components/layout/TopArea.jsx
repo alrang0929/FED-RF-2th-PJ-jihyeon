@@ -90,7 +90,7 @@ function TopArea(props) {
           {gnbData.map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
             <>
-            {console.log("category",category)}
+            {/* {console.log("category",category)} */}
             <li key={index} className="link-box">
               <Link 
               to={category.link}

@@ -33,7 +33,7 @@
 
 *************************************************/
 //////////////메인페이지
-const Categories = ["전체", "기업", "브랜드", "연구개발", "사회공헌", "지속가능"]
+// const categories = ["전체", "기업", "브랜드", "연구개발", "사회공헌", "지속가능"]
 
 const newsData = [
   {
@@ -49,7 +49,7 @@ const newsData = [
 ‘진생 사이언스 월드’ 콘셉트로 설화수 인삼 과학의 힘과 헤리티지를 느끼도록 구성`,
 
     contents: {
-      isrc: "/images/news_inner/img082802.png",
+      isrc: "/images/news_inner/img082902.png",
       alt: "60년 인삼 과학의 정수, 설화수 자음생 팝업스토어 진행",
       figure:
         "홀리스틱 뷰티를 대표하는 글로벌 럭셔리 스킨케어 브랜드 설화수가 ‘자음생 팝업스토어’를 선보인다",
@@ -455,4 +455,4 @@ const newsData = [
   },
 ];
 
-export {newsData, Categories};
+export {newsData };

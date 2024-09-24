@@ -3,11 +3,9 @@ import React from "react";
 import "./css/detail.scss";
 
 //더미데이터
+import {newsData} from "../data/news_data";
 import { useLocation } from "react-router-dom";
-import NomalButton from "../modules/Nomal_button";
-import BackButton from "../modules/Back_button copy";
 function Detail(props) {
-
   /********************************************************** 
 
 
@@ -19,7 +17,7 @@ console.log("selectedData",selectedData);
   // 코드리턴구역//////////////////////////////////////////////////
   return (
     <>
-        <div className="detail-page">
+      <div className="detail-page">
       <div className="contents-wrap">
         <div className="title-wrap fxbox">
           {/* 1. title */}
@@ -57,7 +55,6 @@ console.log("selectedData",selectedData);
           ))}
         </div>
       </div>
-      <BackButton text={"목록으로 돌아가기"}/>
       </div>
     </>
   );
