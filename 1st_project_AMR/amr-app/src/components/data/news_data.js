@@ -32,6 +32,8 @@
   },
 
 *************************************************/
+//////////////메인페이지
+const Categories = ["전체", "기업", "브랜드", "연구개발", "사회공헌", "지속가능"]
 
 const newsData = [
   {
@@ -453,4 +455,4 @@ const newsData = [
   },
 ];
 
-export default newsData;
+export {newsData, Categories};

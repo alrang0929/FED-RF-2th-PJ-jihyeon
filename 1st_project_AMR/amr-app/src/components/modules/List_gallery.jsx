@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import newsData from "../data/news_data";
+import {newsData} from "../data/news_data";
 import "./css/list_garrery.scss";
 
 /************************************************ 
 [갤러리 리스트 타입 컴포넌트]
-
+    
 1. 외부에서 카테고리값 받아와서 데이터 셋팅
 2. 데이터 형식은 아래로 통일
     1) 상위메뉴

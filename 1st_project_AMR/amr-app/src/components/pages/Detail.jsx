@@ -3,7 +3,7 @@ import React from "react";
 import "./css/detail.scss";
 
 //더미데이터
-import newsData from "../data/news_data";
+import {newsData} from "../data/news_data";
 function Detail(props) {
   /********************************************************** 
 

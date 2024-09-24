@@ -1,4 +1,3 @@
-//////////////메인페이지
 
 ///////제품 리스트
 const pdData =[
@@ -204,57 +203,6 @@ const storyData = [
     ]},
 ]
 
-const newsData = [
-{
-  idx: 1,
-  date: "2024-04-12",
-  isrc:"/images/news_00/041201.png",
-  title: `아모레퍼시픽, 레티놀 안정화 기술 장영실상 수상`,
-},
-{
-  idx: 2,
-  date: "2024-04-11",
-  isrc:"/images/news_00/041101.png",
-  title: `바이탈뷰티, 병의원 전용 건강기능식품 2종 출시`,
-},
-{
-  idx: 3,
-  date: "2024-04-09",
-  isrc:"/images/news_00/040902.png",
-  title: `해피바스, 딥클린 라인 신제품 출시`,
-},
-{
-  idx: 4,
-  date: "2024-04-09",
-  isrc:"/images/news_00/040901.png",
-  title: `아모레퍼시픽, 더 샌드박스서 ‘뉴뷰티 스퀘어’ 오픈`,
-},
-{
-  idx: 5,
-  date: "2024-04-12",
-  isrc:"/images/news_00/040401.png",
-  title: `설화수, ‘인삼 헤리티지’ 체험 팝업스토어 오픈`,
-},
-{
-  idx: 6,
-  date: "2024-04-03",
-  isrc:"/images/news_00/040301_1.png",
-  title: `아이오페, 스킨 부스터 앰플 필 패드 출시`,
-},
-{
-  idx: 7,
-  date: "2024-04-12",
-  isrc:"/images/news_00/040202.png",
-  title: `설화수, 2023년 지속가능보고서 발간`,
-},
-{
-  idx: 8,
-  date: "2024-04-02",
-  isrc:"/images/news_00/040201.png",
-  title: `한율 X 이슬로 작가, 어린쑥 한정판 출시`,
-},
-
-]
 
 const mslideData =[
   // {
@@ -280,4 +228,4 @@ const mslideData =[
 
   
 /* 내보내기 */
-export {sdData,brandList,pdData,storyData,newsData,mslideData};
+export {sdData,brandList,pdData,storyData,mslideData};
