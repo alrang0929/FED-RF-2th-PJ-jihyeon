@@ -11,8 +11,12 @@ import "./css/swiper_news_slide.scss";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function MainNewsSilde() {
+    // 2.네비게이트 훅사용
+    const navigate = useNavigate(); // useNavigate 훅 사용
+    //코드리턴구역/////////////////////////////////////////////////
   return (
     <>
     <div className="news-slide-wrap">
@@ -40,19 +44,28 @@ export default function MainNewsSilde() {
       >
         <div className="gradient-L"></div>
         <div className="gradient-R"></div>
-        {newsData.map((v, i) => (
+        {newsData.map((item, i) => (
           <SwiperSlide key={i}>
+             <NavLink
+                to="/Detail"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/Detail", { state: { selectedData: item } });
+                 console.log("item",item);
+                }}
+              >
             {/* 1. 이미지 박스 > img / data-wrap: title(최대 2줄 넘김...처리)+date */}
             <div className="img-box">
               <img
-                src={process.env.PUBLIC_URL + v.isrc.img}
-                alt={v.title + "썸네일"}
+                src={process.env.PUBLIC_URL + item.isrc.img}
+                alt={item.title + "썸네일"}
               />
             </div>
             <div className="data-wrap">
-              <div className="date">{v.date}</div>
-              <div className="title">{v.title}</div>
+              <div className="date">{item.date}</div>
+              <div className="title">{item.title}</div>
             </div>
+            </NavLink>
           </SwiperSlide>
         ))}
       </Swiper>

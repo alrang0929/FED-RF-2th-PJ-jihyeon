@@ -4,7 +4,6 @@ import "./css/detail.scss";
 
 //더미데이터
 import { useLocation } from "react-router-dom";
-import NomalButton from "../modules/Nomal_button";
 import BackButton from "../modules/Back_button copy";
 function Detail(props) {
 
