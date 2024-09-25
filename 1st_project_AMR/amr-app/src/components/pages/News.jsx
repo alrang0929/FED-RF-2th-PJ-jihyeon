@@ -1,6 +1,6 @@
 import React from 'react';
 import SubTitle from '../modules/SubTitle';
-import {newsData, categories } from '../data/news_data';
+import {newsData } from '../data/page_data';
 import ListGallery from '../modules/List_gallery';
 // import MakeCategory from '../modules/MakeCategory';
 import "./css/news.scss";

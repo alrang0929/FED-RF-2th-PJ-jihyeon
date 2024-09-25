@@ -3,15 +3,15 @@ import { useLocation } from "react-router-dom";
 import "./css/sub_title.scss";
 
 // data
-import { pageDataList } from "../data/pageData";
+import { subTitleData } from "../data/sub_title_data";
 
 function SubTitle() {
 
   ///////페이지 데이터 매칭////////////////////////////////////////////////////////////
   /***************************************** 
     어케 작동함? 
-    1. pageDataList 데이터를 가져옴
-    2. pageDataList와 location 으로 가져온 pathname 대조,
+    1. subTitleData 데이터를 가져옴
+    2. subTitleData와 location 으로 가져온 pathname 대조,
     find를 사용하여 데이터 내 path === pathname이 일치하면 
     pageData 퉤퉤 
 
@@ -22,7 +22,7 @@ function SubTitle() {
   const pathname = location.pathname; // URL 경로 가져오기
 
   // dataList를 찾아라 > 일치하는 path가 pathname과 일치하냐?? pageData에 get
-  const pageData = pageDataList.find(item => item.path === pathname);
+  const pageData = subTitleData.find(item => item.path === pathname);
   // pageData setting
   // 1. title : 데이터 값 있냐? 퉤퉤 : 없음문구
   const title = pageData ? pageData.title : 'Default Title';

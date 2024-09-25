@@ -1,5 +1,4 @@
 // AMR PJ news data
-
 /************************************************* 
 
 카테고리 = key
@@ -277,7 +276,8 @@ const newsData = [
     contents: {
       isrc: "/images/news_inner/img080801.png",
       alt: "아모레퍼시픽, ‘2024 레드닷 디자인 어워드’ 3개 본상 수상",
-      figure: "(좌측부터) '아리따 글꼴 전시', '북촌 조향사의 집’, ‘에이피 뷰티의 프라임 리저브 라인’",
+      figure:
+        "(좌측부터) '아리따 글꼴 전시', '북촌 조향사의 집’, ‘에이피 뷰티의 프라임 리저브 라인’",
       desc: `아모레퍼시픽이 ‘2024 레드닷 디자인 어워드(Red Dot Design Award)’ 브랜드&커뮤니케이션 부문에서 3개의 본상을 수상했다. 공간 커뮤니케이션 영역에서 ‘아리따 글꼴 전시’와 ‘북촌 조향사의 집’, 패키징 디자인 영역에서 ‘에이피 뷰티(AP BEAUTY)의 프라임 리저브(PRIME RESERVE) 라인’이 각각 수상했다.^
 
 공간 커뮤니케이션 영역에서 본상을 수상한 ‘아리따 글꼴 전시’는 아모레퍼시픽의 글꼴에 대한 끊임없는 관심과 문화 사업에 관한 이야기를 풀어낸 전시다. 글꼴 ‘아리따’ 제작 과정을 담은 디자이너 7인의 인터뷰 영상을 통해 글꼴 개발 비하인드 스토리를 엿볼 수 있고, 전시장에서는 외국인도 쉽게 참여할 수 있는 다양한 체험 프로그램을 통해 흥미롭게 풀어냈다고 평가받았다.^
@@ -455,4 +455,220 @@ const newsData = [
   },
 ];
 
-export {newsData };
+// brandData
+const brandData = [
+  {
+    idx: "1",
+    category: "화장품",
+    title: "설화수",
+    desc: "예술과 헤리티지로 빚어내는 아름다움의 세계",
+    img: "/images/brand/brands.png",
+  },
+  {
+    idx: "2",
+    category: "화장품",
+    title: "라네즈",
+    desc: "FEEl the GLOW",
+    img: "/images/brand/bi_laneige.png",
+  },
+  {
+    idx: "3",
+    category: "화장품",
+    title: "이니스프리",
+    desc: "Effective, Nature-Powered Skincare^Discovered from the lsland",
+    img: "/images/brand/288x178.png",
+  },
+  {
+    idx: "4",
+    category: "화장품",
+    title: "에이퍼 뷰티",
+    desc: "APEX OF Skincare",
+    img: "/images/brand/bi_ap_1.png",
+  },
+  {
+    idx: "5",
+    category: "화장품",
+    title: "헤라",
+    desc: "Contemporary Seooul Beauty^Here, New, Myself",
+    img: "/images/brand/bi_hera.png",
+  },
+  {
+    idx: "6",
+    category: "화장품",
+    title: "프리메라",
+    desc: "All about skin barrier by SEED TECH™",
+    img: "/images/brand/288x178_8.png",
+  },
+  {
+    idx: "7",
+    category: "화장품",
+    title: "아이오페",
+    desc: "클리니컬 레벨 테크(Clinical Level Tech)로^눈에 보이는 변화를 주는^고효능 스킨케어 브랜드",
+    img: "/images/brand/bi_iope.png",
+  },
+  {
+    idx: "8",
+    category: "화장품",
+    title: "마몽드",
+    desc: "Hyper Flora™로 피어나는 나다운 아름다움",
+    img: "/images/brand/bi_mamonde.png",
+  },
+  {
+    idx: "9",
+    category: "화장품",
+    title: "한율",
+    desc: "나만의 건강한 균형^Everyday glass skin, the k-beauty Recipe",
+    img: "/images/brand/bi_hanyul_new_1.png",
+  },
+  {
+    idx: "10",
+    category: "메디컬뷰티",
+    title: "에스트라",
+    desc: "태양영제약에서 시작된 헤리티지에 기반해^오래도록 건강한 아름다움을 선사하는 브랜드",
+    img: "/images/brand/bi_aestura.png",
+  },
+  {
+    idx: "11",
+    category: "화장품",
+    title: "에스쁘아",
+    desc: "자신만의 룩을 찾을 수 있도록 영감을 주는^Makeup Creation Brand, espoir",
+    img: "/images/brand/bi_espoir_new2.png",
+  },
+  {
+    idx: "12",
+    category: "화장품",
+    title: "에뛰드",
+    desc: "Make Your Makeup Playlist!",
+    img: "/images/brand/bi_etude.png",
+  },
+  {
+    idx: "13",
+    category: "헤어케어",
+    title: "려",
+    desc: "뿌리로부터 자라는 본연의 아름다움",
+    img: "/images/brand/bi_ryo.png",
+  },
+  {
+    idx: "14",
+    category: "헤어케어",
+    title: "미장센",
+    desc: "CHANGE YOUR HAIR, CHANGE YOUR LIFE",
+    img: "/images/brand/bi_mise_en_scene.png",
+  },
+  {
+    idx: "15",
+    category: "헤어케어",
+    title: "라보에이지",
+    desc: "두피 스킨케어 전문가...라보에이지",
+    img: "/images/brand/bi_laboh.png",
+  },
+  {
+    idx: "16",
+    category: "헤어케어",
+    title: "아윤채",
+    desc: "Detailed & High Performing Salon Care",
+    img: "/images/brand/",
+  },
+  {
+    idx: "17",
+    category: "헤어케어",
+    title: "아모스프로페셔널",
+    desc: "Trendy & Trust Worthy Professional^Hair Beauty",
+    img: "/images/brand/Gamma_bi_amos_1.png",
+  },
+  {
+    idx: "18",
+    category: "헤어케어",
+    title: "롱테이크",
+    desc: "깊은 숲에서 영감을 받은*감성향 지속가능 브랜드",
+    img: "/images/brand/288x178 (1).png",
+  },
+  {
+    idx: "18",
+    category: "바디케어",
+    title: "일리윤",
+    desc: "민감한 피부 고민에 대한 순하고 강력한 답",
+    img: "/images/brand/288x178_2.png",
+  },
+  {
+    idx: "20",
+    category: "바디케어",
+    title: "해피바스",
+    desc: "일상에 행복을 더하는 향과 건강한 원료를 담은 ^바디케어 브랜드 해피바스",
+    img: "/images/brand/288x178 (2).png",
+  },
+  {
+    idx: "21",
+    category: "바디케어",
+    title: "스킨유",
+    desc: "내 몸의 감각을 일꺠우는 ^섬세한 바디케어 브랜드 스킨유",
+    img: "/images/brand/288x178_2 (1).png",
+  },
+  {
+    idx: "22",
+    category: "덴탈케어",
+    title: "메디안",
+    desc: "내 치아를 위한 맞춤 처방",
+    img: "/images/brand/bi_median_ko.png",
+  },
+  {
+    idx: "23",
+    category: "덴탈케어",
+    title: "젠티스트",
+    desc: "구강 고민에 독립적인 솔루션을 제공하는^덴탈케어 브랜드, GENTIST",
+    img: "/images/brand/288x178 (3).png",
+  },
+  {
+    idx: "24",
+    category: "향수",
+    title: "구딸",
+    desc: "Scents Of Your Life",
+    img: "/images/brand/288x178_3.png",
+  },
+  {
+    idx: "25",
+    category: "이너뷰티",
+    title: "바이탈뷰티",
+    desc: "Hight-Performance Wellness, VITALBEAUTHE",
+    img: "/images/brand/bi_viralbeautie.png",
+  },
+  {
+    idx: "26",
+    category: "티컬처",
+    title: "오설록",
+    desc: "Tea from Jeju lsland",
+    img: "/images/brand/bi_osulloc.png",
+  },
+  {
+    idx: "27",
+    category: "뷰티 디바이스",
+    title: "메이크온",
+    desc: "피부를 잘 아는 뷰티 디바이스, 메이크온",
+    img: "/images/brand/bi_makeon.png",
+  },
+  {
+    idx: "28",
+    category: "화장품",
+    title: "오딧세이",
+    desc: "매력적인 남성미와 미향(美香)을 향한 여정",
+    img: "/images/brand/bi_odyssey.png",
+  },
+  {
+    idx: "29",
+    category: "화장품",
+    title: "비레디",
+    desc: "Ordinary. but extraordinary",
+    img: "/images/brand/beready_bi.png",
+  },
+  {
+    idx: "30",
+    category: "화장품",
+    title: "홀리추얼",
+    desc: "Holistic Rituals for Skin Wellness",
+    img: "/images/brand/",
+  },
+  
+
+];
+
+export { newsData, brandData };

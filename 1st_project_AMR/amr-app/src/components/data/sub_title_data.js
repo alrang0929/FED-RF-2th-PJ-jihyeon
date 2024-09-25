@@ -1,4 +1,4 @@
- const pageDataList = [
+ const subTitleData = [
   {
     path:"/Amorepacific",
     title: "Amorepacific",
@@ -27,4 +27,4 @@
   },
 ];
 
-export {pageDataList};
+export {subTitleData};

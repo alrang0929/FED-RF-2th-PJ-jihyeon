@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import {newsData} from "../data/news_data";
+import {newsData} from "../data/page_data";
 
 // Import Swiper styles
 import "swiper/css";
