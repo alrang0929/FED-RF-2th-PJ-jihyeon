@@ -461,7 +461,7 @@ const brandData = [
     idx: "1",
     category: "화장품",
     title: "설화수",
-    desc: "예술과 헤리티지로 빚어내는 아름다움의 세계",
+    desc: "예술과 헤리티지로 빚어내는^아름다움의 세계",
     img: "/images/brand/brands.png",
   },
   {
@@ -567,7 +567,7 @@ const brandData = [
     category: "헤어케어",
     title: "아윤채",
     desc: "Detailed & High Performing Salon Care",
-    img: "/images/brand/",
+    img: "/images/brand/txt_logo_ayunche_ver20210331.jpg",
   },
   {
     idx: "17",
@@ -665,7 +665,7 @@ const brandData = [
     category: "화장품",
     title: "홀리추얼",
     desc: "Holistic Rituals for Skin Wellness",
-    img: "/images/brand/",
+    img: "/images/brand/00SubIndex_1920_14.jpg",
   },
   
 

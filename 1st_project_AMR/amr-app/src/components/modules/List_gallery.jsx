@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import "./css/list_garrery.scss";
+import "./css/list_gallery.scss";
 
 /************************************************ 
 [갤러리 리스트 타입 컴포넌트]
