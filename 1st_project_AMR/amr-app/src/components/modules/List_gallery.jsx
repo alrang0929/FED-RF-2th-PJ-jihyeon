@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./css/list_gallery.scss";
 
 /************************************************ 
@@ -16,8 +16,9 @@ import "./css/list_gallery.scss";
     1. 리스트 생성: 상위메뉴 값을 불러와 생성
         1-1) 그 안의 리스트는? 
             : 상위 카테고리 + idx 값으로 고유값 생성
-                ㄴ> 클릭시 그 고유값으로 이동, 카테고리에 해당되는
-                    디테일 페이지로 이동. ->  조건문으로 구현해야되나?
+                ㄴ> 클릭시 그 고유값으로 이동, 카테고리에 해당되는 <<< 기존에 했던 방법인데 복잡함..!!
+                
+                    디테일 페이지로 이동. ->  조건문으로 구현해야되나? > MavLink로 Linkstate 값 /Brand 컴포넌트로 전달하여 구현
 ************************************************/
 function ListGallery({ selectData }) {
   /****************************************************** 
