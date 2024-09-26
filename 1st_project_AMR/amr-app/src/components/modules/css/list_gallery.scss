@@ -36,7 +36,7 @@ $padding-small-percent: 5%;
                     background-color: $main-color;
                     transition: 0.3s ease-in-out;
                 }//after
-                &:hover,&:active{
+                &:hover,&.active{
                     font-weight: 700;
                     &::after{
                         width: 100%;

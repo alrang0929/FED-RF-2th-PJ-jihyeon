@@ -35,7 +35,7 @@ $padding-small-percent: 5%;
         background-color: $main-color;
       } //after
       &:hover,
-      &:active {
+      &.active {
         font-weight: 700;
         &::after {
           width: 100%;

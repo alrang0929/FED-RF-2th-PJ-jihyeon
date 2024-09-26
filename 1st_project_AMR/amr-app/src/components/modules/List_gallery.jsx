@@ -33,6 +33,26 @@ function ListGallery({ selectData }) {
   const navigate = useNavigate(); // useNavigate 훅 사용
 
   // categoryData에서 카테고리 목록 추출
+  /**************************************************************************** 
+  1. new : 인스턴스 생성
+  2. Set : 중복되지 않는 유일한 값들의 집합을 다루는데 사용되는 자료구조
+          특징: 여러값이 들어가도 하나만 저장! 추가한 순서 기억x(순서 보장 ㄴㄴ)
+                다양한 타입 허용(숫자, 문자열, 객체, 다른set도 취급)
+  
+해석: 
+    const categories = Array.from(new Set(selData.map((item) => item.category)));
+  categories.unshift("전체");
+
+  const categories에는 이 내용들을 담아라
+
+  1. selData.map((item) => item.category) : selData배열의 각 뉴스 데이터에서 category를 뽑아
+    새로운 배열을 만들어라
+  2. new Set(...) : Set 객체를 이용해 중복 카테고리를 제거해
+  3. Array.from(...) : Set객체를 다시 배열로 반환해
+  4. categories.unshift("전체") : 전체 카테고리를 맨 앞에 추가해!
+  ( unshift : 맨앖, push: 맨뒤 // 이놈들은 원본 배열을 변경하기 때문에 원본 보존을 위해 new로 인스턴스 생성 후 진행함 )
+
+  ****************************************************************************/
   const categories = Array.from(new Set(selData.map((item) => item.category)));
   categories.unshift("전체");
   // console.log("categories", categories);
@@ -68,9 +88,12 @@ function ListGallery({ selectData }) {
           {categories.map((category, i) => (
             <li
               key={category + i}
+              //선택된 카테고리랑 카테고리명이 같냐? activ 클래스 추가
               className={selectedCategory === category ? "active" : ""}
+              // 그리고 선택카테고리 상태관리를 category를 담아서 보내라
               onClick={() => setSelectedCategory(category)}
             >
+              {/*  */}
               {category}
             </li>
           ))}
@@ -84,8 +107,9 @@ function ListGallery({ selectData }) {
                 to="/Detail"
                 onClick={(e) => {
                   e.preventDefault();
+                  // location.state로 /Detail에 클릭된 item값 전달 
                   navigate("/Detail", { state: { selectedData: item } });
-                 console.log("item",item);
+                //  console.log("item",item);
                 }}
               >
                 {/* 1. 이미지 */}
