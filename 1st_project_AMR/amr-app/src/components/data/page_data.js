@@ -350,7 +350,7 @@ const newsData = [
     annotation: `세럼 한 병의 유효성분을 겔 마스크 한 장에 담아 피부 투명도와 모공 고민 해결^
 리포좀 캡슐 공법으로 고함량 유효성분이 피부 깊숙이 도달하여 속광 피부 완성`,
     contents: {
-      isrc: "/images/news_innerimg080101.png",
+      isrc: "/images/news_inner/img080101.png",
       alt: "프리메라, ‘비타티놀 세럼 메가-샷 겔 마스크’ 출시",
       figure: "",
       desc: `씨드 테크 기반의 피부 장벽 솔루션 브랜드 프리메라가 '비타티놀 세럼 메가-샷 겔 마스크'를 출시한다.^
