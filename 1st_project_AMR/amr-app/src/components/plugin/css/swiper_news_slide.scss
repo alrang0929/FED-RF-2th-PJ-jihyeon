@@ -2,6 +2,9 @@
 @import "../../../css/variable/interval_variable.scss";
 .news-area{
     .news-slide-wrap{
+        a{
+            color: $basic-font-color;
+        }
         // width: 80%;
         margin: 0 auto;
         padding: $padding-ragular 0;
