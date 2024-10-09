@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/list_brand.scss";
-import Categoty from "./Category";
 
 
 function ListBrand({ selectData }) {
@@ -18,14 +17,37 @@ function ListBrand({ selectData }) {
   // 2.네비게이트 훅사용
   const navigate = useNavigate(); // useNavigate 훅 사용
 
-
+  // categoryData에서 카테고리 목록 추출
+  const categories = Array.from(new Set(selData.map((item) => item.category)));
+  categories.unshift("전체");
+  // console.log("categories", categories);
 
   // 상태관리변수/////////////////////////////////
   // 1. 선택된 카테고리 관리
   const [selectedCategory, setSelectedCategory] = useState("전체");
   // 2. 필터링된 데이터 관리
   const [filteredData, setFilteredData] = useState(selData);
+  // 3. 화면 넓이 관리
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // 4. 선택여부 확인
+  const [isClick, setIsClick] = useState(false);
 
+  //  클릭에 따른 상태 토글
+  const handleClickToggle = () =>{
+    setIsClick(!isClick); //토글
+  }//handleClick
+  // 화면넓이 감시자
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // 화면 랜더링 구역/////////////////////////////////////
   useEffect(() => {
@@ -49,7 +71,22 @@ function ListBrand({ selectData }) {
   //코드리턴구역/////////////////////////////////////////////////
   return (
     <>
-    <Categoty selectData={selectData}/>
+      {/* 카테고리 목록 렌더링 */}
+      <div className={"category-wrap"+windowWidth === 999 ? "accordion" : ""+ isClick ? "on":""}
+      onClick={handleClickToggle}
+      >
+        <ul className="category-list fxbox">
+          {categories.map((category, i) => (
+            <li
+              key={category + i}
+              className={selectedCategory === category ? "active" : ""}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="brand-list-wrap">
         <ul className="brand-list-inner fxbox">
           {filteredData.map((item, idx) => (

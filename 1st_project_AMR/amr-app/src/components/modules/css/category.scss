@@ -1,0 +1,46 @@
+
+// 폰트 사이즈, 컬러
+@import "../../../css/variable/common_variable.scss";
+// 여백
+@import "../../../css/variable/interval_variable.scss";
+
+$padding-small-percent: 5%;
+
+
+.category-wrap {
+  width: 100%;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $border-color;
+  }
+  .category-list {
+    padding: $padding-ragular 0;
+    gap: $padding-small;
+    justify-content: center;
+    li {
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $main-color;
+      } //after
+      &:hover,
+      &.active {
+        font-weight: 700;
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      } //hover
+    } //li
+  } //category-list
+} //category-wrap

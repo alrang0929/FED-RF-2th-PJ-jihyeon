@@ -32,6 +32,21 @@ function ListGallery({ selectData }) {
 
   // 2.네비게이트 훅사용
   const navigate = useNavigate(); // useNavigate 훅 사용
+  // 상태관리변수
+  // 1. 화면넓이 감시
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // categoryData에서 카테고리 목록 추출
   /**************************************************************************** 
@@ -99,6 +114,7 @@ function ListGallery({ selectData }) {
             </li>
           ))}
         </ul>
+
       </div>
       <div className="gallery-list-wrap">
         <ul className="gallery-list-inner fxbox">
