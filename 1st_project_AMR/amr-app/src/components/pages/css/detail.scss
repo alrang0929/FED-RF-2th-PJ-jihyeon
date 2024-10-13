@@ -67,3 +67,9 @@
     }
   }//contents-wrap
 } //detail-page
+
+@media screen and (max-width:1024px) {
+  .detail-page .contents-wrap{
+    width: 80vw;
+  }
+}//1024

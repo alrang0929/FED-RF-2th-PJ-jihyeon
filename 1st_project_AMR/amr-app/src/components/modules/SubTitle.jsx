@@ -53,7 +53,7 @@ function SubTitle() {
       
       if (!isScrollingUp && subtitleHeightRef.current) { 
         // 스크롤 방향이 아래쪽이고 subtitleHeightRef가 유효하면
-        subtitleHeightRef.current.style.height = '40vh'; // 높이 변경 (원하는 값으로 수정)
+        subtitleHeightRef.current.style.height = '48vh'; // 높이 변경 (원하는 값으로 수정)
       }   
     };
     

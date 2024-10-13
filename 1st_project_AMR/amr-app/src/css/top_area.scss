@@ -227,7 +227,9 @@ header {
     display: flex !important;
   }
   // ham-btn 클릭시 open클래스 추가하여 보이게
-
+  header .menu-wrap .sub-menu{
+    display: none;
+  }
   .menu-wrap {
     display: flex; /* 초기 상태: 숨김 처리를 위해 flex로 변경 */
     flex-direction: column;

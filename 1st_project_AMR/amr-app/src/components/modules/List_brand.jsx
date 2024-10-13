@@ -10,10 +10,9 @@ function ListBrand({ selectData }) {
 
   //  대상선정///////////////////////////////////////////////////////////////////////////////////////
   //  1. 선택 데이터
-  const selData = selectData;
 
   // categoryData에서 카테고리 목록 추출
-  const categories = Array.from(new Set(selData.map((item) => item.category)));
+  const categories = Array.from(new Set(selectData.map((item) => item.category)));
   categories.unshift("전체");
   // console.log("categories", categories);
 
@@ -21,7 +20,7 @@ function ListBrand({ selectData }) {
   // 1. 선택된 카테고리 관리
   const [selectedCategory, setSelectedCategory] = useState("전체");
   // 2. 필터링된 데이터 관리
-  const [filteredData, setFilteredData] = useState(selData);
+  const [filteredData, setFilteredData] = useState(selectData);
   // 3. 화면 넓이 관리
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // 4. 클릭여부 확인
@@ -49,15 +48,15 @@ function ListBrand({ selectData }) {
   // 화면 랜더링 구역/////////////////////////////////////
   useEffect(() => {
     if (selectedCategory === "전체") {
-      setFilteredData(selData);
+      setFilteredData(selectData);
     } else {
       // 1. 선택된 카테고리와 일치하는 데이터 필터링
-      const matchingData = selData.filter(
+      const matchingData = selectData.filter(
         (item) => item.category === selectedCategory
       );
 
       // 2. 선택된 카테고리와 일치하지 않는 데이터 필터링
-      const otherData = selData.filter(
+      const otherData = selectData.filter(
         (item) => item.category !== selectedCategory
       );
 

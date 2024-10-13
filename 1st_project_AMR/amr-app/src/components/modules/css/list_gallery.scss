@@ -49,6 +49,75 @@ $padding-small-percent: 5%;
 
     }//category-wrap
 
+
+// 선택박스 css////////////////////////////////////////////////
+.select-wrap {
+    width: 100%;
+    text-align: center;
+    padding: $padding-ragular 0;
+    button {
+      width: 50%;
+      padding: $padding-Xsmall;
+      border-radius: 25px;
+      font-size: 16px;
+      //버튼 스타일 초기화
+      background: transparent;
+      background-color: transparent;
+      border: 1px solid $main-color;
+      align-items: center;
+      position: relative;
+      .arrow{
+        position: absolute;
+        right: 0;
+         padding: 0 30px;
+      }
+    }
+    ul {
+      margin: 0 auto;
+      background: #ffffff;
+      width: 50%;
+      position: relative;
+      border-radius: 25px;
+      // padding: $padding-Xsmall 0;
+      overflow: hidden;
+      height: 0;
+      transition: .2s linear;
+  &.on{
+   padding: $padding-Xsmall 0;
+   height: 250px;
+   position: relative;
+   //드롭박스 그림자
+   &::after{
+     content:"";
+     filter: blur(10px);
+     position: absolute;
+     top: 54%;
+     left: 54.8%;
+     transform: translate(-50%, -50%);
+  
+  
+     display: block;
+     width: 100%;
+     height: 430px;
+     z-index: -1;
+     background-color: #82a8ec40;
+   }
+  }
+      li {
+        border-radius: 20px;
+        overflow: hidden;
+        padding:10px 0;
+  
+        &.active-select {
+          background-color: #e4f0ff;
+          transition: 1s ease-in-out;
+        }
+      }
+    }
+  } //select-wrap
+
+
+
 .gallery-list-wrap {
 //   width: 80vw;
   margin: 0 auto;
@@ -56,9 +125,9 @@ $padding-small-percent: 5%;
   .gallery-list-inner {
     // width: 100%;
     flex-wrap: wrap;
-    gap: $padding-small;
+    // gap: $padding-small;
     li {
-        width: 23.9%;
+        width: calc(100%/4);
         padding: $padding-Xsmall;
         box-sizing: border-box;
         //   width: calc((100% / 4) - $padding-small-percent);
@@ -130,3 +199,21 @@ $padding-small-percent: 5%;
     } //li
   }
 } //gallery-list-wrap
+
+// 미디어쿼리///////////////////////
+@media screen and (max-width: 1024px) {
+  .gallery-list-wrap .gallery-list-inner li{
+  width: calc(100%/3);
+
+  }
+}//1024
+@media screen and (max-width: 424px) {
+  .gallery-list-wrap .gallery-list-inner li{
+  width: 100%;
+
+  }
+
+  .gallery-list-wrap{
+    padding: 0.75rem 0;
+  }
+}//425

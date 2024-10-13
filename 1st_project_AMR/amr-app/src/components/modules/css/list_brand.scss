@@ -55,7 +55,7 @@ $padding-small-percent: 5%;
     width: 50%;
     padding: $padding-Xsmall;
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 16px;
     //버튼 스타일 초기화
     background: transparent;
     background-color: transparent;
@@ -184,12 +184,41 @@ $padding-small-percent: 5%;
 } //brand-page
 
 // 미디어쿼리////////////////////////////////////////
-
-@media screen and (max-width: 999px) {
+// ipad pro
+@media screen and (max-width: 1024px){
   .brand-page .brand-list-wrap .brand-list-inner {
     justify-content: center;
     li {
       width: 45%;
     }
   }
-} //832
+} 
+
+
+@media screen and (max-width: 999px) {
+  .brand-page .brand-list-wrap .brand-list-inner{
+    width: 90vw;
+  }
+  .brand-page .brand-list-wrap{
+    padding: $padding-ragular 0;
+  }
+} //999
+
+@media screen and (max-width: 425px) {
+  .select-wrap button{
+    width: 70%;
+  }
+  .select-wrap ul{
+    width: 70%;
+  }
+  .brand-page .brand-list-wrap .brand-list-inner li {
+    width: 100%;
+  }
+  .brand-page .brand-list-wrap .brand-list-inner li .cont-wrap .text-wrap .info-wrap{
+    width: 100%;
+  }
+}//412
+@media screen and (max-width: 320px) {
+
+}//320
+
