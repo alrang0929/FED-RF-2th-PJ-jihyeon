@@ -86,7 +86,7 @@ function TopArea(props) {
 
         }>
           {/* 상태변수 작동 확인 */}
-          {console.log("isMenuOpen 상태:",isMenuOpen)}
+          {/* {console.log("isMenuOpen 상태:",isMenuOpen)} */}
           {gnbData.map((category, index) => (
             // 각 서브 메뉴마다 새로운 ref 생성
             <>

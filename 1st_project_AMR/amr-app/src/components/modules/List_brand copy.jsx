@@ -71,11 +71,9 @@ function ListBrand({ selectData }) {
   return (
     <>
       {/* 카테고리 목록 렌더링 */}
-      {
-        windowWidth > 999 ? 
-        
-        // 윈도우 넓이가 999 이상이냐?
-        <div className= "category-wrap">
+      <div className= {"category-wrap" + (windowWidth <= 999 ? " "+"accrodion":"") + (windowWidth <= 999&&isClick?"on":"")}
+        onClick={handleClickToggle}
+      >
         <ul className="category-list fxbox">
           {categories.map((category, i) => (
             <li
@@ -88,31 +86,6 @@ function ListBrand({ selectData }) {
           ))}
         </ul>
       </div>
-      :
-      <div className= "category-wrap select-wrap">
-
-      <select className="category-select"
-      // option에서는 onClick이 아니라 onChange
-      // 2. props로 전달받아 현재 타겟팅 된 요소의 값으로 상태변경
-      onChange={(e) =>{ setSelectedCategory(e.currentTarget.value)
-        console.log(e.currentTarget.value)}
-      }
-      >
-    {categories.map((category, i) => (
-            <option
-              key={category + i}
-              //1. value에 categry를 담아 select에 전달
-              value={category}
-              // 1-2. but 그냥 넘기면 category 전체가 넘어가므로 selectedCategory와 category가 일치할 때만 값이 전달되도록 함
-              selected={selectedCategory === category} // 현재 선택된 카테고리와 일치하면 selected 속성 추가
-            >
-              {category}
-            </option>
-          ))}
-      </select>
-      </div>
-      }
-     
       <div className="brand-list-wrap">
         <ul className="brand-list-inner fxbox">
           {filteredData.map((item, idx) => (

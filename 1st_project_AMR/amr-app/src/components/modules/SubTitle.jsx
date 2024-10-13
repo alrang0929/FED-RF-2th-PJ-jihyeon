@@ -29,7 +29,7 @@ function SubTitle() {
   // 2. desc : 데이터 값 있냐? 퉤퉤 : 없음문구
   const desc = pageData ? pageData.desc : 'Default Desc';
 
-  console.log("pageData", pageData);
+  // console.log("pageData", pageData);
 ///////////////////////////////////////////////////////////////////////////////////////////
 
   // 상태관리변수:
