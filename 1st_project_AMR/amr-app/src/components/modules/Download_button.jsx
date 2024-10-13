@@ -1,7 +1,6 @@
 import React from "react";
 import { IoIosArrowForward, IoIosDocument } from "react-icons/io";
 import "./css/nomal_button.scss";
-import { Link } from "react-router-dom";
 import download from "downloadjs";
 function DownloadButton({ text, link, file }) {
   /************************************ 
