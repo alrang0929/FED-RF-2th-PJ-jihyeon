@@ -33,3 +33,13 @@ React 기반으로 제작된 이 웹사이트는 아모레퍼시픽의 기업 �
 * **React Router:** 페이지 이동 관리
 
 ## 📁 프로젝트 구조
+🤝 기여 방법
+* 이 저장소를 포크합니다.
+* 새로운 브랜치를 생성합니다. (git checkout -b feature/new-feature)
+* 변경 사항을 커밋합니다. (git commit -am 'Add new feature')
+* 브랜치를 푸시합니다. (git push origin feature/new-feature)
+* 풀 리퀘스트를 생성합니다.
+* ✉️ 연락처
+* 이메일: (본인 이메일 주소)
+* GitHub: @alrang0929
+* 감사합니다. 🙏
