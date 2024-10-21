@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import TopArea from "./TopArea";
 import MainArea from "./MainArea";
 import FooterArea from "./FooterArea";
