@@ -18,7 +18,7 @@ function FooterArea(props) {
           </div>
           {/* <!-- 이용약관 및 이동 메뉴 --> */}
           <div className="link-wrap fxbox">
-            <a href="#" target="_blank">윤리경dud</a>
+            <a href="#" target="_blank">윤리경영</a>
             <a href="#" target="_blank">인재채용</a>
             <a href="#" target="_blank">고객서비스</a>
             <a href="#" target="_blank">글로벌 네트워크</a>

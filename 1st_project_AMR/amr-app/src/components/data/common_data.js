@@ -6,21 +6,21 @@ const gnbData = [
             "없음",
         
     },
-    {
-        text:"Research & Innovatio",
-        link:"/ResearchnInnovatio",
-        sub:
-            "없음",
+    // {
+    //     text:"Research & Innovatio",
+    //     link:"/ResearchnInnovatio",
+    //     sub:
+    //         "없음",
         
-    },
-    {
-        text:"Visual Identity",
-        link:"/VisualIdentity",
-        sub:[
-            {text:"CI", link:"/VisualIdentity",},
-            {text:"아리따 글꼴", link:"/VisualIdentity",},
-        ]
-    },
+    // },
+    // {
+    //     text:"Visual Identity",
+    //     link:"/VisualIdentity",
+    //     sub:[
+    //         {text:"CI", link:"/VisualIdentity",},
+    //         {text:"아리따 글꼴", link:"/VisualIdentity",},
+    //     ]
+    // },
     {
         text:"BRANDS",
         link:"/Brand",
