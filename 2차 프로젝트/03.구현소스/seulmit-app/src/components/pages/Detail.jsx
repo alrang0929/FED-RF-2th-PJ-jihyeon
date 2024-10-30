@@ -47,23 +47,9 @@ export default function Detail() {
 const selData =
     product[topCat].find((item) => 
     item.idx === prodIdx); //product에서 상품 데이터 찾기
-    // state?.product || product.face.find((item) => item.idx === prodIdx); //product에서 상품 데이터 찾기
-// console.log(selData);
-  // const selData = product[topCat].find((item) => item.idx === prodIdx.idx); 
-// console.log("myCon.setSelCat",myCon.setSelCat);
-  //data
-  // const selData = product.face[0];
-  // const selData = prodIdx;
+
   const notiData = notiImg;
-  // console.log("topCat",product[topCat]);
-  // console.log("state KEY",Object.keys(product));
-  // console.log("topCat KEY",Object.keys(product[topCat]));
-  // console.log(selData);
-  // console.log("셀데이터idx:",selData.idx);
-  // // 상위카테고리 topCat
-  // console.log(topCat);
-  // console.log(product.face);
-  // console.log(prodIdx);
+
 
   useEffect(()=>{
     window.scrollTo(0,0);
