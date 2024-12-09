@@ -59,7 +59,6 @@ $.each(face, (index, product) => {
 
 */
 
-
 const product = {
   face: [
     {
