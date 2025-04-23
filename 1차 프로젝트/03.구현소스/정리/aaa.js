@@ -2,7 +2,6 @@
 (() => {
     const blData = amrData.blList;
     const blBx = myFn.qs(".brand-mibx");
-    console.log("대상:", blData, blBx);
   
     blBx.innerHTML = `
     <ul class="bslider fx-box">
@@ -25,8 +24,6 @@
   (() => {
     const blData = amrData.blList;
     const blLgbx = myFn.qs(".brand-lgbx");
-    console.log("대상:", blData, blLgbx);
-  
     blLgbx.innerHTML = `
     <ul class="sbili fx-box">
       ${blData.map(i =>`

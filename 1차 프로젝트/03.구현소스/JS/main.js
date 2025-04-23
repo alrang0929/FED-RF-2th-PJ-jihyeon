@@ -2,9 +2,6 @@
 import myFn from "./my_function.js";
 //슬라이드 함수 호출
 import * as slideFn from "./slide.js";
-// 부드러운 스크롤 불러오기
-import { startSS, setScrollPos } from "./smoothScroll23.js";
-//////////////////////////////////////////////////////////////////////////
 //데이터셋팅 불러오기
 import * as amrData from "../data/AMR_data.js";
 import * as cmFn from "./common.js";
@@ -26,7 +23,6 @@ myFn.addEvt(window,'scroll',scrollFn.zimgScroll2);
 
 function zimgScroll(){
   const obj = myFn.qs('.sdbx03')
-  console.log('슬라이드 확인,obj');
 
 myFn.addEvt(obj,'scroll',addOn);
 
@@ -46,7 +42,6 @@ zimgScroll();
   (()=>{
     const hamBtn = $(".ham-btn, .gnb ul");
     const target = $(".gnb"); // 토글할 메뉴 요소 선택
-    console.log("gnb ul", target);
   
     hamBtn.on("click", () => {
       hamBtn.toggleClass("active"); // 햄버거 버튼 토글
@@ -58,7 +53,6 @@ zimgScroll();
 (() => {
   const blData = amrData.blList;
   const blBx = myFn.qs(".brand-mibx");
-  console.log("대상:", blData, blBx);
 
   blBx.innerHTML = `
   <ul class="bslider fx-box">
@@ -81,7 +75,6 @@ zimgScroll();
 (() => {
   const blData = amrData.blList;
   const blLgbx = myFn.qs(".brand-lgbx");
-  console.log("대상:", blData, blLgbx);
 
   blLgbx.innerHTML = `
   <ul class="sbili fx-box">
@@ -104,7 +97,6 @@ slideFn.brandSilder();
   
 const pdData = amrData.pdData;
 const pdBox = myFn.qs(".prod-list");
-console.log("pd data:", pdData, "\n 박스",pdBox);
 
 pdBox.innerHTML =`
 <ul>

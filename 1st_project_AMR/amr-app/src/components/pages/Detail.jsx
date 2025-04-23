@@ -4,7 +4,7 @@ import "./css/detail.scss";
 
 //더미데이터
 import { useLocation } from "react-router-dom";
-import BackButton from "../modules/Back_button copy";
+import MoveButton from "../modules/Move_button";
 function Detail(props) {
 
   /********************************************************** 
@@ -13,7 +13,6 @@ function Detail(props) {
 **********************************************************/
 const location = useLocation();
 const { selectedData } = location.state || {}; // state가 없을 경우 빈 객체 처리
-console.log("selectedData",selectedData);
 
   // 코드리턴구역//////////////////////////////////////////////////
   return (
@@ -56,7 +55,7 @@ console.log("selectedData",selectedData);
           ))}
         </div>
       </div>
-      <BackButton text={"목록으로 돌아가기"}/>
+      <MoveButton text={'목록으로 돌아가기'} link={'/News'}/>
       </div>
     </>
   );

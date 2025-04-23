@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import {newsData} from "../data/page_data";
@@ -51,7 +51,7 @@ export default function MainNewsSilde() {
                 onClick={(e) => {
                   e.preventDefault();
                   navigate("/Detail", { state: { selectedData: item } });
-                 console.log("item",item);
+                //  console.log("item",item);
                 }}
               >
             {/* 1. 이미지 박스 > img / data-wrap: title(최대 2줄 넘김...처리)+date */}
